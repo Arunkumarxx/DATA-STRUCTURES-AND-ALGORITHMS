@@ -1,0 +1,4 @@
+package SCAPE_GOAT_TREE_AND_TREAP;
+
+public class SCAPE_GOAT_TREE_AND__TREAP {
+}
