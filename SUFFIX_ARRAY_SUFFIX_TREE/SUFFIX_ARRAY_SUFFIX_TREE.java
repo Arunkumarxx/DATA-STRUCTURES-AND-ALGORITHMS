@@ -1,0 +1,4 @@
+package SUFFIX_ARRAY_SUFFIX_TREE;
+
+public class SUFFIX_ARRAY_SUFFIX_TREE {
+}
