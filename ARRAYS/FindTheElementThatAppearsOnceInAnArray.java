@@ -1,4 +1,4 @@
-package ARRAYS.FindTheElementThatAppearsOnceInAnArray;
+package ARRAYS;
 
 class FindTheElementThatAppearsOnceInAnArray {
      static void FindTheElementThatAppearsOnceInArray1(int[] arr,int n) {
