@@ -1,6 +1,6 @@
 package ARRAYS;
 public class Arrays {
     public static void main(String[] args){
-// test message
+        System.out.println(4);
     }
 }
