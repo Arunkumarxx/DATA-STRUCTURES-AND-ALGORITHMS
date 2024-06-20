@@ -1,2 +1,7 @@
-package ARRAYS;public class conditionStatements {
+package ARRAYS;
+
+public class conditionStatements {
+    public static void main(String[] args) {
+        
+    }
 }
