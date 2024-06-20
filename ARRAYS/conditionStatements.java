@@ -6,7 +6,7 @@ public class conditionStatements {
         String name ="Arunkumar";
        if(age>18)
        {
-           System.out.println(name);
+           System.out.println(name);   // Arunkumar
            if(age!=18 && age>18) {
                System.out.println(name + " " + age);
            }
