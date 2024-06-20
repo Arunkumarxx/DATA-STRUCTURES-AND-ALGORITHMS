@@ -11,5 +11,9 @@ public class conditionStatements {
                System.out.println(name + " " + age);
            }
        }
+       /*
+        if(condition)  statements........;
+           if(condition && condition)  statements.......;
+        */
     }
 }
