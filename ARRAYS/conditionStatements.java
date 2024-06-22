@@ -2,7 +2,7 @@ package ARRAYS;
 
 public class conditionStatements {
     public static void main(String[] args){
-       int i=1;
+       int i=2;
        do{
            System.out.println(i);
            i++;
@@ -25,6 +25,13 @@ public class conditionStatements {
        false
 
        p(*)
+
+
+       do{
+       print(10)
+       10++ memory 11
+       }
+       while(11<=10)
         */
     }
 }
