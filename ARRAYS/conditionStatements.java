@@ -8,30 +8,23 @@ public class conditionStatements {
            i++;
        }
        while(i<=2);
-       /*
-       p(1) ++
-       true
-       p(2) ++
-       true
-       p(3) ++
-       true
-       p(4) ++
+      /*
+      do{
+      print(i);=1
+      print(i++);
+         }
+      while(2<=2);
 
-       ...
+      do{
+      print(2);
+      2++;
+      while(3<=2)
+      ...........
+      .
+      .
+      .
+      .
 
-       ..
-
-       p(10) ++
-       false
-
-       p(*)
-
-
-       do{
-       print(10)
-       10++ memory 11
-       }
-       while(11<=10)
-        */
+       */
     }
 }
