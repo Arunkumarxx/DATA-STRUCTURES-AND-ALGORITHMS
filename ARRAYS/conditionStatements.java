@@ -2,18 +2,29 @@ package ARRAYS;
 
 public class conditionStatements {
     public static void main(String[] args){
-        int age=19;
-        String name ="Arunkumar";
-       if(age>18)
-       {
-           System.out.println(name);   // Arunkumar
-           if(age!=18 && age>18) {
-               System.out.println(name + " " + age);
-           }
+       int i=1;
+       do{
+           System.out.println(i);
+           i++;
        }
+       while(i<=10);
        /*
-        if(condition)  statements........;
-           if(condition && condition)  statements.......;
+       p(1) ++
+       true
+       p(2) ++
+       true
+       p(3) ++
+       true
+       p(4) ++
+
+       ...
+
+       ..
+
+       p(10) ++
+       false
+
+       p(*)
         */
     }
 }
