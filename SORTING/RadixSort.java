@@ -8,8 +8,8 @@ public class RadixSort {
             max=Math.max(max,x);
 
         short temp[] =new short[max+1];
-        for (int i=0; i<max; i++)
+        for (int i=0; i<=max; i++)
                 temp[arr[i]]++;
-        
+
     }
 }
