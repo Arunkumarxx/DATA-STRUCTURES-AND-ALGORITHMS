@@ -1,9 +1,7 @@
 package SORTING;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Objects;
+
 
 public class CountingSort {
     static void countSort(int [] arr,int n) {
