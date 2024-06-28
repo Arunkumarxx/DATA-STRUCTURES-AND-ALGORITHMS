@@ -23,10 +23,8 @@ public class CountingSort {
         }
         System.out.println(Arrays.toString(arr));
     }
-    static void countingSortTwo() {
-        int arr [] ={2,1,1,0,2,5,4,0,2,8,7,7,9,2,0,1,9};
+    static void countingSortTwo(int arr,int arrN) {
         int temp[] = new int[arr.length];
-        int arrN= arr.length;
         int max=arr[0];
         for (int x:arr)
             max=Math.max(max,x);
@@ -48,7 +46,7 @@ public class CountingSort {
         int [] arr  ={5,3,2,1,2,5};
         int n= arr.length;
         countSort(arr,n);
-        countingSortTwo();
+        countingSortTwo(arr,n);
     }
 
 }
