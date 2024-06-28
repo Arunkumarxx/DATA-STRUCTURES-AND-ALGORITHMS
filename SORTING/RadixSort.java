@@ -17,7 +17,7 @@ public class RadixSort {
         {
             if(temp[i]>0)
             {
-                arr[k++]=(short)i;
+                arr[k++]=(short)temp[i];
                 temp[i]--;
             }
             else i++;
