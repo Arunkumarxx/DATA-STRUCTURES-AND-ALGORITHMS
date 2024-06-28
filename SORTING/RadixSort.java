@@ -1,5 +1,7 @@
 package SORTING;
 
+import java.util.Arrays;
+
 public class RadixSort {
     public static void main(String[] args) {
         short arr [] ={3,9,3,4,6,10};
@@ -10,6 +12,8 @@ public class RadixSort {
         short temp[] =new short[max+1];
         for (int i=0; i<arr.length; i++)
                 temp[arr[i]]++;
+
+        System.out.println(Arrays.toString(temp));
 
     }
 }
