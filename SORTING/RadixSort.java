@@ -4,25 +4,7 @@ import java.util.Arrays;
 
 public class RadixSort {
     public static void main(String[] args) {
-        int arr [] ={2,1,1,0,2,5,4,0,2,8,7,7,9,2,0,1,9};
-        int temp[] = new int[arr.length];
-        int arrN= arr.length;
-        int max=arr[0];
-        for (int x:arr)
-            max=Math.max(max,x);
-        int [] freq = new int[max+1];
-        for (int i:arr)
-            ++freq[i];
-        for (int i=1; i< freq.length; i++)
-            freq[i]+=freq[i-1];
-        for (int i=arrN-1; i>=0; i--)
-        {
-           temp[freq[arr[i]]-1]=arr[i];
-           --freq[arr[i]];
-        }
-        for (int i=0; i< temp.length; i++)
-            arr[i]=temp[i];
-        System.out.println(Arrays.toString(arr));
+
     }
 }
 
