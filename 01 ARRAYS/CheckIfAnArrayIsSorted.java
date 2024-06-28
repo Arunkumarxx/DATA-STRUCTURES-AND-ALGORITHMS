@@ -1,4 +1,4 @@
-package ARRAYS;
+
 public class CheckIfAnArrayIsSorted {
     static boolean CheckIfAnArrayIsSorted(int arr[]) {
         int left = 0, right = arr.length - 1;
