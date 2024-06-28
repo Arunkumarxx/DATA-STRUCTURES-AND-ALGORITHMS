@@ -12,8 +12,6 @@ public class RadixSort {
 
 
 
-
-
 /*
 first  needed to learn counting sort then learn radix sort
  int temp[] = new int[arr.length];
