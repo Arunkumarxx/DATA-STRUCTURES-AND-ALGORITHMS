@@ -22,6 +22,6 @@ public class RadixSort {
             }
             else i++;
         }
-
+        System.out.println(Arrays.toString(arr));
     }
 }
