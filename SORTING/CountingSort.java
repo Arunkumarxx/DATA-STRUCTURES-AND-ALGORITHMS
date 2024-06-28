@@ -23,7 +23,7 @@ public class CountingSort {
         }
         System.out.println(Arrays.toString(arr));
     }
-    static void countingSortTwo(int arr,int arrN) {
+    static void countingSortTwo(int arr[],int arrN) {
         int temp[] = new int[arr.length];
         int max=arr[0];
         for (int x:arr)
