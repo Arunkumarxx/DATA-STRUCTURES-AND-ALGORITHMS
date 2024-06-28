@@ -12,7 +12,7 @@ public class RadixSort {
         short temp[] =new short[max+1];
         for (int i=0; i<arr.length; i++)
                 temp[arr[i]]++;
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(temp));
         int k=0;
         for (int i=0; i<=max;i++)
         {
