@@ -6,6 +6,10 @@ public class RadixSort {
         int max=arr[0];
         for (int x:arr)
             max=Math.max(max,x);
-        System.out.println(max);
+
+        short temp[] =new short[max+1];
+        for (int i=0; i<max; i++)
+                temp[arr[i]]++;
+        
     }
 }
