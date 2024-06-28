@@ -13,7 +13,7 @@ public class RadixSort {
             ++freq[i];
         for (int i=1; i< freq.length; i++)
             freq[i]+=freq[i-1];
-        
+        System.out.println(Arrays.toString(freq));
     }
 }
 
