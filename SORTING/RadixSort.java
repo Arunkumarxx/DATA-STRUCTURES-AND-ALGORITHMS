@@ -22,7 +22,7 @@ public class RadixSort {
         }
         for (int i=0; i< temp.length; i++)
             arr[i]=temp[i];
-        System.out.println(arr.toString());
+        System.out.println(Arrays.toString(arr));
     }
 }
 
