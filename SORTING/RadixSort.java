@@ -13,7 +13,7 @@ public class RadixSort {
 
 
 /*
-first we needed to learn counting sort then learn radix sort
+first  needed to learn counting sort then learn radix sort
 
   short arr [] ={3,9,3,4,6,10};
         int max=arr[0];
