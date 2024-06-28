@@ -11,7 +11,7 @@ public class RadixSort {
         int [] freq = new int[max+1];
         for (int i:arr)
             ++freq[i];
-        System.out.println(Arrays.toString(freq));
+        
     }
 }
 
