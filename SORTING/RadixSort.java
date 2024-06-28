@@ -14,7 +14,7 @@ public class RadixSort {
                 temp[arr[i]]++;
         System.out.println(Arrays.toString(temp));
         int k=0;
-        for (int i=0; i<= temp.length;i++)
+        for (int i=0; i< temp.length;i++)
         {
             if(temp[i]>0)
             {
