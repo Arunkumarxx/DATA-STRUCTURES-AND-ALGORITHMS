@@ -17,7 +17,7 @@ public class RadixSort {
             freq[i]+=freq[i-1];
         for (int i=arrN-1; i>=0; i--)
         {
-            temp[freq[i]-1]=arr[i];
+            temp[freq[arr[i]]-1]=arr[i];
             --freq[i];
         }
     }
