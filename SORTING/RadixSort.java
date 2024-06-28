@@ -20,6 +20,7 @@ public class RadixSort {
            temp[freq[arr[i]]-1]=arr[i];
            --freq[arr[i]];
         }
+        System.out.println(Arrays.toString(temp));
     }
 }
 
