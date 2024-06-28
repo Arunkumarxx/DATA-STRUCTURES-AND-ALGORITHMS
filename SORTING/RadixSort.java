@@ -8,7 +8,10 @@ public class RadixSort {
         int max=arr[0];
         for (int x:arr)
             max=Math.max(max,x);
-        
+        int [] freq = new int[max+1];
+        for (int i:arr)
+            ++freq[i];
+        System.out.println(Arrays.toString(freq));
     }
 }
 
