@@ -1,8 +1,9 @@
 package SORTING;
 
 public class RadixSort {
+
     public static void main(String[] args) {
-        
+        int [] arr ={432,8,530,90,88,231,11,45, }
     }
 }
 
