@@ -11,7 +11,10 @@ public class RadixSort {
         int pos=1;
         while(max/pos >0){
             pos*=10;
-            int [] count = {};
+            int [] count = new int[10];
+            for (int i=0; i<arr.length; i++)
+                ++count[arr[i]];
+
         }
     }
 }
