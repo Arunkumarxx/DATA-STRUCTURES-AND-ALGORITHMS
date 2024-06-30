@@ -11,8 +11,7 @@ public class BucketSort {
         int nbksBuckets= arr.length;
         Map<Integer, List<Float>> BucketSort = new HashMap<>();
         for (int i=0;i< arr.length;i++)
-        {
-            
-        }
+            BucketSort.put(i,new ArrayList<>());
+        
     }
 }
