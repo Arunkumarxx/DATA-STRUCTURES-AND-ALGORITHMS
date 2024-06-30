@@ -17,7 +17,12 @@ public class CountTheNumberOfPossibleTriangles {
                 ++a;
             count+=b-a;
             --b;
-            
+            while(a+b<c && a<b)
+                ++a;
+            count+=b-a;
+            c--;
+            b=c-1;
+            a=0;
         }
     }
 }
