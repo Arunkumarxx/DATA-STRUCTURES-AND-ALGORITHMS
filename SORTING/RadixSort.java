@@ -20,8 +20,10 @@ public class RadixSort {
             {
                 count[i]+=count[i-1];
             }
-            System.out.println(Arrays.toString(count));
-            break;
+            for (int i=arr.length-1; i>=0; i--)
+            {
+                arr[]
+            }
         }
     }
 }
