@@ -16,11 +16,12 @@ public class BucketSort {
 
         for (int i=0;i< nbksBuckets;i++)
             Collections.sort(BucketSort.get(i));
-
+        int ind=0;
         for (int i=0;i<BucketSort.size();i++)
         {
-            arr[i]=BucketSort.get(i);
+            for (float x:BucketSort.get(i))
+                arr[ind++]=x;
         }
-        System.out.println(BucketSort);
+        System.out.println(arr);
     }
 }
