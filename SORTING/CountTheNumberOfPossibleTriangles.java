@@ -21,7 +21,7 @@ public class CountTheNumberOfPossibleTriangles {
                 }
                 else ++a;
             }
-            
+
         }
         System.out.println(count);
     }
