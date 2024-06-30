@@ -12,5 +12,6 @@ public class BucketSort {
        {
 
        }
+        System.out.println(arr[0]* arr.length);
     }
 }
