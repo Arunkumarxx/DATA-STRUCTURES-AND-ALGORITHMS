@@ -3,7 +3,12 @@ package SORTING;
 public class RadixSort {
 
     public static void main(String[] args) {
-        int [] arr ={432,8,530,90,88,231,11,45, }
+        int [] arr ={432,8,530,90,88,231,11,45,677,199};
+        // get max element
+        int max=Integer.MIN_VALUE;
+        for (int x:arr)
+            max=Math.max(x,max);
+        System.out.println(max);
     }
 }
 
