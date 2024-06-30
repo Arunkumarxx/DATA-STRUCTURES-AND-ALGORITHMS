@@ -13,7 +13,7 @@ public class RadixSort {
             pos*=10;
             int [] count = new int[10];
             for (int i=0; i<arr.length; i++)
-                ++count[arr[i]];
+                ++count[arr[i]/pos];
 
         }
     }
