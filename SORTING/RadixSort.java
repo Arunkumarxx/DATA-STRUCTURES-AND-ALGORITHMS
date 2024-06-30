@@ -11,8 +11,7 @@ public class RadixSort {
         int max=Integer.MIN_VALUE;
         for (int x:arr)
             max=Math.max(x,max);
-        int pos=1;
-        while(max/pos >0){
+        for (int pos=1 ;pos>0; pos*=10){
             int [] count = new int[10];
             for (int i=0; i<arr.length; i++)
                 ++count[(arr[i]/pos)%10];
@@ -23,11 +22,10 @@ public class RadixSort {
             for (int i=arr.length-1; i>=0; i--)
             {
                 int ind=(arr[i]/pos)%10;
-                int countInd=count[ind]-1;
-                count[ind]--;
+                int countInd=--count[ind];
                 result[countInd]=arr[i];
             }
-            pos*=10;
+            
         }
         System.out.println(Arrays.toString(result));
     }
