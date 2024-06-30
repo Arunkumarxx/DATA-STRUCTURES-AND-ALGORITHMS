@@ -8,7 +8,11 @@ public class RadixSort {
         int max=Integer.MIN_VALUE;
         for (int x:arr)
             max=Math.max(x,max);
-        System.out.println(max);
+        int pos=1;
+        while(max/pos >0){
+            pos*=10;
+            
+        }
     }
 }
 
