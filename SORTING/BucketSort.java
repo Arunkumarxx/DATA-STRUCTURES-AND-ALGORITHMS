@@ -22,6 +22,6 @@ public class BucketSort {
             for (float x:BucketSort.get(i))
                 arr[ind++]=x;
         }
-        System.out.println(Arrays.toString(arr));
+        for (int x:arr)
     }
 }
