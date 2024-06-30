@@ -9,13 +9,14 @@ public class RadixSort {
         for (int x:arr)
             max=Math.max(x,max);
         int pos=1;
-        while(max/pos >0){
-            pos*=10;
-            int [] count = new int[10];
-            for (int i=0; i<arr.length; i++)
-                ++count[arr[i]/pos];
-
-        }
+//        while(max/pos >0){
+//            pos*=10;
+//            int [] count = new int[10];
+//            for (int i=0; i<arr.length; i++)
+//                ++count[arr[i]%pos];
+//
+//        }
+        System.out.println(max%1);
     }
 }
 
