@@ -26,6 +26,8 @@ public class RadixSort {
                 int countInd=--count[ind];
                 result[countInd]=arr[i];
             }
+            for(int i=0;i< arr.length;i++)
+                result[i]=arr[i];
             pos*=10;
         }
         System.out.println(Arrays.toString(result));
