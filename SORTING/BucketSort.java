@@ -2,6 +2,6 @@ package SORTING;
 
 public class BucketSort {
     public static void main(String[] args) {
-        System.out.println((int)Math.floor(0.099*10));
+        System.out.println((int)Math.floor(0.09*10));
     }
 }
