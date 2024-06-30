@@ -1,5 +1,3 @@
-package SORTING;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -19,7 +17,7 @@ public class BucketSort {
 
         // Put array elements in different buckets
         for (int i = 0; i < n; i++) {
-            int bucketIndex = (int) (n * arr[i]);
+            int bucketIndex = (int) (arr[i] * n); // Adjusted bucket index calculation
             buckets[bucketIndex].add(arr[i]);
         }
 
