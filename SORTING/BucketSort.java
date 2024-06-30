@@ -10,7 +10,7 @@ public class BucketSort {
         for (int i=0;i< arr.length;i++)
             BucketSort.put(i,new LinkedList<>());
         for (int i=0; i< arr.length;i++)
-            BucketSort.get(arr[i]*nbksBuckets).add(arr[i]);
+            BucketSort.get((int)arr[i]*nbksBuckets).add(arr[i]);
 
         System.out.println(BucketSort);
     }
