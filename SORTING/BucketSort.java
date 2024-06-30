@@ -8,7 +8,7 @@ public class BucketSort {
        ArrayList<Float>[] bucket = new ArrayList[arr.length];
        for (int i=0; i< arr.length; i++)
            bucket[i]=new ArrayList<Float>();
-
-        System.out.println(bucket);
+       ArrayList<Integer> s=new ArrayList<>();
+        System.out.println(s);
     }
 }
