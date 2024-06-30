@@ -5,8 +5,16 @@ import java.util.Arrays;
 public class CountTheNumberOfPossibleTriangles {
     public static void main(String[] args) {
         int [] arr ={1,16,20,3,4,6,12,13};
-        System.out.println(Arrays.toString(arr));
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
+        int n= arr.length;
+        int a=0;
+        int b=n-2;
+        int c=n-1;
+        int count=0;
+        while(c>=2){
+            while(a+b<c)
+                a++;
+        }
     }
 }
