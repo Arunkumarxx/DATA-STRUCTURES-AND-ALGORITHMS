@@ -15,6 +15,8 @@ public class CountTheNumberOfPossibleTriangles {
         while(c>=2){
             while(a+b<c)
                 a++;
+            count+=b-a;
+            while()
         }
     }
 }
