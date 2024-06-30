@@ -23,6 +23,6 @@ public class BucketSort {
                 arr[ind++]=x;
         }
         for (float x:arr)
-            System.out.println(x);
+            System.out.print(x);
     }
 }
