@@ -9,6 +9,6 @@ public class BucketSort {
        for (int i=0; i< arr.length; i++)
            bucket[i]=new ArrayList<Float>();
 
-        System.out.println(bucket.toString());
+        System.out.println(bucket);
     }
 }
