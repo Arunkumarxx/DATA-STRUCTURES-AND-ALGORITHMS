@@ -13,10 +13,13 @@ public class CountTheNumberOfPossibleTriangles {
         int c=n-1;
         int count=0;
         while(c>=2){
-            while(a+b<c)
-                a++;
+            while(a+b<c && a<b)
+                ++a;
             count+=b-a;
-            while()
+            --b;
+            while(b+a<c && b>a)
+                --b;
+            count+=
         }
     }
 }
