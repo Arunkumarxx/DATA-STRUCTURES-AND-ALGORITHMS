@@ -13,7 +13,7 @@ public class CountTheNumberOfPossibleTriangles {
         {
             int a=0;
             int b=c-1;
-            while(true)
+            while(a<b)
             {
                 if(arr[a]+arr[b]>arr[c]) {
                     count += b - a;
