@@ -1,7 +1,9 @@
 package SORTING;
 
+import java.util.ArrayList;
+
 public class BucketSort {
     public static void main(String[] args) {
-        System.out.println((int)Math.floor(0.*10));
+        float [] arr = {0.17f,0.12f,};
     }
 }
