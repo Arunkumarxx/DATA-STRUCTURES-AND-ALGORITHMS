@@ -9,11 +9,10 @@ public class RadixSort {
         for (int x:arr)
             max=Math.max(x,max);
         int pos=1;
-        System.out.println(max/1000);
-//        while(max/pos >0){
-//            pos*=10;
-//
-//        }
+        while(max/pos >0){
+            pos*=10;
+            
+        }
     }
 }
 
