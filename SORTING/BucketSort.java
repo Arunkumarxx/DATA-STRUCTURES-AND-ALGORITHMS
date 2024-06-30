@@ -17,7 +17,10 @@ public class BucketSort {
         for (int i=0;i< nbksBuckets;i++)
             Collections.sort(BucketSort.get(i));
 
-        for (int )
+        for (int i=0;i<BucketSort.size();i++)
+        {
+            arr[i]=BucketSort.get(i);
+        }
         System.out.println(BucketSort);
     }
 }
