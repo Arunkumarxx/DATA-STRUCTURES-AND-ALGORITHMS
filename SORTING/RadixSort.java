@@ -16,7 +16,7 @@ public class RadixSort {
 //                ++count[arr[i]%pos];
 //
 //        }
-        System.out.println(((max%100)));
+        System.out.println(((max%1000)));
     }
 }
 
