@@ -9,7 +9,7 @@ public class BucketSort {
         Map<Integer, List<Float>> BucketSort = new HashMap<>();
         for (int i=0;i< arr.length;i++)
             BucketSort.put(i,new LinkedList<>());
-        System.out.println(0.);
+        
         for (int i=0; i< arr.length;i++)
             BucketSort.get((int)(arr[i]*nbksBuckets)).add(arr[i]);
 
