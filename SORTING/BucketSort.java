@@ -4,7 +4,7 @@ import java.util.*;
 
 public class BucketSort {
     public static void main(String[] args) {
-        float [] arr = {0.897f, 0.565f, 0.656f, 0.1234f, 0.665f, 0.32f};
+        float [] arr = {0.897f, 0.565f, 0.656f, 0,599f,0.1234f, 0.665f, 0.32f};
         int nbksBuckets= arr.length;
         HashMap<Integer, List<Float>> BucketSort = new HashMap<>();
 
