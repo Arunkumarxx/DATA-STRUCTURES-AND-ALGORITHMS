@@ -24,7 +24,8 @@ public class RadixSort {
             for (int i=arr.length-1; i>=0; i--)
             {
                 int ind=(arr[i]/pos)%10;
-                int countInd=--count[ind];
+                int countInd=count[ind]-1;
+                count[ind]--;
                 result[countInd]=arr[i];
             }
         }
