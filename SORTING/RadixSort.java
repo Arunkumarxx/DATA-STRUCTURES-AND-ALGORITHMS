@@ -6,6 +6,7 @@ public class RadixSort {
 
     public static void main(String[] args) {
         int [] arr ={432,8,530,90,88,231,11,45,677,199};
+        int [] result =new int[arr.length];
         // get max element
         int max=Integer.MIN_VALUE;
         for (int x:arr)
@@ -22,9 +23,12 @@ public class RadixSort {
             }
             for (int i=arr.length-1; i>=0; i--)
             {
-                arr[]
+                int ind=(arr[i]/pos)%10;
+                int countInd=--count[ind];
+                result[countInd]=arr[i];
             }
         }
+        System.out.println(Arrays.toString(result));
     }
 }
 
