@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CountTheNumberOfPossibleTriangles {
     public static void main(String[] args) {
-        int [] arr ={6, 4, 9, 7, 8};
+        int [] arr ={3, 5, 4};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
         int n= arr.length;
