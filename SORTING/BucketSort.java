@@ -1,9 +1,6 @@
 package SORTING;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class BucketSort {
     public static void main(String[] args) {
@@ -11,7 +8,7 @@ public class BucketSort {
         int nbksBuckets= arr.length;
         Map<Integer, List<Float>> BucketSort = new HashMap<>();
         for (int i=0;i< arr.length;i++)
-            BucketSort.put(i,new ArrayList<>());
+            BucketSort.put(i,new LinkedList<>());
         
     }
 }
