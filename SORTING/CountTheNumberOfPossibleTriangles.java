@@ -8,21 +8,19 @@ public class CountTheNumberOfPossibleTriangles {
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
         int n= arr.length;
-        int a=0;
-        int b=n-2;
-        int c=n-1;
         int count=0;
-        while(c>=2){
-            while(a+b<c && a<b)
-                ++a;
-            count+=b-a;
-            --b;
-            while(a+b<c && a<b)
-                ++a;
-            count+=b-a;
-            c--;
-            b=c-1;
-            a=0;
+        for (int c=n-1; c>=2;c--)
+        {
+            int a=0;
+            int b=c-1;
+            while(true)
+            {
+                if(arr[a]+arr[b]>arr[c]) {
+                    count += b - a;
+                    --b;
+                }
+                else ++a;
+            }
         }
         System.out.println(count);
     }
