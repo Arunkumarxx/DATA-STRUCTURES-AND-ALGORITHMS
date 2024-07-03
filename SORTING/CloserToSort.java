@@ -1,9 +1,7 @@
 package SORTING;
 
 public class CloserToSort {
-    public static void main(String[] args) {
-        int [] arr ={3,2,10,4,40};
-        int n= arr.length;
+    static long CloserSort(int [] arr,int n,int x) {
         int l=0;
         int r=n-1;
 
@@ -25,5 +23,10 @@ public class CloserToSort {
 
         }
         return (long)-1;
+    }
+    public static void main(String[] args) {
+        int [] arr ={3,2,10,4,40};
+        int n= arr.length;
+        System.out.println(CloserSort(arr,n,2));
     }
 }
