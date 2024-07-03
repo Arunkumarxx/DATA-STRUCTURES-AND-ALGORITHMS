@@ -20,6 +20,6 @@ public class NumberOfPairs {
 
         System.out.println();
 
-        System.out.println(Math.pow(2,5)>Math.pow(5,2));
+        System.out.println(Math.pow(2,3)>Math.pow(3,2));
     }
 }
