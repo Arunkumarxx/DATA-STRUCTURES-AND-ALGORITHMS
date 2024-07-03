@@ -19,6 +19,6 @@ public class NumberOfPairs {
         }
 
         System.out.println();
-        System.out.println(Math.pow(0,2)+" "+Math.pow(1 ,0));
+        System.out.println(Math.pow(6,5)+" "+Math.pow(5,6));
     }
 }
