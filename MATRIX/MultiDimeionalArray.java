@@ -1,6 +1,6 @@
 package MATRIX;
 
-public class MultiDimesionalArray {
+public class MultiDimeSionalArray {
     public static void main(String[] args) {
 
     }
