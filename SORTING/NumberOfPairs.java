@@ -13,7 +13,7 @@ public class NumberOfPairs {
             {
                 if(Math.pow(x[i],y[j])>Math.pow(y[j],x[i])) {
                     count++;
-                    System.out.println(Math.pow(x[i],y[j])+Math.pow(x[i],y[j])+"> "+Math.pow(y[j],x[i]));
+                    System.out.println(Math.pow(x[i],y[j])+Math.pow(x[i],y[j])+" > "+Math.pow(y[j],x[i]));
                 }
             }
         }
