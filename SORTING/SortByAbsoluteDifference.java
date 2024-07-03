@@ -19,6 +19,7 @@ public class SortByAbsoluteDifference {
             arrList.set(i,arrList.get(i)-k);
         }
         Collections.sort(arrList);
+        for (int )
         System.out.println(arrList);
     }
 }
