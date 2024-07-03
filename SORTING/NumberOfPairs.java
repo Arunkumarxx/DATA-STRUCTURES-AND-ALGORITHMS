@@ -18,8 +18,5 @@ public class NumberOfPairs {
             }
         }
 
-        System.out.println();
-
-        System.out.println(Math.pow(2,3)>Math.pow(3,2));
     }
 }
