@@ -1,5 +1,7 @@
 package SORTING;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class SortByAbsoluteDifference {
         {
             arrList.set(i,arrList.get(i)-k);
         }
+        Collections.sort(arrList);
         System.out.println(arrList);
     }
 }
