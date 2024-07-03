@@ -17,6 +17,5 @@ public class NumberOfPairs {
                 }
             }
         }
-//        System.out.println(count);
     }
 }
