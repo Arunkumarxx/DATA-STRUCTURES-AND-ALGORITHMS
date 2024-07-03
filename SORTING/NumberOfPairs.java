@@ -12,9 +12,10 @@ public class NumberOfPairs {
             for (int j=0; j<n2; j++)
             {
                 if(Math.pow(x[i],y[j])>Math.pow(y[j],x[i]))
-                    count++;6
+                    count++;
             }
         }
         System.out.println(count);
+        System.out.println(Math.pow(6,5)+" "+Math.pow(5,6));
     }
 }
