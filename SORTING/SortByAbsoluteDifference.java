@@ -11,6 +11,9 @@ public class SortByAbsoluteDifference {
         arrList.add(3);
         arrList.add(9);
         arrList.add(2);
-        
+        for (int i=0;i<arrList.size(); i++)
+        {
+            arrList.set(i,arrList.get(i)-)
+        }
     }
 }
