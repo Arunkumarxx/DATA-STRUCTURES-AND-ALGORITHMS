@@ -14,7 +14,7 @@ public class SortByAbsoluteDifference {
         arrList.add(3);
         arrList.add(9);
         arrList.add(2);
-        Collections.sort(arrList,(a,b)->Integer.compare(Math.abs(a),Math.abs(b)));
+        Collections.sort(arrList,(a,b)->Integer.compare(Math.abs(a-k),Math.abs(b-k)));
         System.out.println(arrList);
 
     }
