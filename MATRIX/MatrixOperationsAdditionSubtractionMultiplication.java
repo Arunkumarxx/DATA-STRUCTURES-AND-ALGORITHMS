@@ -21,7 +21,6 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
-        System.out.println();
     }
     static void divide(int [][] arrOne,int [][]arrTwo,int [][] result) {
         System.out.println("Division");
@@ -31,7 +30,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
-        System.out.println();
+
     }
     static void multi(int [][] arrOne,int [][]arrTwo,int [][] result) {
         System.out.println("multiplycation");
@@ -41,7 +40,6 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
-        System.out.println();
     }
     static void print(int [][] result) {
         for (int [] row :result) {
