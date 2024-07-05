@@ -5,30 +5,30 @@ import java.util.ArrayList;
 public class BoundaryTraversalOfMatrix {
 
     public static void main(String[] args) {
-        int [][] arr ={
+        int [][] matrix ={
                        {1, 2, 3, 4 },
                        { 5, 6, 7, 8},
                        {9,10, 11,12},
                        {13,14,15,16}
         };
-        int n= arr.length;
+        int n= matrix.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
         int k=0;
-        for (int i=0; i<arr[0].length-1; i++)
-            arrayList.add(arr[k][i]);
+        for (int i=0; i<matrix[0].length-1; i++)
+            arrayList.add(matrix[k][i]);
 
         for (int i=0; i<n-1;i++) {
-            k=arr[i].length-1;
-            arrayList.add(arr[i][k]);
+            k=matrix[i].length-1;
+            arrayList.add(matrix[i][k]);
         }
-        k=arr[n-1].length-1;
+        k=matrix[n-1].length-1;
         for (;k>=1;k--)
         {
-            arrayList.add(arr[n-1][k]);
+            arrayList.add(matrix[n-1][k]);
         }
         k=0;
         for ( int i=n-1; i>=1; i--)
-            arrayList.add(arr[i][0]);
+            arrayList.add(matrix[i][0]);
 
         System.out.println(arrayList);
     }
