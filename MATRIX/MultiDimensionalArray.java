@@ -1,6 +1,5 @@
 package MATRIX;
 
-
 import java.util.Random;
 
 class MatrixPrinter {
