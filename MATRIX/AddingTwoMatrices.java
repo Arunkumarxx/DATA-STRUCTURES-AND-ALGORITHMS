@@ -6,7 +6,7 @@ import java.util.Random;
 public class AddingTwoMatrices {
     public static void main(String[] args) {
         Random random = new Random();
-        random.
+        int [][] arrOne = new int[][]
         Arrays.fill();
         Add()
     }
