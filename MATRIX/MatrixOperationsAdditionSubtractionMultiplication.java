@@ -42,13 +42,15 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
             System.out.print("\n");
         }
     }
-    
+
     public static void main(String[] args) {
         int [][] arrOne ={{1,2},{4,5}};
         int [][] arrTwo ={{5,6},{8,9}};
         int [][] result =new int[arrOne.length][];
         add(arrOne,arrTwo,result);      print(result);
         sub(arrOne,arrTwo,result);      print(result);
-        multi(arrOne,arrTwo,result);    print(result); empty();
+        multi(arrOne,arrTwo,result);    print(result);
+        Object [] arr = {"Arun","kumar"};
+        System.out.println(arr);
     }
 }
