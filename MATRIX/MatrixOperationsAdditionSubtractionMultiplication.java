@@ -34,13 +34,14 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         System.out.println();
     }
     static void multi(int [][] arrOne,int [][]arrTwo,int [][] result) {
-        System.out.println("Multiplyication");
+        System.out.println("multiplycation");
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
+        System.out.println();
     }
     static void print(int [][] result) {
         for (int [] row :result) {
