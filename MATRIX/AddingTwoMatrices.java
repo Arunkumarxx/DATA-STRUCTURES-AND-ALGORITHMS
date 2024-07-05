@@ -5,15 +5,18 @@ import java.util.Random;
 
 public class AddingTwoMatrices {
     public static void main(String[] args) {
-
+        Random random =new Random();
         int [][] arrOne =new int[4][4];
         int [][] arrTwo =new int[4][4];
+        int [] arr =new int[arrOne[0].length* arrOne.length];
+        Arrays.fill(arr,random.nextInt());
+        System.out.println(arr);
         for (int i=0; i<arrOne.length; i++)
         {
-            Random random1 = new Random();
-            Arrays.fill(arrOne[i], random1.nextInt(41,100));
-            Random random2 = new Random();
-            Arrays.fill(arrTwo[i],random2.nextInt(10,200));
+
+            Arrays.fill(arrOne[i],);
+
+            Arrays.fill(arrTwo[i],);
         }
         int [][] result = Add(arrOne,arrTwo);
         for (int [] x:result) {
