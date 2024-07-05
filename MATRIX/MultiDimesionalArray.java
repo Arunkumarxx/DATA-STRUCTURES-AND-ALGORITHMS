@@ -20,5 +20,8 @@ public class MultiDimesionalArray {
                 arr2[i][j]=(int)Math.random();
             }
         }
+        for (int []x:arr2)
+            for (int x1:x)
+                System.out.println(x1);
     }
 }
