@@ -7,6 +7,13 @@ public class Passing2DArraysAsArguments {
                 System.out.print(y+" ");
     }
     static void printTwo(int [][] arr){
+        for (int i=0;i< arr.length; i++)
+        {
+            for (int j=0;j<arr[i].length;j++)
+            {
+                
+            }
+        }
         for (int [] x:arr)
             for (int y:x)
                 System.out.print(y+" ");
