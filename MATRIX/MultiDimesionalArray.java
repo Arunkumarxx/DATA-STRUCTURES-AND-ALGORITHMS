@@ -15,11 +15,12 @@ public class MultiDimesionalArray {
             for (int x:arr[i])
                 System.out.print(x+" ");
         }
-        int [][] arr2=new int[n][n];
         Random random = new Random();
+
+        int [][] arr2=new int[10][20];
         for (int i=0; i<n; i++)
         {
-            for (int j=0; j<n; j++){
+            for (int j=0; j< arr2[i].length; j++){
                 arr2[i][j]=random.nextInt(-10,-1);
             }
         }
