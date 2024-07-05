@@ -3,13 +3,6 @@ package MATRIX;
 
 import java.util.Random;
 
-public class MultiDimensionalArray {
-    public static void main(String[] args) {
-        MatrixPrinter.printMatrix();
-        RandomMatrixGenerator.generateRandomMatrix();
-    }
-}
-
 class MatrixPrinter {
     public static void printMatrix() {
         int[][] arr = {
@@ -46,5 +39,11 @@ class RandomMatrixGenerator {
             System.out.print("]");
             System.out.println();
         }
+    }
+}
+public class MultiDimensionalArray {
+    public static void main(String[] args) {
+        MatrixPrinter.printMatrix();
+        RandomMatrixGenerator.generateRandomMatrix();
     }
 }
