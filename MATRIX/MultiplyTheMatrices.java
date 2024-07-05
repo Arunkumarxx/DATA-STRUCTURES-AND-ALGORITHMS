@@ -1,5 +1,7 @@
 package MATRIX;
 
+import ARRAYS.Arrays;
+
 public class MultiplyTheMatrices {
     public static void main(String[] args) {
         int [][] One = {
@@ -27,6 +29,11 @@ public class MultiplyTheMatrices {
                     result[i][j]+=One[j][k]*Two[k][j];
                 }
             }
+        }
+        for (int x[]:result) {
+            for (int y : x)
+                System.out.print(y + " ");
+            System.out.println();
         }
     }
 }
