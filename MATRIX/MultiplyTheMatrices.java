@@ -39,6 +39,5 @@ public class MultiplyTheMatrices {
                System.out.print(y + " ");
            System.out.println();
        }
-
     }
 }
