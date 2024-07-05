@@ -6,7 +6,6 @@ public class BoundaryTraversalOfMatrix {
     static ArrayList<Integer> PrintClockWise(int [][] matrix) {
         int n= matrix.length;
 
-        System.out.println(n);
         ArrayList<Integer> arrayList = new ArrayList<>();
         if(n==1)
         {
