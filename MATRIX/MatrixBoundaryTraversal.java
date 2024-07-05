@@ -14,7 +14,9 @@ public class MatrixBoundaryTraversal {
             {
                 if((i==0))
                     System.out.print(arr[i][j]+"\t");
-                
+                else if(j==0||j==arr[i].length-1)
+                    System.out.print(arr[i][j]+"\t");
+                else System.out.print("\t");
             }
         }
     }
