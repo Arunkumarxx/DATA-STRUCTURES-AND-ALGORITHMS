@@ -10,7 +10,7 @@ public class AddingTwoMatrices {
         int [][] arrTwo =new int[4][4];
         for (int i=0; i<arrOne.length; i++)
         {
-            Arrays.fill(arrOne[i],random.nextInt(1,100)*i);
+            Arrays.fill(arrOne[i],random.nextInt(1,100));
             Arrays.fill(arrTwo[i],random.nextInt(100,200)*i);
         }
         int [][] result = Add(arrOne,arrTwo);
