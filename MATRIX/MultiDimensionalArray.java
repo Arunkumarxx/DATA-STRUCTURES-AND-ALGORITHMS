@@ -6,6 +6,7 @@ import java.util.Random;
 public class MultiDimensionalArray {
     public static void main(String[] args) {
         MatrixPrinter.printMatrix();
+        
     }
 }
 
