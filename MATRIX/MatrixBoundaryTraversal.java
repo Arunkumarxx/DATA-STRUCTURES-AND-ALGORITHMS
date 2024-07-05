@@ -18,6 +18,7 @@ public class MatrixBoundaryTraversal {
                     System.out.print(arr[i][j]+"\t");
                 else System.out.print("\t");
             }
+            System.out.println();
         }
     }
 }
