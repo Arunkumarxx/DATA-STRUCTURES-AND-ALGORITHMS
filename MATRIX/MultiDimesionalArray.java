@@ -10,11 +10,11 @@ public class MultiDimesionalArray {
                 {7,8,9}
         };
         int n=arr.length;
-        for (int i=0; i<n; i++)
-        {
-            for (int x:arr[i])
-                System.out.print(x+" ");
-        }
+//        for (int i=0; i<n; i++)
+//        {
+//            for (int x:arr[i])
+//                System.out.print(x+" ");
+//        }
         Random random = new Random();
 
         int [][] arr2=new int[10][4];
