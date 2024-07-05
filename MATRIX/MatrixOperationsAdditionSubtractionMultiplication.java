@@ -11,7 +11,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
-        System.out.println();
+        
     }
     static void sub(int [][] arrOne,int [][]arrTwo,int [][] result) {
         System.out.println("Subtraction");
