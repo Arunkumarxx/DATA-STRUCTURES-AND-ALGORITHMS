@@ -11,14 +11,14 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
-        
+
     }
     static void sub(int [][] arrOne,int [][]arrTwo,int [][] result) {
         System.out.println("Subtraction");
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
-                result[i][j]=arrOne[i][j]+arrTwo[i][j];
+                result[i][j]=arrOne[i][j]-arrTwo[i][j];
             }
         }
     }
@@ -27,7 +27,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
-                result[i][j]=arrOne[i][j]+arrTwo[i][j];
+                result[i][j]=arrOne[i][j]/arrTwo[i][j];
             }
         }
 
@@ -37,7 +37,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
-                result[i][j]=arrOne[i][j]+arrTwo[i][j];
+                result[i][j]=arrOne[i][j]*arrTwo[i][j];
             }
         }
     }
