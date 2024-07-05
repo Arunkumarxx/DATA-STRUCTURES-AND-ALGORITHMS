@@ -52,7 +52,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         Arrays.fill(result,0);
     }
     public static void main(String[] args) {
-        int [][] arrOne ={{1,2},{4,5}};
+        int [][] arrOne ={{1,2},{4,21}};
         int [][] arrTwo ={{5,6},{8,9}};
         int [][] result =new int[arrOne.length][];
         add(arrOne,arrTwo,result);      print(result);
