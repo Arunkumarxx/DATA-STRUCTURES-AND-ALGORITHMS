@@ -17,10 +17,11 @@ public class BoundaryTraversalOfMatrix {
         for (int i=0; i<arr[0].length-1; i++)
             arrayList.add(arr[k][i]);
 
-        for (int i=0; i<n;i++) {
+        for (int i=0; i<n-1;i++) {
             k=arr[i].length-1;
             arrayList.add(arr[i][k]);
         }
+        for (int i)
         System.out.println(arrayList);
     }
 }
