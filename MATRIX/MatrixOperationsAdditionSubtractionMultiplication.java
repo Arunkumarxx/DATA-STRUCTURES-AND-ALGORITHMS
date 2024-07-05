@@ -52,8 +52,8 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         Arrays.fill(result,0);
     }
     public static void main(String[] args) {
-        int [][] arrOne ={{1,2},{4,21}};
-        int [][] arrTwo ={{5,6},{8,9}};
+        int [][] arrOne ={{11,12},{4,512}};
+        int [][] arrTwo ={{523,6},{812,921}};
         int [][] result =new int[arrOne.length][];
         add(arrOne,arrTwo,result);      print(result);
         sub(arrOne,arrTwo,result);      print(result);
