@@ -2,7 +2,7 @@ package MATRIX;
 
 import java.util.Random;
 
-public class MultiDimesionalArray {
+public class MultiDimensionalArray {
     public static void main(String[] args) {
         int [][] arr = {
                 {1,2,3},
