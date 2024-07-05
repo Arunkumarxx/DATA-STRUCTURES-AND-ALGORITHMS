@@ -25,7 +25,7 @@ public class MultiplyTheMatrices {
             {
                 for (int k=0;k<m1; k++)
                 {
-                    result[i][j]+=One[j][k]*Two[k][j];
+                    result[i][j]+=One[i][k]*Two[k][j];
                 }
             }
         }
