@@ -3,32 +3,49 @@ package MATRIX;
 import java.util.ArrayList;
 
 public class BoundaryTraversalOfMatrix {
-    static ArrayList<Integer> PrintClockWise(int [][] matrix) {
-        int n= matrix.length;
-
+    static ArrayList<Integer> PrintClockWise(int [][] matrix,int n,int m) {
         ArrayList<Integer> arrayList = new ArrayList<>();
-        if(n==1)
-        {
-            for(int i=0; i<matrix[0].length;i++)
+
+        // If there is only one row, return that row
+        if (n == 1) {
+            for (int i = 0; i < m; i++) {
                 arrayList.add(matrix[0][i]);
+            }
             return arrayList;
         }
-        int k=0;
-        for (int i=0; i<matrix[0].length-1; i++)
-            arrayList.add(matrix[k][i]);
 
-        for (int i=0; i<n-1;i++) {
-            k=matrix[i].length-1;
-            arrayList.add(matrix[i][k]);
+        // If there is only one column, return that column
+        if (m == 1) {
+            for (int i = 0; i < n; i++) {
+                arrayList.add(matrix[i][0]);
+            }
+            return arrayList;
         }
-        k=matrix[n-1].length-1;
-        for (;k>=1;k--)
-        {
-            arrayList.add(matrix[n-1][k]);
+
+        // Traverse the top row
+        for (int i = 0; i < m; i++) {
+            arrayList.add(matrix[0][i]);
         }
-        k=0;
-        for ( int i=n-1; i>=1; i--)
-            arrayList.add(matrix[i][0]);
+
+        // Traverse the right column
+        for (int i = 1; i < n; i++) {
+            arrayList.add(matrix[i][m - 1]);
+        }
+
+        // Traverse the bottom row
+        if (n > 1) { // Ensure we are not traversing the same row twice
+            for (int i = m - 2; i >= 0; i--) {
+                arrayList.add(matrix[n - 1][i]);
+            }
+        }
+
+        // Traverse the left column
+        if (m > 1) { // Ensure we are not traversing the same column twice
+            for (int i = n - 2; i > 0; i--) {
+                arrayList.add(matrix[i][0]);
+            }
+        }
+
         return arrayList;
     }
 
@@ -36,7 +53,7 @@ public class BoundaryTraversalOfMatrix {
         int [][] matrix ={
                        {3,8,2}
         };
-       ArrayList<Integer> arrayList =  PrintClockWise(matrix);
+       ArrayList<Integer> arrayList =  PrintClockWise(matrix,matrix.length,matrix[0].length);
         System.out.println(arrayList);
     }
 }
