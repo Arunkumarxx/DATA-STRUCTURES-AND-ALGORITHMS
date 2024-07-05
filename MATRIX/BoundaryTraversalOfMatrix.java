@@ -9,7 +9,7 @@ public class BoundaryTraversalOfMatrix {
         ArrayList<Integer> arrayList = new ArrayList<>();
         if(n==1)
         {
-            for(int i=0; i<n;i++)
+            for(int i=0; i<matrix[0].length;i++)
                 arrayList.add(matrix[0][i]);
             return arrayList;
         }
