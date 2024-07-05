@@ -26,9 +26,9 @@ public class BoundaryTraversalOfMatrix {
         {
             arrayList.add(arr[n-1][k]);
         }
-        k=n-1;
+        k=0;
         for ( int i=n-1; i>=0; i--)
-            
+            arrayList.add(arr[i][0]);
         System.out.println(arrayList);
     }
 }
