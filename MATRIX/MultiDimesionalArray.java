@@ -26,9 +26,11 @@ public class MultiDimesionalArray {
             }
         }
         for (int []x:arr2) {
+            System.out.print("[");
             for (int x1 : x)
                 System.out.print(x1 + " ");
-            System.out.println();
+            System.out.println("]");
+            System.out.println("]");
         }
     }
 }
