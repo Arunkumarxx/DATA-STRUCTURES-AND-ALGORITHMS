@@ -34,9 +34,11 @@ public class MultiplyTheMatrices {
                 {9,4}
         };
        int [][] result = print(One,Two);
-       for (int [] x:result)
-           for (int y:x)
-               System.out.print(y+" ");
+       for (int [] x:result) {
+           for (int y : x)
+               System.out.print(y + " ");
+           System.out.println();
+       }
 
     }
 }
