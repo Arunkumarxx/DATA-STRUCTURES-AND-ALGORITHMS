@@ -21,10 +21,9 @@ public class MultiplyTheMatrices {
         {
             for (int j=0; j<m1; j++)
             {
-                
                 for (int k=0;k<m1; k++)
                 {
-
+                    result[]
                 }
             }
         }
