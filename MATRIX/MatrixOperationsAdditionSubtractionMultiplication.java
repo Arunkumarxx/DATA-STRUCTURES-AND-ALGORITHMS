@@ -1,5 +1,7 @@
 package MATRIX;
 
+import ARRAYS.Arrays;
+
 public class MatrixOperationsAdditionSubtractionMultiplication {
     public static void main(String[] args) {
         int [][] arrOne ={{1,2},{4,5}};
@@ -15,6 +17,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
             for (int y : x)
                 System.out.print(y + " ");
             System.out.println();
+            
         }
     }
 }
