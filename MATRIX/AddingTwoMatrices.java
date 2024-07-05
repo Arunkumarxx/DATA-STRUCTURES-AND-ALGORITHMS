@@ -10,8 +10,8 @@ public class AddingTwoMatrices {
         int [][] arrTwo =new int[4][4];
         for (int i=0; i<arrOne.length; i++)
         {
-            Random random = new Random();
-            Arrays.fill(arrOne[i],random1.nextInt(41,100));
+            Random random1 = new Random();
+            Arrays.fill(arrOne[i], random1.nextInt(41,100));
             Random random2 = new Random();
             Arrays.fill(arrTwo[i],random2.nextInt(10,200));
         }
