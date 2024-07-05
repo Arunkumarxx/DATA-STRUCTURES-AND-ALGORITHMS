@@ -33,7 +33,7 @@ public class AddingTwoMatrices {
         Random random = new Random();
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = random.nextInt(end - start + 1) + start;
+                arr[i][j] = random.nextInt(1,100);
             }
         }
     }
