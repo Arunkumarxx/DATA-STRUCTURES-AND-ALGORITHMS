@@ -6,9 +6,12 @@ import java.util.Random;
 public class AddingTwoMatrices {
     public static void main(String[] args) {
         Random random = new Random();
-        int [][] arrOne = new int[][]
-        Arrays.fill();
-        Add()
+        int [][] arrOne =new int[10][10];
+        int [][] arrTwo =new int[10][10];
+        Arrays.fill(arrOne,random.nextInt(1,200));
+        Arrays.fill(arrTwo,random.nextInt(1,300));
+        Add(arrOne,arrTwo);
+        
     }
     static int [][] Add(int [][] arrOne,int [][] arrTwo) {
         int n1=arrOne.length;
