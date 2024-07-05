@@ -20,9 +20,9 @@ public class MultiDimesionalArray {
         int [][] arr2=new int[8][];
         for (int i=0; i< arr2.length; i++)
         {
-            arr2[i]=new int[random.nextInt(10,200)];
+            arr2[i]=new int[random.nextInt(1,9)];
             for (int j=0; j< arr2[i].length; j++){
-                arr2[i][j]=random.nextInt(1,9);
+                arr2[i][j]=random.nextInt(100,209);
             }
         }
         for (int []x:arr2) {
