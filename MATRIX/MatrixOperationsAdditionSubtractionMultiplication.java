@@ -1,6 +1,6 @@
 package MATRIX;
 
-import ARRAYS.Arrays;
+import java.util.Arrays;
 
 public class MatrixOperationsAdditionSubtractionMultiplication {
     static void add(int [][] arrOne,int [][]arrTwo,int [][] result) {
@@ -42,7 +42,9 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
             System.out.print("\n");
         }
     }
-
+    static void empty(int [][] result){
+        Arrays.fill(result,0);
+    }
     public static void main(String[] args) {
         int [][] arrOne ={{1,2},{4,5}};
         int [][] arrTwo ={{5,6},{8,9}};
@@ -50,7 +52,5 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         add(arrOne,arrTwo,result);      print(result);
         sub(arrOne,arrTwo,result);      print(result);
         multi(arrOne,arrTwo,result);    print(result);
-        Object [] arr = {"Arun","kumar"};
-        System.out.println(arr[0]);
     }
 }
