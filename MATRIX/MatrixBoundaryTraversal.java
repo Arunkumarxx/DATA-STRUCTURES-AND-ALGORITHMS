@@ -12,7 +12,7 @@ public class MatrixBoundaryTraversal {
         {
             for (int j=0; j<arr[i].length; j++)
             {
-                if((i==0))
+                if((i==0||i==n-1))
                     System.out.print(arr[i][j]+"\t");
                 else if(j==0||j==arr[i].length-1)
                     System.out.print(arr[i][j]+"\t");
