@@ -22,7 +22,7 @@ public class BoundaryTraversalOfMatrix {
             arrayList.add(arr[i][k]);
         }
         k=arr[n-1].length-1;
-        for (;k>=0;k--)
+        for (;k>=1;k--)
         {
             arrayList.add(arr[n-1][k]);
         }
