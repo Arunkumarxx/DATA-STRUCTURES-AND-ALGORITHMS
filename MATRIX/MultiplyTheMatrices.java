@@ -23,7 +23,7 @@ public class MultiplyTheMatrices {
         {
             for (int j=0; j<m1; j++)
             {
-                result[i]=new int[j];
+                result[i]=new int[m1];
                 for (int k=0;k<m1; k++)
                 {
                     result[i][j]+=One[j][k]*Two[k][j];
