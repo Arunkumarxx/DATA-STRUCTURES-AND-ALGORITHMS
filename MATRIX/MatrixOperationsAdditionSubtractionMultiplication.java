@@ -51,6 +51,6 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
         sub(arrOne,arrTwo,result);      print(result);
         multi(arrOne,arrTwo,result);    print(result);
         Object [] arr = {"Arun","kumar"};
-        System.out.println(arr);
+        System.out.println(arr[0]);
     }
 }
