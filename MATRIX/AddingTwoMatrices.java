@@ -6,8 +6,8 @@ import java.util.Random;
 public class AddingTwoMatrices {
     public static void main(String[] args) {
         Random random = new Random();
-        int [][] arrOne =new int[10][10];
-        int [][] arrTwo =new int[10][10];
+        int [][] arrOne =new int[4][4];
+        int [][] arrTwo =new int[4][4];
         for (int i=0; i<arrOne.length; i++)
         {
             Arrays.fill(arrOne[i],random.nextInt(1,100));
