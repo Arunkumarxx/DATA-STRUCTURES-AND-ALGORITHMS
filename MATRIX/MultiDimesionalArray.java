@@ -13,7 +13,6 @@ public class MultiDimesionalArray {
             for (int x:arr[i])
                 System.out.print(x+" ");
         }
-        int [][] arr2 = new int[4][];
-        
+        int [][] arr2=new int[n][n];
     }
 }
