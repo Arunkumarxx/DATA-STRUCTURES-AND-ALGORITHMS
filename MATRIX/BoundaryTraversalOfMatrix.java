@@ -33,6 +33,6 @@ public class BoundaryTraversalOfMatrix {
                        {9,10, 11,12},
                        {13,14,15,16}
         };
-
+        PrintClockWise(matrix);
     }
 }
