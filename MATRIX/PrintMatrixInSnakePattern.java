@@ -21,5 +21,6 @@ public class PrintMatrixInSnakePattern {
                  arrayList.add(arr[i][j]);
          }
        }
+        System.out.println(arrayList);
     }
 }
