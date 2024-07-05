@@ -1,31 +1,48 @@
 package MATRIX;
 
+
 import java.util.Random;
 
 public class MultiDimensionalArray {
     public static void main(String[] args) {
-        int [][] arr = {
-                {1,2,3},
-                {4,5,6},
-                {7,8,9}
-        };
-        int n=arr.length;
-        for (int i=0; i<n; i++)
-        {
-            for (int x:arr[i])
-                System.out.print(x+" ");
-        }
-        Random random = new Random();
+        MatrixPrinter matrixPrinter = new MatrixPrinter();
+        matrixPrinter.printMatrix();
 
-        int [][] arr2=new int[8][];
-        for (int i=0; i< arr2.length; i++)
-        {
-            arr2[i]=new int[5];
-            for (int j=0; j< arr2[i].length; j++){
-                arr2[i][j]=random.nextInt(1,Integer.MAX_VALUE);
+        RandomMatrixGenerator randomMatrixGenerator = new RandomMatrixGenerator();
+        randomMatrixGenerator.generateRandomMatrix();
+    }
+}
+
+class MatrixPrinter {
+    public void printMatrix() {
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            for (int x : arr[i]) {
+                System.out.print(x + " ");
             }
         }
-        for (int []x:arr2) {
+        System.out.println();
+    }
+}
+
+class RandomMatrixGenerator {
+    public void generateRandomMatrix() {
+        Random random = new Random();
+
+        int[][] arr2 = new int[8][];
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = new int[5];
+            for (int j = 0; j < arr2[i].length; j++) {
+                arr2[i][j] = random.nextInt(Integer.MAX_VALUE) + 1;
+            }
+        }
+        for (int[] x : arr2) {
             System.out.print("[ ");
             for (int x1 : x)
                 System.out.print(x1 + " ");
