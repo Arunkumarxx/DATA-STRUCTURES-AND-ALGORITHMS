@@ -35,7 +35,7 @@ public class BoundaryTraversalOfMatrix {
 
     public static void main(String[] args) {
         int [][] matrix ={
-                       {1, 2, 3, 4 }
+                       {3,8,2}
         };
        ArrayList<Integer> arrayList =  PrintClockWise(matrix);
         System.out.println(arrayList);
