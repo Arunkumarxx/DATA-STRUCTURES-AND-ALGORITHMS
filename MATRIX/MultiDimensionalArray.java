@@ -5,16 +5,13 @@ import java.util.Random;
 
 public class MultiDimensionalArray {
     public static void main(String[] args) {
-        MatrixPrinter matrixPrinter = new MatrixPrinter();
-        matrixPrinter.printMatrix();
-
-        RandomMatrixGenerator randomMatrixGenerator = new RandomMatrixGenerator();
-        randomMatrixGenerator.generateRandomMatrix();
+        MatrixPrinter matrixPrinter =new MatrixPrinter();
+        
     }
 }
 
 class MatrixPrinter {
-    public void printMatrix() {
+    public static void printMatrix() {
         int[][] arr = {
                 {1, 2, 3},
                 {4, 5, 6},
@@ -32,7 +29,7 @@ class MatrixPrinter {
 }
 
 class RandomMatrixGenerator {
-    public void generateRandomMatrix() {
+    public static void generateRandomMatrix() {
         Random random = new Random();
 
         int[][] arr2 = new int[8][];
