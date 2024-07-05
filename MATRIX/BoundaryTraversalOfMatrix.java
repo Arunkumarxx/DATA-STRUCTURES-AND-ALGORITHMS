@@ -3,11 +3,7 @@ package MATRIX;
 import java.util.ArrayList;
 
 public class BoundaryTraversalOfMatrix {
-    static int  add(int [][] arr,int start,int end,ArrayList<Integer> arrayList) {
-        for (int j= start; j < end; j++) {
-            arrayList.add(arr[start][j]);
-        }
-    }
+
     public static void main(String[] args) {
         int [][] arr ={
                 {1,2,3},
@@ -16,10 +12,14 @@ public class BoundaryTraversalOfMatrix {
         };
         int n= arr.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
+        int j=0;
         for (int i=0; i<n ; i++)
         {
-            if(i==0) add(arr,i,arr[i].length,arrayList);
-            
+            if(i==0)
+                for (int [] x:arr)
+                    for (int y:x)
+                        arrayList.add(y);
         }
+        System.out.println(arrayList);
     }
 }
