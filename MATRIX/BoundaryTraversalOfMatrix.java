@@ -12,12 +12,10 @@ public class BoundaryTraversalOfMatrix {
         };
         int n= arr.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
-        int j=0;
-        for (int i=0; i<n ; i++)
-        {
-            if(i==0)
-                for (j<)
-        }
+        int k=0;
+        for (int i=0; i<n; i++)
+            arrayList.add(arr[k][i]);
+        
         System.out.println(arrayList);
     }
 }
