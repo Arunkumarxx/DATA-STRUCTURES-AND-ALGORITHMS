@@ -20,7 +20,7 @@ public class MultiDimesionalArray {
         for (int i=0; i<n; i++)
         {
             for (int j=0; j<n; j++){
-                arr2[i][j]=random.nextInt(-10,-5);
+                arr2[i][j]=random.nextInt(-10,-1);
             }
         }
         for (int []x:arr2)
