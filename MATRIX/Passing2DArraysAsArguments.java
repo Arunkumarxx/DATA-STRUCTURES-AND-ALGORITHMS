@@ -24,6 +24,7 @@ public class Passing2DArraysAsArguments {
     public static void main(String[] args) {
         int [][] arr ={{1},{3,4},{5,6,7}};
         print(arr);
+        System.out.println();
         int [][] arr2 = new int[2][2];
         printTwo(arr2);
     }
