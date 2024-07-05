@@ -24,8 +24,10 @@ public class MultiDimesionalArray {
                 arr2[i][j]=random.nextInt(1,9);
             }
         }
-        for (int []x:arr2)
-            for (int x1:x)
-                System.out.println(x1);
+        for (int []x:arr2) {
+            for (int x1 : x)
+                System.out.print(x1 + " ");
+            System.out.println();
+        }
     }
 }
