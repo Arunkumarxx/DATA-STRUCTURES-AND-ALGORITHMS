@@ -4,30 +4,37 @@ import java.util.Arrays;
 
 public class MatrixOperationsAdditionSubtractionMultiplication {
     static void add(int [][] arrOne,int [][]arrTwo,int [][] result) {
+        System.out.println("Addition");
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
+        System.out.println();
     }
     static void sub(int [][] arrOne,int [][]arrTwo,int [][] result) {
+        System.out.println("Subtraction");
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
+        System.out.println();
     }
     static void divide(int [][] arrOne,int [][]arrTwo,int [][] result) {
+        System.out.println("Division");
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
+        System.out.println();
     }
     static void multi(int [][] arrOne,int [][]arrTwo,int [][] result) {
+        System.out.println("Multiplyication");
         for (int i=0;i<arrOne.length; i++) {
             result[i]= new int[arrOne[i].length];
             for (int j = 0; j < arrOne[i].length; j++){
