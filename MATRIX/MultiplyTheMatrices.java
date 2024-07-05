@@ -21,7 +21,7 @@ public class MultiplyTheMatrices {
         int [][] result  =new int[n1][];
         for (int i=0; i<n1; i++)
         {
-            for (int j=0; j<m1; j++)
+            for (int j=0; j<m2; j++)
             {
                 for (int k=0;k<m1; k++)
                 {
