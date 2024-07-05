@@ -22,7 +22,7 @@ public class MultiDimesionalArray {
         {
             arr2[i]=new int[5];
             for (int j=0; j< arr2[i].length; j++){
-                arr2[i][j]=random.nextInt(100,209);
+                arr2[i][j]=random.nextInt(1,Integer.MAX_VALUE);
             }
         }
         for (int []x:arr2) {
