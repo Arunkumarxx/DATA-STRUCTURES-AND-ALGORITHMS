@@ -11,8 +11,9 @@ public class AddingTwoMatrices {
         for (int i=0; i<arrOne.length; i++)
         {
             Random random = new Random();
-            Arrays.fill(arrOne[i],random.nextInt(41,100));
-            Arrays.fill(arrTwo[i],random.nextInt(10,200));
+            Arrays.fill(arrOne[i],random1.nextInt(41,100));
+            Random random2 = new Random();
+            Arrays.fill(arrTwo[i],random2.nextInt(10,200));
         }
         int [][] result = Add(arrOne,arrTwo);
         for (int [] x:result) {
