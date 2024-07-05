@@ -9,18 +9,18 @@ public class PrintMatrixInSnakePattern {
              {4,5,6},
              {7,8,9}
      };
-     int n= matrix.length;
+        int n= matrix.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
-     for (int i=0; i<n; i++)
-     {
-         if((i&1)==0)
-             for (int j = 0; j < n; j++)
-                 arrayList.add(matrix[i][j]);
-         if((i&1)==1) {
-             for (int j = matrix[i].length-1; j>=i;j--)
-                 arrayList.add(matrix[i][j]);
-         }
-       }
+        for (int i=0; i<n; i++)
+        {
+            if((i&1)==0)
+                for (int j = 0; j <matrix[i].length; j++)
+                    arrayList.add(matrix[i][j]);
+            if((i&1)==1) {
+                for (int j = matrix[i].length-1; j>=i;j--)
+                    arrayList.add(matrix[i][j]);
+            }
+        }
         System.out.println(arrayList);
     }
 }
