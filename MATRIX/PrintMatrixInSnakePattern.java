@@ -17,7 +17,7 @@ public class PrintMatrixInSnakePattern {
                 for (int j = 0; j <matrix[i].length; j++)
                     arrayList.add(matrix[i][j]);
             if((i&1)==1) {
-                for (int j = matrix[i].length-1; j>=i;j--)
+                for (int j = matrix[i].length-1; j==i;j--)
                     arrayList.add(matrix[i][j]);
             }
         }
