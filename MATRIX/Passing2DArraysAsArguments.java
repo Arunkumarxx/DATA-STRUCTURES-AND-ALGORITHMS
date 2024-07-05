@@ -1,5 +1,7 @@
 package MATRIX;
 
+import java.util.Random;
+
 public class Passing2DArraysAsArguments {
     static void print(int [][] arr){
         for (int [] x:arr)
@@ -7,11 +9,12 @@ public class Passing2DArraysAsArguments {
                 System.out.print(y+" ");
     }
     static void printTwo(int [][] arr){
+        Random random = new Random();
         for (int i=0;i< arr.length; i++)
         {
             for (int j=0;j<arr[i].length;j++)
             {
-                
+                arr[i][j]=random.nextInt(1,10);// range 1 to 10 random values
             }
         }
         for (int [] x:arr)
