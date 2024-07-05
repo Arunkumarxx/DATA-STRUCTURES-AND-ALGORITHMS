@@ -3,14 +3,7 @@ package MATRIX;
 import java.util.ArrayList;
 
 public class BoundaryTraversalOfMatrix {
-
-    public static void main(String[] args) {
-        int [][] matrix ={
-                       {1, 2, 3, 4 },
-                       { 5, 6, 7, 8},
-                       {9,10, 11,12},
-                       {13,14,15,16}
-        };
+    static void PrintClockWise(int [][] matrix) {
         int n= matrix.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
         int k=0;
@@ -31,5 +24,15 @@ public class BoundaryTraversalOfMatrix {
             arrayList.add(matrix[i][0]);
 
         System.out.println(arrayList);
+    }
+
+    public static void main(String[] args) {
+        int [][] matrix ={
+                       {1, 2, 3, 4 },
+                       { 5, 6, 7, 8},
+                       {9,10, 11,12},
+                       {13,14,15,16}
+        };
+
     }
 }
