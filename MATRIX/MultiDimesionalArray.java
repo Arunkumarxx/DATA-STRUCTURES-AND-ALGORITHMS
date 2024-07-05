@@ -30,7 +30,7 @@ public class MultiDimesionalArray {
             for (int x1 : x)
                 System.out.print(x1 + " ");
             System.out.print("]");
-            System.out.println("]");
+            System.out.println();
         }
     }
 }
