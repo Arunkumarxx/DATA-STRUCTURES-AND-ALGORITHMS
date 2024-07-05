@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class PrintMatrixInSnakePattern {
     public static void main(String[] args) {
      int [][] matrix  ={
-             {1,2,3},
-             {4,5,6},
-             {7,8,9}
+                     {45, 48, 54},
+                     {21, 89, 87},
+                     {70, 78, 15}
      };
         int n= matrix.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
