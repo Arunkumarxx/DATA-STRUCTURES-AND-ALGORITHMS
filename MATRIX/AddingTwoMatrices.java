@@ -8,8 +8,11 @@ public class AddingTwoMatrices {
         Random random = new Random();
         int [][] arrOne =new int[10][10];
         int [][] arrTwo =new int[10][10];
-        Arrays.fill(arrOne,random.nextInt(1,200));
-        Arrays.fill(arrTwo,random.nextInt(1,300));
+        for (int i=0; i<arrOne.length; i++)
+        {
+            Arrays.fill(arrOne[i],random.nextInt(1,100));
+            Arrays.fill(arrTwo[i],random.nextInt(1,100));
+        }
         Add(arrOne,arrTwo);
         
     }
