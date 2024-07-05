@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class BoundaryTraversalOfMatrix {
     static ArrayList<Integer> PrintClockWise(int [][] matrix) {
         int n= matrix.length;
+
+        System.out.println(n);
         ArrayList<Integer> arrayList = new ArrayList<>();
         if(n==1)
         {
@@ -12,7 +14,6 @@ public class BoundaryTraversalOfMatrix {
                 for(int y:x)
                     arrayList.add(y);
             return arrayList;
-
         }
         int k=0;
         for (int i=0; i<matrix[0].length-1; i++)
