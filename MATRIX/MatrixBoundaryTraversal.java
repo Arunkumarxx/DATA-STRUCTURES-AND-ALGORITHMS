@@ -5,7 +5,8 @@ public class MatrixBoundaryTraversal {
         int [][] arr ={
                 {1,2,3,32,3,2,432},
                 {4,5,6,23,32,3,3},
-                {7,8,9,65,65,5,56}
+                {7,8,9,65,65,5,56},
+                {8,9,65,65,5,56,23}
         };
         int n= arr.length;
         for (int i=0; i<n; i++)
