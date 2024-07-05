@@ -13,8 +13,11 @@ public class AddingTwoMatrices {
             Arrays.fill(arrOne[i],random.nextInt(1,100));
             Arrays.fill(arrTwo[i],random.nextInt(1,100));
         }
-        Add(arrOne,arrTwo);
-        
+        int [][] result = Add(arrOne,arrTwo);
+        for (int [] x:result)
+            for (int y:x)
+                System.out.print(y+"\t");
+
     }
     static int [][] Add(int [][] arrOne,int [][] arrTwo) {
         int n1=arrOne.length;
