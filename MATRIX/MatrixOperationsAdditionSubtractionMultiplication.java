@@ -44,7 +44,7 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
     static void print(int [][] result) {
         for (int [] row :result) {
             for (int row_col : row)
-                System.out.print(row_col + " ");
+                System.out.print(row_col + "");
             System.out.print("\n");
         }
     }
