@@ -17,7 +17,7 @@ public class MultiDimesionalArray {
 //        }
         Random random = new Random();
 
-        int [][] arr2=new int[8][4];
+        int [][] arr2=new int[8][];
         for (int i=0; i< arr2.length; i++)
         {
             for (int j=0; j< arr2[i].length; j++){
