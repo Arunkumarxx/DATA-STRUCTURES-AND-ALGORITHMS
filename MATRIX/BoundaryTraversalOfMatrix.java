@@ -13,9 +13,9 @@ public class BoundaryTraversalOfMatrix {
         int n= arr.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
         int k=0;
-        for (int i=0; i<n; i++)
+        for (int i=0; i<n-1; i++)
             arrayList.add(arr[k][i]);
-        
+
         System.out.println(arrayList);
     }
 }
