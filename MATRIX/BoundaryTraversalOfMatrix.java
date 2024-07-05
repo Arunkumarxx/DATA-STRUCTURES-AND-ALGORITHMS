@@ -3,9 +3,17 @@ package MATRIX;
 import java.util.ArrayList;
 
 public class BoundaryTraversalOfMatrix {
-    static void PrintClockWise(int [][] matrix) {
+    static ArrayList<Integer> PrintClockWise(int [][] matrix) {
         int n= matrix.length;
         ArrayList<Integer> arrayList = new ArrayList<>();
+        if(n==1)
+        {
+            for(int []x:matrix)
+                for(int y:x)
+                    arrayList.add(y);
+            return arrayList;
+
+        }
         int k=0;
         for (int i=0; i<matrix[0].length-1; i++)
             arrayList.add(matrix[k][i]);
@@ -33,6 +41,7 @@ public class BoundaryTraversalOfMatrix {
                        {9,10, 11,12},
                        {13,14,15,16}
         };
-        PrintClockWise(matrix);
+       ArrayList<Integer> arrayList =  PrintClockWise(matrix);
+        System.out.println(arrayList);
     }
 }
