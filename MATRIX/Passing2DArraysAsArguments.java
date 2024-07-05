@@ -7,7 +7,7 @@ public class Passing2DArraysAsArguments {
                 System.out.print(y+" ");
     }
     public static void main(String[] args) {
-        int [][] arr ={{}};
-        print();
+        int [][] arr ={{1},{1,2},{1,2,3}};
+        print(arr);
     }
 }
