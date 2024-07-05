@@ -5,11 +5,12 @@ import java.util.Random;
 
 public class AddingTwoMatrices {
     public static void main(String[] args) {
-        Random random = new Random();
+
         int [][] arrOne =new int[4][4];
         int [][] arrTwo =new int[4][4];
         for (int i=0; i<arrOne.length; i++)
         {
+            Random random = new Random();
             Arrays.fill(arrOne[i],random.nextInt(41,100));
             Arrays.fill(arrTwo[i],random.nextInt(10,200));
         }
