@@ -7,17 +7,15 @@ public class BoundaryTraversalOfMatrix {
         ArrayList<Integer> arrayList = new ArrayList<>();
 
         if (n == 1) {
-            for (int i = 0; i < m; i++) {
+            for (int i = 0; i < m; i++)
                 arrayList.add(matrix[0][i]);
-            }
             return arrayList;
         }
 
 
         if (m == 1) {
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++)
                 arrayList.add(matrix[i][0]);
-            }
             return arrayList;
         }
 
@@ -39,7 +37,7 @@ public class BoundaryTraversalOfMatrix {
             for (int i = n - 2; i > 0; i--)
                 arrayList.add(matrix[i][0]);
 
-        
+
         return arrayList;
     }
 
