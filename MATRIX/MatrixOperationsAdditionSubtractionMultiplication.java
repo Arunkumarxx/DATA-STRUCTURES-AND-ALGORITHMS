@@ -11,8 +11,10 @@ public class MatrixOperationsAdditionSubtractionMultiplication {
                 result[i][j]=arrOne[i][j]+arrTwo[i][j];
             }
         }
-        for (int [] x:result)
-            for (int y:x)
-                System.out.print(y+" ");
+        for (int [] x:result) {
+            for (int y : x)
+                System.out.print(y + " ");
+            System.out.println();
+        }
     }
 }
