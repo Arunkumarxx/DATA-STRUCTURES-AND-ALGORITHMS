@@ -11,6 +11,16 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
         }
         return "-1";
     }
+    static String SearchElementInMatrixEfficient(int [][] matrix,int x) {
+        int k=0;
+        int n=matrix.length;
+        for (int j=n-1; j>=0 && k<n; j--)
+        {
+            if(matrix[k][j]==x)
+                return "("+k+""+j+")";
+        }
+        return "-1";
+    }
     public static void main(String[] args) {
         int [] [] matrix = {
                 {10, 20, 30, 40},
@@ -19,6 +29,6 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
                 {32, 33, 39, 50}
         };
         System.out.println(SearchElementBruteForce(matrix,10));
-        
+        System.out.println(SearchElementInMatrixEfficient(matrix,29));
     }
 }
