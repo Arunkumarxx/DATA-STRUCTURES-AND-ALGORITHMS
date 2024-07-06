@@ -17,8 +17,11 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
         int j=n-1;
         while(i<n && j>=0)
         {
-            if(matrix[i][j]<x)
-                i++;
+            if(matrix[i][j]==x)
+                return "("+i+","+j+")";
+            if(matrix[i][j]>x)
+                j--;
+            else i++;
         }
         return "-1";
     }
