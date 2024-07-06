@@ -9,7 +9,6 @@ public class RotateMatrixAntiClockwiseBy90 {
         for (int i=0; i<matrix.length; i++)
         {
             for (int j=0; j< matrix[i].length; j++) {
-                Random random =new Random();
                 matrix[i][j] =count++;
             }
         }
