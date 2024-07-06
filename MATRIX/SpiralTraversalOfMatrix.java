@@ -22,7 +22,6 @@ public class SpiralTraversalOfMatrix {
         }
         topLeft++;
         for (int i=topRight; i<BottomRight;)
-            System.out.println();
         System.out.println(arrayList);
     }
 }
