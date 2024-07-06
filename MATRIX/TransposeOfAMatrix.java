@@ -6,6 +6,10 @@ public class TransposeOfAMatrix {
                            {2, 2, 2, 2},
                            {3, 3, 3, 3},
                            {4, 4, 4, 4}};
-        
+        int n=matrix.length;
+        for (int i=0; i<n; i++)
+        {
+            for (int j=0; j<)
+        }
     }
 }
