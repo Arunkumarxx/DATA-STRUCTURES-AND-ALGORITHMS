@@ -45,7 +45,7 @@ public class SpiralTraversalOfMatrix {
     public static void main(String[] args) {
         int [][] matrix = {
                 {1,2,3,4},
-                {1,234,23,}
+                {1,234,23}
         };
         System.out.println(SpiralTraversal(matrix));
     }
