@@ -15,9 +15,9 @@ public class RotateMatrixAntiClockwiseBy90 {
             int end=n-1;
             while(start<end)
             {
-                int temp=matrix[i][start];
-                matrix[i][start]=matrix[i][end];
-                matrix[i][end]=temp;
+                int temp=matrix[start][i];
+                matrix[start][i]=matrix[end][i];
+                matrix[end][i]=temp;
                 start++;
                 end--;
             }
