@@ -8,6 +8,6 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
                 {27, 29, 37, 48},
                 {32, 33, 39, 50}
         };
-        
+        System.out.println(matrix);
     }
 }
