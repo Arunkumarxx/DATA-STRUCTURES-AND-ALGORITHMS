@@ -23,7 +23,8 @@ public class SpiralTraversalOfMatrix {
         {
             arrayList.add(matrix[i][right]);
         }
-        
+        right--;
+        for (int i=right>=)
         System.out.println(arrayList);
     }
 }
