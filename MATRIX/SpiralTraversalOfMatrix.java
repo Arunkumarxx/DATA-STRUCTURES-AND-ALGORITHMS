@@ -31,7 +31,7 @@ public class SpiralTraversalOfMatrix {
         bottom--;
         for (int i=bottom;i>=top; i--)
         {
-            arrayList.add(matrix[bottom][i]);
+            arrayList.add(matrix[left][i]);
         }
         System.out.println(arrayList);
     }
