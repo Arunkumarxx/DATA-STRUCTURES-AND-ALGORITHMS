@@ -41,7 +41,7 @@ public class RotateMatrixAntiClockwiseBy90 {
 
         for (int [] y:matrix) {
             for (int x : y)
-                System.out.print(x+" ");
+                System.out.print(x+"\t");
             System.out.println();
         }
     }
