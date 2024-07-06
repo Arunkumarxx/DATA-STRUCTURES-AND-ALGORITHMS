@@ -32,7 +32,7 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
                 {27, 29, 37, 48},
                 {32, 33, 39, 50}
         };
-        System.out.println(SearchElementBruteForce(matrix,10));
+        System.out.println(SearchElementBruteForce(matrix,29));
         System.out.println(SearchElementInMatrixEfficient(matrix,29));
     }
 }
