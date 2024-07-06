@@ -41,7 +41,7 @@ public class SpiralTraversalOfMatrix {
             left++;
         }
         return arrayList;
-        
+
     }
     public static void main(String[] args) {
         int [][] matrix = {
