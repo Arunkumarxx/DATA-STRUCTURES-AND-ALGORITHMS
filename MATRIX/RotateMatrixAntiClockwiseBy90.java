@@ -12,12 +12,12 @@ public class RotateMatrixAntiClockwiseBy90 {
         for (int i=0;  i<n; i++)
         {
             int start=0;
-            int end=n-1;
+            int end=m-1;
             while(start<end)
             {
-                int temp=matrix[start][i];
-                matrix[start][i]=matrix[end][i];
-                matrix[end][i]=temp;
+                int temp=matrix[i][start];
+                matrix[i][start]=matrix[i][end];
+                matrix[i][end]=temp;
                 start++;
                 end--;
             }
