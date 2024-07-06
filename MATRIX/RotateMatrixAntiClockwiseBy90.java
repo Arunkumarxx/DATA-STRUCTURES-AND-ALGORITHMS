@@ -5,11 +5,12 @@ import java.util.Random;
 public class RotateMatrixAntiClockwiseBy90 {
     public static void main(String[] args) {
         int [][] matrix= new int[8][8];
+        int count=1;
         for (int i=0; i<matrix.length; i++)
         {
             for (int j=0; j< matrix[i].length; j++) {
                 Random random =new Random();
-                matrix[i][j] =random.nextInt(1,9);
+                matrix[i][j] =count++;
             }
         }
         int n=matrix.length;
