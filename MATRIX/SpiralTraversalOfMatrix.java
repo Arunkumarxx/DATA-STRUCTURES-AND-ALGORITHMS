@@ -41,8 +41,7 @@ public class SpiralTraversalOfMatrix {
             left++;
         }
         return arrayList;
-        if(n==1 || n==0 )
-            return new ArrayList<Integer>();
+        
     }
     public static void main(String[] args) {
         int [][] matrix = {
