@@ -18,10 +18,12 @@ public class SpiralTraversalOfMatrix {
         {
             arrayList.add(matrix[top][i]);
         }
-        for (int i=right; i<=bottom;i++)
+        top++;
+        for (int i=top; i<=bottom;i++)
         {
-            arrayList.add(matrix[][right]);
+            arrayList.add(matrix[i][right]);
         }
+        
         System.out.println(arrayList);
     }
 }
