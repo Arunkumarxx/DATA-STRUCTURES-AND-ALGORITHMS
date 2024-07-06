@@ -20,5 +20,6 @@ public class SpiralTraversalOfMatrix {
         {
             arrayList.add(matrix[topLeft][i]);
         }
+        System.out.println(arrayList);
     }
 }
