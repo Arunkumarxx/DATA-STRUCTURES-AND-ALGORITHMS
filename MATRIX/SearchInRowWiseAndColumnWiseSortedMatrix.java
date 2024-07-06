@@ -6,7 +6,7 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
         for (int i=0; i<n; i++){
             for (int j=0; j<matrix[0].length; j++)
             {
-                if(matrix[i][j]==x) return i+","+j;
+                if(matrix[i][j]==x) return "("+i+","+j+")";
             }
         }
         return "-1";
