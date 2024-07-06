@@ -12,12 +12,16 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
         return "-1";
     }
     static String SearchElementInMatrixEfficient(int [][] matrix,int x) {
-        int k=0;
         int n=matrix.length;
-        for (int j=n-1; j>=0 && k<n; j--)
+        for (int i=0; i<n; i++)
         {
-            if(matrix[k][j]==x)
-                return "("+k+""+j+")";
+            for (int j=n-1; j>=0; j--)
+            {
+                if(matrix[i][j]==x)
+                    return "("+i+""+j+")";
+                if(matrix[i][j]<x)
+                    break;
+            }
         }
         return "-1";
     }
