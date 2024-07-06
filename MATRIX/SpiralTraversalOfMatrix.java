@@ -24,7 +24,10 @@ public class SpiralTraversalOfMatrix {
             arrayList.add(matrix[i][right]);
         }
         right--;
-        for (int i=right>=)
+        for (int i=right;i>=left; i--)
+        {
+            arrayList.add(matrix[left][i]);
+        }
         System.out.println(arrayList);
     }
 }
