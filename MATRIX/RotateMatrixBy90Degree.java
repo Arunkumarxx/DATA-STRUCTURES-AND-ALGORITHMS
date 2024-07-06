@@ -1,8 +1,6 @@
 package MATRIX;
 
-import java.util.Random;
-
-public class RotateMatrixAntiClockwiseBy90 {
+public class RotateMatrixBy90Degree {
     public static void main(String[] args) {
         int [][] matrix= new int[8][8];
         int count=1;
