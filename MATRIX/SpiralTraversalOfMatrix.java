@@ -16,10 +16,12 @@ public class SpiralTraversalOfMatrix {
            ,BottomRight= matrix[n-1].length-1,
             BottomLeft=n-1;
         ArrayList<Integer> arrayList =new ArrayList<>();
-        for (int i=topLeft; i<=topRight; i++)
+        for (int i=topLeft; i<topRight; i++)
         {
             arrayList.add(matrix[topLeft][i]);
         }
+        topLeft++;
+        for (int i=topRight; i<BottomRight;)
         System.out.println(arrayList);
     }
 }
