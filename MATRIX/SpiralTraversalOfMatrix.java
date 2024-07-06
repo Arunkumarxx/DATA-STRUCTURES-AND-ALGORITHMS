@@ -14,26 +14,29 @@ public class SpiralTraversalOfMatrix {
         int top=0,bottom=n-1;
         int left=0 ,right=matrix[0].length-1;
         ArrayList<Integer> arrayList =new ArrayList<>();
-        for (int i=left; i<=right ;i++)
+        while(top<=bottom && left<=right)
         {
-            arrayList.add(matrix[top][i]);
+            for (int i=left; i<=right ;i++)
+            {
+                arrayList.add(matrix[top][i]);
+            }
+            top++;
+            for (int i=top; i<=bottom;i++)
+            {
+                arrayList.add(matrix[i][right]);
+            }
+            right--;
+            for (int i=right;i>=left; i--)
+            {
+                arrayList.add(matrix[bottom][i]);
+            }
+            bottom--;
+            for (int i=bottom;i>=top; i--)
+            {
+                arrayList.add(matrix[i][left]);
+            }
+            left++;
         }
-        top++;
-        for (int i=top; i<=bottom;i++)
-        {
-            arrayList.add(matrix[i][right]);
-        }
-        right--;
-        for (int i=right;i>=left; i--)
-        {
-            arrayList.add(matrix[bottom][i]);
-        }
-        bottom--;
-        for (int i=bottom;i>=top; i--)
-        {
-            arrayList.add(matrix[i][left]);
-        }
-        left++;
         System.out.println(arrayList);
     }
 }
