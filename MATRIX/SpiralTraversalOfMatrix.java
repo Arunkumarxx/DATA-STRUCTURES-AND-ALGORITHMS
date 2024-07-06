@@ -10,18 +10,14 @@ public class SpiralTraversalOfMatrix {
                 {9,10,11,12},
                 {13,14,15,16}
         };
-        int n= matrix.length;
-        int topLeft=0,
-            topRight= matrix[0].length-1
-           ,BottomRight= matrix[n-1].length-1,
-            BottomLeft=n-1;
+        int n=matrix.length;
+        int top=0,bottom=n-1;
+        int left=0 ,right=matrix[0].length-1;
         ArrayList<Integer> arrayList =new ArrayList<>();
-        for (int i=topLeft; i<topRight; i++)
+        for (int i=left; i<=right ;i++)
         {
-            arrayList.add(matrix[topLeft][i]);
+            arrayList.add(matrix[top][i]);
         }
-        topLeft++;
-        for (int i=topRight; i<BottomRight;)
         System.out.println(arrayList);
     }
 }
