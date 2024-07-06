@@ -13,15 +13,11 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
     }
     static String SearchElementInMatrixEfficient(int [][] matrix,int x) {
         int n=matrix.length;
-        for (int i=0; i<n; i++)
+        int i=0;
+        int j=n-1;
+        while(i<n && )
         {
-            for (int j=n-1; j>=0; j--)
-            {
-                if(matrix[i][j]<x)
-                    break;
-                if(matrix[i][j]==x)
-                    return "("+i+","+j+")";
-            }
+
         }
         return "-1";
     }
