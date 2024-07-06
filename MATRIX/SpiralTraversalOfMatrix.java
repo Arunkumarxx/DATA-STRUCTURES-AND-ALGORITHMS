@@ -11,6 +11,14 @@ public class SpiralTraversalOfMatrix {
                 {13,14,15,16}
         };
         int n=matrix.length;
+        if(n==1)
+        {
+            ArrayList<Integer> arrayList =new ArrayList<>();
+            for (int i=0; i<matrix[0].length; i++){
+                arrayList.add(matrix[0][i]);
+            }
+            return arrayList;
+        }
         int top=0,bottom=n-1;
         int left=0 ,right=matrix[0].length-1;
         ArrayList<Integer> arrayList =new ArrayList<>();
