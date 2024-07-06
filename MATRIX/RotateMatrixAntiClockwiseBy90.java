@@ -18,8 +18,8 @@ public class RotateMatrixAntiClockwiseBy90 {
                 int temp=matrix[i][start];
                 matrix[i][start]=matrix[i][end];
                 matrix[i][end]=temp;
-                ++start;
-                ++end;
+                start++;
+                end--;
             }
         }
 
