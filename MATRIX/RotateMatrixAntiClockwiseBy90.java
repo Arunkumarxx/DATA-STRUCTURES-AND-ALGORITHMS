@@ -32,7 +32,7 @@ public class RotateMatrixAntiClockwiseBy90 {
                 matrix[j][i]=temp;
             }
         }
-        
+
         for (int [] y:matrix) {
             for (int x : y)
                 System.out.print(x+" ");
