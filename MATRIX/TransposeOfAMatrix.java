@@ -18,8 +18,10 @@ public class TransposeOfAMatrix {
                 matrix[i][k++]=temp;
             }
         }
-        for (int []y:matrix)
-            for (int x:y)
-                System.out.print(x+" ");
+        for (int []y:matrix) {
+            for (int x : y)
+                System.out.print(x + " ");
+            System.out.println();
+        }
     }
 }
