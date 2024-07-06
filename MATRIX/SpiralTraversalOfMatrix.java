@@ -13,6 +13,9 @@ public class SpiralTraversalOfMatrix {
             topRight= matrix[0].length-1
            ,BottomRight= matrix[n].length-1,
             BottomLeft=n-1;
-        for(int i)
+        for (int i=topLeft; i<topRight; i++)
+        {
+            System.out.println();
+        }
     }
 }
