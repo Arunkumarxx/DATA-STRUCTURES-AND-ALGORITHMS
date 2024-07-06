@@ -15,9 +15,10 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
         int n=matrix.length;
         int i=0;
         int j=n-1;
-        while(i<n && )
+        while(i<n && j>=0)
         {
-
+            if(matrix[i][j]<x)
+                i++;
         }
         return "-1";
     }
