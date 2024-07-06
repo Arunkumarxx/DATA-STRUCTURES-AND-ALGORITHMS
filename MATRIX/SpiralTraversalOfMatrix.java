@@ -1,5 +1,7 @@
 package MATRIX;
 
+import java.util.ArrayList;
+
 public class SpiralTraversalOfMatrix {
     public static void main(String[] args) {
         int [][] matrix = {
@@ -11,11 +13,12 @@ public class SpiralTraversalOfMatrix {
         int n= matrix.length;
         int topLeft=0,
             topRight= matrix[0].length-1
-           ,BottomRight= matrix[n].length-1,
+           ,BottomRight= matrix[n-1].length-1,
             BottomLeft=n-1;
-        for (int i=topLeft; i<topRight; i++)
+        ArrayList<Integer> arrayList =new ArrayList<>();
+        for (int i=topLeft; i<=topRight; i++)
         {
-            System.out.println();
+            arrayList.add(matrix[topLeft][i]);
         }
     }
 }
