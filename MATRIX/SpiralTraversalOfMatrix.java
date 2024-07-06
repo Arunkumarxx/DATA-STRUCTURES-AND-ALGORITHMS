@@ -28,6 +28,11 @@ public class SpiralTraversalOfMatrix {
         {
             arrayList.add(matrix[bottom][i]);
         }
+        bottom--;
+        for (int i=bottom;i>=top; i--)
+        {
+            arrayList.add(matrix[bottom][i]);
+        }
         System.out.println(arrayList);
     }
 }
