@@ -22,6 +22,10 @@ public class RotateMatrixAntiClockwiseBy90 {
                 end--;
             }
         }
-
+        for (int [] y:matrix) {
+            for (int x : y)
+                System.out.print(x+" ");
+            System.out.println();
+        }
     }
 }
