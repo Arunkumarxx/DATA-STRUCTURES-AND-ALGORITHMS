@@ -15,7 +15,8 @@ public class TransposeOfAMatrix {
             {
                 int temp=matrix[i][j];
                 matrix[i][j]=matrix[i][k];
-                matrix[i][k++]=temp;
+                matrix[i][k]=temp;
+                k++;
             }
         }
         for (int []y:matrix) {
