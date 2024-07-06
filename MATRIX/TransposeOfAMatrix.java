@@ -11,11 +11,12 @@ public class TransposeOfAMatrix {
         {
             for (int j=0; j<matrix[i].length; j++)
             {
+                if(i==j)
+                    continue;
                 int temp = matrix[i][j];
                 matrix[i][j]=matrix[j][i];
                 matrix[j][i]=temp;
             }
         }
-        
     }
 }
