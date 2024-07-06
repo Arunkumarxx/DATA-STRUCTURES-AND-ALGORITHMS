@@ -3,15 +3,20 @@ package MATRIX;
 import java.util.ArrayList;
 
 public class SpiralTraversalOfMatrix {
-    public static void main(String[] args) {
-        int [][] matrix = {
-                {1,2,3,4}
-        };
+    static ArrayList<Integer> SpiralTraversal(int [][] matrix) {
         int n=matrix.length;
 
         int top=0,bottom=n-1;
         int left=0 ,right=matrix[0].length-1;
         ArrayList<Integer> arrayList =new ArrayList<>();
+        if(n==1)
+        {
+            for (int i=left; i<=right ;i++)
+            {
+                arrayList.add(matrix[top][i]);
+            }
+            return arrayList;
+        }
         while(top<=bottom && left<=right)
         {
             for (int i=left; i<=right ;i++)
@@ -35,6 +40,12 @@ public class SpiralTraversalOfMatrix {
             }
             left++;
         }
-        System.out.println(arrayList);
+        return arrayList;
+    }
+    public static void main(String[] args) {
+        int [][] matrix = {
+                {1,2,3,4}
+        };
+        System.out.println(SpiralTraversal(matrix));
     }
 }
