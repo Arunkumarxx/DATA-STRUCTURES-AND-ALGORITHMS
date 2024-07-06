@@ -13,7 +13,6 @@ public class SpiralTraversalOfMatrix {
             topRight= matrix[0].length-1
            ,BottomRight= matrix[n].length-1,
             BottomLeft=n-1;
-
-        while(topLeft)
+        for(int i)
     }
 }
