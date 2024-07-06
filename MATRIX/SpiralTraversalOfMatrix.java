@@ -8,8 +8,12 @@ public class SpiralTraversalOfMatrix {
                 {9,10,11,12},
                 {13,14,15,16}
         };
-        int ;
-        // top
+        int n= matrix.length;
+        int topLeft=0,
+            topRight= matrix[0].length-1
+           ,BottomRight= matrix[n].length-1,
+            BottomLeft=n-1;
 
+        while(topLeft)
     }
 }
