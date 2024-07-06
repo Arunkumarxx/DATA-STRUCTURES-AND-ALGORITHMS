@@ -18,7 +18,7 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
             for (int j=n-1; j>=0; j--)
             {
                 if(matrix[i][j]==x)
-                    return "("+i+""+j+")";
+                    return "("+i+","+j+")";
                 if(matrix[i][j]<x)
                     break;
             }
