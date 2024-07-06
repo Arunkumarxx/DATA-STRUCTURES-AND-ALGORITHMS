@@ -9,6 +9,7 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
                 if(matrix[i][j]==x) return new int []{i,j};
             }
         }
+        return new int[]{-1};
     }
     public static void main(String[] args) {
         int [] [] matrix = {
