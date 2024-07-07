@@ -9,13 +9,18 @@ public class SumOfUpperAndLowerTriangles {
                 {7,8,7}
         };
         int n=matrix.length;
+        int sum=0;
         for (int i =0; i<n; i++)
         {
             for (int j=i; j< matrix[i].length; j++)
             {
-                    System.out.print(matrix[i][j]+"\t");
+                    if(i<j) {
+                        System.out.print(matrix[i][j]+" ");
+                        sum += matrix[i][j];
+                    }
             }
         }
+        System.out.println(sum);
     }
 
 }
