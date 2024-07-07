@@ -6,7 +6,7 @@ public class SumOfUpperAndLowerTriangles {
         int [][] matrix ={
                 {6,5,4},
                 {1,2,5},
-                {7,8,7}
+                {7,9,7}
         };
         int n=matrix.length;
         int sumOne=0;
