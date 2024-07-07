@@ -30,7 +30,7 @@ public class SumOfUpperAndLowerTriangles {
         System.out.println();
         System.out.println("SumOne :"+sumOne);
         System.out.println("SumTwo :"+sumTwo);
-        System.out.println("Total  :"+sumOne+sumTwo);
+        System.out.println("Total  :"+(sumOne+sumTwo));
     }
 
 }
