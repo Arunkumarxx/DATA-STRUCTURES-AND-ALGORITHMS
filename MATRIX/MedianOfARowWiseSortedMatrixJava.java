@@ -1,7 +1,7 @@
 package MATRIX;
 
 public class MedianOfARowWiseSortedMatrixJava {
-    static int MedianOfRowBruteForce(int [][] matrix) {
+    static int MedianOfRowWiseSortedBruteForce(int [][] matrix) {
         int n= matrix.length;
         int m=matrix[0].length;
         int median=(n*m)/2;
@@ -34,13 +34,15 @@ public class MedianOfARowWiseSortedMatrixJava {
         }
         return -1;
     }
-    
+    static int MedianOfRowWiseSortedEfficient() {
+
+    }
     public static void main(String[] args) {
         int [][] matrix ={
                 {1,10,20},
                 {15,25,35},
                 {5,30,40}
         };
-        System.out.println(MedianOfRowBruteForce(matrix));
+        System.out.println(MedianOfRowWiseSortedBruteForce(matrix));
     }
 }
