@@ -31,6 +31,7 @@ public class MedianOfARowWiseSortedMatrixJava {
                             count++;
 
                     }
+                    System.out.println(count);
                 }
             }
         }
