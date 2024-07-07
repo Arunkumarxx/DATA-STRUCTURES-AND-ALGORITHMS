@@ -27,5 +27,10 @@ public class InterchangingTheRowsOfAMatrix {
             ++start;
             --end;
         }
+        for (int [] temp : matrix) {
+            for (int x : temp)
+                System.out.print(x + " ");
+            System.out.println();
+        }
     }
 }
