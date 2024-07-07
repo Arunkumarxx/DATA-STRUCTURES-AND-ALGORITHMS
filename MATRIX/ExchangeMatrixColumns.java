@@ -9,8 +9,8 @@ public class ExchangeMatrixColumns {
             {9, 10, 11, 12},
             {13, 14, 15,16}
        };
-       int n= matrix.length;;
-       int m1= matrix[0].length;
+       int n= matrix.length;
+       int m1= matrix[0].length-1;
        int i=0;
        while(i<n)
        {
@@ -19,7 +19,7 @@ public class ExchangeMatrixColumns {
            matrix[i][m1]=temp;
            i++;
        }
-       
+
     }
 
 }
