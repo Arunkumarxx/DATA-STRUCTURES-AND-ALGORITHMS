@@ -26,7 +26,7 @@ public class ReversingTheColumnsOfAMatrix {
         }
         for (int [] temp:matrix) {
             for (int ele : temp)
-                System.out.print(ele);
+                System.out.print(ele+" ");
             System.out.println();
         }
     }
