@@ -12,9 +12,10 @@ public class MedianOfARowWiseSortedMatrixJava {
         int median=matrix.length/2;
         for (int i=0; i<n; i++)
         {
-            int count=0;
+
             for (int j=m-1; j>=0; j--)
             {
+                int count=0;
                 int ele=matrix[i][j];
                 for (int k=0; k<n; k++)
                 {
