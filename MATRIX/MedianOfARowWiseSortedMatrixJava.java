@@ -53,5 +53,6 @@ public class MedianOfARowWiseSortedMatrixJava {
                 {5,30,40}
         };
         System.out.println(MedianOfRowWiseSortedBruteForce(matrix));
+        System.out.println(MedianOfRowWiseSortedEfficient(matrix));
     }
 }
