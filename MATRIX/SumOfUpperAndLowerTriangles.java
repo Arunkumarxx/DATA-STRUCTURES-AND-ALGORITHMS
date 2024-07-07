@@ -13,7 +13,7 @@ public class SumOfUpperAndLowerTriangles {
         {
             for (int j=i; j< matrix[i].length; j++)
             {
-                if(i>j)
+
                 {
                     System.out.print(matrix[i][j]+" ");
                 }
