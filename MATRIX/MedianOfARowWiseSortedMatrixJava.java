@@ -8,7 +8,7 @@ public class MedianOfARowWiseSortedMatrixJava {
         for (int i=0; i<n; i++)
         {
 
-            for (int j=m-1; j>=0; j--)
+            for (int j=0; j<m; j++)
             {
                 int count=0;
                 int ele=matrix[i][j];
