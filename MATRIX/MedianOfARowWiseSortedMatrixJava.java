@@ -37,13 +37,18 @@ public class MedianOfARowWiseSortedMatrixJava {
     static int MedianOfRowWiseSortedEfficient(int [][] matrix) {
         // pick smallest element
         int n= matrix.length;
+
         int min=matrix[0][0];
+
         int max=matrix[0][0];
+        // find smallest element in matrix
         for (int i=0; i<n;i++)
            min= Math.min(matrix[i][0],min);
+        //find largest element in matrix
         for (int i=0; i<n;i++)
             max=Math.max(max,matrix[i][matrix[i].length-1]);
-        System.out.println(min+" "+max);
+
+        //median =
         return -1;
     }
     public static void main(String[] args) {
