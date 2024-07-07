@@ -6,7 +6,8 @@ public class MedianOfARowWiseSortedMatrixJava {
         int [] median ={1,2,3,4,5,6,7,8,9,10};
 
         if((median.length%2)==0)
-            System.out.println(median[(median.length)/2]-1);
+            System.out.println(median[(median.length)/2]+1);
+        else System.out.println(median/2-1);
     }
 
 }
