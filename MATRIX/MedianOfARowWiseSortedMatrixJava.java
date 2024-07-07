@@ -76,9 +76,9 @@ public class MedianOfARowWiseSortedMatrixJava {
     }
     public static void main(String[] args) {
         int [][] matrix ={
-                {1,10,20},
-                {15,25,35},
-                {5,30,40}
+                {1,10,20,21},
+                {15,25,35,36},
+                {5,30,40,41}
         };
         System.out.println(MedianOfRowWiseSortedBruteForce(matrix));
         System.out.println(MedianOfRowWiseSortedEfficient(matrix,matrix.length,matrix[0].length));
