@@ -19,7 +19,11 @@ public class MedianOfARowWiseSortedMatrixJava {
                     {
                         if(matrix[k][s]<ele)
                             count++;
+                        if(count>median)
+                            break;
                     }
+                    if(count>median)
+                        break;
 
                 }
                 if(count==median)
