@@ -54,9 +54,10 @@ public class MedianOfARowWiseSortedMatrixJava {
         while(min<max)
         {
             int mid=(min+max)/2;
+            int count=0;
             for (int i=0;i<n; i++)
             {
-
+                count=
             }
         }
 
