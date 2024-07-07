@@ -20,7 +20,9 @@ public class SumOfUpperAndLowerTriangles {
                         sumOne += matrix[i][j];
                     }
                     if(i>=j) {
-                        System.out.print(matrix[i][j]+" + ");
+                        if(i== matrix[0].length&& j== matrix[0].length)
+                            System.out.println(matrix[i][j]);
+                        else  System.out.print(matrix[i][j]+" + ");
                         sumTwo += matrix[i][j];
                     }
             }
