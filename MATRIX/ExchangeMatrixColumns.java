@@ -19,7 +19,11 @@ public class ExchangeMatrixColumns {
            matrix[i][m1]=temp;
            i++;
        }
-
+       for (int [] temp:matrix) {
+           for (int x : temp)
+               System.out.print(x + " ");
+           System.out.println();
+       }
     }
 
 }
