@@ -64,7 +64,7 @@ public class MedianOfARowWiseSortedMatrixJava {
             else max=mid;
         }
 
-        return -1;
+        return min;
     }
     static int countSmallestNumber(int [] matrix,int mid) {
         int count=0;
