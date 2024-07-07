@@ -34,8 +34,8 @@ public class MedianOfARowWiseSortedMatrixJava {
         }
         return -1;
     }
-    static int MedianOfRowWiseSortedEfficient() {
-        
+    static int MedianOfRowWiseSortedEfficient(int [][] matrix) {
+
     }
     public static void main(String[] args) {
         int [][] matrix ={
