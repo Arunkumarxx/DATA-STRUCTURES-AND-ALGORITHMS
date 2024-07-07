@@ -1,2 +1,7 @@
-package MATRIX;public class InterchangingTheRowsOfAMatrix {
+package MATRIX;
+
+public class InterchangingTheRowsOfAMatrix {
+    public static void main(String[] args) {
+        
+    }
 }
