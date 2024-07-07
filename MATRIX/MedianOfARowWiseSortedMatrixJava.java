@@ -3,8 +3,8 @@ package MATRIX;
 public class MedianOfARowWiseSortedMatrixJava {
     static int MedianOfRow(int [][] matrix) {
         int n= matrix.length;
-        int m=matrix[0].length-1;
-        int median=matrix.length/2;
+        int m=matrix[0].length;
+        int median=n*m/2;
         for (int i=0; i<n; i++)
         {
 
