@@ -50,15 +50,24 @@ public class MedianOfARowWiseSortedMatrixJava {
 
         //median =n*n/2 bcz consider matrix is odd dude.....
         int median=r*c;
-        int mid=(min+max)/2;
-        System.out.println(mid);
-//        while(min<max)
-//        {
-//
-//
-//        }
+
+        while(min<max)
+        {
+            int mid=(min+max)/2;
+            for (int i=0;i<n; i++)
+            {
+
+            }
+        }
 
         return -1;
+    }
+    static int countSmallestNumber(int [][] matrix,int mid) {
+        for (int i=0; i<matrix.length; i++)
+        {
+            for (int j=0; j<matrix[0].length; j++)
+                
+        }
     }
     public static void main(String[] args) {
         int [][] matrix ={
