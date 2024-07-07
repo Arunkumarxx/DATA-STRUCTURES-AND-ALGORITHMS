@@ -51,7 +51,7 @@ public class MedianOfARowWiseSortedMatrixJava {
         //median =n*n/2 bcz consider matrix is odd dude.....
         int median=r*c/2;
 
-        while(min<=max)
+        while(min<max)
         {
             int mid=(min+max)/2;
             int count=0;
