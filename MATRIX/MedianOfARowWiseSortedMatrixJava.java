@@ -5,6 +5,7 @@ public class MedianOfARowWiseSortedMatrixJava {
         int n= matrix.length;
         int m=matrix[0].length;
         int median=(n*m)/2;
+        System.out.println(n*m);
         for (int i=0; i<n; i++)
         {
 
