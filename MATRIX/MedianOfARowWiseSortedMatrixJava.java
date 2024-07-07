@@ -77,7 +77,7 @@ public class MedianOfARowWiseSortedMatrixJava {
                 low=mid+1;
             else high=mid-1;
         }
-        return low+1;
+        return low;
 
     }
     public static void main(String[] args) {
