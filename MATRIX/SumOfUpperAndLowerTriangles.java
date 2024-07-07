@@ -21,7 +21,7 @@ public class SumOfUpperAndLowerTriangles {
                     }
                     if(i>=j) {
                         if(i== matrix[0].length-1 && j== matrix[0].length-1)
-                            System.out.println(matrix[i][j]);
+                            System.out.print(matrix[i][j]);
                         else  System.out.print(matrix[i][j]+" + ");
                         sumTwo += matrix[i][j];
                     }
