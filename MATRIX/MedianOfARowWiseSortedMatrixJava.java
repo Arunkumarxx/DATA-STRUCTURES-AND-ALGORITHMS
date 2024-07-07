@@ -34,6 +34,7 @@ public class MedianOfARowWiseSortedMatrixJava {
         }
         return -1;
     }
+    
     public static void main(String[] args) {
         int [][] matrix ={
                 {1,10,20},
