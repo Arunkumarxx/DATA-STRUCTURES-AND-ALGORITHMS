@@ -22,6 +22,11 @@ public class MedianOfARowWiseSortedMatrixJava {
                     {
                         if(count>n/2)
                             break;
+                        if(count==n/2)
+                        {
+                            System.out.println(matrix[k][s]);
+                            break;
+                        }
                         if(matrix[i][j]<ele)
                             count++;
 
