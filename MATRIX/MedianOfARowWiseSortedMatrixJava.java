@@ -34,7 +34,7 @@ public class MedianOfARowWiseSortedMatrixJava {
         }
         return -1;
     }
-    static int MedianOfRowWiseSortedEfficient(int [][] matrix) {
+    static int MedianOfRowWiseSortedEfficient(int [][] matrix int r,int c) {
         // pick smallest element
         int n= matrix.length;
 
@@ -49,8 +49,9 @@ public class MedianOfARowWiseSortedMatrixJava {
             max=Math.max(max,matrix[i][matrix[i].length-1]);
 
         //median =n*n/2 bcz consider matrix is odd dude.....
+        int median=
         return -1;
-        
+
     }
     public static void main(String[] args) {
         int [][] matrix ={
@@ -59,6 +60,6 @@ public class MedianOfARowWiseSortedMatrixJava {
                 {5,30,40}
         };
         System.out.println(MedianOfRowWiseSortedBruteForce(matrix));
-        System.out.println(MedianOfRowWiseSortedEfficient(matrix));
+        System.out.println(MedianOfRowWiseSortedEfficient(matrix,matrix.length,matrix[0].length));
     }
 }
