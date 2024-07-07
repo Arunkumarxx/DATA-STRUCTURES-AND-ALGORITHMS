@@ -72,7 +72,7 @@ public class MedianOfARowWiseSortedMatrixJava {
         {
             if(matrix[i]<=mid) count++;
         }
-        return count-1;
+        return count;
     }
     public static void main(String[] args) {
         int [][] matrix ={
