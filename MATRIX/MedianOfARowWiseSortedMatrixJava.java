@@ -1,12 +1,7 @@
 package MATRIX;
 
 public class MedianOfARowWiseSortedMatrixJava {
-    public static void main(String[] args) {
-        int [][] matrix ={
-                {1,2,3},
-                {4,5,6},
-                {7,8,9}
-        };
+    static int MedianOfRow(int [][] matrix) {
         int n= matrix.length;
         int m=matrix[0].length-1;
         int median=matrix.length/2;
@@ -26,7 +21,18 @@ public class MedianOfARowWiseSortedMatrixJava {
                     }
 
                 }
+                if(count==median)
+                    return ele;
             }
         }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int [][] matrix ={
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+        System.out.println(MedianOfRow(matrix));
     }
 }
