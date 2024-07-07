@@ -11,11 +11,11 @@ public class SumOfUpperAndLowerTriangles {
         int n=matrix.length;
         for (int i =0; i<n; i++)
         {
+            System.out.println();
             for (int j=i; j< matrix[i].length; j++)
             {
                     System.out.print(matrix[i][j]+"\t");
             }
-            System.out.println();
         }
     }
 
