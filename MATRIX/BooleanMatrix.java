@@ -6,8 +6,9 @@ public class BooleanMatrix {
                 { 1, 0, 0},
                 { 1, 0, 0},
                 { 1, 0, 0},
-                { 0, 0, 0}
-        };
-        
+                { 0, 0, 0},
+                { 0, 1, 0}
+        };while ()
+        for (int i=0; i<n)
     }
 }
