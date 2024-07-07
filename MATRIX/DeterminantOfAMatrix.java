@@ -38,6 +38,13 @@ public class DeterminantOfAMatrix {
     }
 
     public static void main(String[] args) {
-
+        int[][] matrix1 = {
+                {1, 0, 2, -1},
+                {3, 0, 0, 5},
+                {2, 1, 4, -3},
+                {1, 0, 5, 0}
+        };
+        int n1 = 4;
+        System.out.println("Determinant of the matrix is: " + determinantOfMatrix(matrix1, n1));
     }
 }
