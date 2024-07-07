@@ -7,12 +7,15 @@ public class MedianOfARowWiseSortedMatrixJava {
                 {4,5,6},
                 {7,8,9}
         };
-        int i=0;
         int n= matrix.length;
-        int j=matrix[0].length;
-        while(i<n && j>=0)
+        int m=matrix[0].length;
+        int median=matrix.length/2;
+        for (int i=0; i<n; i++)
         {
-            
+            for (int j=m; j>=0; j--)
+            {
+
+            }
         }
     }
 }
