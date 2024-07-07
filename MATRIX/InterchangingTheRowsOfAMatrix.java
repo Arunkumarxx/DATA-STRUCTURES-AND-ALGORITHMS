@@ -8,6 +8,24 @@ public class InterchangingTheRowsOfAMatrix {
                 {9,10,11,12 },
                 {13,14,15,16}
         };
-        
+
+        int start=0;
+        int end= matrix.length-1;
+        int m= matrix[0].length;
+        while(start<end)
+        {
+            int i=0;
+            int j=0;
+            while(i<m && j<m)
+            {
+                int temp=matrix[start][i];
+                matrix[start][i]=matrix[end][j];
+                matrix[end][j]=temp;
+                ++i;
+                ++j;
+            }
+            ++start;
+            --end;
+        }
     }
 }
