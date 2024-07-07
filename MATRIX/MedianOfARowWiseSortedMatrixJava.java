@@ -57,14 +57,22 @@ public class MedianOfARowWiseSortedMatrixJava {
             int count=0;
             for (int i=0;i<n; i++)
             {
-                count=countSmallestNumber(matrix[i],)
+                count+=countSmallestNumber(matrix[i],mid);
             }
+            if(count<=mid)
+                min=mid+1;
+            else mid=max-1;
         }
 
         return -1;
     }
-    static int countSmallestNumber(int [][] matrix,int mid) {
-
+    static int countSmallestNumber(int [] matrix,int mid) {
+        int count=0;
+        for (int i=0; i< matrix.length; i++)
+        {
+            if(matrix[i]<mid) count++;
+        }
+        return count;
     }
     public static void main(String[] args) {
         int [][] matrix ={
