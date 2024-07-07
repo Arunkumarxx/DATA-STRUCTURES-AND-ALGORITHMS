@@ -61,7 +61,7 @@ public class MedianOfARowWiseSortedMatrixJava {
             }
             if(count<=median)
                 min=mid+1;
-            else max=mid;
+            else max=mid-1;
         }
 
         return min;
