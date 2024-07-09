@@ -22,6 +22,13 @@ public class BooleanMatrix {
                }
            }
        }
+       for (int i=0; i<n ;i++)
+       {
+           for (int j=0; j<matrix[0].length; j++)
+           {
+               if(row|| col)
+           }
+       }
         for (int [] x:matrix) {
             for (int y : x)
                 System.out.print(y + " ");
