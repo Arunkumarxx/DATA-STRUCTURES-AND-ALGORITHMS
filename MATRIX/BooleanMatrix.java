@@ -30,8 +30,10 @@ public class BooleanMatrix {
             }
             else matrix[i][0]=1;
         }
-        for (int [] x:matrix)
-            for (int y:x)
-                System.out.print(y+" ");
+        for (int [] x:matrix) {
+            for (int y : x)
+                System.out.print(y + " ");
+            System.out.println();
+        }
     }
 }
