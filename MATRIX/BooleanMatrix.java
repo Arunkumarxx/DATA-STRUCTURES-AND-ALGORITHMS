@@ -2,7 +2,7 @@ package MATRIX;
 
 public class BooleanMatrix {
     public static void main(String[] args) {
-     int    matrix[][] = 
+     int    matrix[][] =
              {{1, 0, 0, 1},
                      {0, 0, 1, 0},
                      {0, 0, 0, 0}
@@ -32,6 +32,14 @@ public class BooleanMatrix {
         for (int [] x:matrix) {
             for (int y : x)
                 System.out.print(y + " ");
+            System.out.println();
+        }
+        for (int i=0;i< row.length; i++)
+        {
+            for (int j=0; j<col.length; j++)
+            {
+                System.out.print(row[i]+""+col[j]);
+            }
             System.out.println();
         }
     }
