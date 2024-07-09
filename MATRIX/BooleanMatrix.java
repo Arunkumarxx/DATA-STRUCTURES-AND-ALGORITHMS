@@ -2,10 +2,13 @@ package MATRIX;
 
 public class BooleanMatrix {
     public static void main(String[] args) {
-     int    matrix[][] =
-             {{1, 0, 0, 1},
-                     {0, 0, 1, 0},
-                     {0, 0, 0, 0}
+        int matrix[][] =
+                {
+                        {0,0,1,0},
+                        {0,0,0,0},
+                        {1,0,0,0},
+                        {1,0,0,0}
+
      };
        int n=matrix.length;
        boolean []  row= new boolean[n];
