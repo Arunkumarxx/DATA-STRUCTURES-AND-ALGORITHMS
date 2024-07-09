@@ -26,7 +26,8 @@ public class BooleanMatrix {
        {
            for (int j=0; j<matrix[0].length; j++)
            {
-               if(row|| col)
+               if(row[i]||col[j])
+                   matrix[i][j]=1;
            }
        }
         for (int [] x:matrix) {
