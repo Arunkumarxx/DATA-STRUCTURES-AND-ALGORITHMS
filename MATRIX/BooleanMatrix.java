@@ -33,6 +33,6 @@ public class BooleanMatrix {
             for (int y : x)
                 System.out.print(y + " ");
             System.out.println();
-        } 
+        }
     }
 }
