@@ -39,7 +39,7 @@ public class BooleanMatrix {
         {
             for (int j=0; j<col.length; j++)
             {
-                System.out.print(row[i]+" "+col[j]);
+                System.out.print(row[i]+""+col[j]+" ");
             }
             System.out.println();
         }
