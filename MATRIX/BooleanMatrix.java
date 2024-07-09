@@ -8,27 +8,20 @@ public class BooleanMatrix {
              { 1, 0, 0},
              { 0, 0, 0}
      };
-        int n=matrix.length;
-        boolean [] truthy =  new boolean [n];
-        for(int i=0; i<n; i++)
-        {
-            for(int j=0; j<matrix[i].length; j++)
-            {
-                if(matrix[i][j]==1){
-                    truthy[i]=true;
-                    break;
-                }
-            }
-        }
-        for (int i=0; i<n;i++)
-        {
-            if(truthy[i]==true) {
-                for (int j = 0; j < matrix[i].length; j++) {
-                    matrix[i][j]=1;
-                }
-            }
-            else matrix[i][0]=1;
-        }
+       int n=matrix.length;
+       boolean []  row= new boolean[n];
+       boolean [] col = new boolean[matrix[0].length];
+       for (int i=0; i<n; i++)
+       {
+           for (int j=0; j<matrix[0].length; j++)
+           {
+               if(matrix[i][j]==1)
+               {
+                   row[i]=true;
+                   col[j]=true;
+               }
+           }
+       }
         for (int [] x:matrix) {
             for (int y : x)
                 System.out.print(y + " ");
