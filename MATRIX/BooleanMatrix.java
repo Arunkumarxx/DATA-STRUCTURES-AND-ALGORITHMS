@@ -30,5 +30,6 @@ public class BooleanMatrix {
             }
             else matrix[i][0]=1;
         }
+        
     }
 }
