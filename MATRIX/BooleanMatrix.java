@@ -21,8 +21,14 @@ public class BooleanMatrix {
                 }
             }
         }
-        for (boolean x:truthy)
-            System.out.print(x+" ");
-        
+        for (int i=0; i<n;i++)
+        {
+            if(truthy[i]==true) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    matrix[i][j]=1;
+                }
+            }
+            else matrix[i][0]=1;
+        }
     }
 }
