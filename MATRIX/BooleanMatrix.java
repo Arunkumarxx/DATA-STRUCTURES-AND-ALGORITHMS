@@ -34,6 +34,7 @@ public class BooleanMatrix {
                 System.out.print(y + " ");
             System.out.println();
         }
+        System.out.println();
         for (int i=0;i< row.length; i++)
         {
             for (int j=0; j<col.length; j++)
