@@ -45,6 +45,7 @@ public class MakeMatrixBeautiful {
             i++;
         }
         System.out.println(max);
+        
 
     }
 }
