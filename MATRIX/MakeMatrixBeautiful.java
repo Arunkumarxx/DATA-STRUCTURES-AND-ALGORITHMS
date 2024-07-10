@@ -25,7 +25,9 @@ public class MakeMatrixBeautiful {
             for (int j=0; j<n; j++)
             {
                 cols[i]+=matrix[i][j];
+                System.out.print(matrix[i][j]+" ");
             }
+            System.out.println();
         }
 
         System.out.println(Arrays.toString(cols));
