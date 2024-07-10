@@ -27,10 +27,23 @@ public class MakeMatrixBeautiful {
                 cols[i]+=matrix[j][i];
             }
         }
-        System.out.println(Arrays.toString(row));
         int max=0;
-        for (int i=0; i<n||i<matrix[0].length; i++)
-        max=Math.max(row[i],cols[i]);
+        int lenR= row.length;
+        int lenC= cols.length;
+        int i=0;
+        while(i<lenR && i<lenC)
+        {
+            max=Math.max(row[i],cols[i]);
+            i++;
+        }
+        while(i<lenR) {
+            max = Math.max(row[i], max);
+            i++;
+        }
+        while(i<lenC) {
+            max = Math.max(cols[i], max);
+            i++;
+        }
         System.out.println(max);
     }
 }
