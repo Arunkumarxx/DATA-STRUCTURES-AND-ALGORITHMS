@@ -45,7 +45,8 @@ public class MakeMatrixBeautiful {
             i++;
         }
         System.out.println(max);
-        
+        System.out.println(Arrays.toString(row));
+        System.out.println(Arrays.toString(cols));
 
     }
 }
