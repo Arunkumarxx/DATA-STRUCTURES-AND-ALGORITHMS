@@ -20,9 +20,9 @@ public class MakeMatrixBeautiful {
                 row[i]+=matrix[i][j];
             }
         }
-        for (int i=0; i<n; i++)
+        for (int i=0; i<matrix[0].length; i++)
         {
-            for (int j=0; j<matrix[0].length; j++)
+            for (int j=0; j<n; j++)
             {
                 cols[i]+=matrix[i][j];
             }
