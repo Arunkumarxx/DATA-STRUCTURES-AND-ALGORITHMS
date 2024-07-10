@@ -25,7 +25,7 @@ public class MakeMatrixBeautiful {
         while(i<matrix[0].length && j<n)
         {
             cols[i]+=matrix[i][j++];
-            if(j==n-1) {
+            if(j==n) {
                 j = 0;
                 i++;
             }
