@@ -27,7 +27,9 @@ public class MakeMatrixBeautiful {
                 cols[i]+=matrix[j][i];
             }
         }
-        System.out.println(Arrays.toString(row));
-        System.out.println(Arrays.toString(cols));
+        int max=0;
+        for (int i=0; i<n||i<matrix[0].length; i++)
+        max=Math.max(row[i],cols[i]);
+        System.out.println(max);
     }
 }
