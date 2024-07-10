@@ -27,7 +27,7 @@ public class MakeMatrixBeautiful {
                 cols[i]+=matrix[j][i];
             }
         }
-        int max=0;
+        int max=Integer.MIN_VALUE;
         int lenR= row.length;
         int lenC= cols.length;
         int i=0;
