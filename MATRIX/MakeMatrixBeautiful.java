@@ -1,70 +1,68 @@
+package MATRIX;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MakeMatrixBeautiful {
     public static void main(String[] args) {
         int matrix[][] = {
                 {1, 2},
                 {3, 4}
         };
-        int n = matrix.length;
-        int[] row = new int[n];
-        int[] cols = new int[matrix[0].length];
-
-        // Calculate row sums
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                row[i] += matrix[i][j];
+        int n= matrix.length;
+        int [] row=new int[n];
+        int [] cols = new int[matrix[0].length];
+        // row max value
+        for (int i=0; i<n; i++)
+        {
+            for (int j=0; j<matrix[0].length; j++)
+            {
+                row[i]+=matrix[i][j];
             }
         }
-
-        // Calculate column sums
-        for (int i = 0; i < matrix[0].length; i++) {
-            for (int j = 0; j < n; j++) {
-                cols[i] += matrix[j][i];
+        for (int i=0; i<matrix[0].length; i++)
+        {
+            for (int j=0; j<n; j++)
+            {
+                cols[i]+=matrix[j][i];
             }
         }
-
-        // Find maximum value between row sums and column sums
-        int max = Integer.MIN_VALUE;
-        int lenR = row.length;
-        int lenC = cols.length;
-        int i = 0;
-
-        while (i < Math.min(lenR, lenC)) {
-            max = Math.max(row[i], cols[i]);
+        int max=Integer.MIN_VALUE;
+        int lenR= row.length;
+        int lenC= cols.length;
+        int i=0;
+        while(i<Math.min(lenR,lenC))
+        {
+            max=Math.max(row[i],cols[i]);
             i++;
         }
-
-        while (i < lenR) {
+        while(i<lenR) {
             max = Math.max(row[i], max);
             i++;
         }
-
-        while (i < lenC) {
+        while(i<lenC) {
             max = Math.max(cols[i], max);
             i++;
         }
-
-        System.out.println("Max value: " + max);
-
-        // Calculate SumOfOp
-        int SumOfOp = 0;
-        int j = 0;
-
-        while (j < Math.min(lenR, lenC)) {
-            SumOfOp += max - row[j];
-            SumOfOp += max - cols[j];
+        System.out.println(max);
+        int SumOfOp=0;
+        int j=0;
+        while(j<Math.min(lenR,lenC))
+        {
+            SumOfOp+=max-row[j];
+            SumOfOp+=max-cols[j];
             j++;
         }
-
-        while (j < lenR) {
-            SumOfOp += max - row[j];
+        while(j<lenR)
+        {
+            SumOfOp+=max-row[j];
             j++;
         }
-
-        while (j < lenC) {
-            SumOfOp += max - cols[j];
+        while(j<lenC)
+        {
+            SumOfOp+=max-cols[j];
             j++;
         }
-
-        System.out.println("SumOfOp: " + SumOfOp);
+        System.out.println(SumOfOp);
     }
 }
