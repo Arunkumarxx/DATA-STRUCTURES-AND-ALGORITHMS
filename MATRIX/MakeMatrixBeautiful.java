@@ -6,13 +6,14 @@ public class MakeMatrixBeautiful {
                 {1, 2},
                 {3, 4}
         };
-        int max=matrix[0][0];
         int n= matrix.length;
+        int [] row=new int[n];
+        // row max value
         for (int i=0; i<n; i++)
         {
             for (int j=0; j<matrix[0].length; j++)
             {
-
+                RowMax
             }
         }
     }
