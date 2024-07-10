@@ -27,24 +27,24 @@ public class MakeMatrixBeautiful {
                 cols[i]+=matrix[j][i];
             }
         }
-        int max = Integer.MIN_VALUE;
-        int lenR = row.length;
-        int lenC = cols.length;
-
-        for (int i = 0; i < Math.min(lenR, lenC); i++) {
-            max = Math.max(max, Math.max(row[i], cols[i]));
+        int max=0;
+        int lenR= row.length;
+        int lenC= cols.length;
+        int i=0;
+        while(i<Math.min(lenR,lenC))
+        {
+            max=Math.max(row[i],cols[i]);
+            i++;
         }
-
-        for (int i = Math.min(lenR, lenC); i < lenR; i++) {
-            max = Math.max(max, row[i]);
+        while(i<lenR) {
+            max = Math.max(row[i], max);
+            i++;
         }
-
-        for (int i = Math.min(lenR, lenC); i < lenC; i++) {
-            max = Math.max(max, cols[i]);
+        while(i<lenC) {
+            max = Math.max(cols[i], max);
+            i++;
         }
-
         System.out.println(max);
-
 
     }
 }
