@@ -24,9 +24,11 @@ public class MakeMatrixBeautiful {
         int j=0;
         while(i<matrix[0].length && j<n)
         {
-            cols[i]+=matrix[i++][j++];
-            if(j==n-1)
-                j=0;
+            cols[i]+=matrix[i][j++];
+            if(j==n-1) {
+                j = 0;
+                i++;
+            }
         }
         System.out.println(Arrays.toString(cols));
     }
