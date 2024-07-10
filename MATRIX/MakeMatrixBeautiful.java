@@ -31,7 +31,7 @@ public class MakeMatrixBeautiful {
         int lenR= row.length;
         int lenC= cols.length;
         int i=0;
-        while(i<lenR && i<lenC)
+        while(i<Math.min(lenR,lenC))
         {
             max=Math.max(row[i],cols[i]);
             i++;
