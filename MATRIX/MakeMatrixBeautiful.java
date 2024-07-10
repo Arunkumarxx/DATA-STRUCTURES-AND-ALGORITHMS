@@ -1,2 +1,4 @@
-package MATRIX;public class MakeMatrixBeautiful {
+package MATRIX;
+
+public class MakeMatrixBeautiful {
 }
