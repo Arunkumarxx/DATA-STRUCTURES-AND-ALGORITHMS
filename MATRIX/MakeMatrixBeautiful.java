@@ -8,13 +8,20 @@ public class MakeMatrixBeautiful {
         };
         int n= matrix.length;
         int [] row=new int[n];
+        int [] cols = new int[matrix[0].length];
         // row max value
         for (int i=0; i<n; i++)
         {
             for (int j=0; j<matrix[0].length; j++)
             {
-                RowMax
+                row[i]+=matrix[i][j];
             }
+        }
+        int i=0;
+        int j=0;
+        while(i<matrix[0].length && j<n)
+        {
+            
         }
     }
 }
