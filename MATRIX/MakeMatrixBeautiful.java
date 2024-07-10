@@ -1,5 +1,8 @@
 package MATRIX;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MakeMatrixBeautiful {
     public static void main(String[] args) {
         int matrix[][] = {
@@ -25,5 +28,6 @@ public class MakeMatrixBeautiful {
             if(j==n-1)
                 j=0;
         }
+        System.out.println(Arrays.toString(cols));
     }
 }
