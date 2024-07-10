@@ -45,8 +45,23 @@ public class MakeMatrixBeautiful {
             i++;
         }
         System.out.println(max);
-        System.out.println(Arrays.toString(row));
-        System.out.println(Arrays.toString(cols));
-
+        int SumOfOp=0;
+        while(i<Math.min(lenR,lenC))
+        {
+            SumOfOp+=max-row[i];
+            SumOfOp+=max-cols[i];
+            i++;
+        }
+        while(i<lenR)
+        {
+            SumOfOp+=max-row[i];
+            i++;
+        }
+        while(i<lenC)
+        {
+            SumOfOp+=max-cols[i];
+            i++;
+        }
+        System.out.println(SumOfOp);
     }
 }
