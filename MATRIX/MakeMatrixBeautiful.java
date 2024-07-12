@@ -31,8 +31,8 @@ public class MakeMatrixBeautiful {
         int op=0;
         for (int i=0; i<n; ++i)
         {
-
+            op+=rowSum[i];
         }
-
+        System.out.println(op);
     }
 }
