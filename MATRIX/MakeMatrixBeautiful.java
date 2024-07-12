@@ -27,12 +27,12 @@ public class MakeMatrixBeautiful {
              max=Math.max(max,rowSum[i]);
              max=Math.max(max,colSum[i]);
          }
-//        System.out.println(max);
+        System.out.println(max);
         int op=0;
         for (int i=0; i<n; ++i)
         {
-            
+
         }
-        System.out.println(sum);
+
     }
 }
