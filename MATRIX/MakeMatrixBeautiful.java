@@ -26,5 +26,6 @@ public class MakeMatrixBeautiful {
              max=Math.max(max,rowSum[i]);
              max=Math.max(max,colSum[i]);
          }
+        System.out.println(max);
     }
 }
