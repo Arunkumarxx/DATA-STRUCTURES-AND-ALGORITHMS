@@ -9,6 +9,16 @@ public class MakeMatrixBeautiful {
                 {1, 2},
                 {3, 4}
         };
-        
+        int n= matrix.length;
+        int [] rowSum =new int[n];
+        int [] colSum = new int[n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                rowSum[i] += matrix[i][j];
+                colSum[j] += matrix[i][j];
+            }
+        }
+        System.out.println(rowSum.length);
+        System.out.println(colSum.length);
     }
 }
