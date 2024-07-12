@@ -21,13 +21,14 @@ public class MakeMatrixBeautiful {
                  colSum[j]+=matrix[i][j];
              }
          }
-        System.out.println(Arrays.toString(rowSum));
-        System.out.println(Arrays.toString(colSum));
+//        System.out.println(Arrays.toString(rowSum));
+//        System.out.println(Arrays.toString(colSum));
          int max=0;
          for (int i=0; i<n; i++){
              max=Math.max(max,rowSum[i]);
              max=Math.max(max,colSum[i]);
          }
-        System.out.println(max);
+//        System.out.println(max);
+        
     }
 }
