@@ -63,6 +63,6 @@ public class MakeMatrixBeautiful {
             SumOfOp+=max-cols[j];
             j++;
         }
-        System.out.println(SumOfOp);
+        System.out.println(SumOfOp/2);
     }
 }
