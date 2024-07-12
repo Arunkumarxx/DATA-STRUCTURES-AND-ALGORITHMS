@@ -5,9 +5,9 @@ import java.util.Arrays;
 
 public class MakeMatrixBeautiful {
     public static void main(String[] args) {
-        int matrix[][] = {{1, 2, 3},
-                {4, 2, 3},
-                {3, 2, 1}
+        int matrix[][] = {
+                {1, 2},
+                {3, 4}
         };
         int n= matrix.length;
         int [] row=new int[n];
@@ -63,6 +63,6 @@ public class MakeMatrixBeautiful {
             SumOfOp+=max-cols[j];
             j++;
         }
-        System.out.println(SumOfOp/2);
+        System.out.println(SumOfOp);
     }
 }
