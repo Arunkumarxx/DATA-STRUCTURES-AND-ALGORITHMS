@@ -18,7 +18,7 @@ public class MakeMatrixBeautiful {
                 colSum[j] += matrix[i][j];
             }
         }
-        System.out.println(rowSum.length);
-        System.out.println(colSum.length);
+        System.out.println(Arrays.toString(rowSum));
+        System.out.println(Arrays.toString(colSum));
     }
 }
