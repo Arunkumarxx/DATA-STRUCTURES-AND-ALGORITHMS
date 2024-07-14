@@ -23,7 +23,7 @@ public class DirectAddressTable {
         boolean [] values = new boolean[999];
          search(values,23);  // search O(1)
           insert(values,23);   // insert O(1)
-        // delete O(1)
+          delete( values,23);// delete O(1)
 
     }
 }
