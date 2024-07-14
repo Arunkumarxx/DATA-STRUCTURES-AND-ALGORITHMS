@@ -8,6 +8,7 @@ public class DirectAddressTable {
         // insert
         // delete
         int element=23;
+        values[23]=true;
         if(values[element]==true)
             System.out.println("Yes Element Found");
         else System.out.println("Not Found");
