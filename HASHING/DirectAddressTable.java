@@ -12,8 +12,11 @@ public class DirectAddressTable {
         else System.out.println("Inserted Element "+key);
     }
     static void delete ( boolean [] arr ,int key) {
-        if(key < arr.length)
-            System.out.println();
+        if(key < arr.length && arr[key]==true) {
+            arr[key] = false;
+            System.out.println("Deleted Element "+key);
+        }
+        else System.out.println("Element not Found");
     }
     public static void main(String[] args) {
         int max=999;
