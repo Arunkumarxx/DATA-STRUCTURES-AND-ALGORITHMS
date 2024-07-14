@@ -18,7 +18,7 @@ public class LinearProbingInHashing {
                hashTable[ind]=arr[i];
            else findPosAndInsert(arr,hashTable,i,ind);
         }
-        System.out.println(4%10);
+        System.out.println(Arrays.toString(hashTable));
     }
     static void findPosAndInsert(int [] arr,int [] hastTable,int i,int ind) {
         int index=arr[i];
