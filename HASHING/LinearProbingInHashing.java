@@ -21,12 +21,17 @@ public class LinearProbingInHashing {
         System.out.println(4%10);
     }
     static void findPosAndInsert(int [] arr,int [] hastTable,int i,int ind) {
-        while(i< hastTable.length)
+        int index=arr[i];
+        while(index< hastTable.length)
         {
-            int index=((arr[i]+1)%10);
+            index+=((arr[i]+1)%10);
             if(hastTable[index]==arr[i])
                 break;
-
+            if(hastTable[index]==-1)
+            {
+                hastTable[index]=arr[i];
+                break;
+            }
         }
     }
 }
