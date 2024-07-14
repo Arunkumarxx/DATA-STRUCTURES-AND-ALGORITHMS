@@ -1,4 +1,7 @@
 package HASHING;
 
-public class SeprateChainHashing {
+public class SeparateChainHashing {
+    public static void main(String[] args) {
+        
+    }
 }
