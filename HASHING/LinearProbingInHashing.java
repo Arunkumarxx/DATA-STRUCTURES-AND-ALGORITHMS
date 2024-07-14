@@ -24,7 +24,7 @@ public class LinearProbingInHashing {
         int index=ind;
         while(hastTable[index]!=-1)
         {
-            index+=(index+1)% hastTable.length;
+            index=(index+1)% hastTable.length;
             if(hastTable[index]==value)
                 return;
         }
