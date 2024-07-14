@@ -2,6 +2,6 @@ package HASHING;
 
 public class HASHING {
     public static void main(String[] args) {
-        System.out.println("a".hashCode());
+        System.out.println("a2".hashCode());
     }
 }
