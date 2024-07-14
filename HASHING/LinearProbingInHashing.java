@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class LinearProbingInHashing {
     public static void main(String[] args) {
-        int [] arr ={};
+        int [] arr ={4,14,24,44};
+        int hash_size=10;
         int n = arr.length;
         int[] hashTable = new int[hash_size];
 
