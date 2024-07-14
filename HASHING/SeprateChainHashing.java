@@ -1,2 +1,4 @@
-package HASHING;public class SeprateChainHashing {
+package HASHING;
+
+public class SeprateChainHashing {
 }
