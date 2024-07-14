@@ -20,6 +20,9 @@ public class ImplementationOfChaining {
         Table.Insert(12);
         Table.Insert(954);
         Table.Insert(2398);
+        Table.Insert(238);
+        Table.Insert(28);
+        Table.Insert(98);
         System.out.println(Table.Search(954));
         Table.Delete(12);
         System.out.println(Table.Search(2398));
