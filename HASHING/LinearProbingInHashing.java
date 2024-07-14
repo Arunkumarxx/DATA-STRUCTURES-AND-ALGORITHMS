@@ -2,12 +2,9 @@ package HASHING;
 
 import java.util.Arrays;
 
-class Solution{
-    //Function to fill the array elements into a hash table
-    //using Linear Probing to handle collisions.
-    int[] linearProbing(int hash_size, int arr[], int sizeOfArray)
-    {
-
+public class LinearProbingInHashing {
+    public static void main(String[] args) {
+        int [] arr ={};
         int n = arr.length;
         int[] hashTable = new int[hash_size];
 
@@ -25,7 +22,7 @@ class Solution{
                 findPosAndInsert(hashTable, arr[i], ind);
             }
         }
-        return hashTable;
+        System.out.println(Arrays.toString(hashTable));
     }
 
     static void findPosAndInsert(int [] hashTable,int value,int ind) {
