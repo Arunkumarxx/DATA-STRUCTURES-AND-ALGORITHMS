@@ -2,7 +2,7 @@ package HASHING;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
+
 
 public class ImplementationOfChaining {
 
@@ -14,7 +14,7 @@ public class ImplementationOfChaining {
         ImplementationOfChaining Table= new ImplementationOfChaining();
         for (int i=0; i<Table.key; i++)
             Table.HashTable.add(i,new LinkedList<>());
-        
+
         Table.Insert(10);
         Table.Insert(20);
         Table.Insert(15);
