@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 
@@ -22,6 +23,15 @@ public class ImplementationOfChaining {
         System.out.println(Table.Search(10));
         Table.Delete(15);
         System.out.println(Table.Search(15));
+        for (int i=0; i<Table.HashTable.size(); ++i)
+        {
+            System.out.print(i+" ");
+            for (int j=0; j<Table.HashTable.get(i).size(); ++j)
+            {
+                System.out.println(Table.HashTable.get(i).get(j)+" ");
+            }
+            System.out.println();
+        }
     }
 
      void Insert(int insertValue) {
