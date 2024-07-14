@@ -16,14 +16,14 @@ public class LinearProbingInHashing {
                continue;
            if(hashTable[ind]==-1)
                hashTable[ind]=arr[i];
-           
+           else findPosAndInsert(arr,hashTable,i,ind);
         }
         System.out.println(4%10);
     }
-    static void findPos(int [] arr,int [] hastTable,int i,int ind) {
+    static void findPosAndInsert(int [] arr,int [] hastTable,int i,int ind) {
         while(i< hastTable.length)
         {
-
+            
         }
     }
 }
