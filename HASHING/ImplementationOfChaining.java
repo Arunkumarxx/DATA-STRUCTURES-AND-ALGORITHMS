@@ -6,16 +6,15 @@ import java.util.List;
 
 public class ImplementationOfChaining {
 
-    ArrayList<LinkedList<Integer>> HashTable = new ArrayList<>();
+    ArrayList<LinkedList<Integer>> HashTable = new ArrayList<LinkedList<Integer>>();
 
     int key=7;
 
     public static void main(String[] args) {
         ImplementationOfChaining Table= new ImplementationOfChaining();
-        for (int i=0; i<Table.HashTable.size(); i++)
-        {
-            Table.HashTable.get(i).add(new LinkedList<>());
-        }
+        for (int i=0; i<Table.key; i++)
+            Table.HashTable.add(i,new LinkedList<>());
+        
         Table.Insert(10);
         Table.Insert(20);
         Table.Insert(15);
