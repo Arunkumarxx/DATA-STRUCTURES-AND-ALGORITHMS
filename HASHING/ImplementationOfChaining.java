@@ -31,6 +31,6 @@ public class ImplementationOfChaining {
         return HashTable.get(target%key).contains(target);
     }
     void Delete(int value) {
-        HashTable.get(value%key).remove(value);
+        HashTable.get(value%key).remove(Integer.valueOf(value));
     }
 }
