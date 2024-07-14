@@ -9,7 +9,6 @@ public class LinearProbingInHashing {
         int n = arr.length;
         int[] hashTable = new int[hash_size];
 
-        // Initialize the hash table with -1
         Arrays.fill(hashTable, -1);
 
         for (int i = 0; i < n; i++) {
