@@ -9,7 +9,8 @@ public class LinearProbingInHashing {
         int n = arr.length;
         int[] hashTable = new int[hash_size];
 
-        Arrays.fill(hashTable, -1);
+        for(int i=0; i<hash_size;i++)
+            --hashTable[i];
 
         for (int i = 0; i < n; i++) {
             int ind = arr[i] % hashTable.length;
@@ -36,7 +37,6 @@ public class LinearProbingInHashing {
 
             if(intialIndex==index || count==hashTable.length )
                 return;
-
         }
         hashTable[index]=value;
     }
