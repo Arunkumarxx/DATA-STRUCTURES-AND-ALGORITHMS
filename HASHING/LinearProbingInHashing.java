@@ -2,32 +2,45 @@ package HASHING;
 
 import java.util.Arrays;
 
-public class LinearProbingInHashing {
-    public static void main(String[] args) {
-        int [] arr ={4,14,24,44};
-        int n= arr.length;
-        int [] hashTable = new int[10];
-        for (int i=0; i<hashTable.length;++i)
-            --hashTable[i];
-        for (int i=0; i<n; i++)
-        {
-            int ind=(arr[i]%hashTable.length);
-           if(hashTable[ind]==arr[i])
-               continue;
-           if(hashTable[ind]==-1)
-               hashTable[ind]=arr[i];
-           else findPosAndInsert(hashTable,arr[i],ind);
+class Solution{
+    //Function to fill the array elements into a hash table
+    //using Linear Probing to handle collisions.
+    int[] linearProbing(int hash_size, int arr[], int sizeOfArray)
+    {
+
+        int n = arr.length;
+        int[] hashTable = new int[hash_size];
+
+        // Initialize the hash table with -1
+        Arrays.fill(hashTable, -1);
+
+        for (int i = 0; i < n; i++) {
+            int ind = arr[i] % hashTable.length;
+            if (hashTable[ind] == arr[i]) {
+                continue;
+            }
+            if (hashTable[ind] == -1) {
+                hashTable[ind] = arr[i];
+            } else {
+                findPosAndInsert(hashTable, arr[i], ind);
+            }
         }
-        System.out.println(Arrays.toString(hashTable));
+        return hashTable;
     }
-    static void findPosAndInsert(int [] hastTable,int value,int ind) {
+
+    static void findPosAndInsert(int [] hashTable,int value,int ind) {
         int index=ind;
-        while(hastTable[index]!=-1)
+        int intialIndex=ind;
+        int count=0;
+        while(hashTable[index]!=-1  &&  hashTable[index]!=value)
         {
-            index=(index+1)% hastTable.length;
-            if(hastTable[index]==value)
+            index=(index+1)% hashTable.length;
+            ++count;
+
+            if(intialIndex==index || count==hashTable.length )
                 return;
+
         }
-        hastTable[index]=value;
+        hashTable[index]=value;
     }
 }
