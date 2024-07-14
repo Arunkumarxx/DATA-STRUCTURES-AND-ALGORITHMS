@@ -8,7 +8,7 @@ public class ImplementationOfChaining {
         ArrayList<LinkedList<Integer>> HashTable = new ArrayList<>();
         int n=HashTable.size();
         for (int i=0; i<n; ++i)
-            HashTable.add(i,new LinkedList<>());
-        System.out.println(HashTable);
+            HashTable.add(new LinkedList<>());
+        
     }
 }
