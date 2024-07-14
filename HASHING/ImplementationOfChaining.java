@@ -5,7 +5,10 @@ import java.util.LinkedList;
 
 public class ImplementationOfChaining {
     public static void main(String[] args) {
-        ArrayList<LinkedList<Integer>> HashTable = new ArrayList<>(7);
-        System.out.println(HashTable);
+        ArrayList<LinkedList<Integer>> HashTable = new ArrayList<>();
+        int n=HashTable.size();
+        for (int i=0; i<n; ++i)
+            HashTable.add(i,new LinkedList<>());
+        
     }
 }
