@@ -21,6 +21,7 @@ public class ImplementationOfChaining {
         Table.Insert(7);
         System.out.println(Table.Search(10));
         Table.Delete(15);
+        System.out.println(Table.Search(15));
     }
 
      void Insert(int insertValue) {
