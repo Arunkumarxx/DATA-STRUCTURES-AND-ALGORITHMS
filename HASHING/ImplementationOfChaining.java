@@ -16,13 +16,13 @@ public class ImplementationOfChaining {
         for (int i=0; i<Table.key; i++)
             Table.HashTable.add(i,new LinkedList<>());
 
-        Table.Insert(10);
-        Table.Insert(20);
-        Table.Insert(15);
-        Table.Insert(7);
-        System.out.println(Table.Search(10));
-        Table.Delete(15);
-        System.out.println(Table.Search(15));
+        Table.Insert(432);
+        Table.Insert(12);
+        Table.Insert(954);
+        Table.Insert(2398);
+        System.out.println(Table.Search(954));
+        Table.Delete(12);
+        System.out.println(Table.Search(2398));
         for (int i=0; i<Table.HashTable.size(); ++i)
         {
             System.out.print(i+" ");
