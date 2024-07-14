@@ -5,18 +5,28 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ImplementationOfChaining {
+
     ArrayList<LinkedList<Integer>> HashTable = new ArrayList<>();
 
     int key=7;
     public static void main(String[] args) {
-
-        int key = 7;
-        int n = HashTable.size();
-        insert(10);
-
+        ImplementationOfChaining Table= new ImplementationOfChaining();
+        Table.Insert(10);
+        Table.Insert(20);
+        Table.Insert(15);
+        Table.Insert(7);
+        System.out.println(Table.Search(10));
+        Table.Delete(15);
     }
 
-    static void insert(int insertValue) {
-        ImplementationOfChaining.HashTable.get(insertValue % key).add(insertValue);
+     void Insert(int insertValue) {
+        HashTable.get(insertValue % key).add(insertValue);
+    }
+
+    boolean Search(int target) {
+        return HashTable.get(target%key).contains(target);
+    }
+    void Delete(int value) {
+        HashTable.get(value%key).remove(value);
     }
 }
