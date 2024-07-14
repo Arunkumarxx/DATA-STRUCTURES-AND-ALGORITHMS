@@ -11,7 +11,10 @@ public class LinearProbingInHashing {
             --hashTable[i];
         for (int i=0; i<n; i++)
         {
-            
+            int ind=(arr[i]%10);
+            if(hashTable[ind]==arr[i])
+                continue;
+            if(hashTable[ind]!=arr[i] &&  )
         }
     }
 }
