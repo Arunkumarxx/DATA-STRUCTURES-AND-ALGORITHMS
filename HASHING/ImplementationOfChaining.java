@@ -9,6 +9,6 @@ public class ImplementationOfChaining {
         int n=HashTable.size();
         for (int i=0; i<n; ++i)
             HashTable.add(i,new LinkedList<>());
-        
+        System.out.println(HashTable);
     }
 }
