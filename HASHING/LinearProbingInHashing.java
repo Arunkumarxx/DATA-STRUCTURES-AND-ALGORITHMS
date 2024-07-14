@@ -9,8 +9,14 @@ public class LinearProbingInHashing {
         int [] hashTable = new int[10];
         for (int i=0; i<hashTable.length;++i)
             --hashTable[i];
-        int i=0; 
+        for (int i=0; i<n; i++)
+        {
+            int ind=(arr[i]%10);
+           if(hashTable[ind]==arr[i] || hashTable[ind]>-1)
+               continue;
+           
 
+        }
         System.out.println(4%10);
     }
 }
