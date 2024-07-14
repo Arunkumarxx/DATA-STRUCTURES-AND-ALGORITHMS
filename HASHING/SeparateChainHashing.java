@@ -25,7 +25,7 @@ public class SeparateChainHashing {
             System.out.print(i+" ");
             for (int j=0; j<chain.get(i).size(); j++)
             {
-                System.out.print(chain.get(i).get(j)+"\t/2");
+                System.out.print(chain.get(i).get(j)+" ");
             }
             System.out.println();
         }
