@@ -23,7 +23,10 @@ public class LinearProbingInHashing {
     static void findPosAndInsert(int [] arr,int [] hastTable,int i,int ind) {
         while(i< hastTable.length)
         {
-            
+            int index=((arr[i]+1)%10);
+            if(hastTable[index]==arr[i])
+                break;
+
         }
     }
 }
