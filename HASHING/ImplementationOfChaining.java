@@ -9,8 +9,13 @@ public class ImplementationOfChaining {
     ArrayList<LinkedList<Integer>> HashTable = new ArrayList<>();
 
     int key=7;
+
     public static void main(String[] args) {
         ImplementationOfChaining Table= new ImplementationOfChaining();
+        for (int i=0; i<Table.HashTable.size(); i++)
+        {
+            Table.HashTable.get(i).add(new LinkedList<>());
+        }
         Table.Insert(10);
         Table.Insert(20);
         Table.Insert(15);
