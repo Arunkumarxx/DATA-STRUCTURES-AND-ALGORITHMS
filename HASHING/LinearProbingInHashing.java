@@ -12,8 +12,7 @@ public class LinearProbingInHashing {
         for (int i=0; i<n; i++)
         {
             int ind=(arr[i]%10);
-            if(hashTable[ind]==arr[i])
-                continue;
+           if(hashTable[ind]==arr[i])
 
         }
         System.out.println(4%10);
