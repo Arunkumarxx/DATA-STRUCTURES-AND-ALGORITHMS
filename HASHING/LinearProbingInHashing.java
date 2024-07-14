@@ -15,7 +15,7 @@ public class LinearProbingInHashing {
             if(hashTable[ind]==arr[i])
                 continue;
             while(arr[ind]>-1)
-                
+
         }
     }
 }
