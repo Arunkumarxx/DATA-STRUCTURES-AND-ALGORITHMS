@@ -7,9 +7,9 @@ public class DirectAddressTable {
         else System.out.println("Not Found");
     }
     static void insert(boolean [] arr,int key) {
-        if(key <arr.length && arr[key]==true)
-            System.out.println("Replaced New Value");
-        else System.out.println("Inserted Element "+key);
+        if(key <arr.length )
+            arr[key]=true;
+        else System.out.println("");
     }
     static void delete ( boolean [] arr ,int key) {
         if(key < arr.length && arr[key]==true) {
