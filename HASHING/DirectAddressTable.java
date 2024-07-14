@@ -9,7 +9,7 @@ public class DirectAddressTable {
     static void insert(boolean [] arr,int key) {
         if(key <arr.length )
             arr[key]=true;
-        else System.out.println("");
+        else System.out.println("index of bound");
     }
     static void delete ( boolean [] arr ,int key) {
         if(key < arr.length && arr[key]==true) {
