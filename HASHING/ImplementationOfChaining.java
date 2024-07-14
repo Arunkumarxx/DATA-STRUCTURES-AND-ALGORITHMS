@@ -28,7 +28,7 @@ public class ImplementationOfChaining {
             System.out.print(i+" ");
             for (int j=0; j<Table.HashTable.get(i).size(); ++j)
             {
-                System.out.println(Table.HashTable.get(i).get(j)+" ");
+                System.out.print(Table.HashTable.get(i).get(j)+" ");
             }
             System.out.println();
         }
