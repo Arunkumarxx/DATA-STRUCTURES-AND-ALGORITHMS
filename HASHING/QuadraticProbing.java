@@ -25,7 +25,7 @@ public class QuadraticProbing {
         int count=0;
         while(hashTable[ind]!=arr[i] || hashTable[i]==-1)
         {
-            
+           ind=()
         }
     }
 }
