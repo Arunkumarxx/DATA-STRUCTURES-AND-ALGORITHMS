@@ -17,10 +17,15 @@ public class QuadraticProbing {
                 continue;
             else if(hashTable[i]==-1)
                 hashTable[i]=arr[i];
-            else Quadratic.QuadraticFindAndInsert(arr,i,hashSize);
+            else Quadratic.QuadraticFindAndInsert(arr,i,hashSize,hashTable);
         }
     }
-   private void QuadraticFindAndInsert(int [] arr,int i,int hashSize) {
-        
+   private void QuadraticFindAndInsert(int [] arr,int i,int hashSize,int [] hashTable) {
+        int ind=0;
+        int count=0;
+        while(hashTable[ind]!=arr[i] || hashTable[i]==-1)
+        {
+
+        }
     }
 }
