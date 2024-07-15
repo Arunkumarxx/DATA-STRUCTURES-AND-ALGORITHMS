@@ -14,7 +14,6 @@ public class LinearProbingInHashing {
 
         for (int i = 0; i < n; i++) {
             int ind = arr[i] % hashTable.length;
-
                 findPosAndInsert(hashTable, arr[i], ind);
         }
         System.out.println(Arrays.toString(hashTable));
