@@ -16,11 +16,7 @@ public class QuadraticProbing {
 
         for (int i=0; i<n; ++i)
         {
-            if(hashTable[i]==arr[i])
-                continue;
-            else if(hashTable[i]==-1)
-                hashTable[i]=arr[i];
-            else Quadratic.QuadraticFindAndInsert(arr,i,hashSize,hashTable,arr[i]);
+            Quadratic.QuadraticFindAndInsert(arr,i,hashSize,hashTable,arr[i]);
         }
         System.out.println(Arrays.toString(hashTable));
     }
