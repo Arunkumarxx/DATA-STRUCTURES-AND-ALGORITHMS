@@ -1,5 +1,8 @@
 package HASHING;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class QuadraticProbing {
     public static void main(String[] args) {
         QuadraticProbing Quadratic = new QuadraticProbing();
@@ -19,6 +22,7 @@ public class QuadraticProbing {
                 hashTable[i]=arr[i];
             else Quadratic.QuadraticFindAndInsert(arr,i,hashSize,hashTable,arr[i]);
         }
+        System.out.println(Arrays.toString(hashTable));
     }
    private void QuadraticFindAndInsert(int [] arr,int ind,int hashSize,int [] hashTable,int value) {
         int i=0;
