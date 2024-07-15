@@ -25,17 +25,17 @@ public class QuadraticProbing {
         System.out.println(Arrays.toString(hashTable));
     }
    private void QuadraticFindAndInsert(int [] arr,int ind,int hashSize,int [] hashTable,int value) {
-        int i=0;
-        int count=0;
-        int intialIndex=value%hashSize;
-        while(hashTable[intialIndex]!=arr[i] || hashTable[intialIndex]==-1)
-        {
-           intialIndex=(value+(i*i))%hashSize;
+       int i = 0;
+       int count = 0;
+       int initialIndex = value % hashSize;
+
+       while (hashTable[initialIndex] != -1 && hashTable[initialIndex] != value) {
+           initialIndex = (value + (i * i)) % hashSize;
            ++i;
            ++count;
-           if(count==hashSize)
+           if (count == hashSize)  // Hash table is full
                return;
-        }
-        hashTable[intialIndex]=value;
+       }
+       hashTable[initialIndex] = value;
     }
 }
