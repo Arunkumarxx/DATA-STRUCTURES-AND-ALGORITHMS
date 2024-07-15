@@ -16,22 +16,26 @@ public class QuadraticProbing {
 
         for (int i=0; i<n; ++i)
         {
-            Quadratic.QuadraticFindAndInsert(arr,i,hashSize,hashTable,arr[i]);
+            if(hashTable[i]==arr[i])
+                continue;
+            else if(hashTable[i]==-1)
+                hashTable[i]=arr[i];
+            else Quadratic.QuadraticFindAndInsert(hashSize,hashTable,arr[i]);
         }
         System.out.println(Arrays.toString(hashTable));
     }
-   private void QuadraticFindAndInsert(int [] arr,int ind,int hashSize,int [] hashTable,int value) {
+   private void QuadraticFindAndInsert(int hashSize,int [] hashTable,int value) {
        int i = 0;
        int count = 0;
-       int initialIndex = value % hashSize;
+       int ind = value % hashSize;
 
-       while (hashTable[initialIndex] != -1 && hashTable[initialIndex] != value) {
-           initialIndex = (value + (i * i)) % hashSize;
+       while (hashTable[ind] != -1 && hashTable[ind] != value) {
+           ind = (value + (i * i)) % hashSize;
            ++i;
            ++count;
            if (count == hashSize)  // Hash table is full
                return;
        }
-       hashTable[initialIndex] = value;
+       hashTable[ind] = value;
     }
 }
