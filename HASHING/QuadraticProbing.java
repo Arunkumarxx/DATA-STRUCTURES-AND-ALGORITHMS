@@ -19,9 +19,8 @@ public class QuadraticProbing {
                 hashTable[i]=arr[i];
             else Quadratic.QuadraticFindAndInsert(arr,i,hashSize);
         }
-        System.out.println((32+4)%11);
     }
-    void QuadraticFindAndInsert(int [] arr,int i,int hashSize) {
-
+   private void QuadraticFindAndInsert(int [] arr,int i,int hashSize) {
+        
     }
 }
