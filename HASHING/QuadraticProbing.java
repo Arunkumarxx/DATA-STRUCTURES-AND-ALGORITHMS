@@ -27,6 +27,7 @@ public class QuadraticProbing {
    private void QuadraticFindAndInsert(int [] arr,int ind,int hashSize,int [] hashTable,int value) {
         int i=0;
         int count=0;
+        int intialIndex=value%hashSize;
         while(hashTable[ind]!=arr[i] || hashTable[i]==-1)
         {
            ind=(value+(i*i))%hashSize;
