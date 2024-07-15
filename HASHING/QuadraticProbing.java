@@ -28,7 +28,7 @@ public class QuadraticProbing {
         int i=0;
         int count=0;
         int intialIndex=value%hashSize;
-        while(hashTable[ind]!=arr[i] || hashTable[i]==-1)
+        while(hashTable[intialIndex]!=arr[i] || hashTable[intialIndex]==-1)
         {
            intialIndex=(value+(i*i))%hashSize;
            ++i;
