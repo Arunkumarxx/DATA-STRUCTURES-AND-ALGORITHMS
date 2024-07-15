@@ -30,6 +30,7 @@ public class QuadraticProbing {
         while(hashTable[ind]!=arr[i] || hashTable[i]==-1)
         {
            ind=(value+(i*i))%hashSize;
+           ++i;
            ++count;
            if(count==hashSize)
                return;
