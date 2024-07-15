@@ -33,7 +33,7 @@ public class QuadraticProbing {
            ind=(value+(i*i))%hashSize;
            ++i;
            ++count;
-           if(count==hashSize||ind==intialIndex)
+           if(count==hashSize)
                return;
         }
         hashTable[ind]=value;
