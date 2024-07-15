@@ -1,16 +1,11 @@
 package HASHING;
 
 public class QuadraticProbing {
-
-    int [] arr = {21,10,32,43};
-
-    short  hashSize=11;
-
-    int [] hashTable  =new int[hashSize];
-
     public static void main(String[] args) {
         QuadraticProbing Quadratic = new QuadraticProbing();
-
+        int [] arr = {21,10,32,43};
+        short  hashSize=11;
+        int [] hashTable  =new int[hashSize];
         byte n=(byte) arr.length;
 
         for (int i=0; i<hashSize; ++i)
@@ -22,10 +17,10 @@ public class QuadraticProbing {
                 continue;
             else if(hashTable[i]==-1)
                 hashTable[i]=arr[i];
-            else Quadratic.QuadraticFindAndInsert();
+            else Quadratic.QuadraticFindAndInsert(arr,i,hashSize);
         }
     }
-    void QuadraticFindAndInsert() {
-
+    void QuadraticFindAndInsert(int [] arr,int i,int hashSize) {
+        
     }
 }
