@@ -14,10 +14,10 @@ public class HASHING {
         for (int i=0; i<n; i++)
             res+=arr[i];
         System.out.println(res);
-        int startOne=((n/100)*0);
-        int endOne=   ((n/100)*49);
-        int startTwo =((n/100)*50);
-        int endTwo =((n/100)*99);
+        int startOne=(0);
+        int endOne=   ((n/2));
+        int startTwo =((n/2)+1);
+        int endTwo =((n-1));
         System.out.println();
         System.out.println(startOne);
         System.out.println(endOne);
@@ -34,3 +34,9 @@ public class HASHING {
         System.out.println(NofItr);
     }
 }
+/*
+0
+49
+50
+99
+ */
