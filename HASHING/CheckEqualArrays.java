@@ -23,7 +23,13 @@ public class CheckEqualArrays {
         while (j<n2)
             Freq.put(arr2[i],Freq.get(i)==null?1:Freq.get(i)+1);
 
-        for (int k=0; k<)
+        for (int k=0; k<Freq.size(); k++)
+        {
+            if(Freq.get(i)!=2) {
+                System.out.println("False");
+                break;
+            }
+        }
 
     }
 }
