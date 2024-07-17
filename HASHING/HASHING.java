@@ -16,7 +16,7 @@ public class HASHING {
         System.out.println(res);
         double startOne = (0);
         double endOne = ((n / 2f) - 1);
-        double startTwo = ((n / 2));
+        double startTwo = ((n / 2f));
         double endTwo = ((n - 1));
         System.out.println(startOne);
         System.out.println(endOne);
