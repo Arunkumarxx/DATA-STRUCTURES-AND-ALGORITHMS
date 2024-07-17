@@ -15,5 +15,11 @@ public class HASHING {
         for (int i = 0; i < n; i++)
             res += arr[i];
         System.out.println(res);
+
+        int left=0;
+        int leftBreak=(n-1)/4;
+        int LeftMid=leftBreak+1;
+        int mid=(n-1)/2;
+        int rightMid=((n-1)/2)*3;
     }
 }
