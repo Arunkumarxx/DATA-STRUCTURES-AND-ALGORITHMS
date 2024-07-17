@@ -1,5 +1,6 @@
 package HASHING;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -15,7 +16,15 @@ public class HASHING {
         for (int i = 0; i < n; i++)
             res += arr[i];
         System.out.println(res);
+        int startOne=0;
+        int endOne=(n-1)/2;
+        int startTwo=(n)/2;
+        int endTwo=n-1;
 
-        
+        System.out.println(startOne);
+        System.out.println(endOne);
+        System.out.println(startTwo);
+        System.out.println(endTwo);
+
     }
 }
