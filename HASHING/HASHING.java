@@ -19,9 +19,10 @@ public class HASHING {
         int left=0;
         int leftBreak=((n-1)/100)*25;
         int leftMid=leftBreak+1;
+        int leftMidBreak=((n-2)/100)*50;
         int mid=((n-1)/100)*50;
         int rightMid=((n-1)/100)*75;
         int right=n-1;
-        while(left<leftBreak && leftMid )
+        while(left<leftBreak && leftMid<mid &&  )
     }
 }
