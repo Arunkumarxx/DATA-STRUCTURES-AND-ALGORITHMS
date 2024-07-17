@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class HASHING {
     public static void main(String[] args) {
-        int[] arr = new int[10432432];
+        int[] arr = new int[1230432432];
         int n = arr.length;
         int res=0;
         int count=1;
