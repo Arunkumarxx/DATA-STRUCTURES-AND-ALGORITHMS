@@ -18,5 +18,10 @@ public class CheckEqualArrays {
             i++;
             j++;
         }
+        while(i<n1)
+            Freq.put(arr1[i],Freq.get(i)==null?1:Freq.get(i)+1);
+        while (j<n2)
+            Freq.put(arr2[i],Freq.get(i)==null?1:Freq.get(i)+1);
+
     }
 }
