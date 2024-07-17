@@ -27,11 +27,6 @@ public class CheckEqualArrays {
         System.out.println(Freq);
         Iterator iterator = Freq.entrySet().iterator();
         while(iterator.hasNext())
-        {
-            if(Integer.parseInt(String.valueOf(iterator.next()))!=2){
-            System.out.println("False");
-            break;
-        }
-        }
+            System.out.println(iterator.next());
     }
 }
