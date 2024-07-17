@@ -28,5 +28,6 @@ public class HASHING {
             --endTwo;
 
         }
+        System.out.println(sum);
     }
 }
