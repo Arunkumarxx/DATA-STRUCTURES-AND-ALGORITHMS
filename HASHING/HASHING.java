@@ -33,6 +33,7 @@ public class HASHING {
             System.out.println(itr +" iteration"+endOne--);
             System.out.println(itr +" iteration"+startTwo++);
             System.out.println(itr +" iteration"+endTwo--);
+            itr++;
         }
         /*
         ++startOne;
