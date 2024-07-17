@@ -25,7 +25,7 @@ public class CheckEqualArrays {
             Freq.put(arr2[j],Freq.get(arr2[j])==null?1:Freq.get(arr2[j])+1);
 
         System.out.println(Freq);
-        Iterator iterator = Freq.entrySet().iterator();
+        Iterator iterator = Freq.values().iterator();
         while(iterator.hasNext())
             System.out.println(iterator.next());
     }
