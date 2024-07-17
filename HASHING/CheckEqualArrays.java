@@ -17,10 +17,18 @@ public class CheckEqualArrays {
         int n2=arr2.length;
         if(n1!=n2)
             return false;
-        for(int i=0; i<n1; ++i)
+        int start=0;
+        int end=n1-1;
+        while(start<end)
         {
-            freq.put(arr1[i],freq.getOrDefault(arr1[i],0)+1);
-            freq.put(arr2[i],freq.getOrDefault(arr2[i],0)-1);
+            freq.put(arr1[start],freq.getOrDefault(arr1[start],0)+1);
+            freq.put(arr2[start],freq.getOrDefault(arr2[start],0)-1);
+
+            freq.put(arr1[end],freq.getOrDefault(arr1[end],0)+1);
+            freq.put(arr2[end],freq.getOrDefault(arr2[end],0)-1);
+            
+            ++start;
+            --end;
         }
         for (int  x: freq.values())
             if(x!=0)
