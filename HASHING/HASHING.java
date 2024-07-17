@@ -19,14 +19,15 @@ public class HASHING {
         int startTwo = ((n / 2));
         int endTwo = ((n - 1));
         int sum = 0;
-        while (startOne <= endOne && startTwo <= endTwo) {
+
+        while (startOne < endOne && startTwo < endTwo) {
             sum += (arr[startOne] + arr[endOne] + arr[startTwo] + arr[endTwo]);
             ++startOne;
             --endOne;
             ++startTwo;
             --endTwo;
-        }
 
+        }
         System.out.println(sum);
     }
 }
