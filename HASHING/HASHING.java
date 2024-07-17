@@ -34,7 +34,6 @@ public class HASHING {
         if((n-1)%2==0)
             sum+=arr[n/2];
         System.out.println(sum);
-        System.out.println(itr);
 
     }
 }
