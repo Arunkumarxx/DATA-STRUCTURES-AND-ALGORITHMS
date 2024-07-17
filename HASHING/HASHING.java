@@ -28,18 +28,12 @@ public class HASHING {
 
         int itr=0;
         while (startOne < endOne && startTwo < endTwo) {
-            sum += (arr[startOne] + arr[endOne] + arr[startTwo] + arr[endTwo]);
-            System.out.println(itr +" iteration"+ startOne++);
-            System.out.println(itr +" iteration"+endOne--);
-            System.out.println(itr +" iteration"+startTwo++);
-            System.out.println(itr +" iteration"+endTwo--);
-            itr++;
+            sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
         }
-        if(startOne<endOne)
-            while(startOne<endOne)
+        while(startOne<endOne)
                 sum+=arr[startOne++]+arr[endOne--];
-        if(startTwo<endTwo)
-            while(startTwo<endTwo)
+
+        while(startTwo<endTwo)
                 sum+=arr[startTwo++]+arr[endTwo--];
         /*
         ++startOne;
