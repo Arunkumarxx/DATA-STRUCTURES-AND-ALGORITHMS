@@ -23,7 +23,6 @@ public class HASHING {
 
         while(startOne<endOne && startTwo<endTwo) {
             sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
-            System.out.println(startTwo);
         }
 //        System.out.println(sum);
     }
