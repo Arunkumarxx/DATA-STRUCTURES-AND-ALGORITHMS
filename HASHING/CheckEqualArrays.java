@@ -7,7 +7,7 @@ public class CheckEqualArrays {
 
     public static void main(String[] args) {
         int [] arr1 = {1,2,5,4,0};
-        int [] arr2 = {2,4,5,0,1};
+        int [] arr2 = {2,4,5,0,1,2};
         int n1= arr1.length;
         int n2= arr1.length;
         HashMap<Integer,Integer> Freq =new HashMap<>();
@@ -33,5 +33,4 @@ public class CheckEqualArrays {
                 System.out.println("Two Arrays are equal");
         }
     }
-
 }
