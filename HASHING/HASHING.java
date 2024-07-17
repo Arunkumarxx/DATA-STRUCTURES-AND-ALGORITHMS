@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class HASHING {
     public static void main(String[] args) {
-        int[] arr = new int[7];
+        int[] arr = new int[10];
         int n = arr.length;
         int res=0;
         int count=1;
@@ -30,7 +30,7 @@ public class HASHING {
         while(startOne<endOne &&  startTwo<endTwo) {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
         }
-        if(n%2==0 && startOne==endOne && startTwo==endTwo)
+        if(n%2!=0 && startOne==endOne && startTwo==endTwo)
             sum += arr[startOne] + arr[startTwo];
         System.out.println(sum);
 
