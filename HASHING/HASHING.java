@@ -32,10 +32,10 @@ public class HASHING {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
             itr++;
         }
-//        while(startOne<endOne)
-//            sum+=arr[++startOne]+arr[--endOne];
-//        while(startTwo<endTwo)
-//            sum+=arr[++startTwo]+arr[--endTwo];
+        while(startOne<endOne)
+            sum+=arr[++startOne]+arr[--endOne];
+        while(startTwo<endTwo)
+            sum+=arr[++startTwo]+arr[--endTwo];
 
         System.out.println(sum);
 
