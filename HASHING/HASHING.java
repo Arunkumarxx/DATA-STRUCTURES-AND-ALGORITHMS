@@ -18,8 +18,8 @@ public class HASHING {
         int endOne=(n)/2;
         int startTwo= (int) Math.ceil((n+1)/2d);
         int endTwo=n-1;
-        boolean isEndOneIsOdd=endOne%2==0?false:true;
-        boolean isstartTwoIsOdd=endOne%2==0?false:true;
+        boolean isEndOneIsOdd=endOne%2==0?true:false;
+        boolean isstartTwoIsOdd=endOne%2==0?true:false;
         System.out.println(startOne);
         System.out.println(endOne);
         System.out.println(startTwo);
@@ -27,7 +27,7 @@ public class HASHING {
         int sum=0;
         int itr=0;
         while(startOne<endOne &&  startTwo<endTwo) {
-            sum = sum+ arr[startOne++] + arr[endOne--] + arr[startTwo++] + arr[endTwo--];
+            sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
             itr++;
         }
         if(isstartTwoIsOdd)
