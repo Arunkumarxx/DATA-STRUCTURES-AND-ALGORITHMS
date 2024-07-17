@@ -26,7 +26,10 @@ public class CheckEqualArrays {
 
         System.out.println(Freq);
         Iterator iterator = Freq.values().iterator();
-        while(iterator.hasNext())
-            System.out.println(iterator.next()!=2);
+        Object isVaild=2;
+        while(iterator.hasNext()) {
+            if(isVaild!=iterator.next())
+                System.out.println("Two Arrays are not equal");
+        }
     }
 }
