@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class HASHING {
     public static void main(String[] args) {
-        int[] arr = new int[10];
+        int[] arr = new int[9];
         int n = arr.length;
         int res=0;
         int count=1;
