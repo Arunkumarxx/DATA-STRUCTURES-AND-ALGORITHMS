@@ -6,8 +6,10 @@ import java.util.HashMap;
 public class HASHING {
     public static void main(String[] args) {
         int [] arr = new int[100];
+        int n= arr.length;
         for (int i=0; i< arr.length;++i)
             arr[i]+=i+1;
-        System.out.println(Arrays.toString(arr));
+
+        System.out.println((n/100)*0);
     }
 }
