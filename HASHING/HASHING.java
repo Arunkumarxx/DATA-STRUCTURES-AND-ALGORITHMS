@@ -30,8 +30,11 @@ public class HASHING {
             sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
             ++NofItr;
         }
+        while(startOne<endOne && startTwo<endTwo) {
+            sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
+        }
         System.out.println(sum);
-        System.out.println(NofItr);
+//        System.out.println(NofItr);
     }
 }
 /*
