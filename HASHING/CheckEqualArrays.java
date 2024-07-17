@@ -26,7 +26,7 @@ public class CheckEqualArrays {
 
             freq.put(arr1[end],freq.getOrDefault(arr1[end],0)+1);
             freq.put(arr2[end],freq.getOrDefault(arr2[end],0)-1);
-            
+
             ++start;
             --end;
         }
