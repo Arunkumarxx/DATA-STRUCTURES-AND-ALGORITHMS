@@ -34,7 +34,7 @@ public class CheckEqualArrays {
             freq.put(arr2[j],freq.getOrDefault(arr2[j],0)-1);
             ++j;
         }
-        for (Object x:freq.keySet())
+        for (Object x:freq.values())
             System.out.println(x);
         return true;
     }
