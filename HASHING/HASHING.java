@@ -18,10 +18,10 @@ public class HASHING {
         int  endOne =(int)Math.ceil ((n / 2f) - 1);
         int  startTwo =(int)Math.ceil ((n / 2f));
         int  endTwo = ((n - 1));
-        System.out.println(startOne);
-        System.out.println(endOne);
-        System.out.println(startTwo);
-        System.out.println(endTwo);
+//        System.out.println(startOne);
+//        System.out.println(endOne);
+//        System.out.println(startTwo);
+//        System.out.println(endTwo);
         int sum = 0;
 
         while (startOne < endOne && startTwo < endTwo) {
