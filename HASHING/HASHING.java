@@ -15,10 +15,11 @@ public class HASHING {
         System.out.println(res);
         System.out.println();
         int startOne=0;
-        int endOne=(n-1)%2==1?(n-1)/2:((n-1)/2)-1;
-        int startTwo=(n-1)%2==1?(n)/2:((n)/2)+1;
+        int endOne=n/2;
+        int startTwo=(n+1)/2;
         int endTwo=n-1;
-
+        boolean isEndOneIsEven=endOne%2==0?true:false;
+        boolean isstartTwoIsEven=endOne%2==0?true:false;
         System.out.println(startOne);
         System.out.println(endOne);
         System.out.println(startTwo);
@@ -29,10 +30,7 @@ public class HASHING {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
             itr++;
         }
-        if((n-1)%2==1 && startOne==endOne && startTwo==endTwo)
-            sum += arr[startOne] + arr[startTwo];
-        if((n-1)%2==0)
-            sum+=arr[n/2];
+        if(isstartTwoIsEven)
         System.out.println(sum);
 
     }
