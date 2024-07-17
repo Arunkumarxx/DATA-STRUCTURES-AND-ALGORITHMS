@@ -1,6 +1,5 @@
 package HASHING;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -33,8 +32,6 @@ public class CheckEqualArrays {
             else if(iterator.hasNext()==false)
                 System.out.println("Two Arrays are equal");
         }
-        if(Arrays.sort(1,23,);)
-        System.out.println();
         System.out.println("Arun Kumar Thirumalaisamy2004@gmail.com");
     }
 }
