@@ -31,10 +31,10 @@ public class HASHING {
             sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
         }
         while(startOne<endOne)
-                sum+=arr[startOne++]+arr[endOne--];
+                sum+=arr[++startOne]+arr[--endOne];
 
         while(startTwo<endTwo)
-                sum+=arr[startTwo++]+arr[endTwo--];
+                sum+=arr[++startTwo]+arr[--endTwo];
         /*
         ++startOne;
             --endOne;
