@@ -33,7 +33,7 @@ public class HASHING {
         while(startOne<endOne)
                 sum+=arr[startOne++]+arr[endOne--];
 
-        while(startTwo<=endTwo)
+        while(startTwo<endTwo)
                 sum+=arr[startTwo++]+arr[endTwo--];
 
         System.out.println(sum);
