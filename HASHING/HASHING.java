@@ -26,17 +26,18 @@ public class HASHING {
         System.out.println();
         int sum=0;
         int NofItr=0;
-//        while(startOne<endOne && startTwo<endTwo) {
-//            sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
-//            ++NofItr;
-//        }
         while(startOne<endOne && startTwo<endTwo) {
-            System.out.println(arr[startOne] +" "+ arr[endOne] +" "+ arr[startTwo] +" "+ arr[endTwo]);
-            ++startOne;
-            --endOne;
-            ++startTwo;
-            --endTwo;
+            sum += (arr[startOne] + arr[endOne] + arr[startTwo] + arr[endTwo]);
+        ++startOne;
+        --endOne;
+        ++startTwo;
+        --endTwo;
         }
+        System.out.println(res);
+//        while(startOne<endOne && startTwo<endTwo) {
+//            System.out.println(arr[startOne] +" "+ arr[endOne] +" "+ arr[startTwo] +" "+ arr[endTwo]);
+//
+//        }
         System.out.println(sum);
 //        System.out.println(NofItr);
     }
