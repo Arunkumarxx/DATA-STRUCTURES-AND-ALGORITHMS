@@ -28,14 +28,14 @@ public class HASHING {
 
         int itr=0;
         while (startOne < endOne && startTwo < endTwo) {
-            sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
+            sum += (arr[startOne++] + arr[endOne--] + arr[startTwo++] + arr[endTwo--]);
             itr++;
         }
         while(startOne<endOne)
-                sum+=arr[++startOne]+arr[--endOne];
+                sum+=arr[startOne++]+arr[endOne--];
 
         while(startTwo<endTwo)
-                sum+=arr[++startTwo]+arr[--endTwo];
+                sum+=arr[startTwo++]+arr[endTwo--];
 
         System.out.println(sum);
     }
