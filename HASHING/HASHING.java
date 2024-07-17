@@ -15,8 +15,8 @@ public class HASHING {
         System.out.println(res);
         System.out.println();
         int startOne=0;
-        int endOne=(n-1)/2;
-        int startTwo=(n+1)/2;
+        int endOne=(n)/2;
+        int startTwo=(n)/2;
         int endTwo=n-1;
         boolean isEndOneIsOdd=endOne%2==0?false:true;
         boolean isstartTwoIsOdd=endOne%2==0?false:true;
