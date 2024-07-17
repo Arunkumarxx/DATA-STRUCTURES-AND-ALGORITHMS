@@ -25,5 +25,6 @@ public class HASHING {
             ++NofItr;
         }
         System.out.println(sum);
+        System.out.println(NofItr);
     }
 }
