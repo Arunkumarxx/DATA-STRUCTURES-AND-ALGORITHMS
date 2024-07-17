@@ -15,7 +15,7 @@ public class HASHING {
             res += arr[i];
         System.out.println(res);
         double startOne = (0);
-        double endOne = ((n / 2) - 1);
+        double endOne = ((n / 2f) - 1);
         double startTwo = ((n / 2));
         double endTwo = ((n - 1));
         System.out.println(startOne);
