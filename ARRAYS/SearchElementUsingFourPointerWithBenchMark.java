@@ -56,12 +56,12 @@ public class SearchElementUsingFourPointerWithBenchMark {
     }
 
     public static void main(String[] args) {
-        int n = 100000;
+        int n = 10;
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = (int) (Math.random() * n);
         }
-        int key = arr[96788];
+        int key = arr[8];
 
         long startTime = System.nanoTime();
         int linearInd = LinearSearch(arr, key, arr.length);
