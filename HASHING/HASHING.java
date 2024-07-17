@@ -19,11 +19,6 @@ public class HASHING {
         int startTwo =((n/100)*50);
         int endTwo =((n/100)*99);
         int sum=0;
-
-        System.out.println(startOne);
-        System.out.println(endOne);
-        System.out.println(startTwo);
-        System.out.println(endTwo);
         while(startOne<endOne && startTwo<endTwo) {
             sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
         }
