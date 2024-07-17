@@ -30,7 +30,7 @@ public class HASHING {
         while(startOne<endOne &&  startTwo<endTwo) {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
         }
-        if((n-1)%2==0 && startOne==endOne && startTwo==endTwo)
+        if((n-1)%2==1 && startOne==endOne && startTwo==endTwo)
             sum += arr[startOne] + arr[startTwo];
         System.out.println(sum);
 
