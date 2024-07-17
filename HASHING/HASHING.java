@@ -36,7 +36,6 @@ public class HASHING {
 
         while(startTwo<endTwo)
                 sum+=arr[++startTwo]+arr[--endTwo];
-        System.out.println(itr);
-
+        System.out.println(sum);
     }
 }
