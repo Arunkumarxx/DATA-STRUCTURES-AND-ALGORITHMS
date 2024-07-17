@@ -27,18 +27,16 @@ public class HASHING {
         System.out.println(startTwo);
         System.out.println(endTwo);
         int sum=0;
-        while(startOne<=endOne &&  startTwo<=endTwo) {
-            if(startOne==endOne && startTwo==endTwo) {
-                sum += arr[startOne] + arr[startTwo];
-                return;
-            }
+        while(startOne<endOne &&  startTwo<endTwo) {
             sum = sum+ arr[startOne] + arr[endOne] + arr[startTwo] + arr[endTwo];
             ++startOne;
             ++startTwo;
             --endOne;
             --endTwo;
         }
-
+        if(startOne==endOne && startTwo==endTwo) {
+            sum += arr[startOne] + arr[startTwo];
+        }
         System.out.println(sum);
 
     }
