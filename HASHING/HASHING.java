@@ -12,5 +12,6 @@ public class HASHING {
 
         System.out.println((n/100)*0);
         System.out.println((n/100)*25);
+        System.out.println((n/100)*50);
     }
 }
