@@ -17,9 +17,11 @@ public class HASHING {
         System.out.println(res);
 
         int left=0;
-        int leftBreak=(n-1)/4;
-        int LeftMid=leftBreak+1;
-        int mid=(n-1)/2;
-        int rightMid=((n-1)/2)*3;
+        int leftBreak=((n-1)/100)*25;
+        int leftMid=leftBreak+1;
+        int mid=((n-1)/100)*50;
+        int rightMid=((n-1)/100)*75;
+        int right=n-1;
+        while(left<leftBreak && leftMid )
     }
 }
