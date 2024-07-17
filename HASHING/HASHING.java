@@ -1,6 +1,8 @@
 package HASHING;
 
 
+import MATRIX.SumOfUpperAndLowerTriangles;
+
 import java.util.Arrays;
 
 public class HASHING {
@@ -32,7 +34,11 @@ public class HASHING {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
             itr++;
         }
-
+        System.out.println(startOne);
+        System.out.println(endOne);
+        System.out.println(startTwo);
+        System.out.println(endTwo);
+        SumOfUpperAndLowerTriangles
         System.out.println(sum);
 
     }
