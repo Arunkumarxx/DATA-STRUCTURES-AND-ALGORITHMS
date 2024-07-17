@@ -21,8 +21,8 @@ public class HASHING {
         int endOne=(n-1)/2;
         int startTwo=(n)/2;
         int endTwo=n%2==0?n-1:n-2;
-        if(n%2==1)
-            sum+=arr[n-1];
+//        if(n%2==1)
+//            sum+=arr[n-1];
         System.out.println(startOne);
         System.out.println(endOne);
         System.out.println(startTwo);
@@ -33,7 +33,6 @@ public class HASHING {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
             itr++;
         }
-
         System.out.println(sum);
 
     }
