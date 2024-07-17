@@ -34,5 +34,6 @@ public class HASHING {
 
         }
         System.out.println(sum);
+        System.out.println(28+70);
     }
 }
