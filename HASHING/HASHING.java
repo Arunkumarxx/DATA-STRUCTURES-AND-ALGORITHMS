@@ -11,7 +11,7 @@ public class HASHING {
         int res=0;
         int count=1;
         for (int i = 0; i < arr.length; ++i)
-            arr[i]=count;
+            arr[i]=count++;
 
         for (int i = 0; i < n; i++)
             res += arr[i];
