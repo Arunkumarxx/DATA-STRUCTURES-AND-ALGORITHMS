@@ -1,8 +1,5 @@
 package HASHING;
 
-import java.security.spec.RSAOtherPrimeInfo;
-import java.util.Arrays;
-import java.util.HashMap;
 
 public class HASHING {
     public static void main(String[] args) {
@@ -27,14 +24,17 @@ public class HASHING {
         System.out.println(startTwo);
         System.out.println(endTwo);
         int sum=0;
+        int itr=0;
         while(startOne<endOne &&  startTwo<endTwo) {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
+            itr++;
         }
         if((n-1)%2==1 && startOne==endOne && startTwo==endTwo)
             sum += arr[startOne] + arr[startTwo];
         if((n-1)%2==0)
             sum+=arr[n/2];
         System.out.println(sum);
+        System.out.println(itr);
 
     }
 }
