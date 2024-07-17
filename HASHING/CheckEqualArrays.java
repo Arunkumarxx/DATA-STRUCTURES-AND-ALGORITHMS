@@ -23,11 +23,15 @@ public class CheckEqualArrays {
             Freq.put(arr1[i],Freq.get(arr1[i])==null?1:Freq.get(arr1[i])+1);
         while (j<n2)
             Freq.put(arr2[j],Freq.get(arr2[j])==null?1:Freq.get(arr2[j])+1);
-        
+
         Iterator iterator = Freq.values().iterator();
         while(iterator.hasNext()) {
-            if((Integer)2!=iterator.next())
+            if((Integer)2!=iterator.next()) {
                 System.out.println("Two Arrays are not equal");
+            }
+            else if(iterator.hasNext()==false)
+                System.out.println("Two Arrays are equal");
         }
     }
+
 }
