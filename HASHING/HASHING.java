@@ -29,19 +29,14 @@ public class HASHING {
         int itr=0;
         while (startOne < endOne && startTwo < endTwo) {
             sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
+            itr++;
         }
         while(startOne<endOne)
                 sum+=arr[++startOne]+arr[--endOne];
 
         while(startTwo<endTwo)
                 sum+=arr[++startTwo]+arr[--endTwo];
-        /*
-        ++startOne;
-            --endOne;
-            ++startTwo;
-            --endTwo;
-         */
-        System.out.println();
-        System.out.println(sum);
+        System.out.println(itr);
+
     }
 }
