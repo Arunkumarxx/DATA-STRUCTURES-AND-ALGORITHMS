@@ -33,7 +33,7 @@ public class CheckEqualArrays {
             freq.put(arr2[j],freq.getOrDefault(arr2[j],0)-1);
             ++j;
         }
-        for (int x:freq.values())
+        for (int x:freq.keySet())
             System.out.println(x);
         return true;
     }
