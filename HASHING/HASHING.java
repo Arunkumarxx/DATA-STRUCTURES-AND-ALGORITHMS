@@ -12,8 +12,8 @@ public class HASHING {
            res+= arr[i]+=i+1;
         System.out.println(res);
         int startOne=((n/100)*0)-1;
-        int endOne=   ((n/100)*50)+1;
-        int startTwo =((n/100)*51)-1;
+        int endOne=   ((n/100)*49)+1;
+        int startTwo =((n/100)*50)-1;
         int endTwo =((n/100)*100)+1;
         int sum=0;
         while(startOne<endOne && startTwo<endTwo)
