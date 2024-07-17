@@ -14,6 +14,26 @@ public class CheckEqualArrays {
     private  boolean isEqualArray(HashMap<Integer,Integer> freq,int [] arr1,int [] arr2) {
         int n1= arr1.length;
         int n2=arr2.length;
-        
+        if(n1!=n2)
+            return false;
+        int i=0 ,j=0;
+        while(i<n1 && j<n2)
+        {
+            freq.put(arr1[i],freq.getOrDefault(arr1[i],0)+1);
+            freq.put(arr2[i],freq.getOrDefault(arr2[i],0)-1);
+            ++i;
+            ++j;
+        }
+        while(i<n1) {
+            freq.put(arr1[i], freq.getOrDefault(arr1[i], 0) + 1);
+            ++i;
+        }
+        while(j<n2)
+        {
+            freq.put(arr2[j],freq.getOrDefault(arr2[j],0)-1);
+            ++j;
+        }
+        for (int x:freq.values())
+            System.out.println(x);
     }
 }
