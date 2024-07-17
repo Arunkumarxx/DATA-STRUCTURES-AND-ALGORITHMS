@@ -11,8 +11,8 @@ public class HASHING {
             arr[i]+=i+1;
 
         System.out.println((n/100)*0);
+        System.out.println((n/100)*49);
         System.out.println((n/100)*50);
-        System.out.println((n/100)*51);
-        System.out.println((n/100)*100);
+        System.out.println((n/100)*99);
     }
 }
