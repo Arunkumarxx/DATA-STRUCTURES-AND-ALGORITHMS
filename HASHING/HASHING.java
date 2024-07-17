@@ -24,7 +24,7 @@ public class HASHING {
         int breakLeft = (n - 1) / 4;
         int breakRight = ((n - 1) / 2) + ((n - 1) / 4);
         while (left < breakLeft && leftHalf < mid && rightHalf > mid && right > breakRight) {
-            
+            sum+=(arr[left]+arr[leftHalf]+arr[rightHalf]+arr[right]);
             left++;
             leftHalf++;
             rightHalf--;
