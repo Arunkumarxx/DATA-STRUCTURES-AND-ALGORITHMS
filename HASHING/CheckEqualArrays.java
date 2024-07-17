@@ -13,8 +13,8 @@ public class CheckEqualArrays {
         int i=0, j=0;
         while(i<n1 && j<n2)
         {
-            Freq.put(arr1[i],Freq.get(i)+1);
-            Freq.put(arr2[i],Freq.get(i)+1);
+            Freq.put(arr1[i],Freq.get(i)==null?1:Freq.get(i)+1);
+            Freq.put(arr2[i],Freq.get(i)==null?1:Freq.get(i)+1);
             i++;
             j++;
         }
