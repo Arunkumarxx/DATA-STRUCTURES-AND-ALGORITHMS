@@ -26,11 +26,11 @@ public class CheckEqualArrays {
 
         Iterator iterator = Freq.values().iterator();
         while(iterator.hasNext()) {
-            if((Integer) iterator.next()>2|| (Integer) iterator.next()<2) {
+            int value= (Integer) iterator.next();
+            if( value> 2 || value < 2) {
                 System.out.println("Two Arrays are not equal");
                 break;
             }
         }
-
     }
 }
