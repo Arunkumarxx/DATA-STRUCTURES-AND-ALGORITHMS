@@ -1,12 +1,13 @@
 package HASHING;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 
 public class CheckEqualArrays {
 
     public static void main(String[] args) {
-        int [] arr1 = {1,23,5,4,0};
+        int [] arr1 = {1,2,5,4,0};
         int [] arr2 = {2,4,5,0,1};
         int n1= arr1.length;
         int n2= arr1.length;
@@ -26,11 +27,14 @@ public class CheckEqualArrays {
 
         Iterator iterator = Freq.values().iterator();
         while(iterator.hasNext()) {
-            if((Integer)2!=iterator.next()) {
+            if((Integer)2>=iterator.next()) {
                 System.out.println("Two Arrays are not equal");
             }
             else if(iterator.hasNext()==false)
                 System.out.println("Two Arrays are equal");
         }
+        if(Arrays.sort(1,23,);)
+        System.out.println();
+        System.out.println("Arun Kumar Thirumalaisamy2004@gmail.com");
     }
 }
