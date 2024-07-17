@@ -32,9 +32,9 @@ public class HASHING {
             sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
             itr++;
         }
-        if(startOne==endOne && n%2!=0)
+        if(startOne==endOne)
             sum+=arr[startOne];
-        if(startTwo==endTwo && n%2!=0)
+        if(startTwo==endTwo)
             sum+=arr[startTwo];
 
         System.out.println(sum);
