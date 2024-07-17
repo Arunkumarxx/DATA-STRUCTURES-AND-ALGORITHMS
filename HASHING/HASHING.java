@@ -27,7 +27,7 @@ public class HASHING {
         System.out.println(startTwo);
         System.out.println(endTwo);
         int sum=0;
-        while(startOne<endOne && startTwo<endTwo) {
+        while(startOne<endOne || startTwo<endTwo) {
             sum = sum+ arr[startOne] + arr[endOne] + arr[startTwo] + arr[endTwo];
             ++startOne;
             ++startTwo;
