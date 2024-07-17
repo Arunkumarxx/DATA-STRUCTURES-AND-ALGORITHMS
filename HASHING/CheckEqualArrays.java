@@ -35,5 +35,6 @@ public class CheckEqualArrays {
         }
         for (int x:freq.values())
             System.out.println(x);
+        return true;
     }
 }
