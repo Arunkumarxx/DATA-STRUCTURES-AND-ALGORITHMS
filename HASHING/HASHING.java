@@ -32,7 +32,7 @@ public class HASHING {
         --endOne;
         ++startTwo;
         --endTwo;
-        NofItr
+        ++NofItr;
         }
 //        while(startOne<endOne && startTwo<endTwo) {
 //            System.out.println(arr[startOne] +" "+ arr[endOne] +" "+ arr[startTwo] +" "+ arr[endTwo]);
