@@ -10,12 +10,12 @@ public class HASHING {
         for (int i=0; i< arr.length;++i)
             arr[i]+=i+1;
 
-        int startOne= (n/100)*0;
-        int endOne=   (n/100)*49;
-        int startTwo =(n/100)*50;
-        int endTwo =(n/100)*99;
+        int startOne=((n/100)*0)-1;
+        int endOne=   ((n/100)*49)+1;
+        int startTwo =((n/100)*50)+1;
+        int endTwo =((n/100)*99)-1;
         int sum=0;
         while(startOne<endOne && startTwo<endTwo)
-            sum+=(arr[startOne]+arr[endOne]+arr[startTwo]+arr[endTwo]);
+            sum+=(arr[++startOne]+arr[--endOne]+arr[++startTwo]+arr[--endTwo]);
     }
 }
