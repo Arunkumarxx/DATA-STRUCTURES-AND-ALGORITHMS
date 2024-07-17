@@ -20,8 +20,7 @@ public class HASHING {
         int startOne=0;
         int endOne=(n-2)/2;
         int startTwo=(n)/2;
-        int endTwo=n%2==0?n-1:n-2;
-        if(n%2==1)
+        int endTwo=n-2;
             sum+=arr[n-1];
         System.out.println(startOne);
         System.out.println(endOne);
