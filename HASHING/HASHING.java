@@ -14,10 +14,10 @@ public class HASHING {
         for (int i = 0; i < n; i++)
             res += arr[i];
         System.out.println(res);
-        float startOne = (0);
-        float endOne = ((n / 2) - 1);
-        float startTwo = ((n / 2));
-        float endTwo = ((n - 1));
+        double startOne = (0);
+        double endOne = ((n / 2) - 1);
+        double startTwo = ((n / 2));
+        double endTwo = ((n - 1));
         System.out.println(startOne);
         System.out.println(endOne);
         System.out.println(startTwo);
