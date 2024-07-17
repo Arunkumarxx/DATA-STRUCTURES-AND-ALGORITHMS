@@ -37,10 +37,10 @@ public class HASHING {
         }
         if(startOne<endOne)
             while(startOne<endOne)
-                sum+=arr[startOne]+arr[endOne];
+                sum+=arr[startOne++]+arr[endOne--];
         if(startTwo<endTwo)
             while(startTwo<endTwo)
-                sum+=arr[startTwo]+arr[endTwo];
+                sum+=arr[startTwo++]+arr[endTwo--];
         /*
         ++startOne;
             --endOne;
