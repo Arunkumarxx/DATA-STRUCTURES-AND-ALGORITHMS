@@ -14,10 +14,10 @@ public class HASHING {
         for (int i=0; i<n; i++)
             res+=arr[i];
 //        System.out.println(res);
-        int startOne=((n/100)*0)-1;
-        int endOne=   ((n/100)*49)+1;
-        int startTwo =((n/100)*50)-1;
-        int endTwo =((n/100)*99)+1;
+        int startOne=((n/100)*0);
+        int endOne=   ((n/100)*49);
+        int startTwo =((n/100)*50);
+        int endTwo =((n/100)*99);
         int sum=0;
 
         System.out.println(startOne);
@@ -25,7 +25,7 @@ public class HASHING {
         System.out.println(startTwo);
         System.out.println(endTwo);
         while(startOne<endOne && startTwo<endTwo) {
-            sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
+            sum += (arr[startOne++] + arr[endOne--] + arr[startTwo++] + arr[endTwo-]);
 
         }
 //        System.out.println(sum);
