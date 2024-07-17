@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class HASHING {
     public static void main(String[] args) {
-        int[] arr = new int[10];
+        int[] arr = new int[120];
         int n = arr.length;
         int res=0;
         int count=1;
@@ -36,6 +36,7 @@ public class HASHING {
 
         while(startTwo<endTwo)
                 sum+=arr[++startTwo]+arr[--endTwo];
+
         System.out.println(sum);
     }
 }
