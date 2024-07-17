@@ -27,13 +27,13 @@ public class HASHING {
         int sum=0;
         int itr=0;
         while(startOne<endOne &&  startTwo<endTwo) {
-            sum = sum+ arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo];
+            sum = sum+ arr[startOne++] + arr[endOne--] + arr[startTwo++] + arr[endTwo--];
             itr++;
         }
         if(isstartTwoIsOdd)
-            sum+=arr[endOne];
-        if(isEndOneIsOdd)
             sum+=arr[startTwo];
+        if(isEndOneIsOdd)
+            sum+=arr[startOne];
 
         System.out.println(sum);
 
