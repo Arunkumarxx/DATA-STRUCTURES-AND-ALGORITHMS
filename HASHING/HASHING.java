@@ -34,7 +34,6 @@ public class HASHING {
         --endTwo;
         ++NofItr;
         }
-        System.out.println(NofItr);
 //        while(startOne<endOne && startTwo<endTwo) {
 //            System.out.println(arr[startOne] +" "+ arr[endOne] +" "+ arr[startTwo] +" "+ arr[endTwo]);
 //
