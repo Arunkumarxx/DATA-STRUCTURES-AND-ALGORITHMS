@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class HASHING {
     public static void main(String[] args) {
-        int[] arr = new int[10];
+        int[] arr = new int[9];
         int n = arr.length;
         int res=0;
         int count=1;
@@ -18,8 +18,8 @@ public class HASHING {
         System.out.println(res);
         System.out.println();
         int startOne=0;
-        int endOne=(n-1)/2;
-        int startTwo=(n)/2;
+        int endOne=(n-1)%2==1?(n-1)/2:((n-1)/2)-1;
+        int startTwo=(n-1)%2==1?(n)/2:((n)/2)+1;
         int endTwo=n-1;
 
         System.out.println(startOne);
