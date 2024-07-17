@@ -29,5 +29,6 @@ public class HASHING {
 
         }
         System.out.println(sum);
+        System.out.println(res-sum);
     }
 }
