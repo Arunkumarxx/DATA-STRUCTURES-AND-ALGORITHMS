@@ -13,7 +13,7 @@ public class HASHING {
 
         for (int i=0; i<n; i++)
             res+=arr[i];
-        System.out.println(res);
+//        System.out.println(res);
         int startOne=((n/100)*0)-1;
         int endOne=   ((n/100)*49)+1;
         int startTwo =((n/100)*50)-1;
@@ -26,8 +26,8 @@ public class HASHING {
         System.out.println(endTwo);
         while(startOne<endOne && startTwo<endTwo) {
             sum += (arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
-            System.out.println(startOne);
+
         }
-        System.out.println(sum);
+//        System.out.println(sum);
     }
 }
