@@ -32,6 +32,10 @@ public class HASHING {
             ++startTwo;
             --endTwo;
 
+            System.out.println(startOne);
+            System.out.println(endOne);
+            System.out.println(startTwo);
+            System.out.println(endTwo);
         }
         System.out.println(sum);
     }
