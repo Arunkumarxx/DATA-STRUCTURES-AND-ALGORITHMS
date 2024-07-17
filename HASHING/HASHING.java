@@ -30,5 +30,6 @@ public class HASHING {
             rightHalf--;
             right--;
         }
+        System.out.println(sum);
     }
 }
