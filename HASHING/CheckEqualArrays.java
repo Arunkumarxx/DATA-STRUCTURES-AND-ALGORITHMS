@@ -18,9 +18,5 @@ public class CheckEqualArrays {
             i++;
             j++;
         }
-        while(i<n1)
-            ;
-        while(j<n2)
-            ;
     }
 }
