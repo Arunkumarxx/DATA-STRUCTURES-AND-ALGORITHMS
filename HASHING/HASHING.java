@@ -35,6 +35,12 @@ public class HASHING {
             System.out.println(itr +" iteration"+endTwo--);
             itr++;
         }
+        if(startOne<endOne)
+            while(startOne<endOne)
+                sum+=arr[startOne]+arr[endOne];
+        if(startTwo<endTwo)
+            while(startTwo<endTwo)
+                sum+=arr[startTwo]+arr[endTwo];
         /*
         ++startOne;
             --endOne;
