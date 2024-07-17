@@ -16,7 +16,7 @@ public class HASHING {
             res += arr[i];
         System.out.println(res);
         int  startOne = (0);
-        int  endOne =(((n-1)/ 2));
+        int  endOne =(((n)/ 2));
         int  startTwo =((n)/ 2)+1;
         int  endTwo = ((n)-1);
         int sum = 0;
