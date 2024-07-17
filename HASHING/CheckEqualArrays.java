@@ -30,8 +30,6 @@ public class CheckEqualArrays {
                 System.out.println("Two Arrays are not equal");
                 break;
             }
-            else if(iterator.hasNext()==false)
-                System.out.println("Two Arrays are equal");
         }
 
     }
