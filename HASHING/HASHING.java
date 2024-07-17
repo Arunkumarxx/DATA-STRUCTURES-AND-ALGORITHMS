@@ -28,6 +28,6 @@ public class HASHING {
             sum += (arr[startOne++] + arr[endOne--] + arr[startTwo++] + arr[endTwo--]);
 
         }
-//        System.out.println(sum);
+        System.out.println(sum);
     }
 }
