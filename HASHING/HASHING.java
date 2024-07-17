@@ -3,7 +3,7 @@ package HASHING;
 
 public class HASHING {
     public static void main(String[] args) {
-        int[] arr = new int[8];
+        int[] arr = new int[100];
         int n = arr.length;
         int res=0;
         int count=1;
@@ -34,7 +34,7 @@ public class HASHING {
             sum+=arr[++startOne]+arr[--endOne];
         while(startTwo<endTwo)
             sum+=arr[++startTwo]+arr[--endTwo];
-        
+
         if(isstartTwoIsOdd)
             sum+=arr[startTwo];
         if(isEndOneIsOdd)
