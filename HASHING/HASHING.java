@@ -31,7 +31,7 @@ public class HASHING {
 //            ++NofItr;
 //        }
         while(startOne<endOne && startTwo<endTwo) {
-            System.out.println(arr[++startOne] + arr[--endOne] + arr[++startTwo] + arr[--endTwo]);
+            System.out.println(arr[++startOne] +" "+ arr[--endOne] +" "+ arr[++startTwo] +" "+ arr[--endTwo]);
         }
         System.out.println(sum);
 //        System.out.println(NofItr);
