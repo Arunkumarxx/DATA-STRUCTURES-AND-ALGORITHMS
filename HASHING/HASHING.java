@@ -32,6 +32,8 @@ public class HASHING {
         }
         if((n-1)%2==1 && startOne==endOne && startTwo==endTwo)
             sum += arr[startOne] + arr[startTwo];
+        if((n-1)%2==0)
+            sum+=arr[n/2];
         System.out.println(sum);
 
     }
