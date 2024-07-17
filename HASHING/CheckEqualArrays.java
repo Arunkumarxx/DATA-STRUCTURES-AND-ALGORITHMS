@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class CheckEqualArrays {
 
@@ -24,14 +25,6 @@ public class CheckEqualArrays {
             Freq.put(arr2[j],Freq.get(arr2[j])==null?1:Freq.get(arr2[j])+1);
 
         System.out.println(Freq);
-        for (int k=0; k<Freq.size(); k++)
-        {
-            if(Freq.get(k)!=2) {
-                System.out.println("False");
-                break;
-            }
-        }
-        System.out.println("True");
-
+        Iterator iterator = ;
     }
 }
