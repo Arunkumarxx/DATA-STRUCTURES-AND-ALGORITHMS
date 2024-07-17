@@ -26,7 +26,7 @@ public class CheckEqualArrays {
 
         Iterator iterator = Freq.values().iterator();
         while(iterator.hasNext()) {
-            if((Integer)2>=iterator.next()) {
+            if(i) {
                 System.out.println("Two Arrays are not equal");
             }
             else if(iterator.hasNext()==false)
