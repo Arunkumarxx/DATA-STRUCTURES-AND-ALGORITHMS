@@ -3,11 +3,7 @@ package HASHING;
 import java.util.Arrays;
 
 public class HashingForPairOne {
-    static int x = 213;
 
-    static void m() {
-        System.out.println("Arun");
-    }
 
     private int[] PaidCheckBruteForce(int[] arr, int n, int target) {
         Arrays.sort(arr);
