@@ -19,7 +19,9 @@ public class HashingForPairOne {
         return new int[]{};
     }
     private int [] PairCheckOptimized(int [] arr,int n,int target) {
-        HashSet<Integer>
+        HashSet<Integer> hashSet = new HashSet<>();
+        for (int i=0; i<n; ++i)
+        hashSet.add(arr[i]);
         return new int[]{};
     }
     public static void main(String[] args) {
