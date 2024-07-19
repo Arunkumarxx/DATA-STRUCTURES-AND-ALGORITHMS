@@ -3,6 +3,7 @@ package HASHING;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class PrintNonRepeatedElements {
     public static void main(String[] args) {
@@ -12,10 +13,11 @@ public class PrintNonRepeatedElements {
         for (int i=0; i<n; ++i)
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
         ArrayList<Integer> arrayList =new ArrayList<>();
-        for (int i=0; i<hashMap.size(); ++i)
-            if(hashMap.getOrDefault(arr[i],0)==1)
-                arrayList.add(arr[i]);
-        System.out.println(hashMap);
-        System.out.println(arrayList);
+        Iterator itr =hashMap.keySet().iterator();
+        while(itr.hasNext())
+        {
+            int res= (int) itr.next();
+            System.out.println(res);
+        }
     }
 }
