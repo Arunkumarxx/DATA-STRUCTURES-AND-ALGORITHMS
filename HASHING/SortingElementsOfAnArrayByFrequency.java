@@ -15,5 +15,6 @@ public class SortingElementsOfAnArrayByFrequency {
         {
             arrayList.add(entry.getKey());
         }
+        System.out.println(arrayList);
     }
 }
