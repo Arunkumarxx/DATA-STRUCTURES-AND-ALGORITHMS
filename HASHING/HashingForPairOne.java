@@ -37,7 +37,7 @@ public class HashingForPairOne {
         HashingForPairOne obj = new HashingForPairOne();
         System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(obj.PairCheckBruteForce(arr, arr.length, 14)));
-        System.out.println(Arrays.toString(obj.PairCheckOptimized(arr, arr.length,14)));
+        System.out.println(obj.PairCheckOptimized(arr, arr.length,14)));
 
     }
 }
