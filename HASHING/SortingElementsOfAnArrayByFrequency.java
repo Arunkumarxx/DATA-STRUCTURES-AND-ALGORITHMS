@@ -15,7 +15,7 @@ public class SortingElementsOfAnArrayByFrequency {
 
         while(itr.hasNext())
         {
-            System.out.println(itr.next());
+            System.out.println(itr.next().getClass());
         }
     }
 }
