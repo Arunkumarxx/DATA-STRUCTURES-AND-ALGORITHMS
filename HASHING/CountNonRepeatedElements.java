@@ -39,6 +39,7 @@ public class CountNonRepeatedElements {
     public static void main(String[] args) {
         int [] arr ={1,2,3,4,5};
         int n= arr.length;
-        countNonRepeated(arr,n);
+      long  res=  countNonRepeated(arr,n);
+        System.out.println(res);
     }
 }
