@@ -9,15 +9,16 @@ public class SortingElementsOfAnArrayByFrequency {
         for (int x:arr)
             hashMap.put(x, hashMap.getOrDefault(x,0)+1);
         List<Map.Entry <Integer,Integer>> entryList = new ArrayList<>(hashMap.entrySet());
-        entryList.sort((e1, e2) -> e2.getValue()-e1.getValue());
+        entryList.sort((e1, e2) -> {
+            int freqCompare=e2.getValue().compareTo(e1.getValue());
+            int KeyCompare=e1.getKey().compareTo(e2.getKey());
+            return    freqCompare==0?KeyCompare:freqCompare;
+        });
         ArrayList<Integer> arrayList = new ArrayList<>();
-        for (Map.Entry<Integer,Integer> entry :entryList)
-        {
-            int ele=entry.getValue();
-            while(ele>=1)
-            {
+        for (Map.Entry<Integer, Integer> entry : entryList) {
+            int count = entry.getValue();
+            while (count-- > 0) {
                 arrayList.add(entry.getKey());
-                --ele;
             }
         }
         System.out.println(arrayList);
