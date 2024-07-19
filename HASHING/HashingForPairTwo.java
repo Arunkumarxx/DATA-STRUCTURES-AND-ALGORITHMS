@@ -9,7 +9,7 @@ public class HashingForPairTwo {
         int target=47;
         int n= arr.length;
         HashSet<Integer> hashSet = new HashSet<>();
-        HashSet<String> visitedPaid = new HashSet<>();
+        HashSet<String> VisitedPairs = new HashSet<>();
         int count=0;
        for (int i=0; i<n; ++i)
        {
@@ -17,8 +17,8 @@ public class HashingForPairTwo {
            if(hashSet.contains(pair))
            {
                String Pairs=Math.min(arr[i],pair)+","+Math.max(arr[i],pair);
-               if(!(visitedPaid.contains(Pairs))) {
-                   visitedPaid.add(Pairs);
+               if(!(VisitedPairs.contains(Pairs))) {
+                   VisitedPairs.add(Pairs);
                    ++count;
                }
            }
@@ -29,9 +29,6 @@ public class HashingForPairTwo {
            }
            hashSet.add(arr[i]);
        }
+
     }
 }
-/*
-12,35
-35,12
- */
