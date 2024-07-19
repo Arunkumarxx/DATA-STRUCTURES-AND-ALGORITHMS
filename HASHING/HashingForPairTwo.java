@@ -44,4 +44,25 @@ public class HashingForPairTwo {
            System.out.println();
        }
    }
+    int sum(int arr[]) {
+        // code here
+
+        int start=0;
+        int sum=0;
+        int n=arr.length;
+        if(n<3){
+            for(int x:arr) sum+=x;
+            return sum;
+        }
+        for(int x:arr)
+            int end=n%2==0?arr.length-1:arr.length-2;
+        while(start<end)
+        {
+            sum+=arr[start]+arr[end];
+            ++start;
+            --end;
+        }
+        sum+=arr[n-1];
+        return sum;
+    }
 }
