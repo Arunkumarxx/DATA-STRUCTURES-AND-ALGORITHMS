@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class HashingForPairOne {
 
@@ -18,7 +19,7 @@ public class HashingForPairOne {
         return new int[]{};
     }
     private int [] PairCheckOptimized(int [] arr,int n,int target) {
-        
+        HashSet<Integer>
         return new int[]{};
     }
     public static void main(String[] args) {
