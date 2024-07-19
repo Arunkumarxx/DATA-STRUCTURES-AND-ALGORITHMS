@@ -31,5 +31,6 @@ public class HashingForPairTwo {
 
        }
     }
-
+if(start==end)
+            return  str.charAt(start)==('0'||'1')?true:false;
 }
