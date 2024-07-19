@@ -12,9 +12,9 @@ public class CountDistinctElements {
         {
             freq.put(arr[start],arr[start]);
             freq.put(arr[end],arr[end]);
-            if(freq.get(arr[start])>(Integer)1)
+            if(freq.get(arr[start])>1)
                 freq.remove(arr[start]);
-            if(freq.get(arr[end])>(Integer)1)
+            if(freq.get(arr[end])>1)
                 freq.remove(arr[end]);
 
             ++start;
