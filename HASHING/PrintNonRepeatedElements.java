@@ -15,6 +15,7 @@ public class PrintNonRepeatedElements {
         for (int i=0; i<hashMap.size(); ++i)
             if(hashMap.getOrDefault(arr[i],0)==1)
                 arrayList.add(arr[i]);
+        System.out.println(hashMap);
         System.out.println(arrayList);
     }
 }
