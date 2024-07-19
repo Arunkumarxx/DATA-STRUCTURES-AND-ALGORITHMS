@@ -15,7 +15,6 @@ public class HashingForPairTwo {
                 if(arr1[i]+arr1[j]==target)
                     System.out.println(arr1[i]+","+arr1[j]);
             }
-            System.out.println();
         }
     }
 }
