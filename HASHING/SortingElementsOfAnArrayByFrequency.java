@@ -14,6 +14,7 @@ public class SortingElementsOfAnArrayByFrequency {
         Iterator itr = entryList.listIterator();
         while(itr.hasNext())
             System.out.print(itr.next()+" ");
+        System.out.println();
         System.out.println(hashMap);
     }
 }
