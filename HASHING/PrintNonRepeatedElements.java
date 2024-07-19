@@ -25,8 +25,8 @@ public class PrintNonRepeatedElements {
         int j=n-1;
         while(i<j)
         {
-            hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
-            hashMap.put(arr[j],hashMap.getOrDefault(arr[j],0)+1);
+           result.add(hashMap.get(i));
+           result.add(hashMap.get(j));
             ++i;
             --j;
         }
