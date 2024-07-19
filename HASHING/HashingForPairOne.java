@@ -10,7 +10,6 @@ public class HashingForPairOne {
     }
     private int [] PaidCheckBruteForce(int [] arr,int n,int target){
         Arrays.sort(arr);
-        m();
         int start=0 ,end=n-1;
         while(start<end)
         {
