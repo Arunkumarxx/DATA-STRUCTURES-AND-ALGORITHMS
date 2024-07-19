@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public class PrintNonRepeatedElements {
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList<>();
+        List<Integer<Integer>> arrayList = new ArrayList<>();
      }
 }
