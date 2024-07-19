@@ -1,2 +1,7 @@
-package HASHING;public class CountNonRepeatedElements {
+package HASHING;
+
+public class CountNonRepeatedElements {
+    public static void main(String[] args) {
+
+    }
 }
