@@ -21,6 +21,7 @@ public class CountDistinctElements {
         if(start==end)
             if(!( freq.getOrDefault(arr[start],0)>1))
                 freq.put(arr[start],1);
+        System.out.println(freq);
         System.out.println("Distinct Elements "+freq.size());
     }
 }
