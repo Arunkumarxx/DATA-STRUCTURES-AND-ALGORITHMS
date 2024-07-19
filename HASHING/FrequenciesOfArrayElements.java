@@ -8,6 +8,7 @@ public class FrequenciesOfArrayElements {
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         for(int x:arr)
             hashMap.put(x,hashMap.getOrDefault(x,0)+1);
-        System.out.println(hashMap);
+        for (int x: hashMap.keySet())
+            System.out.println(x);
     }
 }
