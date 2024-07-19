@@ -13,7 +13,7 @@ public class SortingElementsOfAnArrayByFrequency {
         ArrayList<Integer> arrayList = new ArrayList<>();
         Iterator itr = entryList.listIterator();
         while(itr.hasNext())
-            System.out.println(itr.next());
+            System.out.print(itr.next()+" ");
         System.out.println(hashMap);
     }
 }
