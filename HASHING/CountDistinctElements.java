@@ -20,7 +20,7 @@ public class CountDistinctElements {
         }
         if(start==end)
             if(!( freq.getOrDefault(arr[start],0)>1))
-                freq.put(arr[start],arr[start]);
+                freq.put(arr[start],1);
         System.out.println("Distinct Elements "+freq.size());
     }
 }
