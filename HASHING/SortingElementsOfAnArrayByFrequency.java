@@ -10,7 +10,7 @@ public class SortingElementsOfAnArrayByFrequency {
             hashMap.put(x, hashMap.getOrDefault(x,0)+1);
         List<Map.Entry <Integer,Integer>> entryList = new ArrayList<>(hashMap.entrySet());
         entryList.sort((a,b)->a.getValue().compareTo(b.getValue()));
-        
+        System.out.println(entryList);
         System.out.println(hashMap);
     }
 }
