@@ -18,12 +18,16 @@ public class HashingForPairOne {
         }
         return new int[]{};
     }
-    private int [] PairCheckOptimized(int [] arr,int n,int target) {
+    private boolean  PairCheckOptimized(int [] arr,int n,int target) {
         HashSet<Integer> hashSet = new HashSet<>();
         for (int i=0; i<n; ++i)
         {
-            
+            int secondPair=target-arr[i];
+           if( hashSet.contains(secondPair))
+               return true;
+            hashSet.add(arr[i]);
         }
+        return false;
     }
     public static void main(String[] args) {
         int[] arr = new int[10];
