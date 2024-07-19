@@ -1,27 +1,22 @@
 package HASHING;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class CountDistinctElements {
     public static void main(String[] args) {
         int [] arr ={10,10};
-        HashMap<Integer,Integer> freq = new HashMap<>();
+        HashSet<Integer> freq = new HashSet();
         int start=0;
         int end= arr.length-1;
         while(start<end)
         {
-
-            if(!(freq.getOrDefault(arr[start],0)>1))
-                freq.put(arr[start],1);
-            if(!(freq.getOrDefault(arr[end],0)>1))
-                freq.put(arr[end],1);
+            freq.add(arr[start]);
+            freq.add(arr[end]);
             ++start;
             --end;
         }
         if(start==end)
-            if(!( freq.getOrDefault(arr[start],0)>1))
-                freq.put(arr[start],1);
-        System.out.println(freq);
+            freq.add(arr[start]);
         System.out.println("Distinct Elements "+freq.size());
     }
 }
