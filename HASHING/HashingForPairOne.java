@@ -31,9 +31,10 @@ public class HashingForPairOne {
             }
         }
         for (int i=0; i<n; ++i)
-        {
-            
-        }
+         if(   target==arr[pair[0]]+arr[i]) {
+             pair[1]=i;
+             return pair;
+         }
         return new int[]{};
     }
     public static void main(String[] args) {
