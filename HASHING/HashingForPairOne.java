@@ -19,10 +19,10 @@ public class HashingForPairOne {
         return new int [] {};
     }
     public static void main(String[] args) {
-        int [] arr = new int [100];
+        int [] arr = new int [10];
         Random random = new Random();
         for (int i=0 ;i< arr.length; ++i)
-            arr[i]=random.nextInt(1,10);
+            arr[i]=i+1;
         HashingForPairOne obj = new HashingForPairOne();
         System.out.println(  Arrays.toString(obj.PaidCheckBruteForce(arr, arr.length,10)));
 //        System.out.println(Arrays.toString(arr));
