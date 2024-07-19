@@ -10,11 +10,9 @@ public class HashingForPairOne {
         while(start<end)
         {
             if(target==(arr[start]+arr[end])) {
-                System.out.println(start+" "+end);
                 return new int[]{start, end};
-
             }
-            if(target<(arr[start]+arr[end]))
+            if((arr[start]+arr[end])<target)
                 ++start;
             else  --end;
         }
