@@ -22,10 +22,17 @@ public class HashingForPairOne {
         HashSet<Integer> hashSet = new HashSet<>();
         for (int i=0; i<n; ++i)
         hashSet.add(arr[i]);
+        int [] pair = new int[2];
         for (int i=0 ; i<n; ++i)
         {
-            if(hashSet.contains(target-arr[i]))
-                return new int[]{}
+            if(hashSet.contains(target-arr[i])) {
+                pair[0] = i;
+                break;
+            }
+        }
+        for (int i=0; i<n; ++i)
+        {
+            
         }
         return new int[]{};
     }
