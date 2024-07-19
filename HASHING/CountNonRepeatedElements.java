@@ -5,7 +5,6 @@ import java.util.HashMap;
 public class CountNonRepeatedElements {
     static long countNonRepeated(int arr[], int n)
     {
-        // add your code
         HashMap<Integer,Integer> hashMap = new HashMap ();
         int start=0;
         int end=n-1;
@@ -30,9 +29,7 @@ public class CountNonRepeatedElements {
             ++i;
             --j;
         }
-        if(i==j)
-            if(hashMap.getOrDefault(arr[i],0)==1)
-                ++count;
+        if(i==j && hashMap.getOrDefault(arr[i],0)==1)  ++count;
 
         return count;
     }
