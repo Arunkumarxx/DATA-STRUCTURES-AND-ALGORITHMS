@@ -30,9 +30,13 @@ public class CountNonRepeatedElements {
             ++i;
             --j;
         }
+        if(i==j)
+            if(hashMap.get(arr[i])==1)
+                ++count;
+
         return count;
     }
     public static void main(String[] args) {
-
+        
     }
 }
