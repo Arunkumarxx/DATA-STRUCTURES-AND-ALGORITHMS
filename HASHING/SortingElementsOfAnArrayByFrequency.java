@@ -12,10 +12,6 @@ public class SortingElementsOfAnArrayByFrequency {
         entryList.sort((e1, e2) -> e2.getValue()-e1.getValue());
         ArrayList<Integer> arrayList = new ArrayList<>();
         Iterator itr = entryList.iterator();
-
-        while(itr.hasNext())
-        {
-            System.out.println(itr.next());
-        }
+        
     }
 }
