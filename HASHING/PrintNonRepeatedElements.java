@@ -32,8 +32,6 @@ public class PrintNonRepeatedElements {
         }
         if(i==j) hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
 
-        for(int x:hashMap.values())
-            result.add(x);
-        System.out.println(result);
+        System.out.println(hashMap);
     }
 }
