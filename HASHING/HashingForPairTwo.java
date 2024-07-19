@@ -2,7 +2,8 @@ package HASHING;
 
 public class HashingForPairTwo {
     public static void main(String[] args) {
-        int [] arr ={1,2,3,4,5,6,7,8,9,10};
-
+        int[] arr1 =
+    {73, 23, 39, 93, 39, 80, 91, 58, 59, 92, 16, 89, 57, 12, 3, 35, 73, 56, 29};
+        
     }
 }
