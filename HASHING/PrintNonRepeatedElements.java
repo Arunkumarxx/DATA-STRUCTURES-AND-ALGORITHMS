@@ -13,11 +13,10 @@ public class PrintNonRepeatedElements {
         for (int i=0; i<n; ++i)
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
         ArrayList<Integer> arrayList =new ArrayList<>();
-        Iterator itr =hashMap.keySet().iterator();
+        Iterator itr =hashMap.entrySet().iterator();
         while(itr.hasNext())
         {
-            int res= (int) itr.next();
-            System.out.println(res);
+            System.out.println(itr.next());
         }
     }
 }
