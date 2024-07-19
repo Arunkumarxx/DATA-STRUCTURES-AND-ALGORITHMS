@@ -20,4 +20,3 @@ public class CountDistinctElements {
         System.out.println("Distinct Elements "+freq.size());
     }
 }
-7
