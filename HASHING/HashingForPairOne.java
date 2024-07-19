@@ -21,23 +21,9 @@ public class HashingForPairOne {
     private int [] PairCheckOptimized(int [] arr,int n,int target) {
         HashSet<Integer> hashSet = new HashSet<>();
         for (int i=0; i<n; ++i)
-        hashSet.add(arr[i]);
-        int [] pair = new int[2];
-        for (int i=0 ; i<n; ++i)
         {
-            if(hashSet.contains(target-arr[i])) {
-                pair[0] = i;
-                break;
-            }
+            
         }
-        for (int i=0; i<n; ++i)
-         if(   target==arr[pair[0]]+arr[i]) {
-             pair[1]=i;
-             ++pair[0];
-             ++pair[1];
-             return pair;
-         }
-        return new int[]{};
     }
     public static void main(String[] args) {
         int[] arr = new int[10];
