@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class HashingForPairOne {
+    
     private int [] PaidCheckBruteForce(int [] arr,int n,int target){
         Arrays.sort(arr);
         int start=0 ,end=n-1;
