@@ -9,8 +9,11 @@ public class HashingForPairOne {
         int start=0 ,end=n-1;
         while(start<end)
         {
-            if(target==(arr[start]+arr[end]))
-                return new int []{ start , end };
+            if(target==(arr[start]+arr[end])) {
+                System.out.println(start+" "+end);
+                return new int[]{start, end};
+
+            }
             if(target<(arr[start]+arr[end]))
                 ++start;
             else  --end;
@@ -19,7 +22,7 @@ public class HashingForPairOne {
     }
     public static void main(String[] args) {
         int [] arr = new int [10];
-        Random random = new Random();
+
         for (int i=0 ;i< arr.length; ++i)
             arr[i]=i+1;
         HashingForPairOne obj = new HashingForPairOne();
