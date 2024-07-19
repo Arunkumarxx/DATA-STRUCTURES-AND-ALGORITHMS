@@ -20,5 +20,6 @@ public class SortingElementsOfAnArrayByFrequency {
                 --ele;
             }
         }
+        System.out.println(arrayList);
     }
 }
