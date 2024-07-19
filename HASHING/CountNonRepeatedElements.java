@@ -17,6 +17,8 @@ public class CountNonRepeatedElements {
             ++start;
             --end;
         }
+        if(start==end)
+            hashMap.put(arr[start],hashMap.getOrDefault(arr[start],0)+1);
         int i=0;
         int j=n-1;
         int count=0;
