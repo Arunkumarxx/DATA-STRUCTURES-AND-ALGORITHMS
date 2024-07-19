@@ -5,10 +5,12 @@ import java.util.Random;
 
 public class HashingForPairOne {
     static int x=213;
-    
+    static void m() {
+        System.out.println("Arun");
+    }
     private int [] PaidCheckBruteForce(int [] arr,int n,int target){
         Arrays.sort(arr);
-
+        m();
         int start=0 ,end=n-1;
         while(start<end)
         {
