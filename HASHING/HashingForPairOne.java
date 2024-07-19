@@ -33,6 +33,8 @@ public class HashingForPairOne {
         for (int i=0; i<n; ++i)
          if(   target==arr[pair[0]]+arr[i]) {
              pair[1]=i;
+             ++pair[0];
+             ++pair[1];
              return pair;
          }
         return new int[]{};
