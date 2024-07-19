@@ -13,10 +13,9 @@ public class PrintNonRepeatedElements {
         for (int i=0; i<n; ++i)
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
         ArrayList<Integer> arrayList =new ArrayList<>();
-        Iterator itr =hashMap.entrySet().iterator();
-        while(itr.hasNext())
+        for (int i=0 ;i<n; ++i)
         {
-            System.out.println(itr.next());
+
         }
     }
 }
