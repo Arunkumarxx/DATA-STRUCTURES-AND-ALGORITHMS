@@ -11,10 +11,11 @@ public class SortingElementsOfAnArrayByFrequency {
         List<Map.Entry <Integer,Integer>> entryList = new ArrayList<>(hashMap.entrySet());
         entryList.sort((e1, e2) -> e2.getValue()-e1.getValue());
         ArrayList<Integer> arrayList = new ArrayList<>();
-        Iterator itr = entryList.listIterator();
+        Iterator itr = entryList.iterator();
+
         while(itr.hasNext())
-            System.out.print(itr.next()+" ");
-        System.out.println();
-        System.out.println(hashMap);
+        {
+            System.out.println(itr.next());
+        }
     }
 }
