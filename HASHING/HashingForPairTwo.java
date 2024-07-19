@@ -33,17 +33,15 @@ public class HashingForPairTwo {
        printPat(3);
     }
    static void printPat(int n) {
-        // Your code her
+       // Your code her
 
-        for(int i=n; i>=1; --i)
-        {
-            for(int j=n; j>=1; --j)
-            {
-                for(int k=0; k<i; k++)
-                {
-                    System.out.println(j+" ");
-                }
-            }
-            System.out.println();
-        }
+       for (int i = n; i >= 1; --i) {
+           for (int j = n; j >= 1; --j) {
+               for (int k = 0; k < i; k++) {
+                   System.out.println(j + " ");
+               }
+           }
+           System.out.println();
+       }
+   }
 }
