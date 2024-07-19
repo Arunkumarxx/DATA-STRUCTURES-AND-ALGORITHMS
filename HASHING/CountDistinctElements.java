@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CountDistinctElements {
     public static void main(String[] args) {
-        int [] arr ={15,12,13,12,13,13,18};
+        int [] arr ={10,10};
         HashMap<Integer,Integer> freq = new HashMap<>();
         int start=0;
         int end= arr.length-1;
