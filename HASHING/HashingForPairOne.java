@@ -25,7 +25,7 @@ public class HashingForPairOne {
         for (int i=0 ; i<n; ++i)
         {
             if(hashSet.contains(target-arr[i]))
-                
+                return new int[]{}
         }
         return new int[]{};
     }
