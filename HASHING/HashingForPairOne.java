@@ -9,8 +9,8 @@ public class HashingForPairOne {
         int start=0 ,end=n-1;
         while(start<end)
         {
-            if(target==(arr[start]+arr[end])) 
-                return new int[]{start, end};
+            if(target==(arr[start]+arr[end]))
+                return new int[]{start+1, end+1};
             if((arr[start]+arr[end])<target)
                 ++start;
             else  --end;
