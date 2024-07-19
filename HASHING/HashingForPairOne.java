@@ -12,6 +12,8 @@ public class HashingForPairOne {
         Random random = new Random();
         for (int i=0 ;i< arr.length; ++i)
             arr[i]=random.nextInt(1,10);
+
         System.out.println(Arrays.toString(arr));
+        
     }
 }
