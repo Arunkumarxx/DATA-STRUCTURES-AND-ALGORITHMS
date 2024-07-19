@@ -34,5 +34,6 @@ public class PrintNonRepeatedElements {
 
         for(int x:hashMap.values())
             result.add(x);
+        System.out.println(result);
     }
 }
