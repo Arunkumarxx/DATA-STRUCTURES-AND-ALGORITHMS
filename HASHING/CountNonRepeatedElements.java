@@ -31,7 +31,7 @@ public class CountNonRepeatedElements {
             --j;
         }
         if(i==j)
-            if(hashMap.get(arr[i])==1)
+            if(hashMap.getOrDefault(arr[i],0)==1)
                 ++count;
 
         return count;
