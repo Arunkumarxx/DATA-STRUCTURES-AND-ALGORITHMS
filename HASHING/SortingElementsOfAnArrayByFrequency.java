@@ -13,7 +13,7 @@ public class SortingElementsOfAnArrayByFrequency {
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (Map.Entry<Integer,Integer> entry :entryList)
         {
-            arrayList.add(entry.getKey())
+            arrayList.add(entry.getKey());
         }
     }
 }
