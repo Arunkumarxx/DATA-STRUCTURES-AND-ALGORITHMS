@@ -1,9 +1,6 @@
 package HASHING;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class SortingElementsOfAnArrayByFrequency {
     public static void main(String[] args) {
@@ -12,6 +9,8 @@ public class SortingElementsOfAnArrayByFrequency {
         for (int x:arr)
             hashMap.put(x, hashMap.getOrDefault(x,0)+1);
         List<Map.Entry <Integer,Integer>> entryList = new ArrayList<>(hashMap.entrySet());
+        entryList.sort((a,b)->a.getValue().compareTo(b.getValue()));
+        
         System.out.println(hashMap);
     }
 }
