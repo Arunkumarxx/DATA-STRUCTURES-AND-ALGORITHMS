@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class PrintNonRepeatedElements {
@@ -30,5 +31,8 @@ public class PrintNonRepeatedElements {
             --j;
         }
         if(i==j) hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
+
+        for(int x:hashMap.values())
+            result.add(x);
     }
 }
