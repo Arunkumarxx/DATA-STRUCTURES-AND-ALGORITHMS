@@ -14,12 +14,13 @@ public class HASHING {
         String str="";
         int n=s.length();
         String te=s.charAt(0)+"";
-        System.out.println(te);
+        str+=te.toUpperCase();
         for(int i=1; i<n-1; ++i)
         {
             if(s.charAt(i-1)==' ' || s.charAt(i+1)==' ')
             {
-                str+= (char)((s.charAt(i)+32));
+                String temp=s.charAt(0)+"";
+                str+=te.toUpperCase();
             }
             str+=s.charAt(i);
         }
