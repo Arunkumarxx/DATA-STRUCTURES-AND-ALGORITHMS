@@ -13,6 +13,17 @@ public class HASHING {
         long x= (n&1)==0?arr[n/2]:arr[(n/2)+1];
 
     }
+    public long leftElement(long arr[], long n)
+    {
+        // Your code goes here
+        Arrays.sort(arr);
+        if((n&1)==0)
+        {
+            return (long)arr[(int)n/2];
+        }
+        else return (long) arr[(int)(n/2)+1];
+
+    }
     public static String transform(String s)
     {
         // code here
