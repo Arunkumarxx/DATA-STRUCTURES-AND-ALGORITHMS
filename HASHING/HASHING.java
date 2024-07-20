@@ -5,8 +5,14 @@ import java.util.Arrays;
 
 public class HASHING {
     public static void main(String[] args) {
-        //00000000000000000000000001111011
-        //00000000000000000000000101000001
+        int n=-10;
+        long res=0;
 
+        while(n!=0)
+        {
+            res=(res*10)+(n%10);
+            n=n/10;
+        }
+        System.out.println(res);
     }
 }
