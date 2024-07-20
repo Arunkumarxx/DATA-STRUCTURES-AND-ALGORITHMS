@@ -19,7 +19,7 @@ public class HASHING {
         {
             if(s.charAt(i-1)==' ' || s.charAt(i+1)==' ')
             {
-                String temp=s.charAt(0)+"";
+                String temp=s.charAt(i)+"";
                 str+=temp.toUpperCase();
             }
             str+=s.charAt(i);
