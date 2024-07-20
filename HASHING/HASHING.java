@@ -8,7 +8,7 @@ public class HASHING {
         char [] chars  =new char[str.length()];
         for (int i=0 ;i<str.length(); ++i)
             chars[i]=str.charAt(i);
-        System.out.println(chars[0]);
+
         int start=0;
         int end=chars.length-1;
         while(true)
