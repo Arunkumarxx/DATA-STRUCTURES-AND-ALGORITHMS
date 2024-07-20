@@ -17,5 +17,6 @@ public class HASHING {
         }
         String str=Long.toString(res);
         System.out.println(str);
+        return -1;
     }
 }
