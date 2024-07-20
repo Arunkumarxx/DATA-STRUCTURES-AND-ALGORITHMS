@@ -10,12 +10,13 @@ public class HASHING {
         // code here
 
         long res=0;
-        while(n!=0)
+        long tempn=n;
+        while(tempn!=0)
         {
             res=(res*10)+(n%10);
-            n/=10;
+            tempn/=10;
         }
-        System.out.println(res-2);
+        System.out.println(res+n);
         String str=Long.toString(res);
         return -1;
     }
