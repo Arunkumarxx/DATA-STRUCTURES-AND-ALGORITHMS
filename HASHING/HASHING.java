@@ -13,9 +13,8 @@ public class HASHING {
         // code here
         String str="";
         int n=s.length();
-        int cs=(int)s.charAt(0);
-        cs+=32;
-        System.out.println((char)cs);
+        String te=s.charAt(0)+"";
+        System.out.println(te);
         System.out.println(cs);
         for(int i=1; i<n-1; ++i)
         {
