@@ -13,7 +13,9 @@ public class HASHING {
         // code here
         String str="";
         int n=s.length();
-        str+=s.charAt(0);
+        int cs=(int)s.charAt(0);
+        System.out.println(cs);
+        str+=char(cs);
         for(int i=1; i<n-1; ++i)
         {
             if(s.charAt(i-1)==' ' || s.charAt(i+1)==' ')
