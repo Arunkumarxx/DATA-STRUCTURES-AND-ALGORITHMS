@@ -6,8 +6,9 @@ public class HASHING {
     public static void main(String[] args) {
         System.out.println(97-65);
         System.out.println((int)'B');
+        transform("welcome");
     }
-    public String transform(String s)
+    public static String transform(String s)
     {
         // code here
         String str="";
