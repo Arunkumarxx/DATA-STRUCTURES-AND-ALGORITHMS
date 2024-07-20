@@ -14,8 +14,9 @@ public class HASHING {
         String str="";
         int n=s.length();
         int cs=(int)s.charAt(0);
+        cs+=32;
+        System.out.println((char)cs);
         System.out.println(cs);
-
         for(int i=1; i<n-1; ++i)
         {
             if(s.charAt(i-1)==' ' || s.charAt(i+1)==' ')
