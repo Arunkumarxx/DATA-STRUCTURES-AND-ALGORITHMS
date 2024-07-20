@@ -13,7 +13,7 @@ public class HASHING {
         long tempn=n;
         while(tempn!=0)
         {
-            res=(res*10)+(n%10);
+            res=(res*10)+(tempn%10);
             tempn/=10;
         }
         System.out.println(res);
