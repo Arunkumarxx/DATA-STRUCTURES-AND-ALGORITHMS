@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class HASHING {
     public static void main(String[] args) {
-        int n=342;
+        int n=-342;
         long res=0;
 
         while(n!=0)
