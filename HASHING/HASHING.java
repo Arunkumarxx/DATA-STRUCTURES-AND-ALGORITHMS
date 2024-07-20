@@ -14,7 +14,7 @@ public class HASHING {
             if(!(isVowel(s.charAt(i))))
                 str+=s.charAt(i);
         }
-        s.charAt(0)='2';
+        
         return str;
     }
 
