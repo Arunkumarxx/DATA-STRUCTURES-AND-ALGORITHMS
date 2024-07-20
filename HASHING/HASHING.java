@@ -24,8 +24,8 @@ public class HASHING {
             }
             str+=s.charAt(i);
         }
-        String tes=s.charAt(n-1)+"";
-        str+=tes.toUpperCase();
+       str+=s.charAt(n-1);
+        System.out.println(str);
         return str;
     }
 }
