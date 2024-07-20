@@ -4,21 +4,18 @@ import java.util.Arrays;
 
 public class HASHING {
     public static void main(String[] args) {
-
+        System.out.println(isSumPalindrome(23));
     }
-    String removeVowels(String s) {
+    static long isSumPalindrome(long n) {
         // code here
-        String str="";
-        for(int i=0; i<s.length();++i)
-        {
-            if(!(isVowel(s.charAt(i))))
-                str+=s.charAt(i);
-        }
-        
-        return str;
-    }
 
-    private static boolean isVowel(char c) {
-        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+        long res=0;
+        while(n!=0)
+        {
+            res=(res*10)+(n%10);
+            n/=10;
+        }
+        StringBuilder s = new StringBuilder();
+        
     }
 }
