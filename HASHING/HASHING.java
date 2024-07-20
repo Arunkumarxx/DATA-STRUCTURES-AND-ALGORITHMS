@@ -6,7 +6,7 @@ public class HASHING {
     public static void main(String[] args) {
 
     }
-    String removeVowels(String S) {
+    String removeVowels(String s) {
         // code here
         String str="";
         for(int i=0; i<s.length();++i)
