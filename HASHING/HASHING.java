@@ -13,14 +13,10 @@ public class HASHING {
         int end=chars.length-1;
         while(true)
         {
-            char c1=chars[start];
-            while(start<end && (c1!='a' && c1!='e' && c1!='i' && c1!='o' && c1!='u'))
+            while(start<end && (chars[start]!='a' && chars[start]!='e' && chars[start]!='i' && chars[start]!='o' && chars[start]!='u'))
                 ++start;
-
-            char c2=chars[end];
-            while(start<end && (c2!='a' && c2!='e' && c2!='i' && c2!='o' && c2!='u'))
+            while(start<end && (chars[end]!='a' && chars[end]!='e' && chars[end]!='i' && chars[end]!='o' && chars[end]!='u'))
                 --end;
-
             char temp=chars[start];
             chars[start]=chars[end];
             chars[end]=temp;
