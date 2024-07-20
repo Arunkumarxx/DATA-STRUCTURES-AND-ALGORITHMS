@@ -15,7 +15,7 @@ public class HASHING {
             res=(res*10)+(n%10);
             n/=10;
         }
-        System.out.println(res+n);
+        System.out.println(res);
         String str=Long.toString(res);
         return -1;
     }
