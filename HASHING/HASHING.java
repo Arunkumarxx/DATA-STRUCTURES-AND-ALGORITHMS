@@ -5,11 +5,11 @@ import ARRAYS.Arrays;
 public class HASHING {
     public static void main(String[] args) {
         String str= "practice";
-        int start=0;
-        int end=str.length()-1;
         char [] chars  =new char[str.length()];
         for (int i=0 ;i<str.length(); ++i)
             chars[i]=str.charAt(i);
+        int start=0;
+        int end=chars.length-1;
         while(true)
         {
             char c1=chars[start];
@@ -29,6 +29,6 @@ public class HASHING {
             if(start==end)
                 return;
         }
-        
+
     }
 }
