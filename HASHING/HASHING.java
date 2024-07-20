@@ -25,6 +25,8 @@ public class HASHING {
         {
             if(str.charAt(start)!=str.charAt(end))
                 return -1;
+            ++start;
+            --end;
         }
         return  res+n;
     }
