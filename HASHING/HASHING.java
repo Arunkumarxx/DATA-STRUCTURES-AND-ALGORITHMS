@@ -22,7 +22,7 @@ public class HASHING {
                 String temp=s.charAt(i)+"";
                 str+=temp.toUpperCase();
             }
-            str+=s.charAt(i);
+           else  str+=s.charAt(i);
         }
        str+=s.charAt(n-1);
 
