@@ -25,7 +25,7 @@ public class HASHING {
             str+=s.charAt(i);
         }
        str+=s.charAt(n-1);
-        System.out.println(str);
+
         return str;
     }
 }
