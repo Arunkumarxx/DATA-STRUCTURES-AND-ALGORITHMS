@@ -7,6 +7,11 @@ public class HASHING {
         System.out.println(97-65);
         System.out.println((int)'B');
         System.out.println( transform("welcome arun kumar"));
+        long [] arr ={23};
+        int n= arr.length;;
+        Arrays.sort(arr);
+        long x= (n&1)==0?arr[n/2]:arr[(n/2)+1];
+
     }
     public static String transform(String s)
     {
