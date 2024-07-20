@@ -18,6 +18,14 @@ public class HASHING {
         }
         String str=Long.toString(res+n);
         System.out.println(str);
-        return -1;
+
+        int start=0;
+        int end=str.length()-1;
+        while(start<end)
+        {
+            if(str.charAt(start)!=str.charAt(end))
+                return -1;
+        }
+        return  res+n;
     }
 }
