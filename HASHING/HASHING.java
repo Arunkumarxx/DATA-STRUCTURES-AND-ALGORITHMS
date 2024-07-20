@@ -15,16 +15,15 @@ public class HASHING {
         int n=s.length();
         String te=s.charAt(0)+"";
         str+=te.toUpperCase();
-        for(int i=1; i<n-1; ++i)
+        for(int i=1; i<n; ++i)
         {
-            if(s.charAt(i-1)==' ' || s.charAt(i+1)==' ')
+            if(s.charAt(i-1)==' ')
             {
                 String temp=s.charAt(i)+"";
                 str+=temp.toUpperCase();
             }
            else  str+=s.charAt(i);
         }
-       str+=s.charAt(n-1);
 
         return str;
     }
