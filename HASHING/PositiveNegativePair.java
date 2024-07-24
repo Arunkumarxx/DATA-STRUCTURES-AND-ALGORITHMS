@@ -29,7 +29,5 @@ public class PositiveNegativePair {
           set.add(arr[i]);
       }
         System.out.println(res);
-      int x=-2;
-        System.out.println(-x);
     }
 }
