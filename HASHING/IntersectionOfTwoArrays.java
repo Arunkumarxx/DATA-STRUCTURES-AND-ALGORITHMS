@@ -44,9 +44,9 @@ public class IntersectionOfTwoArrays {
         int count=0;
         while(start<end)
         {
-            if(freq.get(start)==2)
+            if(freq.get(arr[start])==2)
                 ++count;
-            if(freq.get(end)==2)
+            if(freq.get(arr[end])==2)
                 ++count;
             ++start;
             --end;
