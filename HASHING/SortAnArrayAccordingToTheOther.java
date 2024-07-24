@@ -37,15 +37,14 @@ public class SortAnArrayAccordingToTheOther {
         }
 //        System.out.println(hashMap);
         Arrays.sort(arr1);
-        for(int k=0; k<n2; ++k)
-        {
-            while(hashMap.get(arr2[k])>0)
-            {
-                System.out.print(hashMap.get(arr2[k])+" ");
-                hashMap.put(hashMap.get(arr2[k]),hashMap.get(arr2[k]));
+        for (int k = 0; k < n2; ++k) {
+            int count = hashMap.getOrDefault(arr2[k], 0);
+            while (count > 0) {
+                System.out.print(arr2[k] + " ");
+                hashMap.put(arr2[k], --count);
             }
-
         }
+
 //        System.out.println(Arrays.toString(arr1));
 
     }
