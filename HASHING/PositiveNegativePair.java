@@ -16,10 +16,8 @@ public class PositiveNegativePair {
           int opV=-arr[i];
           if(set.contains(opV))
           {
-              if(v>0){
-                  res.add(opV);
-                  res.add(v);
-              }
+              res.add(opV);
+              res.add(v);
           }
           set.add(arr[i]);
       }
