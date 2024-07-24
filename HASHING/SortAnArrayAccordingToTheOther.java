@@ -23,6 +23,9 @@ public class SortAnArrayAccordingToTheOther {
             ++i;
             --j;
         }
+        if(i==j && hashMap.containsKey(arr1[i]))
+            hashMap.put(arr1[i],hashMap.getOrDefault(arr1[i],0)+1);
+        
         System.out.println(hashMap);
     }
 }
