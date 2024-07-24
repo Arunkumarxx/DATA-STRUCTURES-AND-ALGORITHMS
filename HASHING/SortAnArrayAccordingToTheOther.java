@@ -23,5 +23,6 @@ public class SortAnArrayAccordingToTheOther {
             ++i;
             --j;
         }
+        System.out.println(hashMap);
     }
 }
