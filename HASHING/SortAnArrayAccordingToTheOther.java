@@ -44,7 +44,8 @@ public class SortAnArrayAccordingToTheOther {
                 hashMap.put(arr2[k], --count);
             }
         }
-
+        for (int m=0; m<n1; ++m)
+            System.out.print(arr1[m]+" ");
 //        System.out.println(Arrays.toString(arr1));
 
     }
