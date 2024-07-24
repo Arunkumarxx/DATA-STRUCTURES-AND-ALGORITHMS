@@ -13,7 +13,7 @@ public class PositiveNegativePair {
             if(arr[i]<0)
             hashMap.put(Math.abs(arr[i]),hashMap.getOrDefault(arr[i],0)-1);
             if(arr[i]>0)
-            hashMap.put(Math.abs(arr[i]),hashMap.getOrDefault(arr[i],0)-1);
+            hashMap.put(Math.abs(arr[i]),hashMap.getOrDefault(arr[i],0)+1);
         }
         System.out.println(hashMap);
     }
