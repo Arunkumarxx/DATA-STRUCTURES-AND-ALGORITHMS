@@ -31,30 +31,17 @@ public class IntersectionOfTwoArrays {
             freq.put(arr2[j], freq.getOrDefault(arr2[j], 0) + 1);
             ++j;
         }
+        boolean n1IsMin=n1<n2?true:false;
+        boolean n2IsMin=n2<n1?true:false;
 
-         i=0;
-         j=0;
-         int count=0;
-        while(i<n1 && j<n2)
+        return -1;
+    }
+    private static void count (int[] arr,int n,HashMap<Integer,Integer>freq) {
+        int start=0;
+        int end=n-1;
+        while(start<end)
         {
-            if(freq.get(arr1[i])==2)
-                ++count;
-            if(freq.get(arr2[j])==2)
-                ++count;
-            ++i;
-            ++j;
+            freq.get(start)
         }
-        while(i<n1) {
-            if(freq.get(arr1[i])==2)
-                ++count;
-            ++i;
-        }
-
-        while(j<n2) {
-            if(freq.get(arr2[j])==2)
-                ++count;
-            ++j;
-        }
-        return count;
     }
 }
