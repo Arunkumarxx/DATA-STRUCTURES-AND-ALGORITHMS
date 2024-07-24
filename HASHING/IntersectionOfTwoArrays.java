@@ -31,7 +31,29 @@ public class IntersectionOfTwoArrays {
             ++j;
         }
         System.out.println(freq);
-        return -1;
-        
+         i=0;
+         j=0;
+         int count=0;
+        while(i<n1 && j<n2)
+        {
+            if(freq.get(arr1[i])==2)
+                ++count;
+            if(freq.get(arr2[j])==2)
+                ++count;
+            ++i;
+            ++j;
+        }
+        while(i<n1) {
+            if(freq.get(arr1[i])==2)
+                ++count;
+            ++i;
+        }
+
+        while(j<n2) {
+            if(freq.get(arr2[j])==2)
+                ++count;
+            ++j;
+        }
+        return count;
     }
 }
