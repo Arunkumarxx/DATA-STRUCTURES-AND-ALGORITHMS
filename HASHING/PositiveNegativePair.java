@@ -23,5 +23,6 @@ public class PositiveNegativePair {
           }
           set.add(arr[i]);
       }
+        System.out.println(res);
     }
 }
