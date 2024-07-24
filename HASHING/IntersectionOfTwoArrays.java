@@ -8,7 +8,8 @@ public class IntersectionOfTwoArrays {
        int [] arr2 ={30,5,15,80};
        int n1=arr1.length;
        int n2= arr2.length;
-       NbrOfIntersection(arr1,arr2,n1,n2);
+    int res=   NbrOfIntersection(arr1,arr2,n1,n2);
+        System.out.println(resA);
     }
     private static int NbrOfIntersection(int arr1[], int arr2[], int n1, int n2) {
         HashMap<Integer,Integer> freq =new HashMap<>();
@@ -30,7 +31,7 @@ public class IntersectionOfTwoArrays {
             freq.put(arr2[j], freq.getOrDefault(arr2[j], 0) + 1);
             ++j;
         }
-        
+
          i=0;
          j=0;
          int count=0;
