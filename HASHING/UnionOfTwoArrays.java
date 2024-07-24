@@ -30,5 +30,6 @@ public class UnionOfTwoArrays {
             ++j;
         }
         System.out.println(hashMap);
+
     }
 }
