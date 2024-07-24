@@ -11,5 +11,11 @@ public class SortAnArrayAccordingToTheOther {
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         for (int i=0; i<n2; ++i)
         hashMap.put(arr2[i],0);
+        int i=0,j=n1-1;
+
+        while(i<j )
+        {
+            if(hashMap.containsKey(arr1[i]))
+        }
     }
 }
