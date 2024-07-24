@@ -25,7 +25,7 @@ public class SortAnArrayAccordingToTheOther {
             if(hashMap.containsKey(arr1[j])) // right pointer
             {
                 hashMap.put(arr1[j], hashMap.getOrDefault(arr1[j], 0) + 1);
-                arr2[j]=Integer.MIN_VALUE;
+                arr1[j]=Integer.MIN_VALUE;
             }
             ++i;
             --j;
