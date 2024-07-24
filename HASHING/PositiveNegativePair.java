@@ -20,8 +20,8 @@ public class PositiveNegativePair {
         for(int i=0; i<n; ++i)
         {
             if(arr[i]>0 && hashMap.get(arr[i])==0) {
-                res.add(arr[i]);
                 res.add(-arr[i]);
+                res.add(arr[i]);
             }
         }
         System.out.println(hashMap);
