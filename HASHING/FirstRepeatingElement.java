@@ -7,7 +7,6 @@ import java.util.List;
 public class FirstRepeatingElement {
     public static void main(String[] args) {
         int [] arr ={1,5,3,4,3,5,6};
-        int n= arr.length;
         System.out.println(firstRepeated(arr));
     }
     private static int firstRepeated(int[] arr) {
