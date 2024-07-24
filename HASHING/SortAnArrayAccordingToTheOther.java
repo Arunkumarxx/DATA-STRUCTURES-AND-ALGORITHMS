@@ -42,7 +42,7 @@ public class SortAnArrayAccordingToTheOther {
             while(hashMap.get(arr2[k])>0)
             {
                 System.out.print(hashMap.get(arr2[k])+" ");
-                hashMap.put(hashMap.get(arr2[k]),hashMap.getOrDefault(arr2[k],0)-1);
+                hashMap.put(hashMap.get(arr2[k]),hashMap.get(arr2[k]));
             }
 
         }
