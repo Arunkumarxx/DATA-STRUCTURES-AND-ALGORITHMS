@@ -22,7 +22,7 @@ public class IntersectionOfTwoArrays {
             ++j;
         }
         while(i<n1) {
-            freq.put(arr2[i], freq.getOrDefault(arr2[i], 0) + 1);
+            freq.put(arr1[i], freq.getOrDefault(arr1[i], 0) + 1);
             ++i;
         }
 
