@@ -31,8 +31,8 @@ public class IntersectionOfTwoArrays {
             freq.put(arr2[j], freq.getOrDefault(arr2[j], 0) + 1);
             ++j;
         }
-        boolean n1IsMin=n1<n2?true:false;
-        boolean n2IsMin=n2<n1?true:false;
+        boolean n1IsMin=n1<=n2?true:false;
+        boolean n2IsMin=n2<=n1?true:false;
         if(n1IsMin)
            return count(arr1, n1, freq);
          return    count(arr2, n2, freq);
