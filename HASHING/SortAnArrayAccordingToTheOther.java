@@ -35,10 +35,17 @@ public class SortAnArrayAccordingToTheOther {
             hashMap.put(arr1[i], hashMap.getOrDefault(arr1[i], 0) + 1);
             arr1[i]=Integer.MIN_VALUE;
         }
-        System.out.println(hashMap);
+//        System.out.println(hashMap);
         Arrays.sort(arr1);
-        
-        System.out.println(Arrays.toString(arr1));
+        for(int k=0; k<n2; ++k)
+        {
+            while(hashMap.containsKey(arr2[i]))
+            {
+
+            }
+
+        }
+//        System.out.println(Arrays.toString(arr1));
 
     }
 }
