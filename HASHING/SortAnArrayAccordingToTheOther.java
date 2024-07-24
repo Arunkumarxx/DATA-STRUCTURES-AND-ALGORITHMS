@@ -33,7 +33,7 @@ public class SortAnArrayAccordingToTheOther {
         // we needed handle edge case  if arr is odd size ...
         if(i==j && hashMap.containsKey(arr1[i])) {
             hashMap.put(arr1[i], hashMap.getOrDefault(arr1[i], 0) + 1);
-
+            arr1[i]=Integer.MIN_VALUE;
         }
         System.out.println(hashMap);
         System.out.println(Arrays.toString(arr1));
