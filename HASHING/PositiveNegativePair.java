@@ -12,7 +12,16 @@ public class PositiveNegativePair {
       ArrayList<Integer> res =new ArrayList<>();
       for (int i=0; i<n; ++i)
       {
-          if(set.contains())
+          int v=arr[i];
+          int opV=-arr[i];
+          if(set.contains(opV))
+          {
+              if(v>0){
+                  res.add(opV);
+                  res.add(v);
+              }
+          }
+          set.add(arr[i]);
       }
     }
 }
