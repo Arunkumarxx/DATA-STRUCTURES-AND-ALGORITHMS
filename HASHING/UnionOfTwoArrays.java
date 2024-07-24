@@ -10,7 +10,7 @@ public class UnionOfTwoArrays {
         HashSet<Integer> set =new HashSet<>();
         for (int i=0; i<n;++i)
         {
-
+            set.add(arr1[i]);
         }
     }
 }
