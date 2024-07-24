@@ -22,9 +22,8 @@ public class FirstRepeatingElement {
         for (int k=0; k<n; ++k) {
             if (hashMap.get(arr[k]) >= 2) {
                 System.out.println(arr[k]);
-                break;
+                i=n;
             }
         }
-
     }
 }
