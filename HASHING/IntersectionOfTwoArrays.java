@@ -22,8 +22,8 @@ public class IntersectionOfTwoArrays {
         HashSet<Integer> intersection =new HashSet<>();
         while(i<j)
         {
-            intersection.add(arr2[i]);
-            intersection.add(arr2[j]);
+           if(set.contains(arr2[i])) intersection.add(arr2[i]);
+          if(set.contains(arr2[j]))  intersection.add(arr2[j]);
             ++i;
             --j;
         }
