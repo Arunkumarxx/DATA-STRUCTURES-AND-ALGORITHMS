@@ -8,15 +8,13 @@ public class PairWithGivenSumInUnsortedArray {
         HashSet<Integer> set = new HashSet<>();
         int n= arr.length;
         int sum=17;
-        for (int i=0; i<n;++i)
+        boolean isPairFound=false;
+        for (int i=0; i<n && isPairFound==false;++i)
         {
             if(set.contains(sum-arr[i]))
-            {
-                System.out.println(true);
-                System.out.println(arr[i]+" "+(sum-arr[i]));
-                break;
-            }
+                isPairFound=true;
             set.add(arr[i]);
         }
+        System.out.println(isPairFound?"Yes Pair found":"No Pair found");
     }
 }
