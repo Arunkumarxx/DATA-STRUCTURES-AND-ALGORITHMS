@@ -25,15 +25,16 @@ public class SortAnArrayAccordingToTheOther {
             if(hashMap.containsKey(arr1[j])) // right pointer
             {
                 hashMap.put(arr1[j], hashMap.getOrDefault(arr1[j], 0) + 1);
-                arr1[i]=Integer.MIN_VALUE;
+                arr2[j]=Integer.MIN_VALUE;
             }
             ++i;
             --j;
         }
         // we needed handle edge case  if arr is odd size ...
-        if(i==j && hashMap.containsKey(arr1[i]))
-            hashMap.put(arr1[i],hashMap.getOrDefault(arr1[i],0)+1);
+        if(i==j && hashMap.containsKey(arr1[i])) {
+            hashMap.put(arr1[i], hashMap.getOrDefault(arr1[i], 0) + 1);
 
+        }
         System.out.println(hashMap);
         System.out.println(Arrays.toString(arr1));
 
