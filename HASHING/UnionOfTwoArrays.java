@@ -1,2 +1,4 @@
-package HASHING;public class UnionOfTwoArrays {
+package HASHING;
+
+public class UnionOfTwoArrays {
 }
