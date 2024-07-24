@@ -9,6 +9,10 @@ public class IntersectionOfTwoArrays {
        int [] arr2 ={30,5,15,80};
        int n=arr1.length;
        int m= arr2.length;
+      int res= NumberofElementsInIntersection(arr1,arr2,n,m);
+        System.out.println(res);
+    }
+    public static int NumberofElementsInIntersection(int arr1[], int arr2[], int n, int m) {
         HashSet<Integer> set =new HashSet<Integer>();
         int i=0,j=n-1;
         while (i<j) {
@@ -17,16 +21,18 @@ public class IntersectionOfTwoArrays {
             ++i;
             --j;
         }
+        if(i==j)set.add(arr1[i]);
         i=0;
         j=m-1;
         HashSet<Integer> intersection =new HashSet<>();
         while(i<j)
         {
-           if(set.contains(arr2[i])) intersection.add(arr2[i]);
-          if(set.contains(arr2[j]))  intersection.add(arr2[j]);
+            if(set.contains(arr2[i])) intersection.add(arr2[i]);
+            if(set.contains(arr2[j]))  intersection.add(arr2[j]);
             ++i;
             --j;
         }
-        System.out.println(intersection.size());
+        if(i==j &&  set.contains(arr2[i])) intersection.add(arr2[i]);
+        return intersection.size();
     }
 }
