@@ -32,6 +32,6 @@ public class IntersectionOfTwoArrays {
         }
         System.out.println(freq);
         return -1;
-
+        
     }
 }
