@@ -13,9 +13,20 @@ public class IntersectionOfTwoArrays {
         int i=0,j=n-1;
         while (i<j) {
             set.add(arr1[i]);
-            set.add(arr2[j]);
+            set.add(arr1[j]);
             ++i;
             --j;
         }
+        i=0;
+        j=m-1;
+        HashSet<Integer> intersection =new HashSet<>();
+        while(i<j)
+        {
+            intersection.add(arr2[i]);
+            intersection.add(arr2[j]);
+            ++i;
+            --j;
+        }
+        System.out.println(intersection.size());
     }
 }
