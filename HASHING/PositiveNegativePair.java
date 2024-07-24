@@ -1,2 +1,7 @@
-package HASHING;public class PositiveNegativePair {
+package HASHING;
+
+public class PositiveNegativePair {
+    public static void main(String[] args) {
+        
+    }
 }
