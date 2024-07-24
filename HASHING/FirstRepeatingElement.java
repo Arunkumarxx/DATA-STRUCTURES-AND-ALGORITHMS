@@ -8,6 +8,11 @@ public class FirstRepeatingElement {
     public static void main(String[] args) {
         int [] arr ={1,5,3,4,3,5,6};
         int n= arr.length;
+        System.out.println(firstRepeated(arr));
+    }
+    private static int firstRepeated(int[] arr) {
+        // Your code here
+        int n= arr.length;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         int i=0,j=n-1;
         while(i<j) {
@@ -18,15 +23,9 @@ public class FirstRepeatingElement {
         }
         if(i==j)
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
-
-        int k=0;
-        for (; k<n; ++k) {
-            if (hashMap.get(arr[k]) >= 2) {
-                System.out.println(arr[k]);
-               break;
-            }
-        }
-        if(k==n)
-            System.out.println(-1);
+        for (int k=0; k<n; ++k)
+            if (hashMap.get(arr[k]) >= 2)
+                return (k+1);
+        return -1;
     }
 }
