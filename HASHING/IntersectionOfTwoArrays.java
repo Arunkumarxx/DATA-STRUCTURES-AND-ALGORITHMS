@@ -13,10 +13,10 @@ public class IntersectionOfTwoArrays {
         for(int i=0; i<n; ++i)
             set.add(arr1[i]);
         HashSet<Integer> inter =new HashSet<Integer> ();
-        int count=0;
+
         for(int i=0; i<m; ++i)
             if(set.contains(arr2[i]))
                 inter.add(arr2[i]);
-        System.out.println(count);
+        System.out.println(inter.size());
     }
 }
