@@ -15,11 +15,17 @@ public class SortAnArrayAccordingToTheOther {
 
         while(i<j )
         {
-            if(hashMap.containsKey(arr1[i]))// left pointer
+            if(hashMap.containsKey(arr1[i])) // left pointer
+               {
                 hashMap.put(arr1[i],hashMap.getOrDefault(arr1[i],0)+1);
+                arr1[i]=Integer.MIN_VALUE;
+                }
 
             if(hashMap.containsKey(arr1[j])) // right pointer
-                hashMap.put(arr1[j],hashMap.getOrDefault(arr1[j],0)+1);
+            {
+                hashMap.put(arr1[j], hashMap.getOrDefault(arr1[j], 0) + 1);
+                arr1[i]=Integer.MIN_VALUE;
+            }
             ++i;
             --j;
         }
@@ -28,6 +34,6 @@ public class SortAnArrayAccordingToTheOther {
             hashMap.put(arr1[i],hashMap.getOrDefault(arr1[i],0)+1);
 
         System.out.println(hashMap);
-        
+
     }
 }
