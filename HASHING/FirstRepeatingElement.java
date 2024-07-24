@@ -16,6 +16,15 @@ public class FirstRepeatingElement {
             ++i;
             --j;
         }
-        System.out.println(hashMap);
+        if(i==j)
+            hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
+
+        for (int k=0; k<n; ++k) {
+            if (hashMap.get(arr[k]) >= 2) {
+                System.out.println(arr[k]);
+                break;
+            }
+        }
+
     }
 }
