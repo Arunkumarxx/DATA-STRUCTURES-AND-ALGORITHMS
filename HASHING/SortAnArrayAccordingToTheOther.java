@@ -45,6 +45,7 @@ public class SortAnArrayAccordingToTheOther {
             }
         }
         for (int m=0; m<n1; ++m)
+            if(arr1[m]>Integer.MIN_VALUE)
             System.out.print(arr1[m]+" ");
 //        System.out.println(Arrays.toString(arr1));
 
