@@ -16,8 +16,15 @@ public class PositiveNegativePair {
           int oppositeValue=-arr[i];
           if(set.contains(oppositeValue))
           {
-              res.add(oppositeValue);
-              res.add(value);
+              if(value>0)
+              {
+                  res.add(oppositeValue);
+                  res.add(value);
+              }
+              else {
+                  res.add(value);
+                  res.add(oppositeValue);
+              }
           }
           set.add(arr[i]);
       }
