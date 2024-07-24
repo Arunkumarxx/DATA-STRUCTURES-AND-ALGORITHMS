@@ -38,6 +38,7 @@ public class SortAnArrayAccordingToTheOther {
         }
 
         Arrays.sort(arr1);
+        int h=0;
         for (int k = 0; k < n2; ++k) {
             int count = hashMap.getOrDefault(arr2[k], 0);
             while (count > 0) {
@@ -48,7 +49,7 @@ public class SortAnArrayAccordingToTheOther {
         }
         for (int m=0; m<n1; ++m)
             if(arr1[m]>Integer.MIN_VALUE)
-                res[h++]+arr1[m];
-        return res;
+                res[h++]+=arr1[m];
+        System.out.println(Arrays.toString(res));
     }
 }
