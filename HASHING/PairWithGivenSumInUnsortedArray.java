@@ -13,10 +13,10 @@ public class PairWithGivenSumInUnsortedArray {
             if(set.contains(sum-arr[i]))
             {
                 System.out.println(true);
+                System.out.println(arr[i]+" "+(sum-arr[i]));
                 break;
             }
             set.add(arr[i]);
         }
-        
     }
 }
