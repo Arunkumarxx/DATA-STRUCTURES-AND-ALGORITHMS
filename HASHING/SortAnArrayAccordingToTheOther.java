@@ -1,5 +1,6 @@
 package HASHING;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class SortAnArrayAccordingToTheOther {
@@ -34,6 +35,7 @@ public class SortAnArrayAccordingToTheOther {
             hashMap.put(arr1[i],hashMap.getOrDefault(arr1[i],0)+1);
 
         System.out.println(hashMap);
+        System.out.println(Arrays.toString(arr1));
 
     }
 }
