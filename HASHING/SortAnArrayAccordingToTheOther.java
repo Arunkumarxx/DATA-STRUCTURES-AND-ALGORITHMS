@@ -36,6 +36,8 @@ public class SortAnArrayAccordingToTheOther {
             arr1[i]=Integer.MIN_VALUE;
         }
         System.out.println(hashMap);
+        Arrays.sort(arr1);
+        
         System.out.println(Arrays.toString(arr1));
 
     }
