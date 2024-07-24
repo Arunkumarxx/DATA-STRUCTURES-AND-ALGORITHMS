@@ -39,10 +39,10 @@ public class SortAnArrayAccordingToTheOther {
         Arrays.sort(arr1);
         for(int k=0; k<n2; ++k)
         {
-            while(hashMap.get(arr2[i])>0)
+            while(hashMap.get(arr2[k])>0)
             {
-                System.out.print(hashMap.get(arr2[i])+" ");
-                hashMap.put(hashMap.get(arr2[i]),hashMap.getOrDefault(arr2[i],0)-1);
+                System.out.print(hashMap.get(arr2[k])+" ");
+                hashMap.put(hashMap.get(arr2[k]),hashMap.getOrDefault(arr2[k],0)-1);
             }
 
         }
