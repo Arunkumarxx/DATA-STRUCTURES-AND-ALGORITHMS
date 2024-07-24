@@ -36,12 +36,19 @@ public class IntersectionOfTwoArrays {
 
         return -1;
     }
-    private static void count (int[] arr,int n,HashMap<Integer,Integer>freq) {
+    private static int  count (int[] arr,int n,HashMap<Integer,Integer>freq) {
         int start=0;
         int end=n-1;
+        int count=0;
         while(start<end)
         {
-            freq.get(start)
+            if(freq.get(start)==2)
+                ++count;
+            if(freq.get(end)==2)
+                ++count;
+            ++start;
+            --end;
         }
+        return count;
     }
 }
