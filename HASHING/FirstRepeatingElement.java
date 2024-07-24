@@ -10,5 +10,6 @@ public class FirstRepeatingElement {
         List<List<Integer>> list =new ArrayList<>();
         for (int i=0; i<n; ++i)
             list.add(new ArrayList<>());
+        System.out.println(list);
     }
 }
