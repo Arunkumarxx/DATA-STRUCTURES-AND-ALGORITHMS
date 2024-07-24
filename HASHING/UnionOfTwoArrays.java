@@ -20,6 +20,16 @@ public class UnionOfTwoArrays {
             ++i;
             ++j;
         }
-        
+        while(i<n1)
+        {
+            hashSet.add(arr1[i]);
+            ++i;
+        }
+        while(j<n2)
+        {
+            hashSet.add(arr2[j]);
+            ++j;
+        }
+        System.out.println(hashSet.size());
     }
 }
