@@ -9,7 +9,7 @@ public class IntersectionOfTwoArrays {
        int n1=arr1.length;
        int n2= arr2.length;
     int res=   NbrOfIntersection(arr1,arr2,n1,n2);
-        System.out.println(resA);
+        System.out.println(res);
     }
     private static int NbrOfIntersection(int arr1[], int arr2[], int n1, int n2) {
         HashMap<Integer,Integer> freq =new HashMap<>();
