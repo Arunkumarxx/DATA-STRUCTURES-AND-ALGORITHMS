@@ -1,8 +1,7 @@
 package HASHING;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 
 public class FirstRepeatingElement {
     public static void main(String[] args) {
@@ -10,7 +9,6 @@ public class FirstRepeatingElement {
         System.out.println(firstRepeated(arr));
     }
     private static int firstRepeated(int[] arr) {
-        // Your code here
         int n= arr.length;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         int i=0,j=n-1;

@@ -9,7 +9,7 @@ public class SortAnArrayAccordingToTheOther {
         int [] arr2 = {2,1,8,3};
         int n1= arr1.length;;
         int n2= arr2.length;
-        //Your code here
+
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         for (int i=0; i<n2; ++i)
             hashMap.put(arr2[i],0);
