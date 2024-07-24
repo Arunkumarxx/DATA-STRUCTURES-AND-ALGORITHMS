@@ -33,14 +33,10 @@ public class IntersectionOfTwoArrays {
         }
         boolean n1IsMin=n1<n2?true:false;
         boolean n2IsMin=n2<n1?true:false;
-        if(n1IsMin) {
+        if(n1IsMin)
            return count(arr1, n1, freq);
-        }
-        else {
-         return    count(arr2, n2, freq);
-        }
-        return -1;
 
+         return    count(arr2, n2, freq);
     }
     private static int  count (int[] arr,int n,HashMap<Integer,Integer>freq) {
         int start=0;
