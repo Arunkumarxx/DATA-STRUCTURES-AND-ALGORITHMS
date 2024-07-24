@@ -9,7 +9,6 @@ public class FirstRepeatingElement {
         int n= arr.length;
         List<List<Integer>> list =new ArrayList<>();
         for (int i=0; i<n; ++i)
-            list.add(arr[i],new ArrayList<>());
-
+            list.add(new ArrayList<>());
     }
 }
