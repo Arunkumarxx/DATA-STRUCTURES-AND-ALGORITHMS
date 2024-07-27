@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class SubArrayWithZeroSum {
     public static void main(String[] args) {
-        int [] arr ={6,-1,-3,4,-2,2,4,6,-12,-7};
+        int [] arr ={4,2,-3,1,6};
         SubArrayWithZeroSum obj = new SubArrayWithZeroSum();
         System.out.println(obj.subArrayWithZeroSumFound(arr));
     }
@@ -16,10 +16,8 @@ public class SubArrayWithZeroSum {
         {
             sum+=arr[i];
 
-            if(sum==0 || hashSet.contains(sum)) {
-                System.out.println(hashSet);
+            if(sum==0 || hashSet.contains(sum))
                 return true;
-            }
             hashSet.add(sum);
         }
         return false;
