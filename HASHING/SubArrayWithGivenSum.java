@@ -28,7 +28,7 @@ public class SubArrayWithGivenSum {
             sum+=arr[i];
 
             if(hashMap.containsKey(sum-target))
-                count+=hashMap.getOrDefault(sum,0);
+                count+=hashMap.getOrDefault(sum-target,0);
             hashMap.put(sum,+1);
         }
         return count;
