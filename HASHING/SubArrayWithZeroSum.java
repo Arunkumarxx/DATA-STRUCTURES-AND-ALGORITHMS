@@ -22,7 +22,6 @@ public class SubArrayWithZeroSum {
                 return true;
             else hashSet.add(sum);
         }
-        System.out.println(hashSet);
         return false;
     }
 }
