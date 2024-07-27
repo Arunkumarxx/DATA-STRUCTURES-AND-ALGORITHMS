@@ -25,12 +25,14 @@ public class SubArrayWithGivenSum {
             pre_sum += arr[i];
             if(pre_sum==sum)
                 return true;
-            if(s.contains(pre_sum-sum) == true)
+            if(s.contains(pre_sum-sum) == true) {
+                System.out.println(s);
                 return true;
+
+            }
 
             s.add(pre_sum);
         }
-
         return false;
     }
 
