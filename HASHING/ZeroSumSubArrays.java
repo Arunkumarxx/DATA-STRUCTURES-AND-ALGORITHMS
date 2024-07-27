@@ -14,10 +14,16 @@ public class ZeroSumSubArrays {
         int count=0;
         int sum=0;
         int n=arr.length;
+        hashMap.put(0,1);
         for(int i=0; i<n; ++i)
         {
             sum+=arr[i];
-            
+            if(sum==0 || hashMap.containsKey(sum)) {
+                hashMap.put(hashMap.get(sum),hashMap.getOrDefault(sum,0)+1);
+                count += hashMap.getOrDefault(sum, 0);
+            }
+            hashMap.put(sum,hashMap.getOrDefault(sum,0)+1);
         }
+        return count;
     }
 }
