@@ -11,9 +11,8 @@ public class SubArrayWithZeroSum {
     private  boolean subArrayWithZeroSumFound (int [] arr) {
         HashSet<Integer> hashSet =new HashSet<>();
         int n= arr.length;
-        int sum=arr[0];
-        hashSet.add(arr[0]);
-        for (int i=1; i<n; ++i)
+        int sum=0;
+        for (int i=0; i<n; ++i)
         {
             if(arr[i]==0)
                 return true;
