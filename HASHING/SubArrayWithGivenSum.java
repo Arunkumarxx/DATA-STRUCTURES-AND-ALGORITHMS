@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class SubArrayWithGivenSum {
     public static void main(String[] args) {
-        int [] arr ={15,2,8,10,-5,-8,6};
+        int [] arr ={1,4,20,3,10,5};
         int n= arr.length;
         int i=0 ,j=0;
         int target=33;
