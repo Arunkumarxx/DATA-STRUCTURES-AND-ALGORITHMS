@@ -1,8 +1,5 @@
 package HASHING;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class SubArrayWithGivenSum {
     public static void main(String[] args) {
         int [] arr ={1,4,20,3,10,5};
