@@ -14,12 +14,11 @@ public class SubArrayWithZeroSum {
         int sum=0;
         for (int i=0; i<n; ++i)
         {
-            if(arr[i]==0)
-                return true;
             sum+=arr[i];
-            if(hashSet.contains(sum))
+
+            if(sum==0 || hashSet.contains(sum))
                 return true;
-            else hashSet.add(sum);
+            hashSet.add(sum);
         }
         return false;
     }
