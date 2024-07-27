@@ -18,6 +18,7 @@ public class SubArrayWithZeroSum {
                 return true;
             else hashSet.add(arr[i-1]+arr[i]);
         }
+        System.out.println(hashSet);
         return false;
     }
 }
