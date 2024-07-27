@@ -23,12 +23,11 @@ public class SubArrayWithGivenSum {
         int itr=0;
         for(int i = 0; i < n; i++)
         {
-            itr++;
+//            itr++;
             sum += arr[i];
             if(sum==target)
                 return true;
             if(hashSet.contains(sum-target) == true) {
-                System.out.println(itr);
                 System.out.println(hashSet);
                 return true;
 
