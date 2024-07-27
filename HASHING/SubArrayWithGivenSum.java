@@ -17,21 +17,22 @@ public class SubArrayWithGivenSum {
 
     }
 
-    static int  isSum(int arr[], int n, int target)
+    static boolean isSum(int arr[], int n, int sum)
     {
-        HashMap<Integer,Integer> hashMap =new HashMap<Integer,Integer>();
-        hashMap.put(0,1);
-        int sum=0;
-        int count=0;
-        for(int i=0; i<n; ++i)
+        Set<Integer> s = new HashSet<Integer>();
+        int pre_sum = 0;
+        for(int i = 0; i < n; i++)
         {
-            sum+=arr[i];
+            pre_sum += arr[i];
+            if(pre_sum==sum)
+                return true;
+            if(s.contains(pre_sum-sum) == true)
+                return true;
 
-            if(hashMap.containsKey(sum-target))
-                count+=hashMap.getOrDefault(sum-target,0);
-            hashMap.put(sum,hashMap.getOrDefault(sum,0)+1);
+            s.add(pre_sum);
         }
-        return count;
+
+        return false;
     }
 
 }
