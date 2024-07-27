@@ -15,6 +15,8 @@ public class SubArrayWithZeroSum {
         hashSet.add(arr[0]);
         for (int i=1; i<n; ++i)
         {
+            if(arr[i]==0)
+                return true;
             sum+=arr[i];
             if(hashSet.contains(sum))
                 return true;
