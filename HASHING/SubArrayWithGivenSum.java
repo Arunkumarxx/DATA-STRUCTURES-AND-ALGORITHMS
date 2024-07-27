@@ -28,6 +28,7 @@ public class SubArrayWithGivenSum {
                 ++i;
             }
         }
+        System.out.println(sum);
     }
 
 }
