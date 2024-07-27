@@ -6,17 +6,28 @@ import java.util.Arrays;
 public class SubArrayWithGivenSum {
     public static void main(String[] args) {
         int [] arr ={15,2,8,10,-5,-8,6};
-        ArrayList<Integer> list  =new ArrayList<>();
-        for (int i=0; i< arr.length; ++i)
+        int n= arr.length;
+        int i=0 ,j=0;
+        int target=33;
+        int sum=0;
+        while(i<=j && j<n)
         {
-            int sum=0;
-            for (int j=i; j< arr.length; ++j)
+            if(sum==target)
+            {
+                System.out.println(i+" "+j);
+                return;
+            }
+            if(sum<target)
             {
                 sum+=arr[j];
+                ++j;
             }
-            list.add(sum);
+            else
+            {
+                sum-=arr[i];
+                ++i;
+            }
         }
-        System.out.println(list);
     }
 
 }
