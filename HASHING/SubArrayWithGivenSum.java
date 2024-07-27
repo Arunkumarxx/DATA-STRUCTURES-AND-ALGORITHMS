@@ -9,8 +9,8 @@ public class SubArrayWithGivenSum {
 
     public static void main (String[] args)
     {
-        int [] arr = new int[]{5, 8, 6, 13, 3, -1};
-        int sum=22;
+        int [] arr = new int[] {10,2,-2,-20,10};
+        int sum=-10;
         int n = arr.length;
 
         System.out.println(isSum(arr, n, sum));
