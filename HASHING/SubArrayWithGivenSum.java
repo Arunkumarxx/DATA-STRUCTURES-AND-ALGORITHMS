@@ -17,12 +17,12 @@ public class SubArrayWithGivenSum {
             if(sum<target)
             {
                 sum+=arr[j];
-                j++;
+                ++j;
             }
             else
             {
                 sum-=arr[i];
-                i++;
+                ++i;
             }
         }
     }
