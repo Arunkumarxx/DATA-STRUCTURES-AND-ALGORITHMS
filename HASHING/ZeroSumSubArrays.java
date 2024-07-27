@@ -9,15 +9,15 @@ public class ZeroSumSubArrays {
         ZeroSumSubArrays obj = new ZeroSumSubArrays();
         System.out.println(obj.findSubArr(arr));
     }
-    private  int findSubArr (int [] arr) {
-        HashMap<Integer,Integer> hashMap =new HashMap<>();
-        int count=0;
-        int sum=0;
-        int n=arr.length;
-        hashMap.put(0,1);
-        for(int i=0; i<n; ++i)
+    private  long findSubArr (int [] arr) {
+        long n=arr.length;
+        HashMap<Long,Long> hashMap =new HashMap<>();
+        long count=0;
+        long sum=0;
+        hashMap.put(0L,1L);
+        for(long i=0; i<n; ++i)
         {
-            sum+=arr[i];
+            sum+=arr[(int)i];
             if(sum==0 || hashMap.containsKey(sum)) {
                 hashMap.put(hashMap.get(sum),hashMap.getOrDefault(sum,0)+1);
                 count += hashMap.getOrDefault(sum, 0);
