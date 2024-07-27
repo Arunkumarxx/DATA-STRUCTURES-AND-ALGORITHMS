@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class SubArrayWithZeroSum {
     public static void main(String[] args) {
-        int [] arr ={56,2,2,6,-10};
+        int [] arr ={4,2,-3,1,6};
         SubArrayWithZeroSum obj = new SubArrayWithZeroSum();
         System.out.println(obj.subArrayWithZeroSumFound(arr));
     }
