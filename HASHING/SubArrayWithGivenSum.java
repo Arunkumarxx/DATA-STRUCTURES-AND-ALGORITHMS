@@ -33,19 +33,5 @@ public class SubArrayWithGivenSum {
         }
         return count;
     }
-    static int  sum(int arr[], int n, int target)
-    {
-        HashSet<Integer> hashSet =new HashSet<>();
-        int sum=0;
-        int count=0;
-        for(int i=0; i<n; ++i)
-        {
-            sum+=arr[i];
-            if(hashSet.contains(sum-target))
-                ++count;
-             hashSet.add(sum);
-        }
-        return count;
-    }
 
 }
