@@ -19,7 +19,6 @@ public class ZeroSumSubArrays {
         {
             sum+=arr[(int)i];
             if(sum==0 || hashMap.containsKey(sum)) {
-                hashMap.put(hashMap.get(sum),hashMap.getOrDefault(sum,0L)+1L);
                 count += hashMap.getOrDefault(sum, 0L);
             }
             hashMap.put(sum,hashMap.getOrDefault(sum,0L)+1);
