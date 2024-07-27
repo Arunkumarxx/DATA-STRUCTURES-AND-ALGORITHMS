@@ -97,3 +97,25 @@ public class HASHING {
         }
     }
 }
+public static long getLCM(long st[], long arr[], int n, int qs, int qe) {
+    return getLCMUtil(st, 0, n - 1, qs, qe, 0);
+}
+
+public static long getLCMUtil(long st[], int ss, int se, int qs, int qe, int si) {
+    // If segment of this node is a part of the given range
+    if (qs <= ss && qe >= se) {
+        return st[si];
+    }
+
+    // If segment of this node is outside the given range
+    if (se < qs || ss > qe) {
+        return 1; // LCM of an empty set is defined as 1
+    }
+
+    // If a part of this segment overlaps with the given range
+    int mid = getMid(ss, se);
+    long leftLCM = getLCMUtil(st, ss, mid, qs, qe, 2 * si + 1);
+    long rightLCM = getLCMUtil(st, mid + 1, se, qs, qe, 2 * si + 2);
+
+    return LCM(leftLCM, rightLCM);
+}
