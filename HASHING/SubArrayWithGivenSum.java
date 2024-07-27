@@ -1,5 +1,6 @@
 package HASHING;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,26 +17,21 @@ public class SubArrayWithGivenSum {
 
     }
 
-    static boolean isSum(int arr[], int n, int target)
+    static int  isSum(int arr[], int n, int target)
     {
-        Set<Integer> hashSet = new HashSet<Integer>();
-        int sum = 0;
-        int itr=0;
-        for(int i = 0; i < n; i++)
+        HashMap<Integer,Integer> hashMap =new HashMap<Integer,Integer>();
+        hashMap.put(0,1);
+        int sum=0;
+        int count=0;
+        for(int i=0; i<n; ++i)
         {
-//            itr++;
-            sum += arr[i];
-            if(sum==target)
-                return true;
-            if(hashSet.contains(sum-target) == true) {
-                System.out.println(hashSet);
-                return true;
+            sum+=arr[i];
 
-            }
-
-            hashSet.add(sum);
+            if(hashMap.containsKey(sum-target))
+                count+=hashMap.get(sum);
+            hashMap.put(hashMap.getOrDefault(sum,0),+1);
         }
-        return false;
+        return count;
     }
 
 }
