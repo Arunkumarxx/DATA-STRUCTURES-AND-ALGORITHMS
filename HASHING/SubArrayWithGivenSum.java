@@ -29,7 +29,7 @@ public class SubArrayWithGivenSum {
 
             if(hashMap.containsKey(sum-target))
                 count+=hashMap.getOrDefault(sum-target,0);
-            hashMap.put(sum,+1);
+            hashMap.put(sum,hashMap.getOrDefault(sum,0)+1);
         }
         return count;
     }
