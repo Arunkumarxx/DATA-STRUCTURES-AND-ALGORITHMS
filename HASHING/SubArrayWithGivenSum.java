@@ -9,6 +9,7 @@ public class SubArrayWithGivenSum {
         int sum=0;
         while(j<n)
         {
+            sum+=arr[j];
            while(sum>target && i<=j)
                sum-=arr[i++];
            if(sum==target)
