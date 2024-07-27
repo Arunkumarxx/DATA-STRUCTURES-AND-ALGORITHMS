@@ -16,22 +16,25 @@ public class SubArrayWithGivenSum {
 
     }
 
-    static boolean isSum(int arr[], int n, int sum)
+    static boolean isSum(int arr[], int n, int target)
     {
-        Set<Integer> s = new HashSet<Integer>();
-        int pre_sum = 0;
+        Set<Integer> hashSet = new HashSet<Integer>();
+        int sum = 0;
+        int itr=0;
         for(int i = 0; i < n; i++)
         {
-            pre_sum += arr[i];
-            if(pre_sum==sum)
+            itr++;
+            sum += arr[i];
+            if(sum==target)
                 return true;
-            if(s.contains(pre_sum-sum) == true) {
-                System.out.println(s);
+            if(hashSet.contains(sum-target) == true) {
+                System.out.println(itr);
+                System.out.println(hashSet);
                 return true;
 
             }
 
-            s.add(pre_sum);
+            hashSet.add(sum);
         }
         return false;
     }
