@@ -5,11 +5,19 @@ import java.util.HashSet;
 public class SubArrayWithZeroSum {
     public static void main(String[] args) {
         int [] arr ={56,2,2,6,-10};
+        SubArrayWithZeroSum obj = new SubArrayWithZeroSum();
+        System.out.println(obj.subArrayWithZeroSumFound(arr));
+    }
+    private  boolean subArrayWithZeroSumFound (int [] arr) {
         HashSet<Integer> hashSet =new HashSet<>();
         int n= arr.length;
-        for (int i=0; i<n-1; ++i)
+        hashSet.add(arr[0]);
+        for (int i=1; i<n; ++i)
         {
-            int sum=
+            if(hashSet.contains(arr[i-1]+arr[i]))
+                return true;
+            else hashSet.add(arr[i-1]+arr[i]);
         }
+        return false;
     }
 }
