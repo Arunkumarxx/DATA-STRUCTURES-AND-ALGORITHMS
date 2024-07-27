@@ -31,6 +31,7 @@ public class SubArrayWithGivenSum {
                 count+=hashMap.getOrDefault(sum-target,0);
             hashMap.put(sum,hashMap.getOrDefault(sum,0)+1);
         }
+        System.out.println(hashMap);
         return count;
     }
 
