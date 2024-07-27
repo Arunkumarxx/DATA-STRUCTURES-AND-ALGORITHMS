@@ -11,12 +11,14 @@ public class SubArrayWithZeroSum {
     private  boolean subArrayWithZeroSumFound (int [] arr) {
         HashSet<Integer> hashSet =new HashSet<>();
         int n= arr.length;
+        int sum=arr[0];
         hashSet.add(arr[0]);
         for (int i=1; i<n; ++i)
         {
-            if(hashSet.contains(arr[i-1]+arr[i]))
+            sum+=arr[i-1]+arr[i];
+            if(hashSet.contains(sum))
                 return true;
-            else hashSet.add(arr[i-1]+arr[i]);
+            else hashSet.add(sum);
         }
         System.out.println(hashSet);
         return false;
