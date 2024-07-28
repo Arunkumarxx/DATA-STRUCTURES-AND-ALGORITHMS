@@ -18,7 +18,7 @@ public class LargestSubarrayOf0sAnd1s {
         {
             sum=arr[i]==0?sum-1:sum+1;
             if(hashMap.containsKey(sum))
-                maxLen=Math.max(maxLen,hashMap.get(sum)-i);
+                maxLen=Math.max(maxLen,i-hashMap.get(sum));
             if(!hashMap.containsKey(sum))
                 hashMap.put(sum,i);
         }
