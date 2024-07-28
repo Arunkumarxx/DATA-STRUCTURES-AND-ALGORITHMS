@@ -17,7 +17,7 @@ public class SubarraysWithEqual1sAnd0s {
             if(hashMap.containsKey(sum))
                 count+=hashMap.get(sum);
             if(!hashMap.containsKey(sum))
-                hashMap.put(sum,i);
+                hashMap.put(sum,hashMap.getOrDefault(sum,0)+1);
             }
         System.out.println(count);
     }
