@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
         int n=Integer.MAX_VALUE;
         int [] arr =new int[n];
         for (int i=0; i<n; ++i)
-            arr[i]+=random.nextInt(1,100);
+            arr[i]+=random.nextInt(1,10);
 
         // Measure time for multithreading execution
         long startTimeMultithreading = System.currentTimeMillis();
