@@ -31,7 +31,7 @@ public class LongestSubarrayWithGivenSum {
         {
             for (int j=i; j<n; ++j)
             {
-                System.out.println(arr[j]+" ");
+                System.out.print(arr[j]+" ");
             }
             System.out.println();
         }
