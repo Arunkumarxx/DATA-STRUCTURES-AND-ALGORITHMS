@@ -3,6 +3,7 @@ package HASHING;
 public class LongestConsecutiveSubsequence {
 
     public static void main(String[] args) {
+        Thread thread = new Thread();
         
     }
     private int method(int [] arr,char job) {
