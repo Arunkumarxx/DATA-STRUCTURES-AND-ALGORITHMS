@@ -17,6 +17,8 @@ public class LongestConsecutiveSubsequence extends Thread {
         int n= arr.length;
         LongestConsecutiveSubsequence T1 =new LongestConsecutiveSubsequence(arr,n,'+');
         LongestConsecutiveSubsequence T2  =new LongestConsecutiveSubsequence(arr,n,'-');
+        LongestConsecutiveSubsequence T3 =new LongestConsecutiveSubsequence(arr,n,'/');
+        LongestConsecutiveSubsequence T4  =new LongestConsecutiveSubsequence(arr,n,'*');
         T1.run();
         T2.run();
     }
