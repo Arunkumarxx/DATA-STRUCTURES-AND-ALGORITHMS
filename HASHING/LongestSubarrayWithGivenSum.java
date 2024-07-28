@@ -6,7 +6,8 @@ public class LongestSubarrayWithGivenSum {
         int k=0;
         System.out.println(BruteForce(arr, arr.length,k));
         System.out.println(BruteForceOptimal(arr, arr.length,k));
-        
+        System.out.println(Optimal(arr, arr.length));
+
     }
     private static int  BruteForce(int [] arr,int n,int target) {
         int res=0;
@@ -41,6 +42,11 @@ public class LongestSubarrayWithGivenSum {
                     res=count;
             }
         }
+        return res;
+    }
+    private static int Optimal (int [] arr,int n) {
+        int res=0;
+
         return res;
     }
 }
