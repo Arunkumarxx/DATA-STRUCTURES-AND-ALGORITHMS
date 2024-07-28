@@ -31,6 +31,6 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
                 hashMap.put(sum,i);
         }
         System.out.println(Arrays.toString(temp));
-        return -1;
+        return res;
     }
 }
