@@ -57,8 +57,8 @@ public class LongestSubarrayWithGivenSum {
             sum+=arr[i];
             if(sum==target)
                 res=i+1;
-
-            hashMap.put(sum,i+1);
+            if(!hashMap.containsKey(sum))
+                hashMap.put(sum,i);
             if(hashMap.containsKey(sum-target) )
                 res=Math.max(res,i-hashMap.get(sum-target));
             hashMap.put(hashMap.getOrDefault(sum,0),+1);
