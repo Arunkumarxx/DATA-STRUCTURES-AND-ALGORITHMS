@@ -22,7 +22,7 @@ public class SubarraysWithEqual1sAnd0s {
             if(!hashMap.containsKey(sum))
                 hashMap.put(sum,i);
         }
-        System.out.println(maxLen);
+//        System.out.println(maxLen);
     }
 
 }
