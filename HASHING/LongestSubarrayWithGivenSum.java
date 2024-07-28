@@ -4,7 +4,9 @@ public class LongestSubarrayWithGivenSum {
     public static void main(String[] args) {
         int [] arr ={5,8,-4,-4,9,-2,2};
         int k=0;
+        System.out.println(BruteForce(arr, arr.length,k));
         System.out.println(BruteForceOptimal(arr, arr.length,k));
+        
     }
     private static int  BruteForce(int [] arr,int n,int target) {
         int res=0;
