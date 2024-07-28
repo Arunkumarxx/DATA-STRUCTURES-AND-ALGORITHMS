@@ -17,7 +17,7 @@ public class SubarraysWithEqual1sAnd0s {
             sum=arr[i]==0?sum-1:sum+1;
             if(hashMap.containsKey(sum)) {
                 maxLen = Math.max(maxLen, i - hashMap.get(sum));
-                System.out.println(i-hashMap.get(sum));
+                System.out.print(i-hashMap.get(sum)+" ");
             }
             if(!hashMap.containsKey(sum))
                 hashMap.put(sum,i);
