@@ -7,7 +7,7 @@ public class SubarraysWithEqual1sAnd0s {
     public static void main(String[] args) {
         int [] arr ={1,0,0,1,0,1,1};
         int n= arr.length;
-        int res=0;
+        int maxLen=0;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
 
         int sum=0;
@@ -15,12 +15,14 @@ public class SubarraysWithEqual1sAnd0s {
         for (int i=0; i<n;++i)
         {
             sum=arr[i]==0?sum-1:sum+1;
-            if(hashMap.containsKey(sum))
-                ++res;
+            if(hashMap.containsKey(sum)) {
+                maxLen = Math.max(maxLen, i - hashMap.get(sum));
+                System.out.println(i-hashMap.get(sum));
+            }
             if(!hashMap.containsKey(sum))
                 hashMap.put(sum,i);
         }
-        System.out.println(res);
+        System.out.println(maxLen);
     }
 
 }
