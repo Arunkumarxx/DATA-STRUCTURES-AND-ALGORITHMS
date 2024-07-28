@@ -17,9 +17,9 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
         int tn= temp.length;
         for (int i=0; i<tn; ++i)
             temp[i]=arr1[i]-arr2[i];
+        
         System.out.println(Arrays.toString(temp));
+
         return -1;
     }
-
-
 }
