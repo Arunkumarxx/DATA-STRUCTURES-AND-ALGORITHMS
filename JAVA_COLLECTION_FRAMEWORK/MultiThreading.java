@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 
     public static void main(String[] args) throws InterruptedException {
         Random random =new Random();
-        int n=Integer.MAX_VALUE;
+        int n=Integer.MAX_VALUE/2;
         int [] arr =new int[n];
         for (int i=0; i<n; ++i)
             arr[i]+=random.nextInt(1,10);
