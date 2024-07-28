@@ -10,7 +10,7 @@ public class LongestSubarrayWithGivenSum {
         int k=0;
         System.out.println(BruteForce(arr, arr.length,k));
         System.out.println(BruteForceOptimal(arr, arr.length,k));
-        System.out.println(Optimal(arr, arr.length));
+        System.out.println(Optimal(arr, arr.length,k));
 
     }
     private static int  BruteForce(int [] arr,int n,int target) {
@@ -48,12 +48,15 @@ public class LongestSubarrayWithGivenSum {
         }
         return res;
     }
-    private static int Optimal (int [] arr,int n) {
+    private static int Optimal (int [] arr,int n,int target) {
         int res=0;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
+        int sum=0;
         for (int i=0; i<n; ++i)
         {
-            hashMap.put()
+            sum+=arr[i];
+            hashMap.put(sum,i+1);
+            if(hashMap.containsKey(sum-target))
         }
         return res;
     }
