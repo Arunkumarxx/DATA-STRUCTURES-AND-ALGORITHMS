@@ -1,5 +1,6 @@
 package HASHING;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LongestCommonSpanWithSameSumInBinaryArrays {
@@ -11,17 +12,20 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         int sum=0;
         hashMap.put(0,-1);
+        ArrayList<Integer> listOne =new ArrayList<>();
+        ArrayList<Integer> listTwo= new ArrayList<>();
         for (int i=0; i<n; ++i)
         {
             sum+=arr[i];
             if(hashMap.containsKey(sum-target))
             {
-                if(i-hashMap.get(sum-target)>res)
-                    res=i-hashMap.get(sum-target);
+                listOne.add(i-hashMap.get(sum-target));
             }
             if(!hashMap.containsKey(sum))
                 hashMap.put(sum,i);
         }
+        System.out.println(listOne);
         return res;
     }
+
 }
