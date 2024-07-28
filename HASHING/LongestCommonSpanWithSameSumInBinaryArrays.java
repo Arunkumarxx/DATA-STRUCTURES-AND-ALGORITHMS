@@ -17,6 +17,8 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
         int tn= temp.length;
         for (int i=0; i<tn; ++i)
             temp[i]=arr1[i]-arr2[i];
+        int sum=0;
+        HashMap<Integer,Integer> hashMap =new HashMap<>();
         for (int i=0; i<tn;++i)
         {
             
