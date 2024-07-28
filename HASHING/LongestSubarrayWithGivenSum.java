@@ -16,8 +16,9 @@ public class LongestSubarrayWithGivenSum {
                 {
                     System.out.println(arr[k]);
                 }
+                System.out.println();
             }
-            System.out.println();
+
         }
         return 0;
     }
