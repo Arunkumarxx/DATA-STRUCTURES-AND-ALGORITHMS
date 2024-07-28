@@ -18,11 +18,15 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
         for (int i=0; i<tn; ++i)
             temp[i]=arr1[i]-arr2[i];
         int sum=0;
+        int res=0;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         hashMap.put(0,-1);
         for (int i=0; i<tn;++i)
         {
             sum+=temp[i];
+            if(sum==0 || hashMap.containsKey(sum))
+                if(i-hashMap.get(sum)>res)
+                    res=Math.max(res,i-hashMap.get(sum));
             
         }
         System.out.println(Arrays.toString(temp));
