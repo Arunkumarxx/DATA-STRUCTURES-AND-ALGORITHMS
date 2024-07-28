@@ -89,3 +89,19 @@ import java.util.concurrent.Executors;
         }
     }
 }
+/*
+MY PC SPECS AMD RYEN
+
+Result for +: 1073842430 - pool-1-thread-1
+Result for -: -1073842409 - pool-1-thread-2
+Result for *: 0 - pool-1-thread-4
+Result for /: 0 - pool-1-thread-3
+
+Multithreading execution time: 2109ms
+Sequential Result +: 1073842430
+Sequential Result -: -1073842409
+Sequential Result /: 0
+Sequential Result *: 0
+
+Sequential execution time: 3269ms
+ */
