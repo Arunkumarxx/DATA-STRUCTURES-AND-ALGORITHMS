@@ -11,15 +11,13 @@ public class LargestSubarrayOf0sAnd1s {
     private static int optimal(int [] arr,int n) {
         int maxLen=0;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
-        for (int i=0; i<n; ++i)
-        {
-             if(arr[i]==0)
-                 arr[i]=-1;
-        }
+
         int sum=0;
         for (int i=0; i<n;++i)
         {
-            sum+=arr[i];
+            if(arr[i]==0)
+                sum-=1;
+            else sum+=1;
             
         }
         return count;
