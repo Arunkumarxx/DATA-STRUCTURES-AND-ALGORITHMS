@@ -27,10 +27,10 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
             if(sum==0 || hashMap.containsKey(sum))
                 if(i-hashMap.get(sum)>res)
                     res=Math.max(res,i-hashMap.get(sum));
-            
+            if(!hashMap.containsKey(sum))
+                hashMap.put(sum,i);
         }
         System.out.println(Arrays.toString(temp));
-
         return -1;
     }
 }
