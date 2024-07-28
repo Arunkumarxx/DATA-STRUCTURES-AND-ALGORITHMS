@@ -6,7 +6,11 @@ public class LargestSubarrayOf0sAnd1s {
         int [] arr ={0,1,0,1};
 
     }
-    private static 
+    private static int optimal(int [] arr,int n) {
+        int count=0;
+        
+        return count;
+    }
 }
 
 /*
