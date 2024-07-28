@@ -50,6 +50,7 @@ public class LongestSubarrayWithGivenSum {
         int res=0;
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         int sum=0;
+        hashMap.put(0,-1);
         for (int i=0; i<n; ++i)
         {
             sum+=arr[i];
