@@ -27,7 +27,7 @@ public class LongestConsecutiveSubsequence extends Thread {
             res+=arr[i];
        else  if(job=='-')
             for(int i=0; i< arr.length ;++i)
-                res+=arr[i];
+                res-=arr[i];
        else if(job=='/')
             for(int i=0; i< arr.length ;++i)
                 res/=arr[i];
