@@ -1,5 +1,7 @@
 package HASHING;
 
+import java.util.HashMap;
+
 public class LargestSubarrayOf0sAnd1s {
 
     public static void main(String[] args) {
@@ -8,7 +10,11 @@ public class LargestSubarrayOf0sAnd1s {
     }
     private static int optimal(int [] arr,int n) {
         int count=0;
-        
+        HashMap<Integer,Integer> hashMap =new HashMap<>();
+        for (int i=0; i<n;++i)
+        {
+            
+        }
         return count;
     }
 }
