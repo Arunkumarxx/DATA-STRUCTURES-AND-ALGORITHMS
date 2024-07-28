@@ -12,12 +12,11 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
         System.out.println(Optimal(arr1,arr2,n1,n2));
     }
     private static int Optimal (int [] arr1,int [] arr2,int n1,int n2) {
-        int []  temp =  new int [n1*n2];
+        int []  temp =  new int [n1];
         int tn= temp.length;
         for (int i=0; i<tn; ++i)
-        {
-            
-        }
+            temp[i]=arr1[i]-arr2[i];
+
 
     }
 
