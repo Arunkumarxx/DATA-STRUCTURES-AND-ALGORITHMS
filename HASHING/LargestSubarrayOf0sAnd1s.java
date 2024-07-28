@@ -13,15 +13,18 @@ public class LargestSubarrayOf0sAnd1s {
         HashMap<Integer,Integer> hashMap =new HashMap<>();
 
         int sum=0;
-        
+        hashMap.put(0,-1);
         for (int i=0; i<n;++i)
         {
             if(arr[i]==0)
                 sum-=1;
             else sum+=1;
-
+            if(hashMap.containsKey(sum))
+                maxLen=Math.max(maxLen,hashMap.get(sum)-i);
+            if(!hashMap.containsKey(sum))
+                hashMap.put(sum,i);
         }
-        return count;
+        return maxLen;
     }
 }
 
