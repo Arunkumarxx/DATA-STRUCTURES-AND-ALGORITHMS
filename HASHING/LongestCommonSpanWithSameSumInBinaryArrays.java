@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class LongestCommonSpanWithSameSumInBinaryArrays {
@@ -16,8 +17,7 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
         int tn= temp.length;
         for (int i=0; i<tn; ++i)
             temp[i]=arr1[i]-arr2[i];
-
-
+        System.out.println(Arrays.toString(temp));
     }
 
 }
