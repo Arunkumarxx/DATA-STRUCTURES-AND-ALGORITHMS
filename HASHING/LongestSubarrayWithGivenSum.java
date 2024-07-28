@@ -1,5 +1,8 @@
 package HASHING;
 
+import java.util.HashSet;
+import java.util.Iterator;
+
 public class LongestSubarrayWithGivenSum {
     public static void main(String[] args) {
         int [] arr ={5,8,-4,-4,9,-2,2};
@@ -46,7 +49,11 @@ public class LongestSubarrayWithGivenSum {
     }
     private static int Optimal (int [] arr,int n) {
         int res=0;
-
+        HashSet<Integer> hashSet =new HashSet<>();
+        for (int i=0; i<n; ++i)
+        {
+            
+        }
         return res;
     }
 }
