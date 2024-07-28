@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class LongestCommonSpanWithSameSumInBinaryArrays {
     public static void main(String[] args) {
         int [] arr1 = {1, 0, 1, 0, 0, 1};
-        int [] arr2 = {1,1,};
+        int [] arr2 = {1, 1, 1, 1, 1, 0, 1};
         int n= arr.length;
         System.out.println(Optimal(arr,n));
     }
