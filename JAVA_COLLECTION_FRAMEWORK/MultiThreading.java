@@ -1,12 +1,17 @@
 package JAVA_COLLECTION_FRAMEWORK;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
  class MultiThreadingPerformance {
 
     public static void main(String[] args) throws InterruptedException {
-        int[] arr = {1, 2, 3, 4, 5};
-
+        Random random =new Random();
+        int n=Integer.MAX_VALUE;
+        int [] arr =new int[n];
+        for (int i=0; i<n; ++i)
+            arr[i]+=random.nextInt();
+        
         // Measure time for multithreading execution
         long startTimeMultithreading = System.currentTimeMillis();
         ExecutorService executor = Executors.newFixedThreadPool(4);
