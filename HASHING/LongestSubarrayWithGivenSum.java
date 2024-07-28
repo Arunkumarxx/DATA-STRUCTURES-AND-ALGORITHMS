@@ -1,5 +1,6 @@
 package HASHING;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -49,10 +50,10 @@ public class LongestSubarrayWithGivenSum {
     }
     private static int Optimal (int [] arr,int n) {
         int res=0;
-        HashSet<Integer> hashSet =new HashSet<>();
+        HashMap<Integer,Integer> hashMap =new HashMap<>();
         for (int i=0; i<n; ++i)
         {
-            
+            hashMap.put()
         }
         return res;
     }
