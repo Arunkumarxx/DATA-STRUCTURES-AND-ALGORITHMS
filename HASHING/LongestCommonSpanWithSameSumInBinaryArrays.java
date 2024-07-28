@@ -5,14 +5,19 @@ import java.util.HashMap;
 
 public class LongestCommonSpanWithSameSumInBinaryArrays {
     public static void main(String[] args) {
-        int [] arr1 = {1, 0, 1, 0, 0, 1};
+        int [] arr1 = {0, 1, 0, 1, 1, 1, 1};
         int [] arr2 = {1, 1, 1, 1, 1, 0, 1};
-        int n= arr.length;
-        System.out.println(Optimal(arr,n));
+        int n1= arr1.length;
+        int n2= arr2.length;
+        System.out.println(Optimal(arr1,arr2,n1,n2));
     }
-    private static int Optimal (int [] arr,int n1,int n2) {
-        int []  temp = [n1*n2]
-        for (int i=0; i<n; ++i)
+    private static int Optimal (int [] arr1,int [] arr2,int n1,int n2) {
+        int []  temp =  new int [n1*n2];
+        int tn= temp.length;
+        for (int i=0; i<tn; ++i)
+        {
+            
+        }
 
     }
 
