@@ -90,7 +90,7 @@ import java.util.concurrent.Executors;
     }
 }
 /*
-MY PC SPECS AMD RYEN
+PC CPU  AMD RYZEN 7 5800X  8 CORE 16 THREADS
 
 Result for +: 1073842430 - pool-1-thread-1
 Result for -: -1073842409 - pool-1-thread-2
