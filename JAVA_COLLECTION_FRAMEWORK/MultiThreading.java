@@ -91,6 +91,10 @@ import java.util.concurrent.Executors;
 }
 /*
 PC CPU  AMD RYZEN 7 5800X  8 CORE 16 THREADS
+RAM 4X 8GB =32 GB
+SSD SAMSUNG EVO 970 PLUS 256GB
+ */
+/*
 
 Result for +: 1073842430 - pool-1-thread-1
 Result for -: -1073842409 - pool-1-thread-2
