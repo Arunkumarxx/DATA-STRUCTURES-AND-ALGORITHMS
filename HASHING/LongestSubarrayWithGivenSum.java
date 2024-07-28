@@ -12,7 +12,7 @@ public class LongestSubarrayWithGivenSum {
             int sum=0;
             for (int j=i; j<n; ++j)
             {
-                System.out.print(arr[j]+" ");
+                System.out.print(arr[j]+",");
             }
             System.out.println();
         }
