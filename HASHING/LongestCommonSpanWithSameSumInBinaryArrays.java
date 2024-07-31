@@ -131,8 +131,8 @@ function Get-DateTimeFromFilename {
         $minute = $match.Groups[5].Value
         $second = $match.Groups[6].Value
 
-        # Default time to 12:00:00 if not provided
-        if (-not $hour) { $hour = "12" }
+        # Default time to 00:00:00 if not provided
+        if (-not $hour) { $hour = "00" }
         if (-not $minute) { $minute = "00" }
         if (-not $second) { $second = "00" }
 
