@@ -35,10 +35,10 @@ public class LongestCommonSpanWithSameSumInBinaryArrays {
 
 /*
 # Define the path to the exiftool executable
-$exiftoolPath = ""
+$exiftoolPath = "C:\Windows\exiftool-12.92_64\exiftool(-k).exe"
 
 # Define the directory containing the image files
-$directory = "K:\photos"
+$directory = "K:\Photos"
 
 # Function to extract datetime from the filename
 function Get-DateTimeFromFilename {
