@@ -118,8 +118,8 @@ function Get-DateTimeFromFilename {
         [string]$filename
     )
 
-    # Regex pattern to match date and time in different formats
-    $regexPattern = [regex]::new('(\d{4})[._-](\d{2})[._-](\d{2})(?:[ _-](\d{2})(\d{2})(\d{2}))?')
+    # Regex pattern to match date and time in the format YYYYMMDD_HHMMSS
+    $regexPattern = [regex]::new('(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})')
 
     $match = $regexPattern.Match($filename)
 
@@ -130,11 +130,6 @@ function Get-DateTimeFromFilename {
         $hour = $match.Groups[4].Value
         $minute = $match.Groups[5].Value
         $second = $match.Groups[6].Value
-
-        # Default time to 00:00:00 if not provided
-        if (-not $hour) { $hour = "00" }
-        if (-not $minute) { $minute = "00" }
-        if (-not $second) { $second = "00" }
 
         return "{0}:{1}:{2} {3}:{4}:{5}" -f $year, $month, $day, $hour, $minute, $second
     }
@@ -196,5 +191,6 @@ foreach ($runspace in $runspaces) {
 
 $runspacePool.Close()
 $runspacePool.Dispose()
+
 
  */
