@@ -107,4 +107,93 @@ Get-ChildItem -Path $directory | Where-Object { $_.Extension -match "jpg|jpeg" }
 
 /*
 T:\PERSONAL VAULT\PHOTOS2\Photos from 2018
+
+# Define the path to the exiftool executable
+$exiftoolPath = "C:\Windows\exiftool-12.92_64\exiftool(-k).exe"
+
+# Define the directory containing the image files
+$directory = "T:\PERSONAL VAULT\PHOTOS2\Photos from 2018"
+
+
+# Function to extract datetime from the filename
+function Get-DateTimeFromFilename {
+    param (
+        [string]$filename
+    )
+
+    # Regex pattern to match date and time in different formats
+    $regexPattern = [regex]::new('(\d{4})[._-](\d{2})[._-](\d{2})(?:[ _-](\d{2})(\d{2})(\d{2}))?')
+
+    $match = $regexPattern.Match($filename)
+
+    if ($match.Success) {
+        $year = $match.Groups[1].Value
+        $month = $match.Groups[2].Value
+        $day = $match.Groups[3].Value
+        $hour = $match.Groups[4].Value
+        $minute = $match.Groups[5].Value
+        $second = $match.Groups[6].Value
+
+        # Default time to 12:00:00 if not provided
+        if (-not $hour) { $hour = "12" }
+        if (-not $minute) { $minute = "00" }
+        if (-not $second) { $second = "00" }
+
+        return "{0}:{1}:{2} {3}:{4}:{5}" -f $year, $month, $day, $hour, $minute, $second
+    }
+
+    return $null
+}
+
+# Function to set the creation date using exiftool
+function Set-CreationDate {
+    param (
+        [string]$filePath,
+        [string]$datetime
+    )
+
+    $cmd = "& `"$exiftoolPath`" -datetimeoriginal=`"$datetime`" -createDate=`"$datetime`" -modifyDate=`"$datetime`" -overwrite_original `"$filePath`""
+    Invoke-Expression $cmd
+}
+
+# Function to process each file
+function Process-File {
+    param (
+        [string]$filePath
+    )
+
+    $filename = [System.IO.Path]::GetFileName($filePath)
+    $datetime = Get-DateTimeFromFilename -filename $filename
+
+    if ($datetime) {
+        Set-CreationDate -filePath $filePath -datetime $datetime
+        Write-Output "Successfully updated metadata for $filePath"
+    } else {
+        Write-Output "Failed to extract date and time from filename: $filename"
+    }
+}
+
+# Prepare runspaces for parallel processing
+$runspacePool = [runspacefactory]::CreateRunspacePool(1, 8)
+$runspacePool.Open()
+
+$runspaces = @()
+$files = Get-ChildItem -Path $directory -Recurse | Where-Object { $_.Extension -match "jpg|jpeg" }
+
+foreach ($file in $files) {
+    $runspace = [powershell]::Create().AddScript({ param ($filePath) Process-File -filePath $filePath }).AddArgument($file.FullName)
+    $runspace.RunspacePool = $runspacePool
+    $runspace.BeginInvoke()
+    $runspaces += [PSCustomObject]@{ Pipe = $runspace; File = $file.FullName }
+}
+
+# Wait for all runspaces to complete
+foreach ($runspace in $runspaces) {
+    $runspace.Pipe.EndInvoke()
+    $runspace.Pipe.Dispose()
+}
+
+$runspacePool.Close()
+$runspacePool.Dispose()
+
  */
