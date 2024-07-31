@@ -118,8 +118,8 @@ function Get-DateTimeFromFilename {
         [string]$filename
     )
 
-    # Regex pattern to match date and time in the format YYYYMMDD_HHMMSS
-    $regexPattern = [regex]::new('(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})')
+    # Regex pattern to match date and time in the format IMG_YYYYMMDD_HHMMSS
+    $regexPattern = [regex]::new('IMG_(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})')
 
     $match = $regexPattern.Match($filename)
 
@@ -191,6 +191,7 @@ foreach ($runspace in $runspaces) {
 
 $runspacePool.Close()
 $runspacePool.Dispose()
+
 
 
  */
