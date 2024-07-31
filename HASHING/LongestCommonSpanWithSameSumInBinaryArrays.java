@@ -106,14 +106,11 @@ Get-ChildItem -Path $directory | Where-Object { $_.Extension -match "jpg|jpeg" }
 
 
 /*
-T:\PERSONAL VAULT\PHOTOS2\Photos from 2018
-
 # Define the path to the exiftool executable
 $exiftoolPath = "C:\Windows\exiftool-12.92_64\exiftool(-k).exe"
 
 # Define the directory containing the image files
-$directory = "T:\PERSONAL VAULT\PHOTOS2\Photos from 2018"
-
+$directory = "T:\PERSONAL VAULT\PHOTOS2\Photos from 2019"
 
 # Function to extract datetime from the filename
 function Get-DateTimeFromFilename {
@@ -181,15 +178,19 @@ $runspaces = @()
 $files = Get-ChildItem -Path $directory -Recurse | Where-Object { $_.Extension -match "jpg|jpeg" }
 
 foreach ($file in $files) {
-    $runspace = [powershell]::Create().AddScript({ param ($filePath) Process-File -filePath $filePath }).AddArgument($file.FullName)
+    $runspace = [powershell]::Create().AddScript({
+        param ($filePath)
+        Process-File -filePath $filePath
+    }).AddArgument($file.FullName)
     $runspace.RunspacePool = $runspacePool
-    $runspace.BeginInvoke()
-    $runspaces += [PSCustomObject]@{ Pipe = $runspace; File = $file.FullName }
+    $asyncResult = $runspace.BeginInvoke()
+    $runspaces += [PSCustomObject]@{ Pipe = $runspace; AsyncResult = $asyncResult; File = $file.FullName }
 }
 
 # Wait for all runspaces to complete
 foreach ($runspace in $runspaces) {
-    $runspace.Pipe.EndInvoke()
+    $runspace.AsyncResult.AsyncWaitHandle.WaitOne()
+    $runspace.Pipe.EndInvoke($runspace.AsyncResult)
     $runspace.Pipe.Dispose()
 }
 
