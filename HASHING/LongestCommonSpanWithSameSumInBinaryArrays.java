@@ -93,3 +93,18 @@ Get-ChildItem -Path $directory | Where-Object { $_.Extension -match "jpg|jpeg" }
 }
 
  */
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+T:\PERSONAL VAULT\PHOTOS2\Photos from 2018
+ */
