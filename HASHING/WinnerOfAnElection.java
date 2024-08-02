@@ -4,7 +4,7 @@ import java.util.*;
 
 public class WinnerOfAnElection {
     public static void main(String[] args) {
-        String [] arr=  {"zoe", "zoe", "alice", "alice", "alice", "zoe", "alice"};
+        String [] arr= {"dave", "dave", "dave", "carol", "carol", "carol", "carol"};
         int n= arr.length;
         System.out.println(Arrays.toString(Winner(arr,n)));
     }
