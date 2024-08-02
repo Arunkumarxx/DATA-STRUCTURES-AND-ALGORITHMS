@@ -25,7 +25,7 @@ public class HASHING {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[Integer.MAX_VALUE];
+        int[] arr = new int[Integer.MAX_VALUE-Integer.MAX_VALUE/2];
         // Populate arr with test data
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
