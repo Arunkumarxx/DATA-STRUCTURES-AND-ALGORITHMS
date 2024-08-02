@@ -22,8 +22,11 @@ public class WinnerOfAnElection {
                 list.clear();
                 list.add(arr[i]);
             }
+            else if(hashMap.get(arr[i])==max)
+            {
+                list.add(arr[i]);
+            }
         }
-        
         System.out.println(list);
         System.out.println(hashMap);
         System.out.println(max);
