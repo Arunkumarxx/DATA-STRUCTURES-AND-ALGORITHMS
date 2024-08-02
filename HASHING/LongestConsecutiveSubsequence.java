@@ -29,7 +29,11 @@ public class LongestConsecutiveSubsequence {
         for(int x:arr) hashSet.add(x);
 
         System.out.println(hashSet);
-        
+
+        for(int value:arr)
+        {
+            
+        }
         return -1;
     }
     public static void main(String[] args) {
