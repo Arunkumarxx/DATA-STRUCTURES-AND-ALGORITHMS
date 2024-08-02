@@ -41,6 +41,7 @@ public class LongestConsecutiveSubsequence {
                     ++count;
                 }
             }
+            longest=Math.max(longest,)
         }
         return -1;
     }
