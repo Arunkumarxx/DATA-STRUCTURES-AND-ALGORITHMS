@@ -13,10 +13,13 @@ public class LongestConsecutiveSubsequence {
         int count=0;
         for (int i=1; i<n; ++i)
         {
-            if(arr[i]-arr[i-1]==1)
+            if(arr[i]-arr[i-1]==1) {
                 count++;
-            if(count>longest)
-                longest=Math.max(longest,count);
+                if(count>longest)
+                    longest=Math.max(longest,count);
+            }
+            else count=0;
+
         }
         System.out.println(longest);
     }
