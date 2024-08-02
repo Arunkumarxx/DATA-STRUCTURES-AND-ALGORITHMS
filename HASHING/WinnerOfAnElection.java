@@ -20,7 +20,7 @@ public class WinnerOfAnElection {
                 max=hashMap.get(arr[i]);
         }
         List<String> list  = new ArrayList<>();
-        for(int i=0; i<n; ++i)
+        for(int i=0; i<hashMap.size(); ++i)
         {
            if(hashMap.get(arr[i])==max)
                list.add(String.valueOf(hashMap.get(arr[i])));
