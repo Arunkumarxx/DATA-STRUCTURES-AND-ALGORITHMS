@@ -5,15 +5,18 @@ import java.util.Arrays;
 
 public class NumbersContainingOneTwoThree {
     public static void main(String[] args) {
-        int [] arr ={9, 12, 23, 45, 132};
-        int n= arr.length;
-        System.out.println(numbersContains123(arr,n));
-     }
-     private static ArrayList<Integer> numbersContains123(int [] arr,int n) {
         ArrayList<Integer> list =new ArrayList<>();
-        for (int value:arr)
+        
+        int n= arr.length;
+        NumbersContainingOneTwoThree obj  =new NumbersContainingOneTwoThree();
+        System.out.println(obj.filterByDigits());
+     }
+    public List<Integer> filterByDigits(List<Integer> arr) {
+        // code here
+        ArrayList<Integer> list =new ArrayList<>();
+        for(int i=0; i<arr.size(); ++i)
         {
-            int x=value;
+            int x=arr.get(i);
             int sum1=0;
             int sum2=0;
             while(x>0)
@@ -24,8 +27,8 @@ public class NumbersContainingOneTwoThree {
                 x/=10;
             }
             if(sum1==sum2)
-                list.add(value);
+                list.add(arr.get(i));
         }
         return list;
-     }
+    }
 }
