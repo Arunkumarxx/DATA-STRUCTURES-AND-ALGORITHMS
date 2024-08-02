@@ -32,7 +32,7 @@ public class WinnerOfAnElection {
             return res;
         }
         res[0]=treeSet.getFirst();
-        System.out.println(treeSet);
+//        System.out.println(treeSet);
         return res;
     }
 }
