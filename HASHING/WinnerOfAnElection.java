@@ -24,15 +24,17 @@ public class WinnerOfAnElection {
                 list.add(arr[i]);
             }
         }
-        String [] res =new String[1];
+        String [] res =new String[2];
         if(list.size()==2)
         {
             char one=(list.get(0)).charAt(0);
             char two=list.get(1).charAt(0);
             res [0]=one>two?list.get(0):list.get(1);
+            res [1]=max+"";
             return res;
         }
         res[0]=list.get(0);
+        res[1]=max+"";
         return res;
     }
 }
