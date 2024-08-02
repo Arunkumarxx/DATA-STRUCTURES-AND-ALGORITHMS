@@ -10,9 +10,13 @@ public class WinnerOfAnElection {
     }
     private static String  Winner(String [] arr,int n) {
         HashMap<String,Integer> hashMap =new HashMap<>();
-        for(String x:arr)
-            hashMap.put(x, hashMap.getOrDefault(x,0)+1);
+        int max=0;
+        for(int i=0; i<n; ++i) {
+            hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
+            max=Math.max(max,hashMap.get(arr[i]));
+        }
         System.out.println(hashMap);
+        System.out.println(max);
         return "";
     }
 }
