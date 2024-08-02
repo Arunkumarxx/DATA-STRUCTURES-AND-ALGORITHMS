@@ -14,7 +14,7 @@ public class LongestConsecutiveSubsequence {
         for (int i=1; i<n; ++i)
         {
             if(arr[i]-arr[i-1]==1) {
-                count++;
+                ++count;
                 if(count>longest)
                     longest=count;
             }
