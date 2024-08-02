@@ -40,8 +40,9 @@ public class LongestConsecutiveSubsequence {
                     ++currValue;
                     ++count;
                 }
+                longest=Math.max(longest,count);
             }
-            longest=Math.max(longest,)
+
         }
         return -1;
     }
