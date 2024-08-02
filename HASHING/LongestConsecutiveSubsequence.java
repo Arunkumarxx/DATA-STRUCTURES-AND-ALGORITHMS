@@ -10,9 +10,14 @@ public class LongestConsecutiveSubsequence {
         System.out.println(Arrays.toString(arr));
         int longest=1;
         int n= arr.length;
-        for (int i=0; i<n; ++i)
+        int count=0;
+        for (int i=1; i<n; ++i)
         {
-            
+            if(arr[i]-arr[i-1]==1)
+                count++;
+            if(count>longest)
+                longest=Math.max(longest,count);
         }
+        
     }
 }
