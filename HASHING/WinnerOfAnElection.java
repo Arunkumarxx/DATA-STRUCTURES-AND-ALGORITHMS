@@ -28,8 +28,13 @@ public class WinnerOfAnElection {
                 list.add(arr[i]);
             }
         }
+        String [] res =new String[1];
         if(list.size()==2)
-            if(list.get(0)>list.get(1))
+        {
+            char one=(list.get(0)).charAt(0);
+            char two=list.get(1).charAt(0);
+            res [0]=one>two? one+"":two+"";
+        }
         return "";
     }
 }
