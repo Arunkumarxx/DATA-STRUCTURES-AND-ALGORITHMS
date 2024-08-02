@@ -31,6 +31,7 @@ public class WinnerOfAnElection {
             res[1]=treeSet.getLast();
             return res;
         }
+        res[0]=treeSet.getFirst();
         System.out.println(treeSet);
         return res;
     }
