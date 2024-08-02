@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class LongestConsecutiveSubsequence {
     public static void main(String[] args) {
-        int [] arr ={2,6,1,9,4,5,3};
+        int [] arr ={1,9,3,10,4,20,2};
         HashSet <Integer> hashSet = new HashSet<>();
         for (int x:arr)
             hashSet.add(x);
