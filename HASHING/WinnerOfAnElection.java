@@ -28,7 +28,7 @@ public class WinnerOfAnElection {
         if(treeSet.size()==2)
         {
             res[0]=treeSet.first();
-            res[1]=treeSet.getLast();
+            res[1]=max+"";
             return res;
         }
         res[0]=treeSet.getFirst();
