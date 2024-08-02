@@ -7,6 +7,13 @@ public class CountDistinctElementsInEveryWindow {
         long s=System.currentTimeMillis();
         int [] arr ={1,2,1,3,4,2,3};
         Arrays.sort(arr);
+        Arrays.sort(arr);
+        Arrays.sort(arr);
+        Arrays.sort(arr);
+        Arrays.sort(arr);
+        Arrays.sort(arr);
+        Arrays.sort(arr);
+        Arrays.sort(arr);
         long e=System.currentTimeMillis();
         System.out.println(s+"ms");
         System.out.println((e-s)+"ms");
