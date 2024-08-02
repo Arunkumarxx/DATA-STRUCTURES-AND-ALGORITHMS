@@ -52,7 +52,7 @@ public class LongestConsecutiveSubsequence {
         return longest;
     }
     public static void main(String[] args) {
-        int [] arr ={0,1,4,5,};
+        int [] arr ={0,1,4,5};
 //        System.out.println(brute(arr, arr.length));
         System.out.println(optimal(arr, arr.length));
     }
