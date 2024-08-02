@@ -7,7 +7,8 @@ import java.util.TreeSet;
 
 public class WinnerOfAnElection {
     public static void main(String[] args) {
-        String [] arr= {"lucas"," emma", "lucas", "emma", "emma", "lucas", "lucas"};
+        String [] arr= {"john", "emma", "emma", "john", "john", "emma", "john",
+                "emma", "john", "emma"};
         int n= arr.length;
         System.out.println(Winner(arr,n));
     }
