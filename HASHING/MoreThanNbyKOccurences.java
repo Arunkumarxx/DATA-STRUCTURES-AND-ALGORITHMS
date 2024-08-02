@@ -13,8 +13,10 @@ public class MoreThanNbyKOccurences {
             hashMap.put(x,hashMap.getOrDefault(x,0)+1);
         int count=0;
         for(int x: hashMap.values())
-            if(hashMap.get(x)>n/k)
-                System.out.println(hashMap.values());
+            if(hashMap.getOrDefault(x,0)>n/k)
+                ++count;
+
+        System.out.println(hashMap);
         return -1;
     }
 }
