@@ -34,7 +34,7 @@ public class LongestConsecutiveSubsequence {
         {
             if(!hashSet.contains(value-1))
             {
-                
+                int currValue=value;
             }
         }
         return -1;
