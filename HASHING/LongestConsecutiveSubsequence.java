@@ -33,7 +33,7 @@ public class LongestConsecutiveSubsequence {
     }
     public static void main(String[] args) {
         int [] arr ={1,9,3,10,4,20,2};
-        System.out.println(brute(arr, arr.length));
+//        System.out.println(brute(arr, arr.length));
         System.out.println(optimal(arr, arr.length));
     }
 }
