@@ -27,6 +27,8 @@ public class WinnerOfAnElection {
                 list.add(arr[i]);
             }
         }
+        System.out.println(hashMap);
+        
         return "";
     }
 }
