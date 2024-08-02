@@ -31,15 +31,16 @@ public class HASHING {
             arr[i] = i;
         }
 
+        long startTimeTwoPointer = System.currentTimeMillis();
+        long sumTwoPointer = sumUsingTwoPointer(arr);
+        long endTimeTwoPointer = System.currentTimeMillis();
         // Measure time for single loop approach
         long startTimeSingleLoop = System.currentTimeMillis();
         long sumSingleLoop = sumUsingSingleLoop(arr);
         long endTimeSingleLoop = System.currentTimeMillis();
 
         // Measure time for two-pointer approach
-        long startTimeTwoPointer = System.currentTimeMillis();
-        long sumTwoPointer = sumUsingTwoPointer(arr);
-        long endTimeTwoPointer = System.currentTimeMillis();
+
 
         // Print results
         System.out.println("Sum using single loop: " + sumSingleLoop);
