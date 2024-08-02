@@ -29,6 +29,7 @@ public class LongestConsecutiveSubsequence {
         for(int x:arr) hashSet.add(x);
 
         System.out.println(hashSet);
+        int longest=0;
         for(int value:arr)
         {
             if(!hashSet.contains(value-1))
