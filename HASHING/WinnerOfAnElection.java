@@ -12,7 +12,7 @@ public class WinnerOfAnElection {
         int n= arr.length;
         System.out.println(Winner(arr,n));
     }
-    private static String  Winner(String [] arr,int n) {
+    private static String[]  Winner(String [] arr,int n) {
         HashMap<String,Integer> hashMap =new HashMap<>();
         ArrayList<String> list =new ArrayList<>();
         int max=0;
@@ -34,7 +34,9 @@ public class WinnerOfAnElection {
             char one=(list.get(0)).charAt(0);
             char two=list.get(1).charAt(0);
             res [0]=one>two? one+"":two+"";
+            return res;
         }
-        return "";
+        res[0]=list.get(0);
+        return res;
     }
 }
