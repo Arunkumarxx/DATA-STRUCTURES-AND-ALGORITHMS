@@ -17,7 +17,7 @@ public class CountDistinctElementsInEveryWindow {
         {
             if(hashMap.get(arr[i-k])==1)
                 hashMap.remove(arr[i-k]);
-            else hashMap.put(arr[k-i],hashMap.getOrDefault(arr[k-i],0)-1);
+            else hashMap.put(arr[i-k],hashMap.getOrDefault(arr[i-k],0)-1);
             hashMap.put(arr[k],hashMap.getOrDefault(arr[k],0)+1);
             res.add(hashMap.size());
         }
