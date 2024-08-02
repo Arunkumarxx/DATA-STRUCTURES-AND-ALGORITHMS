@@ -18,6 +18,6 @@ public class LongestConsecutiveSubsequence {
             if(count>longest)
                 longest=Math.max(longest,count);
         }
-        
+        System.out.println(longest);
     }
 }
