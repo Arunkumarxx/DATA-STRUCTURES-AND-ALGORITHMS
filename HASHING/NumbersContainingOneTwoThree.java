@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class NumbersContainingOneTwoThree {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class NumbersContainingOneTwoThree {
         System.out.println(numbersContains123(arr,n));
      }
      private static ArrayList<Integer> numbersContains123(int [] arr,int n) {
-         System.out.println(arr);
+         System.out.println(Arrays.toString(arr));
         return new ArrayList<>();
      }
 }
