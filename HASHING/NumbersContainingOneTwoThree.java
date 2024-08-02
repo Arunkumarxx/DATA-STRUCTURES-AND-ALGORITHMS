@@ -21,7 +21,19 @@ public class NumbersContainingOneTwoThree {
         ArrayList<Integer> list =new ArrayList<>();
         for (int x:arr)
         {
-            
+            int temp=x%10;
+            boolean isValid=true;
+            while(temp>0)
+            {
+                if(temp%10!=1||temp%10!=2 ||temp%10!=3)
+                {
+                    isValid=false;
+                    break;
+                }
+                temp/=10;
+            }
+            if(isValid)
+                list.add(x);
         }
         return list;
 
