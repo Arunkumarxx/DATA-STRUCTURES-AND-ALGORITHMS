@@ -27,7 +27,7 @@ public class WinnerOfAnElection {
         String [] res =new String[2];
         if(arrayList.size()==2)
         {
-            res[0]=arrayList.get(0);
+            res[0]=arrayList.getFirst();
             res[1]=max+"";
             return res;
         }
