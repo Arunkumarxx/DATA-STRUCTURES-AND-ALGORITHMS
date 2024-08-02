@@ -18,7 +18,7 @@ public class LongestConsecutiveSubsequence {
                 if(count>longest)
                     longest=count;
             }
-            else count=0;
+            else count=1;
 
         }
         System.out.println(longest);
