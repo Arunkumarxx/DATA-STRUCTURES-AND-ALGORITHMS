@@ -13,18 +13,17 @@ public class WinnerOfAnElection {
     }
     private static String  Winner(String [] arr,int n) {
         HashMap<String,Integer> hashMap =new HashMap<>();
+        ArrayList<String> list =new ArrayList<>();
         int max=0;
         for(int i=0; i<n; ++i) {
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
-            if(hashMap.get(arr[i])>max)
-                max=hashMap.get(arr[i]);
+            if(hashMap.get(arr[i])>max) {
+                max = hashMap.get(arr[i]);
+                list.clear();
+                list.add(arr[i]);
+            }
         }
-        List<String> list  = new ArrayList<>();
-        for(int i=0; i<hashMap.size(); ++i)
-        {
-           if(hashMap.get(arr[i])==max)
-               list.add(String.valueOf(hashMap.get(arr[i])));
-        }
+        
         System.out.println(list);
         System.out.println(hashMap);
         System.out.println(max);
