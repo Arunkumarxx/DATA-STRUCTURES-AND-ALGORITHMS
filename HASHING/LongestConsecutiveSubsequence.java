@@ -8,6 +8,5 @@ public class LongestConsecutiveSubsequence {
         int [] arr ={1,5,3,10,4,20,2};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
-        
     }
 }
