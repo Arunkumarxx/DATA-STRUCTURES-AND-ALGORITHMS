@@ -30,7 +30,7 @@ public class WinnerOfAnElection {
         {
             char one=(list.get(0)).charAt(0);
             char two=list.get(1).charAt(0);
-            res [0]=one>two? one+"":two+"";
+            res [0]=one>two?list.get(0):list.get(1);
             return res;
         }
         res[0]=list.get(0);
