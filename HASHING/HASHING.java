@@ -14,16 +14,11 @@ public class HASHING {
         long sum = 0;
         int left = 0, right = arr.length - 1;
 
-        while (left <= right) {
-            if (left == right) {
-                sum += arr[left];
-            } else {
-                sum += arr[left] + arr[right];
-            }
-            left++;
-            right--;
+        while (left <right) {
+          sum+=arr[left]+arr[right];
         }
-
+        if(left==right)
+            sum+=arr[left];
         return sum;
     }
 
