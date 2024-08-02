@@ -10,7 +10,7 @@ public class LongestConsecutiveSubsequence {
         System.out.println(Arrays.toString(arr));
         int longest=1;
         int n= arr.length;
-        int count=0;
+        int count=1;
         for (int i=1; i<n; ++i)
         {
             if(arr[i]-arr[i-1]==1)
