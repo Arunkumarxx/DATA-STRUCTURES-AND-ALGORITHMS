@@ -1,6 +1,7 @@
 package HASHING;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 public class MoreThanNbyKOccurences {
     public static void main(String[] args) {
@@ -12,10 +13,10 @@ public class MoreThanNbyKOccurences {
         for (int x:arr)
             hashMap.put(x,hashMap.getOrDefault(x,0)+1);
         int count=0;
-        for (int i=0; i<hashMap.size(); ++i)
-            if(hashMap.get(i)>(n/k))
-                ++count;
-
+        Iterator itr =hashMap.values().iterator();
+        while(itr.hasNext())
+        if((int)itr.next()>(n/k))
+            ++count;
         System.out.println(hashMap);
         return count;
     }
