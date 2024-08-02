@@ -1,6 +1,8 @@
 package HASHING;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.TreeSet;
 
 public class WinnerOfAnElection {
@@ -17,7 +19,13 @@ public class WinnerOfAnElection {
             if(hashMap.get(arr[i])>max)
                 max=hashMap.get(arr[i]);
         }
-        
+        List<String> list  = new ArrayList<>();
+        for(int i=0; i<n; ++i)
+        {
+           if(hashMap.get(arr[i])==max)
+               list.add(String.valueOf(hashMap.get(arr[i])));
+        }
+        System.out.println(list);
         System.out.println(hashMap);
         System.out.println(max);
         return "";
