@@ -33,7 +33,6 @@ public class WinnerOfAnElection {
         }
         res[0]=treeSet.getFirst();
         res[1]=max+"";
-//        System.out.println(treeSet);
         return res;
     }
 }
