@@ -25,6 +25,12 @@ public class WinnerOfAnElection {
             }
         }
         String [] res =new String[2];
+        if(treeSet.size()==2)
+        {
+            res[0]=treeSet.first();
+            res[1]=treeSet.getLast();
+            return res;
+        }
         System.out.println(treeSet);
         return res;
     }
