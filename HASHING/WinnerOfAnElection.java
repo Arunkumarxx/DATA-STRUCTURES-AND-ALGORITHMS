@@ -1,16 +1,13 @@
 package HASHING;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class WinnerOfAnElection {
     public static void main(String[] args) {
         String [] arr= {"john", "emma", "emma", "john", "john", "emma", "john",
                 "emma", "john", "emma"};
         int n= arr.length;
-        System.out.println(Winner(arr,n));
+        System.out.println(Arrays.toString(Winner(arr,n)));
     }
     private static String[]  Winner(String [] arr,int n) {
         HashMap<String,Integer> hashMap =new HashMap<>();
