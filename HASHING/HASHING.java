@@ -16,6 +16,8 @@ public class HASHING {
 
         while (left <right) {
           sum+=arr[left]+arr[right];
+          ++left;
+          --right;
         }
         if(left==right)
             sum+=arr[left];
