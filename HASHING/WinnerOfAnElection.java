@@ -27,9 +27,6 @@ public class WinnerOfAnElection {
                 list.add(arr[i]);
             }
         }
-        System.out.println(list);
-        System.out.println(hashMap);
-        System.out.println(max);
         return "";
     }
 }
