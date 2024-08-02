@@ -43,7 +43,7 @@ public class LongestConsecutiveSubsequence {
                 longest=Math.max(longest,count);
             }
         }
-        return -1;
+        return longest;
     }
     public static void main(String[] args) {
         int [] arr ={1,9,3,10,4,20,2};
