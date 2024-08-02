@@ -1,16 +1,16 @@
 package HASHING;
 
 public class HASHING {
-    private static long sumUsingSingleLoop(int[] arr) {
+    private static long sumUsingSingleLoop(long[] arr) {
         long sum = 0;
-        for (int num : arr) {
+        for (long num : arr) {
             sum += num;
         }
         return sum;
     }
 
     // Method to sum elements using two-pointer approach
-    private static long sumUsingTwoPointer(int[] arr) {
+    private static long sumUsingTwoPointer(long[] arr) {
         long sum = 0;
         int left = 0, right = arr.length - 1;
 
@@ -26,7 +26,7 @@ public class HASHING {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[999999999];
+        long[] arr = new long[99999999];
         // Populate arr with test data
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
