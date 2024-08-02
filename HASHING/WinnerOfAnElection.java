@@ -26,7 +26,9 @@ public class WinnerOfAnElection {
         }
         String [] res =new String[2];
         Collections.sort(arrayList);
-        
+        res[0] = arrayList.get(0);
+        res[1] = String.valueOf(max);
+
         return res;
     }
 }
