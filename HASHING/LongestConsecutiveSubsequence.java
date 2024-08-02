@@ -34,7 +34,6 @@ public class LongestConsecutiveSubsequence {
             --j;
         }
         if(i==j) hashSet.add(arr[i]);
-        System.out.println(hashSet);
         int longest=1;
         int count=1;
         for (int k=0; k<n-1; ++k)
@@ -53,7 +52,7 @@ public class LongestConsecutiveSubsequence {
     }
     public static void main(String[] args) {
         int [] arr ={0,1,4,5};
-//        System.out.println(brute(arr, arr.length));
+        System.out.println(brute(arr, arr.length));
         System.out.println(optimal(arr, arr.length));
     }
 }
