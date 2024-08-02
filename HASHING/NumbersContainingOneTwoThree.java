@@ -11,14 +11,17 @@ public class NumbersContainingOneTwoThree {
      }
      private static ArrayList<Integer> numbersContains123(int [] arr,int n) {
         ArrayList<Integer> list =new ArrayList<>();
-        for (int x:arr)
+        for (int value:arr)
         {
+            int x=value;
+            int r=0;
             while(x>0)
             {
-                if(x%10==1|| x%10==2 || x%10==3)
-                    list.add(x);
+                if(x%10==1 || x%10==2 || x%10==3)
+                    r=(r*10)+(x%10);
                 x/=10;
             }
+            System.out.println(r);
         }
         return new ArrayList<>();
      }
