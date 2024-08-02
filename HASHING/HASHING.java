@@ -3,8 +3,10 @@ package HASHING;
 public class HASHING {
     private static long sumUsingSingleLoop(long[] arr) {
         long sum = 0;
-        for (long num : arr) {
-            sum += num;
+        for(long i=0; i< arr.length; i+=2)
+        {
+            sum+=arr[(int)i];
+            sum+=arr[(int)i+1];
         }
         return sum;
     }
