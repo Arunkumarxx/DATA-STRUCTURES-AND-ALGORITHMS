@@ -1,7 +1,10 @@
 package HASHING;
 
+import ARRAYS.CheckIfArrayIsSortedAndRotated;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class CountDistinctElementsInEveryWindow {
     public static void main(String[] args) {
@@ -9,10 +12,14 @@ public class CountDistinctElementsInEveryWindow {
         System.out.println(count(arr, arr.length,4));
     }
     private static ArrayList<Integer> count(int [] arr,int n,int k) {
-        HashMap<Integer,Integer> hashMap =new HashMap<>();
-        for(int i=0; i<k;++k)
-            hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
-        int i=0,j=(i+(k-1));
+        HashSet<Integer> hashSet = new HashSet<>();
+        for (int x:arr)
+            hashSet.add(x);
+
+        for(int i=0; i<k; ++k)
+        {
+            hashSet.add(arr[k]);
+        }
         return new ArrayList<>();
     }
 }
