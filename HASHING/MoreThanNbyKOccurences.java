@@ -13,7 +13,7 @@ public class MoreThanNbyKOccurences {
             hashMap.put(x,hashMap.getOrDefault(x,0)+1);
         int count=0;
 
-        System.out.println(hashMap.values());
+        System.out.println(hashMap);
         return count;
     }
 }
