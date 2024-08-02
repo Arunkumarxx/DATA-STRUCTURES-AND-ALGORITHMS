@@ -10,7 +10,16 @@ public class NumbersContainingOneTwoThree {
         System.out.println(numbersContains123(arr,n));
      }
      private static ArrayList<Integer> numbersContains123(int [] arr,int n) {
-         System.out.println(Arrays.toString(arr));
+        ArrayList<Integer> list =new ArrayList<>();
+        for (int x:arr)
+        {
+            while(x>0)
+            {
+                if(x%10==1|| x%10==2 || x%10==3)
+                    list.add(x);
+                x/=10;
+            }
+        }
         return new ArrayList<>();
      }
 }
