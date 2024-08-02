@@ -24,7 +24,7 @@ public class NumbersContainingOneTwoThree {
                 x/=10;
             }
             if(sum1==sum2)
-                list.add(x);
+                list.add(value);
         }
         return list;
      }
