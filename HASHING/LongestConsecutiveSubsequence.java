@@ -28,12 +28,12 @@ public class LongestConsecutiveSubsequence {
         int i=0,j=n-1;
         while(i<j)
         {
-            hashSet.add(i);
-            hashSet.add(j);
+            hashSet.add(arr[i]);
+            hashSet.add(arr[j]);
             ++i;
             --j;
         }
-        if(i==j) hashSet.add(i);
+        if(i==j) hashSet.add(arr[i]);
         System.out.println(hashSet);
         for (int k=0; k<n; ++k)
         {
