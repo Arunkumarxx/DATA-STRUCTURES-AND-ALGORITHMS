@@ -19,7 +19,10 @@ public class NumbersContainingOneTwoThree {
     public List<Integer> filterByDigits(List<Integer> arr) {
         // code here
         ArrayList<Integer> list =new ArrayList<>();
-        for
+        for (int x:arr)
+        {
+            
+        }
         return list;
 
     }
