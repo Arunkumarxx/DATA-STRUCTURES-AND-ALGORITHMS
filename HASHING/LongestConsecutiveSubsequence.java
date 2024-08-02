@@ -37,11 +37,11 @@ public class LongestConsecutiveSubsequence {
         System.out.println(hashSet);
         int longest=1;
         int count=1;
-        for (int k=1; k<n; ++k)
+        for (int k=0; k<n-1; ++k)
         {
-            if(arr[k]==arr[k-1])
+            if(arr[k]==arr[k+1])
                 continue;
-            if(hashSet.contains(arr[k]))
+            if(hashSet.contains(arr[k]+1))
             {
                 ++count;
                 if(count>longest)
@@ -49,7 +49,7 @@ public class LongestConsecutiveSubsequence {
             }
             else count=1;
         }
-        return -1;
+        return longest;
     }
     public static void main(String[] args) {
         int [] arr ={0,0,0,1,1,4,4,2,2};
