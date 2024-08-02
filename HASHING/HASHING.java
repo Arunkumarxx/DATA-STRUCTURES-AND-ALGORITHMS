@@ -26,7 +26,7 @@ public class HASHING {
     }
 
     public static void main(String[] args) {
-        long[] arr = new long[99999999];
+        long[] arr = new long[999999999];
         // Populate arr with test data
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
