@@ -4,12 +4,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class LongestConsecutiveSubsequence {
-    public static void main(String[] args) {
-        int [] arr ={0,0,0,1,1,4,4,2,2};
+    private  static int  brute(int [] arr,int n) {
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
         int longest=1;
-        int n= arr.length;
         int count=1;
         for (int i=1; i<n; ++i)
         {
@@ -23,6 +20,10 @@ public class LongestConsecutiveSubsequence {
             else count=1;
 
         }
-        System.out.println(longest);
+        return longest;
+    }
+    public static void main(String[] args) {
+        int [] arr ={0,0,0,1,1,4,4,2,2};
+        System.out.println(brute(arr, arr.length));
     }
 }
