@@ -37,7 +37,7 @@ public class LongestConsecutiveSubsequence {
         System.out.println(hashSet);
         for (int k=0; k<n; ++k)
         {
-
+            if(arr[k])
         }
         return -1;
     }
