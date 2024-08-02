@@ -10,28 +10,28 @@ public class WinnerOfAnElection {
     }
     private static String[]  Winner(String [] arr,int n) {
         HashMap<String,Integer> hashMap =new HashMap<>();
-        TreeSet<String> treeSet =new TreeSet<>();
+        ArrayList<String> arrayList =new ArrayList<>();
         int max=0;
         for(int i=0; i<n; ++i) {
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
             if(hashMap.get(arr[i])>max) {
                 max = hashMap.get(arr[i]);
-                treeSet.clear();
-                treeSet.add(arr[i]);
+                arrayList.clear();
+                arrayList.add(arr[i]);
             }
             else if(hashMap.get(arr[i])==max)
             {
-                treeSet.add(arr[i]);
+                arrayList.add(arr[i]);
             }
         }
         String [] res =new String[2];
-        if(treeSet.size()==2)
+        if(arrayList.size()==2)
         {
-            res[0]=treeSet.first();
+            res[0]=arrayList.get(0);
             res[1]=max+"";
             return res;
         }
-        res[0]=treeSet.getFirst();
+        res[0]=arrayList.getFirst();
         res[1]=max+"";
         return res;
     }
