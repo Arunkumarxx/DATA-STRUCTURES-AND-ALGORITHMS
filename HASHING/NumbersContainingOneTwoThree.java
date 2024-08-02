@@ -14,15 +14,18 @@ public class NumbersContainingOneTwoThree {
         for (int value:arr)
         {
             int x=value;
-            int r=0;
+            int sum1=0;
+            int sum2=0;
             while(x>0)
             {
+                sum1+=x%10;
                 if(x%10==1 || x%10==2 || x%10==3)
-                    r=(r*10)+(x%10);
+                    sum2+=x%10;
                 x/=10;
             }
-            System.out.println(r);
+            if(sum1==sum2)
+                list.add(x);
         }
-        return new ArrayList<>();
+        return list;
      }
 }
