@@ -25,22 +25,21 @@ public class HASHING {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[100000000];
+        int[] arr = new int[1000000000];
         // Populate arr with test data
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
         }
 
-        long startTimeTwoPointer = System.currentTimeMillis();
-        long sumTwoPointer = sumUsingTwoPointer(arr);
-        long endTimeTwoPointer = System.currentTimeMillis();
         // Measure time for single loop approach
         long startTimeSingleLoop = System.currentTimeMillis();
         long sumSingleLoop = sumUsingSingleLoop(arr);
         long endTimeSingleLoop = System.currentTimeMillis();
 
         // Measure time for two-pointer approach
-
+        long startTimeTwoPointer = System.currentTimeMillis();
+        long sumTwoPointer = sumUsingTwoPointer(arr);
+        long endTimeTwoPointer = System.currentTimeMillis();
 
         // Print results
         System.out.println("Sum using single loop: " + sumSingleLoop);
