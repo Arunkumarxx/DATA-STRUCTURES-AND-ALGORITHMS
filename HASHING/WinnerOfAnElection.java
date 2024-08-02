@@ -22,9 +22,7 @@ public class WinnerOfAnElection {
                 arrayList.add(arr[i]);
             }
             else if(hashMap.get(arr[i])==max)
-            {
                 arrayList.add(arr[i]);
-            }
         }
         String [] res =new String[2];
         Collections.sort(arrayList);
