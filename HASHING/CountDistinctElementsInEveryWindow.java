@@ -9,6 +9,6 @@ public class CountDistinctElementsInEveryWindow {
         Arrays.sort(arr);
         long e=System.currentTimeMillis();
         System.out.println(s+"ms");
-        System.out.println(e+"ms");
+        System.out.println((e-s)+"ms");
     }
 }
