@@ -10,7 +10,7 @@ public class CountDistinctElementsInEveryWindow {
     }
     private static ArrayList<Integer> count(int [] arr,int n,int k) {
         HashMap<Integer,Integer> hashMap =new HashMap<>();
-        for(int i=0; i<k;++k)
+        for(int i=0; i<k;++i)
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
         ArrayList<Integer> res =new ArrayList<>();
         for(int i=k; k<n; ++i)
