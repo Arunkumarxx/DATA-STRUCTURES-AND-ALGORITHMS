@@ -22,8 +22,13 @@ public class LongestConsecutiveSubsequence {
         }
         return longest;
     }
+
+    private static int optimal (int [] arr,int n) {
+
+    }
     public static void main(String[] args) {
         int [] arr ={0,0,0,1,1,4,4,2,2};
         System.out.println(brute(arr, arr.length));
+        
     }
 }
