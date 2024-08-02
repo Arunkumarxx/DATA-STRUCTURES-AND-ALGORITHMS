@@ -24,11 +24,21 @@ public class LongestConsecutiveSubsequence {
     }
 
     private static int optimal (int [] arr,int n) {
-
+        HashSet<Integer> hashSet =new HashSet<>();
+        int i=0,j=n-1;
+        while(i<j)
+        {
+            hashSet.add(i);
+            hashSet.add(j);
+            ++i;
+            --j;
+        }
+        if(i==j) hashSet.add(i);
+        
     }
     public static void main(String[] args) {
         int [] arr ={0,0,0,1,1,4,4,2,2};
         System.out.println(brute(arr, arr.length));
-        
+
     }
 }
