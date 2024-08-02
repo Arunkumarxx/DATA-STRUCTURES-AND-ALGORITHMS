@@ -28,8 +28,8 @@ public class WinnerOfAnElection {
                 list.add(arr[i]);
             }
         }
-        System.out.println(hashMap);
-        System.out.println(list);
+        if(list.size()==2)
+            if(list.get(0)>list.get(1))
         return "";
     }
 }
