@@ -12,7 +12,15 @@ public class CountDistinctElementsInEveryWindow {
         HashMap<Integer,Integer> hashMap =new HashMap<>();
         for(int i=0; i<k;++k)
             hashMap.put(arr[i],hashMap.getOrDefault(arr[i],0)+1);
-        
-        return new ArrayList<>();
+        ArrayList<Integer> res =new ArrayList<>();
+        for(int i=k; k<n; ++i)
+        {
+            if(hashMap.get(arr[k-i])==1)
+                hashMap.remove(arr[k-i]);
+            else hashMap.put(arr[i-k],hashMap.getOrDefault(arr[i-k],0)-1);
+            hashMap.put(arr[k],hashMap.getOrDefault(arr[k],0)+1);
+            res.add(hashMap.size());
+        }
+        return res;
     }
 }
