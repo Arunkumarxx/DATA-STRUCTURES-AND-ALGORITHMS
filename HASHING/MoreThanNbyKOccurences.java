@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class MoreThanNbyKOccurences {
     public static void main(String[] args) {
-        int [] arr ={3,1,2,2,1,2,3,3};
+        int [] arr ={2,3,3,2};
         System.out.println(count(arr, arr.length, 4));
     }
     private static int count(int [] arr,int n,int k) {
@@ -19,7 +19,7 @@ public class MoreThanNbyKOccurences {
         while(itr.hasNext())
         if((int)itr.next()>(n/k))
             ++count;
-        
+
         System.out.println(hashMap);
         return count;
     }
