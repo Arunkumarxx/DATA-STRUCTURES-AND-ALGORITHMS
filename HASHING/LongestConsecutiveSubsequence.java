@@ -16,7 +16,7 @@ public class LongestConsecutiveSubsequence {
             if(arr[i]-arr[i-1]==1) {
                 count++;
                 if(count>longest)
-                    longest=Math.max(longest,count);
+                    longest=count;
             }
             else count=0;
 
