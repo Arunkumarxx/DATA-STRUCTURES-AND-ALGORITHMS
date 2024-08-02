@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 public class LongestConsecutiveSubsequence {
     public static void main(String[] args) {
-        int [] arr ={0,1,2,3};
+        int [] arr ={0,1,4,5};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
         int longest=1;
