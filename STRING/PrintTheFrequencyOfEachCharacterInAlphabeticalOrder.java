@@ -18,7 +18,7 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
         String s1 ="arun";
-        String s2="arun";
+        String s2=s1;
         System.out.println(s1==s2);
     }
 }
