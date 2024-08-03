@@ -8,7 +8,10 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
         for (int i=0; i<n; ++i)
             ++freq[str.charAt(i)-'a'];
 
-        System.out.println(Arrays.toString(freq));
+        for (int j=0; j<freq.length; ++j)
+        {
+            System.out.print(j+'a'+" "+freq[j]);
+        }
     }
     public static void main(String[] args) {
         String str = "aabbccccddd";
