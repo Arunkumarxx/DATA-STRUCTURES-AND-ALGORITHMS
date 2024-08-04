@@ -28,7 +28,7 @@ public class ImplementStrStr {
        int k=0;
        for (int i=startInd; i<=endInd;++i)
        {
-           if(!(str.charAt(i)!=searchKey.charAt(k)))
+           if((str.charAt(i)!=searchKey.charAt(k)))
                return -1;
            ++k;
        }
