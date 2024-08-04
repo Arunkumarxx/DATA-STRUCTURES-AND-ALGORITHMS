@@ -2,7 +2,7 @@ package STRING;
 
 public class ImplementStrStr {
     public static void main(String[] args) {
-        String str="GeeksForGeeks";
+        String str="GeeksFrrGeeks";
         String key="For";
         System.out.println(Str(str,key));
     }
@@ -16,10 +16,15 @@ public class ImplementStrStr {
        int startInd=-1;
        int endInd=-1;
 
-       for (int i=0; i<n && (startInd<0|| endInd<0); ++i)
+       int i=0,j=str.length()-1;
+       while(i<j && (startInd<0|| endInd<0))
        {
-           if(str.charAt(i)==start) startInd=i;
-           if(str.charAt(i)==end)   endInd=i;
+           if(str.charAt(i)==start)
+               startInd=i;
+           if(str.charAt(j)==end)
+               endInd=j;
+           ++i;
+           --j;
        }
 
        if((endInd-startInd+1)!=searchKey.length() ||( startInd<0||endInd<0))
