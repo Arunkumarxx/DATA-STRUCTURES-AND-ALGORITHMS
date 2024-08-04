@@ -11,7 +11,7 @@ public class ImplementStrStr {
         int n2=searchKey.length();
         int ind=-1;
         boolean isFound=true;
-        for (int i=0; i<n1; ++i)
+        for (int i=0; i<n1-n2; ++i)
         {
             if(str.charAt(i)==searchKey.charAt(0))
             {
