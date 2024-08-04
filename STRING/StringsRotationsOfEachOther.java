@@ -6,8 +6,6 @@ public class StringsRotationsOfEachOther {
         String str2 ="forgeeksgeeks";
         long time1s = System.nanoTime();
         System.out.println(areRotations(str1,str2));
-        Thread th = new Thread();
-        th.start();
         long time1e = System.nanoTime();
         System.out.println((time1e-time1s)/1_000_000.0+"ms");
     }
