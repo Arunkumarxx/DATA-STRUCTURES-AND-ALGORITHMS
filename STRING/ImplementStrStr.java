@@ -15,12 +15,11 @@ public class ImplementStrStr {
        int endInd=-1;
        for (int i=0; i<n && (startInd<0|| endInd<0); ++i)
        {
-           if(str.charAt(i)==start)
-               startInd=i;
-           if(str.charAt(i)==end)
-               endInd=i;
+           if(str.charAt(i)==start) startInd=i;
+           if(str.charAt(i)==end)   endInd=i;
        }
         System.out.println(startInd+" "+endInd);
+       
        return -1;
     }
 }
