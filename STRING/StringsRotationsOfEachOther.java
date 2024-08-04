@@ -12,6 +12,7 @@ public class StringsRotationsOfEachOther {
         int count=0;
         for(int i=0; i<rotated.length(); ++i)
         {
+            if(j==s2.length()) break;
             if(rotated.charAt(i)==s2.charAt(j))
             {
                 ++count;
