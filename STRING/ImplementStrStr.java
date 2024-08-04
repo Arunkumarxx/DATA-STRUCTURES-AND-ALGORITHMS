@@ -31,9 +31,9 @@ public class ImplementStrStr {
            return -1;
 
        int k=0;
-       for (int i=startInd; i<=endInd;++i)
+       for (int m=startInd; m<=endInd;++m)
        {
-           if((str.charAt(i)!=searchKey.charAt(k)))
+           if((str.charAt(m)!=searchKey.charAt(k)))
                return -1;
            ++k;
        }
