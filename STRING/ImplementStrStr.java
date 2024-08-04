@@ -30,6 +30,6 @@ public class ImplementStrStr {
        {
 
        }
-       return -2;
+       return startInd;
     }
 }
