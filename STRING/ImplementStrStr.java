@@ -2,8 +2,8 @@ package STRING;
 
 public class ImplementStrStr {
     public static void main(String[] args) {
-        String s="GeekForGeeks";
-        String x="For";
+        String s="GeekGeeks";
+        String x="k";
         System.out.println(Str(s,x));
     }
     private static int Str(String s,String x) {
