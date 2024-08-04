@@ -18,7 +18,6 @@ public class BinaryString {
               count+=2;
               --e;
            }
-
         }
         return count;
     }
