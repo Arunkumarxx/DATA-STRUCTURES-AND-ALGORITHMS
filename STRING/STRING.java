@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.regex.Pattern;
-
  class FileNameRenamer {
 
     private static final Pattern DOT_PATTERN = Pattern.compile("\\.(?!\\d)"); // Replace dots but not before digits
@@ -65,4 +64,6 @@ import java.util.regex.Pattern;
         newFileName += extension;
 
         // Ensure that the new filename is different
-        return !fileName.equals(newFileName) ? Paths.get(newFileNam
+        return !fileName.equals(newFileName) ? Paths.get(newFileName) : null;
+    }
+}
