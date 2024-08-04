@@ -11,6 +11,6 @@ public class StringsRotationsOfEachOther {
         for(int i=0; i<unit; ++i)
             stringBuilder.append(str1.charAt(i));
         String result=String.valueOf(stringBuilder);
-        System.out.println(result=str2);
+        System.out.println(result==str2);
     }
 }
