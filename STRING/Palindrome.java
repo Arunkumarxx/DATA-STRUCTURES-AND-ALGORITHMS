@@ -1,2 +1,7 @@
-package STRING;public class Palindrome {
+package STRING;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        
+    }
 }
