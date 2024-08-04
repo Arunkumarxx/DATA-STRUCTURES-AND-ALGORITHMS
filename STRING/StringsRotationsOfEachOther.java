@@ -10,10 +10,11 @@ public class StringsRotationsOfEachOther {
         if(s1.length() !=s2.length())
             return false;
         String rotated =s1+s1;
+        System.out.println(rotated);
         int k=0;
         for(int i=0; i<rotated.length(); ++i)
         {
-            
+
         }
 
         return false;
