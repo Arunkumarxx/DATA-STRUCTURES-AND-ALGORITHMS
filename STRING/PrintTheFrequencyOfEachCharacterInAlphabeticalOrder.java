@@ -20,8 +20,8 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
         int value =1000;
-        DecimalFormat decimalFormat =new DecimalFormat();
-        String strss =decimalFormat.format("#,###");
+        DecimalFormat decimalFormat =new DecimalFormat("#,###");
+        String strss =decimalFormat.format(value);
         System.out.println(strss);
     }
 }
