@@ -6,7 +6,7 @@ public class BinaryString {
         System.out.println(BinaryString(str.length(),str));
     }
     private static int  BinaryString (int n,String str) {
-        System.out.println(3*(3-1)/2);
+        System.out.println(3*(3-1));
         return -1;
     }
 }
