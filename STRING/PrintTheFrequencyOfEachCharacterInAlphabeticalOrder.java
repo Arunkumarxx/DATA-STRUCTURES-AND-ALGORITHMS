@@ -19,15 +19,6 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
     public static void main(String[] args) {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
-        double usdAmount = 2_000_000_000; // 2 billion USD
-        double exchangeRate = 82; // 1 USD = 82 INR
-
-        // Convert USD to INR
-        double inrAmount = usdAmount * exchangeRate;
-
-        // Convert INR to crores
-        double croresAmount = inrAmount / 10_000_000; // 1 crore = 10 million
-
-        System.out.printf("USD %.2f billion is equal to INR %.2f crores%n", usdAmount / 1_000_000_000, croresAmount);
+        
     }
 }
