@@ -7,7 +7,6 @@ public class StringsRotationsOfEachOther {
         long time1s = System.currentTimeMillis();
         System.out.println(areRotations(str1,str2));
         long time1e = System.currentTimeMillis();
-        System.out.println(time1e-time1s);
     }
     private static boolean areRotations (String s1,String s2) {
         String rotated  =s1+s1;
