@@ -27,6 +27,6 @@ public class ImplementStrStr {
             if(isFound)
                 return i;
         }
-        return ind;
+        return -1;
     }
 }
