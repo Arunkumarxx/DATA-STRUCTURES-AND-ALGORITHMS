@@ -18,7 +18,7 @@ public class ImplementStrStr {
            if(str.charAt(i)==start) startInd=i;
            if(str.charAt(i)==end)   endInd=i;
        }
-        System.out.println(endInd-startInd);
+        System.out.println(endInd-startInd+1);
        int k=0;
        for (int i=startInd; i<=endInd;++i)
        {
