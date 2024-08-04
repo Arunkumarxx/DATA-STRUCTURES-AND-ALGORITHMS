@@ -10,6 +10,6 @@ public class StringsRotationsOfEachOther {
             stringBuilder.append(str1.charAt(i));
         for(int i=0; i<unit; ++i)
             stringBuilder.append(str1.charAt(i));
-        System.out.println(stringBuilder);
+        System.out.println(stringBuilder==str2);
     }
 }
