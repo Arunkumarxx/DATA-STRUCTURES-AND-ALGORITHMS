@@ -35,7 +35,7 @@ public class ImplementStrStr {
        for (int m=startInd; m<=endInd;++m)
        {
            if((str.charAt(m)!=searchKey.charAt(k)))
-               return -1;
+               return -3;
            ++k;
        }
        return startInd;
