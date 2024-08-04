@@ -20,7 +20,6 @@ public class ImplementStrStr {
 
             }
         }
-
         return ind;
     }
 }
