@@ -24,7 +24,7 @@ public class ImplementStrStr {
             }
             if(str.charAt(i)==end && emarked) {
                 endInd = i;
-                smarked=false;
+                emarked=false;
             }
        }
        if((endInd-startInd+1)!=searchKey.length() ||( startInd<0 && endInd<0))
