@@ -21,6 +21,7 @@ public class ImplementStrStr {
                 }
             }
             if(charFound==false) return -1;
+            ++i;
         }
         return ind;
     }
