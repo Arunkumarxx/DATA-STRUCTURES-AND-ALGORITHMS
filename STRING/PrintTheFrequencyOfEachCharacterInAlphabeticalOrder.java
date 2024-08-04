@@ -19,7 +19,7 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
     public static void main(String[] args) {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
-        int value =1000;
+        int value =100023;
         DecimalFormat decimalFormat =new DecimalFormat("#,###");
         String strss =decimalFormat.format(value);
         System.out.println(strss);
