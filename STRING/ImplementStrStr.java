@@ -26,7 +26,10 @@ public class ImplementStrStr {
            ++i;
            --j;
        }
-       if(i==j) if(str.charAt(i)==start) startInd=i;
+       if(i==j) {
+           if (str.charAt(i) == start) startInd = i;
+           if(str.charAt(j)==end) endInd=j;
+       }
         System.out.println(startInd+" "+endInd);
        if((endInd-startInd+1)!=searchKey.length() ||( startInd<0||endInd<0))
            return -1;
