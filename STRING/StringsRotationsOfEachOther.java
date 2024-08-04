@@ -14,7 +14,8 @@ public class StringsRotationsOfEachOther {
             if(j==s2.length())break;
             if(rotated.charAt(i)==s2.charAt(j)){
                 cnt++;
-                j++;}
+                j++;
+            }
         }
         if(cnt==s2.length())return true;
         return false;
