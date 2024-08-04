@@ -23,7 +23,4 @@ public class StringsRotationsOfEachOther {
         long time1e = System.nanoTime();
         System.out.println((time1e-time1s)/1_000_000.0+"ms");
     }
-    private static boolean areRotations (String s1,String s2) {
-
-    }
 }
