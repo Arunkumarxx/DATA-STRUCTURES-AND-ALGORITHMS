@@ -10,15 +10,11 @@ public class BinaryString {
         int s=0,e=n-1;
         while(s<e)
         {
-           if(str.charAt(s)=='0') {
+           while(str.charAt(s)=='0' && s<e)
                ++s;
-               continue;
-           }
-          else {
-              if(str.charAt(e)=='1')
-                  ++count;
-              --e;
-           }
+           while(str.charAt(e)=='0' && e>s)
+               --e;
+           count+=2;
         }
         return count;
     }
