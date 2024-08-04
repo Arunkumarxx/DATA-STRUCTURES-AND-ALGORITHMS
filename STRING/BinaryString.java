@@ -6,7 +6,7 @@ public class BinaryString {
         System.out.println(BinaryString(str.length(),str));
     }
     private static int  BinaryString (int n,String str) {
-        
-        return count;
+        System.out.println(3*3);
+        return -1;
     }
 }
