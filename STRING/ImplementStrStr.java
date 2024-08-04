@@ -26,6 +26,7 @@ public class ImplementStrStr {
            ++i;
            --j;
        }
+       if(i==j) if(str.charAt(i)==start) startInd=i;
 
        if((endInd-startInd+1)!=searchKey.length() ||( startInd<0||endInd<0))
            return -1;
