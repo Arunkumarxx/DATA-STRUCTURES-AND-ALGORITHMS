@@ -12,7 +12,6 @@ public class StringsRotationsOfEachOther {
             stringBuilder.append(str1.charAt(i));
 
         String res=stringBuilder.toString();
-
-        System.out.println(res==str2);
+        System.out.println(res=="forgeeksgeeks");
     }
 }
