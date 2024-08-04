@@ -3,7 +3,7 @@ package STRING;
 public class ImplementStrStr {
     public static void main(String[] args) {
         String s="GeeksForGeeks";
-        String x="For";
+        String x="Fox";
         System.out.println(Str(s,x));
     }
     private static int Str(String s,String x) {
