@@ -7,19 +7,19 @@ public class StringsRotationsOfEachOther {
         System.out.println(areRotations(str1,str2));
     }
     private static boolean areRotations (String s1,String s2) {
-        String rotated=s1+s1;
-        System.out.println(rotated);
-        System.out.println(s2);
-        int cnt=0;
+        String rotated  =s1+s1;
         int j=0;
-        for(int i=0;i<rotated.length();i++){
-            if(j==s2.length())break;
-            if(rotated.charAt(i)==s2.charAt(j)){
-                cnt++;
-                j++;
+        int count=0;
+        for(int i=0; i<rotated.length(); ++i)
+        {
+            if(rotated.charAt(i)==s2.charAt(j))
+            {
+                ++count;
+                ++j;
             }
         }
-        if(cnt==s2.length())return true;
+        if(count==s2.length())
+            return true;
         return false;
     }
 }
