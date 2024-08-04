@@ -22,7 +22,6 @@ public class ImplementStrStr {
                         break;
                     }
                 }
-                ind=i;
 
             }
             if(isFound)
