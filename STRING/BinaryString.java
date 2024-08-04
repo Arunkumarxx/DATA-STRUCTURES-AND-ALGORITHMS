@@ -12,10 +12,10 @@ public class BinaryString {
         {
             while( s=='0' && s<e)
                 ++s;
+            ++count;
             while(e=='0'&& e>s)
                 --e;
-            if(s<e) count+=2;
-            else break;
+            ++count;
         }
         return count;
     }
