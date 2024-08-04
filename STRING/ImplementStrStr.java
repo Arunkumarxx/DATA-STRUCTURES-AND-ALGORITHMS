@@ -9,6 +9,7 @@ public class ImplementStrStr {
     private static int Str(String str,String searchKey) {
         int n1=str.length();
         int n2=searchKey.length();
+        int ind=-1;
         boolean isFound=true;
         for (int i=0; i<n1; ++i)
         {
@@ -22,10 +23,11 @@ public class ImplementStrStr {
                         break;
                     }
                 }
+                ind=i;
             }
             if(!(isFound))
                 return -1;
         }
-        return 
+        return ind;
     }
 }
