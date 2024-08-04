@@ -9,7 +9,13 @@ public class StringsRotationsOfEachOther {
     private static boolean areRotations (String s1,String s2) {
         if(s1.length() !=s2.length())
             return false;
-        String res =s1+s1;
-        return res.contains(s2);
+        String rotated =s1+s1;
+        int k=0;
+        for(int i=0; i<rotated.length(); ++i)
+        {
+            
+        }
+
+        return false;
     }
 }
