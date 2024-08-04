@@ -6,25 +6,7 @@ public class BinaryString {
         System.out.println(BinaryString(str.length(),str));
     }
     private static int  BinaryString (int n,String str) {
-        short count=0;
-        int s=0,e=n-1;
-        while(s<e)
-        {
-           while(str.charAt(s)=='0' && s<e)
-               ++s;
-           while(str.charAt(e)=='0' && e>s)
-               --e;
-           if(s<e && str.charAt(s)=='1' && str.charAt(e)=='1')
-           {
-               count++;
-               ++s;
-               --e;
-           }
-           else {
-               ++s;
-               --e;
-           }
-        }
+        
         return count;
     }
 }
