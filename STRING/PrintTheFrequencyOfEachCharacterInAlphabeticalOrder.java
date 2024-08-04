@@ -1,7 +1,5 @@
 package STRING;
 
-import java.util.Arrays;
-
 class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
     private static void PrintCharacterFreq(String str,int n) {
 
