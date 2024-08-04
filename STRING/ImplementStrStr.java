@@ -9,16 +9,22 @@ public class ImplementStrStr {
     private static int Str(String str,String searchKey) {
        int ind=-1;
        int n=str.length();
+
        char start=searchKey.charAt(0);
        char end=searchKey.charAt(searchKey.length()-1);
+
        int startInd=-1;
        int endInd=-1;
+
        for (int i=0; i<n && (startInd<0|| endInd<0); ++i)
        {
            if(str.charAt(i)==start) startInd=i;
            if(str.charAt(i)==end)   endInd=i;
        }
-        System.out.println(endInd-startInd+1);
+
+       if((endInd-startInd+1)!=searchKey.length() ||( startInd<0||endInd<0))
+           return -1;
+       
        int k=0;
        for (int i=startInd; i<=endInd;++i)
        {
