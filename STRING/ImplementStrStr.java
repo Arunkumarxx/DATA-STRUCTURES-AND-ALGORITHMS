@@ -3,7 +3,7 @@ package STRING;
 public class ImplementStrStr {
     public static void main(String[] args) {
         String str="GeeksForGeeks";
-        String key="ks";
+        String key="G";
         System.out.println(Str(str,key));
     }
     private static int Str(String str,String searchKey) {
@@ -23,7 +23,6 @@ public class ImplementStrStr {
                 if(isFound)
                     return i;
             }
-
         }
         return -1;
     }
