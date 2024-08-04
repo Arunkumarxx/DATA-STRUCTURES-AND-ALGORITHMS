@@ -10,8 +10,10 @@ public class Palindrome {
         int start=0,end=str.length();
         while(start<end)
         {
-            if(!(str.charAt(++start)==str.charAt(--end)))
+            if(!(str.charAt(start)==str.charAt(end)))
                 return false;
+            ++start;
+            --end;
         }
         return true;
     }
