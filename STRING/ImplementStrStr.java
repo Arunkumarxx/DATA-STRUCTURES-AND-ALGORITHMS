@@ -15,23 +15,16 @@ public class ImplementStrStr {
 
        int startInd=-1;
        int endInd=-1;
-
-       int i=0,j=str.length()-1;
-       while(i<j && (startInd<0|| endInd<0))
+       for (int i=0; i<str.length(); ++i)
        {
-           if(str.charAt(i)==start)
-               startInd=i;
-           if(str.charAt(j)==end)
-               endInd=j;
-           ++i;
-           --j;
+            if(str.charAt(i)==start)
+                startInd=i;
+            if(str.charAt(i)==end)
+                endInd=i;
        }
-       if(i==j) {
-           if (str.charAt(i) == start) startInd = i;
-           if(str.charAt(j)==end) endInd=j;
-       }
+
         System.out.println(startInd+" "+endInd);
-       if((endInd-startInd+1)!=searchKey.length() ||( startInd<0||endInd<0))
+       if((endInd-startInd+1)!=searchKey.length() ||( startInd<0 && endInd<0))
            return -1;
 
        int k=0;
