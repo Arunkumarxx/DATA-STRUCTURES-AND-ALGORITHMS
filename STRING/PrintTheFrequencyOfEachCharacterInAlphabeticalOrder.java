@@ -21,6 +21,7 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
         PrintCharacterFreq(str,str.length());
         int value =1000;
         DecimalFormat decimalFormat =new DecimalFormat();
-        System.out.println(decimalFormat.format("#,###"));
+        String strss =decimalFormat.format("#,###");
+        System.out.println(strss);
     }
 }
