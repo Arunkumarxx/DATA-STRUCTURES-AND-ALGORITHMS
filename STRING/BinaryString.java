@@ -14,16 +14,12 @@ public class BinaryString {
                ++s;
                continue;
            }
-          else if(str.charAt(e)=='0'){
-               --e;
-               continue;
-           }
           else {
               count+=2;
               ++s;
               --e;
            }
-          
+
         }
         return count;
     }
