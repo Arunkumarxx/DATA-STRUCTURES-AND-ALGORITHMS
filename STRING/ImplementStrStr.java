@@ -15,15 +15,14 @@ public class ImplementStrStr {
         {
             if(str.charAt(i)==searchKey.charAt(0))
             {
-                for(int j=0;j<n2; ++j)
-                {
-                    if(str.charAt(i+j)!=searchKey.charAt(j))
-                    {
-                        isFound=false;
+                for(int j=0;j<n2; ++j) {
+                    if (str.charAt(i + j) != searchKey.charAt(j)) {
+                        isFound = false;
                         break;
                     }
                 }
                 ind=i;
+
             }
             if(!(isFound))
                 return -1;
