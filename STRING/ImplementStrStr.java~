@@ -9,7 +9,7 @@ public class ImplementStrStr {
     private static int Str(String str,String searchKey) {
         int n1=str.length();
         int n2=searchKey.length();
-        for (int i=0; i<n1-n2; ++i)
+        for (int i=0; i<=n1-n2; ++i)
         {
             boolean isFound=true;
             if(str.charAt(i)==searchKey.charAt(0))
