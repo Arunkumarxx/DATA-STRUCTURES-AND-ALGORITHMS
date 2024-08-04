@@ -20,6 +20,6 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
         PrintCharacterFreq(str,str.length());
         long time =System.currentTimeMillis();
         int value=12000;
-        System.out.println(String.format(Locale.FRANCE,"%,.d",value));
+        System.out.println(String.format(Locale.FRANCE,"%,d",value));
     }
 }
