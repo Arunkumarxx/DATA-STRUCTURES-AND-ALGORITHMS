@@ -10,8 +10,7 @@ public class StringsRotationsOfEachOther {
             reversed.append(str1.charAt(i));
         for(int i=0; i<unit; ++i)
             reversed.append(str1.charAt(i));
-
         String res=reversed.toString();
-        System.out.println(res==reversed);
+        System.out.println(str2==res);
     }
 }
