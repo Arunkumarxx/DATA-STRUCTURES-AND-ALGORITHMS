@@ -16,7 +16,7 @@ public class ImplementStrStr {
             for(int j=0; j<s.length() && isValid; ++j) {
                 if (x.charAt(i) == s.charAt(j)) {
                     if (i == 0)
-                        ind = i;
+                        ind = j;
                     charFound=true;
                 }
             }
