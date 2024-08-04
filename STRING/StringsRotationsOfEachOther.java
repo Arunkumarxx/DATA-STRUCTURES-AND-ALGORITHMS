@@ -8,6 +8,8 @@ public class StringsRotationsOfEachOther {
     }
     private static boolean areRotations (String s1,String s2) {
         String rotated=s1+s1;
+        System.out.println(rotated);
+        System.out.println(s2);
         int cnt=0;
         int j=0;
         for(int i=0;i<rotated.length();i++){
