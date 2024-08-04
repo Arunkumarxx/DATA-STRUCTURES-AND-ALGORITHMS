@@ -7,16 +7,15 @@ public class StringsRotationsOfEachOther {
         System.out.println(areRotations(str1,str2));
     }
     private static boolean areRotations (String s1,String s2) {
-        if(s1.length() !=s2.length())
-            return false;
-        String rotated =s1+s1;
-        System.out.println(rotated);
-        int k=0;
-        for(int i=0; i<rotated.length(); ++i)
-        {
-
+        int cnt=0;
+        int j=0;
+        for(int i=0;i<rotated.length();i++){
+            if(j==s2.length())break;
+            if(rotated.charAt(i)==s2.charAt(j)){
+                cnt++;
+                j++;}
         }
-
+        if(cnt==s2.length())return true;
         return false;
     }
 }
