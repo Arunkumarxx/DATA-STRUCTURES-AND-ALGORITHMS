@@ -15,6 +15,6 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
     public static void main(String[] args) {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
-        System.out.println(str.getBytes());
+        System.out.println(str.hashCode());
     }
 }
