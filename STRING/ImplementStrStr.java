@@ -2,7 +2,7 @@ package STRING;
 
 public class ImplementStrStr {
     public static void main(String[] args) {
-        String str="GeeksFrrGeeks";
+        String str="GeeksForGeeks";
         String key="For";
         System.out.println(Str(str,key));
     }
