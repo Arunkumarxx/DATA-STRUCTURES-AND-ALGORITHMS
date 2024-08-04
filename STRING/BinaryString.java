@@ -10,12 +10,20 @@ public class BinaryString {
         int s=0,e=n-1;
         while(s<e)
         {
-            while( str.charAt(s)=='0' && s<e)
-                ++s;
-            if(s>=e) break; else ++count;
-            while(str.charAt(e)=='0'&& e>s)
-                --e;
-            if(s>=e) break; else ++count;
+           if(str.charAt(s)=='0') {
+               ++s;
+               continue;
+           }
+          else if(str.charAt(e)=='0'){
+               --e;
+               continue;
+           }
+          else {
+              count+=2;
+              ++s;
+              --e;
+           }
+          
         }
         return count;
     }
