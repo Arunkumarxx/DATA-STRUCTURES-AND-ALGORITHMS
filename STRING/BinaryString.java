@@ -17,6 +17,7 @@ public class BinaryString {
            if(s<e)
            {
                count+=2;
+               ++s;
                --e;
            }
         }
