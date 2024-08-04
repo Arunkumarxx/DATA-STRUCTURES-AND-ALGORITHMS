@@ -24,12 +24,12 @@ public class ImplementStrStr {
 
        if((endInd-startInd+1)!=searchKey.length() ||( startInd<0||endInd<0))
            return -1;
-       
+
        int k=0;
        for (int i=startInd; i<=endInd;++i)
        {
 
        }
-       return -1;
+       return -2;
     }
 }
