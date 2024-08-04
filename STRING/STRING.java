@@ -1,13 +1,11 @@
 package STRING;
 
-
 import java.io.IOException;
 import java.nio.file.*;
-        import java.nio.file.attribute.BasicFileAttributes;
-import java.util.regex.Matcher;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.regex.Pattern;
 
-public class String {
+ class FileNameRenamer {
 
     private static final Pattern DOT_PATTERN = Pattern.compile("\\.(?!\\d)"); // Replace dots but not before digits
     private static final Pattern SPECIAL_CHAR_PATTERN = Pattern.compile("[^\\w\\s.-]"); // Remove special characters except dots, hyphens, and underscores
@@ -24,8 +22,12 @@ public class String {
                         Path newFileName = processFileName(file.getFileName().toString());
                         if (newFileName != null) {
                             Path newFilePath = file.resolveSibling(newFileName);
-                            Files.move(file, newFilePath);
-                            System.out.println("Renamed: '" + file + "' to '" + newFilePath + "'");
+                            try {
+                                Files.move(file, newFilePath);
+                                System.out.println("Renamed: '" + file + "' to '" + newFilePath + "'");
+                            } catch (IOException e) {
+                                System.err.println("Failed to rename '" + file + "' to '" + newFilePath + "': " + e.getMessage());
+                            }
                         }
                     }
                     return FileVisitResult.CONTINUE;
@@ -37,6 +39,10 @@ public class String {
     }
 
     private static Path processFileName(String fileName) {
+        if (fileName == null || fileName.isEmpty()) {
+            return null;
+        }
+
         // Remove file extension temporarily
         String nameWithoutExtension = fileName;
         String extension = "";
@@ -52,13 +58,11 @@ public class String {
         // Remove special characters except dots, hyphens, and underscores
         newFileName = SPECIAL_CHAR_PATTERN.matcher(newFileName).replaceAll(" ");
 
-        // Replace multiple spaces with a single space
+        // Replace multiple spaces with a single underscore
         newFileName = MULTI_SPACE_PATTERN.matcher(newFileName).replaceAll("_");
 
         // Re-add the file extension
         newFileName += extension;
 
         // Ensure that the new filename is different
-        return !fileName.equals(newFileName) ? Paths.get(newFileName) : null;
-    }
-}
+        return !fileName.equals(newFileName) ? Paths.get(newFileNam
