@@ -16,7 +16,6 @@ public class BinaryString {
            }
           else {
               count+=2;
-              ++s;
               --e;
            }
 
