@@ -2,27 +2,20 @@ package STRING;
 
 public class ImplementStrStr {
     public static void main(String[] args) {
-        String s="GeeksForGeeks";
-        String x="Fr";
-        System.out.println(Str(s,x));
+        String str="GeeksForGeeks";
+        String key="Fr";
+        System.out.println(Str(str,key));
     }
-    private static int Str(String s,String x) {
-        int ind=-1;
-        boolean isValid =true;
-        int i=0;
-        while( i <x.length() && isValid)
+    private static int Str(String str,String key) {
+        int kn=key.length();
+        int sn=str.length();
+        for (int i=0; i<kn; ++i)
         {
-            boolean charFound=false;
-            for(int j=0; j<s.length() && isValid; ++j) {
-                if (x.charAt(i) == s.charAt(j)) {
-                    if (i == 0)
-                        ind = j;
-                    charFound=true;
-                }
-            }
-            if(charFound==false) return -1;
-            ++i;
+            for(int j=0; j<sn-kn; ++j)
+                if(str.charAt(i)==)
+
         }
-        return ind;
+
+        return -1;
     }
 }
