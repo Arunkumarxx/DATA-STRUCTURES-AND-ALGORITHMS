@@ -1,5 +1,6 @@
 package STRING;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -18,8 +19,8 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
     public static void main(String[] args) {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
-        long time =System.currentTimeMillis();
-        int value=12000;
-        System.out.println(String.format(Locale.FRANCE,"%,d",value));
+        int value =1000;
+        DecimalFormat decimalFormat =new DecimalFormat();
+        System.out.println(decimalFormat.format("#,###"));
     }
 }
