@@ -11,7 +11,9 @@ public class ImplementStrStr {
        int n=str.length();
        char start=searchKey.charAt(0);
        char end=searchKey.charAt(searchKey.length()-1);
-       for(int i=0; i<n; ++i)
+       int startInd=-1;
+       int endInd=-1;
+       for (int i=0; i<n; ++i)
        {
            
        }
