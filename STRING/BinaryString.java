@@ -14,7 +14,16 @@ public class BinaryString {
                ++s;
            while(str.charAt(e)=='0' && e>s)
                --e;
-           
+           if(s<e && str.charAt(s)=='1' && str.charAt(e)=='1')
+           {
+               count++;
+               ++s;
+               --e;
+           }
+           else {
+               ++s;
+               --e;
+           }
         }
         return count;
     }
