@@ -10,9 +10,10 @@ public class ImplementStrStr {
         int n1=str.length();
         int n2=searchKey.length();
         int ind=-1;
-        boolean isFound=true;
+
         for (int i=0; i<n1-n2; ++i)
         {
+            boolean isFound=true;
             if(str.charAt(i)==searchKey.charAt(0))
             {
                 for(int j=0;j<n2; ++j) {
@@ -24,8 +25,8 @@ public class ImplementStrStr {
                 ind=i;
 
             }
-            if(!(isFound))
-                return -1;
+            if(isFound)
+                return i;
         }
         return ind;
     }
