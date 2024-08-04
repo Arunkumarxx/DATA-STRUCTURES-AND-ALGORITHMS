@@ -19,6 +19,7 @@ public class BinaryString {
                count+=2;
                ++s;
                --e;
+               System.out.println(str.substring(s,e));
            }
         }
         return count;
