@@ -15,7 +15,8 @@ public class BinaryString {
                continue;
            }
           else {
-              count+=2;
+              if(str.charAt(e)=='1')
+                  ++count;
               --e;
            }
         }
