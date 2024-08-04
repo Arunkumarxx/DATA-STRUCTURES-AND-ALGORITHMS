@@ -7,8 +7,16 @@ public class BinaryString {
     }
     private static int  BinaryString (int n,String str) {
         short count=0;
-        for(int i=0; i<n; ++i)
-            if(str.charAt(i)=='1') ++count;
+        int s=0,e=n-1;
+        while(s<e)
+        {
+            while( s=='0' && s<e)
+                ++s;
+            while(e=='0'&& e>s)
+                --e;
+            if(s<e) count+=2;
+            else break;
+        }
         return count;
     }
 }
