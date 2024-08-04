@@ -17,9 +17,9 @@ public class BinaryString {
            if(s<e)
            {
                count+=2;
+               System.out.println(str.substring(s,e));
                ++s;
                --e;
-               System.out.println(str.substring(s-1,e));
            }
         }
         return count;
