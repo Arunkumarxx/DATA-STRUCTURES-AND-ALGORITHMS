@@ -7,6 +7,17 @@ public class ImplementStrStr {
         System.out.println(Str(str,key));
     }
     private static int Str(String str,String searchKey) {
-        
+        int n1=str.length();
+        int n2=searchKey.length();
+        for (int i=0; i<n1; ++i)
+        {
+            if(str.charAt(i)==searchKey.charAt(0))
+            {
+                for(int j=0;j<n2; ++j)
+                {
+                    if(str.charAt(i))
+                }
+            }
+        }
     }
 }
