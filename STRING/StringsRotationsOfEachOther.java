@@ -4,9 +4,9 @@ public class StringsRotationsOfEachOther {
     public static void main(String[] args) {
         String str1 ="geeksforgeeks";
         String str2 ="forgeeksgeeks";
-        long time1s = System.currentTimeMillis();
+        long time1s = System.nanoTime();
         System.out.println(areRotations(str1,str2));
-        long time1e = System.currentTimeMillis();
+        long time1e = System.nanoTime();
     }
     private static boolean areRotations (String s1,String s2) {
         String rotated  =s1+s1;
