@@ -20,10 +20,10 @@ public class ImplementStrStr {
                         break;
                     }
                 }
-
+                if(isFound)
+                    return i;
             }
-            if(isFound)
-                return i;
+
         }
         return -1;
     }
