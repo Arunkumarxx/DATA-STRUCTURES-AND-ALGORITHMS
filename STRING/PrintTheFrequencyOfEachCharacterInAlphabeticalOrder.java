@@ -1,6 +1,7 @@
 package STRING;
 
 import java.util.Date;
+import java.util.Locale;
 
 class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
     private static void PrintCharacterFreq(String str,int n) {
@@ -18,6 +19,7 @@ class PrintTheFrequencyOfEachCharacterInAlphabeticalOrder {
         String str = "aabbccccddd";
         PrintCharacterFreq(str,str.length());
         long time =System.currentTimeMillis();
-        System.out.println(String.format("%tc",time));
+        int value=12000;
+        System.out.println(String.format(Locale.FRANCE,"%.2f",value));
     }
 }
