@@ -25,6 +25,7 @@ public class CaseSpecificSortingOfStrings {
             if(str.charAt(i)<97)
                 stringBuilder.append(lowerCase.get(++j));
             else stringBuilder.append(upperCase.get(++k));
+
         }
         System.out.println(stringBuilder);
     }
