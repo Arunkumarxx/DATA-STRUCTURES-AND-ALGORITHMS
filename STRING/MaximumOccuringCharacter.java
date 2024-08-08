@@ -12,7 +12,7 @@ public class MaximumOccuringCharacter {
         {
 
         }
-        int  x='a'-str.charAt(0);
+        int  x=str.charAt(0)-'a';
         System.out.println(x);
         return ' ';
     }
