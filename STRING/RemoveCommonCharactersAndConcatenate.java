@@ -1,6 +1,7 @@
 package STRING;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class RemoveCommonCharactersAndConcatenate {
     public static void main(String[] args) {
@@ -29,6 +30,10 @@ public class RemoveCommonCharactersAndConcatenate {
             hashSet.add(String.valueOf(s2.charAt(j)));
             ++j;
         }
-        
+        StringBuilder stringBuilder =new StringBuilder();
+        Iterator iterator = hashSet.iterator();
+        while(iterator.hasNext())
+            stringBuilder.append(iterator.next());
+        return stringBuilder.toString();
     }
 }
