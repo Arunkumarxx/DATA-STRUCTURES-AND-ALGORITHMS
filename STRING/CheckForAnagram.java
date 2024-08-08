@@ -5,8 +5,8 @@ import java.util.Iterator;
 
 public class CheckForAnagram {
     public static void main(String[] args) {
-        String str1 ="Arunkumar";
-        String str2 ="ramuknurA";
+        String str1 ="arun";
+        String str2 ="nura";
         System.out.println(isAnagram(str1,str2));
     }
     private static boolean isAnagram(String a, String b) {
