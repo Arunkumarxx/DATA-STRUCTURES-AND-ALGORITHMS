@@ -19,7 +19,9 @@ public class RemoveCommonCharactersAndConcatenate {
         for(int i=0; i<s2.length(); ++i)
             hashSet2.add(String.valueOf(s2.charAt(i)));
        HashSet<Character> common =new HashSet<>();
-       Character.c
+       common.retainAll(hashSet1);
+       hashSet1.remove(common);
+       hashSet2.remove(common);
 
        StringBuilder stringBuilder =new StringBuilder();
        for(int i=0; i<s1.length(); ++i)
