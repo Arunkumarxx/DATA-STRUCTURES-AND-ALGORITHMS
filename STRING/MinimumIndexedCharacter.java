@@ -12,10 +12,13 @@ public class MinimumIndexedCharacter {
     private static int minIndexChar(String str, String pattern)
     {
         HashMap<Character,Integer> hashMap =new HashMap<>();
-        int n=str.length();
-        for(int i=0; i<n; ++i)
-            hashMap.put(str.charAt(i),hashMap.getOrDefault(str.charAt(i),0)+1);
-        System.out.println(hashMap);
+        for(int i=0; i<pattern.length(); ++i)
+            hashMap.put(pattern.charAt(i),hashMap.getOrDefault(pattern.charAt(i),0)+1);
+        for(int i=0; i<str.length(); ++i)
+        {
+            if(hashMap.containsKey(str.charAt(i)))
+                return i;
+        }
         return -1;
     }
 }
