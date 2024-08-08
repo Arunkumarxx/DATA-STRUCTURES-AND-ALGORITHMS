@@ -7,12 +7,11 @@ public class CaseSpecificSortingOfStrings {
     public static void main(String[] args) {
         String str="GdCaBgfR";
         int n=str.length();
-        ArrayList<Character> arrayList1 =new ArrayList<>();
-        ArrayList<Character> arrayList2 =new ArrayList<>();
-        
+        ArrayList<Character> lowerCase =new ArrayList<>();
+        ArrayList<Character> upperCase =new ArrayList<>();
         for(int i=0; i<n;++i)
-        {
-
-        }
+            if(str.charAt(i)>=97)lowerCase.add(str.charAt(i));
+            else upperCase.add(str.charAt(i));
+            
     }
 }
