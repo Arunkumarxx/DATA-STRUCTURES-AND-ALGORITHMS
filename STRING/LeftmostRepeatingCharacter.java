@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class LeftmostRepeatingCharacter {
     public static void main(String[] args) {
-        String str="xcJDx";
+        String str="xcJDD";
         System.out.println(repeatedCharacter(str));
     }
     private static boolean repeatedCharacter(String Str)
