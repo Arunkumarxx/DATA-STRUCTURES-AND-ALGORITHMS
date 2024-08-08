@@ -13,7 +13,7 @@ public class IsSubSequence {
         {
             while(target.charAt(j)!=str.charAt(i))
                 ++j;
-            if(!(str.charAt(i)==target.charAt(j)))
+            if(!( j<target.length() && str.charAt(i)==target.charAt(j) ))
                 return false;
         }
         return true;
