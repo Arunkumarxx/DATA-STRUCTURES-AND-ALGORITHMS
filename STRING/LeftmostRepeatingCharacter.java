@@ -13,7 +13,7 @@ public class LeftmostRepeatingCharacter {
         int n=Str.length();
         for(int i=0; i<n;++i) {
             if(hashMap.containsKey(Str.charAt(i)))
-                return hashMap.get(Str.charAt(i));
+                return ;
                 else hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
 
         }
