@@ -21,7 +21,7 @@ public class IsomorphicStrings {
             if(hashMap1.containsKey(c1) && hashMap1.get(c1)!=c1)
                 return false;
             else hashMap1.put(c1,c2);
-            if(hashMap2.containsKey(c2) && hashMap2.get(c2)!=c2)
+            if(hashMap2.containsKey(c2) && hashMap2.get(c2)!=c1)
                 return false;
             else hashMap2.put(c2,c1);
         }
