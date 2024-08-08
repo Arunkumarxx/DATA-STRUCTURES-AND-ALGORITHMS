@@ -2,7 +2,7 @@ package STRING;
 
 public class TheModifiedString {
     public static void main(String[] args) {
-        String str ="aaaaaa";
+        String str ="aaaaa";
         System.out.println(modified(str));
     }
     private static long modified(String str)
