@@ -21,6 +21,6 @@ public class TheModifiedString {
                 consecutive=1;
             }
         }
-        return 1;
+        return modificationCount;
     }
 }
