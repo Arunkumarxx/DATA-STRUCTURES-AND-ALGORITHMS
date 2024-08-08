@@ -19,7 +19,7 @@ public class MaximumOccuringCharacter {
         {
             if(arr[i]>max) {
                 max = arr[i];
-                maxFirstChar=(char)i;
+                maxFirstChar= (char) i;
             }
         }
         return maxFirstChar;
