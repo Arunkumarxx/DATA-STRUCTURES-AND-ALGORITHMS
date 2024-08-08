@@ -13,7 +13,8 @@ public class IsSubSequence {
         {
             if(str.charAt(i)==target.charAt(i))
                 ++i;
-            
+            j++;
         }
+        return i==str.length();
     }
 }
