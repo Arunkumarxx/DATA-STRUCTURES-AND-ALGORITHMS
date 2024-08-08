@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class CaseSpecificSortingOfStrings {
     public static void main(String[] args) {
-        String str="aBzLkPq";
+        String str="defRTSersUXI";
         int n=str.length();
         ArrayList<Character> lowerCase =new ArrayList<>();
         ArrayList<Character> upperCase =new ArrayList<>();
