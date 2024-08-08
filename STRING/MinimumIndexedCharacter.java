@@ -4,5 +4,8 @@ public class MinimumIndexedCharacter {
     public static void main(String[] args) {
 
     }
-    private static 
+    private static int minIndexChar(String str, String patt)
+    {
+        // Your code 
+    }
 }
