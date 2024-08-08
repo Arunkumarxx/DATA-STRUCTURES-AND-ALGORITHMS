@@ -10,8 +10,10 @@ public class MaximumOccuringCharacter {
         int [] arr  =new int[26];
         for(int i=0;i<n; ++i)
         {
-            
+
         }
+        int  x='a'-str.charAt(0);
+        System.out.println(x);
         return ' ';
     }
 }
