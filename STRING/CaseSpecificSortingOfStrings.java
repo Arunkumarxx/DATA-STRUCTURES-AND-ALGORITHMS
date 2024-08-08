@@ -19,9 +19,13 @@ public class CaseSpecificSortingOfStrings {
 //        System.out.println(upperCase);
 //        int i=0 , j=0;
         int j=0 ,k=0;
+        StringBuilder stringBuilder =new StringBuilder();
         for(int i=0; i<n; ++i)
         {
-            if()
+            if(str.charAt(i)<97)
+                stringBuilder.append(lowerCase.get(++j));
+            else stringBuilder.append(upperCase.get(++k));
         }
+        System.out.println(stringBuilder);
     }
 }
