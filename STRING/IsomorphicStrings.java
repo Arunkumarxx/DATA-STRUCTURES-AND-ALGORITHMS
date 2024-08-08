@@ -18,12 +18,12 @@ public class IsomorphicStrings {
         {
             char c1=str1.charAt(i);
             char c2=str2.charAt(i);
-            if(hashMap1.containsKey(str1.charAt(i)) && hashMap1.get(str1.charAt(i))!=c1)
+            if(hashMap1.containsKey(c1) && hashMap1.get(c1)!=c1)
                 return false;
-            else hashMap1.put(str1.charAt(i),str2.charAt(i));
-            if(hashMap2.containsKey(str2.charAt(i)) && hashMap2.get(str2.charAt(i))!=c2)
+            else hashMap1.put(c1,c2);
+            if(hashMap2.containsKey(c2) && hashMap2.get(c2)!=c2)
                 return false;
-            else hashMap2.put(str2.charAt(i),str1.charAt(i));
+            else hashMap2.put(c2,c1);
         }
             return true;
     }
