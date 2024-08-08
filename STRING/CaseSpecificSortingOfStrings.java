@@ -18,10 +18,10 @@ public class CaseSpecificSortingOfStrings {
 //        System.out.println(lowerCase);
 //        System.out.println(upperCase);
 //        int i=0 , j=0;
-
+        int j=0 ,k=0;
         for(int i=0; i<n; ++i)
         {
-            
+            if()
         }
     }
 }
