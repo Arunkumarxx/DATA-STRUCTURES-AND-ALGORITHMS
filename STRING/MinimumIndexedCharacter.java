@@ -5,8 +5,8 @@ import java.util.HashMap;
 
 public class MinimumIndexedCharacter {
     public static void main(String[] args) {
-        String str ="adcffaet";
-        String pattern="onkl";
+        String str ="arun";
+        String pattern="u";
         System.out.println(minIndexChar(str,pattern));
     }
     private static int minIndexChar(String str, String pattern)
