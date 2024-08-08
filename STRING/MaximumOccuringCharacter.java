@@ -9,11 +9,7 @@ public class MaximumOccuringCharacter {
         int n=str.length();
         int [] arr  =new int[26];
         for(int i=0;i<n; ++i)
-        {
-
-        }
-        int  x='z'-'a';
-        System.out.println(x);
+            arr[str.charAt(i)-'a']+=1;
         return ' ';
     }
 }
