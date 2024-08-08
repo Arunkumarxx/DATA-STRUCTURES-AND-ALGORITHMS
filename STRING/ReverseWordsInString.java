@@ -7,7 +7,16 @@ public class ReverseWordsInString {
         StringBuilder result = new StringBuilder();
         StringBuilder word = new StringBuilder();
         String S="i.like.this.program.very.much";
-        
+        for(int i=0; i<S.length(); ++i)
+        {
+            if(S.charAt(i)!='.')
+                word.append(S.charAt(i));
+            else {
+                result.insert(0,word);
+                result.append('.');
+                word.setLength(0);
+            }
+        }
         System.out.println(result);
     }
 }
