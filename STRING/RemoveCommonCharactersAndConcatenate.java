@@ -29,8 +29,6 @@ public class RemoveCommonCharactersAndConcatenate {
             hashSet.add(String.valueOf(s2.charAt(j)));
             ++j;
         }
-        String result =new String();
-        System.out.println(hashSet);
-return "";
+        
     }
 }
