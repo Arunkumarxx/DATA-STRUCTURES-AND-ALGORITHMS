@@ -1,7 +1,5 @@
 package STRING;
 
-import java.io.CharArrayReader;
-import java.util.HashMap;
 import java.util.HashSet;
 
 public class MinimumIndexedCharacter {
