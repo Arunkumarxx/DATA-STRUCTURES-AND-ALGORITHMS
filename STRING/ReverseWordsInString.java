@@ -25,7 +25,7 @@ public class ReverseWordsInString {
             arrayList.get(k).add(temp);
         }
         StringBuilder str =new StringBuilder();
-        for(int i=0; i<arrayList.size(); ++i)
+        for(int i= arrayList.size(); i>=0; --i)
         {
             for(int j=0; j<arrayList.get(i).size(); ++j)
             {
