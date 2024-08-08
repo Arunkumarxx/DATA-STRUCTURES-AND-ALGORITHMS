@@ -8,7 +8,8 @@ import java.util.zip.CheckedOutputStream;
 public class ReverseWordsInString {
     public static void main(String[] args) throws IOException {
         OutputStream console =System.out;
-        console.write(reverseWords("i.like.this.program.very.much").getBytes()); 
+        console.write(reverseWords("i.like.this.program.very.much").getBytes());
+        System.out.println(console);
     }
      private static String reverseWords(String S)
     {
