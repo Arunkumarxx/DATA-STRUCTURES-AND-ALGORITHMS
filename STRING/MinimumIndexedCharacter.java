@@ -16,5 +16,6 @@ public class MinimumIndexedCharacter {
         for(int i=0; i<n; ++i)
             hashMap.put(str.charAt(i),hashMap.getOrDefault(str.charAt(i),0)+1);
         System.out.println(hashMap);
+        return -1;
     }
 }
