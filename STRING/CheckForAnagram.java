@@ -19,9 +19,7 @@ public class CheckForAnagram {
             hashMap.put(a.charAt(i),hashMap.getOrDefault(a.charAt(i),0)+1);
             hashMap.put(b.charAt(i),hashMap.getOrDefault(b.charAt(i),0)-1);
         }
-        System.out.println(hashMap);
         Iterator itr = hashMap.values().iterator();
-
         while(itr.hasNext())
             if((int)itr.next()!=0)
                 return false;
