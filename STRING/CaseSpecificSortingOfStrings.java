@@ -11,5 +11,6 @@ public class CaseSpecificSortingOfStrings {
             arrayList.add(str.charAt(i)<97? (char) ( str.charAt(i) + 32) :str.charAt(i));
         }
         Collections.sort(arrayList);
+        System.out.println(arrayList);
     }
 }
