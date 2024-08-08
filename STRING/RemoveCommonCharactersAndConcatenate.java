@@ -15,6 +15,7 @@ public class RemoveCommonCharactersAndConcatenate {
         HashSet<String > hashSet2=new HashSet<>();
         for(int i=0; i<s1.length(); ++i)
             hashSet1.add(String.valueOf(s1.charAt(i)));
+        
         for(int i=0; i<s2.length(); ++i)
             hashSet2.add(String.valueOf(s2.charAt(i)));
 
