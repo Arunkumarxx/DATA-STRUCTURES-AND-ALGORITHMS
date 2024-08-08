@@ -38,6 +38,6 @@ public class RemoveCommonCharactersAndConcatenate {
 
         System.out.println(hashSet1);
         System.out.println(hashSet2);
-       return "";
+       return stringBuilder.toString();
     }
 }
