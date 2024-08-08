@@ -25,6 +25,6 @@ public class IsomorphicStrings {
                 return false;
             else hashMap2.put(str2.charAt(i),str1.charAt(i));
         }
-            return false;
+            return true;
     }
 }
