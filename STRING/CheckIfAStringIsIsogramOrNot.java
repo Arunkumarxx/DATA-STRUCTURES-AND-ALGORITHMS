@@ -11,7 +11,7 @@ public class CheckIfAStringIsIsogramOrNot {
         HashMap<Character,Integer> hashMap =new HashMap<>();
         for(int i=0; i<str.length(); ++i) {
             hashMap.put(str.charAt(i), hashMap.getOrDefault(str.charAt(i), 0) + 1);
-           if( hashMap.get(str.charAt(i))>0)
+           if( hashMap.get(str.charAt(i))>1)
                return false;
         }
         return true;
