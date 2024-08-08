@@ -24,6 +24,12 @@ public class ReverseWordsInString {
             arrayList.add(new ArrayList<>());
             arrayList.get(k).add(temp);
         }
+        String result="";
+        for(int i=0; i<arrayList.size(); ++i)
+        {
+            result+=arrayList.get(i).toString();
+        }
+        System.out.println(result);
         System.out.println(arrayList);
     }
 }
