@@ -20,8 +20,10 @@ public class RemoveCommonCharactersAndConcatenate {
             hashSet2.add(String.valueOf(s2.charAt(i)));
 
        for(String ele:hashSet1)
-           if(hashSet2.contains(ele))
+           if(hashSet2.contains(ele)) {
                hashSet2.remove(ele);
+               hashSet1.remove(ele);
+           }
 
         System.out.println(hashSet1);
         System.out.println(hashSet2);
