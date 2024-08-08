@@ -17,7 +17,7 @@ public class ReverseWordsInString {
                 arrayList.add(new ArrayList<>());
                 arrayList.get(k).add(temp);
                 temp.delete(0,temp.length());
-                k++;
+                ++k;
             }
         }
         System.out.println(arrayList);
