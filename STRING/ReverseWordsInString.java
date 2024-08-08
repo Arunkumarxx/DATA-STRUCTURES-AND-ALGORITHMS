@@ -13,11 +13,12 @@ public class ReverseWordsInString {
                 word.append(S.charAt(i));
             else {
                 result.insert(0,word);
-                if(i!=0 &&  word.length()!=S.length())
                     result.insert(0,'.');
                 word.setLength(0);
             }
         }
+        if(word.length()>0)
+            result.insert(0,word);
         System.out.println(result);
     }
 }
