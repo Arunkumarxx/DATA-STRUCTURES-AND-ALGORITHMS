@@ -2,8 +2,8 @@ package STRING;
 
 public class IsSubSequence {
     public static void main(String[] args) {
-        String str ="";
-        String target = "";
+        String str ="cd";
+        String target = "abcd";
         System.out.println(subsequence(str,target));
     }
     private static boolean subsequence (String str,String target) {
