@@ -23,7 +23,7 @@ public class CheckForAnagram {
         Iterator itr = hashMap.values().iterator();
         while(itr.hasNext())
         {
-            System.out.println(it);
+            System.out.println(itr);
         }
         return false;
     }
