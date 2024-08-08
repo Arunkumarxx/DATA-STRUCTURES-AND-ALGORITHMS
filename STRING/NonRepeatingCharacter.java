@@ -14,7 +14,7 @@ public class NonRepeatingCharacter {
         for(int i=0; i<n; ++i)
             hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
         for(int i=0; i<n; ++i)
-         if(hashMap.get(Str.charAt(i))==0)
+         if(hashMap.get(Str.charAt(i))==1)
                return Str.charAt(i);
         return '$';
     }
