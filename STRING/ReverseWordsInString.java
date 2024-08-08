@@ -14,11 +14,11 @@ public class ReverseWordsInString {
             if(stringBuilder.charAt(i)!=' ')
                 temp.append(stringBuilder.charAt(i));
             if(stringBuilder.charAt(i)==' ') {
-                arrayList.add(k,new ArrayList<>());
-                String str=temp.toString();
-                arrayList.add(k, temp);
+                arrayList.add(new ArrayList<>());
+                arrayList.get(k).add(temp);
+                temp.delete(0,temp.length()-1);
             }
         }
-
+        System.out.println(arrayList);
     }
 }
