@@ -16,7 +16,7 @@ public class ReverseWordsInString {
             if(stringBuilder.charAt(i)==' ') {
                 arrayList.add(new ArrayList<>());
                 arrayList.get(k).add(temp);
-                temp.delete(0,temp.length());
+                temp.delete(0,temp.length()-1);
                 ++k;
             }
         }
