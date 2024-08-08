@@ -32,7 +32,7 @@ public class ReverseWordsInString {
                 str.append(arrayList.get(i).get(j));
             }
         }
-        System.out.println(result);
+        System.out.println(str);
         System.out.println(arrayList);
     }
 }
