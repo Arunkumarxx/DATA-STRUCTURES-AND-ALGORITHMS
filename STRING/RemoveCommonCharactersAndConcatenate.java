@@ -7,7 +7,10 @@ public class RemoveCommonCharactersAndConcatenate {
     public static void main(String[] args) {
         String string1 = "aacdb";
         String string2 = "gafd";
+        long time =System.currentTimeMillis();
         System.out.println(concatenatedString(string1,string2));
+        long timee=System.currentTimeMillis();
+        System.out.println(timee-time);
     }
     private static String concatenatedString(String s1,String s2)
     {
