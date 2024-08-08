@@ -15,7 +15,7 @@ public class ReverseWordsInString {
                 temp.append(stringBuilder.charAt(i));
             if(stringBuilder.charAt(i)==' ') {
                 arrayList.add(k,new ArrayList<>());
-                arrayList.add(k,temp.toString());
+                arrayList.add(k, temp.toString());
             }
         }
 
