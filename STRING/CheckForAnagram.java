@@ -24,6 +24,7 @@ public class CheckForAnagram {
         while(itr.hasNext())
             if((int)itr.next()==0)
                 count++;
+        System.out.println(count);
         if(count==a.length())
             return true;
         return false;
