@@ -19,6 +19,6 @@ public class ReverseWordsInString {
         }
         if(word.length()>0)
             result.insert(0,word);
-        System.out.println(result);
+        System.out.println(result.toString());
     }
 }
