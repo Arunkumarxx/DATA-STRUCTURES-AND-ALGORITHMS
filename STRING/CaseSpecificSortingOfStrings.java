@@ -5,7 +5,10 @@ import java.util.Collections;
 
 public class CaseSpecificSortingOfStrings {
     public static void main(String[] args) {
-        String str="defRTSersUXI";
+        
+    }
+    private static   String caseSort(String str)
+    {
         int n=str.length();
         ArrayList<Character> lowerCase =new ArrayList<>();
         ArrayList<Character> upperCase =new ArrayList<>();
@@ -17,13 +20,10 @@ public class CaseSpecificSortingOfStrings {
         int j=0 ,k=0;
         StringBuilder stringBuilder =new StringBuilder();
         for(int i=0; i<n; ++i)
-        {
             if(str.charAt(i)<97)
                 stringBuilder.append(upperCase.get(j++));
             else stringBuilder.append(lowerCase.get(k++));
-
-        }
         String res=stringBuilder.toString();
-        System.out.println(stringBuilder);
+        return res;
     }
 }
