@@ -19,7 +19,7 @@ public class CaseSpecificSortingOfStrings {
                 words = br.readLine().split("\\s+");
                 int size = Integer.parseInt(words[0]);
                 String str = br.readLine();
-                String sortedStr = new Solution().caseSort(str);
+                String sortedStr = new CaseSpecificSortingOfStrings().caseSort(str);
                 out.println(sortedStr);
             }
             out.close();
