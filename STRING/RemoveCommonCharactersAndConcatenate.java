@@ -1,2 +1,7 @@
-package STRING;public class RemoveCommonCharactersAndConcatenate {
+package STRING;
+
+public class RemoveCommonCharactersAndConcatenate {
+    public static void main(String[] args) {
+        
+    }
 }
