@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CheckIfAStringIsIsogramOrNot {
     public static void main(String[] args) {
-        String str="machinea";
+        String str="machine";
         System.out.println(IsogramOrNot( str));
     }
     private static  boolean IsogramOrNot(String  str) {
