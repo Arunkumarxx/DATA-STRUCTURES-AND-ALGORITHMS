@@ -5,6 +5,9 @@ import java.util.HashSet;
 
 public class RemoveCommonCharactersAndConcatenate {
     public static void main(String[] args) {
+        String string1 = "aacdb";
+        String string2 = "gafd";
+
         // Timing for the first method
         long startTime1 = System.currentTimeMillis();
         System.out.println(concatenatedString(string1, string2));
