@@ -24,7 +24,9 @@ public class RemoveCommonCharactersAndConcatenate {
             String element = iterator.next();
             if (hashSet2.contains(element)) {
                 hashSet2.remove(element);
-                hashSet1.remove(element);
+                Iterator<String> iterator2 = hashSet2.iterator();
+                while(iterator2.hasNext())
+                    hashSet2.remove(element);
             }
         }
 
