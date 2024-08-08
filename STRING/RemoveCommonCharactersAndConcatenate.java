@@ -12,7 +12,7 @@ public class RemoveCommonCharactersAndConcatenate {
 
     public static String concatenatedString(String s1,String s2)
     {
-        // Your code here
+
         HashSet<String> hashSet1 =new HashSet<>();
         HashSet<String > hashSet2=new HashSet<>();
         for(int i=0; i<s1.length(); ++i)
