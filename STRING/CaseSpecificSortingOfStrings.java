@@ -6,6 +6,8 @@ import java.util.Collections;
 public class CaseSpecificSortingOfStrings {
     public static void main(String[] args) {
         System.out.println(caseSort("defRTSersUXI"));
+        System.out.println(caseSort("defRTSersUXI"));
+        System.out.println(caseSort("defRTSersUXI"));
     }
     private static   String caseSort(String str)
     {
