@@ -8,8 +8,7 @@ public class CaseSpecificSortingOfStrings {
         String str="aBzLkPq";
         ArrayList<Character> arrayList =new ArrayList<>();
         for(int i=0; i<str.length(); ++i) {
-            arrayList.add(str.charAt(i));
-
+            arrayList.add(str.charAt(i)<97? (char) ( str.charAt(i) + 32) :str.charAt(i));
         }
         Collections.sort(arrayList);
     }
