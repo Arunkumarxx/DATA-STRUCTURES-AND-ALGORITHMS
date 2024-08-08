@@ -18,10 +18,14 @@ public class RemoveCommonCharactersAndConcatenate {
 
         for(int i=0; i<s2.length(); ++i)
             hashSet2.add(String.valueOf(s2.charAt(i)));
-       HashSet<String > common =new HashSet<>();
-       common.retainAll(hashSet1);
-       hashSet1.remove(common);
-       hashSet2.remove(common);
+        ArrayList<String> duplicates =new ArrayList<>();
+       for(String ele:hashSet1)
+           if(hashSet2.contains(ele)) {
+               hashSet2.remove(ele);
+               duplicates.add(ele);
+           }
+       for(String ele:duplicates)
+           hashSet1.remove(ele);
 
        StringBuilder stringBuilder =new StringBuilder();
        for(int i=0; i<s1.length(); ++i)
