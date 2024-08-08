@@ -24,10 +24,13 @@ public class ReverseWordsInString {
             arrayList.add(new ArrayList<>());
             arrayList.get(k).add(temp);
         }
-        String result="";
+        StringBuilder str =new StringBuilder();
         for(int i=0; i<arrayList.size(); ++i)
         {
-            result+=arrayList.get(i).toString();
+            for(int j=0; j<arrayList.get(i).size(); ++j)
+            {
+                str.append(arrayList.get(i).get(j));
+            }
         }
         System.out.println(result);
         System.out.println(arrayList);
