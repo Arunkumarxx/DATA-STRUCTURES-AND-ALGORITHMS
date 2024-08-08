@@ -21,10 +21,10 @@ public class CheckForAnagram {
         }
         System.out.println(hashMap);
         Iterator itr = hashMap.values().iterator();
-        while(itr.hasNext())
-        {
-            System.out.println("B%",itr.next()==0);
-        }
+        int count=0;
+        while(itr.hasNext() && (int)itr.next()==0)
+            ++count;
+        System.out.println(count);
         return false;
     }
 }
