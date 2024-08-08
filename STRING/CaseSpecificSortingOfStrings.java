@@ -23,8 +23,8 @@ public class CaseSpecificSortingOfStrings {
         for(int i=0; i<n; ++i)
         {
             if(str.charAt(i)<97)
-                stringBuilder.append(upperCase.get(++j));
-            else stringBuilder.append(lowerCase.get(++k));
+                stringBuilder.append(upperCase.get(j++));
+            else stringBuilder.append(lowerCase.get(k++));
 
         }
         System.out.println(stringBuilder);
