@@ -6,7 +6,7 @@ public class ReverseWordsInString {
     public static void main(String[] args) {
         StringBuilder result = new StringBuilder();
         StringBuilder word = new StringBuilder();
-        String S="i.like.this.program.very.much";
+        String S="pqr.mno";
         for(int i=0; i<S.length(); ++i)
         {
             if(S.charAt(i)!='.')
