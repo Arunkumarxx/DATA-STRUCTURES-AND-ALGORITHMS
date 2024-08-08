@@ -24,4 +24,8 @@ public class MaximumOccuringCharacter {
         }
         return maxFirstChar;
     }
+    private static char getMaxOccuringChar2(String str) {
+        
+        return ' ';
+    }
 }
