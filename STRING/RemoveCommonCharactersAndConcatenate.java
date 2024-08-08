@@ -21,6 +21,7 @@ public class RemoveCommonCharactersAndConcatenate {
         long endTime2 = System.currentTimeMillis();
         long duration2 = endTime2 - startTime2;
         System.out.println("Time taken for concatenatedString(string1, string2, 1): " + duration2 + " milliseconds");
+
     }
     private static String concatenatedString(String s1,String s2)
     {
