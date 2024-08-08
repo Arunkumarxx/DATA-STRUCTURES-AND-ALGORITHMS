@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class MinimumIndexedCharacter {
     public static void main(String[] args) {
         String str ="arun";
-        String pattern="u";
+        String pattern="uu";
         System.out.println(minIndexChar(str,pattern));
     }
     private static int minIndexChar(String str, String pattern)
