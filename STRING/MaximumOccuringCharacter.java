@@ -12,7 +12,13 @@ public class MaximumOccuringCharacter {
         int [] arr  =new int[26];
         for(int i=0;i<n; ++i)
             arr[str.charAt(i)-'a']+=1;
-        System.out.println(Arrays.toString(arr));
+
+        char currentFirst;
+        int max=0;
+        for(int i=0; i< arr.length;++i)
+        {
+            if(arr[i])
+        }
         return ' ';
     }
 }
