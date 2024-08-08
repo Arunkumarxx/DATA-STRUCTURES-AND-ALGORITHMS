@@ -22,6 +22,6 @@ public class MaximumOccuringCharacter {
                 maxFirstChar=(char)i;
             }
         }
-        return ;
+        return maxFirstChar;
     }
 }
