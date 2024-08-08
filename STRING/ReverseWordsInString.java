@@ -1,13 +1,15 @@
 package STRING;
 
+import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.zip.CheckedOutputStream;
 
 public class ReverseWordsInString {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         OutputStream console =System.out;
-        console.write(reverseWords(""));
+        console.write(reverseWords("i.like.this.program.very.much").getBytes());
+        console.flush();
     }
      private static String reverseWords(String S)
     {
