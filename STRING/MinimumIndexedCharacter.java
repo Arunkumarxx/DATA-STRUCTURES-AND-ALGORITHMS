@@ -13,7 +13,7 @@ public class MinimumIndexedCharacter {
     {
         HashMap<Character,Integer> hashMap =new HashMap<>();
         for(int i=0; i<pattern.length(); ++i)
-            hashMap.put(pattern.charAt(i),hashMap.getOrDefault(pattern.charAt(i),0)+1);
+            hashMap.put(pattern.charAt(i),i);
         for(int i=0; i<str.length(); ++i)
         {
             if(hashMap.containsKey(str.charAt(i)))
