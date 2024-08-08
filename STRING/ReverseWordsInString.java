@@ -4,21 +4,25 @@ import java.util.ArrayList;
 
 public class ReverseWordsInString {
     public static void main(String[] args) {
+        
+    }
+     private static String reverseWords(String S)
+    {
+        // code here
         StringBuilder result = new StringBuilder();
         StringBuilder word = new StringBuilder();
-        String S="pqr.mno";
         for(int i=0; i<S.length(); ++i)
         {
             if(S.charAt(i)!='.')
                 word.append(S.charAt(i));
             else {
                 result.insert(0,word);
-                    result.insert(0,'.');
+                result.insert(0,'.');
                 word.setLength(0);
             }
         }
         if(word.length()>0)
             result.insert(0,word);
-        System.out.println(result.toString());
+        return result.toString();
     }
 }
