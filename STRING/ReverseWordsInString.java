@@ -4,7 +4,7 @@ import java.io.IOException;;
 
 public class ReverseWordsInString {
     public static void main(String[] args){
-        System.out.println(reverseWords(""));
+        System.out.println(reverseWords("i.like.this.program.very.much"));
     }
      private static String reverseWords(String S)
     {
