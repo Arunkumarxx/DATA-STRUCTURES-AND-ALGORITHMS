@@ -7,8 +7,6 @@ public class TheModifiedString {
     }
     private static long modified(String str)
     {
-        if(str.length()==3)
-            return 1;
         int n=str.length();
         int consecutive=1;
         int modificationCount=0;
