@@ -10,5 +10,6 @@ public class CaseSpecificSortingOfStrings {
         for(int i=0; i<str.length(); ++i)
             arrayList.add(str.charAt(i));
         Collections.sort(arrayList);
+        System.out.println(arrayList);
     }
 }
