@@ -18,13 +18,14 @@ public class RemoveCommonCharactersAndConcatenate {
         for(int i=0; i<s2.length(); ++i)
             hashSet2.add(String.valueOf(s2.charAt(i)));
 
-        Iterator iterator = hashSet1.iterator();
-        while(iterator.hasNext()) {
-            Integer element  = (Integer) iterator.next();
-            if (hashSet2.contains(element))
+        Iterator<String> iterator = hashSet1.iterator();
+        while (iterator.hasNext()) {
+            String element = iterator.next();
+            if (hashSet2.contains(element)) {
                 hashSet2.remove(element);
-
+            }
         }
+
         System.out.println(hashSet1);
         System.out.println(hashSet2);
        return "";
