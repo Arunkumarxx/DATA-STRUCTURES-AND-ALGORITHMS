@@ -10,8 +10,11 @@ public class IsSubSequence {
         int n=str.length();
         for(int i=0; i<n;++i)
         {
-            
+            while(target.charAt(j)!=str.charAt(i))
+                ++j;
+            if(!(str.charAt(i)==target.charAt(j)))
+                return false;
         }
-        return false;
+        return true;
     }
 }
