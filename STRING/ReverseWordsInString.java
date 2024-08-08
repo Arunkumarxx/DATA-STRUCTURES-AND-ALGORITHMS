@@ -31,6 +31,7 @@ public class ReverseWordsInString {
             {
                 str.append(arrayList.get(i).get(j));
             }
+            str.append(' ');
         }
         System.out.println(str);
         System.out.println(arrayList);
