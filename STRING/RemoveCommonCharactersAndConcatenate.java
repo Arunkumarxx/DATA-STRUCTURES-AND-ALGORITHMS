@@ -5,17 +5,19 @@ import java.util.HashSet;
 
 public class RemoveCommonCharactersAndConcatenate {
     public static void main(String[] args) {
-        String string1 = "aacdb";
-        String string2 = "gafd";
-        long time =System.currentTimeMillis();
-        System.out.println(concatenatedString(string1,string2));
-        long timee=System.currentTimeMillis();
+        // Timing for the first method
+        long startTime1 = System.currentTimeMillis();
+        System.out.println(concatenatedString(string1, string2));
+        long endTime1 = System.currentTimeMillis();
+        long duration1 = endTime1 - startTime1;
+        System.out.println("Time taken for concatenatedString(string1, string2): " + duration1 + " milliseconds");
 
-        long time1 =System.currentTimeMillis();
-        System.out.println(concatenatedString(string1,string2,1));
-        long time2=System.currentTimeMillis();
-        System.out.println(timee-time);
-        System.out.println(time2-time1);
+        // Timing for the second method (assuming this method exists)
+        long startTime2 = System.currentTimeMillis();
+        System.out.println(concatenatedString(string1, string2, 1));
+        long endTime2 = System.currentTimeMillis();
+        long duration2 = endTime2 - startTime2;
+        System.out.println("Time taken for concatenatedString(string1, string2, 1): " + duration2 + " milliseconds");
     }
     private static String concatenatedString(String s1,String s2)
     {
