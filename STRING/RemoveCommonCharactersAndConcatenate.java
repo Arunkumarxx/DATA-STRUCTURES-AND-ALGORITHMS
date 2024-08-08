@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 public class RemoveCommonCharactersAndConcatenate {
     public static void main(String[] args) {
-        String string1 = "aacdb";
+        String string1 = "abcs";
         String string2 = "gafd";
         System.out.println(concatenatedString(string1,string2));
     }
