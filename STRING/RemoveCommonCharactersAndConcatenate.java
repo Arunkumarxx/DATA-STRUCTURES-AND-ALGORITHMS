@@ -26,7 +26,7 @@ public class RemoveCommonCharactersAndConcatenate {
                 hashSet2.remove(element);
                 Iterator<String> iterator2 = hashSet2.iterator();
                 while(iterator2.hasNext())
-                    hashSet2.remove(element.lines());
+                    hashSet2.remove(element.li);
             }
         }
 
