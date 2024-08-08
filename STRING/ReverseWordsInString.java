@@ -33,7 +33,6 @@ public class ReverseWordsInString {
             }
             str.append('.');
         }
-        System.out.println(str);
-        System.out.println(arrayList);
+        System.out.println(str.toString());
     }
 }
