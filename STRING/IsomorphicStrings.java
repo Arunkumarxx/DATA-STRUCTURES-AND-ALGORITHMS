@@ -13,12 +13,18 @@ public class IsomorphicStrings {
             return false;
         int n1=str1.length();
         int n2=str2.length();
-        HashMap<String,String> hashMap= new HashMap<>();
+        HashMap<String,String> hashMap1= new HashMap<>();
         for(int i=0; i<n1; ++i)
         {
-            hashMap.put(str1.charAt(i)+"",str2.charAt(i)+"");
+            hashMap1.put(str1.charAt(i)+"",str2.charAt(i)+"");
         }
-        System.out.println(hashMap);
+        HashMap<String,String> hashMap2 =new HashMap<>();
+        for(int i=0; i<n1; ++i)
+        {
+            hashMap2.put(str1.charAt(i)+"",str2.charAt(i)+"");
+        }
+        System.out.println(hashMap1);
+        System.out.println(hashMap2);
         return false;
     }
 }
