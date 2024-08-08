@@ -25,6 +25,8 @@ public class IsomorphicStrings {
         }
         System.out.println(hashMap1);
         System.out.println(hashMap2);
+        if(hashMap1.size()==hashMap2.size())
+            return true;
         return false;
     }
 }
