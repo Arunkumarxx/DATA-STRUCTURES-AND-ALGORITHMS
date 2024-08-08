@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class CaseSpecificSortingOfStrings {
     public static void main(String[] args) {
-        
+        String str="defRTSersUXI";
     }
     private static   String caseSort(String str)
     {
