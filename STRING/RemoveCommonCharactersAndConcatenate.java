@@ -1,5 +1,6 @@
 package STRING;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -18,13 +19,14 @@ public class RemoveCommonCharactersAndConcatenate {
 
         for(int i=0; i<s2.length(); ++i)
             hashSet2.add(String.valueOf(s2.charAt(i)));
-
+        ArrayList<String> duplicates =new ArrayList<>();
        for(String ele:hashSet1)
            if(hashSet2.contains(ele)) {
                hashSet2.remove(ele);
-               hashSet1.remove(ele);
+               duplicates.add(ele);
            }
-
+       for(String ele:duplicates)
+           hashSet1.remove(ele);
         System.out.println(hashSet1);
         System.out.println(hashSet2);
        return "";
