@@ -4,35 +4,30 @@ import java.util.ArrayList;
 
 public class ReverseWordsInString {
     public static void main(String[] args) {
-        StringBuilder stringBuilder =new StringBuilder("i.like.this.program.very.much");
-        ArrayList<ArrayList<StringBuilder>> arrayList =new ArrayList<>();
-        int n=stringBuilder.length();
-        StringBuilder temp =new StringBuilder();
-        int k=0;
-        for(int i=0; i<n; ++i)
-        {
-            if(stringBuilder.charAt(i)!='.')
-                temp.append(stringBuilder.charAt(i));
-            if(stringBuilder.charAt(i)=='.') {
-                arrayList.add(new ArrayList<>());
-                arrayList.get(k).add(temp);
-                temp=new StringBuilder();
-                ++k;
+        StringBuilder result = new StringBuilder();
+        StringBuilder word = new StringBuilder();
+
+        // Iterate through the string character by character
+        for (int i = 0; i < S.length(); i++) {
+            if (S.charAt(i) != '.') {
+                word.append(S.charAt(i)); // Build the current word
+            } else {
+                // Insert the word at the beginning of the result
+                if (result.length() != 0) {
+                    result.insert(0, '.'); // Add a dot before the word if result is not empty
+                }
+                result.insert(0, word); // Add the word itself
+                word.setLength(0); // Clear the word builder for the next word
             }
         }
-        if (temp.length() > 0) {
-            arrayList.add(new ArrayList<>());
-            arrayList.get(k).add(temp);
-        }
-        StringBuilder str =new StringBuilder();
-        for(int i= arrayList.size()-1; i>=0; --i)
-        {
-            for(int j=0; j<arrayList.get(i).size(); ++j)
-            {
-                str.append(arrayList.get(i).get(j));
+
+        // Append the last word if there is any
+        if (word.length() > 0) {
+            if (result.length() != 0) {
+                result.insert(0, '.');
             }
-            str.append('.');
+            result.insert(0, word);
         }
-        System.out.println(str.toString());
+        System.out.println(result);
     }
 }
