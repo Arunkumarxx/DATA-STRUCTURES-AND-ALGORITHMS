@@ -7,15 +7,17 @@ public class LeftmostRepeatingCharacter {
         String str="cxFDx";
         System.out.println(repeatedCharacter(str));
     }
-    private static boolean repeatedCharacter(String Str)
+    private static int repeatedCharacter(String Str)
     {
         HashMap<Character,Integer> hashMap = new HashMap<>();
         int n=Str.length();
-        for(int i=0; i<n;++i)
-            hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
-        for(int i=0; i<n; ++i)
-            if(hashMap.get(Str.charAt(i))>1)
-                return true;
-        return false;
+        for(int i=0; i<n;++i) {
+            if(hashMap.containsKey(Str.charAt(i)))
+                return hashMap.get(Str.charAt(i));
+                else hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
+
+        }
+        return -1;
+
     }
 }
