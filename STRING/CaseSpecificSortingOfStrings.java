@@ -14,10 +14,6 @@ public class CaseSpecificSortingOfStrings {
             else upperCase.add(str.charAt(i));
         Collections.sort(lowerCase);
         Collections.sort(upperCase);
-
-//        System.out.println(lowerCase);
-//        System.out.println(upperCase);
-//        int i=0 , j=0;
         int j=0 ,k=0;
         StringBuilder stringBuilder =new StringBuilder();
         for(int i=0; i<n; ++i)
