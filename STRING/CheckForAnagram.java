@@ -20,10 +20,10 @@ public class CheckForAnagram {
             hashMap.put(b.charAt(i),hashMap.getOrDefault(b.charAt(i),0)-1);
         }
         System.out.println(hashMap);
-        Iterator itr = hashMap.entrySet().iterator();
+        Iterator itr = hashMap.values().iterator();
         while(itr.hasNext())
         {
-            System.out.println(itr.next());
+            System.out.println(it);
         }
         return false;
     }
