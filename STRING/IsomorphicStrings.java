@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class IsomorphicStrings {
     public static void main(String[] args) {
-        String str1= "egg";
-        String str2= "add";
+        String str1= "aab";
+        String str2= "xxy";
         System.out.println(IsIsomorphicString(str1,str2));
     }
     private static boolean IsIsomorphicString(String str1,String str2) {
