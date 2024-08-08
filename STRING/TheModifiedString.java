@@ -1,2 +1,7 @@
-package STRING;public class TheModifiedString {
+package STRING;
+
+public class TheModifiedString {
+    public static void main(String[] args) {
+        
+    }
 }
