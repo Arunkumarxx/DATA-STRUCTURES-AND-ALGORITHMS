@@ -34,6 +34,7 @@ public class RemoveCommonCharactersAndConcatenate {
        for(int i=0; i<s2.length(); ++i)
            if(hashSet2.contains(String.valueOf(s2.charAt(i))))
                stringBuilder.append(String.valueOf(s2.charAt(i)));
+        if(stringBuilder.length()==0) return "-1";
        return stringBuilder.toString();
     }
 }
