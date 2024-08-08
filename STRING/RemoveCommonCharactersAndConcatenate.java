@@ -22,7 +22,7 @@ public class RemoveCommonCharactersAndConcatenate {
         while(iterator.hasNext())
             if(hashSet2.contains(iterator.next()))
                 hashSet2.remove(iterator.next());
-        
+
         System.out.println(hashSet1);
         System.out.println(hashSet2);
        return "";
