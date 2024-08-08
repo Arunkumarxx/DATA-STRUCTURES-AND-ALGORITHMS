@@ -36,6 +36,7 @@ public class RemoveCommonCharactersAndConcatenate {
            if(hashSet2.contains(s2.charAt(i)))
                stringBuilder.append(s2.charAt(i));
 
+        System.out.println(stringBuilder);
         System.out.println(hashSet1);
         System.out.println(hashSet2);
        return stringBuilder.toString();
