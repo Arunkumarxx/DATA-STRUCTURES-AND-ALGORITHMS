@@ -23,5 +23,6 @@ public class LeftmostRepeatingCharacter {
         for(int i =0; i<str.length(); ++i)
             if(key==str.charAt(i))
                 return i;
+        return -1;
     }
 }
