@@ -15,7 +15,6 @@ public class LeftmostRepeatingCharacter {
             if(hashMap.containsKey(Str.charAt(i)))
                 return linearSearch(Str,Str.charAt(i));
                 else hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
-
         }
         return -1;
     }
