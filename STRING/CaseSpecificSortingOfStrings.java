@@ -24,7 +24,6 @@ public class CaseSpecificSortingOfStrings {
 
         }
         String res=stringBuilder.toString();
-        System.out.println(res);
         System.out.println(stringBuilder);
     }
 }
