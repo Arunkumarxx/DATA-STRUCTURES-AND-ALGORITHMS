@@ -10,14 +10,15 @@ public class TheModifiedString {
         if(str.length()==3)
             return 1;
         int n=str.length();
-        int consicutive=1;
+        int consecutive=1;
         int modificationCount=0;
         for(int i=0; i<n-1; ++i) {
             if (str.charAt(i) == str.charAt(i + 1))
-                ++cons;
-            if(cons==3) {
+                ++consecutive;
+            else consecutive=1;
+            if(consecutive==3) {
                 ++modificationCount;
-                cons
+                consecutive=1;
             }
         }
         return 1;
