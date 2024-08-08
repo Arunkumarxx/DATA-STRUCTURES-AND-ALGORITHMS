@@ -20,6 +20,10 @@ public class ReverseWordsInString {
                 ++k;
             }
         }
+        if (temp.length() > 0) {
+            arrayList.add(new ArrayList<>());
+            arrayList.get(k).add(temp);
+        }
         System.out.println(arrayList);
     }
 }
