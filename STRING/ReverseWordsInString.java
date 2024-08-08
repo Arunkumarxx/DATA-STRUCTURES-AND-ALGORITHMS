@@ -1,10 +1,13 @@
 package STRING;
 
+import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.zip.CheckedOutputStream;
 
 public class ReverseWordsInString {
     public static void main(String[] args) {
-        System.out.println(reverseWords("i.like.this.program.very.much"));
+        OutputStream console =System.out;
+        console.write(reverseWords(""));
     }
      private static String reverseWords(String S)
     {
