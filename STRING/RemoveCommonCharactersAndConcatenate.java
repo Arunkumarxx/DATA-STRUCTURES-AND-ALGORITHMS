@@ -13,46 +13,19 @@ public class RemoveCommonCharactersAndConcatenate {
     {
         HashSet<String> hashSet1 =new HashSet<>();
         HashSet<String > hashSet2=new HashSet<>();
-        int i=0,j=0;
-        int n1=s1.length();
-        int n2=s2.length();
-        while(i<n1 && j<n2)
-        {
-            if(hashSet1.contains(s1.charAt(i)) )
-                hashSet1.remove(s1.charAt(i));
-            else hashSet1.add(String.valueOf(s1.charAt(i)));
-            if(hashSet2.contains(s1.charAt(i)))
-                hashSet2.remove(s2.charAt(i));
-
-            if(hashSet1.contains(s2.charAt(j)) )
-                hashSet1.remove(s2.charAt(j));
-            else hashSet2.add(String.valueOf(s2.charAt(j)));
-            if(hashSet2.contains(s2.charAt(j)))
-                hashSet2.remove(s2.charAt(j));
-
-            ++i; ++j;
+        int min=Math.max(s1.length(),s2.length());
+        int i=0;
+        for(; i<min; ++i) {
+            hashSet1.add(String.valueOf(s1.charAt(i)));
+            hashSet2.add(String.valueOf(s2.charAt(i)));
         }
-        while(i<n1) {
-            if(hashSet1.contains(s1.charAt(i)) )
-                hashSet1.remove(s1.charAt(i));
-            else hashSet1.add(String.valueOf(s1.charAt(i)));
-            if(hashSet2.contains(s1.charAt(i)))
-                hashSet2.remove(s2.charAt(i));
-            ++i;
-        }
-        while(j<n2)
-        {
-            if(hashSet1.contains(s2.charAt(j)) )
-                hashSet1.remove(s2.charAt(j));
-            else hashSet2.add(String.valueOf(s2.charAt(j)));
-            if(hashSet2.contains(s2.charAt(j)))
-                hashSet2.remove(s2.charAt(j));
-            ++j;
-        }
-        StringBuilder stringBuilder =new StringBuilder();
+        for(;i<s1.length(); ++i)
+            hashSet1.add(String.valueOf(s1.charAt(i)));
+        for(;i<s2.length(); ++i)
+            hashSet2.add(String.valueOf(s2.charAt(i)));
 
         System.out.println(hashSet1);
         System.out.println(hashSet2);
-        return "";
+       return "";
     }
 }
