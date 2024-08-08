@@ -20,6 +20,9 @@ public class CheckForAnagram {
             hashMap.put(b.charAt(i),hashMap.getOrDefault(b.charAt(i),0)-1);
         }
         System.out.println(hashMap);
+        int i=0;
+        for(; i<hashMap.size(); ++i)
+            
         return false;
     }
 }
