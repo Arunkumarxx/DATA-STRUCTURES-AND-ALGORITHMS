@@ -23,6 +23,8 @@ public class CaseSpecificSortingOfStrings {
             else stringBuilder.append(lowerCase.get(k++));
 
         }
+        String res=stringBuilder.toString();
+        System.out.println(res);
         System.out.println(stringBuilder);
     }
 }
