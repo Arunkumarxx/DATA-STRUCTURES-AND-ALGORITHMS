@@ -11,6 +11,6 @@ public class IsomorphicStrings {
     private static boolean IsIsomorphicString(String str1,String str2) {
         if(str1.length()!=str2.length())
             return false;
-        
+        return true;
     }
 }
