@@ -2,6 +2,7 @@ package STRING;
 
 import java.io.CharArrayReader;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class MinimumIndexedCharacter {
     public static void main(String[] args) {
@@ -11,12 +12,12 @@ public class MinimumIndexedCharacter {
     }
     private static int minIndexChar(String str, String pattern)
     {
-        HashMap<Character,Integer> hashMap =new HashMap<>();
+        HashSet<Character> hashSet =new HashSet<>();
         for(int i=0; i<pattern.length(); ++i)
-            hashMap.put(pattern.charAt(i),i);
+            hashSet.add(pattern.charAt(i));
         for(int i=0; i<str.length(); ++i)
         {
-            if(hashMap.containsKey(str.charAt(i)))
+            if(hashSet.contains(str.charAt(i)))
                 return i;
         }
         return -1;
