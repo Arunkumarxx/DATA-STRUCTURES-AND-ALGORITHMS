@@ -2,7 +2,7 @@ package STRING;
 
 public class IsSubSequence {
     public static void main(String[] args) {
-        String str ="axc";
+        String str ="abc";
         String target = "ahbgdc";
         System.out.println(subsequence(str,target));
     }
