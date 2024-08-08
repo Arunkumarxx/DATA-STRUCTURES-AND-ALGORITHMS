@@ -15,7 +15,13 @@ public class CaseSpecificSortingOfStrings {
         Collections.sort(lowerCase);
         Collections.sort(upperCase);
 
-        System.out.println(lowerCase);
-        System.out.println(upperCase);
+//        System.out.println(lowerCase);
+//        System.out.println(upperCase);
+//        int i=0 , j=0;
+
+        for(int i=0; i<n; ++i)
+        {
+            
+        }
     }
 }
