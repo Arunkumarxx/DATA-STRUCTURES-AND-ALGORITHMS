@@ -7,11 +7,11 @@ public class TheModifiedString {
     }
     private static long modified(String str)
     {
-        int 
         if(str.length()==3)
             return 1;
         int n=str.length();
-        for(int i=0; i<n)
+        for(int i=0; i<n; ++i)
+            
         return 1;
     }
 }
