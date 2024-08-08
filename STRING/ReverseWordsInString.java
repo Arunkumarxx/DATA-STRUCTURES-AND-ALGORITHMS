@@ -34,5 +34,7 @@ public class ReverseWordsInString {
             str.append('.');
         }
         System.out.println(str.toString());
+
+        String[] words = .split("\\.");
     }
 }
