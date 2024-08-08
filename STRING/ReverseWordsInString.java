@@ -13,7 +13,7 @@ public class ReverseWordsInString {
                 word.append(S.charAt(i));
             else {
                 result.insert(0,word);
-                if(word.length()!=0 && word.length()!=S.length())
+                if(i!=0 || word.length()!=S.length())
                     result.insert(0,'.');
                 word.setLength(0);
             }
