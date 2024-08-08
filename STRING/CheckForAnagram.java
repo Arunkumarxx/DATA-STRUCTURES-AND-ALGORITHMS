@@ -21,7 +21,7 @@ public class CheckForAnagram {
         }
         System.out.println(hashMap);
         int i=0;
-        for(; i<hashMap.size() && hashMap.get(i)==0;)
+        for(; i<hashMap.size() && ( (int)hashMap.get(i)==0);)
             ++i;
         if(i==a.length())
             return true;
