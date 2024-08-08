@@ -11,7 +11,7 @@ public class LeftmostRepeatingCharacter {
     {
         HashMap<Character,Integer> hashMap = new HashMap<>();
         int n=Str.length();
-        for(int i=0; i<n;)
+        for(int i=0; i<n;++i)
             hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
         for(int i=0; i<n; ++i)
             if(hashMap.get(Str.charAt(i))>1)
