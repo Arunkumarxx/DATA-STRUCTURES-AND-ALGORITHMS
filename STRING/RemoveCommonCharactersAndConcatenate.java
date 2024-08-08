@@ -27,6 +27,15 @@ public class RemoveCommonCharactersAndConcatenate {
            }
        for(String ele:duplicates)
            hashSet1.remove(ele);
+
+       StringBuilder stringBuilder =new StringBuilder();
+       for(int i=0; i<s1.length(); ++i)
+           if (hashSet1.contains(s1.charAt(i)))
+               stringBuilder.append(s1.charAt(i));
+       for(int i=0; i<s2.length(); ++i)
+           if(hashSet2.contains(s2.charAt(i)))
+               stringBuilder.append(s2.charAt(i));
+
         System.out.println(hashSet1);
         System.out.println(hashSet2);
        return "";
