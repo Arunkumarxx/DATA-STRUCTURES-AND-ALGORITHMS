@@ -13,11 +13,15 @@ public class LeftmostRepeatingCharacter {
         int n=Str.length();
         for(int i=0; i<n;++i) {
             if(hashMap.containsKey(Str.charAt(i)))
-                return ;
+                return linearSearch(Str,Str.charAt(i));
                 else hashMap.put(Str.charAt(i),hashMap.getOrDefault(Str.charAt(i),0)+1);
 
         }
         return -1;
-
+    }
+    private static int linearSearch(String str, char key) {
+        for(int i =0; i<str.length(); ++i)
+            if(key==str.charAt(i))
+                return i;
     }
 }
