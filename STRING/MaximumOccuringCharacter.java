@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MaximumOccuringCharacter {
     public static void main(String[] args) {
-        String str ="testsample";
+        String str ="output";
         System.out.println(getMaxOccuringChar(str));
     }
     private static char getMaxOccuringChar(String str){
