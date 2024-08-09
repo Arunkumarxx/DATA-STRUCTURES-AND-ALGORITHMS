@@ -21,25 +21,27 @@ public class RabinKarpPatternSearching {
 
         if(k==sum &&  patternSearch(0,pattern.length()-1,str,pattern))
             return true;
-        
+
         return false;
     }
     private static boolean patternSearch(int start,int end,String str,String pattern) {
+        int n1=str.length();
         int n2=pattern.length();
-        for(int i=start;i<=end-n2; ++i)
+        for(int i=0; i<=n1-n2; ++i)
         {
-            boolean patternFound=true;
-            for(int j=0; j<n2; ++j)
+            if(str.charAt(i)==pattern.charAt(0))
             {
-                if(str.charAt(i+j)!=pattern.charAt(j))
+                boolean coundValid=true;
+                for(int j=0; j<pattern.length(); ++j)
                 {
-                    patternFound=false;
-                    break;
+                    if(str.charAt(i+j)!=pattern.charAt(j)) {
+                        coundValid = false;
+                        break;
+                    }
                 }
-
+                if(coundValid)
+                    return true
             }
-            if(patternFound)
-                return true;
         }
         return false;
     }
