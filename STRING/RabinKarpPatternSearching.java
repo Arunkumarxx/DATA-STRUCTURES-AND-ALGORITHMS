@@ -11,8 +11,9 @@ public class RabinKarpPatternSearching {
         int n1=str.length();
         int n2=pattern.length();
         for(int i=0;i<n2;++i)
-            k+='a'-pattern.charAt(i);
+            k+=('a'-pattern.charAt(i)+1);
         System.out.println(k);
+        System.out.println(97-);
         return -1;
     }
 }
