@@ -19,9 +19,9 @@ public class RabinKarpPatternSearching {
         for(int i=0; i<n2; ++i)
             sum+=str.charAt(i)-'a'+1;
 
-        if(k==sum)
-          return   patternSearch(0,pattern.length()-1,str,pattern);
-
+        if(k==sum &&  patternSearch(0,pattern.length()-1,str,pattern))
+            return true;
+        
         return false;
     }
     private static boolean patternSearch(int start,int end,String str,String pattern) {
@@ -41,5 +41,6 @@ public class RabinKarpPatternSearching {
             if(patternFound)
                 return true;
         }
+        return false;
     }
 }
