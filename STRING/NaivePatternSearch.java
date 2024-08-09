@@ -12,7 +12,7 @@ public class NaivePatternSearch {
     {
         int n=str.length();
         ArrayList<Integer> indList =new ArrayList<>();
-        for(int i=0; i<n-pattern.length(); ++i)
+        for(int i=0; i<=n-pattern.length(); ++i)
         {
             if(str.charAt(i)==pattern.charAt(0))
             {
