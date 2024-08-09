@@ -12,11 +12,15 @@ public class RabinKarpPatternSearching {
 
        if(n2>n1)
            return false;
-       int StringHash=HashValue(str.substring(0,n2));
-       int PatterHash=HashValue(pattern);
-        System.out.println(StringHash);
-        System.out.println(PatterHash);
-        
+       int stringHash=HashValue(str.substring(0,n2));
+       int patterHash=HashValue(pattern);
+        System.out.println(stringHash);
+        System.out.println(patterHash);
+
+        for(int i=0; i<=n1-n2; ++i)
+        {
+            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0) && )
+        }
         return false;
     }
     private static int HashValue(String str) {
