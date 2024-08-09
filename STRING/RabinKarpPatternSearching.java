@@ -4,7 +4,10 @@ public class RabinKarpPatternSearching {
     public static void main(String[] args) {
         String str= "aabaacaadaabaaba";
         String pattern = "aaba";
+        long times=System.currentTimeMillis();
         System.out.println(RabinKarp_PatternSearching(str,pattern));
+        long timee=System.currentTimeMillis();
+        System.out.println(timee-times);
     }
     private static  boolean RabinKarp_PatternSearching(String str,String pattern) {
        int n1=str.length();
