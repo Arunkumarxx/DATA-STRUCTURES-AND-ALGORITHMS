@@ -41,5 +41,11 @@ public class RabinKarpPatternSearching {
     }
         return false;
     }
+    private static int HashValue(String str) {
+        int hash=0;
+        for(char x:str.toCharArray())
+            hash+=(x-'a'+1);
+        return hash;
+    }
 
 }
