@@ -13,29 +13,7 @@ public class SumOfNumbersInString {
         int n=str.length();
         StringBuilder stringBuilder = new StringBuilder();
         int i=0;
-        while(i<n-1)
-        {
-            if(str.charAt(i)<='9' && str.charAt(i)>='0')
-            {
-                while(str.charAt(i+1)>='0' && str.charAt(i+1)<='9')
-                {
-                    stringBuilder.append(str.charAt(i));
-                    ++i;
 
-                }
-                if(stringBuilder.length()>0) {
-                    arrayList.add(Integer.parseInt(stringBuilder.toString()));
-                    stringBuilder.setLength(1);
-                }
-
-                if(!(str.charAt(i+1)>='0' && str.charAt(i+1)<='9'))
-                {
-                    arrayList.add(Integer.parseInt(String.valueOf(str.charAt(i))));
-                    ++i;
-                }
-            }
-           else  ++i;
-        }
         return 0;
     }
 }
