@@ -21,7 +21,7 @@ public class RabinKarpPatternSearching {
 
 //        if(k==sum && str.charAt(0)==pattern.charAt(0) && patternSearch(0,pattern.length()-1,str,pattern))
 //            return true;
-        int i=0,j=n2-1;
+        int i=1,j=n2;
         while( i<j && j<n1)
         {
             if(k==sum && str.charAt(i)==pattern.charAt(0) && patternSearch(i,j,str,pattern))
