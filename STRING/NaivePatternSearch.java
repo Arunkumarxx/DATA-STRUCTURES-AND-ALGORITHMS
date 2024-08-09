@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class NaivePatternSearch {
     public static void main(String[] args) {
-        String str="GEEKFORGEEKS";
+        String str="GEEKSFORGEEKS";
         String target ="EKS";
         System.out.println(search(str,target));
     }
