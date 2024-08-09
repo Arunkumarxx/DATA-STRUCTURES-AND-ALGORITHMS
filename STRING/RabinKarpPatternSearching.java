@@ -38,9 +38,8 @@ public class RabinKarpPatternSearching {
     private static int HashValue(String str) {
         int hash=0;
         int base=str.length()-1;
-        for(int i=0; i<str.length(); ++i)
-        {
-            hash+= (str.charAt(i)-'a'+1)*base;
+        for(char x:str.toCharArray()) {
+            hash += (x - 'a' + 1) * base;
             --base;
         }
         return hash;
