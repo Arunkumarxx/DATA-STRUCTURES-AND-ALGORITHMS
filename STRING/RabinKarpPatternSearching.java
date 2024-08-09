@@ -2,8 +2,8 @@ package STRING;
 
 public class RabinKarpPatternSearching {
     public static void main(String[] args) {
-        String str= "aabaacaadaabaaba";
-        String pattern = "aaaaaaaaa";
+        String str= "aaaaaaaaaaaaa";
+        String pattern = "aaa";
         long times=System.currentTimeMillis();
         System.out.println(RabinKarp_PatternSearching(str,pattern));
         long timee=System.currentTimeMillis();
