@@ -16,6 +16,7 @@ public class RabinKarpPatternSearching {
        int PatterHash=HashValue(pattern);
         System.out.println(StringHash);
         System.out.println(PatterHash);
+        
         return false;
     }
     private static int HashValue(String str) {
