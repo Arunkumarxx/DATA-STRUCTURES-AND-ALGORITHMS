@@ -2,7 +2,7 @@ package STRING;
 
 public class RabinKarpPatternSearching {
     public static void main(String[] args) {
-        String str= "aaBaacaadaabaaba";
+        String str= "aabaacaadaabaaba";
         String pattern = "aaba";
         System.out.println(RabinKarp_PatternSearching(str,pattern));
     }
