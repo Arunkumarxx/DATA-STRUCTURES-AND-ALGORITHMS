@@ -14,14 +14,14 @@ public class RabinKarpPatternSearching {
         int n2=pattern.length();
         for(int i=0;i<n2;++i)
             k+=pattern.charAt(i)-'a'+1;
-        System.out.println(k);
+
         int sum=0;
         for(int i=0; i<n2; ++i)
-        {
             sum+=str.charAt(i)-'a'+1;
-        }
-        
-        return true;
 
+        return true;
+    }
+    private static boolean patternSearch(int i,int j,String str,String pattern) {
+        
     }
 }
