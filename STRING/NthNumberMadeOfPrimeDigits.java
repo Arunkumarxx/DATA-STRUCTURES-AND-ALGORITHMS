@@ -14,6 +14,6 @@ public class NthNumberMadeOfPrimeDigits {
             n=(n-1)/4;
         }
         System.out.println(stringBuilder);
-        return 1;
+        return Integer.parseInt(stringBuilder.toString());
     }
 }
