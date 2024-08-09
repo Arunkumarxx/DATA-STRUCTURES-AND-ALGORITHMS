@@ -12,7 +12,7 @@ public class SumOfNumbersInString {
         ArrayList<Integer> arrayList =new ArrayList<>();
         int n=str.length();
         StringBuilder stringBuilder = new StringBuilder();
-        int i=0,j=0;
+        int i=0;
         while(i<n-1)
         {
             if(str.charAt(i)<='9' && str.charAt(i)>='0')
@@ -23,9 +23,10 @@ public class SumOfNumbersInString {
                     ++i;
 
                 }
-
-                arrayList.add(Integer.parseInt(stringBuilder.toString()));
-                stringBuilder.setLength(1);
+                if(stringBuilder.length()>0) {
+                    arrayList.add(Integer.parseInt(stringBuilder.toString()));
+                    stringBuilder.setLength(1);
+                }
 
                 if(!(str.charAt(i+1)>='0' && str.charAt(i+1)<='9'))
                 {
