@@ -12,18 +12,30 @@ public class SumOfNumbersInString {
         ArrayList<Integer> arrayList =new ArrayList<>();
         int n=str.length();
         StringBuilder stringBuilder = new StringBuilder();
-        for(int i=-1; i<n;)
+        int i=0,j=0;
+        while(i<n-1)
         {
-            do {
-                ++i;
-            }
-            while(str.charAt(i)<='9' && str.charAt(i)>='0');
+            if(str.charAt(i)<='9' && str.charAt(i)>='0')
             {
-                stringBuilder.append(str.charAt(i));
+                while(str.charAt(i+1)>='0' && str.charAt(i+1)<='9')
+                {
+                    stringBuilder.append(str.charAt(i));
+                    ++i;
+
+                }
+
+                arrayList.add(Integer.parseInt(stringBuilder.toString()));
+                stringBuilder.setLength(1);
+
+                if(!(str.charAt(i+1)>='0' && str.charAt(i+1)<='9'))
+                {
+                    arrayList.add(Integer.parseInt(String.valueOf(str.charAt(i))));
+                    ++i;
+                }
+                else ++i;
+
 
             }
-            arrayList.add(Integer.parseInt(stringBuilder.toString()));
-            stringBuilder.setLength(0);
         }
         return 0;
     }
