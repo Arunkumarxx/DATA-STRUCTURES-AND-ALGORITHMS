@@ -9,11 +9,21 @@ public class SumOfNumbersInString {
     }
     private static long findSum(String str)
     {
-        ArrayList<String> arrayList =new ArrayList<>();
+        ArrayList<Integer> arrayList =new ArrayList<>();
         int n=str.length();
-        for(int i=0; i<n; ++i)
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i=-1; i<n;)
         {
-            
+            do {
+                ++i;
+            }
+            while(str.charAt(i)<='9' && str.charAt(i)>='0');
+            {
+                stringBuilder.append(str.charAt(i));
+
+            }
+            arrayList.add(Integer.parseInt(stringBuilder.toString()));
+            stringBuilder.setLength(0);
         }
         return 0;
     }
