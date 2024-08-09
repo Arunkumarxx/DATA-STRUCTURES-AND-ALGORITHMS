@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class NaivePatternSearch {
     public static void main(String[] args) {
         String str="GEEKFORGEEKS";
-        String target ="aaba";
+        String target ="EKS";
         System.out.println(search(str,target));
     }
     private static boolean search(String str, String pattern)
