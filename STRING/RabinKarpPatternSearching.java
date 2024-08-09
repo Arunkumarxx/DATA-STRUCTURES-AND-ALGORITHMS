@@ -21,13 +21,14 @@ public class RabinKarpPatternSearching {
        int patterHash=HashValue(pattern);
         System.out.println(stringHash);
         System.out.println(patterHash);
+
         for(int i=0; i<=n1-n2; ++i)
         {
-            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0)  )
+            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0) )
                 return true;
             if(i<n1-n2)
             {
-                stringHash-=(str.charAt(i) - 'a' + 1);
+                stringHash-=(str.charAt(i)-'a'+1);
 
                 stringHash+=(str.charAt(i+n2)-'a'+1);
             }
@@ -37,9 +38,10 @@ public class RabinKarpPatternSearching {
     private static int HashValue(String str) {
         int hash=0;
         int base=str.length()-1;
-        for(char x:str.toCharArray()) {
-            hash += (x - 'a' + 1) * base;
-            --base;
+        for(int i=0; i<str.length(); ++i)
+        {
+            hash+= (str.charAt(i)-'a'+1)*base;
+            
         }
         return hash;
     }
