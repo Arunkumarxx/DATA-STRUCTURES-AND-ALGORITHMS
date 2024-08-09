@@ -29,7 +29,7 @@ public class RabinKarpPatternSearching {
             if(i<n1-n2)
             {
                 stringHash-=(str.charAt(i)-'a'+1);
-                
+
                 stringHash+=(str.charAt(i+n2)-'a'+1);
             }
         }
@@ -37,8 +37,12 @@ public class RabinKarpPatternSearching {
     }
     private static int HashValue(String str) {
         int hash=0;
-        for(char x:str.toCharArray())
-            hash+=(x-'a'+1);
+        int base=str.length()-1;
+        for(int i=0; i<str.length(); ++i)
+        {
+            hash+= (str.charAt(i)-'a'+1)*base;
+            --base;
+        }
         return hash;
     }
 
