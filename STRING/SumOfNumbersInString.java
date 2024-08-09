@@ -24,7 +24,7 @@ public class SumOfNumbersInString {
                 }
             }
         }
-        if(!(stringBuilder.length()>0))
+        if(stringBuilder.length()>0)
             sum+=Integer.parseInt(stringBuilder.toString());
         return sum;
     }
