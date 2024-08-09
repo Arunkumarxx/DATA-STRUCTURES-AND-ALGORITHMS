@@ -13,7 +13,6 @@ public class NthNumberMadeOfPrimeDigits {
             stringBuilder.insert(0,arr[(n-1)%4]);
             n=(n-1)/4;
         }
-//        System.out.println(stringBuilder);
         return Integer.parseInt(stringBuilder.toString());
     }
 }
