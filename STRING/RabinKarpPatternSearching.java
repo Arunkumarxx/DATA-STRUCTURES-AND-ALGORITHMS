@@ -1,5 +1,7 @@
 package STRING;
 
+import static javax.swing.text.html.HTML.Tag.BASE;
+
 public class RabinKarpPatternSearching {
     public static void main(String[] args) {
         String str= "aaaaaaaaaaaaa";
@@ -27,6 +29,7 @@ public class RabinKarpPatternSearching {
             if(i<n1-n2)
             {
                 stringHash-=(str.charAt(i)-'a'+1);
+                
                 stringHash+=(str.charAt(i+n2)-'a'+1);
             }
         }
