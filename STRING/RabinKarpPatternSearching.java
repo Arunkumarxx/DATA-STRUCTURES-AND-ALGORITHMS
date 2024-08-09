@@ -22,17 +22,17 @@ public class RabinKarpPatternSearching {
 
         for(int i=0; i<=n1-n2; ++i)
         {
-                boolean isPatternFound=true;
-                for(int j=0; j<n2; ++j)
-                {
-                    if(str.charAt(i+j)!=pattern.charAt(j))
-                    {
-                        isPatternFound=false;
+            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0)) {
+                boolean isPatternFound = true;
+                for (int j = 0; j < n2; ++j) {
+                    if (str.charAt(i + j) != pattern.charAt(j)) {
+                        isPatternFound = false;
                         break;
                     }
                 }
-                if(isPatternFound)
+                if (isPatternFound)
                     return true;
+            }
            if(i<n1-n2)
         {
             stringHash-=(str.charAt(i)-'a'+1);
