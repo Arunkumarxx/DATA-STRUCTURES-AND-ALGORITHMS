@@ -12,17 +12,16 @@ public class RabinKarpPatternSearching {
         System.out.println(timee-times);
     }
     private static  boolean RabinKarp_PatternSearching(String str,String pattern) {
-       int n1=str.length();
-       int n2=pattern.length();
+        int n1=str.length();
+        int n2=pattern.length();
 
-       if(n2>n1)
-           return false;
-       int stringHash=(str.substring(0,n2)).hashCode();
-       int patterHash=(pattern).hashCode();
+        if(n2>n1)
+            return false;
+        int stringHash=HashValue(str.substring(0,n2));
+        int patterHash=HashValue(pattern);
+
         for(int i=0; i<=n1-n2; ++i)
         {
-            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0) )
-            {
                 boolean isPatternFound=true;
                 for(int j=0; j<n2; ++j)
                 {
