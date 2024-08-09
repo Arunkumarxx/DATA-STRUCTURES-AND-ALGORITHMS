@@ -13,7 +13,6 @@ public class RabinKarpPatternSearching {
         for(int i=0;i<n2;++i)
             k+=('a'-pattern.charAt(i)+1);
         System.out.println(k);
-        System.out.println(97);
         return -1;
     }
 }
