@@ -40,7 +40,7 @@ public class RabinKarpPatternSearching {
                     }
                 }
                 if(coundValid)
-                    return true
+                    return true;
             }
         }
         return false;
