@@ -30,6 +30,6 @@ public class NaivePatternSearch {
             }
         }
         System.out.println(indList);
-        return true;
+        return indList.isEmpty()?false:true;
     }
 }
