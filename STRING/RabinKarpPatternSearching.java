@@ -13,10 +13,7 @@ public class RabinKarpPatternSearching {
        if(n2>n1)
            return false;
        int StringHash=HashValue(str);
-       int PatterHash=HashValue(str);
-
-        System.out.println(StringHash);
-        System.out.println(PatterHash);
+       int PatterHash=HashValue(str.substring(0,n2));
         return false;
     }
     private static int HashValue(String str) {
