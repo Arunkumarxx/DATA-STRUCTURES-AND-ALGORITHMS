@@ -34,9 +34,9 @@ public class RabinKarpPatternSearching {
         return false;
     }
     private static boolean patternSearch(int start,int end,String str,String pattern) {
-        int n1=str.length();
+        int n1=end;
         int n2=pattern.length();
-        for(int i=0; i<=n1-n2; ++i)
+        for(int i=start; i<=n1-n2; ++i)
         {
             if(str.charAt(i)==pattern.charAt(0))
             {
