@@ -26,7 +26,6 @@ public class SumOfNumbersInString {
         }
         if(!(stringBuilder.isEmpty()))
             sum+=Integer.parseInt(stringBuilder.toString());
-        System.out.println(sum);
-        return 0;
+        return sum;
     }
 }
