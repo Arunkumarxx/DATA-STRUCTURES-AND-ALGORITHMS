@@ -21,10 +21,10 @@ public class RabinKarpPatternSearching {
        int patterHash=HashValue(pattern);
         System.out.println(stringHash);
         System.out.println(patterHash);
-
+        System.out.println("a".hashCode());
         for(int i=0; i<=n1-n2; ++i)
         {
-            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0) && str.substring(i,i+n2).equals(pattern) )
+            if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0)  )
                 return true;
             if(i<n1-n2)
             {
