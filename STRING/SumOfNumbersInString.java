@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class SumOfNumbersInString {
     public static void main(String[] args) {
-        String str ="1abc23";
+        String str ="112x.";
         System.out.println(findSum(str));
     }
     private static long findSum(String str)
