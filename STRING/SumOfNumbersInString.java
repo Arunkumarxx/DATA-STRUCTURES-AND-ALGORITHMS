@@ -32,12 +32,9 @@ public class SumOfNumbersInString {
                 {
                     arrayList.add(Integer.parseInt(String.valueOf(str.charAt(i))));
                     ++i;
-                    continue;
                 }
-                 ++i;
-
-
             }
+           else  ++i;
         }
         return 0;
     }
