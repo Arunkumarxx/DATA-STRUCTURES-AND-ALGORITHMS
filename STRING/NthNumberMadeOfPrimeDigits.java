@@ -1,2 +1,4 @@
-package STRING;public class NthNumberMadeOfPrimeDigits {
+package STRING;
+
+public class NthNumberMadeOfPrimeDigits {
 }
