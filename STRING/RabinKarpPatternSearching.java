@@ -20,7 +20,7 @@ public class RabinKarpPatternSearching {
         {
             sum+=str.charAt(i)-'a'+1;
         }
-        System.out.println(sum);
+        
         return true;
 
     }
