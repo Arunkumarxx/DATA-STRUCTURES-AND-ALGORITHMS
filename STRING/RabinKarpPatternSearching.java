@@ -19,12 +19,15 @@ public class RabinKarpPatternSearching {
         for(int i=0; i<n2; ++i)
             sum+=str.charAt(i)-'a'+1;
 
-        if(k==sum && str.charAt(0)==pattern.charAt(0) && patternSearch(0,pattern.length()-1,str,pattern))
-            return true;
-        int i=0,j=0;
-        while( i<n1 && j<n2)
+//        if(k==sum && str.charAt(0)==pattern.charAt(0) && patternSearch(0,pattern.length()-1,str,pattern))
+//            return true;
+        int i=0,j=n2-1;
+        while( i<j && j<n1)
         {
-            
+            if(k==sum && str.charAt(i)==pattern.charAt(0) && patternSearch(i,j,str,pattern))
+                return true;
+            ++i;
+            ++j;
         }
         return false;
     }
