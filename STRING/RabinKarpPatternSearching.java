@@ -18,7 +18,10 @@ public class RabinKarpPatternSearching {
         int sum=0;
         for(int i=0; i<n2; ++i)
         {
+            sum+=str.charAt(i)-'a'+1;
         }
+        System.out.println(sum);
         return true;
+
     }
 }
