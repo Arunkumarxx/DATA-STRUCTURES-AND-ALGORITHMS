@@ -18,6 +18,7 @@ public class SumOfNumbersInString {
             if(ch>='0' && ch<='9')
                 stringBuilder.append(ch);
             else {
+                
                 arrayList.add(Integer.parseInt(stringBuilder.toString()));
                 stringBuilder.setLength(0);
             }
