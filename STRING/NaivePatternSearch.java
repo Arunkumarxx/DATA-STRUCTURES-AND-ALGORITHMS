@@ -19,14 +19,17 @@ public class NaivePatternSearch {
                 boolean coundValid=true;
                 for(int j=0; j<pattern.length(); ++j)
                 {
-                    if(str.charAt(i+j)!=pattern.charAt(j))
-                        coundValid=false;
+                    if(str.charAt(i+j)!=pattern.charAt(j)) {
+                        coundValid = false;
+                        break;
+                    }
                 }
                 if(coundValid) {
                     indList.add(i);
                 }
             }
         }
+        System.out.println(indList);
         return true;
     }
 }
