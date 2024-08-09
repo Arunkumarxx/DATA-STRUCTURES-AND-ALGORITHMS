@@ -22,7 +22,19 @@ public class RabinKarpPatternSearching {
         for(int i=0; i<=n1-n2; ++i)
         {
             if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0) )
-                return true;
+            {
+                boolean isPatternFound=true;
+                for(int j=0; j<n2; ++j)
+                {
+                    if(str.charAt(i+j)!=pattern.charAt(j))
+                    {
+                        isPatternFound=false;
+                        break;
+                    }
+                }
+                if(isPatternFound)
+                    return true;
+            }
             if(i<n1-n2)// sliding window technique
             {
                 stringHash-=String.valueOf(str.charAt(i)).hashCode();
