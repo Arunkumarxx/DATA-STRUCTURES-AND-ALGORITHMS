@@ -9,8 +9,8 @@ public class SumOfNumbersInString {
     }
     private static long findSum(String str)
     {
-        ArrayList<Integer> arrayList =new ArrayList<>();
         int n=str.length();
+        int sum=0;
         StringBuilder stringBuilder = new StringBuilder();
         for(int i=0; i<n; ++i)
         {
@@ -18,14 +18,15 @@ public class SumOfNumbersInString {
             if(ch>='0' && ch<='9')
                 stringBuilder.append(ch);
             else {
-                
-                arrayList.add(Integer.parseInt(stringBuilder.toString()));
-                stringBuilder.setLength(0);
+                if(!(stringBuilder.isEmpty())) {
+                    sum += Integer.parseInt(stringBuilder.toString());
+                    stringBuilder.setLength(0);
+                }
             }
         }
-        if(stringBuilder.length()>0)
-            arrayList.add(Integer.parseInt(stringBuilder.toString()));
-        System.out.println(arrayList);
+        if(!(stringBuilder.isEmpty()))
+            sum+=Integer.parseInt(stringBuilder.toString());
+        System.out.println(sum);
         return 0;
     }
 }
