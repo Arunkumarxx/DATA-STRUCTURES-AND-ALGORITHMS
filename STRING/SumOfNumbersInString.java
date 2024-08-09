@@ -1,6 +1,5 @@
 package STRING;
 
-import java.util.ArrayList;
 
 public class SumOfNumbersInString {
     public static void main(String[] args) {
