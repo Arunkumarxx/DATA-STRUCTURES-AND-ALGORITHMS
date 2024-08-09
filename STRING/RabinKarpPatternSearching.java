@@ -19,8 +19,8 @@ public class RabinKarpPatternSearching {
            return false;
        int stringHash=(str.substring(0,n2)).hashCode();
        int patterHash=(pattern).hashCode();
-        System.out.println(stringHash);
-        System.out.println(patterHash);
+//        System.out.println(stringHash);
+//        System.out.println(patterHash);
 
         for(int i=0; i<=n1-n2; ++i)
         {
