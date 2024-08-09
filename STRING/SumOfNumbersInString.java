@@ -19,8 +19,12 @@ public class SumOfNumbersInString {
                 stringBuilder.append(ch);
             else {
                 arrayList.add(Integer.parseInt(stringBuilder.toString()));
+                stringBuilder.setLength(0);
             }
         }
+        if(stringBuilder.length()>0)
+            arrayList.add(Integer.parseInt(stringBuilder.toString()));
+        System.out.println(arrayList);
         return 0;
     }
 }
