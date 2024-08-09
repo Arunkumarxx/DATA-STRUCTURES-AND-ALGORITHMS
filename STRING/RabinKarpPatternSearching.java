@@ -33,7 +33,7 @@ public class RabinKarpPatternSearching {
                 }
                 if(isPatternFound)
                     return true;
-        if(i<n1-n2)
+           if(i<n1-n2)
         {
             stringHash-=(str.charAt(i)-'a'+1);
             stringHash+=(str.charAt(i+n2)-'a'+1);
