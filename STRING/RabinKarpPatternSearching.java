@@ -1,7 +1,5 @@
 package STRING;
 
-import static javax.swing.text.html.HTML.Tag.BASE;
-
 public class RabinKarpPatternSearching {
     public static void main(String[] args) {
         String str= "aabbccddeeddff";
