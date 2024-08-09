@@ -4,7 +4,7 @@ import static javax.swing.text.html.HTML.Tag.BASE;
 
 public class RabinKarpPatternSearching {
     public static void main(String[] args) {
-        String str= "aaaaaaaaaaaaa";
+        String str= "aaab";
         String pattern = "ab";
         long times=System.currentTimeMillis();
         System.out.println(RabinKarp_PatternSearching(str,pattern));
