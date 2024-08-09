@@ -21,7 +21,11 @@ public class RabinKarpPatternSearching {
         {
             if(stringHash==patterHash && str.charAt(i)==pattern.charAt(0) && str.substring(i,i+n2).equals(pattern) )
                 return true;
-            
+            if(i<n1-n2)
+            {
+                stringHash-=(str.charAt(i)-'a'+1);
+                stringHash+=(str.charAt(i+n2)-'a'+1);
+            }
         }
         return false;
     }
