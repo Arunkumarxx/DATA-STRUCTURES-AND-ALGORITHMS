@@ -5,7 +5,7 @@ import static javax.swing.text.html.HTML.Tag.BASE;
 public class RabinKarpPatternSearching {
     public static void main(String[] args) {
         String str= "aabbccddeeddff";
-        String pattern = "ddee"; 
+        String pattern = "ddee";
         long times=System.currentTimeMillis();
         System.out.println(RabinKarp_PatternSearching(str,pattern));
         long timee=System.currentTimeMillis();
