@@ -119,5 +119,53 @@ package STRING;
          }
          return lps;
      }
+     // Rabin-Karp pattern search implementation
+     private static boolean rabinKarpPatternSearch(String text, String pattern) {
+         int n = text.length();
+         int m = pattern.length();
+         int prime = 101; // A prime number for hashing
+         int base = 256;  // Base value for hashing
+
+         if (m > n) return false;
+
+         // Compute the hash values for the pattern and the initial window of text
+         long patternHash = computeHash(pattern, m, base, prime);
+         long textHash = computeHash(text, m, base, prime);
+
+         // Precompute the base^(m-1) % prime for rolling hash
+         long baseToMMinus1 = 1;
+         for (int i = 0; i < m - 1; i++) {
+             baseToMMinus1 = (baseToMMinus1 * base) % prime;
+         }
+
+         // Slide the window over the text
+         for (int i = 0; i <= n - m; i++) {
+             if (patternHash == textHash) {
+                 // Check for actual match
+                 if (text.substring(i, i + m).equals(pattern)) {
+                     return true;
+                 }
+             }
+
+             if (i < n - m) {
+                 // Roll the hash value: Remove leading digit and add trailing digit
+                 textHash = (base * (textHash - text.charAt(i) * baseToMMinus1) + text.charAt(i + m)) % prime;
+                 if (textHash < 0) {
+                     textHash += prime;
+                 }
+             }
+         }
+         return false;
+     }
+
+     // Compute the hash value of a string
+     private static long computeHash(String str, int length, int base, int prime) {
+         long hash = 0;
+         for (int i = 0; i < length; i++) {
+             hash = (base * hash + str.charAt(i)) % prime;
+         }
+         return hash;
+     }
+
 
  }
