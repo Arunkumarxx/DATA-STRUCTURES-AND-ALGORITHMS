@@ -4,7 +4,10 @@ package STRING;
     public static void main(String[] args) {
         String text = generateLargeText(10000000);
         String pattern = generateLargeText(10000000);
-
+        long startRK = System.currentTimeMillis();
+        boolean rkResult = rabinKarpPatternSearch(text, pattern);
+        long endRK = System.currentTimeMillis();
+        System.out.println("Rabin-Karp Result: " + rkResult + ", Time: " + (endRK - startRK) + " ms");
         // Benchmark Naive approach
         long startNaive = System.currentTimeMillis();
         boolean naiveResult = naivePatternSearch(text, pattern);
@@ -18,10 +21,7 @@ package STRING;
         System.out.println("KMP Result: " + kmpResult + ", Time: " + (endKMP - startKMP) + " ms");
 
         // Benchmark Rabin-Karp approach
-        long startRK = System.currentTimeMillis();
-        boolean rkResult = rabinKarpPatternSearch(text, pattern);
-        long endRK = System.currentTimeMillis();
-        System.out.println("Rabin-Karp Result: " + rkResult + ", Time: " + (endRK - startRK) + " ms");
+
     }
 
     // Function to generate a large random text string
