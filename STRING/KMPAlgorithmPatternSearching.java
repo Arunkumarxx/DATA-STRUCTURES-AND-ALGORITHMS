@@ -20,7 +20,7 @@ public class KMPAlgorithmPatternSearching {
             {
                 ++i;
                 ++j;
-                if(j==n2-1) return true;
+                if(j==n2) return true;
             }
             else {
                 int ind=longestPrefix(str,pattern,i,j);
