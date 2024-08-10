@@ -20,6 +20,8 @@ public class KMPAlgorithmPatternSearching {
             {
                 ++i;
                 ++j;
+                if(j==n2)
+                    return true;
                 continue;
             }
             else {
