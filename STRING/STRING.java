@@ -32,8 +32,7 @@ import java.util.*;
      private static String readPdfContent(String filePath) throws IOException {
          StringBuilder text = new StringBuilder();
          File file = new File(filePath);
-         try (FileInputStream fis = new FileInputStream(file);
-              PDDocument document = PDDocument.load(fis)) {
+         try (PDDocument document = PDDocument.load(file)) { // PDFBox 2.x method
              PDFTextStripper pdfStripper = new PDFTextStripper();
              text.append(pdfStripper.getText(document));
          }
