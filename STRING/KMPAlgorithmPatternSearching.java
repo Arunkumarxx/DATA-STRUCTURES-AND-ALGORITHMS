@@ -38,6 +38,6 @@ public class KMPAlgorithmPatternSearching {
             if(str.charAt(i)==pattern.charAt(k))
                 return k;
         }
-        return -1;
+        return 0;
     }
 }
