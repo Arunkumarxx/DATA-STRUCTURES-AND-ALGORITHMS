@@ -5,5 +5,5 @@ public class KMPAlgorithmPatternSearching {
         String str ="aaba";
         String pattern ="aba";
     }
-    private static
+
 }
