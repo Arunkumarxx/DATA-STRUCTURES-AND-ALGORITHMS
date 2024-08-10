@@ -7,7 +7,6 @@ import java.io.*;
 import java.util.*;
 
  class PatternSearching {
-
      public static void main(String[] args) {
          // Path to the PDF file
          String filePath = "P:/GOOGLE DRIVE/LEARNING HUB/APTITUDE/BOOKS/secrets-of-mental-math.pdf";
@@ -29,30 +28,29 @@ import java.util.*;
 
      private static String readPdfContent(String filePath) throws IOException {
          StringBuilder text = new StringBuilder();
-         try (PDDocument document = PDDocument.load(new File(filePath));
-              PDFTextStripper pdfStripper = new PDFTextStripper()) {
+         try (PDDocument document = PDDocument.load(new File(filePath))) {
+             PDFTextStripper pdfStripper = new PDFTextStripper();
              text.append(pdfStripper.getText(document));
          }
          return text.toString();
      }
 
-    // Naive Pattern Search Algorithm
-    private static int naivePatternSearch(String text, String pattern) {
-        int count = 0;
-        int n = text.length();
-        int m = pattern.length();
+     private static int naivePatternSearch(String text, String pattern) {
+         int count = 0;
+         int n = text.length();
+         int m = pattern.length();
 
-        for (int i = 0; i <= n - m; i++) {
-            int j = 0;
-            while (j < m && text.charAt(i + j) == pattern.charAt(j)) {
-                j++;
-            }
-            if (j == m) {
-                count++;
-            }
-        }
-        return count;
-    }
+         for (int i = 0; i <= n - m; i++) {
+             int j = 0;
+             while (j < m && text.charAt(i + j) == pattern.charAt(j)) {
+                 j++;
+             }
+             if (j == m) {
+                 count++;
+             }
+         }
+         return count;
+     }
 
     // KMP Pattern Search Algorithm
     private static int kmpPatternSearch(String text, String pattern) {
