@@ -23,15 +23,11 @@ public class KMPAlgorithmPatternSearching {
                 if(j==n2) return true;
             }
             else {
-                int ind=longestPrefix(str,pattern,i,j);
-                if(ind!=-1)
-                {
-                    j=ind;
-                }
-                else
-                    j=0;
+                if(j!=0)
+                j=longestPrefix(str,pattern,i,j-1);
+                else i++;
             }
-            ++i;
+
         }
         return false;
     }
