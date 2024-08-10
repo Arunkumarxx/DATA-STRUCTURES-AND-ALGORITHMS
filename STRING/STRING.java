@@ -5,7 +5,7 @@ import java.util.Random;
 class SearchComparison {
     public static void main(String[] args) {
         String text = generateRandomText(1000000); // Generate a large text
-        String pattern = "samplePattern";
+        String pattern = "fjdsakl";
 
         // Measure time for String.contains()
         long startTime = System.nanoTime();
