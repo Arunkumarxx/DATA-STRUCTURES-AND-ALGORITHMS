@@ -2,8 +2,8 @@ package STRING;
 class PatternSearchingBenchmark {
 
     public static void main(String[] args) {
-        String text = generateLargeText(1000000).repeat(2000);
-        String pattern = "ababc".repeat(20000);
+        String text = generateLargeText(1000000).repeat(200);
+        String pattern = "ababc".repeat(2000120);
 
         // Benchmark Naive Approach
         long startTime = System.currentTimeMillis();
