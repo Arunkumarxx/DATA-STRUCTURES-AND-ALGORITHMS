@@ -19,14 +19,25 @@ public class KMPAlgorithmPatternSearching {
                 ++j;
             }
             else {
-                j=longestPrefix( str, pattern, i, j);
+                int ind=longestPrefix(str,pattern,i,j);
+                if(ind!=-1)
+                {
+                    j=ind;
+                }
+                else {
+                    i++;
+                    j=0;
+                }
             }
         }
+        return false;
     }
     private static int  longestPrefix(String str,String pattern,int i,int j) {
         for(int k=j;k>=0; --k)
         {
-            
+            if(str.charAt(i)==pattern.charAt(k))
+                return k;
         }
+        return -1;
     }
 }
