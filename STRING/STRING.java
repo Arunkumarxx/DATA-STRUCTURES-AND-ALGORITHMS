@@ -3,7 +3,7 @@ package STRING;
  class PatternMatchingBenchmark {
     public static void main(String[] args) {
         String text = generateLargeText(1000000);  // Generate a large text string
-        String pattern = "ababc";  // A small pattern
+        String pattern = "././";  // A small pattern
 
         // Benchmark Naive approach
         long startNaive = System.currentTimeMillis();
