@@ -2,7 +2,7 @@ package STRING;
 class PatternSearchingBenchmark {
 
     public static void main(String[] args) {
-        String text = generateLargeText(1000000).repeat(20);
+        String text = generateLargeText(1000000).repeat(20000);
         String pattern = "ababc".repeat(20000);
 
         // Benchmark Naive Approach
