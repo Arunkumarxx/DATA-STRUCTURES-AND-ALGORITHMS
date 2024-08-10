@@ -3,7 +3,7 @@ package STRING;
 public class KMPAlgorithmPatternSearching {
     public static void main(String[] args) {
         String str ="aabaacaadaabaaba";
-        String pattern ="ab";
+        String pattern ="caada";
         System.out.println(kmp(str,pattern));
     }
     private static boolean  kmp(String str,String pattern) {
