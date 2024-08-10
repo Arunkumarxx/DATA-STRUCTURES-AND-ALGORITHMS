@@ -62,14 +62,62 @@ package STRING;
     }
 
     // KMP pattern search implementation (omitted for brevity)
+    // KMP pattern search implementation
     private static boolean kmpPatternSearch(String text, String pattern) {
-        // Implement KMP algorithm
+        int m = pattern.length();
+        int n = text.length();
+
+        // Compute the LPS (Longest Prefix Suffix) array
+        int[] lps = computeLPSArray(pattern);
+
+        int i = 0; // Index for text
+        int j = 0; // Index for pattern
+
+        while (i < n) {
+            if (pattern.charAt(j) == text.charAt(i)) {
+                i++;
+                j++;
+            }
+
+            if (j == m) {
+                // Pattern found
+                return true;
+            } else if (i < n && pattern.charAt(j) != text.charAt(i)) {
+                if (j != 0) {
+                    j = lps[j - 1];
+                } else {
+                    i++;
+                }
+            }
+        }
+        // Pattern not found
         return false;
     }
 
-    // Rabin-Karp pattern search implementation (omitted for brevity)
-    private static boolean rabinKarpPatternSearch(String text, String pattern) {
-        // Implement Rabin-Karp algorithm
-        return false;
-    }
-}
+     // Compute the LPS (Longest Prefix Suffix) array
+     private static int[] computeLPSArray(String pattern) {
+         int m = pattern.length();
+         int[] lps = new int[m];
+         int len = 0; // Length of the previous longest prefix suffix
+         int i = 1;
+
+         lps[0] = 0; // LPS[0] is always 0
+
+         while (i < m) {
+             if (pattern.charAt(i) == pattern.charAt(len)) {
+                 len++;
+                 lps[i] = len;
+                 i++;
+             } else {
+                 if (len != 0) {
+                     len = lps[len - 1];
+                 } else {
+                     lps[i] = 0;
+                     i++;
+                 }
+             }
+         }
+         return lps;
+     }
+
+ }
