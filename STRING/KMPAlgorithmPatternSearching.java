@@ -18,6 +18,7 @@ public class KMPAlgorithmPatternSearching {
             {
                 ++i;
                 ++j;
+                continue;
             }
             else {
                 int ind=longestPrefix(str,pattern,i,j);
@@ -25,11 +26,10 @@ public class KMPAlgorithmPatternSearching {
                 {
                     j=ind;
                 }
-                else {
-                    i++;
+                else
                     j=0;
-                }
             }
+            ++i;
         }
         return false;
     }
