@@ -20,14 +20,14 @@ public class KMPAlgorithmPatternSearching {
             {
                 ++i;
                 ++j;
-                if(j==n2) return true;
+                continue;
             }
             else {
                 if(j!=0)
-                j=longestPrefix(str,pattern,i,j-1);
-                else i++;
+                    j=longestPrefix(str,pattern,i,j);
+                else
+                    ++i;
             }
-
         }
         return false;
     }
