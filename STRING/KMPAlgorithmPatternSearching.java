@@ -1,2 +1,7 @@
-package STRING;public class KMPAlgorithmPatternSearching {
+package STRING;
+
+public class KMPAlgorithmPatternSearching {
+    public static void main(String[] args) {
+        
+    }
 }
