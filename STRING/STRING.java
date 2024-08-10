@@ -11,13 +11,13 @@ import java.util.*;
 
  class PatternSearching {
      public static void main(String[] args) {
-         // Path to the PDF file
-         String filePath = "P:/GOOGLE DRIVE/LEARNING HUB/APTITUDE/BOOKS/secrets-of-mental-math.pdf";
+         // URL to the PDF file
+         String fileUrl = "file:///P:/GOOGLE%20DRIVE/LEARNING%20HUB/APTITUDE/BOOKS/secrets-of-mental-math.pdf";
          String pattern = "that"; // Pattern to search for
 
          try {
              // Read the PDF content
-             String text = readPdfContent(filePath);
+             String text = readPdfContent(fileUrl);
 
              // Count occurrences of the pattern
              int count = naivePatternSearch(text, pattern);
@@ -29,11 +29,10 @@ import java.util.*;
          }
      }
 
-     private static String readPdfContent(String filePath) throws IOException {
+     private static String readPdfContent(String fileUrl) throws IOException {
          StringBuilder text = new StringBuilder();
-         File file = new File(filePath);
-         try (FileInputStream fis = new FileInputStream(file);
-              PDDocument document = PDDocument.load(fis)) { // Use FileInputStream
+         URL url = new URL(fileUrl);
+         try (PDDocument document = PDDocument.load(url)) { // Use URL
              PDFTextStripper pdfStripper = new PDFTextStripper();
              text.append(pdfStripper.getText(document));
          }
