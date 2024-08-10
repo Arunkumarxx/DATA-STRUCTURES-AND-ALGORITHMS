@@ -31,7 +31,7 @@ import java.util.*;
 
      private static String readPdfContent(String filePath) throws IOException {
          StringBuilder text = new StringBuilder();
-         try PDDocument document = PDDocument.load(new File(filePath))) {
+         try (PDDocument document = PDDocument.load(new File(filePath))) {
              PDFTextStripper pdfStripper = new PDFTextStripper();
              text.append(pdfStripper.getText(document));
          }
