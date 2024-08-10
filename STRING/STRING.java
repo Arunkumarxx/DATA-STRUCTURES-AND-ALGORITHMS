@@ -6,48 +6,33 @@ import java.util.*;
 
  class PatternSearching {
 
-    public static void main(String[] args) throws IOException {
-        // Path to the PDF file
-        String filePath = "P:/GOOGLE DRIVE/LEARNING HUB/APTITUDE/BOOKS/secrets-of-mental-math.pdf";
-        String pattern = "that"; // Pattern to search for
+     public static void main(String[] args) {
+         // Path to the PDF file
+         String filePath = "P:/GOOGLE DRIVE/LEARNING HUB/APTITUDE/BOOKS/secrets-of-mental-math.pdf";
+         String pattern = "that"; // Pattern to search for
 
-        // Read the PDF content
-        String text = readPdfContent(filePath);
+         try {
+             // Read the PDF content
+             String text = readPdfContent(filePath);
 
-        // Benchmark Naive Pattern Search
-        long startTime = System.nanoTime();
-        int naiveCount = naivePatternSearch(text, pattern);
-        long naiveTimeNano = System.nanoTime() - startTime;
-        double naiveTimeMs = naiveTimeNano / 1_000_000.0; // Convert to milliseconds
-        System.out.println("Naive Count: " + naiveCount + ", Time: " + String.format("%.2f", naiveTimeMs) + " ms");
+             // Count occurrences of the pattern
+             int count = naivePatternSearch(text, pattern);
 
-        // Benchmark KMP Pattern Search
-        startTime = System.nanoTime();
-        int kmpCount = kmpPatternSearch(text, pattern);
-        long kmpTimeNano = System.nanoTime() - startTime;
-        double kmpTimeMs = kmpTimeNano / 1_000_000.0; // Convert to milliseconds
-        System.out.println("KMP Count: " + kmpCount + ", Time: " + String.format("%.2f", kmpTimeMs) + " ms");
+             System.out.println("Count of pattern \"" + pattern + "\": " + count);
 
-        // Benchmark Rabin-Karp Pattern Search
-        startTime = System.nanoTime();
-        int rabinKarpCount = rabinKarpPatternSearch(text, pattern);
-        long rabinKarpTimeNano = System.nanoTime() - startTime;
-        double rabinKarpTimeMs = rabinKarpTimeNano / 1_000_000.0; // Convert to milliseconds
-        System.out.println("Rabin-Karp Count: " + rabinKarpCount + ", Time: " + String.format("%.2f", rabinKarpTimeMs) + " ms");
-    }
+         } catch (IOException e) {
+             e.printStackTrace();
+         }
+     }
 
-    // Method to read the content of a PDF file
-    private static String readPdfContent(String filePath) throws IOException {
-        StringBuilder text = new StringBuilder();
-        try (InputStream inputStream = new FileInputStream(filePath);
-             org.apache.pdfbox.pdmodel.PDDocument document = org.apache.pdfbox.pdmodel.PDDocument.load(inputStream);
-             org.apache.pdfbox.text.PDFTextStripper pdfStripper = new org.apache.pdfbox.text.PDFTextStripper()) {
-            text.append(pdfStripper.getText(document));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return text.toString();
-    }
+     private static String readPdfContent(String filePath) throws IOException {
+         StringBuilder text = new StringBuilder();
+         try (PDDocument document = PDDocument.load(new File(filePath));
+              PDFTextStripper pdfStripper = new PDFTextStripper()) {
+             text.append(pdfStripper.getText(document));
+         }
+         return text.toString();
+     }
 
     // Naive Pattern Search Algorithm
     private static int naivePatternSearch(String text, String pattern) {
