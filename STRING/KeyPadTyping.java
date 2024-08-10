@@ -3,11 +3,19 @@ package STRING;
 public class KeyPadTyping {
     public static void main(String[] args) {
         String str ="geeksforgeeks";
-        System.out.println(printNumber(str,str.length()));
+        int n=str.length();
+        StringBuilder stringBuilder =new StringBuilder();
+        for(int i=0; i<n; ++i)
+        {
+           stringBuilder.append( printNumber(str.charAt(i)));
+        }
     }
-    private static String printNumber(String s, int n)
+    private static String printNumber(char s)
     {
-        
+        switch (s)
+        {
+            case 
+        }
         return "";
     }
 }
