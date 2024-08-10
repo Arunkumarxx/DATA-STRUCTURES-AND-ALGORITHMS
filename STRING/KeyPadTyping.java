@@ -2,7 +2,7 @@ package STRING;
 
 public class KeyPadTyping {
     public static void main(String[] args) {
-        String str ="geeksforgeeks";
+        String str ="geeksquiz";
         int n=str.length();
         StringBuilder stringBuilder =new StringBuilder();
         for(int i=0; i<n; ++i)
