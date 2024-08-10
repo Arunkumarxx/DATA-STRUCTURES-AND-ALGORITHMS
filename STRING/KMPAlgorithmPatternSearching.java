@@ -18,7 +18,7 @@ public class KMPAlgorithmPatternSearching {
                 return true;
             if(str.charAt(i)==pattern.charAt(j))
             {
-                ++i;
+                ++i; 
                 ++j;
                 if(j==n2)
                     return true;
