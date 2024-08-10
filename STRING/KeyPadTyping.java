@@ -26,7 +26,7 @@ public class KeyPadTyping {
         charMap['t'-'a']=8;
         charMap['u'-'a']=8;
         charMap['v'-'a']=8;
-        charMap['u'-'a']=9;
+        charMap['w'-'a']=9;
         charMap['x'-'a']=9;
         charMap['y'-'a']=9;
         charMap['z'-'a']=9;
