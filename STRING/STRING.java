@@ -11,25 +11,25 @@ class SearchComparison {
         long startTime = System.nanoTime();
         boolean containsResult = text.contains(pattern);
         long endTime = System.nanoTime();
-        long containsTime = endTime - startTime;
+        double containsTimeMs = (endTime - startTime) / 1_000_000.0; // Convert to milliseconds
         System.out.println("String.contains() found pattern: " + containsResult);
-        System.out.println("String.contains() time: " + containsTime + " nanoseconds");
+        System.out.printf("String.contains() time: %.6f milliseconds%n", containsTimeMs);
 
         // Measure time for Naive search
         startTime = System.nanoTime();
         int naiveCount = naivePatternSearch(text, pattern);
         endTime = System.nanoTime();
-        long naiveTime = endTime - startTime;
+        double naiveTimeMs = (endTime - startTime) / 1_000_000.0; // Convert to milliseconds
         System.out.println("Naive search found pattern " + naiveCount + " times");
-        System.out.println("Naive search time: " + naiveTime + " nanoseconds");
+        System.out.printf("Naive search time: %.6f milliseconds%n", naiveTimeMs);
 
         // Measure time for Rabin-Karp search
         startTime = System.nanoTime();
         int rabinKarpCount = rabinKarpPatternSearch(text, pattern);
         endTime = System.nanoTime();
-        long rabinKarpTime = endTime - startTime;
+        double rabinKarpTimeMs = (endTime - startTime) / 1_000_000.0; // Convert to milliseconds
         System.out.println("Rabin-Karp search found pattern " + rabinKarpCount + " times");
-        System.out.println("Rabin-Karp search time: " + rabinKarpTime + " nanoseconds");
+        System.out.printf("Rabin-Karp search time: %.6f milliseconds%n", rabinKarpTimeMs);
     }
 
     private static String generateRandomText(int length) {
