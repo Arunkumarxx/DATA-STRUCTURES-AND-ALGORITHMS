@@ -2,7 +2,8 @@ package STRING;
 
  class PatternMatchingBenchmark {
     public static void main(String[] args) {
- 
+        String text = generateLargeText(10000000);
+        String pattern = generateLargeText(10000000);
 
         // Benchmark Naive approach
         long startNaive = System.currentTimeMillis();
