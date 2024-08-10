@@ -23,7 +23,7 @@ public class KeyPadTyping {
             case 'p': case 'q': case 'r': case 's':   return '7';
             case 't': case 'u': case 'v': return '8';
             case 'w': case 'x': case 'y': case 'z':   return '9';
+            default: return ' ';
         }
-        return ' ';
     }
 }
