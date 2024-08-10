@@ -20,15 +20,18 @@ public class KMPAlgorithmPatternSearching {
             {
                 ++i;
                 ++j;
-                if(i==n2)
-                    return true;
+                continue;
             }
             else {
-                if(j!=0)
-                    j=longestPrefix(str,pattern,i,j);
+                int ind=longestPrefix(str,pattern,i,j);
+                if(ind!=-1)
+                {
+                    j=ind;
+                }
                 else
-                    ++i;
+                    j=0;
             }
+            ++i;
         }
         return false;
     }
@@ -38,6 +41,6 @@ public class KMPAlgorithmPatternSearching {
             if(str.charAt(i)==pattern.charAt(k))
                 return k;
         }
-        return 0;
+        return -1;
     }
 }
