@@ -48,7 +48,10 @@ package STRING;
         int textLen = text.length();
         int patLen = pattern.length();
         for (int i = 0; i <= textLen - patLen; i++) {
+            if(text.charAt(i)!=pattern.charAt(0))
+                continue;
             int j;
+
             for (j = 0; j < patLen; j++) {
                 if (text.charAt(i + j) != pattern.charAt(j)) {
                     break;
