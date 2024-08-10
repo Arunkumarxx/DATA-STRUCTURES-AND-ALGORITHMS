@@ -9,7 +9,7 @@ class PatternSearchingBenchmark {
         return sb.toString();
     }
     public static void main(String[] args) {
-        String text =  generateWorstCaseText(10000000);;
+        String text =  generateWorstCaseText(10000000).repeat(100);;
         String pattern ="b";
 
         long startTime = System.nanoTime();
