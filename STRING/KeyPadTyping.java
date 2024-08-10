@@ -14,8 +14,12 @@ public class KeyPadTyping {
     {
         switch (s)
         {
-            case ( s=='a'|| s=='b'|| s=='c'): return '2'; break;
+            case s=='a':
+            case s=='b':
+            case s=='c':
+                return '2';
+                break;
         }
-        return '';
+        return ' ';
     }
 }
