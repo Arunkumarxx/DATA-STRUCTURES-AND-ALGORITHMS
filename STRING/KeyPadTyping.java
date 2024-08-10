@@ -10,12 +10,12 @@ public class KeyPadTyping {
            stringBuilder.append( printNumber(str.charAt(i)));
         }
     }
-    private static String printNumber(char s)
+    private static char printNumber(char s)
     {
         switch (s)
         {
-            case 
+            case ( s=='a'|| s=='b'|| s=='c'): return '2'; break;
         }
-        return "";
+        return '';
     }
 }
