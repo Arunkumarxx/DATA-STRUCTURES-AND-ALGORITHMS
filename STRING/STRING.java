@@ -1,9 +1,16 @@
 package STRING;
 class PatternSearchingBenchmark {
-
+    private static String generateWorstCaseText(int size) {
+        // Generate a large text with repeated 'a' characters
+        StringBuilder sb = new StringBuilder(size);
+        for (int i = 0; i < size; i++) {
+            sb.append('a');
+        }
+        return sb.toString();
+    }
     public static void main(String[] args) {
         String text =  generateWorstCaseText(10000000);;
-        String pattern ="";
+        String pattern ="b";
 
         long startTime = System.nanoTime();
         boolean naiveResult = naivePatternSearch(text, pattern);
