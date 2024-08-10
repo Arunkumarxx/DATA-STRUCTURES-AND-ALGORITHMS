@@ -2,7 +2,7 @@ package STRING;
 class PatternSearchingBenchmark {
 
     public static void main(String[] args) {
-        String text = "";
+        String text =  generateWorstCaseText(10000000);;
         String pattern ="";
 
         long startTime = System.nanoTime();
