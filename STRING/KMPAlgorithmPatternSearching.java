@@ -7,6 +7,8 @@ public class KMPAlgorithmPatternSearching {
         System.out.println(kmp(str,pattern));
     }
     private static boolean  kmp(String str,String pattern) {
+        if(pattern.length()>str.length())
+            return false;
         int n1=str.length();
         int n2=pattern.length();
         int i=0 ,j=0;
