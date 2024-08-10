@@ -9,7 +9,7 @@ public class KeyPadTyping {
         {
            stringBuilder.append( printNumber(str.charAt(i)));
         }
-        System.out.println(stringBuilder);
+        System.out.println(stringBuilder.toString());
     }
     private static char printNumber(char s)
     {
