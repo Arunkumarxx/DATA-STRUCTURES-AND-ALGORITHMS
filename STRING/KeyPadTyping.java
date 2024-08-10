@@ -34,14 +34,12 @@ public class KeyPadTyping {
     public static void main(String[] args) {
         String str ="geeksquiz";
         int n=str.length();
-        StringBuilder stringBuilder =new StringBuilder();
-        int []  charMap =new int[26];
-
+        StringBuilder result =new StringBuilder();
          for(int i=0; i<n; ++i)
         {
-            
+            result.append(charMap[str.charAt(i)-'a']);
         }
-        System.out.println(stringBuilder.toString());
+        System.out.println(result.toString());
     }
 
 }
