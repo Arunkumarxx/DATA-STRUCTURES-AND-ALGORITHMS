@@ -9,16 +9,46 @@ public class KeyPadTyping {
         {
            stringBuilder.append( printNumber(str.charAt(i)));
         }
+        System.out.println(stringBuilder);
     }
     private static char printNumber(char s)
     {
         switch (s)
         {
-            case s=='a':
-            case s=='b':
-            case s=='c':
+            case 'a':
+            case 'b':
+            case 'c':
                 return '2';
-                break;
+            case 'd':
+            case 'e':
+            case 'f':
+                return '3';
+            case 'g':
+            case 'h':
+            case 'i':
+                return '4';
+            case 'j':
+            case 'k':
+            case 'l':
+                return '5';
+            case 'm':
+            case 'n':
+            case 'o':
+                return '6';
+            case 'p':
+            case 'q':
+            case 'r':
+            case 's':
+                return '7';
+            case 't':
+            case 'u':
+            case 'v':
+                return '8';
+            case 'w':
+            case 'x':
+            case 'y':
+            case 'z':
+                return '9';
         }
         return ' ';
     }
