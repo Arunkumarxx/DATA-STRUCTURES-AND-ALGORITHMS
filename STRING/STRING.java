@@ -6,22 +6,22 @@ class PatternSearchingBenchmark {
         String pattern = "utiusvaoawhrqfslvrbrwympmznkrawqlzaszbls";
 
         // Benchmark Naive Approach
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         boolean naiveResult = naivePatternSearch(text, pattern);
-        long naiveTime = System.currentTimeMillis() - startTime;
-        System.out.println("Naive Result: " + naiveResult + ", Time: " + naiveTime + " ms");
+        long naiveTime = System.nanoTime() - startTime;
+        System.out.println("Naive Result: " + naiveResult + ", Time: " + naiveTime + " ns");
 
         // Benchmark KMP Approach
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         boolean kmpResult = kmpPatternSearch(text, pattern);
-        long kmpTime = System.currentTimeMillis() - startTime;
-        System.out.println("KMP Result: " + kmpResult + ", Time: " + kmpTime + " ms");
+        long kmpTime = System.nanoTime() - startTime;
+        System.out.println("KMP Result: " + kmpResult + ", Time: " + kmpTime + " ns");
 
         // Benchmark Rabin-Karp Approach
-        startTime = System.currentTimeMillis();
+        startTime = System.nanoTime();
         boolean rabinKarpResult = rabinKarpPatternSearch(text, pattern);
-        long rabinKarpTime = System.currentTimeMillis() - startTime;
-        System.out.println("Rabin-Karp Result: " + rabinKarpResult + ", Time: " + rabinKarpTime + " ms");
+        long rabinKarpTime = System.nanoTime() - startTime;
+        System.out.println("Rabin-Karp Result: " + rabinKarpResult + ", Time: " + rabinKarpTime + " ns");
     }
 
     private static boolean naivePatternSearch(String text, String pattern) {
