@@ -24,10 +24,10 @@ public class AnagramSearch {
         for(int i=0; i<=n-k; ++i)
         {
             hash1-=(str.charAt(i)-'a');
-            hash1+=(str.charAt(i+k)-'a');
-            if(hash1==hash2) {
+            if(i+k<n)
+                hash1 += (str.charAt(i + k) - 'a');
+            if(hash1==hash2)
                 ++count;
-            }
         }
         return count;
     }
