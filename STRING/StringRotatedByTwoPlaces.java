@@ -5,7 +5,7 @@ public class StringRotatedByTwoPlaces {
         String s1 = "amazon";
         String s2 = "azonam";
         StringBuilder stringBuilder =new StringBuilder(s1);
-        stringBuilder.delete(1,2);
+        stringBuilder.delete(0,1);
         System.out.println(stringBuilder);
     }
 }
