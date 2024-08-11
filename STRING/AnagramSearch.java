@@ -3,6 +3,10 @@ package STRING;
 import java.util.Arrays;
 
 public class AnagramSearch {
+
+    static   int [] windowHash  =new int[26];
+    static   int [] patternHash = new int[26];
+
     public static void main(String[] args) {
         String txt="forxxorfxdofr";
         String pattern ="for";
@@ -12,8 +16,7 @@ public class AnagramSearch {
         int n1=str.length();
         int n2=pattern.length();
         if(n2>n1) return -1;
-        int [] windowHash  =new int[26];
-        int [] patternHash = new int[26];
+
         for(int i=0; i<n2; ++i) {
             patternHash[pattern.charAt(i) - 'a']++;
             windowHash[str.charAt(i)-'a']++;
