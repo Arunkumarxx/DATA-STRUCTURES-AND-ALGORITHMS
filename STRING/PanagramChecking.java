@@ -13,9 +13,14 @@ public class PanagramChecking {
     public static boolean checkPangram  (String s) {
         int [] ALPHABET = new int[26];
         for(int i=0; i<s.length(); ++i){
-            int ind=s.charAt(i)<97?(int)s.charAt(i)+32:s.charAt(i);
-            ++ALPHABET[ind-'a'];
-           }
+            if(s.charAt(i)>='a' && s.charAt(i)<='z')
+            {
+            ++ALPHABET[s.charAt(i)-'a'];
+            }
+            else  if(s.charAt(i) >='A' && s.charAt(i)<='Z')
+            {
+                ++ALPHABET[Character.toLowerCase(s.charAt(i))-'a'];
+            }
         return false;
     }
 
