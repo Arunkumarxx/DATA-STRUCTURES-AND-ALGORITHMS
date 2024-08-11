@@ -50,6 +50,7 @@ public class AnagramSearch {
             }
             if(windowHash[i]==patternHash[i])
                 ++c;
+            ++i;
         }
         return c;
     }
