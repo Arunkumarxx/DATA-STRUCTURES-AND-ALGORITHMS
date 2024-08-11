@@ -15,7 +15,15 @@ public class KMPAlgorithmPatternSearching {
         System.out.println(Arrays.toString(lps));
         while(i<j && j<n)
         {
-            
+            if(pattern.charAt(i)==pattern.charAt(j)) {
+                lps[j] = i + 1;
+                ++i;
+                ++j;
+            }
+            else if(i!=0){
+                --i;
+            }
+            else ++j;
         }
     }
 }
