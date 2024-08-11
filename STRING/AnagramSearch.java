@@ -20,9 +20,6 @@ public class AnagramSearch {
         int [] windowHash  =new int[26];
         int [] patternHash = new int[26];
 
-        for(int i=0; i<n1;++i)
-            windowHash[str.charAt(i)-'a']++;
-
         for(int j=0; j<n2; ++j)
             patternHash[pattern.charAt(j)-'a']++;
 
