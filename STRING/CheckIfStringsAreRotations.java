@@ -37,5 +37,6 @@ public class CheckIfStringsAreRotations {
         System.out.println(Arrays.toString(lsp));
     }
     private static boolean kmp(String str,String pattern) {
+        return false;
     }
 }
