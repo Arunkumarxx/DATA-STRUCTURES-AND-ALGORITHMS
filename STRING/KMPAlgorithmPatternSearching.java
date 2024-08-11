@@ -25,5 +25,6 @@ public class KMPAlgorithmPatternSearching {
             }
             else ++j;
         }
+        System.out.println(Arrays.toString(lps));
     }
 }
