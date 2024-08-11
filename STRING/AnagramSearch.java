@@ -3,7 +3,7 @@ package STRING;
 public class AnagramSearch {
     public static void main(String[] args) {
         String str = "eaylnlfdxf";
-        String patt = "A";
+        String patt = "irc";
         System.out.println(SlidingWindowWithHashing(str,patt));
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
