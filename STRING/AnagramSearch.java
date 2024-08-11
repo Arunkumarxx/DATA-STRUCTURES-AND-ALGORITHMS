@@ -22,9 +22,10 @@ public class AnagramSearch {
             patternHash[pattern.charAt(i) - 'a']++;
             windowHash[str.charAt(i)-'a']++;
         }
-        System.out.println(n1-k);
-        System.out.println(n1);
-        System.out.println(n1-(k+1));
+//        System.out.println(n1-k);
+//        System.out.println(n1);
+//        System.out.println(n1-(k+1));
+        System.out.println(isPatternFound());
         for(int i=1; i<=n1-k;++i)
         {
 
@@ -35,7 +36,19 @@ public class AnagramSearch {
         return -1;
     }
     private static boolean isPatternFound() {
-
+        int patterCount=0;
+        int windowCount=0;
+        for(int i=0; i<26; ++i)
+        {
+            if(windowHash[i]>0) {
+                if (windowHash[i] == patternHash[i]) {
+                    ++patterCount;
+                    ++windowCount;
+                }
+            }
+        }
+        if(patterCount==windowCount)
+            return true;
         return false;
     }
 }
