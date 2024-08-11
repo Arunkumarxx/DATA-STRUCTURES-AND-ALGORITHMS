@@ -29,7 +29,7 @@ public class AnagramSearch {
         int winPatternCount=isMatchFound(windowHash,patternHash,0,25);
         if(winPatternCount==k)
             ++result;
-
+        System.out.println(result);
         for(int i=1;i<n1;++i)
         {
 
