@@ -4,10 +4,11 @@ public class AnagramSearch {
     public static void main(String[] args) {
         String str = "AB";
         String patt = "ABC";
-
         System.out.println(SlidingWindowWithHashing(str,patt));
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
+        if(pattern.length()>str.length())
+            return -1;
         int k=pattern.length();
         int hash1=0;
         int hash2=0;
