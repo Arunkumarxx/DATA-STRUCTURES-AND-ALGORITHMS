@@ -2,6 +2,8 @@ package STRING;
 
 import MATRIX.SumOfUpperAndLowerTriangles;
 
+import java.util.Arrays;
+
 public class CheckIfStringsAreRotations {
 
     public static void main(String[] args) {
@@ -10,7 +12,8 @@ public class CheckIfStringsAreRotations {
         System.out.println(isStringsAreRotations(s1,s2));
     }
     private static boolean isStringsAreRotations(String s1,String s2) {
-
+        int [] lsp=new int[s2.length()];
+        BuildLSP(s2,lsp);
     }
     private static void BuildLSP(String pattern,int [] lsp) {
         int i=0;
@@ -30,8 +33,8 @@ public class CheckIfStringsAreRotations {
                 else ++j;
             }
         }
+        System.out.println(Arrays.toString(lsp));
     }
     private static boolean kmp(String str,String pattern) {
-        
     }
 }
