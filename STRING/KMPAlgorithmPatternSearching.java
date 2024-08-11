@@ -10,8 +10,10 @@ public class KMPAlgorithmPatternSearching {
         int [] lps =new int[pattern.length()];
         BuildLongestPrefixSuffix(pattern,pattern.length(),lps);
         int n=str.length();
+        int n2=pattern.length();
         int j=0;
-        for(int i=0; i<n; ++i)
+        int i=0;
+        while(i<n && j<n2)
         {
             if(str.charAt(i)==pattern.charAt(i))
             {
