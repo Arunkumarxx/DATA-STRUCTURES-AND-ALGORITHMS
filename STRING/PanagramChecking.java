@@ -16,8 +16,7 @@ public class PanagramChecking {
                 ++ALPHABET[Character.toLowerCase(s.charAt(i)) - 'a'];
             }
         }
-        for(int x:ALPHABET)
-            System.out.println(x);
+        
         return true;
     }
 }
