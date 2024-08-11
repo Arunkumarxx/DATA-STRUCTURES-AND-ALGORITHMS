@@ -15,8 +15,7 @@ public class KMPAlgorithmPatternSearching {
         System.out.println(Arrays.toString(lps));
         while(i<j && j<n)
         {
-            i++;
-            j++;
+            
         }
     }
 }
