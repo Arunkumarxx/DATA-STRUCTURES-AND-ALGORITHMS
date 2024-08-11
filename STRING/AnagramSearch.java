@@ -7,6 +7,8 @@ public class AnagramSearch {
         int k=patt.length();
         int hash=0;
         int n=str.length();
-        for(int i=0; i<)
+        for(int i=0; i<k;++i)
+            hash+='a'-patt.charAt(i);
+        System.out.println(hash);
     }
 }
