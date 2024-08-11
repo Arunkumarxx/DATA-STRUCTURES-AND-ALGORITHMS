@@ -11,6 +11,7 @@ public class CheckIfStringsAreRotations {
     private static boolean isStringsAreRotations(String s1,String s2) {
         int [] lsp=new int[s2.length()];
         BuildLSP(s2,lsp);
+        String concat = s1+s1;
         int n1=s1.length();
         int n2=s2.length();
         int j=0;
@@ -19,7 +20,7 @@ public class CheckIfStringsAreRotations {
         {
             if(count==n2)
                 return true;
-            if(s1.charAt(i)==s2.charAt(j))
+            if(concat.charAt(i)==s2.charAt(j))
             {
                 ++i;
                 ++j;
