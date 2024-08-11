@@ -34,7 +34,7 @@ public class AnagramSearch {
         int c=0;
         while(i<=j)
         {
-            if(windowHash[i]==patternHash[i])
+            if((windowHash[i]>0||patternHash[i]>0) && windowHash[i]==patternHash[i])
                 ++c;
             ++i;
         }
