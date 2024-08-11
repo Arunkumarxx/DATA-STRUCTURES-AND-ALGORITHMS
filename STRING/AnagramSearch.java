@@ -14,6 +14,8 @@ public class AnagramSearch {
             for(char x:str.toCharArray())
                 if(x==pattern.charAt(0))
                     ++count;
+        if(count>0)
+            return count;
         int k=pattern.length();
         int hash1=pattern.hashCode();
         int hash2=str.substring(0,pattern.length()).hashCode();
