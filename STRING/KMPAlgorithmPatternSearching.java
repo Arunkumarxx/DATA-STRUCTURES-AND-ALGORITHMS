@@ -9,6 +9,19 @@ public class KMPAlgorithmPatternSearching {
         String pattern ="ababaaba";
         int [] lps =new int[pattern.length()];
         BuildLongestPrefixSuffix(pattern,pattern.length(),lps);
+        int n=str.length();
+        int j=0;
+        for(int i=0; i<n; ++i)
+        {
+            if(str.charAt(i)==pattern.charAt(i))
+            {
+                ++i;
+                ++j;
+            }
+            else {
+                
+            }
+        }
     }
     private static void BuildLongestPrefixSuffix(String pattern,int n,int [] lps) {
         int i=0;
