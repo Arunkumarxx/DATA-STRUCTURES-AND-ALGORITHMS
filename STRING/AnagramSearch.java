@@ -23,6 +23,9 @@ public class AnagramSearch {
         for(int j=0; j<n2; ++j)
             patternHash[pattern.charAt(j)-'a']++;
 
+        for(int i=0; i<k; ++i)
+            ++windowHash[str.charAt(i)-'a'];
+
         int winPatternCount=isMatchFound(windowHash,patternHash,0,k-1);
         if(winPatternCount==k)
             return winPatternCount;
