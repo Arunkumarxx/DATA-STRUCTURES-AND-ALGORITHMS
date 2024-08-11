@@ -31,7 +31,10 @@ public class AnagramSearch {
             ++result;
         for(int i=1;i<=n1-k;++i)
         {
-            
+            --windowHash[str.charAt(i)-'a'];
+            ++windowHash[str.charAt(i)-'a'];
+            if(isMatchFound(windowHash,patternHash,i,i+(k-1))==k)
+                ++result;
         }
         System.out.println(winPatternCount);
         System.out.println(Arrays.toString(windowHash));
