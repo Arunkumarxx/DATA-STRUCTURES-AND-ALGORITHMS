@@ -5,5 +5,9 @@ public class CheckIfStringsAreRotations {
         String s1="ABCD";
         String s2="CDAB";
     }
-    private static boolean 
+    private static boolean isStringsAreRotations() {
+        StringBuilder stringBuilder =new StringBuilder();
+        
+        return true;
+    }
 }
