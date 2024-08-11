@@ -40,13 +40,13 @@ public class AnagramSearch {
         int windowCount=0;
         for(int i=0; i<26; ++i)
         {
-            if(patternHash[i]>0)
+            if(patternHash[i]>0 && windowHash[i]==patternHash[i])
                 ++patterCount;
-            if(windowHash[i]>0)
+            if(windowHash[i]>0 && windowHash[i]==patternHash[i])
                 ++windowCount;
         }
-        if(patterCount==windowCount)
-            return true;
+        System.out.println(patterCount);
+        System.out.println(windowCount);
         return false;
     }
 }
