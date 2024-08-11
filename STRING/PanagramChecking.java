@@ -1,14 +1,23 @@
 package STRING;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class PanagramChecking {
-    static int [] ALPHABHET
-    public static void main(String[] args) {
-        String str="Bawds jog, flick quartz, vex nymph";
-    }
-    public static boolean checkPangram  (String s) {
 
+    public static void main(String[] args) {
+
+        String str="Bawds jog, flick quartz, vex nymph";
+        System.out.println(str.charAt(0));
+        
     }
+//    public static boolean checkPangram  (String s) {
+//        int [] ALPHABET = new int[26];
+//        for(int i=0; i<s.length(); ++i){
+//          char  x=s.charAt(i)<?;
+//           ++ALPHABET[];
+//           }
+//
+//    }
 
 }
