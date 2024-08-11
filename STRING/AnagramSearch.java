@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 public class AnagramSearch {
 
-
-
     public static void main(String[] args) {
         String txt="forxxorfxdofr";
         String pattern ="for";
