@@ -12,9 +12,14 @@ public class AnagramSearch {
         int k=pattern.length();
         int hash1=pattern.hashCode();
         int hash2=str.substring(0,pattern.length()).hashCode();
-        System.out.println(str.substring(0,2));
-        System.out.println(hash1);
-
+        int count=0;
+        int n=str.length();
+        if(hash1==hash2)
+            ++count;
+        for(int i=1; i<n-k; ++i)
+        {
+            
+        }
         return 0;
     }
 }
