@@ -2,8 +2,8 @@ package STRING;
 
 public class AnagramSearch {
     public static void main(String[] args) {
-        String str = "forxxorfxdofr";
-        String patt = "for";
+        String str = "zbcoejuvpvaboyg";
+        String patt = "po";
         System.out.println(SlidingWindowWithHashing(str,patt));
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
