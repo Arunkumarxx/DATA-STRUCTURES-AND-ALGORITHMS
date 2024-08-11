@@ -21,7 +21,7 @@ public class KMPAlgorithmPatternSearching {
                 ++j;
             }
             else if(i!=0){
-                --i;
+                i=0;
             }
             else ++j;
         }
