@@ -26,13 +26,16 @@ public class CheckIfStringsAreRotations {
             if(pattern.charAt(i)==pattern.charAt(j))
             {
                 ++i;
-                lsp[j]=i+1;
+                lsp[j]=i;
                 ++j;
             }
             else {
                 if(i!=0)
                     i=lsp[i-1];
-                else ++j;
+                else {
+                    lsp[j]=0;
+                    ++j;
+                }
             }
         }
         System.out.println(Arrays.toString(lsp));
