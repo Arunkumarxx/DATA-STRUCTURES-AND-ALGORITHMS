@@ -24,7 +24,7 @@ public class AnagramSearch {
         for(int i=1; i<=n-k; ++i)
         {
             hash1-=(str.charAt(i-1)-'a');
-              if(i+k<n)  hash1 += (str.charAt(i + k-1) - 'a');
+              hash1 += (str.charAt(i + k-1) - 'a');
             if(hash1==hash2)
                 ++count;
         }
