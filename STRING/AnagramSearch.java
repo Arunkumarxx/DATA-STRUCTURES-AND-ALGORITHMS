@@ -6,6 +6,5 @@ public class AnagramSearch {
         String patt ="bac";
         int PatternHashCode=patt.hashCode();
         if(str.hashCode()==PatternHashCode)
-            System.out.println("%b");
     }
 }
