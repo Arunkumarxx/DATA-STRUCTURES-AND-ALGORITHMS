@@ -16,7 +16,7 @@ public class CheckIfStringsAreRotations {
         int n2=s2.length();
         int j=0;
         int i=0;
-        while(i<n && j<n2)
+        while(i<n && j<n2)// kmp algorithm
         {
             if(concat.charAt(i)==s2.charAt(j))
             {
