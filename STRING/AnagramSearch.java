@@ -9,17 +9,12 @@ public class AnagramSearch {
     private static int SlidingWindowWithHashing(String str, String pattern) {
         int k = pattern.length();
         int n = str.length();
-
-
         if (k > n) {
             return 0;
         }
-
-
         if (k == 1) {
             return countOccurrences(str, pattern.charAt(0));
         }
-
 
         int hashPattern = 0;
         int hashWindow = 0;
