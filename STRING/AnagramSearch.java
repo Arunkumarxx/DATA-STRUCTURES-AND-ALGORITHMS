@@ -6,6 +6,7 @@ public class AnagramSearch {
     public static void main(String[] args) {
         String txt="forxxorfxdofr";
         String pattern ="for";
+        System.out.println(search(txt,pattern));
     }
     private static int search(String str,String pattern) {
         int n1=str.length();
@@ -19,6 +20,7 @@ public class AnagramSearch {
             patternHash[pattern.charAt(i)-'a']++;
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
+        return -1;
     }
 
 }
