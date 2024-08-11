@@ -16,7 +16,7 @@ public class PanagramChecking {
             int ind=s.charAt(i)<97?(int)s.charAt(i)+32:s.charAt(i);
             System.out.println(ind);
            }
-
+        return false;
     }
 
 }
