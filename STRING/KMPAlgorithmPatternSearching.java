@@ -1,8 +1,5 @@
 package STRING;
-
 import java.util.Arrays;
-import java.util.HashSet;
-
 public class KMPAlgorithmPatternSearching {
     public static void main(String[] args) {
         String str ="abcabab abababaabac";
@@ -24,7 +21,7 @@ public class KMPAlgorithmPatternSearching {
             }
             else {
                 if(j!=0)
-                j=lps[j-1];
+                    j=lps[j-1];
                 else ++i;
             }
         }
