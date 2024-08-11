@@ -7,13 +7,20 @@ public class CheckIfStringsAreRotations {
         String s2="CDAB";
     }
     private static boolean isStringsAreRotations(String s1,String s2) {
+        if(s1==s2)
+            return true;
         int n1=s1.length();
         int n2=s2.length();
         StringBuilder stringBuilder =new StringBuilder();
         for(int i=0; i<n1; ++i)
         {
-            
+            stringBuilder.append(s1);
+            char ph=s1.charAt(i);
+            stringBuilder.delete(0,0);
+            stringBuilder.append(ph);
+            if(stringBuilder.toString()==s1)
+                return true;
         }
-        return true;
+        return false;
     }
 }
