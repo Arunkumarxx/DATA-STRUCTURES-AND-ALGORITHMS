@@ -20,8 +20,9 @@ public class AnagramSearch {
         {
             hash1-=(str.charAt(i)-'a');
             hash1+=(str.charAt(i+k)-'a');
-            if(hash1==hash2)
+            if(hash1==hash2) {
                 ++count;
+            }
         }
         System.out.println(count);
     }
