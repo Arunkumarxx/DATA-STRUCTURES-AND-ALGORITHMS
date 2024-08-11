@@ -2,7 +2,7 @@ package STRING;
 
 public class AnagramSearch {
     public static void main(String[] args) {
-        String str = "eaylnlfdxf";
+        String str = "forxxorfxdofr";
         String patt = "irc";
         System.out.println(SlidingWindowWithHashing(str,patt));
     }
