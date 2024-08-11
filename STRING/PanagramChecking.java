@@ -8,7 +8,7 @@ public class PanagramChecking {
     public static void main(String[] args) {
 
         String str="Aawds jog, flick quartz, vex nymph";
-
+        checkPangram(str);
     }
     public static boolean checkPangram  (String s) {
         int [] ALPHABET = new int[26];
