@@ -4,7 +4,7 @@ public class PanagramChecking {
 
     public static void main(String[] args) {
 
-        String str="Bawds jog, flick quartz, vex nymph";
+        String str="Aawds jog, flick quartz, vex nymph";
         System.out.println(checkPangram(str));
     }
     public static boolean checkPangram  (String s) {
@@ -16,7 +16,9 @@ public class PanagramChecking {
                 ++ALPHABET[Character.toLowerCase(s.charAt(i)) - 'a'];
             }
         }
-
+        for(int x:ALPHABET)
+            if(x==0)
+                return false;
         return true;
     }
 }
