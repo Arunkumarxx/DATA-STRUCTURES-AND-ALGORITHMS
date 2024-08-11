@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class CheckIfStringsAreRotations {
 
     public static void main(String[] args) {
-        String s1="geeksforgeeks";
+        String s1="amazon";
         String s2="geeksgeeksfor";
         System.out.println(isStringsAreRotations(s1,s2));
     }
