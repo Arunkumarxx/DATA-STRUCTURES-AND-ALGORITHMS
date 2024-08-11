@@ -13,8 +13,7 @@ public class PanagramChecking {
     public static boolean checkPangram  (String s) {
         int [] ALPHABET = new int[26];
         for(int i=0; i<s.length(); ++i){
-            int ind=s.charAt(i)<97?(int)s.charAt(i)+32:s.charAt(i);
-            System.out.println(ind);
+            ++ALPHABET[ s.charAt(i) < 97 ? (int) s.charAt(i) + 32 : s.charAt(i) ];
            }
         return false;
     }
