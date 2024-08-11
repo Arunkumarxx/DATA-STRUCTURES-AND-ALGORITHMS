@@ -18,8 +18,6 @@ public class PanagramChecking {
         }
         for(int x:ALPHABET)
             System.out.println(x);
-            if(x==0)
-                return false;
         return true;
     }
 }
