@@ -37,21 +37,11 @@ public class AnagramSearch {
         return result;
     }
     private static boolean isMatchFound(int[] windowHash, int[] patternHash) {
-        int wc=0;
-        int wh=0;
-        for (int i = 0; i < 26; ++i) {
-            if(windowHash[i]!=0 || patternHash[i]!=0)
-            {
-                if(windowHash[i]==patternHash[i])
-                {
-                    ++wc;
-                    ++wh;
-                }
-
-            }
+        for(int i=0; i<26;++i)
+        {
+            if(windowHash[i]!=patternHash[i])
+                return false;
         }
-        if(wc==wh)
-            return true;
-        return false;
+        return true;
     }
 }
