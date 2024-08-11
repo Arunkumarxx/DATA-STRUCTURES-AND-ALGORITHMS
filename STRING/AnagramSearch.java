@@ -8,7 +8,7 @@ public class AnagramSearch {
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
         if(pattern.length()>str.length())
-            return -1;
+            return 0;
         int k=pattern.length();
         int hash1=0;
         int hash2=0;
