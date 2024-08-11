@@ -3,7 +3,7 @@ package STRING;
 public class AnagramSearch {
     public static void main(String[] args) {
         String str ="BACDGABCDA";
-        String patt ="for";
+        String patt ="ABCD";
         int k=patt.length();
         int hash1=0;
         int hash2=0;
