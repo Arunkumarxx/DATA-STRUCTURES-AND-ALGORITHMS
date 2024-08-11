@@ -21,6 +21,9 @@ public class AnagramSearch {
         {
             hash1-=(str.charAt(i)-'a');
             hash1+=(str.charAt(i+j)-'a');
+            if(hash1==hash2)
+                ++count;
         }
+        System.out.println(count);
     }
 }
