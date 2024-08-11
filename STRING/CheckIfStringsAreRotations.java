@@ -56,9 +56,6 @@ public class CheckIfStringsAreRotations {
                 }
             }
         }
-        System.out.println(Arrays.toString(lps));
-    }
-    private static boolean kmp(String str,String pattern) {
-        return false;
+
     }
 }
