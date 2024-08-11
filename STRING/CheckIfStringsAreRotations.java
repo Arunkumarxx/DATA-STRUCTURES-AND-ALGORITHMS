@@ -36,29 +36,29 @@ public class CheckIfStringsAreRotations {
         }
         return false;
     }
-    private static void BuildLSP(String pattern,int [] lsp) {
+    private static void BuildLSP(String pattern,int [] lps) {
         int i=0;
-        lsp[i]=0;
         int j=1;
+        lps[i]=0;
         int n=pattern.length();
         while(j<n)
         {
             if(pattern.charAt(i)==pattern.charAt(j))
             {
                 ++i;
-                lsp[j]=i;
+                lps[j]=i;
                 ++j;
             }
             else {
                 if(i!=0)
-                    i=lsp[i-1];
+                    i=lps[i-1];
                 else {
-                    lsp[j]=0;
+                    lps[j]=0;
                     ++j;
                 }
             }
         }
-        System.out.println(Arrays.toString(lsp));
+        System.out.println(Arrays.toString(lps));
     }
     private static boolean kmp(String str,String pattern) {
         return false;
