@@ -2,9 +2,9 @@ package STRING;
 
 public class AnagramSearch {
     public static void main(String[] args) {
-        String str = "AABBCC";
-        String patt = "ABC";
-
+        String str = "AABBAAC";
+        String patt = "A";
+        
         System.out.println(SlidingWindowWithHashing(str,patt));
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
