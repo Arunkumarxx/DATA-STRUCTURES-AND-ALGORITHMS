@@ -18,17 +18,12 @@ public class AnagramSearch {
         int k=pattern.length();
         if(n2>n1) return -1;
 
-        for(int i=0; i< patternHash.length; ++i) {
+        for(int i=0; i<n2; ++i) {
             patternHash[pattern.charAt(i) - 'a']++;
             windowHash[str.charAt(i)-'a']++;
         }
-        int windowHashCount=0;
-        for(int i=0; i< windowHash.length; ++i)
-        {
-            windowHashCount+=windowHash[i];
-        }
-        System.out.println(windowHashCount);
         return -1;
     }
+    private static
 
 }
