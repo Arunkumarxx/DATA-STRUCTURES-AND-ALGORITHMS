@@ -22,10 +22,11 @@ public class AnagramSearch {
             patternHash[pattern.charAt(i) - 'a']++;
             windowHash[str.charAt(i)-'a']++;
         }
-
+        System.out.println(n1-k);
+        System.out.println(n1-(k+1));
         for(int i=1; i<=n1-k;++i)
         {
-            
+
         }
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
