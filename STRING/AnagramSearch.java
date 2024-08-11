@@ -4,7 +4,7 @@ public class AnagramSearch {
     public static void main(String[] args) {
         String str ="BACDGABCDA";
         String patt ="ABCD";
-
+        System.out.println(SlidingWindowWithHashing(str,patt));
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
         int k=pattern.length();
