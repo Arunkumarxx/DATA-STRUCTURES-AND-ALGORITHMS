@@ -35,5 +35,6 @@ public class AnagramSearch {
     }
     private static boolean isPatternFound() {
 
+        return false;
     }
 }
