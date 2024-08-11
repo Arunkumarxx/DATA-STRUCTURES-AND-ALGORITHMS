@@ -22,7 +22,7 @@ public class KMPAlgorithmPatternSearching {
             }
             else {
                 if(j!=0)
-                j=lps[j]-1;
+                j=lps[j-1];
                 else ++i;
             }
         }
