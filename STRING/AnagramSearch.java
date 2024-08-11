@@ -16,9 +16,12 @@ public class AnagramSearch {
         int n=str.length();
         if(hash1==hash2)
             ++count;
-        for(int i=1; i<n-k; ++i)
+        for(int i=1; i<=n-k; ++i)
         {
-            
+            hash1-=String.valueOf(str.charAt(i-1)).hashCode();
+            hash1+=String.valueOf(str.charAt(i+1)).hashCode();
+            if(hash1==hash2)
+                ++count;
         }
         return 0;
     }
