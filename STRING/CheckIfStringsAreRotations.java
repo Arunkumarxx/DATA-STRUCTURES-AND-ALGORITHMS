@@ -5,7 +5,7 @@ public class CheckIfStringsAreRotations {
 
     public static void main(String[] args) {
         String s1="geeksforgeeks";
-        String s2="forgeeksgeeks";
+        String s2="geeksgeeksfor";
         System.out.println(isStringsAreRotations(s1,s2));
     }
     private static boolean isStringsAreRotations(String s1,String s2) {
