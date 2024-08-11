@@ -1,61 +1,57 @@
 package STRING;
 
+import java.util.Arrays;
+
 public class AnagramSearch {
 
     public static void main(String[] args) {
-        String txt = "forxxorfxdofr";
-        String pattern = "for";
-        System.out.println(search(txt, pattern));  // Output: 3
+        String txt="forxxorfxdofr";
+        String pattern ="for";
+        System.out.println(search(txt,pattern));
     }
+    private static int search(String str,String pattern) {
+        int n1=str.length();
+        int n2=pattern.length();
 
-    private static int search(String txt, String pattern) {
-        int n1 = txt.length();
-        int n2 = pattern.length();
+        if(n2>n1) return 0;
 
-        // Edge case: if pattern is longer than the text
-        if (n2 > n1) return 0;
+        int result=0;
+        int [] windowHash  =new int[26];
+        int [] patternHash = new int[26];
 
-        int[] patternHash = new int[26];
-        int[] windowHash = new int[26];
-        int result = 0;
+        for(int j=0; j<n2; ++j)
+            --patternHash[pattern.charAt(j)-'a'];
 
-        // Fill patternHash with frequency of characters in the pattern
-        for (int i = 0; i < n2; ++i) {
-            patternHash[pattern.charAt(i) - 'a']++;
+        for(int i=0; i<n2; ++i)
+            ++windowHash[str.charAt(i)-'a'];
+
+        if(isMatchFound(windowHash,patternHash))
+            ++result;
+        for(int i=n2; i<n1; ++i)
+        {
+            --windowHash[str.charAt(i-n2)-'a'];
+            ++windowHash[str.charAt(i)-'a'];
+            if(isMatchFound(windowHash,patternHash))
+                ++result;
         }
-
-        // Fill windowHash with frequency of characters in the initial window
-        for (int i = 0; i < n2; ++i) {
-            windowHash[txt.charAt(i) - 'a']++;
-        }
-
-        // Check the initial window
-        if (areHashesEqual(windowHash, patternHash)) {
-            result++;
-        }
-
-        // Slide the window across the text
-        for (int i = n2; i < n1; ++i) {
-            // Add new character to the window
-            windowHash[txt.charAt(i) - 'a']++;
-            // Remove old character from the window
-            windowHash[txt.charAt(i - n2) - 'a']--;
-            // Check if the new window matches the pattern
-            if (areHashesEqual(windowHash, patternHash)) {
-                result++;
-            }
-        }
-
         return result;
     }
-
-    // Helper function to check if two hash arrays are equal
-    private static boolean areHashesEqual(int[] windowHash, int[] patternHash) {
+    private static boolean isMatchFound(int[] windowHash, int[] patternHash) {
+        int wc=0;
+        int wh=0;
         for (int i = 0; i < 26; ++i) {
-            if (windowHash[i] != patternHash[i]) {
-                return false;
+            if(windowHash[i]!=0 || patternHash[i]!=0)
+            {
+                if(windowHash[i]==patternHash[i])
+                {
+                    ++wc;
+                    ++wh;
+                }
+
             }
         }
-        return true;
+        if(wc==wh)
+            return true;
+        return false;
     }
 }
