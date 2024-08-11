@@ -40,7 +40,7 @@ public class AnagramSearch {
         int wc=0;
         int wh=0;
         for (int i = 0; i < 26; ++i) {
-            if(windowHash[i]!=0)
+            if(windowHash[i]!=0 || patternHash[i]!=0)
             {
                 if(windowHash[i]==patternHash[i])
                 {
