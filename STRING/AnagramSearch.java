@@ -38,8 +38,10 @@ public class AnagramSearch {
     }
     private static boolean isMatchFound(int[] windowHash, int[] patternHash) {
         for (int i = 0; i < 26; ++i) {
-            if (windowHash[i] != patternHash[i]) {
-                return false;
+            if(windowHash[i]!=0)
+            {
+                if(windowHash[i]==patternHash[i])
+                    
             }
         }
         return true;
