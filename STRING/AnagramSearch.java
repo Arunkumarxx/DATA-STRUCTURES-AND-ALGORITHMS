@@ -24,6 +24,5 @@ public class AnagramSearch {
         }
         return -1;
     }
-    private static
 
 }
