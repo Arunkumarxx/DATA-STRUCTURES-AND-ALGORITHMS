@@ -16,7 +16,10 @@ public class KMPAlgorithmPatternSearching {
         lps[i]=0;
         while(j<n)
         {
-            if()
+            if(pattern.charAt(i)==pattern.charAt(j))
+            {
+                lps[j]=
+            }
         }
     }
 }
