@@ -34,23 +34,17 @@ public class AnagramSearch {
         {
             --windowHash[str.charAt(i-n2)-'a'];
             ++windowHash[str.charAt(i)-'a'];
-            if(isMatchFound(windowHash,patternHash,i,i+(n2-1))==n2)
+            if(isMatchFound(windowHash,patternHash))
                 ++result;
         }
         return result;
     }
-    private static int isMatchFound(int [] windowHash,int [] patternHash,int i,int j) {
-        int c=0;
-        while(i<=j)
-        {
-            if(windowHash[i]==0 && patternHash[i]==0) {
-                ++i;
-                continue;
+    private static boolean isMatchFound(int[] windowHash, int[] patternHash) {
+        for (int i = 0; i < 26; ++i) {
+            if (windowHash[i] != patternHash[i]) {
+                return false;
             }
-            if(windowHash[i]==patternHash[i])
-                ++c;
-            ++i;
         }
-        return c;
+        return true;
     }
 }
