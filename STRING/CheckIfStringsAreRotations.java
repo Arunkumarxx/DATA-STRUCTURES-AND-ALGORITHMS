@@ -14,6 +14,7 @@ public class CheckIfStringsAreRotations {
     private static boolean isStringsAreRotations(String s1,String s2) {
         int [] lsp=new int[s2.length()];
         BuildLSP(s2,lsp);
+        return false
     }
     private static void BuildLSP(String pattern,int [] lsp) {
         int i=0;
