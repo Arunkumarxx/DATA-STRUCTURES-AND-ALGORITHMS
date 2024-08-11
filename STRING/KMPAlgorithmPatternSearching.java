@@ -20,9 +20,10 @@ public class KMPAlgorithmPatternSearching {
             {
                 ++i;
                 ++j;
-                if(j==n2)
-                    return true;
+
             }
+            if(j==n2)
+                return true;
             else {
                 if(j!=0)
                     j=lps[j-1];
