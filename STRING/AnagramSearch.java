@@ -1,2 +1,7 @@
-package STRING;public class AnagramSearch {
+package STRING;
+
+public class AnagramSearch {
+    public static void main(String[] args) {
+        
+    }
 }
