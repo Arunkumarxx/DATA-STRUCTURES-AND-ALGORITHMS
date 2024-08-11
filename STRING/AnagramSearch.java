@@ -6,7 +6,7 @@ public class AnagramSearch {
 
     public static void main(String[] args) {
         String txt="aabaabaa";
-        String pattern ="for";
+        String pattern ="aaba";
         System.out.println(search(txt,pattern));
     }
     private static int search(String str,String pattern) {
