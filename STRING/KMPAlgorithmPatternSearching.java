@@ -11,6 +11,12 @@ public class KMPAlgorithmPatternSearching {
         BuildLongestPrefixSuffix(pattern,pattern.length(),lps);
     }
     private static void BuildLongestPrefixSuffix(String pattern,int n,int [] lps) {
-        
+        int i=0;
+        int j=1;
+        lps[i]=0;
+        while(j<n)
+        {
+            if()
+        }
     }
 }
