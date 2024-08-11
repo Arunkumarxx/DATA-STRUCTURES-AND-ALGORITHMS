@@ -24,6 +24,13 @@ public class AnagramSearch {
             patternHash[pattern.charAt(j)-'a']++;
 
         int winPatternCount=isMatchFound(windowHash,patternHash,0,k-1);
+        if(winPatternCount==k)
+            return winPatternCount;
+
+        for(int i=1;i<n1;++i)
+        {
+
+        }
         System.out.println(winPatternCount);
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
