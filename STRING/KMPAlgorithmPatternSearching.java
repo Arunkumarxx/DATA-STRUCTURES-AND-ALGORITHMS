@@ -15,7 +15,7 @@ public class KMPAlgorithmPatternSearching {
         int i=0;
         while(i<n && j<n2)
         {
-            if(str.charAt(i)==pattern.charAt(i))
+            if(str.charAt(i)==pattern.charAt(j))
             {
                 ++i;
                 ++j;
