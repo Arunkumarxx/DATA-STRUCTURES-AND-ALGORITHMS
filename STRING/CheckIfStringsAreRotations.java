@@ -28,11 +28,11 @@ public class CheckIfStringsAreRotations {
             }
             if(j==n2)
                 return true;
-            else {
+            if(i<n1 && concat.charAt(i)!=s2.charAt(j))
                 if(j!=0)
                     j=lsp[j-1];
                 else ++i;
-            }
+
         }
         return false;
     }
