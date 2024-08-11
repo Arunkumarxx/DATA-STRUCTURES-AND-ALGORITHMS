@@ -12,4 +12,7 @@ public class CheckIfStringsAreRotations {
     private static boolean isStringsAreRotations(String s1,String s2) {
         
     }
+    private static void BuildLSP() {
+
+    }
 }
