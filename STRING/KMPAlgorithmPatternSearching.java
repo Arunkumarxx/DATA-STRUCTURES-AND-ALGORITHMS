@@ -19,7 +19,11 @@ public class KMPAlgorithmPatternSearching {
                 ++j;
             }
             else {
-
+                if(j!=0)
+                {
+                    j=lps[j-1];
+                }
+                else ++i;
             }
         }
     }
