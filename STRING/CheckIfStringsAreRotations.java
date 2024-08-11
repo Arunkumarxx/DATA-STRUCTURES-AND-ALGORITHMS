@@ -18,7 +18,7 @@ public class CheckIfStringsAreRotations {
         stringBuilder.append(s1);
         for(int i=0; i<n1; ++i)
         {
-            stringBuilder.delete(0,0);
+            stringBuilder.delete(0,1);
             System.out.println(stringBuilder);
             char x=s1.charAt(i);
             stringBuilder.append(x);
