@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class KMPAlgorithmPatternSearching {
     public static void main(String[] args) {
         String str ="abcabab abababaabac";
-        String pattern ="ababaaba";
+        String pattern ="ababaxba";
         int [] lps =new int[pattern.length()];
         BuildLongestPrefixSuffix(pattern,pattern.length(),lps);
         int n=str.length();
@@ -28,7 +28,6 @@ public class KMPAlgorithmPatternSearching {
                 else ++i;
             }
         }
-        System.out.println("false");
     }
     private static void BuildLongestPrefixSuffix(String pattern,int n,int [] lps) {
         int i=0;
