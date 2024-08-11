@@ -16,7 +16,7 @@ public class AnagramSearch {
         int n2=pattern.length();
         int k=pattern.length();
         if(n2>n1) return -1;
-
+        int result=0;
         int [] windowHash  =new int[26];
         int [] patternHash = new int[26];
 
@@ -28,7 +28,7 @@ public class AnagramSearch {
 
         int winPatternCount=isMatchFound(windowHash,patternHash,0,25);
         if(winPatternCount==k)
-            return winPatternCount;
+            ++result;
 
         for(int i=1;i<n1;++i)
         {
