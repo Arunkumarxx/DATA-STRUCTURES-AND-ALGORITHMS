@@ -14,6 +14,6 @@ public class AnagramSearch {
         int hash2=str.substring(0,pattern.length()).hashCode();
         System.out.println(hash1);
 
-        return count;
+        return 0;
     }
 }
