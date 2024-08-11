@@ -25,7 +25,6 @@ public class AnagramSearch {
 //        System.out.println(n1-k);
 //        System.out.println(n1);
 //        System.out.println(n1-(k+1));
-        System.out.println(isPatternFound());
         for(int i=1; i<=n1-k;++i)
         {
 
