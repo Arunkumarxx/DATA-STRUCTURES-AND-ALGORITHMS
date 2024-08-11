@@ -12,7 +12,7 @@ public class CheckIfStringsAreRotations {
         int [] lsp=new int[s2.length()];
         BuildLSP(s2,lsp);
         String concat = s1+s1;
-        int n=s1.length();
+        int n=concat.length();
         int n2=s2.length();
         int j=0;
         int i=0;
