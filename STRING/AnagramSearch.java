@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public class AnagramSearch {
 
-    static   int [] windowHash  =new int[26];
-    static   int [] patternHash = new int[26];
+
 
     public static void main(String[] args) {
         String txt="forxxorfxdofr";
@@ -18,21 +17,29 @@ public class AnagramSearch {
         int k=pattern.length();
         if(n2>n1) return -1;
 
+        int [] windowHash  =new int[26];
+        int [] patternHash = new int[26];
+
         for(int i=0; i<n1;++i)
             windowHash[str.charAt(i)-'a']++;
 
         for(int j=0; j<n2; ++j)
             patternHash[pattern.charAt(j)-'a']++;
 
-        int winPatternCount=0;
-        for(int i=0; i<windowHash.length; ++i)
-            winPatternCount+=windowHash[i];
-        
+        int winPatternCount=isMatchFound(windowHash,patternHash,0,k-1);
         System.out.println(winPatternCount);
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
 
         return -1;
     }
-
+    private static int isMatchFound(int [] windowHash,int [] patternHash,int i,int j) {
+        int c=0;
+        while(i<=j)
+        {
+            if(  windowHash[i]>0 && patternHash[i]>0 &&windowHash[i]==patternHash[i])
+                ++c;
+        }
+        return c;
+    }
 }
