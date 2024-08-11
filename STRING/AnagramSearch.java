@@ -2,9 +2,11 @@ package STRING;
 
 public class AnagramSearch {
     public static void main(String[] args) {
-        String str = "wljfrimpmyhchzriwkbarxbgfcbceyhjugixwtbvtrehb";
+        String str = "babgfcbceyhjugixwtbvtrehb";
         String patt = "b";
         System.out.println(SlidingWindowWithHashing(str,patt));
+        System.out.println(String.valueOf(str.charAt(0)).hashCode());
+        System.out.println(String.valueOf(str.charAt(2)).hashCode());
     }
     private static int SlidingWindowWithHashing(String str,String pattern) {
         if(pattern.length()>str.length())
