@@ -29,9 +29,9 @@ public class AnagramSearch {
         int winPatternCount=isMatchFound(windowHash,patternHash,0,25);
         if(winPatternCount==k)
             ++result;
-        for(int i=1;i<n1;++i)
+        for(int i=1;i<=n1-k;++i)
         {
-
+            
         }
         System.out.println(winPatternCount);
         System.out.println(Arrays.toString(windowHash));
