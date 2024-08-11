@@ -15,15 +15,15 @@ public class CheckIfStringsAreRotations {
         int n1=s1.length();
         int n2=s2.length();
         StringBuilder stringBuilder =new StringBuilder();
+        stringBuilder.append(s1);
         for(int i=0; i<n1; ++i)
         {
-            stringBuilder.append(s1);
-            char ph=s1.charAt(i);
-            stringBuilder.delete(i,i);
-            stringBuilder.append(ph);
+            stringBuilder.delete(0,0);
+            char x=s1.charAt(i);
+            stringBuilder.append(x);
             if(stringBuilder.toString()==s1)
                 return true;
-            stringBuilder.setLength(0);
+
         }
         return false;
     }
