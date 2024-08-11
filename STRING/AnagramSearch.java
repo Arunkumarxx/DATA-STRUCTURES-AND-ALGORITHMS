@@ -19,7 +19,7 @@ public class AnagramSearch {
         for(int i=1; i<=n-k; ++i)
         {
             hash1-=String.valueOf(str.charAt(i-1)).hashCode();
-            hash1+=String.valueOf(str.charAt(i+1)).hashCode();
+            hash1+=String.valueOf(str.charAt(i+k)).hashCode();
             if(hash1==hash2)
                 ++count;
         }
