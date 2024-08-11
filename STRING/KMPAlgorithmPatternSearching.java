@@ -31,11 +31,11 @@ public class KMPAlgorithmPatternSearching {
         }
         return false;
     }
-    private static void BuildLongestPrefixSuffix(String pattern,int n,int [] lps) {
+    private static void BuildLongestPrefixSuffix(String pattern,int m,int [] lps) {
         int i=0;
         int j=1;
         lps[i]=0;
-        while(j<n)
+        while(j<m)
         {
             if(pattern.charAt(i)==pattern.charAt(j))
             {
