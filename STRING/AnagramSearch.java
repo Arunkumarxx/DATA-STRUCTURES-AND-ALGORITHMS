@@ -15,8 +15,8 @@ public class AnagramSearch {
         int n=str.length();
 
         for(int i=0; i<k;++i) {
-            hash1 += pattern.charAt(i) - 'a';
-            hash2+= str.charAt(i)-'a';
+            hash1 += str.charAt(i) - 'a';
+            hash2+= pattern.charAt(i)-'a';
         }
         int count=0;
         if(hash1== hash2)
