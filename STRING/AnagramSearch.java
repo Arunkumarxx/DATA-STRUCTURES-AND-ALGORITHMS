@@ -26,6 +26,7 @@ public class AnagramSearch {
 
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
+        return -1;
     }
 
 }
