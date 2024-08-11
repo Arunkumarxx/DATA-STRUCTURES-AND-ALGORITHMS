@@ -40,11 +40,10 @@ public class AnagramSearch {
         int windowCount=0;
         for(int i=0; i<26; ++i)
         {
-            if( patternHash[i]==windowHash[i]){
+            if(patternHash[i]>0)
                 ++patterCount;
+            if(windowHash[i]>0)
                 ++windowCount;
-            }
-
         }
         if(patterCount==windowCount)
             return true;
