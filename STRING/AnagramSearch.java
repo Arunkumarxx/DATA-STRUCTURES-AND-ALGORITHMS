@@ -23,7 +23,6 @@ public class AnagramSearch {
             windowHash[str.charAt(i)-'a']++;
         }
         System.out.println(n1-k);
-        System.out.println(n);
         System.out.println(n1-(k+1));
         for(int i=1; i<=n1-k;++i)
         {
