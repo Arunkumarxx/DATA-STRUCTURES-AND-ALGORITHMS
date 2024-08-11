@@ -1,8 +1,5 @@
 package STRING;
 
-import java.util.Arrays;
-import java.util.HashMap;
-
 public class PanagramChecking {
 
     public static void main(String[] args) {
@@ -18,7 +15,7 @@ public class PanagramChecking {
             } else if (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
                 ++ALPHABET[Character.toLowerCase(s.charAt(i)) - 'a'];
             }
-            return false;
         }
+        return false;
     }
 }
