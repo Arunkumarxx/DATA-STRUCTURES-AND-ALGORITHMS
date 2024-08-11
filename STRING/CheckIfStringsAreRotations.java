@@ -26,6 +26,7 @@ public class CheckIfStringsAreRotations {
             if(pattern.charAt(i)==pattern.charAt(j))
             {
                 ++i;
+                lsp[j]=i+1;
                 ++j;
             }
             else {
