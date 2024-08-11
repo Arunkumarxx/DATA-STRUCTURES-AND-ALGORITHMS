@@ -1,5 +1,8 @@
 package STRING;
 
-public class CheckPangram {
+public class PanagramChecking {
+    public static void main(String[] args) {
+
+    }
     
 }
