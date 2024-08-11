@@ -6,28 +6,51 @@ public class AnagramSearch {
         String patt = "b";
         System.out.println(SlidingWindowWithHashing(str,patt));
     }
-    private static int SlidingWindowWithHashing(String str,String pattern) {
-        if(pattern.length()>str.length())
+    private static int SlidingWindowWithHashing(String str, String pattern) {
+        int k = pattern.length();
+        int n = str.length();
+
+
+        if (k > n) {
             return 0;
-        int count=0;
-        if(pattern.length()==1)
-            for(char x:str.toCharArray())
-                if(x==pattern.charAt(0))
-                    ++count;
-        if(count>0)
-            return count;
-        int k=pattern.length();
-        int hash1=pattern.hashCode();
-        int hash2=str.substring(0,pattern.length()).hashCode();
-        int n=str.length();
-        if(hash1==hash2)
-            ++count;
-        for(int i=1; i<=n-k; ++i)
-        {
-            hash1-=String.valueOf(str.charAt(i-1)).hashCode();
-            hash1+=String.valueOf(str.charAt(i+(k-1))).hashCode();
-            if(hash1==hash2)
-                ++count;
+        }
+
+
+        if (k == 1) {
+            return countOccurrences(str, pattern.charAt(0));
+        }
+
+
+        int hashPattern = 0;
+        int hashWindow = 0;
+        int count = 0;
+
+
+        for (int i = 0; i < k; ++i) {
+            hashPattern += pattern.charAt(i);
+            hashWindow += str.charAt(i);
+        }
+
+        if (hashPattern == hashWindow) {
+            count++;
+        }
+
+        for (int i = k; i < n; ++i) {
+            hashWindow += str.charAt(i) - str.charAt(i - k);
+            if (hashPattern == hashWindow) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    private static int countOccurrences(String str, char target) {
+        int count = 0;
+        for (int i = 0; i < str.length(); ++i) {
+            if (str.charAt(i) == target) {
+                count++;
+            }
         }
         return count;
     }
