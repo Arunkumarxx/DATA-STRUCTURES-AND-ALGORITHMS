@@ -15,6 +15,7 @@ public class AnagramSearch {
     private static int search(String str,String pattern) {
         int n1=str.length();
         int n2=pattern.length();
+        int k=pattern.length();
         if(n2>n1) return -1;
 
         for(int i=0; i<n2; ++i) {
@@ -22,6 +23,10 @@ public class AnagramSearch {
             windowHash[str.charAt(i)-'a']++;
         }
 
+        for(int i=1; i<=n1-k;++i)
+        {
+            
+        }
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
 
