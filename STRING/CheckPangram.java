@@ -1,2 +1,5 @@
-package STRING;public class CheckPangram {
+package STRING;
+
+public class CheckPangram {
+    
 }
