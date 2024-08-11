@@ -21,9 +21,8 @@ public class CheckIfStringsAreRotations {
             stringBuilder.delete(0,0);
             char x=s1.charAt(i);
             stringBuilder.append(x);
-            if(stringBuilder.toString()==s1)
+            if(stringBuilder.toString()==s2)
                 return true;
-
         }
         return false;
     }
