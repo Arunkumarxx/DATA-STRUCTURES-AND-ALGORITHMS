@@ -18,7 +18,7 @@ public class CheckIfStringsAreRotations {
         int i=0;
         while(i<n && j<n2)
         {
-            if(s1.charAt(i)==s2.charAt(j))
+            if(concat.charAt(i)==s2.charAt(j))
             {
                 ++i;
                 ++j;
@@ -26,7 +26,7 @@ public class CheckIfStringsAreRotations {
             }
             if(j==n2 )
                 return true;
-            if(i<n && s1.charAt(i)!=s2.charAt(j))
+            if(i<n && concat.charAt(i)!=s2.charAt(j))
                 if(j!=0)
                     j=lsp[j-1];
                 else ++i;

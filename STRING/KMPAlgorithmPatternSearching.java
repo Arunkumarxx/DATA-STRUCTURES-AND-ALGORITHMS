@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class KMPAlgorithmPatternSearching {
     public static void main(String[] args) {
         String str ="abcabab abababaabac";
-        String pattern ="forgeeksgeeks";
+        String pattern ="abababa";
         int [] lps =new int[pattern.length()];
         BuildLongestPrefixSuffix(pattern,pattern.length(),lps);
         System.out.println(KMP_Alogrithm(str,pattern,lps));
@@ -52,7 +52,6 @@ public class KMPAlgorithmPatternSearching {
                 }
             }
         }
-        System.out.println(Arrays.toString(lps));
 
     }
 }
