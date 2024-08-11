@@ -39,6 +39,7 @@ public class AnagramSearch {
         {
             if(windowHash[i]>0 && windowHash[i]==patternHash[i])
                 ++c;
+            ++i;
         }
         return c;
     }
