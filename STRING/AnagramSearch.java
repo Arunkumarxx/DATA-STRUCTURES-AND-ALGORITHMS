@@ -14,12 +14,13 @@ public class AnagramSearch {
         if(n2>n1) return -1;
         int [] windowHash  =new int[26];
         int [] patternHash = new int[26];
-        for(int i=0; i<n1; ++i)
+        for(int i=0; i<n2; ++i) {
+            patternHash[pattern.charAt(i) - 'a']++;
             windowHash[str.charAt(i)-'a']++;
-        for(int i=0; i<n2; ++i)
-            patternHash[pattern.charAt(i)-'a']++;
+        }
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
+
         return -1;
     }
 
