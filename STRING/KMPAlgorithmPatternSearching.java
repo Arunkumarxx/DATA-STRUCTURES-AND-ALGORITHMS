@@ -6,6 +6,10 @@ public class KMPAlgorithmPatternSearching {
         String pattern ="abababa";
         int [] lps =new int[pattern.length()];
         BuildLongestPrefixSuffix(pattern,pattern.length(),lps);
+
+        System.out.println("false");
+    }
+    private static boolean KMP_Alogrithm(String str,String pattern,int [] lps) {
         int n=str.length();
         int n2=pattern.length();
         int j=0;
@@ -17,7 +21,7 @@ public class KMPAlgorithmPatternSearching {
                 ++i;
                 ++j;
                 if(j==n2)
-                    return;
+                    return true;
             }
             else {
                 if(j!=0)
@@ -25,7 +29,7 @@ public class KMPAlgorithmPatternSearching {
                 else ++i;
             }
         }
-        System.out.println("false");
+        return false;
     }
     private static void BuildLongestPrefixSuffix(String pattern,int n,int [] lps) {
         int i=0;
