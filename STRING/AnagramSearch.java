@@ -14,26 +14,27 @@ public class AnagramSearch {
     private static int search(String str,String pattern) {
         int n1=str.length();
         int n2=pattern.length();
-        int k=pattern.length();
-        if(n2>n1) return -1;
+
+        if(n2>n1) return 0;
+
         int result=0;
         int [] windowHash  =new int[26];
         int [] patternHash = new int[26];
 
         for(int j=0; j<n2; ++j)
-            patternHash[pattern.charAt(j)-'a']++;
+            --patternHash[pattern.charAt(j)-'a'];
 
-        for(int i=0; i<k; ++i)
+        for(int i=0; i<n2; ++i)
             ++windowHash[str.charAt(i)-'a'];
 
         int winPatternCount=isMatchFound(windowHash,patternHash,0,25);
-        if(winPatternCount==k)
+        if(winPatternCount==n2)
             ++result;
-        for(int i=1;i<=n1-k;++i)
+        for(int i=n2; i<n1; ++i)
         {
-            --windowHash[str.charAt(i)-'a'];
+            --windowHash[str.charAt(i-n2)-'a'];
             ++windowHash[str.charAt(i)-'a'];
-            if(isMatchFound(windowHash,patternHash,i,i+(k-1))==k)
+            if(isMatchFound(windowHash,patternHash,i,i+(n2-1))==n2)
                 ++result;
         }
         return result;
