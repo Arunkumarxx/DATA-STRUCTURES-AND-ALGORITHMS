@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class AnagramSearch {
     public static void main(String[] args) {
         String txt="forxxorfxdofr";
-        String pattern ="fxr";
+        String pattern ="for";
         System.out.println(search(txt,pattern));
     }
     private static int search(String str,String pattern) {
