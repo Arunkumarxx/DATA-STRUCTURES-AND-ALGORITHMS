@@ -25,6 +25,7 @@ public class AnagramSearch {
         int patternHashCount = 0;
         for(int i=0; i<n2; ++i)
             patternHashCount+=patternHash[i];
+        System.out.println(patternHashCount);
 //        System.out.println(n1-k);
 //        System.out.println(n1);
 //        System.out.println(n1-(k+1));
