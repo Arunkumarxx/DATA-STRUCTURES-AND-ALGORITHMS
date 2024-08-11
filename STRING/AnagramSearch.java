@@ -28,6 +28,8 @@ public class AnagramSearch {
             if(hash1==hash2)
                 ++count;
         }
+        if(hash1==hash2)
+            ++count;
         return count;
     }
 }
