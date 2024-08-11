@@ -8,7 +8,7 @@ public class AnagramSearch {
         int hash=0;
         int n=str.length();
         for(int i=0; i<k;++i)
-            hash+='a'-patt.charAt(i);
+            hash+=str.charAt(i)-'a';
         System.out.println(hash);
     }
 }
