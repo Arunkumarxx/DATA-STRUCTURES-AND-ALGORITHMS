@@ -8,6 +8,9 @@ public class StringRotatedByTwoPlaces {
         /*
         daxjheq
          eqdaxjh
+
+         xjheqda
+         eqdaxjh
          */
     }
 }
