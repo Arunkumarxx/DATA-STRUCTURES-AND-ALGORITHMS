@@ -37,6 +37,7 @@ public class AnagramSearch {
                 ++result;
         }
         System.out.println(winPatternCount);
+        System.out.println(winPatternCount);
         System.out.println(Arrays.toString(windowHash));
         System.out.println(Arrays.toString(patternHash));
 
