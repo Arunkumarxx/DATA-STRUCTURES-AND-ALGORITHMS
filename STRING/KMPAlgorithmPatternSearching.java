@@ -24,11 +24,11 @@ public class KMPAlgorithmPatternSearching {
             }
             if(j==n2)
                 return true;
-            if(i<n && str.charAt(i)!= pattern.charAt(j))
+           if(i<n && str.charAt(i)!=pattern.charAt(j))
                 if(j!=0)
                     j=lps[j-1];
                 else ++i;
-            }
+            
         }
         return false;
     }
