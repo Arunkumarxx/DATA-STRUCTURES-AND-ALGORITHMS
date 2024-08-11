@@ -18,7 +18,15 @@ public class KMPAlgorithmPatternSearching {
         {
             if(pattern.charAt(i)==pattern.charAt(j))
             {
-                lps[j]=
+                ++i;
+                lps[j]=i;
+                ++j;
+            }
+            else {
+                if(i!=0)
+                {
+                    
+                }
             }
         }
     }
