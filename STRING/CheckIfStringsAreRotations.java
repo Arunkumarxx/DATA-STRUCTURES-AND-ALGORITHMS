@@ -23,6 +23,7 @@ public class CheckIfStringsAreRotations {
             stringBuilder.append(ph);
             if(stringBuilder.toString()==s1)
                 return true;
+            stringBuilder.setLength(0);
         }
         return false;
     }
