@@ -26,6 +26,8 @@ public class CheckIfStringsAreRotations {
                 ++j;
                 ++count;
             }
+            if(j==n2)
+                return true;
             else {
                 if(j!=0)
                     j=lsp[j-1];
