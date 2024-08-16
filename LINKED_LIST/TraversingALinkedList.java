@@ -20,14 +20,9 @@ public class TraversingALinkedList {
     Node head=node;
     private  void insertAtBegin (int data)
     {
-        if(head==null) {
-            Node newNode = new Node(data);
-        }
-        else {
-            Node newNode =new Node(data);
-            newNode.next=head;
-            head.next=newNode;
-        }
+        Node newNode = new Node(data);
+        newNode.next=head;
+        head=newNode;
     }
     private void printList()
     {
