@@ -16,8 +16,7 @@ class Node {
 }
 
 public class TraversingALinkedList {
-    Node node =new Node();
-    Node head=node;
+    private Node head;
     private  void insertAtBegin (int data)
     {
         Node newNode = new Node(data);
