@@ -22,8 +22,13 @@ public class CountLinkedListNodes {
     {
         Node newNode =new Node();
         head.next= newNode;
+        head=newNode;
     }
 
+    private  static int count()
+    {
+        
+    }
     public static void main(String[] args) {
 
     }
