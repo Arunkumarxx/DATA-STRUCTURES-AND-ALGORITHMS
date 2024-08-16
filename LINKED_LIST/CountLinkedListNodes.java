@@ -21,14 +21,8 @@ public class CountLinkedListNodes {
     private static void insertAtBegin(int data)
     {
         Node newNode =new Node(data);
-        if(head==null)
-        {
-            head=newNode;
-        }
-        else {
-            head.next = newNode;
-            head = newNode;
-        }
+        newNode.next=head;
+        head=newNode;
     }
 
     private  static int count()
