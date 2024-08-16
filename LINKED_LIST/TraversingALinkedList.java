@@ -45,6 +45,7 @@ public class TraversingALinkedList {
         list.insertAtBegin(20);
         list.insertAtBegin(30);
         list.insertAtBegin(40);
+        list.printList();
 
     }
 
