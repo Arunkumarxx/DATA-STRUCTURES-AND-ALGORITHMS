@@ -33,7 +33,9 @@ public class TraversingALinkedList {
         TraversingALinkedList list  =new TraversingALinkedList();
         Node node =new Node();
         list.insertAtBegin(node,10);
-        list.insertAtBegin(node,);
+        list.insertAtBegin(node,20);
+        list.insertAtBegin(node,10);
+        list.insertAtBegin(node,320);
     }
 
 }
