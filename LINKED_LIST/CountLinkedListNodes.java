@@ -27,9 +27,17 @@ public class CountLinkedListNodes {
 
     private  static int count()
     {
-        
+        int len=0;
+        while(head!=null)
+        {
+            len++;
+            head=head.next;
+        }
+        return len;
     }
     public static void main(String[] args) {
-
+        for(int i=0; i<100; ++i)
+            insertAtBegin(i*i);
+        System.out.println(count());
     }
 }
