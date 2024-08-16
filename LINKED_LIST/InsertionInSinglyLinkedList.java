@@ -1,7 +1,7 @@
 package LINKED_LIST;
 
 public class InsertionInSinglyLinkedList {
-    static class Node {
+   private static class Node {
         int data;
         Node next;
 
