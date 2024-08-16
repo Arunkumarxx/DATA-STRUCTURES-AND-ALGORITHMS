@@ -19,7 +19,7 @@ public class DeleteANodeInSingleLinkedList {
 
         LINKED_LIST.Node temp = list.head;
 
-        for(int i=1; temp!=null&& i<ind; ++i)
+        for(int i=1; temp!=null&& i<ind-1; ++i)
         {
             temp=temp.next;
         }
