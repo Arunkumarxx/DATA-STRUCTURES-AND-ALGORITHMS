@@ -19,7 +19,7 @@ public class TraversingALinkedList {
     private Node head;
     private  void insertAtBegin (int data)
     {
-        Node newNode = new Node(data);
+        Node newNode = new  Node(data);
         newNode.next=head;
         head=newNode;
     }
