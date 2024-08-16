@@ -16,8 +16,9 @@ class Node {
 }
 
 public class TraversingALinkedList {
-
-    private  void insertAtBegin (Node head,int data)
+    Node node =new Node();
+    Node head=node;
+    private  void insertAtBegin (int data)
     {
         if(head==null) {
             Node newNode = new Node(data);
@@ -28,15 +29,18 @@ public class TraversingALinkedList {
             head.next=newNode;
         }
     }
+    private void printList()
+    {
 
+    }
     public static void main(String[] args) {
         TraversingALinkedList list  =new TraversingALinkedList();
         Node node =new Node();
-        list.insertAtBegin(node,10);
-        list.insertAtBegin(node,20);
-        list.insertAtBegin(node,10);
-        list.insertAtBegin(node,320);
-        
+        list.insertAtBegin(10);
+        list.insertAtBegin(20);
+        list.insertAtBegin(30);
+        list.insertAtBegin(40);
+
     }
 
 }
