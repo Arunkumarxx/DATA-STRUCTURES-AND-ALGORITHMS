@@ -10,9 +10,7 @@ class Node {
         this.next=null;
     }
     Node()
-    {
-
-    }
+    {}
 }
 
 public class TraversingALinkedList {
