@@ -27,7 +27,7 @@ public class TraversingALinkedList {
     private void printList() {
         Node itr = head;
         while (itr != null) {
-            System.out.println(itr.data+"->");
+            System.out.print(itr.data+"->");
             itr = itr.next;
         }
     }
