@@ -1,9 +1,9 @@
 package LINKED_LIST;
 
 public class LINKED_LIST {
-    public Node head;
 
-  static   class Node {
+
+    private static class Node {
         int data;
         Node next;
 
@@ -12,6 +12,9 @@ public class LINKED_LIST {
             this.next = null;
         }
     }
+
+
+    private Node head;
 
     public LINKED_LIST() {
         head = null;
@@ -22,6 +25,7 @@ public class LINKED_LIST {
         newNode.next = head;
         head = newNode;
     }
+
 
     public void insertAtEnd(int newData) {
         Node newNode = new Node(newData);
@@ -81,5 +85,21 @@ public class LINKED_LIST {
             itr = itr.next;
         }
         return length;
+    }
+
+
+    public static void main(String[] args) {
+        LINKED_LIST list = new LINKED_LIST();
+        list.insertAtBeginning(10);
+        list.insertAtEnd(20);
+        list.insertAtBeginning(30);
+        list.printList();
+
+        list.deleteElement(10);
+        list.printList();
+
+        System.out.println("Length: " + list.getLength());
+        System.out.println("Search 20: " + list.search(20));
+        System.out.println("Search 10: " + list.search(10));
     }
 }
