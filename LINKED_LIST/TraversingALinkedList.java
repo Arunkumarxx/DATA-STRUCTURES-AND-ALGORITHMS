@@ -36,6 +36,7 @@ public class TraversingALinkedList {
         list.insertAtBegin(node,20);
         list.insertAtBegin(node,10);
         list.insertAtBegin(node,320);
+        
     }
 
 }
