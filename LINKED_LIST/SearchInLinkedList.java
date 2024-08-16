@@ -2,7 +2,7 @@ package LINKED_LIST;
 
 public class SearchInLinkedList {
 
-    static class Node {
+  private   static class Node {
         int data;
         Node next;
 
