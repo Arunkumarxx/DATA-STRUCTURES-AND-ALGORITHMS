@@ -62,6 +62,7 @@ public class DoublyLinkedListInsertionAtGivenPosition {
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             insert(i);
+        insertAtPos(2,20);
         printList();
     }
 }
