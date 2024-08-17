@@ -14,6 +14,7 @@ public class FindLengthOfLoop {
         Node(int data)
         {
             this.data=data;
+            this.next=null;
         }
     }
     private static Node  getlastNode(Node head)
