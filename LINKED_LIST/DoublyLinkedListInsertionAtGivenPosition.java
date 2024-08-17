@@ -16,11 +16,24 @@ public class DoublyLinkedListInsertionAtGivenPosition {
             this.prev = null;
         }
     }
-    private static void insertAtPos(int data)
+    private static void insert(int data)
     {
+        Node newNode= new Node(data);
 
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else
+        {
+            head.next=newNode;
+            newNode.prev=head;
+            
+        }
     }
     public static void main(String[] args) {
         insertAtPos();
+
     }
 }
