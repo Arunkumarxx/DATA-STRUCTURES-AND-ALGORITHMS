@@ -28,7 +28,7 @@ public class DoublyLinkedList {
             tail=newNode;
         }
         else {
-            tail.prev=tail;
+            newNode.prev=tail;
             tail.next=newNode;
             tail=newNode;
         }
