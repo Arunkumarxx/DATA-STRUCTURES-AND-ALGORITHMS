@@ -41,7 +41,6 @@ public class DoublyLinkedList {
             System.out.print(temp.data +" ");
             temp=temp.next;
         }
-        System.out.println(temp.prev);
     }
     public static void main(String[] args) {
         insert(10);
