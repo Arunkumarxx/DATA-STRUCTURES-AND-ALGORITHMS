@@ -1,5 +1,7 @@
 package LINKED_LIST;
 
+import java.util.HashMap;
+
 public class FindLengthOfLoop {
     private static Node head;
     private static Node tail;
@@ -71,6 +73,25 @@ public class FindLengthOfLoop {
         {
             insertAtEnd(i);
         }
-        printList();
+        LengthOfLoop();
+    }
+    private static void LengthOfLoop()
+    {
+        HashMap<Node,Integer> hashMap =new HashMap<>();
+        Node temp= head;
+        int k=1;
+        while(temp!=null)
+        {
+            if(hashMap.containsKey(temp))
+            {
+                System.out.println(hashMap.get(temp)-k);
+                return;
+            }
+            else
+            {
+                hashMap.put(temp,k);
+                ++k;
+            }
+        }
     }
 }
