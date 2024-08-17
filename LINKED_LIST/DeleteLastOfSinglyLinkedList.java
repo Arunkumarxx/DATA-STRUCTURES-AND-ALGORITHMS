@@ -46,9 +46,9 @@ public class DeleteLastOfSinglyLinkedList {
             return;
         if(head.next==null)
             head=head.next;
-        while(temp.next!=null)
+        while(temp.next.next!=null)
             temp=temp.next;
-        temp=null;
+        
     }
     public static void main(String[] args) {
         insert(10);
