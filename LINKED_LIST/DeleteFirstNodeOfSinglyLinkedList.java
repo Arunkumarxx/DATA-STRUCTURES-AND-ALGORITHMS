@@ -25,8 +25,10 @@ public class DeleteFirstNodeOfSinglyLinkedList {
     private static void printList()
     {
         Node temp=head;
-        while(temp!=null)
-            System.out.print(temp.data+" ");
+        while(temp!=null) {
+            System.out.print(temp.data + " ");
+            temp=temp.next;
+        }
     }
     public static void main(String[] args) {
         for(int i=0; i<=10; ++i)
