@@ -52,8 +52,6 @@ public class DeleteLastOfSinglyLinkedList {
     }
     public static void main(String[] args) {
         insert(10);
-        insert(20);
-        insert(30);
         deleteFirst();
         printList();
 
