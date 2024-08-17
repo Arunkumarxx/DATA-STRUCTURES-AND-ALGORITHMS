@@ -28,8 +28,8 @@ public class DoublyLinkedList {
             tail=newNode;
         }
         else {
-            tail.next=newNode;
             tail.prev=tail;
+            tail.next=newNode;
             tail=newNode;
         }
     }
