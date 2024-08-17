@@ -24,12 +24,28 @@ public class FindLengthOfLoop {
         }
         return tail;
     }
-    private static Node tail;
+    private static Node search(Node head,int key)
+    {
+        Node temp=head;
+        while(temp.data!=key)
+            temp=temp.next;
+        if(temp!=null)
+            return temp;
+        return null;
+    }
+    private static Node tail = getlastNode(head);
     private static void insertAtEnd(int data)
     {
-        tail=getlastNode(head);
-        
+        if(data==5) {
+            tail = getlastNode(head);
+            Node loopAdd=search(head,2);
+            if(loopAdd!=null)
+                tail.next=loopAdd;
+        }
+        Node newNode =new Node(data);
+        tail.next=newNode;
     }
+
     private static void printList()
     {
         Node temp=head;
@@ -42,7 +58,7 @@ public class FindLengthOfLoop {
     public static void main(String[] args) {
         for(int i=1; i<=5; ++i)
         {
-            insertAtBegin(i);
+            insertAtEnd(i);
         }
         printList();
     }
