@@ -37,6 +37,11 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         Node newNode =new Node(data);
         if(pos<=1)
         {
+            newNode.next=head;
+            head=newNode;
+        }
+        else
+        {
             
         }
     }
