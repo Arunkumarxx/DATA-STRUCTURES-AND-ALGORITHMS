@@ -16,23 +16,7 @@ public class FindLengthOfLoop {
         }
     }
 
-
-    private static Node getLastNode(Node head) {
-        Node temp = head;
-        while (temp != null && temp.next != null) {
-            temp = temp.next;
-        }
-        return temp;
-    }
-
-    private static Node search(Node head, int key) {
-        Node temp = head;
-        while (temp != null && temp.data != key) {
-            temp = temp.next;
-        }
-        return temp;
-    }
-
+    // Method to insert a node at the end of the list
     private static void insertAtEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -42,19 +26,36 @@ public class FindLengthOfLoop {
             tail.next = newNode;
             tail = newNode;
         }
-        if (data == 5) {
-            Node loopStartNode = search(head, 2);
-            if (loopStartNode != null) {
-                tail.next = loopStartNode;
+    }
+
+    // Method to create a loop in the list
+    private static void createLoop(int startData) {
+        Node loopStartNode = null;
+        Node temp = head;
+
+        // Find the node where the loop should start
+        while (temp != null) {
+            if (temp.data == startData) {
+                loopStartNode = temp;
+                break;
             }
+            temp = temp.next;
+        }
+
+        if (loopStartNode != null) {
+            // Point the last node's next to the loopStartNode to create a loop
+            tail.next = loopStartNode;
         }
     }
 
-    private static void printList() {
+    // Method to print the list (warning: this will print indefinitely if there is a loop)
+    private static void printList(int maxIterations) {
         Node temp = head;
-        while (temp != null) {
+        int count = 0;
+        while (temp != null && count < maxIterations) {
             System.out.print(temp.data + " ");
             temp = temp.next;
+            count++;
         }
         System.out.println();
     }
@@ -77,9 +78,18 @@ public class FindLengthOfLoop {
     }
 
     public static void main(String[] args) {
+        // Insert nodes into the list
         for (int i = 1; i <= 10; ++i) {
             insertAtEnd(i);
         }
+
+        // Create a loop in the list, where the loop starts at node with data 5
+        createLoop(5);
+
+        // Print the list (limit to 15 iterations to avoid infinite loop in case of loop creation)
+        printList(15);
+
+        // Find the length of the loop
         lengthOfLoop();
     }
 }
