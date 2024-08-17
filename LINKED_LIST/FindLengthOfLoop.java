@@ -17,12 +17,11 @@ public class FindLengthOfLoop {
     }
     private static Node  getlastNode(Node head)
     {
-        Node tail =head;
-        while(head!=null)
-        {
-            tail=tail.next;
+        Node temp = head;
+        while (temp != null && temp.next != null) {
+            temp = temp.next;
         }
-        return tail;
+        return temp;
     }
     private static Node search(Node head,int key)
     {
