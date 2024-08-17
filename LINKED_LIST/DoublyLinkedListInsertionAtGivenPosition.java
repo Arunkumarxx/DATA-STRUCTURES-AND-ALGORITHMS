@@ -32,41 +32,42 @@ public class DoublyLinkedListInsertionAtGivenPosition {
             tail=newNode;
         }
     }
-    private static void insertAtPos(int data,int pos)
-    {
-        Node newNode =new Node(data);
-        if(pos<=1 || head==null)
-        {
-            newNode.next=head;
-            if(head!=null)
-                head.prev=newNode;
-            head=newNode;
-            if(tail==null)
-                tail=newNode;
-        }
-        else
-        {
-            Node temp=head;
+    private static void insertAtPos(int data, int pos) {
+        Node newNode = new Node(data);
 
-            for(int i=1; i<pos- 1&& temp!=null; ++i)
-                temp=temp.next;
-
-            if(temp!=null && temp.next!=null)
-            {
-                newNode.next=temp.next;
-                newNode.prev=temp;
-                temp.next.prev=newNode;
-                temp.next=newNode;
-
+        if (pos <= 1) {
+            // Insert at the beginning
+            newNode.next = head;
+            if (head != null) {
+                head.prev = newNode;
             }
-            else {
-                newNode.prev=tail;
-                if(tail!=null)
-                    tail.next=newNode;
-                tail=newNode;
+            head = newNode;
+            if (tail == null) {
+                tail = newNode;
+            }
+        } else {
+            Node temp = head;
+            for (int i = 1; i < pos - 1 && temp != null; i++) {
+                temp = temp.next;
+            }
+
+            if (temp != null && temp.next != null) {
+                // Inserting in the middle
+                newNode.next = temp.next;
+                newNode.prev = temp;
+                temp.next.prev = newNode;
+                temp.next = newNode;
+            } else {
+                // Inserting at the end
+                newNode.prev = tail;
+                if (tail != null) {
+                    tail.next = newNode;
+                }
+                tail = newNode;
             }
         }
     }
+
     private static void printList()
     {
         Node temp = head;
