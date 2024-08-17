@@ -42,6 +42,7 @@ public class SearchInALinkedListIterativeAndRecursive {
             System.out.print(temp.data+" ");
             temp=temp.next;
         }
+        System.out.println();
     }
     public static void main(String[] args) {
         for(int i=1; i<=15; ++i)
