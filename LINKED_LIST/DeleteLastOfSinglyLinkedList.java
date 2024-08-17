@@ -39,6 +39,17 @@ public class DeleteLastOfSinglyLinkedList {
         }
         System.out.println();
     }
+    private static void deleteFirst()
+    {
+        Node temp=head;
+        if(head==null)
+            return;
+        if(head.next==null)
+            head=head.next;
+        while(temp.next!=null)
+            temp=temp.next;
+        temp=null;
+    }
     public static void main(String[] args) {
         insert(10);
         insert(20);
