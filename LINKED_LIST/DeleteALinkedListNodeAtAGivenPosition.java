@@ -62,5 +62,6 @@ public class DeleteALinkedListNodeAtAGivenPosition {
         insert(30);
         printList();
         deleteElePos(3);
+        printList();
     }
 }
