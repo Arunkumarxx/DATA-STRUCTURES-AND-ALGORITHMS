@@ -87,12 +87,14 @@ public class FindLengthOfLoop {
         }
         if(!hasloop)
             System.out.println("No loops found");
-        int count=0;
-        Node loopStart=head;
-        while(loopStart!=slow)
-        {
-            
+        Node temp=slow;
+        int len=0;
+
+        do{
+            temp=temp.next;
+            len++;
         }
+        while(temp!=slow);
     }
 
     public static void main(String[] args) {
