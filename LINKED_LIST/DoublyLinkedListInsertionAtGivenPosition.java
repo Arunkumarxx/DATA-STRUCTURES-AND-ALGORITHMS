@@ -39,9 +39,13 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         if(head== null)
             head=newNode;
         Node temp=head;
-        for(int i=1; i<pos && temp!=null ; ++i)
+        for(int i=1; i<=pos && temp!=null ; ++i)
         {
-            
+            temp=temp.next;
+        }
+        if(temp!=null && temp.prev!=null)
+        {
+            newNode.next=
         }
     }
     private static void printList()
