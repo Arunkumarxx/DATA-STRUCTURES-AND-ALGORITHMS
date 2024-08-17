@@ -83,15 +83,12 @@ public class FindLengthOfLoop {
         while(temp!=null)
         {
             ++k;
-            if(hashMap.containsKey(temp))
-            {
-                System.out.println(k-hashMap.get(temp));
+            if(hashMap.containsKey(temp)) {
+                System.out.println(k - hashMap.get(temp));
                 return;
             }
-            else
-            {
                 hashMap.put(temp,k);
-            }
+            temp=temp.next;
         }
     }
 }
