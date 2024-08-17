@@ -29,6 +29,14 @@ public class RecursiveTraversalOfSinglyLinkedList {
         insertAtEnd(20);
         insertAtEnd(30);
         insertAtEnd(40);
-        
+        PrintListUsingRecursion(head);
+    }
+    private static void PrintListUsingRecursion(Node list)
+    {
+        if(list!=null)
+        {
+            System.out.print(list.data+" ");
+            list=list.next;
+        }
     }
 }
