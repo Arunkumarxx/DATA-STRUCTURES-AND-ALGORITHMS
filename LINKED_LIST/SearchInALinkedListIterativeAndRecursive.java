@@ -16,9 +16,7 @@ public class SearchInALinkedListIterativeAndRecursive {
             this.next=null;
         }
         Node()
-        {
-
-        }
+        {}
     }
 
     private static void insert(int data)
