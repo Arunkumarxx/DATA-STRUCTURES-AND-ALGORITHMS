@@ -1,6 +1,8 @@
 package LINKED_LIST;
 
 public class DeleteLastOfSinglyLinkedList {
+    private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -14,7 +16,19 @@ public class DeleteLastOfSinglyLinkedList {
         Node()
         {}
     }
+    private static void insert(int data)
+    {
+        Node newNode =new Node(data);
+        if(head == null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            
+        }
+    }
     public static void main(String[] args) {
-        
+
     }
 }
