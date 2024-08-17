@@ -72,23 +72,26 @@ public class FindLengthOfLoop {
     }
     private static void lengthOfLoopOptimal()
     {
-        Node temp=head;
-        int slow =0;
-        int fast =0;
-        int count=0;
-        while(temp!=null)
+        Node slow=head;
+        Node fast=head;
+        boolean hasloop =false;
+        while(fast!=null && fast.next!=null)
         {
-            temp=temp.next;
-            ++slow;
-            fast+=2;
+            slow=slow.next;
+            fast=fast.next.next;
             if(slow==fast)
             {
-                while(slow!=fast)
-                {
-                    temp=temp.next;
-                    ++fast;
-                }
+                hasloop=true;
+                break;
             }
+        }
+        if(!hasloop)
+            System.out.println("No loops found");
+        int count=0;
+        Node loopStart=head;
+        while(loopStart!=slow)
+        {
+            
         }
     }
 
