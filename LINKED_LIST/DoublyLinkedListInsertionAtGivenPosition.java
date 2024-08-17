@@ -40,7 +40,7 @@ public class DoublyLinkedListInsertionAtGivenPosition {
 
         for(int i=0; i<pos && temp!=null; ++i)
         {
-            temp=temp.next;
+            newNode.next=temp;
         }
     }
     private static void printList()
