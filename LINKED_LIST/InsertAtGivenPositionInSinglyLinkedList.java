@@ -33,8 +33,17 @@ public class InsertAtGivenPositionInSinglyLinkedList {
             temp.next=newNode;
         }
     }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.println(temp.next+" ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
         insertAtPos(10,1);
-        
+        printList();
     }
 }
