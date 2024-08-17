@@ -40,9 +40,8 @@ public class InsertionAtBeginOfLinkedList {
         }
     }
     public static void main(String[] args) {
-        insertAtBegin(10);
-        insertAtBegin(20);
-        insertAtBegin(30);
+        for(int i=1; i<=10; ++i)
+            insertAtBegin(i);
         printList();
     }
 
