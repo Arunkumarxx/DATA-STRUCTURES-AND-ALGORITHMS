@@ -8,12 +8,11 @@ public class DeleteFirstNodeOfSinglyLinkedList {
         Node next;
 
         Node()
-        {
-
-        }
+        {}
         Node(int data)
         {
-
+            this.data=data;
+            this.next=null;
         }
     }
     private static void insert(int data)
