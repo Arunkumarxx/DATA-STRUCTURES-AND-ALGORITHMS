@@ -105,7 +105,7 @@ public class FindLengthOfLoop {
             insertAtEnd(i);
         }
         createLoop(5);
-        printList(10);
+        printList(12);
 //        lengthOfLoopBruteForce();
         lengthOfLoopOptimal();
     }
