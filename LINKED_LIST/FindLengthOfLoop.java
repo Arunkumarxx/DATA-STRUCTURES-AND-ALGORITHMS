@@ -49,7 +49,7 @@ public class FindLengthOfLoop {
             tail.next=newNode;
             tail=newNode;
         }
-        if(data==5)
+        if(data==2)
         {
             Node loopAdd = search(head,2);
             if(loopAdd!=null)
