@@ -55,7 +55,7 @@ public class FindLengthOfLoop {
         System.out.println();
     }
 
-    private static void lengthOfLoop() {
+    private static void lengthOfLoopBruteForce() {
         HashMap<Node, Integer> hashMap = new HashMap<>();
         Node temp = head;
         int k = 0;
@@ -70,19 +70,19 @@ public class FindLengthOfLoop {
         }
         System.out.println("No loop found.");
     }
+    private static void lengthOfLoopOptimal()
+    {
+
+    }
 
     public static void main(String[] args) {
 
         for (int i = 1; i <= 10; ++i) {
             insertAtEnd(i);
         }
-
         createLoop(5);
-
-
         printList(15);
-
-
-        lengthOfLoop();
+        lengthOfLoopBruteForce();
+        lengthOfLoopOptimal();
     }
 }
