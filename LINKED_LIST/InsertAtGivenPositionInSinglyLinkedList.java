@@ -38,7 +38,7 @@ public class InsertAtGivenPositionInSinglyLinkedList {
         Node temp=head;
         while(temp!=null)
         {
-            System.out.println(temp.next+" ");
+            System.out.println(temp.data +" ");
             temp=temp.next;
         }
     }
