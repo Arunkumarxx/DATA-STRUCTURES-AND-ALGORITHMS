@@ -95,6 +95,8 @@ public class FindLengthOfLoop {
             len++;
         }
         while(temp!=slow);
+
+        System.out.println(len);
     }
 
     public static void main(String[] args) {
