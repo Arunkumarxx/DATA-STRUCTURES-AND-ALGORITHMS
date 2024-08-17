@@ -24,7 +24,7 @@ public class DeleteALinkedListNodeAtAGivenPosition {
         }
         Node temp = head;
         int ind = 1;
-        while (temp != null && ind < x - 1) {
+        while (temp != null && ind < x ) {
 
             temp = temp.next;
             ind++;
