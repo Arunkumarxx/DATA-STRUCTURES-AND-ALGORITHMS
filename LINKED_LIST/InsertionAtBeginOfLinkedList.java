@@ -32,7 +32,7 @@ public class InsertionAtBeginOfLinkedList {
     }
     private static void printList()
     {
-        Node temp =head;
+        Node temp =tail;
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
