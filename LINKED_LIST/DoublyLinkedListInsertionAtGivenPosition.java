@@ -72,7 +72,7 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         insert(2);
         insert(4);
         insert(5);
-        insertAtPos(2,6);
+        insertAtPos(6,2);
         printList();
     }
 }
