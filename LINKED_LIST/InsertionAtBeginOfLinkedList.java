@@ -3,6 +3,7 @@ package LINKED_LIST;
 public class InsertionAtBeginOfLinkedList {
 
     private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -19,9 +20,13 @@ public class InsertionAtBeginOfLinkedList {
     private static void insertAtBegin(int data)
     {
         Node newNode =new Node(data);
-        if(head!=null)
-            newNode.prev=head;
-        newNode.next=head;
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        newNode.prev=tail;
+        newNode.prev
         head=newNode;
     }
     private static void printList()
