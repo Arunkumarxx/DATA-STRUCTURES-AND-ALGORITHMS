@@ -73,7 +73,15 @@ public class FindLengthOfLoop {
     private static void lengthOfLoopOptimal()
     {
         Node temp=head;
-        
+        int slow =0;
+        int fast =0;
+        while(temp!=null && slow!=fast)
+        {
+            temp=temp.next;
+            ++slow;
+            fast+=2;
+        }
+
     }
 
     public static void main(String[] args) {
