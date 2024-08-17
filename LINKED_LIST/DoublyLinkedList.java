@@ -38,10 +38,10 @@ public class DoublyLinkedList {
         Node temp=tail;
         while(tail!=null)
         {
-            System.out.println(tail.prev+" ");
+            System.out.println(tail.data+" ");
             tail=tail.prev;
         }
-        
+
     }
     public static void main(String[] args) {
         insert(10);
