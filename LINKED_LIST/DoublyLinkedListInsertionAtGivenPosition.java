@@ -38,8 +38,11 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         if(pos<=1 || head==null)
         {
             newNode.next=head;
+            if(head!=null)
+                head.prev=newNode;
             head=newNode;
-
+            if(tail==null)
+                tail=newNode;
         }
         else
         {
