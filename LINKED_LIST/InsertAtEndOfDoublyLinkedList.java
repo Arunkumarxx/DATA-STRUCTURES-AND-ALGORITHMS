@@ -1,6 +1,6 @@
 package LINKED_LIST;
 
-public class DoublyLinkedList {
+public class InsertAtEndOfDoublyLinkedList {
 
     private static Node head;
     private static Node tail;
