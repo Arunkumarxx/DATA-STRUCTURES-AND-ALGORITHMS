@@ -1,7 +1,36 @@
 package LINKED_LIST;
 
 public class DeleteFirstNodeOfSinglyLinkedList {
+    private static Node head;
+    private static class Node
+    {
+        int data;
+        Node next;
+
+        Node()
+        {
+
+        }
+        Node(int data)
+        {
+
+        }
+    }
+    private static void insert(int data)
+    {
+        Node newNode =new Node(data);
+        newNode.next=head;
+        head=newNode;
+    }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+            System.out.print(temp.data+" ");
+    }
     public static void main(String[] args) {
-        
+        for(int i=0; i<=10; ++i)
+            insert(i);
+        printList();
     }
 }
