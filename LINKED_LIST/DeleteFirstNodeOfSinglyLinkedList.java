@@ -37,5 +37,8 @@ public class DeleteFirstNodeOfSinglyLinkedList {
         for(int i=0; i<=2; ++i)
             insert(i);
         DeleteFirst();
+        DeleteFirst();
+        DeleteFirst();
+        printList();
     }
 }
