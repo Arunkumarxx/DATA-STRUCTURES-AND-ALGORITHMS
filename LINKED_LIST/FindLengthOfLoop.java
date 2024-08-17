@@ -75,13 +75,21 @@ public class FindLengthOfLoop {
         Node temp=head;
         int slow =0;
         int fast =0;
-        while(temp!=null && slow!=fast)
+        int count=0;
+        while(temp!=null)
         {
             temp=temp.next;
             ++slow;
             fast+=2;
+            if(slow==fast)
+            {
+                while(slow!=fast)
+                {
+                    temp=temp.next;
+                    ++fast;
+                }
+            }
         }
-
     }
 
     public static void main(String[] args) {
@@ -91,7 +99,7 @@ public class FindLengthOfLoop {
         }
         createLoop(5);
         printList(15);
-        lengthOfLoopBruteForce();
+//        lengthOfLoopBruteForce();
         lengthOfLoopOptimal();
     }
 }
