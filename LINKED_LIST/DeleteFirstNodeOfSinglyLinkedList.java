@@ -37,7 +37,10 @@ public class DeleteFirstNodeOfSinglyLinkedList {
         for(int i=0; i<=10; ++i)
             insert(i);
         printList();
-        DeleteFirst();;
+        DeleteFirst();
+        DeleteFirst();
+        DeleteFirst();
+        DeleteFirst();
         System.out.println();
         printList();
     }
