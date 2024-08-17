@@ -38,7 +38,7 @@ public class DoublyLinkedList {
         Node temp=tail;
         while(tail!=null)
         {
-            System.out.println(tail.data+" ");
+            System.out.print(tail.data+" ");
             tail=tail.prev;
         }
 
