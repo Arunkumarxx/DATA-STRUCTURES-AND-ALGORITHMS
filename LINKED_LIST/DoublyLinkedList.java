@@ -21,7 +21,7 @@ public class DoublyLinkedList {
     }
     private static void insert(int data)
     {
-        Node newNode =head;
+        Node newNode =new Node(data);
         if(head==null)
         {
             head=newNode;
