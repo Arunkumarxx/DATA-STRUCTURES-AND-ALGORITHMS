@@ -72,7 +72,8 @@ public class FindLengthOfLoop {
     }
     private static void lengthOfLoopOptimal()
     {
-
+        Node temp=head;
+        
     }
 
     public static void main(String[] args) {
