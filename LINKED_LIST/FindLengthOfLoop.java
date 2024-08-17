@@ -40,7 +40,8 @@ public class FindLengthOfLoop {
         Node newNode =new Node(data);
         if(head==null)
         {
-            head=tail=newNode;
+            head=newNode;
+            tail=newNode;
         }
         else {
             tail.next=newNode;
