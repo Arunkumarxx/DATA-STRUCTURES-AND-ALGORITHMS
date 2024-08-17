@@ -14,13 +14,14 @@ public class DeleteALinkedListNodeAtAGivenPosition {
         }
     }
 
-    private static Node  deleteElePos(int x)
+    private static void  deleteElePos(int x)
     {
         if (head == null || x <= 0) {
-            return head;
+            return;
         }
         if (x == 1) {
-            return head.next;
+             head=head.next;
+             return;
         }
         Node temp = head;
         int ind = 1;
@@ -30,10 +31,10 @@ public class DeleteALinkedListNodeAtAGivenPosition {
             ind++;
         }
         if (temp == null || temp.next == null) {
-            return head;
+            return;
         }
         temp.next = temp.next.next;
-        return head;
+        
     }
     private static void insert(int data)
     {
