@@ -26,11 +26,11 @@ public class InsertionAtBeginOfLinkedList {
     }
     private static void printList()
     {
-        Node newNode =head;
-        while(newNode!=null)
+        Node temp =head;
+        while(temp!=null)
         {
-            System.out.print(newNode.data+" ");
-            
+            System.out.print(temp.data+" ");
+            temp=temp.next;
         }
     }
     public static void main(String[] args) {
