@@ -34,8 +34,6 @@ public class FindLengthOfLoop {
 
     }
 
-    private static Node tail = getlastNode(head);
-
     private static void insertAtEnd(int data)
     {
         Node newNode =new Node(data);
