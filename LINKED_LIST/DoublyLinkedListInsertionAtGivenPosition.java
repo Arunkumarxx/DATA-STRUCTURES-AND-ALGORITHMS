@@ -64,10 +64,11 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         }
     }
     public static void main(String[] args) {
+        insert(1);
         insert(2);
+        insert(3);
         insert(4);
-        insert(5);
-        insertAtPos(6,2);
+        insertAtPos(44,0);
         printList();
     }
 }
