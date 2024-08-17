@@ -23,7 +23,7 @@ public class FindLengthOfLoop {
     }
     private static void printList()
     {
-        Node temp=new Node();
+        Node temp=head;
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
