@@ -3,7 +3,7 @@ package LINKED_LIST;
 public class InsertAtGivenPositionInSinglyLinkedList {
 
     private static Node head;
-
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -17,6 +17,19 @@ public class InsertAtGivenPositionInSinglyLinkedList {
         Node()
         {
 
+        }
+    }
+    private static void insertAtEnd(int data)
+    {
+        Node newNode= new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            tail.next=newNode;
+            tail=newNode;
         }
     }
     private static void insertAtPos(int data,int pos)
@@ -43,7 +56,10 @@ public class InsertAtGivenPositionInSinglyLinkedList {
         }
     }
     public static void main(String[] args) {
-        insertAtPos(10,1);
+        for(int i=0; i<=10;++i)
+            insertAtEnd(i);
+
+        insertAtPos(11,11);
         printList();
     }
 }
