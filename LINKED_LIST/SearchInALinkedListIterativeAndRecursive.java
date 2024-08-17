@@ -69,8 +69,9 @@ public class SearchInALinkedListIterativeAndRecursive {
         for(int i=1; i<=15; ++i)
             insert(i);
         printList();
-        System.out.println( IterativeSearch(7,head));
         System.out.println(recursiveSearch(8,head));
+        System.out.println( IterativeSearch(7,head));
+
     }
 
 
