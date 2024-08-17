@@ -2,6 +2,8 @@ package LINKED_LIST;
 
 public class DoublyLinkedList {
 
+    private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -19,7 +21,15 @@ public class DoublyLinkedList {
     }
     private static void insert(int data)
     {
-        
+        Node newNode =head;
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            
+        }
     }
     public static void main(String[] args) {
         insert(10);
