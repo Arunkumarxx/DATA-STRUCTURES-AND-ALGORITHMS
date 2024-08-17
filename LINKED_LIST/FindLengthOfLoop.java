@@ -73,7 +73,6 @@ public class FindLengthOfLoop {
         {
             insertAtEnd(i);
         }
-        printList();
         LengthOfLoop();
     }
     private static void LengthOfLoop()
