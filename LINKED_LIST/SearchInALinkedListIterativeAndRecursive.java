@@ -62,7 +62,7 @@ public class SearchInALinkedListIterativeAndRecursive {
         return false;
     }
     public static void main(String[] args) {
-        for(int i=1; i<=15; ++i)
+        for(int i=1; i<=6; ++i)
             insert(i);
         printList();
         System.out.println(recursiveSearch(8,head));
