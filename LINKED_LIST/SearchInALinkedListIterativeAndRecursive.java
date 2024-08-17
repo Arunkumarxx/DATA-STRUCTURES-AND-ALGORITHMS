@@ -49,7 +49,7 @@ public class SearchInALinkedListIterativeAndRecursive {
         if(node==null)
             return false;
         if(node.data==key)
-            return recursiveSearch(key,node.next);
+            return true;
        return recursiveSearch(key,node.next);
     }
 
