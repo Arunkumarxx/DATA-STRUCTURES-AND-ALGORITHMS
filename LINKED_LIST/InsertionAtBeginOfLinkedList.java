@@ -36,7 +36,7 @@ public class InsertionAtBeginOfLinkedList {
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
-            temp=temp.prev;
+            temp=temp.next;
         }
         System.out.println();
     }
