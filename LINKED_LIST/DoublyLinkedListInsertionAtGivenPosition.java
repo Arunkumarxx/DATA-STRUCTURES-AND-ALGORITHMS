@@ -41,8 +41,6 @@ public class DoublyLinkedListInsertionAtGivenPosition {
             if(head!=null)
                 head.prev=newNode;
             head=newNode;
-            if(tail==null)
-                tail=newNode;
         }
         else
         {
@@ -59,12 +57,7 @@ public class DoublyLinkedListInsertionAtGivenPosition {
                 temp.next=newNode;
 
             }
-            else {
-                newNode.prev=tail;
-                if(tail!=null)
-                    tail.next=newNode;
-                tail=newNode;
-            }
+
         }
     }
     private static void printList()
