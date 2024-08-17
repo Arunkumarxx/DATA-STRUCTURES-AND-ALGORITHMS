@@ -32,6 +32,8 @@ public class FindLengthOfLoop {
     }
     public static void main(String[] args) {
         insertAtBegin(1);
+        insertAtBegin(12);
+        insertAtBegin(120);
         printList();
     }
 }
