@@ -1,3 +1,5 @@
+package LINKED_LIST;
+
 import java.util.HashMap;
 
 public class FindLengthOfLoop {
@@ -14,7 +16,7 @@ public class FindLengthOfLoop {
         }
     }
 
-    // Method to get the last node
+
     private static Node getLastNode(Node head) {
         Node temp = head;
         while (temp != null && temp.next != null) {
@@ -23,7 +25,6 @@ public class FindLengthOfLoop {
         return temp;
     }
 
-    // Method to search for a node with a specific key
     private static Node search(Node head, int key) {
         Node temp = head;
         while (temp != null && temp.data != key) {
@@ -32,7 +33,6 @@ public class FindLengthOfLoop {
         return temp;
     }
 
-    // Method to insert a node at the end of the list
     private static void insertAtEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -50,7 +50,6 @@ public class FindLengthOfLoop {
         }
     }
 
-    // Method to print the list (warning: this will print indefinitely if there is a loop)
     private static void printList() {
         Node temp = head;
         while (temp != null) {
