@@ -17,7 +17,7 @@ public class FindLengthOfLoop {
     }
     private static void insertAtBegin(int data)
     {
-        Node newNode =new Node();
+        Node newNode =new Node(data);
         newNode.next=head;
         head=newNode;
     }
