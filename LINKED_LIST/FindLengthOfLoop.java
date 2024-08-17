@@ -2,6 +2,7 @@ package LINKED_LIST;
 
 public class FindLengthOfLoop {
     private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -30,18 +31,31 @@ public class FindLengthOfLoop {
             temp = temp.next;
         }
         return temp;
+
     }
+
     private static Node tail = getlastNode(head);
+
     private static void insertAtEnd(int data)
     {
-        if(data==5) {
-            tail = getlastNode(head);
-            Node loopAdd=search(head,2);
-            if(loopAdd!=null)
-                tail.next=loopAdd;
-        }
         Node newNode =new Node(data);
-        tail.next=newNode;
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            tail.next=newNode;
+            tail=newNode;
+        }
+        if(data==5)
+        {
+            Node loopAdd = search(head,2);
+            if(loopAdd!=null)
+            {
+                tail.next=loopAdd;
+            }
+        }
     }
 
     private static void printList()
