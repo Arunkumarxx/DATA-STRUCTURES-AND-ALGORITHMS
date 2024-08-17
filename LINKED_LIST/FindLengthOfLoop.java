@@ -79,9 +79,10 @@ public class FindLengthOfLoop {
     {
         HashMap<Node,Integer> hashMap =new HashMap<>();
         Node temp= head;
-        int k=1;
+        int k=0;
         while(temp!=null)
         {
+            ++k;
             if(hashMap.containsKey(temp))
             {
                 System.out.println(k-hashMap.get(temp));
@@ -90,7 +91,7 @@ public class FindLengthOfLoop {
             else
             {
                 hashMap.put(temp,k);
-                ++k;
+
             }
         }
     }
