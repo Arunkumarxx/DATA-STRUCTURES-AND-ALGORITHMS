@@ -15,9 +15,7 @@ public class InsertAtThenEndOfSinglyLinkedList {
             next=null;
         }
         Node()
-        {
-
-        }
+        {}
     }
     private static void insertAtEnd(int data)
     {
