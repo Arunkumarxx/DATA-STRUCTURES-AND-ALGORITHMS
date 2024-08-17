@@ -4,7 +4,7 @@ public class DeleteLastOfSinglyLinkedList {
 
     private static Node head;
     private static Node tail;
-    
+
     private static class Node
     {
         int data;
