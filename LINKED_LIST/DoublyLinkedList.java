@@ -35,13 +35,13 @@ public class DoublyLinkedList {
     }
     private static void printList()
     {
-        Node temp=head;
-        while(temp!=null)
+        Node temp=tail;
+        while(tail!=null)
         {
-            System.out.print(temp.data +" ");
-            temp=temp.next;
+            System.out.println(tail.prev+" ");
+            tail=tail.prev;
         }
-        System.out.println(temp.prev);
+        
     }
     public static void main(String[] args) {
         insert(10);
