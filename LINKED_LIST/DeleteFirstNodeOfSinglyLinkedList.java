@@ -29,9 +29,15 @@ public class DeleteFirstNodeOfSinglyLinkedList {
             temp=temp.next;
         }
     }
+    private static void DeleteFirst()
+    {
+        head=head.next;
+    }
     public static void main(String[] args) {
         for(int i=0; i<=10; ++i)
             insert(i);
+        printList();
+        DeleteFirst();;
         printList();
     }
 }
