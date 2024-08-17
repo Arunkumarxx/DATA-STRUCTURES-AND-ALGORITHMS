@@ -44,7 +44,12 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         {
             temp=temp.next;
         }
-        System.out.println(temp.data);
+        if(temp.next==null)
+            temp.next=newNode;
+        else
+        {
+            temp.next=newNode.next;
+        }
     }
     private static void printList()
     {
