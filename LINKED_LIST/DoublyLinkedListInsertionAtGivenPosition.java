@@ -34,11 +34,11 @@ public class DoublyLinkedListInsertionAtGivenPosition {
     }
     private static void printList()
     {
-        Node temp = tail;
+        Node temp = head;
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
-            temp=temp.prev;
+            temp=temp.next;
         }
     }
     public static void main(String[] args) {
