@@ -53,7 +53,6 @@ public class DoublyLinkedListInsertionAtGivenPosition {
             newNode.next=temp.next;
             newNode.prev=temp;
         }
-
     }
     private static void printList()
     {
