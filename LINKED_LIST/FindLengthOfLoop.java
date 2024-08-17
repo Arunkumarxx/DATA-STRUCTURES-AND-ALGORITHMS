@@ -41,7 +41,7 @@ public class FindLengthOfLoop {
         if(head==null)
         {
             head=newNode;
-            tail=head;
+            tail=newNode;
         }
         else {
             tail.next=newNode;
