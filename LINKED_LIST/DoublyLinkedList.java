@@ -29,11 +29,15 @@ public class DoublyLinkedList {
         }
         else {
             tail.next=newNode;
-            
+            tail.prev=tail;
+            tail=newNode;
         }
     }
     public static void main(String[] args) {
         insert(10);
+        insert(20);
+        insert(30);
+        
     }
 
 }
