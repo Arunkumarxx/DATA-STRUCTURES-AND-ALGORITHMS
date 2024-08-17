@@ -2,6 +2,7 @@ package LINKED_LIST;
 
 public class DeleteALinkedListNodeAtAGivenPosition {
     private static Node head;
+    private static Node tail;
     private static class Node {
         int data;
         Node next;
@@ -12,8 +13,34 @@ public class DeleteALinkedListNodeAtAGivenPosition {
             this.next = null;
         }
     }
-    
-    public static void main(String[] args) {
 
+    private static Node  deleteElePos(int x)
+    {
+        if (head == null || x <= 0) {
+            return head;
+        }
+        if (x == 1) {
+            return head.next;
+        }
+        Node temp = head;
+        int ind = 1;
+        while (temp != null && ind < x - 1) {
+
+            temp = temp.next;
+            ind++;
+        }
+        if (temp == null || temp.next == null) {
+            return head;
+        }
+        temp.next = temp.next.next;
+        return head;
+    }
+    private static void insert(int data)
+    {
+
+    }
+    public static void main(String[] args) {
+        
+        deleteElePos(23);
     }
 }
