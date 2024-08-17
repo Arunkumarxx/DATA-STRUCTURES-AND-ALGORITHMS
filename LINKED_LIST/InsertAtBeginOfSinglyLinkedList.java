@@ -26,7 +26,7 @@ public class InsertAtBeginOfSinglyLinkedList {
             tail=newNode;
         }
         else {
-            newNode.next=head; 
+            newNode.next=head;
             head=newNode;
         }
     }
