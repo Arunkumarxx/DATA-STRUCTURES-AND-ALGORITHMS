@@ -15,8 +15,27 @@ public class FindLengthOfLoop {
             this.data=data;
         }
     }
+    private static Node search(int key)
+    {
+        Node temp =head;
+        while(temp.data!=key)
+            temp=temp.next;
+        if(temp!=null)
+            return temp;
+        return null;
+    }
     private static void insertAtBegin(int data)
     {
+        if(data==5)
+        {
+            Node loopAddress=search(2);
+            if(loopAddress!=null)
+            {
+                Node newNode =new Node(data);
+                newNode.next=loopAddress;
+                head=newNode;
+            }
+        }
         Node newNode =new Node(data);
         newNode.next=head;
         head=newNode;
@@ -31,9 +50,10 @@ public class FindLengthOfLoop {
         }
     }
     public static void main(String[] args) {
-        insertAtBegin(1);
-        insertAtBegin(12);
-        insertAtBegin(120);
+        for(int i=1; i<=5; ++i)
+        {
+            insertAtBegin(i);
+        }
         printList();
     }
 }
