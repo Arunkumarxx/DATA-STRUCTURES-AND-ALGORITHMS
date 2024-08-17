@@ -50,7 +50,7 @@ public class SearchInALinkedListIterativeAndRecursive {
             return false;
         if(node.data==key)
             return true;
-       return recursiveSearch(key,node);
+       return recursiveSearch(key,node.next);
     }
 
     private static boolean IterativeSearch(int key,Node node)
