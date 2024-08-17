@@ -36,12 +36,11 @@ public class InsertAtEndOfDoublyLinkedList {
     private static void printList()
     {
         Node temp=tail;
-        while(tail!=null)
+        while(head!=null)
         {
-            System.out.print(tail.data+" ");
-            tail=tail.prev;
+            System.out.print(head.data+" ");
+            head=head.next;
         }
-
     }
     public static void main(String[] args) {
         insert(10);
