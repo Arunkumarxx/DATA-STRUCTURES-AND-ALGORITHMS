@@ -38,11 +38,6 @@ public class InsertionAtBeginOfLinkedList {
             temp=temp.next;
         }
         System.out.println();
-        while(temp!=null)
-        {
-            System.out.print(temp.data+" ");
-            temp=temp.prev;
-        }
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
