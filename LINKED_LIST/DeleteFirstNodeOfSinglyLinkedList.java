@@ -39,7 +39,6 @@ public class DeleteFirstNodeOfSinglyLinkedList {
         DeleteFirst();
         DeleteFirst();
         DeleteFirst();
-        DeleteFirst();
         printList();
     }
 }
