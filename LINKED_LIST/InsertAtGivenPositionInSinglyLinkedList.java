@@ -59,7 +59,7 @@ public class InsertAtGivenPositionInSinglyLinkedList {
         for(int i=0; i<=10;++i)
             insertAtEnd(i);
 
-        insertAtPos(11,11);
+        insertAtPos(11,8);
         printList();
     }
 }
