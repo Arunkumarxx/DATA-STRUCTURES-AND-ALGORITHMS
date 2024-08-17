@@ -84,7 +84,7 @@ public class FindLengthOfLoop {
         {
             if(hashMap.containsKey(temp))
             {
-                System.out.println(k-hashMap.get(temp).intValue());
+                System.out.println(k-hashMap.get(temp));
                 return;
             }
             else
