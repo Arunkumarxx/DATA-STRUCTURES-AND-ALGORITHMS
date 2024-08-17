@@ -44,9 +44,34 @@ public class SearchInALinkedListIterativeAndRecursive {
         }
         System.out.println();
     }
+    private static boolean recursiveSearch(int key,Node node)
+    {
+        if(node!=null)
+        {
+            if(key== node.data)
+                return true;
+            recursiveSearch(key,node.next);
+        }
+        return false;
+    }
+
+    private static boolean IterativeSearch(int key,Node node)
+    {
+        while(node!=null)
+        {
+            if(key==node.data)
+                return true;
+            node=node.next;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         for(int i=1; i<=15; ++i)
             insert(i);
         printList();
+        System.out.println( IterativeSearch(7,head));
+        System.out.println(recursiveSearch(8,head));
     }
+
+
 }
