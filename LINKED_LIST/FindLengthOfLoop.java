@@ -25,12 +25,11 @@ public class FindLengthOfLoop {
     }
     private static Node search(Node head,int key)
     {
-        Node temp=head;
-        while(temp.data!=key)
-            temp=temp.next;
-        if(temp!=null)
-            return temp;
-        return null;
+        Node temp = head;
+        while (temp != null && temp.data != key) {
+            temp = temp.next;
+        }
+        return temp;
     }
     private static Node tail = getlastNode(head);
     private static void insertAtEnd(int data)
