@@ -36,9 +36,11 @@ public class FindLengthOfLoop {
                 head=newNode;
             }
         }
-        Node newNode =new Node(data);
-        newNode.next=head;
-        head=newNode;
+        else {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+        }
     }
     private static void printList()
     {
