@@ -27,13 +27,14 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         }
         else
         {
-            head.next=newNode;
-            newNode.prev=head;
-            
+            tail.next=newNode;
+            newNode.prev=tail;
+            tail=newNode;
         }
     }
     public static void main(String[] args) {
-        insertAtPos();
-
+        for(int i=1; i<=10; ++i)
+            insert(i);
+        
     }
 }
