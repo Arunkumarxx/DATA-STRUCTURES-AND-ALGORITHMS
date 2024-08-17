@@ -37,6 +37,7 @@ public class RecursiveTraversalOfSinglyLinkedList {
         {
             System.out.print(list.data+" ");
             list=list.next;
+            PrintListUsingRecursion(list);
         }
     }
 }
