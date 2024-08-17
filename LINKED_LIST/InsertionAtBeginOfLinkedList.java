@@ -2,6 +2,8 @@ package LINKED_LIST;
 
 public class InsertionAtBeginOfLinkedList {
 
+    private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -15,8 +17,13 @@ public class InsertionAtBeginOfLinkedList {
          this.next=null;
         }
     }
+    private static void insertAtBegin(int data)
+    {
+        Node newNode =new Node(data);
+        newNode.prev=head
+    }
     public static void main(String[] args) {
-        
+
     }
 
 }
