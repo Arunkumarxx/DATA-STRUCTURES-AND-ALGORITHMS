@@ -68,7 +68,6 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         insert(2);
         insert(4);
         insert(5);
-        insert(6);
         insertAtPos(2,6);
         printList();
     }
