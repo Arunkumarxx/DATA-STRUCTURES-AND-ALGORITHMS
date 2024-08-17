@@ -1,5 +1,7 @@
 package LINKED_LIST;
 
+import com.sun.security.jgss.GSSUtil;
+
 public class DoublyLinkedListInsertionAtGivenPosition {
 
     private static Node head;
@@ -38,14 +40,11 @@ public class DoublyLinkedListInsertionAtGivenPosition {
 
         Node temp=head;
 
-        for(int i=0; i<pos-1 && temp!=null; ++i)
+        for(int i=0; i<pos && temp!=null; ++i)
         {
             temp=temp.next;
         }
-        if(temp!=null)
-        {
-            newNode.next=
-        }
+        System.out.println(temp.data);
     }
     private static void printList()
     {
