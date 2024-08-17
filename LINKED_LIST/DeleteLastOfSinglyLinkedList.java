@@ -54,6 +54,9 @@ public class DeleteLastOfSinglyLinkedList {
         insert(10);
         insert(20);
         insert(30);
+        deleteFirst();
         printList();
+
+
     }
 }
