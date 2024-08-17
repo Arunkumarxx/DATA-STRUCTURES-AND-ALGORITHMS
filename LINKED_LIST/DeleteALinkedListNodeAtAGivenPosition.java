@@ -46,11 +46,21 @@ public class DeleteALinkedListNodeAtAGivenPosition {
             tail=newNode;
         }
     }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
 
         insert(10);
         insert(20);
         insert(30);
-        deleteElePos(23);
+        printList();
+        deleteElePos(3);
     }
 }
