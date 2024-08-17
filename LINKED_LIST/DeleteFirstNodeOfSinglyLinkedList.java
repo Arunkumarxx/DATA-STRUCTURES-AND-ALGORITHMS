@@ -38,6 +38,7 @@ public class DeleteFirstNodeOfSinglyLinkedList {
             insert(i);
         printList();
         DeleteFirst();;
+        System.out.println();
         printList();
     }
 }
