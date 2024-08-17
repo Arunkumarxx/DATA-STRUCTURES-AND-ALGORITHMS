@@ -25,9 +25,7 @@ public class InsertionAtBeginOfLinkedList {
             head=newNode;
             tail=newNode;
         }
-        newNode.prev=tail;
-        tail.next=newNode;
-        tail=newNode;
+        
     }
     private static void printList()
     {
