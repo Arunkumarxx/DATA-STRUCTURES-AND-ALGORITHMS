@@ -39,6 +39,7 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         {
             newNode.next=head;
             head=newNode;
+            tail=head;
         }
         else
         {
