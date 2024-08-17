@@ -43,9 +43,9 @@ public class FindLengthOfLoop {
             tail = newNode;
         }
         if (data == 5) {
-            Node loopAdd = search(head, 2);
-            if (loopAdd != null) {
-                tail.next = loopAdd;
+            Node loopStartNode = search(head, 2);
+            if (loopStartNode != null) {
+                tail.next = loopStartNode;
             }
         }
     }
