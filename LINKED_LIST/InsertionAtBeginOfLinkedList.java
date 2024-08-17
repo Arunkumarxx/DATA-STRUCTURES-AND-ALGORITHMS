@@ -37,7 +37,7 @@ public class InsertionAtBeginOfLinkedList {
         insertAtBegin(10);
         insertAtBegin(20);
         insertAtBegin(30);
-
+        printList();
     }
 
 }
