@@ -1,8 +1,10 @@
 package LINKED_LIST;
 
 public class DeleteALinkedListNodeAtAGivenPosition {
+
     private static Node head;
     private static Node tail;
+    
     private static class Node {
         int data;
         Node next;
@@ -34,7 +36,7 @@ public class DeleteALinkedListNodeAtAGivenPosition {
             return;
         }
         temp.next = temp.next.next;
-        
+
     }
     private static void insert(int data)
     {
