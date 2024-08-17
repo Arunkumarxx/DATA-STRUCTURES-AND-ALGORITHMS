@@ -1,7 +1,8 @@
 package LINKED_LIST;
 
 public class InsertAtBeginOfSinglyLinkedList {
-
+    private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -16,8 +17,9 @@ public class InsertAtBeginOfSinglyLinkedList {
             this.next=null;
         }
     }
+    
     public static void main(String[] args) {
-        
+
     }
 }
 
