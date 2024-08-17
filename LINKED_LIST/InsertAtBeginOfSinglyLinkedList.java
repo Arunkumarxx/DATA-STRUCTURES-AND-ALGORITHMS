@@ -30,8 +30,17 @@ public class InsertAtBeginOfSinglyLinkedList {
             head=newNode;
         }
     }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+            System.out.println(temp.data+" ");
+    }
     public static void main(String[] args) {
         insertAtBegin(10);
+        insertAtBegin(20);
+        insertAtBegin(30);
+        printList();
     }
 }
 
