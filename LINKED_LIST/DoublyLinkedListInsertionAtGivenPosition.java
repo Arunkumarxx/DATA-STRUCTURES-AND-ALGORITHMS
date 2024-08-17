@@ -34,7 +34,11 @@ public class DoublyLinkedListInsertionAtGivenPosition {
     }
     private static void insertAtPos(int data,int pos)
     {
-        
+        Node newNode =new Node(data);
+        if(pos<=1)
+        {
+            
+        }
     }
     private static void printList()
     {
