@@ -25,10 +25,24 @@ public class DeleteLastOfSinglyLinkedList {
             tail=newNode;
         }
         else {
-            
+            tail.next=newNode;
+            tail=newNode;
         }
     }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.println(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
-
+        insert(10);
+        insert(20);
+        insert(30);
+        printList();
     }
 }
