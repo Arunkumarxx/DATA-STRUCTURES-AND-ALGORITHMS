@@ -37,34 +37,20 @@ public class DoublyLinkedListInsertionAtGivenPosition {
     private static void insertAtPos(int data,int pos)
     {
         Node newNode =new Node(data);
-        if (pos <= 0) {
-            // Insert at the beginning
-            newNode.next = head;
-            if (head != null) {
-                head.prev = newNode;
-            }
-            head = newNode;
+
+        Node temp=head;
+        for(int i=0; i<pos-1 && temp!=null; ++i)
+        {
+            temp=temp.next;
         }
-        else {
-            Node temp = head;
-            for (int i = 0; i <pos-1&& temp != null; ++i) {
-                temp = temp.next;
-            }
-
-            if (temp != null) {
-                // Inserting in the middle or at the end
-                newNode.next = temp.next;
-                if (temp.next != null) {
-                    temp.next.prev = newNode;
-                }
-                temp.next = newNode;
-                newNode.prev = temp;
-
-                // Update tail if inserting at the end
-                if (newNode.next == null) {
-                    tail = newNode;
-                }
-            }
+        if(temp.next==null) {
+            temp.next = newNode;
+            temp.prev=temp;
+        }
+        else if(temp!=null && temp.next!=null)
+        {
+            newNode.next=temp.next;
+            newNode.prev=temp;
         }
     }
     private static void printList()
@@ -81,7 +67,7 @@ public class DoublyLinkedListInsertionAtGivenPosition {
         insert(2);
         insert(3);
         insert(4);
-        insertAtPos(44,0);
+        insertAtPos(44,2);
         printList();
     }
 }
