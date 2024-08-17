@@ -32,34 +32,26 @@ public class DoublyLinkedListInsertionAtGivenPosition {
             tail=newNode;
         }
     }
-    private static void insertAtPos(int data,int pos)
-    {
-        Node newNode =new Node(data);
-        if(pos<=1 || head==null)
-        {
-            newNode.next=head;
-            if(head!=null)
-                head.prev=newNode;
-            head=newNode;
+    private static void insertAtPos(int data, int pos) {
+        Node newNode = new Node(data);
+        Node temp = head;
+
+        // Traverse to the node at position pos (0-based index)
+        for (int i = 0; i < pos && temp != null; i++) {
+            temp = temp.next;
         }
-        else
-        {
-            Node temp=head;
 
-            for(int i=0; i<pos&& temp!=null; ++i)
-                temp=temp.next;
-
-            if(temp!=null && temp.next!=null)
-            {
-                newNode.next=temp.next;
-                newNode.prev=temp;
-                temp.next.prev=newNode;
-                temp.next=newNode;
-
+        if (temp != null) {
+            // Insert the new node after the node at position pos
+            newNode.next = temp.next;
+            if (temp.next != null) {
+                temp.next.prev = newNode;
             }
-
+            temp.next = newNode;
+            newNode.prev = temp;
         }
     }
+
     private static void printList()
     {
         Node temp = head;
