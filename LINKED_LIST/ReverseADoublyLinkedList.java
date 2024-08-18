@@ -57,14 +57,15 @@ public class ReverseADoublyLinkedList {
     }
     private static Node reverseRecursive(Node head,Node previous)
     {
-        if(head==null)
-            return previous;
-        Node next=head.next;
-        head.next=previous;
-        if(previous!=null)
-            previous.prev=head;
-        previous=head;
-        return reverseRecursive(head,previous);
+        if(head!=null) {
+            Node next = head.next;
+            head.next = previous;
+            if (previous != null)
+                previous.prev = head;
+            previous = head;
+            return reverseRecursive(head, previous);
+        }
+        return previous;
     }
     private static void printList()
     {
