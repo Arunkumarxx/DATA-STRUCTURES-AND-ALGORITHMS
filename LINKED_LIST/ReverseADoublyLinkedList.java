@@ -42,8 +42,9 @@ public class ReverseADoublyLinkedList {
         while(temp!=null)
         {
             Node next=temp.next;
-            temp.next=previous.next;
-            previous.prev=temp;
+            Node prevv=temp;
+            temp.next=previous;
+            previous.prev=prevv;
             previous=temp;
             temp=next;
         }
