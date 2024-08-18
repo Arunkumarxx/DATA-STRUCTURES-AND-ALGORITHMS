@@ -15,10 +15,7 @@ public class ReverseADoublyLinkedList {
             this.next=null;
             this.prev=null;
         }
-        Node()
-        {
 
-        }
     }
     private static void insert(int data)
     {
@@ -81,8 +78,6 @@ public class ReverseADoublyLinkedList {
         for(int i=1; i<=10; ++i)
             insert(i);
         printList();
-        reverse();
-//        printList();
         reverse();
       head=  reverseRecursive(head,null);
         printList();
