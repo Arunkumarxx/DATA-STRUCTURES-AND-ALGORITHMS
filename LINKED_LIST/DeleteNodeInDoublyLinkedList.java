@@ -33,7 +33,7 @@ public class DeleteNodeInDoublyLinkedList {
     private static void delete (int pos)
     {
         Node temp=head;
-        if(pos==0) {
+        if(pos==1) {
             temp = temp.next;
             return;
         }
