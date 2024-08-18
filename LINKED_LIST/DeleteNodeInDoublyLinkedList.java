@@ -34,7 +34,7 @@ public class DeleteNodeInDoublyLinkedList {
     {
         Node temp=head;
         for(int i=1; i<pos;++i)
-            
+            temp=temp.next;
         if(temp==null)
             return;
         if(temp.prev!=null)
