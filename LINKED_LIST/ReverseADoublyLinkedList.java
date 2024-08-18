@@ -37,12 +37,15 @@ public class ReverseADoublyLinkedList {
     private static void reverse()
     {
         Node start=head;
-        Node end=tail;
+        Node temp=head;
+        while(temp.next!=null)
+            temp=temp.next;
+        Node end=temp;
         while(start!=end && start.prev!=end)
         {
-            int temp= start.data;
+            int t= start.data;
             start.data= end.data;
-            end.data=temp;
+            end.data=t;
             start=start.next;
             end=end.prev;
         }
