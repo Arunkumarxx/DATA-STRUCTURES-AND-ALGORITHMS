@@ -21,7 +21,10 @@ public class ReverseALinkedList {
        Node curr =head;
         while(curr!=null)
         {
-            
+            Node next=curr.next;
+            curr.next=previous;
+            previous=curr;
+            curr=next;
         }
 
     }
