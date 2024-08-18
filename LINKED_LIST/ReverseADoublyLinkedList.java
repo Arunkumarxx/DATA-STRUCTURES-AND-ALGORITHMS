@@ -50,6 +50,16 @@ public class ReverseADoublyLinkedList {
         }
         return previous;
     }
+    private static Node reverseRecursive(Node head,Node previous)
+    {
+        if(head==null)
+            return previous;
+        Node next=head.next;
+        head.next=previous;
+        if(previous!=null)
+            previous.prev=head;
+       return reverseRecursive(head,next);
+    }
     private static void printList()
     {
         Node temp=head;
