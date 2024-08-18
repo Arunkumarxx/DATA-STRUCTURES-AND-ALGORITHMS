@@ -46,7 +46,7 @@ public class ReverseADoublyLinkedList {
 
             current.next=previous;
             previous.prev=current;
-            
+
             temp=temp.next;
         }
     }
