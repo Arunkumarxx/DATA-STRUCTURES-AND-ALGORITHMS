@@ -16,12 +16,7 @@ public class ReverseALinkedList {
     }
     private static void reverse()
     {
-        Node temp=head;
-        Node current=head;
-        while(temp!=null)
-        {
-            
-        }
+         
     }
     public static void main(String[] args) {
 
