@@ -37,7 +37,11 @@ public class ReverseADoublyLinkedList {
     private static void reverse()
     {
         Node temp=head;
-        
+        Node t=null;
+        while(temp!=null)
+        {
+            
+        }
     }
     private static void printList()
     {
