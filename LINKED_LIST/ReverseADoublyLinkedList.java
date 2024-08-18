@@ -40,6 +40,8 @@ public class ReverseADoublyLinkedList {
         while(temp!=null)
         {
             temp.prev=temp.next;
+            temp.next.next=temp;
+            
         }
     }
     private static void printList()
