@@ -30,25 +30,11 @@ public class DeleteNodeInDoublyLinkedList {
             tail=newNode;
         }
     }
-    private static void delete (int key)
+    private static void delete (int pos)
     {
-        Node temp=head;
-        while(temp!=null && temp.data!=key)
-            temp=temp.next;
-
-        if(temp==null)
-            return;
-
-        if(temp.prev!=null)
-            temp.prev.next=temp.next;
-
-        else temp=temp.next;
-
-        if(temp.next!=null)
-            temp.prev.next=temp.next;
-
-        else  temp.prev.next=null;
-
+        int i=1;
+        while(i++<=pos);
+        
     }
     private static void printList()
     {
