@@ -34,7 +34,7 @@ public class ReverseADoublyLinkedList {
             tail=newNode;
         }
     }
-    private static void reverse()
+    private static Node  reverse()
     {
         Node temp =head;
         Node previous=null;
@@ -48,7 +48,7 @@ public class ReverseADoublyLinkedList {
             previous=temp;
             temp=next;
         }
-        head=temp;
+        return temp;
     }
     private static void printList()
     {
@@ -64,7 +64,7 @@ public class ReverseADoublyLinkedList {
         for(int i=1; i<=10; ++i)
             insert(i);
         printList();
-        reverse();
+      head=  reverse();
         printList();
     }
 
