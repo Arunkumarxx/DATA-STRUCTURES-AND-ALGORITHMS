@@ -41,7 +41,7 @@ public class ReverseADoublyLinkedList {
         {
             temp.prev=temp.next;
             temp.next.next=temp;
-            
+            temp=temp.next;
         }
     }
     private static void printList()
