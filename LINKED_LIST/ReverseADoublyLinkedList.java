@@ -75,7 +75,8 @@ public class ReverseADoublyLinkedList {
         for(int i=1; i<=10; ++i)
             insert(i);
         printList();
-      head=  reverseRecursive(head,null);
+        reverse()
+//      head=  reverseRecursive(head,null);
         printList();
     }
 
