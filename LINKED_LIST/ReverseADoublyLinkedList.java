@@ -82,6 +82,9 @@ public class ReverseADoublyLinkedList {
             insert(i);
         printList();
         reverse();
+        printList();
+        reverse();
+        
       head=  reverseRecursive(head,null);
         printList();
     }
