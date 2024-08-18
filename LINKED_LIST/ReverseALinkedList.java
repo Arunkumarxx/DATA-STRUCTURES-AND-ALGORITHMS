@@ -28,15 +28,14 @@ public class ReverseALinkedList {
         }
         head=previous;
     }
-    private static void reverseRecursive(Node head,Node previous)
+    private static Node  reverseRecursive(Node head,Node previous)
     {
         if(head==null) {
-            head = previous;
-            return;
+            return previous;
         }
         Node next=head.next;
         head.next=previous;
-        reverseRecursive(next,head);
+       return reverseRecursive(next,head);
     }
     private static void insert(int data)
     {
@@ -66,7 +65,7 @@ public class ReverseALinkedList {
             insert(i);
         printList();
 //        reverse();
-        reverseRecursive(head,null);
+       head= reverseRecursive(head,null);
         printList();
     }
 }
