@@ -17,7 +17,7 @@ public class ReverseALinkedList {
     }
     private static void reverse()
     {
-
+        
     }
     private static void insert(int data)
     {
@@ -45,5 +45,6 @@ public class ReverseALinkedList {
         for(var i=1; i<=10; ++i)
             insert(i);
         printList();
+        reverse();
     }
 }
