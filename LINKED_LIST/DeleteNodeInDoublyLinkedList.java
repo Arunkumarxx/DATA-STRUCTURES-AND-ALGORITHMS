@@ -35,17 +35,13 @@ public class DeleteNodeInDoublyLinkedList {
         Node temp=head;
         while(temp!=null && temp.data!=key)
             temp=temp.next;
-        if(temp!=null)
+
+        if(temp==null)
+            return;
+
+        if(temp.prev!=null)
         {
-            if(temp.next!=null && temp.prev!=null)
-            {
-                temp.prev.next=temp.next;
-                temp.next.prev=temp.prev;
-            }
-            else {
-
-            }
-
+            
         }
     }
     private static void printList()
