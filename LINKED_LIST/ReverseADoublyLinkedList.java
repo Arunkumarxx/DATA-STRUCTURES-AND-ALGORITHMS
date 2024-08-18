@@ -34,6 +34,19 @@ public class ReverseADoublyLinkedList {
             tail=newNode;
         }
     }
+    private static void reverse()
+    {
+        Node start=head;
+        Node end=tail;
+        while(start!=end)
+        {
+            int temp= start.data;
+            start.data= end.data;
+            end.data=temp;
+            start=start.next;
+            end=end.prev;
+        }
+    }
     private static void printList()
     {
         Node temp=head;
@@ -47,6 +60,8 @@ public class ReverseADoublyLinkedList {
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             insert(i);
+        printList();
+        reverse();
         printList();
     }
 
