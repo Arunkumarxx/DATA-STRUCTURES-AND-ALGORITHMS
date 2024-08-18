@@ -48,7 +48,7 @@ public class ReverseADoublyLinkedList {
             previous=temp;
             temp=next;
         }
-        return temp;
+        return previous;
     }
     private static void printList()
     {
