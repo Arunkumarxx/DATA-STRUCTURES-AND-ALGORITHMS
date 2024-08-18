@@ -36,7 +36,7 @@ public class ReverseADoublyLinkedList {
     }
     private static void reverse()
     {
-        
+
     }
     private static void printList()
     {
