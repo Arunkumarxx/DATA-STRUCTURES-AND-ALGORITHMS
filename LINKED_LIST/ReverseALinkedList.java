@@ -26,7 +26,7 @@ public class ReverseALinkedList {
             temp.next=previous;
             temp=curr;
         }
-        
+
     }
     private static void insert(int data)
     {
