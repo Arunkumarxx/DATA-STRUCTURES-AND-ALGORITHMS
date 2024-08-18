@@ -46,10 +46,8 @@ public class DeleteNodeInDoublyLinkedList {
 
         if(temp.next!=null)
             temp.prev.next=temp.next;
-        else  temp.prev.next=null;
 
-        temp.next=null;
-        temp.prev=null;
+        else  temp.prev.next=null;
 
     }
     private static void printList()
