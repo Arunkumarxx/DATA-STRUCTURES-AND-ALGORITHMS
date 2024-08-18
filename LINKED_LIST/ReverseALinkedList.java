@@ -54,5 +54,6 @@ public class ReverseALinkedList {
             insert(i);
         printList();
         reverse();
+        printList();
     }
 }
