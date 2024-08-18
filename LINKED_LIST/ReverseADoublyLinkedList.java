@@ -41,13 +41,8 @@ public class ReverseADoublyLinkedList {
         Node temp=head;
         while(temp!=null)
         {
-            previous=temp;
-            current=temp.next;
-
-            current.next=previous;
-            previous.prev=current;
-
-            temp=temp.next;
+            previous=temp.prev;
+            current.prev=
         }
     }
     private static void printList()
