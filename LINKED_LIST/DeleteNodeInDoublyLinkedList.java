@@ -40,9 +40,12 @@ public class DeleteNodeInDoublyLinkedList {
             return;
 
         if(temp.prev!=null)
-        {
+            temp.prev.next=temp.next;
+
+        else temp=temp.next;
+
+        if(temp.next!=null)
             
-        }
     }
     private static void printList()
     {
