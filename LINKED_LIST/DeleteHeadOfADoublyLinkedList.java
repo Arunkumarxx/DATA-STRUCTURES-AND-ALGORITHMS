@@ -31,6 +31,11 @@ public class DeleteHeadOfADoublyLinkedList {
             newnode.prev = tail;
             tail = newnode;
     }
+    private static void deleteFirst()
+    {
+        if(head.next)
+        head=head.next
+    }
     private static void printList()
     {
         Node temp=tail;
@@ -44,6 +49,7 @@ public class DeleteHeadOfADoublyLinkedList {
     public static void main(String[] args) {
         for(int i=1; i<=5; ++i)
             insert(i);
+        deleteFirst();
         printList();
     }
 
