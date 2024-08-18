@@ -34,13 +34,17 @@ public class DeleteNodeInDoublyLinkedList {
     {
         Node temp=head;
         int i=1;
-        while(i++<=pos && temp!=null)
+        while(i++<pos && temp!=null)
             temp.next=temp;
         if(temp==null)
             return;
         if(temp.prev!=null)
             temp.prev.next=temp.next;
-        else 
+        else temp=temp.next;
+
+        if(temp.next!=null)
+            temp.next.prev=temp.prev;
+        
     }
     private static void printList()
     {
