@@ -32,9 +32,10 @@ public class DeleteNodeInDoublyLinkedList {
     }
     private static void delete (int pos)
     {
+        Node temp=head;
         int i=1;
-        while(i++<=pos);
-        System.out.println(23);
+        while(i++<=pos)
+            temp.next=temp;
     }
     private static void printList()
     {
