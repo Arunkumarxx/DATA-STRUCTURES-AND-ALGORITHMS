@@ -22,7 +22,9 @@ public class ReverseALinkedList {
         Node temp=head;
         while(temp!=null)
         {
-            
+            curr=temp.next;
+            temp.next=previous;
+            temp=curr;
         }
     }
     private static void insert(int data)
