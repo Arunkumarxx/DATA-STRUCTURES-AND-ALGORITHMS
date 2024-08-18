@@ -58,7 +58,8 @@ public class ReverseADoublyLinkedList {
         head.next=previous;
         if(previous!=null)
             previous.prev=head;
-       return reverseRecursive(head,next);
+        previous=head;
+        return reverseRecursive(head,previous);
     }
     private static void printList()
     {
