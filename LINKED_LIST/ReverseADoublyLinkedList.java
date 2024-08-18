@@ -53,7 +53,7 @@ public class ReverseADoublyLinkedList {
             previous.prev=null;
             head=previous;
         }
-        return previous;
+        return head;
     }
     private static Node reverseRecursive(Node head,Node previous)
     {
