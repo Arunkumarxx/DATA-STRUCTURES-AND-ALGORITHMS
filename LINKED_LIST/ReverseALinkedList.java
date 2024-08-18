@@ -11,9 +11,17 @@ public class ReverseALinkedList {
             this.data=data;
             this.next=null;
         }
+        Node()
+        {}
+    }
+    private static void reverse()
+    {
+        if(head==null|| head.next==null)
+        Node temp=head;
+        while(temp!=null)
+
     }
     public static void main(String[] args) {
-
 
     }
 }
