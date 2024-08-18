@@ -16,7 +16,7 @@ public class ReverseALinkedList {
     }
     private static void reverse()
     {
-         
+
     }
     public static void main(String[] args) {
 
