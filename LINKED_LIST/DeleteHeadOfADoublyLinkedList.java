@@ -25,10 +25,11 @@ public class DeleteHeadOfADoublyLinkedList {
         {
             head=newnode;
             tail=newnode;
+            return;
         }
-        tail.next=newnode;
-        newnode.prev=tail;
-        tail=newnode;
+            tail.next = newnode;
+            newnode.prev = tail;
+            tail = newnode;
     }
     private static void printList()
     {
