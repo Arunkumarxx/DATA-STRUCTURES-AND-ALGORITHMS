@@ -38,11 +38,11 @@ public class DeleteHeadOfADoublyLinkedList {
     }
     private static void printList()
     {
-        Node temp=tail;
+        Node temp=head;
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
-            temp=temp.prev;
+            temp=temp.next;
         }
         System.out.println();
     }
