@@ -48,6 +48,11 @@ public class ReverseADoublyLinkedList {
             previous=temp;
             temp=next;
         }
+        if(previous!=null)
+        {
+            previous.prev=null;
+            head=previous;
+        }
         return previous;
     }
     private static Node reverseRecursive(Node head,Node previous)
