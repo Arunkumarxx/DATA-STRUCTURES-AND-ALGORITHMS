@@ -36,8 +36,7 @@ public class ReverseALinkedList {
         }
         Node next=head.next;
         head.next=previous;
-        previous=head;
-        reverseRecursive(next,previous);
+        reverseRecursive(next,head);
     }
     private static void insert(int data)
     {
