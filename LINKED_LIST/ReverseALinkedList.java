@@ -2,6 +2,7 @@ package LINKED_LIST;
 
 public class ReverseALinkedList {
     private static Node head;
+    private static Node tail;
     private static class Node
     {
         int data;
@@ -17,6 +18,19 @@ public class ReverseALinkedList {
     private static void reverse()
     {
 
+    }
+    private static void insert(int data)
+    {
+       Node newNode =new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            tail.next=newNode;
+            tail=newNode;
+        }
     }
     public static void main(String[] args) {
 
