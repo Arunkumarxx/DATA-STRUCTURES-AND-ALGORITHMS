@@ -32,9 +32,18 @@ public class ReverseALinkedList {
             tail=newNode;
         }
     }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
         for(var i=1; i<=10; ++i)
             insert(i);
-        
+
     }
 }
