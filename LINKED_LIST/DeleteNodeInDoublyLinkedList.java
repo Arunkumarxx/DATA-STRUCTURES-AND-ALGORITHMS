@@ -34,7 +34,7 @@ public class DeleteNodeInDoublyLinkedList {
     {
         int i=1;
         while(i++<=pos);
-        
+        System.out.println(23);
     }
     private static void printList()
     {
