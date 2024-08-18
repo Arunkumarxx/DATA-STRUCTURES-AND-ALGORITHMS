@@ -30,8 +30,10 @@ public class ReverseALinkedList {
     }
     private static void reverseRecursive(Node head,Node previous)
     {
-        if(head==null)
+        if(head==null) {
+            head = previous;
             return;
+        }
         Node next=head.next;
         head.next=previous;
         previous=head;
