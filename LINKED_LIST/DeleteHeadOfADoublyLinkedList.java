@@ -33,8 +33,8 @@ public class DeleteHeadOfADoublyLinkedList {
     }
     private static void deleteFirst()
     {
-        if(head.next)
-        head=head.next
+        if(head!=null)
+        head=head.next;
     }
     private static void printList()
     {
