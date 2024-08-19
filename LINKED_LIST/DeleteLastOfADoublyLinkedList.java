@@ -37,10 +37,9 @@ public class DeleteLastOfADoublyLinkedList {
         if(head==null)
             return;
         Node temp=head;
-        while(temp!=null)
-        {
-            
-        }
+        while(temp.next!=null)
+            temp=temp.next;
+        System.out.println(temp.data);
     }
     private static void printList()
     {
