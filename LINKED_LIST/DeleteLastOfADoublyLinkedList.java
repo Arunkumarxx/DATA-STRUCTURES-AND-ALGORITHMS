@@ -39,7 +39,7 @@ public class DeleteLastOfADoublyLinkedList {
         Node temp=head;
         while(temp.next!=null)
             temp=temp.next;
-        System.out.println(temp);
+        System.out.println(temp.data);
     }
     private static void printList()
     {
