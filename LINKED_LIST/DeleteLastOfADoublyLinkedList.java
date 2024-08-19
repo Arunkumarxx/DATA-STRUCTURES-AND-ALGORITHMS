@@ -34,11 +34,11 @@ public class DeleteLastOfADoublyLinkedList {
     }
     private static void printList()
     {
-        Node temp=head;
+        Node temp=tail;
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
-            temp=temp.next;
+            temp=temp.prev;
         }
     }
     public static void main(String[] args) {
