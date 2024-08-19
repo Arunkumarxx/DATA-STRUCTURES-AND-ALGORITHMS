@@ -53,7 +53,7 @@ public class DeleteLastOfADoublyLinkedList {
     }
     public static void main(String[] args) {
 
-        for(int i=1; i<=3; ++i)
+        for(int i=1; i<=2; ++i)
             insert(i);
         printList();
         deleteLast();
