@@ -17,9 +17,22 @@ public class DeleteLastOfADoublyLinkedList {
             this.next=null;
         }
     }
-    private static void 
+    private static void insert(int data)
+    {
+        Node newNode =new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else
+        {
+            newNode.prev=tail;
+            tail.next=newNode;
+            tail=newNode;
+        }
+    }
     public static void main(String[] args) {
 
     }
-
 }
