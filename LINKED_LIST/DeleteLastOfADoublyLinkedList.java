@@ -60,7 +60,6 @@ public class DeleteLastOfADoublyLinkedList {
         for(int i=1; i<=10; ++i)
             insert(i);
         printList();
-        deleteLast();
         printList();
     }
 }
