@@ -32,20 +32,22 @@ public class DeleteLastOfADoublyLinkedList {
             tail=newNode;
         }
     }
-    private static void deleteLast()
-    {
-        if(head==null)
-            return;
-        Node temp=head;
-        if(head.next==null) {
-            temp = null;
+    private static void deleteLast() {
+        if (head == null) {
+            // List is empty, nothing to delete
             return;
         }
-
-        while(temp.next!=null)
-            temp=temp.next;
-        if(temp.prev!=null)
-        temp.prev.next=null;
+        if (head.next == null) {
+            // Only one node in the list
+            head = null;
+            return;
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        // Now, temp is the last node
+        temp.prev.next = null;
     }
     private static void printList()
     {
