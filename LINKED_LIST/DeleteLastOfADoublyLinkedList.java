@@ -37,8 +37,11 @@ public class DeleteLastOfADoublyLinkedList {
         if(head==null)
             return;
         Node temp=head;
-        if(temp.prev==null)
-            temp=null;
+        if(head.next==null) {
+            temp = null;
+            return;
+        }
+
         while(temp.next!=null)
             temp=temp.next;
         if(temp.prev!=null)
