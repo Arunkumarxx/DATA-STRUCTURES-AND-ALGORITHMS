@@ -40,7 +40,6 @@ public class DeleteLastOfADoublyLinkedList {
         while(temp.next!=null)
             temp=temp.next;
         temp=null;
-        head=temp;
     }
     private static void printList()
     {
