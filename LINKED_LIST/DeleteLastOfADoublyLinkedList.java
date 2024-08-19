@@ -32,13 +32,23 @@ public class DeleteLastOfADoublyLinkedList {
             tail=newNode;
         }
     }
+    private static void deleteLast()
+    {
+        if(head==null)
+            return;
+        Node temp=head;
+        while(temp!=null)
+        {
+            
+        }
+    }
     private static void printList()
     {
-        Node temp=tail;
+        Node temp=head;
         while(temp!=null)
         {
             System.out.print(temp.data+" ");
-            temp=temp.prev;
+            temp=temp.next;
         }
     }
     public static void main(String[] args) {
