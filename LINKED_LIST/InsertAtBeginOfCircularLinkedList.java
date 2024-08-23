@@ -25,7 +25,7 @@ public class InsertAtBeginOfCircularLinkedList {
             head=newNode;
             tail=newNode;
             tail.next=head;
-            head.prev=head;
+            tail.prev=head;
         }
         else {
             newNode.next=head;
