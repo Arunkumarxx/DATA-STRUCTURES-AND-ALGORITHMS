@@ -36,19 +36,7 @@ public class AddNumberLinkedList {
         }
         System.out.println();
     }
-
-    private static int NodeLen(Node head)
-    {
-        Node temp=head;
-        int c=0;
-        if(head!=null) {
-            while (temp != null) {
-                temp = temp.next;
-                ++c;
-            }
-        }
-            return c;
-    }
+    
     public static void main(String[] args) {
         num1 = insert(4, num1);
         num1 = insert(5, num1);
