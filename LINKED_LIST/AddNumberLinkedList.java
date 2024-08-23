@@ -67,7 +67,7 @@ public class AddNumberLinkedList {
         while(t1!=null && t2!=null)
         {
 
-            insertAtBegin((t1.data+t2.data+carry)%9,result);
+           result= insertAtBegin((t1.data+t2.data+carry)%9,result);
             carry=t1.data+t2.data/10;
         }
         return result;
@@ -84,12 +84,7 @@ public class AddNumberLinkedList {
         num2= reverse(num2);
 
         Node res= Add(num1,num2);
-
-        while(res!=null)
-        {
-            System.out.print(res.data+" ");
-            res=res.next;
-        }
+        
         printList(num1);
         printList(num2);
     }
