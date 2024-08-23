@@ -50,23 +50,17 @@ public class AddNumberLinkedList {
         return  previous;
     }
 
-    private static class head3
-    {
-        int data;
-        Node  next;
-
-        head3(int data)
-        {
-            this.data=data;
-            this.next=null;
-        }
-    }
     private static Node insertAtBegin(int data,Node head)
     {
         Node newNode= new Node(data);
             newNode.next=head;
             head=newNode;
         return head;
+    }
+
+    private static void Add()
+    {
+
     }
 
     public static void main(String[] args) {
@@ -78,6 +72,8 @@ public class AddNumberLinkedList {
 
         num1= reverse(num1);
         num2= reverse(num2);
+
+
         printList(num1);
         printList(num2);
     }
