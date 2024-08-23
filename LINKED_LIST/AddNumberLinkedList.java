@@ -60,7 +60,27 @@ public class AddNumberLinkedList {
 
     private static Node  Add(Node num1,Node num2)
     {
-       
+        Node result = null;
+        int carry = 0;
+
+        while (num1 != null || num2 != null || carry != 0) {
+            int sum = carry;
+            if (num1 != null) {
+                sum += num1.data;
+                num1 = num1.next;
+            }
+            if (num2 != null) {
+                sum += num2.data;
+                num2 = num2.next;
+            }
+
+            carry = sum / 10;
+            int digit = sum % 10;
+
+            result = insertAtBegin(digit, result);
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
