@@ -90,6 +90,7 @@ public class AddNumberLinkedList {
         printList(num1);
         printList(num2);
         Node res=Add(num1,num2);
+        System.out.println();
         printList(res);
     }
 }
