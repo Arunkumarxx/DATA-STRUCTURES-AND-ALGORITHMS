@@ -58,9 +58,18 @@ public class AddNumberLinkedList {
         return head;
     }
 
-    private static void Add()
+    private static Node  Add(Node num1,Node num2)
     {
+        Node result = null;
+        int carry=0;
+        Node t1=num1;
+        Node t2=num2;
+        while(t1!=null && t2!=null)
+        {
 
+            insertAtBegin(t1.data+t2.data+carry,result);
+            carry=t1.data+t2.data%9;
+        }
     }
 
     public static void main(String[] args) {
