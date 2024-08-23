@@ -32,7 +32,7 @@ public class InsertAtTheEndOfCircularLinkedList {
             newNode.prev=lastNode;
             lastNode.next=newNode;
             head.prev=lastNode;
-            head=newNode;
+
 
         }
     }
