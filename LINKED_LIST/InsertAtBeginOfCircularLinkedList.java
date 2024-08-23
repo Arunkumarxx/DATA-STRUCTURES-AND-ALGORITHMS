@@ -17,7 +17,18 @@ public class InsertAtBeginOfCircularLinkedList {
              this.prev=null;
          }
     }
-    private static 
+    private static void insertAtBegin(int data)
+    {
+        Node newNode =new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+        else {
+            
+        }
+    }
     public static void main(String[] args) {
 
     }
