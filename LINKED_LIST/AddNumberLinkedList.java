@@ -70,6 +70,11 @@ public class AddNumberLinkedList {
            result= insertAtBegin((t1.data+t2.data+carry)%9,result);
             carry=t1.data+t2.data/10;
         }
+        while(t1!=null)
+        {
+            result= insertAtBegin(((t1.data==null?0:t1.data)+t2.data+carry)%9,result);
+            carry=t1.data+t2.data/10;
+        }
         return result;
     }
 
@@ -84,7 +89,7 @@ public class AddNumberLinkedList {
         num2= reverse(num2);
 
         Node res= Add(num1,num2);
-        
+
         printList(num1);
         printList(num2);
     }
