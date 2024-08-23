@@ -37,12 +37,14 @@ public class InsertAtBeginOfCircularLinkedList {
     }
     private static void printList()
     {
-        Node temp=head;
-        do{
-            System.out.print(temp.data+" ");
-            temp=temp.next;
+        if(head!=null) {
+            Node temp = head;
+            do {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+            while (temp != head);
         }
-        while(temp!=head);
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
