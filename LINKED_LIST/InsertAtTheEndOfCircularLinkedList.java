@@ -2,7 +2,6 @@ package LINKED_LIST;
 
 public class InsertAtTheEndOfCircularLinkedList {
     private static Node head;
-    private static Node tail;
 
     private static class Node
     {
@@ -23,13 +22,12 @@ public class InsertAtTheEndOfCircularLinkedList {
         if(head==null)
         {
             head=newNode;
-            tail=newNode;
-            tail.next=head;
-            tail.prev=head;
+            head.prev=head;
+            head.next=head;
         }
         else
         {
-            
+
         }
     }
     private static void printList()
