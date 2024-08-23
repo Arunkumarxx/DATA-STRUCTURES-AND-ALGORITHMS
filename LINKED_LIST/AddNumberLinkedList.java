@@ -81,7 +81,10 @@ public class AddNumberLinkedList {
 
     public static void main(String[] args) {
         num1 = insert(4, num1);
-        
+
+
+        num2 = insert(3, num2);
+
 
         num1= reverse(num1);
         num2= reverse(num2);
