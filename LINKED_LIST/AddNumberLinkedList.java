@@ -38,7 +38,7 @@ public class AddNumberLinkedList {
         do
         {
             System.out.print(temp.data+" ");
-            temp=temp.prev;
+            temp=temp.next;
         }
         while(temp!=head);
     }
