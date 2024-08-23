@@ -46,7 +46,7 @@ public class InsertAtBeginOfCircularLinkedList {
             while (temp != head);
         }
     }
-    
+
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             insertAtBegin(i);

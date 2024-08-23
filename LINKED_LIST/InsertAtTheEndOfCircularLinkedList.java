@@ -1,2 +1,4 @@
-package LINKED_LIST;public class InsertAtTheEndOfCircularLinkedList {
+package LINKED_LIST;
+
+public class InsertAtTheEndOfCircularLinkedList {
 }
