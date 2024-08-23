@@ -90,5 +90,8 @@ public class AddNumberLinkedList {
         num2= reverse(num2);
         printList(num1);
         printList(num2);
+        System.out.println( Node res= Add(num1,num2);
+
+        printList(res););
     }
 }
