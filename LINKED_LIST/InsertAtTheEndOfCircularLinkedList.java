@@ -24,6 +24,9 @@ public class InsertAtTheEndOfCircularLinkedList {
         {
             head=newNode;
             tail=newNode;
+            tail.next=head;
+            tail.prev=head;
+
         }
     }
     private static void printList()

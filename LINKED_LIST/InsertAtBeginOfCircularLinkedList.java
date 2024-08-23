@@ -32,7 +32,7 @@ public class InsertAtBeginOfCircularLinkedList {
             newNode.prev=tail;
             head.prev=newNode;
             tail.next=newNode;
-            head=newNode;
+//            head=newNode;
         }
     }
     private static void printList()
