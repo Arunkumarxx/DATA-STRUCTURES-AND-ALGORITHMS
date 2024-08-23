@@ -63,11 +63,14 @@ public class AddNumberLinkedList {
     }
     private static Node insertAtBegin(int data,Node head)
     {
-        Node temp=head;
-        while(temp!=null)
+        Node newNode= new Node(data);
+        if(head!=null)
         {
-            
+            newNode.next=head;
+            head=newNode;
         }
+        else head=newNode;
+        return head;
     }
 
     public static void main(String[] args) {
