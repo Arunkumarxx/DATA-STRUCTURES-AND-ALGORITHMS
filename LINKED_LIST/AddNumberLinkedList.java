@@ -66,14 +66,17 @@ public class AddNumberLinkedList {
         Node t2=num2;
         while(t1!=null && t2!=null)
         {
-
-           result= insertAtBegin((t1.data+t2.data+carry)%9,result);
+            result= insertAtBegin((t1.data+t2.data+carry)%9,result);
             carry=t1.data+t2.data/10;
         }
         while(t1!=null)
         {
-            result= insertAtBegin(((t1.data==null?0:t1.data)+t2.data+carry)%9,result);
+            result= insertAtBegin((+t2.data+carry)%9,result);
             carry=t1.data+t2.data/10;
+        }
+        while(t2!=null)
+        {
+            result=insert(t2.data+carry%10++)
         }
         return result;
     }
