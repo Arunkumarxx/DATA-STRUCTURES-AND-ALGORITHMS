@@ -53,7 +53,7 @@ public class AddNumberLinkedList {
     private static class head3
     {
         int data;
-        int next;
+        Node  next;
 
         head3(int data)
         {
@@ -61,6 +61,15 @@ public class AddNumberLinkedList {
             this.next=null;
         }
     }
+    private static Node insertAtBegin(int data,Node head)
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            
+        }
+    }
+
     public static void main(String[] args) {
         num1 = insert(4, num1);
         num1 = insert(5, num1);
