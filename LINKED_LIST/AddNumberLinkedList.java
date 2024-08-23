@@ -60,6 +60,8 @@ public class AddNumberLinkedList {
 
     private static Node  Add(Node num1,Node num2)
     {
+        num1= reverse(num1);
+        num2= reverse(num2);
         Node result = null;
         int carry=0;
         while(num1!=null || num2!=null || carry!=0) {
@@ -86,12 +88,9 @@ public class AddNumberLinkedList {
         num2 = insert(4, num2);
         num2 = insert(5, num2);
 
-        num1= reverse(num1);
-        num2= reverse(num2);
+
         printList(num1);
         printList(num2);
-        System.out.println( Node res= Add(num1,num2);
-
-        printList(res););
+        Node res=Add(num1,num2);
     }
 }
