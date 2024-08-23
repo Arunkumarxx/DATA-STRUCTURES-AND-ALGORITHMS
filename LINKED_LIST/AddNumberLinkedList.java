@@ -36,7 +36,14 @@ public class AddNumberLinkedList {
         }
         System.out.println();
     }
-    
+    private static void reverse(Node  head)
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            
+        }
+    }
     public static void main(String[] args) {
         num1 = insert(4, num1);
         num1 = insert(5, num1);
