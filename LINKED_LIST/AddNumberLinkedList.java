@@ -88,10 +88,6 @@ public class AddNumberLinkedList {
 
         num1= reverse(num1);
         num2= reverse(num2);
-
-        Node res= Add(num1,num2);
-
-        printList(res);
         System.out.println();
         printList(num1);
         printList(num2);
