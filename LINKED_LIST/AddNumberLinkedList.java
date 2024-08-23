@@ -42,13 +42,14 @@ public class AddNumberLinkedList {
         Node tail1=tailNode(num1);
         Node tail2=tailNode(num2);
 
+        while(tail1!=null)
     }
     private static Node tailNode(Node head)
     {
         Node temp=head;
         while(temp.next!=null)
             temp=temp.next;
-        
+
         return temp;
     }
     public static void main(String[] args) {
