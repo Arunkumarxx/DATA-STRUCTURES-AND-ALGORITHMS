@@ -65,6 +65,7 @@ public class AddNumberLinkedList {
         num2 = insert(5, num2);
         System.out.println();
         modification(num1,num2);
+        System.out.println();
         printList(num1);
         printList(num2);
     }
