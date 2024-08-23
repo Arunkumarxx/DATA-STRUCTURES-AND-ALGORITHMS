@@ -1,7 +1,8 @@
 package LINKED_LIST;
 
 public class AddNumberLinkedList {
-    private static Node head;
+    private static Node num1;
+    private static Node num2;
     private static class Node
     {
         int data;
@@ -15,7 +16,7 @@ public class AddNumberLinkedList {
             this.next=null;
         }
     }
-    private static void insert(int data)
+    private static void insert(int data,Node head)
     {
         Node newNode = new Node(data);
         if(head==null)
@@ -32,7 +33,7 @@ public class AddNumberLinkedList {
             head.prev=newNode;
         }
     }
-    private static void printList()
+    private static void printList(Node head)
     {
         Node temp=head;
         do
@@ -43,9 +44,15 @@ public class AddNumberLinkedList {
         while(temp!=head);
     }
     public static void main(String[] args) {
-        for(int i=1; i<=10; ++i)
-            insert(i);
-        printList();
+        insert(4,num1);
+        insert(5,num1);
+
+        insert(3,num2);
+        insert(4,num2);
+        insert(5,num2);
+
+        printList(num1);
+        printList(num2);
     }
 
 }
