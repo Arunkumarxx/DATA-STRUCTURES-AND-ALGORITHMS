@@ -1,8 +1,8 @@
 package LINKED_LIST;
 
 public class AddNumberLinkedList {
-    private static Node num1;
-    private static Node num2;
+    private static Node num1=null;
+    private static Node num2=null;
     private static class Node
     {
         int data;
