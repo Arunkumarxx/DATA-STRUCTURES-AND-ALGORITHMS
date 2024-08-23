@@ -42,9 +42,16 @@ public class AddNumberLinkedList {
         int len1=NodeLen(num1);
         int len2=NodeLen(num2);
 
-        
+        if(len1>len2)
+            result=backTracking(num1,num2,result);
+        else result=backTracking(num2,num1,result);
         return num1;
     }
+    private static Node backTracking(Node num1,Node num2,Node result)
+    {
+        
+    }
+
     private static int NodeLen(Node head)
     {
         Node temp=head;
