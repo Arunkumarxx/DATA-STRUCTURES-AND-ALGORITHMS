@@ -64,12 +64,8 @@ public class AddNumberLinkedList {
     private static Node insertAtBegin(int data,Node head)
     {
         Node newNode= new Node(data);
-        if(head!=null)
-        {
             newNode.next=head;
             head=newNode;
-        }
-        else head=newNode;
         return head;
     }
 
