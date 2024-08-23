@@ -38,10 +38,13 @@ public class AddNumberLinkedList {
     }
     private static void reverse(Node  head)
     {
+        Node previous=null;
         Node temp=head;
         while(temp!=null)
         {
-            
+            Node next=temp.next;
+            previous.next=temp;
+            temp.next=next;
         }
     }
     public static void main(String[] args) {
@@ -50,6 +53,9 @@ public class AddNumberLinkedList {
         num2 = insert(3, num2);
         num2 = insert(4, num2);
         num2 = insert(5, num2);
+
+        reverse(num1);
+        
         printList(num1);
         printList(num2);
     }
