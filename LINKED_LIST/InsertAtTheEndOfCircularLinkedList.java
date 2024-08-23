@@ -32,12 +32,16 @@ public class InsertAtTheEndOfCircularLinkedList {
             newNode.prev=lastNode;
             lastNode.next=newNode;
             head.prev=lastNode;
-            
+
         }
     }
     private static void printList()
     {
-
+        Node temp=head;
+        do{
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        } while(temp!=head);
     }
 
     public static void main(String[] args) {
