@@ -94,12 +94,12 @@ public class AddNumberLinkedList {
         num2= reverse(num2);
 
         Node res= Add(num1,num2);
-        System.out.println();
         while(res!=null)
         {
             System.out.print(res.data+" ");
             res=res.next;
         }
+        System.out.println();
         printList(num1);
         printList(num2);
     }
