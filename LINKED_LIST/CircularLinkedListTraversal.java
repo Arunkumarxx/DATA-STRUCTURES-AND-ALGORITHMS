@@ -8,13 +8,25 @@ public class CircularLinkedListTraversal {
         int data;
         Node next;
         Node prev;
+
+        Node(int data)
+        {
+            this.data=data;
+            this.next=null;
+            this.prev=null;
+        }
     }
     private static void insert(int data)
     {
-
+        Node newNode =new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
     }
     public static void main(String[] args) {
-        
+
     }
 
 }
