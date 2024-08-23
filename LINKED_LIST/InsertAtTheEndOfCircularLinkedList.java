@@ -1,6 +1,6 @@
 package LINKED_LIST;
 
- class CircularLinkedListTraversal {
+ class some {
     private static Node head;
 
     private static class Node {
