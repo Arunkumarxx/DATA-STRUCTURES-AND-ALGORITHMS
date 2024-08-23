@@ -41,8 +41,7 @@ public class AddNumberLinkedList {
         Node result=null;
         Node tail1=tailNode(num1);
         Node tail2=tailNode(num2);
-
-        while(tail1!=null)
+        
     }
     private static Node tailNode(Node head)
     {
