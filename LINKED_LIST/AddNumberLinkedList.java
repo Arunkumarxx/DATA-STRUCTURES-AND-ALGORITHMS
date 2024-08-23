@@ -50,7 +50,7 @@ public class AddNumberLinkedList {
         Node temp=head;
         int c=0;
         if(head!=null) {
-            while (temp.next != null) {
+            while (temp != null) {
                 temp = temp.next;
                 ++c;
             }
