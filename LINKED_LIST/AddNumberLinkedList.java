@@ -40,15 +40,22 @@ public class AddNumberLinkedList {
     {
         Node result=null;
         int len1=NodeLen(num1);
+        int len2=NodeLen(num2);
+        System.out.println(len1);
+        System.out.println(len2);
+        return num1;
     }
     private static int NodeLen(Node head)
     {
         Node temp=head;
-        if(head)
-        while(temp.next!=null)
-            temp=temp.next;
-
-        return temp;
+        int c=0;
+        if(head!=null) {
+            while (temp.next != null) {
+                temp = temp.next;
+                ++c;
+            }
+        }
+            return c;
     }
     public static void main(String[] args) {
         num1 = insert(4, num1);
