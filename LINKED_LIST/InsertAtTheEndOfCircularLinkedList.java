@@ -24,7 +24,6 @@ public class InsertAtTheEndOfCircularLinkedList {
             head=newNode;
             head.next=head;
             head.prev=head;
-
         }
         else
         {
@@ -40,10 +39,12 @@ public class InsertAtTheEndOfCircularLinkedList {
     private static void printList()
     {
         Node temp=head;
-        do{
-            System.out.print(temp.data+" ");
-            temp=temp.next;
-        } while(temp!=head);
+        if(head!=null) {
+            do {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            } while (temp != head);
+        }
     }
 
     public static void main(String[] args) {
