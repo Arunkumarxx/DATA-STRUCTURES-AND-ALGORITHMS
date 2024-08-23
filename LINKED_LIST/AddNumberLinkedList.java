@@ -77,6 +77,7 @@ public class AddNumberLinkedList {
             sum+=sum%10;
             insertAtBegin(sum,result);
         }
+        return result;
     }
 
     public static void main(String[] args) {
