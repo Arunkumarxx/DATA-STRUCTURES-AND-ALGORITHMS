@@ -46,8 +46,8 @@ public class AddNumberLinkedList {
             temp.next=previous;
             previous=temp;
             temp=next;
-
         }
+        head=previous;
     }
     public static void main(String[] args) {
         num1 = insert(4, num1);
