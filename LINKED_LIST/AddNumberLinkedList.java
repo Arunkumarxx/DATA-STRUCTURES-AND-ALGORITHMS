@@ -49,7 +49,9 @@ public class AddNumberLinkedList {
     }
     private static Node backTracking(Node num1,Node num2,Node result)
     {
-        
+        if(num1==null)
+            return 
+        backTracking(num1.next,num2,result);
     }
 
     private static int NodeLen(Node head)
