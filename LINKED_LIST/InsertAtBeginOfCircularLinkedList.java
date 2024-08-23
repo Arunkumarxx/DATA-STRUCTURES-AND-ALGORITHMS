@@ -24,10 +24,24 @@ public class InsertAtBeginOfCircularLinkedList {
         {
             head=newNode;
             tail=newNode;
+            tail.next=head;
+            head.prev=head;
         }
         else {
-            
+            newNode.next=head;
+            newNode.prev=tail;
+            head.prev=newNode;
+            tail.next=newNode;
         }
+    }
+    private static void printList()
+    {
+        Node temp=head;
+        do{
+            System.out.println(temp.data+" ");
+            temp=temp.next;
+        }
+        while(temp!=head);
     }
     public static void main(String[] args) {
 
