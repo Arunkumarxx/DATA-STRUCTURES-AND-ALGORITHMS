@@ -31,6 +31,7 @@ public class CircularLinkedListTraversal {
             newNode.next=head;
             newNode.prev=tail;
             tail.next=newNode;
+            head.prev=newNode;
             tail=newNode;
         }
     }
