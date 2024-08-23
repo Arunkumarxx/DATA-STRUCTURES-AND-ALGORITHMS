@@ -4,6 +4,9 @@ public class AddNumberLinkedList {
     private static Node num1 = null;
     private static Node num2 = null;
 
+    static {
+        modification()
+    }
     private static class Node {
         int data;
         Node next;
