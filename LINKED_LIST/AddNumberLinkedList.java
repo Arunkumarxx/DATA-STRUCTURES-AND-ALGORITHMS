@@ -39,13 +39,12 @@ public class AddNumberLinkedList {
     private static Node modification(Node num1,Node num2)
     {
         Node result=null;
-        Node tail1=tailNode(num1);
-        Node tail2=tailNode(num2);
-        
+        int len1=NodeLen(num1);
     }
-    private static Node tailNode(Node head)
+    private static int NodeLen(Node head)
     {
         Node temp=head;
+        if(head)
         while(temp.next!=null)
             temp=temp.next;
 
