@@ -67,8 +67,7 @@ public class AddNumberLinkedList {
         while(t1!=null && t2!=null)
         {
 
-            insertAtBegin(t1.data+t2.data+carry,result);
-            carry=t1.data+t2.data%9;
+            insertAtBegin((t1.data+t2.data+carry)%9,result);
         }
     }
 
