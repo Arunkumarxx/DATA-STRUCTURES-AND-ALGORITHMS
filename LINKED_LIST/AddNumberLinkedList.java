@@ -43,8 +43,9 @@ public class AddNumberLinkedList {
         while(temp!=null)
         {
             Node next=temp.next;
-            previous.next=temp;
-            temp.next=next;
+            temp.next=previous;
+            previous=temp;
+            temp.next=next''
         }
     }
     public static void main(String[] args) {
@@ -55,7 +56,7 @@ public class AddNumberLinkedList {
         num2 = insert(5, num2);
 
         reverse(num1);
-        
+
         printList(num1);
         printList(num2);
     }
