@@ -40,7 +40,7 @@ public class AddNumberLinkedList {
             System.out.print(temp.data+" ");
             temp=temp.prev;
         }
-        while(temp!=head.prev);
+        while(temp!=head.next);
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
