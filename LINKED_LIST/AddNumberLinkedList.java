@@ -28,7 +28,6 @@ public class AddNumberLinkedList {
         }
         return head;
     }
-
     private static void printList(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -41,7 +40,6 @@ public class AddNumberLinkedList {
     public static void main(String[] args) {
         num1 = insert(4, num1);
         num1 = insert(5, num1);
-
         num2 = insert(3, num2);
         num2 = insert(4, num2);
         num2 = insert(5, num2);
