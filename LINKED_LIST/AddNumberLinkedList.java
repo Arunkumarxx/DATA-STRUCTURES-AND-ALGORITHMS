@@ -28,7 +28,7 @@ public class AddNumberLinkedList {
             Node lastNode =head.prev;
             newNode.next=head;
             newNode.prev=lastNode;
-            lastNode.next=head;
+            lastNode.next=newNode;
             head.prev=newNode;
         }
     }
