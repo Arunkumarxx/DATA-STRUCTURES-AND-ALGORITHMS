@@ -61,10 +61,10 @@ public class AddNumberLinkedList {
     private static Node  Add(Node num1,Node num2)
     {
         Node result = null;
-        int carry = 0;
-
-        while (num1 != null || num2 != null || carry != 0) {
+        int carry=0;
+        while(num1!=null || num2!=null || carry!=0) {
             int sum = carry;
+
             if (num1 != null) {
                 sum += num1.data;
                 num1 = num1.next;
@@ -73,14 +73,10 @@ public class AddNumberLinkedList {
                 sum += num2.data;
                 num2 = num2.next;
             }
-
-            carry = sum / 10;
-            int digit = sum % 10;
-
-            result = insertAtBegin(digit, result);
+            carry=sum/10;
+            sum+=sum%10;
+            insertAtBegin(sum,result);
         }
-
-        return result;
     }
 
     public static void main(String[] args) {
@@ -94,11 +90,8 @@ public class AddNumberLinkedList {
         num2= reverse(num2);
 
         Node res= Add(num1,num2);
-        while(res!=null)
-        {
-            System.out.print(res.data+" ");
-            res=res.next;
-        }
+
+
         System.out.println();
         printList(num1);
         printList(num2);
