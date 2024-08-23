@@ -75,7 +75,7 @@ public class AddNumberLinkedList {
             }
             carry=sum/10;
             sum+=sum%10;
-            insertAtBegin(sum,result);
+           result= insertAtBegin(sum,result);
         }
         return result;
     }
