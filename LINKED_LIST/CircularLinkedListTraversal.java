@@ -23,10 +23,26 @@ public class CircularLinkedListTraversal {
         {
             head=newNode;
             tail=newNode;
+            tail.next=newNode;
+        }
+        else
+        {
+
+        }
+    }
+    private static void printList()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.println(temp.data+" ");
+            temp=temp.next;
         }
     }
     public static void main(String[] args) {
+        insert(10);
 
+        printList();
     }
 
 }
