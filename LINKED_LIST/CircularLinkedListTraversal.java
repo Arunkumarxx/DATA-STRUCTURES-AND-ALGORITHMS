@@ -33,11 +33,11 @@ public class CircularLinkedListTraversal {
     private static void printList()
     {
         Node temp=head;
-        while(temp!=null)
-        {
+        do {
             System.out.println(temp.data+" ");
             temp=temp.next;
         }
+        while(temp!=head);
     }
     public static void main(String[] args) {
         insert(10);
