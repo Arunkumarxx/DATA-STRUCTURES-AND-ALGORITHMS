@@ -41,8 +41,8 @@ public class AddNumberLinkedList {
         Node result=null;
         int len1=NodeLen(num1);
         int len2=NodeLen(num2);
-        System.out.println(len1);
-        System.out.println(len2);
+
+        
         return num1;
     }
     private static int NodeLen(Node head)
