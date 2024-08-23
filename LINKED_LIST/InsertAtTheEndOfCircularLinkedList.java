@@ -2,7 +2,7 @@ package LINKED_LIST;
 
 public class InsertAtTheEndOfCircularLinkedList {
     private static Node head;
-    private static Node tial;
+    private static Node tail;
 
     private static class Node
     {
@@ -17,13 +17,24 @@ public class InsertAtTheEndOfCircularLinkedList {
             this.next=null;
         }
     }
+    private static void insertAtEnd(int data)
+    {
+        Node newNode =new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            tail=newNode;
+        }
+    }
     private static void printList()
     {
 
     }
 
     public static void main(String[] args) {
-
+        for(int i=1; i<=10; ++i)
+            insertAtEnd(i);
+        printList();
     }
 
 }
