@@ -1,62 +1,52 @@
 package LINKED_LIST;
 
 public class AddNumberLinkedList {
-    private static Node num1=null;
-    private static Node num2=null;
-    private static class Node
-    {
+    private static Node num1 = null;
+    private static Node num2 = null;
+
+    private static class Node {
         int data;
-        Node  prev;
         Node next;
 
-        Node(int data)
-        {
-            this.data=data;
-            this.prev=null;
-            this.next=null;
+        Node(int data) {
+            this.data = data;
+            this.next = null;
         }
     }
-    private static Node  insert(int data,Node head)
-    {
-        Node newNode = new Node(data);
-        if(head==null)
-        {
-            head=newNode;
-            head.prev=head;
-            head.next=head;
-            return head;
-        }
-        else {
-            Node lastNode =head.prev;
-            newNode.next=head;
-            newNode.prev=lastNode;
-            lastNode.next=newNode;
-            head.prev=newNode;
 
-            return head;
-        }
-    }
-    private static void printList(Node head)
-    {
-        if(head!=null) {
+    private static Node insert(int data, Node head) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+
             Node temp = head;
-            do {
-                System.out.print(temp.data + " ");
+            while (temp.next != null) {
                 temp = temp.next;
             }
-            while (temp != head);
+            temp.next = newNode;
         }
+        return head;
     }
+
+    private static void printList(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
-        num1= insert(4,num1);
-        num1=  insert(5,num1);
-        num2= insert(3,num2);
-        num2=insert(4,num2);
-        num2=insert(5,num2);
+        num1 = insert(4, num1);
+        num1 = insert(5, num1);
+
+        num2 = insert(3, num2);
+        num2 = insert(4, num2);
+        num2 = insert(5, num2);
 
         printList(num1);
-        System.out.println();
         printList(num2);
     }
-
 }
