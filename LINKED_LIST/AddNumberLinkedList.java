@@ -37,10 +37,11 @@ public class AddNumberLinkedList {
         Node temp=head;
         do
         {
-            System.out.print(temp.data+" ");
             temp=temp.prev;
+
+            System.out.print(temp.data+" ");
         }
-        while(temp!=head.next);
+        while(temp!=head);
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
