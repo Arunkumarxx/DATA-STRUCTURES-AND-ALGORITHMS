@@ -36,7 +36,11 @@ public class AddNumberLinkedList {
         }
         System.out.println();
     }
-
+    private static Node modification(Node num1,Node num2)
+    {
+        Node result=null;
+        
+    }
     public static void main(String[] args) {
         num1 = insert(4, num1);
         num1 = insert(5, num1);
