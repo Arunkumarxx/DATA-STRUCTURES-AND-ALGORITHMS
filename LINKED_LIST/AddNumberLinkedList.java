@@ -43,9 +43,7 @@ public class AddNumberLinkedList {
         while(temp!=null)
         {
             Node next=temp.next;
-            temp.next=previous;
-            previous=temp;
-            temp=next;
+            
         }
     }
     public static void main(String[] args) {
