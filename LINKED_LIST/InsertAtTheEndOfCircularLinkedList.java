@@ -28,7 +28,10 @@ public class InsertAtTheEndOfCircularLinkedList {
         else
         {
             Node lastNode=head.prev;
+            newNode.next=head;
+            newNode.prev=lastNode;
             lastNode.next=newNode;
+            head.prev=lastNode;
             
         }
     }
