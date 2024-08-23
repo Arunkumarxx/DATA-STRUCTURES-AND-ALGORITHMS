@@ -40,7 +40,7 @@ public class CircularLinkedListTraversal {
         Node temp=head;
         do {
             System.out.print(temp.data+" ");
-            temp=temp.prev;
+            temp=temp.next;
         }
         while(temp!=head);
         System.out.println();
