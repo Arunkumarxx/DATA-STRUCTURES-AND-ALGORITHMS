@@ -37,12 +37,12 @@ public class CircularLinkedListTraversal {
     }
     private static void printList()
     {
-        Node temp=head;
+        Node temp=tail;
         do {
             System.out.print(temp.data+" ");
-            temp=temp.next;
+            temp=temp.prev;
         }
-        while(temp!=head);
+        while(temp!=tail);
         System.out.println();
     }
     public static void main(String[] args) {
