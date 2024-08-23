@@ -57,7 +57,7 @@ public class AddNumberLinkedList {
         num2 = insert(5, num2);
 
         num1= reverse(num1);
-
+        num2= reverse(num2);
         printList(num1);
         printList(num2);
     }
