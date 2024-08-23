@@ -45,8 +45,8 @@ public class CircularLinkedListTraversal {
         while(temp!=head);
     }
     public static void main(String[] args) {
-        insert(10);
-
+        for(int i=1; i<=10; ++i)
+            insert(i);
         printList();
     }
 
