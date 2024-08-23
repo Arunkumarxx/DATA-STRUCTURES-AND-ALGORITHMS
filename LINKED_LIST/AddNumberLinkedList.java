@@ -19,15 +19,24 @@ public class AddNumberLinkedList {
     private static void insert(int data, Node head) {
         Node newNode = new Node(data);
         if (head == null) {
+            // Initialize the head of the list
+            newNode.next = newNode;
+            newNode.prev = newNode;
             head = newNode;
-            head.prev = head;
-            head.next = head;
         } else {
+            // Insert the new node in the circular doubly linked list
             Node lastNode = head.prev;
             newNode.next = head;
             newNode.prev = lastNode;
             lastNode.next = newNode;
             head.prev = newNode;
+        }
+
+        // Update the head reference if it was null
+        if (head == num1) {
+            num1 = head;
+        } else if (head == num2) {
+            num2 = head;
         }
     }
 
@@ -44,13 +53,8 @@ public class AddNumberLinkedList {
 
     public static void main(String[] args) {
         // Initialize lists
-        num1 = new Node(0); // Create a dummy node to start the list
-        num1.prev = num1;
-        num1.next = num1;
-
-        num2 = new Node(0); // Create a dummy node to start the list
-        num2.prev = num2;
-        num2.next = num2;
+        num1 = null;
+        num2 = null;
 
         // Insert values
         insert(4, num1);
