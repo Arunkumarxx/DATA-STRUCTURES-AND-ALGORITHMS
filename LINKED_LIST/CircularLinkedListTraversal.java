@@ -28,7 +28,10 @@ public class CircularLinkedListTraversal {
         }
         else
         {
-
+            newNode.next=head;
+            newNode.prev=tail;
+            tail.next=newNode;
+            tail=newNode;
         }
     }
     private static void printList()
