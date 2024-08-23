@@ -49,6 +49,18 @@ public class AddNumberLinkedList {
         }
         return  previous;
     }
+
+    private static class head3
+    {
+        int data;
+        int next;
+
+        head3(int data)
+        {
+            this.data=data;
+            this.next=null;
+        }
+    }
     public static void main(String[] args) {
         num1 = insert(4, num1);
         num1 = insert(5, num1);
