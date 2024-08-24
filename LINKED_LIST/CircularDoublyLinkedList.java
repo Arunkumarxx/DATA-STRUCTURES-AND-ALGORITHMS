@@ -31,7 +31,7 @@ public class CircularDoublyLinkedList {
             newNode.next=head;
             newNode.prev=head.prev;
             head.prev.next=newNode;
-            head=newNode;
+            head.prev=newNode;
             return head;
         }
     }
