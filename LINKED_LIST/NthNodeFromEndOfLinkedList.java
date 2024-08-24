@@ -34,10 +34,8 @@ public class NthNodeFromEndOfLinkedList {
     {
         Node start=head;
         Node end=head;
-        int len=1;
         for(int i=1; i<=n && len<=n;++i) {
-            end = end.next;
-            ++len;
+
         }
         while(end!=null && len<=n)
         {
