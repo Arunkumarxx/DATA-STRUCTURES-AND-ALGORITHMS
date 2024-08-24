@@ -37,7 +37,7 @@ public class CircularDoublyLinkedList {
     }
     private static void printList(Node head)
     {
-        Node temp=head;
+        Node temp=head.next;
         do {
             System.out.print(temp.data+" ");
             temp=temp.prev;
