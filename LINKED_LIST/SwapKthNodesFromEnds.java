@@ -37,7 +37,8 @@ public class SwapKthNodesFromEnds {
     }
     private static Node swapKthNode(Node head)
     {
-        
+         int len=lenOfNode(head);
+         return head;
     }
     private static int lenOfNode(Node head)
     {
@@ -55,6 +56,7 @@ public class SwapKthNodesFromEnds {
         for(int i=1; i<=10; ++i)
            head= insert(i,head);
         printList(head);
+        System.out.println(swapKthNode(head));
     }
 
 }
