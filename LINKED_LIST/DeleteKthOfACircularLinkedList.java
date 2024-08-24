@@ -50,7 +50,10 @@ public class DeleteKthOfACircularLinkedList {
             temp=temp.next;
         if(temp==head)
         {
-            System.out.println("is head");
+            Node temp2=head;
+            while(temp2.next!=head)
+                temp2=temp2.next;
+            System.out.println(temp2.data);
         }
         return head;
     }
