@@ -16,17 +16,9 @@ public class SwapKthNodesFromEnds {
     private static Node insert(int data,Node head)
     {
         Node newNode =new Node(data);
-        if(head==null)
-        {
-            newNode.next=head;
-            head=newNode;
-            return head;
-        }
-        else {
-            head.next=newNode;
-            head=newNode;
-            return head;
-        }
+        newNode.next=head;
+        head=newNode;
+        return head; 
     }
 
     private static void printList(Node head)
