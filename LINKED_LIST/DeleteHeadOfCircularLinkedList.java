@@ -47,10 +47,18 @@ public class DeleteHeadOfCircularLinkedList {
     }
     private static Node deleteHead(Node head)
     {
-        if(head!=null)
-        {
-            head.prev.next=head.next;
-            head.next.prev=head.prev;
+        if(head==null)
+        return head;
+        if(head.next==head) {
+            head = null;
+            return head;
+        }
+         else {
+             Node lastNode=head.prev;
+             Node nextNode =head.next;
+             lastNode.next=nextNode;
+             nextNode.prev=lastNode;
+             head=nextNode;
         }
         return head;
     }
