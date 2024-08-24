@@ -27,7 +27,7 @@ public class SortedInsertInASinglyLinkedList {
             {
                 newNode.next=temp.next;
                 temp.next=newNode;
-                temp=newNode;
+
                 return temp;
             }
         }
