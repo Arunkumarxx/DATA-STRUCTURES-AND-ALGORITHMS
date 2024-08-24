@@ -28,11 +28,23 @@ public class CircularDoublyLinkedList {
         }
         else
         {
-            
+            newNode.next=head;
+            newNode.prev=head.prev;
+            head.prev.next=newNode;
+            return head;
         }
+    }
+    private static void printList(Node head)
+    {
+        do {
+
+        }
+        while(head)
     }
 
     public static void main(String[] args) {
-
+        for(int i=1; i<=10; ++i)
+            head=insert(i,head);
+        printList();
     }
 }
