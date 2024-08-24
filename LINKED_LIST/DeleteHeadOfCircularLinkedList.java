@@ -60,7 +60,6 @@ public class DeleteHeadOfCircularLinkedList {
         for(int i=1; i<=10; ++i)
            head= insert(head,i);
         printList(head);
-        deleteHead(head);
     }
 
 }
