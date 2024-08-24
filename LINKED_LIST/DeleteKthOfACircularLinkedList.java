@@ -29,10 +29,11 @@ public class DeleteKthOfACircularLinkedList {
             }
             while(temp.next!=head);
 
-            temp.next=newNode;
+
             newNode.next=head;
+            temp.next=newNode;
             head=newNode;
-            
+
         }
         return temp;
     }
