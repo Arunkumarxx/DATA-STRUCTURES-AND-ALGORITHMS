@@ -24,6 +24,7 @@ public class NthNodeFromEndOfLinkedList {
 
         else {
             head.next=newNode;
+            head=newNode;
             return head;
         }
     }
