@@ -46,7 +46,6 @@ public class SortedInsertInASinglyLinkedList {
 
         for(int i=10; i>=1; --i)
             head=insertSorted(i,head);
-        
         printList(head);
     }
 
