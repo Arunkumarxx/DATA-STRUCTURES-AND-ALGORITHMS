@@ -37,16 +37,14 @@ public class DeleteKthOfACircularLinkedList {
         return temp;
     }
     private static void printList(Node head)
-    { if (head == null) {
-        System.out.println("List is empty.");
-        return;
-    }
-
-        Node temp = head;
-        do {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        } while (temp != head);
+    {
+        Node temp=head;
+        do
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        while(temp!=head);
         System.out.println();
     }
     public static void main(String[] args) {
