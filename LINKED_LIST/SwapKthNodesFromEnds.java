@@ -38,14 +38,14 @@ public class SwapKthNodesFromEnds {
     private static Node swapKthNode(Node head,int k)
     {
          int len=lenOfNode(head);
-
+         
          Node first=head;
-
+         
          for(int i=1; i<k;++i)
              first=first.next;
 
          Node second=head;
-
+        
          for(int i=1; i<=len-k; ++i)
          second=second.next;
 
