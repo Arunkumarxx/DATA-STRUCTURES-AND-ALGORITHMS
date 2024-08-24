@@ -24,16 +24,9 @@ public class SortedInsertInASinglyLinkedList {
             newNode.next=head;
             return newNode;
         }
-        Node temp=head;
-        while(temp.next!=null)
-        {
-            if(temp.data <= data && temp.next.data >= data)
-            {
-                newNode.next=temp.next;
-                temp.next=newNode;
-
-                return temp;
-            }
+        Node temp = head;
+        while (temp.next != null && temp.next.data < data) {
+            temp = temp.next;
         }
         return head;
     }
