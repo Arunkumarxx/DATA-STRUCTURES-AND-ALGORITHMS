@@ -30,20 +30,21 @@ public class NthNodeFromEndOfLinkedList {
             return head;
         }
     }
-    private static void NthNode(Node head,int n)
+    private static int  NthNode(Node head,int n)
     {
         Node start=head;
         Node end=head;
-        for(int i=1; i<=n && len<=n;++i) {
-
+        for(int i=1; i<=n ;++i) {
+            if(end==null)
+                return-1;
+            end=end.next;
         }
-        while(end!=null && len<=n)
+        while(end!=null)
         {
             start=start.next;
             end=end.next;
-            ++len;
         }
-        System.out.println(start==null?-1:start.data);
+        return start.data;
     }
     private static void printList(Node head)
     {
@@ -58,7 +59,7 @@ public class NthNodeFromEndOfLinkedList {
         for(int i=1; i<=5;++i)
             head=insert(i,head);
         printList(head);
-        NthNode(head,52);
+        System.out.println( NthNode(head,52));
     }
 
 }
