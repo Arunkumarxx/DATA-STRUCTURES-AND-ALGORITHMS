@@ -16,8 +16,23 @@ public class CircularDoublyLinkedList {
             this.next=null;
         }
     }
+    private static Node insert(int data,Node head)
+    {
+        Node newNode =new Node(data);
+        if(head==null)
+        {
+            head=newNode;
+            head.prev=head;
+            head.next=head;
+            return head;
+        }
+        else
+        {
+            
+        }
+    }
 
     public static void main(String[] args) {
-        
+
     }
 }
