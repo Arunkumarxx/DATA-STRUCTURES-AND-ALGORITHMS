@@ -15,15 +15,14 @@ public class DeleteKthOfACircularLinkedList {
     }
     private static Node  insert(Node head,int data)
     {
-        Node temp=head;
-        Node newNode=new Node(data);
-
         if(head==null)
         {
-            head=newNode;
+            head=new Node(data);;
             head.next=head;
         }
         else{
+            Node temp=head;
+            Node newNode=new Node(data);
             while(temp.next!=head)
                 temp=temp.next;
 
@@ -31,7 +30,7 @@ public class DeleteKthOfACircularLinkedList {
             temp.next=newNode;
 
         }
-        return temp;
+        return head;
     }
     private static void printList(Node head)
     {
