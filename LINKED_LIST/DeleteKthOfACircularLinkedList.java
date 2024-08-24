@@ -49,13 +49,14 @@ public class DeleteKthOfACircularLinkedList {
         for(int i=1; i<pos; ++i)
             temp=temp.next;
         System.out.println(temp.data);
+        return head;
     }
 
 
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             head=insert(head,i);
-        deleteKthElement(2,head);
+       head= deleteKthElement(2,head);
         printList(head);
     }
 
