@@ -47,6 +47,11 @@ public class DeleteHeadOfCircularLinkedList {
     }
     private static Node deleteHead(Node head)
     {
+        if(head!=null)
+        {
+            head.prev.next=head.next;
+            head.next.prev=head.prev;
+        }
         return head;
     }
     public static void main(String[] args) {
