@@ -35,7 +35,13 @@ public class SwapKthNodesFromEnds {
             head=head.next;
         }
     }
-    
+    private static Node swapKthNode(Node head)
+    {
+        Node first=head;
+        Node second=head;
+        
+    }
+
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
            head= insert(i,head);
