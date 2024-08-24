@@ -47,14 +47,15 @@ public class DeleteKthOfACircularLinkedList {
     {
         Node temp=head;
         for(int i=1; i<pos; ++i)
-        {
-            
-        }
+            temp=temp.next;
+        System.out.println(temp.data);
     }
+
+
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             head=insert(head,i);
-        deleteKthElement();
+        deleteKthElement(2,head);
         printList(head);
     }
 
