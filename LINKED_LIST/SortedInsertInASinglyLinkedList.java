@@ -2,6 +2,7 @@ package LINKED_LIST;
 
 public class SortedInsertInASinglyLinkedList {
 
+    private static Node head;
     private static class Node
     {
         int data;
@@ -29,10 +30,23 @@ public class SortedInsertInASinglyLinkedList {
                 return head;
             }
         }
+        return head;
+    }
+
+    private static void printList(Node head)
+    {
+        while(head!=null)
+        {
+            System.out.print(head.data+" ");
+            head=head.next;
+        }
     }
 
     public static void main(String[] args) {
-
+       head= insertSorted(10,head);
+        head=insertSorted(20,head);
+        head=insertSorted(15,head);
+        printList();
     }
 
 }
