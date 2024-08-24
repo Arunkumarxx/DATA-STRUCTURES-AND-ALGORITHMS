@@ -33,7 +33,7 @@ public class MiddleOfALinkedList {
     }
     private static void printList(Node head)
     {
-        
+
     }
     public static void main(String[] args) {
 
