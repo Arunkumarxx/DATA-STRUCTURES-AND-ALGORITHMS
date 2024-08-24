@@ -19,8 +19,19 @@ public class DeleteHeadOfCircularLinkedList {
     private static Node  insert(Node head,int data)
     {
         Node newNode =new Node(data);
-        newNode.next=head;
-        head=newNode;
+        if(head==null) {
+            newNode.next=head;
+            newNode.prev=head;
+            head=newNode;
+        }
+        else
+        {
+            Node temp=head;
+            while(temp.next!=head)
+            {
+                temp=temp.next;
+            }
+        }
         return head;
     }
     private  static void printList(Node head)
