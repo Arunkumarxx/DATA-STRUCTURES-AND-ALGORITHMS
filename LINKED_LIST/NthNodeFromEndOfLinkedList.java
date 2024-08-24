@@ -23,7 +23,10 @@ public class NthNodeFromEndOfLinkedList {
             return newNode;
 
         else {
-            head.next=newNode;
+            Node temp=head;
+            while(temp!=null)
+                temp=temp.next;
+            temp.next=newNode;
             return head;
         }
     }
