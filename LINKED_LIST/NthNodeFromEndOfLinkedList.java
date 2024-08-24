@@ -24,7 +24,7 @@ public class NthNodeFromEndOfLinkedList {
 
         else {
             Node temp=head;
-            while(temp!=null)
+            while(temp.next!=null)
                 temp=temp.next;
             temp.next=newNode;
             return head;
