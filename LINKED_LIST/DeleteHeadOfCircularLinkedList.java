@@ -16,7 +16,7 @@ public class DeleteHeadOfCircularLinkedList {
             this.prev=null;
         }
     }
-    private static Node  insert(Node head,int data) {
+    private static void   insert(Node head,int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head=newNode;
@@ -31,7 +31,7 @@ public class DeleteHeadOfCircularLinkedList {
             head.prev=newNode;
             head=newNode;
         }
-        return head;
+//        return head;
     }
     private  static void printList(Node head)
     {
@@ -47,16 +47,6 @@ public class DeleteHeadOfCircularLinkedList {
     }
     private static Node deleteHead(Node head)
     {
-        if(head==null)
-            return head;
-
-        Node temp=head;
-        do{
-            temp=temp.next;
-            System.out.print(temp.data+" ");
-        }
-        while(temp!=head);
-
         return head;
     }
     public static void main(String[] args) {
