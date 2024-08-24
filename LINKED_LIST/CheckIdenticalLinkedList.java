@@ -13,9 +13,9 @@ public class CheckIdenticalLinkedList {
         this.next=null;
         }
     }
-    private static Node insert(int )
+    private static Node insert(int data,Node head)
     {
-
+        
     }
 
     public static void main(String[] args) {
