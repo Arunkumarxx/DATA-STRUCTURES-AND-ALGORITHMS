@@ -49,6 +49,11 @@ public class DeleteKthOfACircularLinkedList {
         if(head==null)
             return null;
 
+        if(pos==1)
+        {
+            if(head.next==head)
+                return null;
+        }
         Node temp=head;
         for(int i=1; i<pos-1; ++i)
             temp=temp.next;
