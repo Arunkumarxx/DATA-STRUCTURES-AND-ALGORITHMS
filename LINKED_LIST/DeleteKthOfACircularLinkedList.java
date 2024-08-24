@@ -48,7 +48,10 @@ public class DeleteKthOfACircularLinkedList {
         Node temp=head;
         for(int i=1; i<pos-1; ++i)
             temp=temp.next;
-        System.out.println(temp.data);
+        if(temp==head)
+        {
+            System.out.println("is head");
+        }
         return head;
     }
 
@@ -56,7 +59,7 @@ public class DeleteKthOfACircularLinkedList {
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             head=insert(head,i);
-       head= deleteKthElement(2,head);
+       head= deleteKthElement(1,head);
         printList(head);
     }
 
