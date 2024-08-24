@@ -43,9 +43,13 @@ public class DeleteKthOfACircularLinkedList {
         while(temp!=head);
         System.out.println();
     }
-    private static Node deleteKthElement(int data)
+    private static Node deleteKthElement(int pos,Node head)
     {
-        
+        Node temp=head;
+        for(int i=1; i<pos; ++i)
+        {
+            
+        }
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
