@@ -27,10 +27,10 @@ public class DeleteHeadOfCircularLinkedList {
         else
         {
             Node temp=head;
-            while(temp.next!=head)
-            {
+            do{
                 temp=temp.next;
             }
+            while(temp!=head);
         }
         return head;
     }
