@@ -1,6 +1,10 @@
 package LINKED_LIST;
 
+import com.sun.security.jgss.GSSUtil;
+
 public class NthNodeFromEndOfLinkedList {
+    private static Node head;
+
     private static class Node
     {
         int data;
@@ -36,11 +40,20 @@ public class NthNodeFromEndOfLinkedList {
         }
         System.out.println(start.data);
     }
-    private static Node head;
+    private static void printList(Node head)
+    {
+        while(head!=null)
+        {
+            System.out.print(head.data+" ");
+            head=head.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         for(int i=1; i<=5;++i)
             head=insert(i,head);
-        
+        printList(head);
     }
 
 }
