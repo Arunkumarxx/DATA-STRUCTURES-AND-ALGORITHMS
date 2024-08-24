@@ -46,6 +46,7 @@ public class SwapKthNodesFromEnds {
          for(int i=1; i<=k; ++i)
          second=second.next;
 
+        System.out.println();
         System.out.println(first.data);
         System.out.println(second.data);
     return head;
