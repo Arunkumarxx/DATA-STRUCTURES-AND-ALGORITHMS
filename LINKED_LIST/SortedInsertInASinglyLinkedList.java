@@ -19,7 +19,16 @@ public class SortedInsertInASinglyLinkedList {
         Node newNode =new Node(data);
         if(head==null)
             return newNode;
-        
+        Node temp=head;
+        while(temp.next!=null)
+        {
+            if(temp.data <= data && temp.next.data >= data)
+            {
+                newNode.next=temp.next;
+                temp.next=newNode;
+                return head;
+            }
+        }
     }
 
     public static void main(String[] args) {
