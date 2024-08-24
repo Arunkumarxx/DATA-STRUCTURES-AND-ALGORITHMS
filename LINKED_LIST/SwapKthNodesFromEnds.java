@@ -23,6 +23,7 @@ public class SwapKthNodesFromEnds {
         }
         else {
             head.next=newNode;
+            head=newNode;
             return head;
         }
     }
