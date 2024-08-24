@@ -25,10 +25,8 @@ public class DeleteHeadOfCircularLinkedList {
     }
     private  static void printList(Node head)
     {
-        while(head!=null)
-        {
-            System.out.print(head.data+" ");
-            head=head.next;
+        do{
+
         }
         System.out.println();
     }
@@ -48,7 +46,7 @@ public class DeleteHeadOfCircularLinkedList {
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
-            insert(head,i);
+           head= insert(head,i);
         printList(head);
     }
 
