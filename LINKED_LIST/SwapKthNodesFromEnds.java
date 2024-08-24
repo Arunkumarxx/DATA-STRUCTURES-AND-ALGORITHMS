@@ -67,7 +67,7 @@ public class SwapKthNodesFromEnds {
         for(int i=1; i<=4; ++i)
            head= insert(i,head);
         printList(head);
-        System.out.println(swapKthNode(head,3));
+        System.out.println(swapKthNode(head,4));
     }
 
 }
