@@ -13,8 +13,9 @@ public class DeleteKthOfACircularLinkedList {
         }
 
     }
-    private static void insert(int data)
+    private static Node  insert(int data)
     {
+        Node temp=head;
         if(head==null)
         {
             head=new Node(data);
@@ -22,16 +23,19 @@ public class DeleteKthOfACircularLinkedList {
         }
         else {
             Node newNode =new Node(data);
-            Node temp=head;
-            while(temp!=null)
-            {
-                
-            }
+
+            do {
+                temp=temp.next;
+            }while(temp.next!=head);
+            temp.next=newNode;
+            newNode.next=head;
+            head=newNode;
         }
+        return temp;
     }
 
     public static void main(String[] args) {
-
+        head=
     }
 
 }
