@@ -43,7 +43,7 @@ public class SwapKthNodesFromEnds {
              first=first.next;
 
          Node second=head;
-         for(int i=1; i<=k; ++i)
+         for(int i=1; i<=len-k; ++i)
          second=second.next;
 
         System.out.println();
