@@ -23,12 +23,24 @@ public class SwapKthNodesFromEnds {
         }
         else {
             head.next=newNode;
-            
+            return head;
         }
     }
 
-    public static void main(String[] args) {
+    private static void printList(Node head)
+    {
+        while(head!=null)
+        {
+            System.out.print(head.data+" ");
+            head=head.next;
+        }
+    }
 
+    private static Node head;
+    public static void main(String[] args) {
+        for(int i=1; i<=10; ++i)
+           head= insert(i,head);
+        printList(head);
     }
 
 }
