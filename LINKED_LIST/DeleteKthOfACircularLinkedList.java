@@ -13,24 +13,26 @@ public class DeleteKthOfACircularLinkedList {
         }
 
     }
-    private static Node  insert(Node head,int data)
-    {
-        Node temp=head;
-        Node newNode=head;
-        if(head==null)
-        {
-            head=newNode;
-            head.next=head;
-        }
-        else{
-            while(temp.next!=head)
-                temp=temp.next;
+    private static Node insert(Node head, int data) {
+        if (head == null) {
+            // Creating the first node in the circular list
+            head = new Node(data);
+            head.next = head; // Point to itself to make it circular
+        } else {
+            // Inserting the new node at the end of the circular list
+            Node temp = head;
+            Node newNode = new Node(data);
 
-            newNode.next=head;
-            temp.next=newNode;
+            // Traverse to the last node
+            while (temp.next != head) {
+                temp = temp.next;
+            }
 
+            // Insert the new node at the end and make the list circular
+            newNode.next = head;
+            temp.next = newNode;
         }
-        return temp;
+        return head; // Always return the head of the circular list
     }
     private static void printList(Node head)
     {
