@@ -11,7 +11,6 @@ public class SwapKthNodesFromEnds {
             this.data=data;
             this.next=null;
         }
-
     }
     private static Node insert(int data,Node head)
     {
@@ -21,13 +20,10 @@ public class SwapKthNodesFromEnds {
             head=newNode;
             return head;
         }
-
             Node temp=head;
             while(temp.next!=null)
                 temp=temp.next;
-            
             temp.next=newNode;
-
             return temp;
     }
 
@@ -39,7 +35,6 @@ public class SwapKthNodesFromEnds {
             head=head.next;
         }
     }
-
     private static Node head;
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
