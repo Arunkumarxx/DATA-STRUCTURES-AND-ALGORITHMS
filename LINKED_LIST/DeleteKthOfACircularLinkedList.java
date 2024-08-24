@@ -13,7 +13,7 @@ public class DeleteKthOfACircularLinkedList {
         }
 
     }
-    private static Node  insert(int data)
+    private static Node  insert(Node head,int data)
     {
         Node temp=head;
         if(head==null)
@@ -49,7 +49,7 @@ public class DeleteKthOfACircularLinkedList {
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
-            head=insert(i);
+            head=insert(head,i);
         printList(head);
     }
 
