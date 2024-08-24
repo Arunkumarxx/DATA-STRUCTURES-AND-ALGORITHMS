@@ -37,8 +37,9 @@ public class DeleteHeadOfCircularLinkedList {
     {
         Node temp=head;
         do{
-            temp=temp.next;
             System.out.print(temp.data+" ");
+            temp=temp.next;
+
         }
         while(temp!=head);
         System.out.println();
