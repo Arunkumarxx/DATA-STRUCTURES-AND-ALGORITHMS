@@ -16,21 +16,16 @@ public class DeleteHeadOfCircularLinkedList {
             this.prev=null;
         }
     }
-    private static Node  insert(Node head,int data)
-    {
-        Node newNode =new Node(data);
-        if(head==null) {
-            newNode.next=head;
-            newNode.prev=head;
-            head=newNode;
+    private static Node  insert(Node head,int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            newNode.next = head;
+            newNode.prev = head;
+            head = newNode;
         }
-        else
-        {
-            Node temp=head;
-            do{
-                temp=temp.next;
-            }
-            while(temp!=head);
+        else {
+            newNode.next=head;
+            newNode.prev=head.prev;
         }
         return head;
     }
