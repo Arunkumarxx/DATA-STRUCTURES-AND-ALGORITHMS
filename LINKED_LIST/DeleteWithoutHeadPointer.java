@@ -38,7 +38,7 @@ public class DeleteWithoutHeadPointer {
         printList(head);
     }
 
-    private static void printList(.Node head) {
+    private static void printList(Node head) {
         Node current = head;
         while (current != null) {
             System.out.print(current.value + " ");
