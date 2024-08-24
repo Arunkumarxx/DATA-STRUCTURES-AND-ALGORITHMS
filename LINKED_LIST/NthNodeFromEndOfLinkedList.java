@@ -56,7 +56,7 @@ public class NthNodeFromEndOfLinkedList {
         for(int i=1; i<=5;++i)
             head=insert(i,head);
         printList(head);
-        NthNode(head,2);
+        NthNode(head,1);
     }
 
 }
