@@ -32,14 +32,25 @@ public class DeleteKthOfACircularLinkedList {
 
             newNode.next=head;
             temp.next=newNode;
-            head=newNode;
 
         }
         return temp;
     }
-
+    private static void printList(Node head)
+    {
+        Node temp=head;
+        do
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        while(temp!=head);
+        System.out.println();
+    }
     public static void main(String[] args) {
-        head=
+        for(int i=1; i<=10; ++i)
+            head=insert(i);
+        printList(head);
     }
 
 }
