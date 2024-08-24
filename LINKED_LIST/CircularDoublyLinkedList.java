@@ -36,15 +36,17 @@ public class CircularDoublyLinkedList {
     }
     private static void printList(Node head)
     {
+        Node temp=head;
         do {
-
+            System.out.println(temp.data+" ");
+            temp=temp.next;
         }
-        while(head)
+        while(temp!=head);
     }
 
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             head=insert(i,head);
-        printList();
+        printList(head);
     }
 }
