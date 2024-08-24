@@ -34,12 +34,16 @@ public class NthNodeFromEndOfLinkedList {
     {
         Node start=head;
         Node end=head;
-        for(int i=1; i<=n;++i)
-            end=end.next;
-        while(end!=null)
+        int len=1;
+        for(int i=1; i<=n && len<=n;++i) {
+            end = end.next;
+            ++len;
+        }
+        while(end!=null && len<=n)
         {
             start=start.next;
             end=end.next;
+            ++len;
         }
         System.out.println(start==null?-1:start.data);
     }
