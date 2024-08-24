@@ -25,10 +25,10 @@ public class SwapKthNodesFromEnds {
             Node temp=head;
             while(temp.next!=null)
                 temp=temp.next;
+            
             temp.next=newNode;
 
             return temp;
-
     }
 
     private static void printList(Node head)
