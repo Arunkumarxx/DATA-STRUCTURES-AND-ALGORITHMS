@@ -44,7 +44,7 @@ public class DeleteKthOfACircularLinkedList {
             System.out.print(temp.data+" ");
             temp=temp.next;
         }
-        while(temp!=head);
+        while(temp.next!=head);
         System.out.println();
     }
     public static void main(String[] args) {
