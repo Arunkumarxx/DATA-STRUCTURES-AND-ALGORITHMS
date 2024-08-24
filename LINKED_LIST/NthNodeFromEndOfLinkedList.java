@@ -41,7 +41,7 @@ public class NthNodeFromEndOfLinkedList {
             start=start.next;
             end=end.next;
         }
-        System.out.println(start);
+        System.out.println(start==null?-1:start.data);
     }
     private static void printList(Node head)
     {
