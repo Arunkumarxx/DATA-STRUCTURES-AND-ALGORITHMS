@@ -1,7 +1,5 @@
 package LINKED_LIST;
 
-
-
 public class DeleteWithoutHeadPointer {
 
    private static class Node {
