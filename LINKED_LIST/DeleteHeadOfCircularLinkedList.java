@@ -35,11 +35,12 @@ public class DeleteHeadOfCircularLinkedList {
     }
     private  static void printList(Node head)
     {
+        Node temp=head;
         do{
-            head=head.next;
-            System.out.print(head.data+" ");
+            temp=temp.next;
+            System.out.print(temp.data+" ");
         }
-        while(head!=head);
+        while(temp!=head);
         System.out.println();
     }
     private static Node deleteHead(Node head)
