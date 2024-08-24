@@ -16,22 +16,21 @@ public class DeleteKthOfACircularLinkedList {
     private static Node  insert(Node head,int data)
     {
         Node temp=head;
+        Node newNode=head;
         if(head==null)
         {
-            head=new Node(data);
+            head=newNode;
             head.next=head;
         }
-        else {
-            Node newNode =new Node(data);
-
+        else{
             while(temp.next!=head)
                 temp=temp.next;
-            
+
             newNode.next=head;
             temp.next=newNode;
 
         }
-        return temp;
+        return head;
     }
     private static void printList(Node head)
     {
