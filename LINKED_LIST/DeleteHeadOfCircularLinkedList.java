@@ -51,7 +51,7 @@ public class DeleteHeadOfCircularLinkedList {
     }
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
-           head= insert(head,i);
+            insert(head,i);
         printList(head);
     }
 
