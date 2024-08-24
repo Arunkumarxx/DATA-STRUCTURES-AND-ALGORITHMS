@@ -56,7 +56,7 @@ public class DeleteKthOfACircularLinkedList {
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
             head=insert(head,i);
-       head= deleteKthElement(11,head);
+       head= deleteKthElement(2,head);
         printList(head);
     }
 
