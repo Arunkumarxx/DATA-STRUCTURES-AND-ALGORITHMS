@@ -22,15 +22,14 @@ public class SwapKthNodesFromEnds {
             head=newNode;
             return head;
         }
-        else
-        {
+
             Node temp=head;
             while(temp.next!=null)
                 temp=temp.next;
             temp.next=newNode;
-            
+
             return temp;
-        }
+        
     }
 
     private static void printList(Node head)
