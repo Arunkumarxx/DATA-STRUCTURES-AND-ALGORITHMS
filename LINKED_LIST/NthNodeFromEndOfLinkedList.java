@@ -1,9 +1,23 @@
 package LINKED_LIST;
 
 public class NthNodeFromEndOfLinkedList {
+    private static class Node
+    {
+        int data;
+        Node next;
 
-    public static void main(String[] args) {
+        Node(int data)
+        {
+            this.data=data;
+            this.next=null;
+        }
+    }
+    private static Node insert(int data,Node head)
+    {
         
+    }
+    public static void main(String[] args) {
+
     }
 
 }
