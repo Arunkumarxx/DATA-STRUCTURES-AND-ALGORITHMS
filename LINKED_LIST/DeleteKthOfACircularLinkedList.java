@@ -26,10 +26,13 @@ public class DeleteKthOfACircularLinkedList {
 
             do {
                 temp=temp.next;
-            }while(temp.next!=head);
+            }
+            while(temp.next!=head);
+
             temp.next=newNode;
             newNode.next=head;
             head=newNode;
+            
         }
         return temp;
     }
