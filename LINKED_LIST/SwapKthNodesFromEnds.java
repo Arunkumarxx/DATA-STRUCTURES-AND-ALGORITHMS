@@ -1,6 +1,7 @@
 package LINKED_LIST;
 
 public class SwapKthNodesFromEnds {
+    private static Node head;
     private static class Node
     {
         int data;
@@ -34,7 +35,7 @@ public class SwapKthNodesFromEnds {
             head=head.next;
         }
     }
-    private static Node head;
+    
     public static void main(String[] args) {
         for(int i=1; i<=10; ++i)
            head= insert(i,head);
