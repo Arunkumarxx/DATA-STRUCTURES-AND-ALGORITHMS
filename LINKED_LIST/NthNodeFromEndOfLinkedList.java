@@ -59,7 +59,7 @@ public class NthNodeFromEndOfLinkedList {
         for(int i=1; i<=5;++i)
             head=insert(i,head);
         printList(head);
-        System.out.println( NthNode(head,52));
+        System.out.println( NthNode(head,5));
     }
 
 }
