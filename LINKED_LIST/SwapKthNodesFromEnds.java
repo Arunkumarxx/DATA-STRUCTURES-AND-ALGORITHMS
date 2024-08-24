@@ -23,7 +23,7 @@ public class SwapKthNodesFromEnds {
             while(temp.next!=null)
                 temp=temp.next;
             temp.next=newNode;
-            return temp;
+            return head;
     }
 
     private static void printList(Node head)
