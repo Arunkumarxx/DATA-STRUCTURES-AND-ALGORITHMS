@@ -32,9 +32,24 @@ public class DeleteHeadOfCircularLinkedList {
         }
         System.out.println();
     }
-    
-    public static void main(String[] args) {
+    private static Node deleteHead(Node head)
+    {
+        if(head==null)
+            return head;
 
+        Node temp=head;
+        do{
+            temp=temp.next;
+            System.out.print(temp.data+" ");
+        }
+        while(temp.next!=head);
+
+        return head;
+    }
+    public static void main(String[] args) {
+        for(int i=1; i<=10; ++i)
+            insert(head,i);
+        printList(head);
     }
 
 }
