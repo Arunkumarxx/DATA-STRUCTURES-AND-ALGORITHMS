@@ -24,12 +24,9 @@ public class DeleteKthOfACircularLinkedList {
         else {
             Node newNode =new Node(data);
 
-            do {
+            while(temp.next!=head)
                 temp=temp.next;
-            }
-            while(temp.next!=head);
-
-
+            
             newNode.next=head;
             temp.next=newNode;
 
