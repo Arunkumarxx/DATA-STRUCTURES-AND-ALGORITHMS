@@ -18,6 +18,7 @@ public class SwapKthNodesFromEnds {
         Node newNode =new Node(data);
         if(head==null)
         {
+            newNode.next=head;
             head=newNode;
             return head;
         }
