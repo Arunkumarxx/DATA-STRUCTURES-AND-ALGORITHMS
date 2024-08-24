@@ -14,6 +14,14 @@ public class NthNodeFromEndOfLinkedList {
     }
     private static Node insert(int data,Node head)
     {
+
+    }
+    private static void NthNode(Node head,int n)
+    {
+        Node start=head;
+        Node end=head;
+        for(int i=1; i<=n;++i)
+            end=end.next;
         
     }
     public static void main(String[] args) {
