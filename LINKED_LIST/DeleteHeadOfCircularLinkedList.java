@@ -43,7 +43,7 @@ public class DeleteHeadOfCircularLinkedList {
             System.out.print(temp.data+" ");
         }
         while(temp.next!=head && temp.next!=null);
-        System.out.println(temp.next.data);
+        
         return head;
     }
     public static void main(String[] args) {
