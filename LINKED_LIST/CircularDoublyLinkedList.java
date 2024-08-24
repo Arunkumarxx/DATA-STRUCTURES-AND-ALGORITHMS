@@ -40,7 +40,7 @@ public class CircularDoublyLinkedList {
         Node temp=head;
         do {
             System.out.print(temp.data+" ");
-            temp=temp.next;
+            temp=temp.prev;
         }
         while(temp!=head);
     }
