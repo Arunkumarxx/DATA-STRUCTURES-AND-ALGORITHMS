@@ -30,7 +30,7 @@ public class DeleteKthOfACircularLinkedList {
             temp.next=newNode;
 
         }
-        return head;
+        return temp;
     }
     private static void printList(Node head)
     {
