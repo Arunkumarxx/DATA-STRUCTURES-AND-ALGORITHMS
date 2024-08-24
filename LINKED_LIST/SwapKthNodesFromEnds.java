@@ -48,6 +48,7 @@ public class SwapKthNodesFromEnds {
 
         System.out.println(first.data);
         System.out.println(second.data);
+    return head;
     }
     private static int lenOfNode(Node head)
     {
