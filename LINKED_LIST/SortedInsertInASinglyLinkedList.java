@@ -1,2 +1,4 @@
-package LINKED_LIST;public class SortedInsertInASinglyLinkedList {
+package LINKED_LIST;
+
+public class SortedInsertInASinglyLinkedList {
 }
