@@ -42,7 +42,7 @@ public class CircularDoublyLinkedList {
             Node temp = head;
             do {
                 System.out.print(temp.data + " ");
-                temp = temp.prev;
+                temp = temp.next;
             }
             while (temp != head);
         }
