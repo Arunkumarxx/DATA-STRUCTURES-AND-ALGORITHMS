@@ -18,8 +18,12 @@ public class SortedInsertInASinglyLinkedList {
     private static Node  insertSorted(int data,Node head)
     {
         Node newNode =new Node(data);
-        if(head==null)
+
+        if(head==null|| head.data>=data)
+        {
+            newNode.next=head;
             return newNode;
+        }
         Node temp=head;
         while(temp.next!=null)
         {
