@@ -1,2 +1,4 @@
-package LINKED_LIST;public class DeleteWithoutHeadPointer {
+package LINKED_LIST;
+
+public class DeleteWithoutHeadPointer {
 }
