@@ -43,10 +43,10 @@ public class SortedInsertInASinglyLinkedList {
     }
 
     public static void main(String[] args) {
-       head= insertSorted(10,head);
-        head=insertSorted(20,head);
-        head=insertSorted(15,head);
-        head=insertSorted(2,head);
+
+        for(int i=10; i>=1; --i)
+            head=insertSorted(i,head);
+        
         printList(head);
     }
 
