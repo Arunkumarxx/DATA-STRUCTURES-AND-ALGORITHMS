@@ -16,7 +16,8 @@ public class DeleteKthOfACircularLinkedList {
     private static Node  insert(Node head,int data)
     {
         Node temp=head;
-        Node newNode=head;
+        Node newNode=new Node(data);
+
         if(head==null)
         {
             head=newNode;
