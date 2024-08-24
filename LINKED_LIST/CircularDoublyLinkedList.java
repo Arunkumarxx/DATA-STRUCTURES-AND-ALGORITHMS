@@ -16,6 +16,8 @@ public class CircularDoublyLinkedList {
             this.next=null;
         }
     }
-    
 
+    public static void main(String[] args) {
+        
+    }
 }
