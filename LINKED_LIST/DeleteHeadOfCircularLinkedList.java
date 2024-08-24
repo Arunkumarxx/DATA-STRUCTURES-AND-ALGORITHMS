@@ -24,7 +24,12 @@ public class DeleteHeadOfCircularLinkedList {
             head.prev=head;
         }
         else {
-            
+            Node lastNode =head.prev;
+            newNode.next=head;
+            newNode.prev=lastNode;
+            lastNode.next=newNode;
+            head.prev=newNode;
+            head=newNode;
         }
         return head;
     }
