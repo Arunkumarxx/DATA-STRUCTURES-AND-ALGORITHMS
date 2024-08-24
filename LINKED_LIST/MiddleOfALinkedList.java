@@ -31,6 +31,10 @@ public class MiddleOfALinkedList {
         }
         return slow.data;
     }
+    private static void printList(Node head)
+    {
+        
+    }
     public static void main(String[] args) {
 
     }
