@@ -62,6 +62,7 @@ public class DeleteKthOfACircularLinkedList {
             return head;
         }
         temp.next=temp.next.next;
+        head=temp;
         return head;
     }
 
