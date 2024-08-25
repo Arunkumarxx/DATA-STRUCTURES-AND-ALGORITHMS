@@ -14,7 +14,29 @@ public class DetectAndRemoveLoopInLinkedList {
     }
     private static Node DetectLoopAndRemoveLoop(Node head)
     {
+        boolean isLoopFound=false;
+        Node slow=head;
+        Node fast=head;
 
+        while(fast!=null && fast.next!=null)
+        {
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast) {
+                isLoopFound = true;
+                break;
+            }
+        }
+        if(isLoopFound)
+        {
+            slow=head;
+            while(fast!=null && fast.next!=null)
+            {
+                slow=slow.next;
+                fast=fast.next.next;
+                
+            }
+        }
     }
     public static void main(String[] args) {
         head=new Node(1);
@@ -25,7 +47,7 @@ public class DetectAndRemoveLoopInLinkedList {
         head.next.next.next.next.next=head.next;
 
         head= DetectLoopAndRemoveLoop(head);
-        
+
     }
 
 }
