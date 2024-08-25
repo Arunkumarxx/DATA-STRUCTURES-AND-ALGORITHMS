@@ -40,7 +40,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
     public static void main(String[] args) {
         for(int i=1; i<=5; ++i)
             head=insert(i,head);
-        printlist(head);
-    }
+//        printlist(head);
+    } 
 
 }
