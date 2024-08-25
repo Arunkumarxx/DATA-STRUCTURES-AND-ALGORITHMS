@@ -56,7 +56,12 @@ public class ReverseALinkedListInGroupsOfSizeK {
                 reverese=temp;
                 temp=next;
             }
-            
+            Node temp2=reverese;
+            while(temp2!=null)
+            {
+                
+            }
+
         }
         return reverese;
     }
