@@ -30,15 +30,13 @@ public class DetectAndRemoveLoopInLinkedList {
         if(isLoopFound)
         {
             slow=head;
-            while(fast!=null && fast.next!=null)
-            {
+            while(slow!=fast)
                 slow=slow.next;
                 fast=fast.next.next;
-                if(slow==fast)
-                {
-                    fast.next=null;
-                }
-            }
+
+            while(fast.next!=slow)
+                fast.next=fast;
+            fast.next=null;
         }
         return head;
     }
