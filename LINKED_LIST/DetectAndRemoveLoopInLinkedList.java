@@ -29,14 +29,17 @@ public class DetectAndRemoveLoopInLinkedList {
         }
         if(isLoopFound)
         {
-            slow=head;
-            while(slow!=fast) {
-                slow = slow.next;
-                fast = fast.next.next;
-            }
-            while(fast.next!=slow)
-                fast.next=fast;
-            fast.next=null;
+           slow=head;
+           Node prevFast=fast;
+
+           while(slow!=fast)
+           {
+               slow=slow.next;
+               fast=fast.next;
+           }
+           while(prevFast.next!=fast)
+               prevFast=prevFast.next;
+           prevFast.next=null;
         }
         return head;
     }
