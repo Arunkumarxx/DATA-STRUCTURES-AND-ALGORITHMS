@@ -26,7 +26,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
             temp=temp.next;
         }
         temp.next=new Node(data);
-        return termp;
+        return temp;
     }
     private static void printlist(Node head)
     {
