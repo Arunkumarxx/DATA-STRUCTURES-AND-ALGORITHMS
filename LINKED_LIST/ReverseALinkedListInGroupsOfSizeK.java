@@ -60,7 +60,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
         }
             if(next!=null)
                 head.next=reverse(next,k);
-        return reverse(next,k);
+        return prev;
     }
 
     public static void main(String[] args) {
