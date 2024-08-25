@@ -33,6 +33,7 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
             System.out.print(head.data+" ");
             head=head.next;
         }
+        System.out.println();
     }
     private static Node removeDuplicate(Node head)
     {
