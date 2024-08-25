@@ -60,6 +60,7 @@ public class DetectAndRemoveLoopInLinkedList {
         head.next.next.next=new Node(4);
         head.next.next.next.next=new Node(5);
         head.next.next.next.next.next=head.next;
+        printList(head);
         head= DetectLoopAndRemoveLoop(head);
 
         printList(head);
