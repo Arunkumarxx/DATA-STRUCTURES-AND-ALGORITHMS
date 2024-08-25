@@ -1,2 +1,4 @@
-package LINKED_LIST;public class ReverseALinkedListInGroupsOfSizeK {
+package LINKED_LIST;
+
+public class ReverseALinkedListInGroupsOfSizeK {
 }
