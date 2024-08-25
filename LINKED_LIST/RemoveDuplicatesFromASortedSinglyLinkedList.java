@@ -13,7 +13,17 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
     }
     private static Node insert(int data,Node head)
     {
+        Node newNode= new Node(data);
+        if(head==null)
+            return newNode;
 
+        else
+        {
+            Node temp=head;
+            while(temp.next!=null)
+                temp=temp.next;
+            
+        }
     }
 
     public static void main(String[] args) {
