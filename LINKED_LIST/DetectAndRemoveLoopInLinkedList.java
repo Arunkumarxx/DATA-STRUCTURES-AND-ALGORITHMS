@@ -34,10 +34,25 @@ public class DetectAndRemoveLoopInLinkedList {
             {
                 slow=slow.next;
                 fast=fast.next.next;
-                
+                if(slow.next==fast)
+                {
+                    fast.next=null;
+                }
             }
         }
+        return head;
     }
+    private static void printList(Node head)
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         head=new Node(1);
         head.next=new Node(2);
@@ -45,8 +60,9 @@ public class DetectAndRemoveLoopInLinkedList {
         head.next.next.next=new Node(4);
         head.next.next.next.next=new Node(5);
         head.next.next.next.next.next=head.next;
-
         head= DetectLoopAndRemoveLoop(head);
+
+        printList(head);
 
     }
 
