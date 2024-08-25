@@ -24,7 +24,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
 
         else {
             Node temp=head;
-            while(temp.equals()!=null)
+            while(temp!=null)
             {
                 temp=temp.next;
             }
