@@ -20,7 +20,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
     {
         Node newNode= new Node(data);
         if(head==null)
-            return head=newNode;
+            return newNode;
 
         else {
             Node temp=head;
