@@ -40,17 +40,10 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
     private static Node removeDuplicate(Node head)
     {
         Node temp=head;
-
         while(temp!=null && temp.next!=null)
-        {
             if(temp.data== temp.next.data)
-            {
-                temp=temp.next.next;
-            }
-            else
-            {            temp=temp.next;
-                }
-        }
+                temp.next=temp.next.next;
+            else temp=temp.next;
         return head;
     }
     public static void main(String[] args) {
