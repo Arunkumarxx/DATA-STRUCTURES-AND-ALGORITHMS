@@ -46,15 +46,15 @@ public class ReverseALinkedListInGroupsOfSizeK {
     {
         if(head==null)
             return null;
-        Node temp=head;
+        Node curr=head;
         Node next=null;
-        Node reverese=null;
-            for(int i=1; i<=k && temp!=null; ++i)
-            {
-                next=temp.next;
-                temp.next=reverese;
-                reverese=temp;
-                temp=next;
+        Node prev=null;
+        int i=0;
+        while(i<k && curr!=null)
+        {
+            next=curr.next;
+            curr.next=prev;
+            
         }
             if(next!=null)
                 head.next=reverse(head,k);
