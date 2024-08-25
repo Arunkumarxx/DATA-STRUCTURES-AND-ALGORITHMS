@@ -42,10 +42,17 @@ public class ReverseALinkedListInGroupsOfSizeK {
         }
         System.out.println();
     }
+    private static Node reverse(Node head,int k)
+    {
+        
+    }
+
     public static void main(String[] args) {
         for(int i=1; i<=5; ++i)
             head=insert(i,head);
         printlist(head);
+       head= reverse(head,3);
+       printlist(head);
     }
 
 }
