@@ -63,7 +63,6 @@ public class ReverseALinkedListInGroupsOfSizeK {
             {
                 next=temp.next;
                 temp.next=temp2;
-                temp2=temp;
                 temp=next;
             }
 
