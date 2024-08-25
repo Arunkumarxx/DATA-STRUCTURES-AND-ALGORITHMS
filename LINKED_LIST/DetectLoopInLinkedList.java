@@ -28,7 +28,7 @@ public class DetectLoopInLinkedList {
      head.next.next=new Node(3);
      head.next.next.next=new Node(4);
      head.next.next.next.next=new Node(5);
-     head.next
+     head.next.next.next.next.next=head.next;
 
      printList(head);
     }
