@@ -42,34 +42,32 @@ public class ReverseALinkedListInGroupsOfSizeK {
         }
         System.out.println();
     }
-    private static Node reverse(Node head,int k)
-    {
-        Node temp=head;
-        Node next=null;
-        Node reverese=null;
-        if(temp!=null)
-        {
-            for(int i=1; i<=k && temp!=null; ++i)
-            {
-                next=temp.next;
-                temp.next=reverese;
-                reverese=temp;
-                temp=next;
-            }
-            Node temp2=reverese;
-            while(temp2.next!=null)
-                temp2=temp2.next;
-            for(int i=1; i<=k && temp!=null; ++i)
-            {
-                next=temp.next;
-                temp.next=temp2;
-                temp2=temp;
-                temp=next;
-            }
+    private static Node reverse(Node head, int k) {
+        if (head == null) return null;
 
+        Node current = head;
+        Node next = null;
+        Node prev = null;
+        int count = 0;
+
+        // Reverse first k nodes of the linked list
+        while (current != null && count < k) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+            count++;
         }
-        return reverese;
+
+        // Now, head points to the kth node. Connect the rest of the list recursively
+        if (next != null) {
+            head.next = reverse(next, k);
+        }
+
+        // prev is the new head of the reversed group
+        return prev;
     }
+
 
     public static void main(String[] args) {
         for(int i=1; i<=5; ++i)
