@@ -34,21 +34,18 @@ public class IntersectionPointInYShapedLinkedLists {
     public static void main(String[] args) {
         Node firstHead = null;
         Node secondHead = null;
-
         firstHead = insertAtBegin(firstHead, 30);
         firstHead = insertAtBegin(firstHead, 15);
         firstHead = insertAtBegin(firstHead, 9);
         firstHead = insertAtBegin(firstHead, 6);
         firstHead = insertAtBegin(firstHead, 3);
-
         secondHead = insertAtBegin(secondHead, 10);
         secondHead.next = firstHead.next.next;
-
         int intersectionPoint = intersectPoint(firstHead, secondHead);
-        if (intersectionPoint != -1) {
-            System.out.println("The intersection point is: " + intersectionPoint);
-        } else {
-            System.out.println("No intersection point.");
-        }
+
+        if (intersectionPoint != -1)
+            System.out.println("The intersection point is " + intersectionPoint);
+         else
+            System.out.println("No intersection point");
     }
 }
