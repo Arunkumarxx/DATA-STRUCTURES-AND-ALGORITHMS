@@ -1,6 +1,5 @@
 package LINKED_LIST;
 
-import java.util.Arrays;
 
 public class ReverseALinkedListInGroupsOfSizeK {
     private static Node head;
