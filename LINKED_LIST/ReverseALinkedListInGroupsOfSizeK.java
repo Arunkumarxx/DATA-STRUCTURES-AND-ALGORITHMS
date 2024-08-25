@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ReverseALinkedListInGroupsOfSizeK {
     private static Node head;
+
     private static class Node
     {
         int data;
@@ -14,12 +15,13 @@ public class ReverseALinkedListInGroupsOfSizeK {
             this.next=null;
         }
     }
+
     private static Node insert(int data,Node head)
     {
         
     }
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
 
     }
 
