@@ -1,5 +1,7 @@
 package LINKED_LIST;
 
+import jdk.jshell.spi.SPIResolutionException;
+
 public class RemoveDuplicatesFromASortedSinglyLinkedList {
     private static Node head;
     private static class  Node {
@@ -44,7 +46,7 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
             if(temp.data!=temp.next.data)
             {
                 Node next=temp.next;
-                result.next=temp;
+                
                 temp=next;
             }
             temp=temp.next;
