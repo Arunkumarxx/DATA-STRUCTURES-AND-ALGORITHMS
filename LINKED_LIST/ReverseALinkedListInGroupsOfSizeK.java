@@ -18,14 +18,19 @@ public class ReverseALinkedListInGroupsOfSizeK {
 
     private static Node insert(int data,Node head)
     {
-//        if(head==null)
-//            return new Node(data);
-        Node temp=head;
-        while(temp.next!=null)
-        {
-            temp=temp.next;
+        Node newNode= new Node(data);
+        if(head==null)
+            return head=newNode;
+
+        else {
+            Node temp=head;
+            while(temp!=null)
+            {
+                temp=temp.next;
+            }
+            temp.next=newNode;
         }
-        temp.next=new Node(data);
+
         return head;
     }
     private static void printlist(Node head)
@@ -40,7 +45,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
     public static void main(String[] args) {
         for(int i=1; i<=5; ++i)
             head=insert(i,head);
-//        printlist(head);
-    } 
+        printlist(head);
+    }
 
 }
