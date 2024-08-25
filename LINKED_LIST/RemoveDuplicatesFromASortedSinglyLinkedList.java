@@ -35,9 +35,11 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
         }
     }
     public static void main(String[] args) {
-        for(int i=1; i<=10; ++i)
-            head=insert(i,head);
+        head.data=1;
+        head.next.data=2;
+        head.next.next.data=3;
+        head.next.next.next.data=3;
+        head.next.next.next.next.data=4;
         printlist(head);
     }
-
 }
