@@ -14,14 +14,13 @@ public class ReverseALinkedListInGroupsOfSizeK {
             this.next=null;
         }
     }
-//    private static Node insert(int data,Node head)
-//    {
-//
-//    }
+    private static Node insert(int data,Node head)
+    {
+        
+    }
     public static void main(String[] args) {
-        int [] arr ={10,20,30};
- var x= Arrays.stream(arr).findFirst();
-        System.out.println(x);
+
+
     }
 
 }
