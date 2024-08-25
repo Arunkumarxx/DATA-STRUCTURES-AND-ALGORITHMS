@@ -46,9 +46,10 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
             if(temp.data== temp.next.data)
             {
                 temp=temp.next.next;
-                continue;
             }
-            temp=temp.next;
+            else {
+                temp = temp.next;
+            }
         }
         return head;
     }
