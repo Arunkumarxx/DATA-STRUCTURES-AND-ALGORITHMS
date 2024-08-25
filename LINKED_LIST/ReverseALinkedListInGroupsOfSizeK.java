@@ -61,7 +61,7 @@ public class ReverseALinkedListInGroupsOfSizeK {
 
             }*/
         }
-        return head;
+        return reverese;
     }
 
     public static void main(String[] args) {
