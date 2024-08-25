@@ -39,11 +39,11 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
     }
     private static Node removeDuplicate(Node head)
     {
-
-        while(head!=null && head.next!=null)
-            if(head.data== head.next.data)
-                head.next=head.next.next;
-            else head=head.next;
+        Node temp=head;
+        while(temp!=null && temp.next!=null)
+            if(temp.data== temp.next.data)
+                temp.next=temp.next.next;
+            else temp=temp.next;
         return head;
     }
     public static void main(String[] args) {
