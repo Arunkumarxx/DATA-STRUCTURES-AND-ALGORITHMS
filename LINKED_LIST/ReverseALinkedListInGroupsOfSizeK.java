@@ -54,11 +54,12 @@ public class ReverseALinkedListInGroupsOfSizeK {
         {
             next=curr.next;
             curr.next=prev;
-            
+            prev=curr;
+            curr=next;
         }
             if(next!=null)
                 head.next=reverse(head,k);
-        return reverese;
+        return reverse(next,k);
     }
 
     public static void main(String[] args) {
