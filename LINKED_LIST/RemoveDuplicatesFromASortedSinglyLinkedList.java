@@ -37,22 +37,22 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
         }
         System.out.println();
     }
-    private static Node removeDuplicate(Node head)
-    {
-        Node temp=head;
+    private static Node removeDuplicate(Node head) {
+        Node temp = head;
 
-        while(temp!=null && temp.next!=null)
-        {
-            if(temp.data== temp.next.data)
-            {
-                temp=temp.next.next;
-            }
-            else {
+        while (temp != null && temp.next != null) {
+            if (temp.data == temp.next.data) {
+                // Remove the duplicate node by updating the next pointer
+                temp.next = temp.next.next;
+            } else {
+                // Move to the next node if no duplicate
                 temp = temp.next;
             }
         }
+
         return head;
     }
+
     public static void main(String[] args) {
 
         head = new Node(1);
