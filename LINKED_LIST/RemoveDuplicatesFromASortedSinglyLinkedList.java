@@ -48,7 +48,7 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
             }
             temp=temp.next;
         }
-        return temp;
+        return head;
     }
     public static void main(String[] args) {
 
