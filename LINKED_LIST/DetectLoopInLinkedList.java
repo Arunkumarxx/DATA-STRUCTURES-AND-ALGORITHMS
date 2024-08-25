@@ -13,15 +13,13 @@ public class DetectLoopInLinkedList {
             this.next=null;
         }
     }
-    private static void printList(Node head)
+    private static boolean isLoopFound(Node head)
     {
-        while(head!=null)
-        {
-            System.out.println(head.data);
-            head=head.next;
-        }
-        System.out.println();
+        Node slow=head;
+        Node fast=head;
+        
     }
+
     public static void main(String[] args) {
 
      head=new Node(1);
@@ -31,7 +29,6 @@ public class DetectLoopInLinkedList {
      head.next.next.next.next=new Node(5);
      head.next.next.next.next.next=head.next;
 
-     printList(head);
     }
 
 }
