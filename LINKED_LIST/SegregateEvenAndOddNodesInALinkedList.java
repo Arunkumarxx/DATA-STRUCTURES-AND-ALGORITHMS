@@ -81,7 +81,7 @@ public class SegregateEvenAndOddNodesInALinkedList {
         for (int i = 1; i <= 5; ++i)
             tail = insertAtEnd(tail);
 
-        System.out.println("Original List:");
+        System.out.println("Org List:");
         printList(head);
 
         Node segregatedList = divide(head);
