@@ -18,6 +18,8 @@ public class ReverseALinkedListInGroupsOfSizeK {
 
     private static Node insert(int data,Node head)
     {
+        if(head==null)
+            return new Node(data);
         Node temp=head;
         while(temp!=null)
         {
