@@ -32,7 +32,7 @@ public class DetectAndRemoveLoopInLinkedList {
             slow=head;
             while(slow!=fast)
                 slow=slow.next;
-                fast=fast.next.next;
+                fast=fast.next;
 
             while(fast.next!=slow)
                 fast.next=fast;
@@ -58,7 +58,7 @@ public class DetectAndRemoveLoopInLinkedList {
         head.next.next.next=new Node(4);
         head.next.next.next.next=new Node(5);
         head.next.next.next.next.next=head.next;
-        
+
         head= DetectLoopAndRemoveLoop(head);
 
         printList(head);
