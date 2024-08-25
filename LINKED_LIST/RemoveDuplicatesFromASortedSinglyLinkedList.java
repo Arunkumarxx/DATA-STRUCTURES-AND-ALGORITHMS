@@ -35,12 +35,8 @@ public class RemoveDuplicatesFromASortedSinglyLinkedList {
         }
     }
     public static void main(String[] args) {
-        
+
         head=new Node(1);
-        head.nextnew Node(2);
-        head.next.next.data=;
-        head.next.next.next.data=3;
-        head.next.next.next.next.data=4;
         printlist(head);
     }
 }
