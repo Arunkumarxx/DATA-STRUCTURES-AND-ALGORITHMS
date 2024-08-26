@@ -50,13 +50,12 @@ public class JoinTwolinkedList {
     public static void main(String[] args) {
         Node list1 = null;
         Node list2 = null;
-
-        // Insert elements into list1
+        
         for(int i = 1; i <= 5; ++i) {
             list1 = insert(list1, i);
         }
 
-        // Insert elements into list2
+
         for(int i = 6; i <= 10; ++i) {
             list2 = insert(list2, i);
         }
