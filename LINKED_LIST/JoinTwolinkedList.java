@@ -50,11 +50,16 @@ public class JoinTwolinkedList {
     public static void main(String[] args) {
         Node list1 = null;
         Node list2 = null;
-        for(int i=1; i<=5; ++i)
-           list1= insert(head,i);
 
-        for(int i=6; i<=10; ++i)
-            list2=insert(head,i);
+        // Insert elements into list1
+        for(int i = 1; i <= 5; ++i) {
+            list1 = insert(list1, i);
+        }
+
+        // Insert elements into list2
+        for(int i = 6; i <= 10; ++i) {
+            list2 = insert(list2, i);
+        }
 
         System.out.println("List 1:");
         PrintList(list1);
@@ -62,10 +67,10 @@ public class JoinTwolinkedList {
         System.out.println("List 2:");
         PrintList(list2);
 
-
         Node joinedList = joinTheLists(list1, list2);
 
         System.out.println("Joined List:");
         PrintList(joinedList);
     }
+
 }
