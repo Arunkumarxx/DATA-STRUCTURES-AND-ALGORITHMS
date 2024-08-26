@@ -20,7 +20,7 @@ public class PairwiseSwapOfNodesInLinkedlist {
     }
     private static printList(Node head)
     {
-        
+
     }
 
     public static void main(String[] args) {
