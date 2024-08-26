@@ -1,7 +1,5 @@
 package LINKED_LIST;
 
-
-
 public class IsLinkedListSorted {
     private static class Node {
         int data;
