@@ -13,13 +13,11 @@ public class PairwiseSwapOfNodesInLinkedlist {
             this.next = null;
         }
     }
-
     private static void insertAtBegin(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
-
     private static void printList(Node head) {
         Node temp = head;
         while (temp != null) {
@@ -28,7 +26,6 @@ public class PairwiseSwapOfNodesInLinkedlist {
         }
         System.out.println();
     }
-
     public static void main(String[] args) {
         for(int i=5; i>=1; --i)
             insertAtBegin(i);
