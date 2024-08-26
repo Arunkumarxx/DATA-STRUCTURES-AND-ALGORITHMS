@@ -2,14 +2,19 @@ package LINKED_LIST;
 
 public class PalindromeLinkedList {
 
-    public static void main(String[] args) {
+  private   static class Node {
+        int data;
+        Node next;
 
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
     }
-    boolean isPalindrome(Node head) {
+    private  static boolean  isPalindrome(Node head) {
         if (head == null || head.next == null) {
             return true;
         }
-
         Node slow = head;
         Node fast = head;
 
@@ -41,4 +46,14 @@ public class PalindromeLinkedList {
 
         return true;
     }
+
+    public static void main(String[] args) {
+        Node head1 = new Node(1);
+        head1.next = new Node(2);
+        head1.next.next = new Node(2);
+        head1.next.next.next = new Node(1);
+        System.out.println("Test Case 1: " + isPalindrome(head1));
+
+    }
+
 }
