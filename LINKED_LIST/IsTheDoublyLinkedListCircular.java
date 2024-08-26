@@ -59,7 +59,4 @@ public class IsTheDoublyLinkedListCircular {
         System.out.println(isCircular(head));
 
     }
-
-
-
 }
