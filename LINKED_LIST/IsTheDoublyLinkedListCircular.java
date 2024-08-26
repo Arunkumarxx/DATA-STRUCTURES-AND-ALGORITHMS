@@ -35,7 +35,15 @@ public class IsTheDoublyLinkedListCircular {
         return head;
     }
     public static void main(String[] args) {
-        
+
+        Node head = null;
+
+
+        head = insert(head, 1);
+        head = insert(head, 2);
+        head = insert(head, 3);
+
+        printList(head);
     }
     public static boolean isCircular(Node head)
     {
