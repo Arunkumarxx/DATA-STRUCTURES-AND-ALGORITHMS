@@ -33,12 +33,12 @@ public class PairwiseSwapOfNodesInLinkedlist {
         for(int i=5; i>=1; --i)
             insertAtBegin(i);
 
-        System.out.println(" List:");
+        System.out.println("List:");
         printList(head);
 
         head = pairwiseSwap(head);
 
-        System.out.println(" after pairwise swap:");
+        System.out.println("After pairwise swap:");
         printList(head);
     }
 
