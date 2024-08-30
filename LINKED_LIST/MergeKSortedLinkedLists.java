@@ -17,7 +17,15 @@ public class MergeKSortedLinkedLists {
     private static Node head;
     private static Node tail;
 
-    private static Node 
+    private static Node insertAtBegin(int data,Node head)
+    {
+
+    }
+    private static void PrintList()
+    {
+
+    }
+
     public static void main(String[] args) {
 
     }
