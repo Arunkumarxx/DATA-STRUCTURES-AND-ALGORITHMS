@@ -80,12 +80,5 @@ public class MergeKSortedLinkedLists {
 
         System.out.println("Array of node sublists: " + nodeArray);
     }
-    private static List<Node> mergeSort(Node nodeArr,int start,int end)
-    {
-        if(nodeArr!==null)
-        {
-
-        }
-    }
 
 }
