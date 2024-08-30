@@ -85,7 +85,7 @@ public class MergeKSortedLinkedLists {
             for (int value : sublist) {
                 System.out.print(value + "->");
             }
-            System.out.print('),');
+            System.out.print("),");
         }
         System.out.print(']');
     }
