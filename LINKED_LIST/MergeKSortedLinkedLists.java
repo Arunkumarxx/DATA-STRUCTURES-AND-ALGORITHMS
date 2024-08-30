@@ -38,27 +38,21 @@ public class MergeKSortedLinkedLists {
         System.out.println();
     }
 
-    private static List<int[]> storeInArrayOfSublists(Node head, int groupSize) {
-        List<int[]> result = new ArrayList<>();
+    private static List<List<Node>> storeInArrayOfSublists(Node head, int groupSize) {
+        List<List<Node>> result = new ArrayList<>();
         Node temp = head;
 
         while (temp != null) {
-            int[] sublist = new int[groupSize];
+            List<Node> sublist = new ArrayList<>();
             int count = 0;
 
             while (temp != null && count < groupSize) {
-                sublist[count] = temp.data;
+                sublist.add(temp);
                 temp = temp.next;
                 count++;
             }
 
-            if (count < groupSize) {
-                int[] truncatedSublist = new int[count];
-                System.arraycopy(sublist, 0, truncatedSublist, 0, count);
-                result.add(truncatedSublist);
-            } else {
-                result.add(sublist);
-            }
+            result.add(sublist);
         }
 
         return result;
@@ -76,21 +70,14 @@ public class MergeKSortedLinkedLists {
 
         PrintList(head);
 
-        List<int[]> nodeArray = storeInArrayOfSublists(head, 3);
-        printList(nodeArray);
-    }
-    private static void printList(List<Node> arr)
-    {
-        System.out.println("Array of node sublists:");
-        System.out.print('[');
-        for (int[] sublist : arr) {
-            System.out.print("(");
-            for (int value : sublist) {
-                System.out.print(value + "->");
-            }
-            System.out.print(") ");
-        }
-        System.out.print(']');
-    }
+        List<List<Node>> nodeArray = storeInArrayOfSublists(head, 3);
 
+        System.out.println("Array of node sublists:");
+        for (List<Node> sublist : nodeArray) {
+            for (Node node : sublist) {
+                System.out.print(node.data + " ");
+            }
+            System.out.println();
+        }
+    }
 }
