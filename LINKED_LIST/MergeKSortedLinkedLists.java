@@ -36,7 +36,7 @@ public class MergeKSortedLinkedLists {
             temp = temp.next;
         }
         System.out.println();
-        
+
     }
 
     private static List<List<Node>> storeInArrayOfSublists(Node head, int groupSize) {
