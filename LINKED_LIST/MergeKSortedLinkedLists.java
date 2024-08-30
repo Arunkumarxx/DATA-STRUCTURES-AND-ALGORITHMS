@@ -1,2 +1,4 @@
-package LINKED_LIST;public class MergeKSortedLinkedLists {
+package LINKED_LIST;
+
+public class MergeKSortedLinkedLists {
 }
