@@ -1,5 +1,6 @@
 package LINKED_LIST;
 
+import javax.swing.undo.UndoableEdit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -76,7 +77,15 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(6);
         PrintList(head);
         List<String> nodeArray = storeInArrayOfSublists(head, 3);
-        Collections.sort(nodeArray.subList(0,nodeArray.size()-1));
+
         System.out.println("Array of node sublists: " + nodeArray);
     }
+    private static List<Node> mergeSort(Node nodeArr,int start,int end)
+    {
+        if(nodeArr!==null)
+        {
+
+        }
+    }
+
 }
