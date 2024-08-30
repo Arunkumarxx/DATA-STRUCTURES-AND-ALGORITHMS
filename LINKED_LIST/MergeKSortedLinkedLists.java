@@ -1,5 +1,8 @@
 package LINKED_LIST;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MergeKSortedLinkedLists {
 
     private static class Node {
@@ -37,7 +40,29 @@ public class MergeKSortedLinkedLists {
         }
         System.out.println();
     }
+    private static List<String> storeInArrayOfSublists(Node head, int groupSize) {
+        List<String> result = new ArrayList<>();
+        Node temp = head;
 
+        while (temp != null) {
+            StringBuilder sublist = new StringBuilder();
+            int count = 0;
+
+            // Build the sublist string (e.g., "1->2->3")
+            while (temp != null && count < groupSize) {
+                if (count > 0) {
+                    sublist.append("->");
+                }
+                sublist.append(temp.data);
+                temp = temp.next;
+                count++;
+            }
+
+            result.add(sublist.toString());
+        }
+
+        return result;
+    }
     public static void main(String[] args) {
 
         insertAtEnd(1);
