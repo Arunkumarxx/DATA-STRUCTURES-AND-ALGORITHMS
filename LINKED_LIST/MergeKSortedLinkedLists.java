@@ -36,27 +36,80 @@ public class MergeKSortedLinkedLists {
             temp = temp.next;
         }
         System.out.println();
-
     }
 
-    private static List<List<Node>> storeInArrayOfSublists(Node head, int groupSize) {
-        List<List<Node>> result = new ArrayList<>();
+    private static List<Node> storeInArrayOfSublists(Node head, int groupSize) {
+        List<Node> result = new ArrayList<>();
         Node temp = head;
 
         while (temp != null) {
-            List<Node> sublist = new ArrayList<>();
+            Node sublistHead = temp;
             int count = 0;
 
-            while (temp != null && count < groupSize) {
-                sublist.add(temp);
+            while (temp != null && count < groupSize - 1) {
                 temp = temp.next;
                 count++;
             }
 
-            result.add(sublist);
+            if (temp != null) {
+                Node nextSublistHead = temp.next;
+                temp.next = null;
+                temp = nextSublistHead;
+            }
+
+            result.add(sublistHead);
         }
 
         return result;
+    }
+
+    private static Node merge(List<Node> list) {
+        if (list == null || list.isEmpty()) {
+            return null;
+        }
+        return mergeHelper(list, 0, list.size() - 1);
+    }
+
+    private static Node mergeHelper(List<Node> list, int left, int right) {
+        if (left == right) {
+            return list.get(left);
+        }
+
+        int mid = left + (right - left) / 2;
+        Node l1 = mergeHelper(list, left, mid);
+        Node l2 = mergeHelper(list, mid + 1, right);
+
+        return mergeTwoLists(l1, l2);
+    }
+
+    private static Node mergeTwoLists(Node l1, Node l2) {
+        Node dummy = new Node(0);
+        Node curr = dummy;
+
+        while (l1 != null && l2 != null) {
+            if (l1.data < l2.data) {
+                curr.next = l1;
+                l1 = l1.next;
+            } else {
+                curr.next = l2;
+                l2 = l2.next;
+            }
+            curr = curr.next;
+        }
+
+        if (l1 != null) curr.next = l1;
+        if (l2 != null) curr.next = l2;
+
+        return dummy.next;
+    }
+
+    private static void printList(Node head) {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -70,48 +123,9 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(6);
 
         PrintList(head);
-        List<Node> nodeArray = storeInArrayOfSublists(head, 3);
-        merge(nodeArray,0,nodeArray.size()-1);
-        printList(nodeArray);
-    }
-    private static Node merge(List<Node> list,int left,int right)
-    {
-        if(left==right)
-            return list.get(left);
-        int mid=left+right/2;
-        Node l1=merge(list,left,mid);
-        Node l2=merge(list,mid+1,right);
-        return mergeTwoList(l1,l2);
-    }
-    private static Node mergeTwoList(Node l1,Node l2)
-    {
-        Node temp=new Node(0);
-        Node curr=temp;
-        while(l1!=null && l2!=null) {
-            if (l1.data < l2.data) {
-                curr.next = l1;
-                l1 = l1.next;
-            } else {
-                curr.next = l2;
-                l2 = l2.next;
-            }
-            curr = curr.next;
-        }
-        if (l1!=null)
-            curr.next=l1;
-        if(l2!=null)
-            curr.next=l2;
-        return temp.next;
-    }
-    private static  void printList(List<List<Node>> nodeArray)
-    {
-        System.out.println("Array of node sublists:");
-        for (List<Node> sublist : nodeArray) {
-            for (Node node : sublist) {
-                System.out.print(node.data + " ");
-            }
-            System.out.println();
-        }
-    }
 
+        List<Node> nodeArray = storeInArrayOfSublists(head, 3);
+        Node mergedHead = merge(nodeArray);
+        printList(mergedHead);
+    }
 }
