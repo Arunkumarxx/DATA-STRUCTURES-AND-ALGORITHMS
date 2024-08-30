@@ -86,7 +86,6 @@ public class MergeKSortedLinkedLists {
                 System.out.print(value + "->");
             }
             System.out.print(')');
-            System.out.println();
         }
         System.out.print(']');
     }
