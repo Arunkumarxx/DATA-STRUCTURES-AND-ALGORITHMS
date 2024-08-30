@@ -72,6 +72,7 @@ public class MergeKSortedLinkedLists {
         PrintList(head);
 
         List<List<Node>> nodeArray = storeInArrayOfSublists(head, 3);
+        merge(nodeArray,0,nodeArray.size()-1);
         printList(nodeArray);
     }
     private static Node merge(List<Node> list,int left,int right)
@@ -79,6 +80,29 @@ public class MergeKSortedLinkedLists {
         if(left==right)
             return list.get(left);
         int mid=left+right/2;
+        Node l1=merge(list,left,mid);
+        Node l2=merge(list,mid+1,right);
+        return mergeTwoList(l1,l2);
+    }
+    private static Node mergeTwoList(Node l1,Node l2)
+    {
+        Node temp=new Node(0);
+        Node curr=temp;
+        while(l1!=null && l2!=null) {
+            if (l1.data < l2.data) {
+                curr.next = l1;
+                l1 = l1.next;
+            } else {
+                curr.next = l2;
+                l2 = l2.next;
+            }
+            curr = curr.next;
+        }
+        if (l1!=null)
+            curr.next=l1;
+        if(l2!=null)
+            curr.next=l2;
+        return temp.next;
     }
     private static  void printList(List<List<Node>> nodeArray)
     {
