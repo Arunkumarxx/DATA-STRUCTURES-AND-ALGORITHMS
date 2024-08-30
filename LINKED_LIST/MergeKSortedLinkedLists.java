@@ -72,7 +72,7 @@ public class MergeKSortedLinkedLists {
         PrintList(head);
 
         List<List<Node>> nodeArray = storeInArrayOfSublists(head, 3);
-
+        printList(nodeArray);
     }
     private static  void printList(List<List<Node>> nodeArray)
     {
