@@ -1,6 +1,7 @@
 package LINKED_LIST;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MergeKSortedLinkedLists {
@@ -75,6 +76,7 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(6);
         PrintList(head);
         List<String> nodeArray = storeInArrayOfSublists(head, 3);
+        Collections.sort(nodeArray);
         System.out.println("Array of node sublists: " + nodeArray);
     }
 }
