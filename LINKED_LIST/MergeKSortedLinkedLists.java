@@ -78,6 +78,7 @@ public class MergeKSortedLinkedLists {
     {
         if(left==right)
             return list.get(left);
+        int mid=left+right/2;
     }
     private static  void printList(List<List<Node>> nodeArray)
     {
