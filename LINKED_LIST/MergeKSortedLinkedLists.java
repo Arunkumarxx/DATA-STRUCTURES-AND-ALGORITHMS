@@ -83,7 +83,7 @@ public class MergeKSortedLinkedLists {
         for (int[] sublist : nodeArray) {
             System.out.print('[');
             for (int value : sublist) {
-                System.out.print(value + ",");
+                System.out.print(value + "");
             }
             System.out.print(']');
             System.out.println();
