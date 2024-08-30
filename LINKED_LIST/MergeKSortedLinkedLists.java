@@ -75,7 +75,7 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(2);
         insertAtEnd(6);
         PrintList(head);
-        List<String> nodeArray = storeInArrayOfSublists(head, 2);
+        List<String> nodeArray = storeInArrayOfSublists(head, 3);
         System.out.println("Array of node sublists: " + nodeArray);
     }
 }
