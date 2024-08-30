@@ -70,8 +70,7 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(6);
 
         PrintList(head);
-
-        List<List<Node>> nodeArray = storeInArrayOfSublists(head, 3);
+        List<Node> nodeArray = storeInArrayOfSublists(head, 3);
         merge(nodeArray,0,nodeArray.size()-1);
         printList(nodeArray);
     }
