@@ -75,7 +75,7 @@ public class MergeKSortedLinkedLists {
             return list.get(left);
         }
 
-        int mid = left + (right - left) / 2;
+        int mid = left+right/2;
         Node l1 = mergeHelper(list, left, mid);
         Node l2 = mergeHelper(list, mid + 1, right);
 
