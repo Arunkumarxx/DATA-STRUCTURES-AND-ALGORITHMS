@@ -69,7 +69,6 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(4);
         insertAtEnd(5);
         insertAtEnd(1);
-        insertAtEnd(1);
         insertAtEnd(3);
         insertAtEnd(4);
         insertAtEnd(2);
