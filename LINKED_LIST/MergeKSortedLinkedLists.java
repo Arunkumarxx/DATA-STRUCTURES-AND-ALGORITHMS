@@ -1,8 +1,6 @@
 package LINKED_LIST;
 
-import javax.swing.undo.UndoableEdit;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MergeKSortedLinkedLists {
@@ -22,13 +20,10 @@ public class MergeKSortedLinkedLists {
 
     private static void insertAtEnd(int data) {
         Node newNode = new Node(data);
-
-
         if (head == null) {
             head = newNode;
             tail = newNode;
         } else {
-
             tail.next = newNode;
             tail = newNode;
         }
@@ -42,31 +37,34 @@ public class MergeKSortedLinkedLists {
         }
         System.out.println();
     }
-    private static List<String> storeInArrayOfSublists(Node head, int groupSize) {
-        List<String> result = new ArrayList<>();
+
+    private static List<int[]> storeInArrayOfSublists(Node head, int groupSize) {
+        List<int[]> result = new ArrayList<>();
         Node temp = head;
 
         while (temp != null) {
-            StringBuilder sublist = new StringBuilder();
+            int[] sublist = new int[groupSize];
             int count = 0;
 
-            // Build the sublist string (e.g., "1->2->3")
             while (temp != null && count < groupSize) {
-                if (count > 0) {
-                    sublist.append("->");
-                }
-                sublist.append(temp.data);
+                sublist[count] = temp.data;
                 temp = temp.next;
                 count++;
             }
 
-            result.add(sublist.toString());
+            if (count < groupSize) {
+                int[] truncatedSublist = new int[count];
+                System.arraycopy(sublist, 0, truncatedSublist, 0, count);
+                result.add(truncatedSublist);
+            } else {
+                result.add(sublist);
+            }
         }
 
         return result;
     }
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         insertAtEnd(1);
         insertAtEnd(4);
         insertAtEnd(5);
@@ -75,10 +73,17 @@ public class MergeKSortedLinkedLists {
         insertAtEnd(4);
         insertAtEnd(2);
         insertAtEnd(6);
+
         PrintList(head);
-        List<String> nodeArray = storeInArrayOfSublists(head, 3);
 
-        System.out.println("Array of node sublists: " + nodeArray);
+        List<int[]> nodeArray = storeInArrayOfSublists(head, 3);
+
+        System.out.println("Array of node sublists:");
+        for (int[] sublist : nodeArray) {
+            for (int value : sublist) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
     }
-
 }
