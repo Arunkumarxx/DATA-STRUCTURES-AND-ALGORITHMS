@@ -1,2 +1,9 @@
-package LINKED_LIST;public class CloneALinkedListWithNextAndRandomPointer {
+package LINKED_LIST;
+
+public class CloneALinkedListWithNextAndRandomPointer {
+
+    public static void main(String[] args) {
+        
+    }
+
 }
