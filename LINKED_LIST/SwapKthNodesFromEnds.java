@@ -77,3 +77,58 @@ public class SwapKthNodesFromEnds {
     }
 
 }
+
+/*
+
+
+
+class Solution {
+    // Function to pairwise swap elements of a linked list.
+    // It should returns head of the modified list
+    public Node pairwiseSwap(Node head) {
+        Node current = head;
+        Node second = null;
+        Node first = null;
+        Node tail = null;
+
+        while (current != null) {
+            Node next = current.next;
+
+            if (second != null) {
+                if (tail == null) {
+                    head = second;
+                } else {
+                    tail.next = second;
+                }
+
+                first.next = current;
+                second.next = first;
+                tail = first;
+                first = current;
+                second = null;
+            } else if (first != null) {
+                second = current;
+            } else {
+                first = current;
+            }
+
+            current = next;
+        }
+
+        if (second != null) {
+            if (tail == null) {
+                head = second;
+            } else {
+                tail.next = second;
+            }
+
+            first.next = current;
+            second.next = first;
+            tail = first;
+            first = current;
+            second = null;
+        }
+        return head;
+    }
+}
+ */
