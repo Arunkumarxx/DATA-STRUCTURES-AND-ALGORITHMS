@@ -21,10 +21,6 @@ import java.util.HashMap;
 
     private Node put(Node head, int data)
     {
-        if(hashMap.containsKey(data))
-        {
-            
-        }
         Node newNode=new Node(data);
 
         if(head==null) {
