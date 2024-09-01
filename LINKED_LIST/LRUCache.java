@@ -51,7 +51,15 @@ import java.util.HashMap;
      }
      private  void put(int key,int value)
      {
-         
+         if(cache.containsKey(key))
+         {
+             Node node=cache.get(key);
+             node.data=value;
+             moveToHead(node);
+         }
+         else {
+             Node newNode= new Node(value);
+         }
      }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
