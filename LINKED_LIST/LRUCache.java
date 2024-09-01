@@ -83,12 +83,7 @@ import java.util.HashMap;
          lruCache.put(1,1);
          lruCache.put(2,2);
         Node temp=lruCache.cache.get(1);
-        while(temp!=null)
-        {
-            System.out.println(temp.value+" ");
-            temp=temp.next;
-        }
-
+        System.out.println(temp.value);
     }
 
 }
