@@ -1,5 +1,8 @@
 package LINKED_LIST;
-   final class Node {
+
+import java.util.HashMap;
+
+final class Node {
       int data;
        Node next;
        Node prev;
@@ -12,7 +15,7 @@ package LINKED_LIST;
     }
 }
  public class LRUCache {
-
+       HashMap<>
     private Node put(Node head, int data)
     {
         Node newNode=new Node(data);
