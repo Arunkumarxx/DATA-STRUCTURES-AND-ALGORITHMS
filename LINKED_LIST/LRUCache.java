@@ -2,22 +2,26 @@ package LINKED_LIST;
 
 import java.util.HashMap;
 
-final class Node {
-      int data;
-       Node next;
-       Node prev;
 
-    Node(int data)
-    {
-        this.data=data;
-        this.next=null;
-        this.prev=null;
-    }
-}
  public class LRUCache {
-       HashMap<>
+
+     private  class Node {
+         int data;
+         Node next;
+         Node prev;
+
+         Node(int data)
+         {
+             this.data=data;
+             this.next=null;
+             this.prev=null;
+         }
+     }
+    HashMap<Integer,Node> hashMap =new HashMap<>();
+
     private Node put(Node head, int data)
     {
+        
         Node newNode=new Node(data);
         if(head==null) {
             head = newNode;
