@@ -19,7 +19,9 @@ public class LRUCache {
     }
 
     private HashMap<Integer, Node> cache = new HashMap<>();
+
     private int capacity;
+
     private Node head = null;
     private Node tail = null;
 
