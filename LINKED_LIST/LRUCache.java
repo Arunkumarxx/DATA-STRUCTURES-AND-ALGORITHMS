@@ -1,5 +1,5 @@
 package LINKED_LIST;
-    class Node {
+   final class Node {
       int data;
        Node next;
        Node prev;
@@ -18,14 +18,15 @@ package LINKED_LIST;
         Node newNode=new Node(data);
         if(head==null)
         {
-
+            newNode.next=head;
+            
         }
         return head;
     }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
         Node node =new Node(0);
-        obj.insert(node.next,1);
+
     }
 
 }
