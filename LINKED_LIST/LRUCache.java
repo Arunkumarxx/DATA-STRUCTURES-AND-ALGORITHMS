@@ -15,7 +15,14 @@ public class LRUCache {
         }
     }
 
-    private static int 
+    private Node insert(Node head, int data)
+    {
+        Node newNode=new Node(data);
+        if(head==null)
+        {
+            
+        }
+    }
     public static void main(String[] args) {
 
     }
