@@ -35,8 +35,9 @@ package LINKED_LIST;
             head.prev=head.next;
         else head=head.next;
         if(head.next!=null)
-            head.prev.next=head.next;
-        else head.prev.next=head.next;
+            head.next.prev=head.prev;
+
+
     }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
