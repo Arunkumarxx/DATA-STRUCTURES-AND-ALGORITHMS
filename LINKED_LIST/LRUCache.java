@@ -13,7 +13,7 @@ package LINKED_LIST;
 }
  public class LRUCache {
 
-    private Node insert(Node head, int data)
+    private Node put(Node head, int data)
     {
         Node newNode=new Node(data);
         if(head==null) {
@@ -36,7 +36,11 @@ package LINKED_LIST;
         else node=node.next;
         if(node.next!=null)
             node.next.prev=node.prev;
-
+        head.prev=temp;
+        temp.prev=null;
+        temp.next=head;
+        return head;
+        
     }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
