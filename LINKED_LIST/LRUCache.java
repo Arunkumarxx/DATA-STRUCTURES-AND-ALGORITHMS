@@ -31,6 +31,26 @@ import java.util.HashMap;
      {
          if(head==node)
              return;
+         if(node.prev!=null) node.prev.next=node.next;
+         if(node.next!=null) node.next.prev=node.prev;
+
+         node.next=head;
+         node.prev=null;
+
+         if(head!=null)
+             head.prev=node;
+         head=node;
+         if(tail==null) tail=head;
+     }
+     private int get(int key)
+     {
+         if(!cache.containsKey(key)) return -1;
+         Node get=cache.get(key);
+         moveToHead(get);
+         return get.data;
+     }
+     private  void put(int key,int value)
+     {
          
      }
     public static void main(String[] args) {
