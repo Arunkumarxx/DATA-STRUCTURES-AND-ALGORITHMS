@@ -40,8 +40,8 @@ package LINKED_LIST;
         temp.prev=null;
         temp.next=head;
         return head;
-        
     }
+    
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
         Node node =new Node(0);
