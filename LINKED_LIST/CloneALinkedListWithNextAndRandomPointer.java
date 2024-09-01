@@ -2,7 +2,6 @@ package LINKED_LIST;
 
 public class CloneALinkedListWithNextAndRandomPointer {
 
-    // Definition for singly-linked list with a random pointer.
     static class Node {
         int data;
         Node next;
@@ -68,7 +67,6 @@ public class CloneALinkedListWithNextAndRandomPointer {
 
         return dummy.next;
     }
-
 
     static void printList(Node head) {
         Node current = head;
