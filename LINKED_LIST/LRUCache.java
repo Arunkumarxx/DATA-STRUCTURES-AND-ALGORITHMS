@@ -81,6 +81,8 @@ import java.util.HashMap;
     public static void main(String[] args) {
          LRUCache lruCache =new LRUCache(2);
          lruCache.put(1,1);
+         lruCache.put(2,2);
+        System.out.println(lruCache.cache.get(1));
 
     }
 
