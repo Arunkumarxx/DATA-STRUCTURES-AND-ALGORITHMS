@@ -22,10 +22,15 @@ package LINKED_LIST;
         }
         else
         {
-            
+            newNode.next=head;
+            head.prev=newNode;
+            head=newNode;
         }
-
         return head;
+    }
+    private Node remove(Node head)
+    {
+        
     }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
