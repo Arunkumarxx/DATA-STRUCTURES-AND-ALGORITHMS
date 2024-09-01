@@ -6,12 +6,14 @@ import java.util.HashMap;
  public class LRUCache {
 
      private class Node {
-         int data;
+         int value;
+         int key;
          Node next;
          Node prev;
 
-         Node(int data) {
-             this.data = data;
+         Node(int key,int value) {
+             this.key = key;
+             this.value=value;
              this.next = null;
              this.prev = null;
          }
@@ -47,23 +49,38 @@ import java.util.HashMap;
          if(!cache.containsKey(key)) return -1;
          Node get=cache.get(key);
          moveToHead(get);
-         return get.data;
+         return get.value;
      }
      private  void put(int key,int value)
      {
          if(cache.containsKey(key))
          {
              Node node=cache.get(key);
-             node.data=value;
+             node.value=value;
              moveToHead(node);
          }
          else {
-             Node newNode= new Node(value);
+             Node newNode= new Node(key,value);
+             cache.put(key,newNode);
+             if(head==null)
+                 head=tail=newNode;
+             else
+             {
+                 newNode.next=head;
+                 head.prev=newNode;
+                 head=newNode;
+             }
+             if(cache.size()>capacity)
+             {
+                 cache.remove(tail.key);
+                 tail=tail.prev;
+                 if(tail!=null) tail.next=null;
+             }
          }
      }
     public static void main(String[] args) {
-        LRUCache obj = new LRUCache();
-        Node node =new Node(0);
+         LRUCache lruCache =new LRUCache(2);
+         lruCache.put(1,1);
 
     }
 
