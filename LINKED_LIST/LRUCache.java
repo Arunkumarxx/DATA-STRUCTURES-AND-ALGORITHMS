@@ -18,12 +18,14 @@ package LINKED_LIST;
         Node newNode=new Node(data);
         if(head==null)
         {
-            
+
         }
         return head;
     }
     public static void main(String[] args) {
-
+        LRUCache obj = new LRUCache();
+        Node node =new Node(0);
+        obj.insert(node.next,1);
     }
 
 }
