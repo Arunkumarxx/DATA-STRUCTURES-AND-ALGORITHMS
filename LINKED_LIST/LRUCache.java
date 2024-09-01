@@ -31,7 +31,12 @@ package LINKED_LIST;
     private Node remove(Node head)
     {
         Node temp=null;
-        
+        if(head.prev!=null)
+            head.prev=head.next;
+        else head=head.next;
+        if(head.next!=null)
+            head.prev.next=head.next;
+        else head.prev.next=head.next;
     }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
