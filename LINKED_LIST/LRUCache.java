@@ -16,11 +16,15 @@ package LINKED_LIST;
     private Node insert(Node head, int data)
     {
         Node newNode=new Node(data);
-        if(head==null)
-        {
-            newNode.next=head;
-
+        if(head==null) {
+            head = newNode;
+            return head;
         }
+        else
+        {
+            
+        }
+
         return head;
     }
     public static void main(String[] args) {
