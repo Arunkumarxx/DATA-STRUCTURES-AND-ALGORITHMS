@@ -30,7 +30,11 @@ package LINKED_LIST;
     }
     private Node remove(Node head)
     {
-        
+        Node temp=null;
+        if(head.prev!=null && head.next)
+            head.next.prev=head.prev;
+            head.prev.next=head.next;
+       }
     }
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
