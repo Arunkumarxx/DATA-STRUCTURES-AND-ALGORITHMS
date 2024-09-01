@@ -17,7 +17,15 @@ import java.util.HashMap;
              this.prev=null;
          }
      }
-    HashMap<Integer,Node> hashMap =new HashMap<>();
+    private HashMap<Integer,Node> cache =new HashMap<>();
+    private int capacity;
+    private Node head=null;
+    private  Node tail=null;
+
+    LRUCache(int capacity)
+    {
+        this.capacity=capacity;
+    }
 
     private Node put(Node head, int data)
     {
