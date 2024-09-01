@@ -19,7 +19,7 @@ package LINKED_LIST;
         if(head==null)
         {
             newNode.next=head;
-            
+
         }
         return head;
     }
