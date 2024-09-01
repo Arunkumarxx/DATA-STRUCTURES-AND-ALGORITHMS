@@ -41,7 +41,7 @@ package LINKED_LIST;
         temp.next=head;
         return head;
     }
-    
+
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
         Node node =new Node(0);
