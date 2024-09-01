@@ -76,7 +76,7 @@ public class LRUCache {
         lruCache.put(2, 2);
         System.out.println(lruCache.get(1));
         lruCache.put(3, 3);
-        System.out.println(lruCache.get(2)); 
+        System.out.println(lruCache.get(2));
         lruCache.put(4, 4);
     }
 }
