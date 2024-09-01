@@ -14,7 +14,7 @@ public class LRUCache {
             this.prev=null;
         }
     }
-    
+
     public static void main(String[] args) {
 
     }
