@@ -27,7 +27,7 @@ import java.util.HashMap;
          this.capacity=capacity;
      }
 
-
+     private 
     public static void main(String[] args) {
         LRUCache obj = new LRUCache();
         Node node =new Node(0);
