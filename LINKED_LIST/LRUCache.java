@@ -29,6 +29,8 @@ import java.util.HashMap;
 
      private void moveToHead(Node node)
      {
+         if(head==node)
+             return;
          
      }
     public static void main(String[] args) {
