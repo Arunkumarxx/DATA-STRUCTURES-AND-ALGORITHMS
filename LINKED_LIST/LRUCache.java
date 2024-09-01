@@ -15,6 +15,7 @@ public class LRUCache {
         }
     }
 
+    private static int 
     public static void main(String[] args) {
 
     }
