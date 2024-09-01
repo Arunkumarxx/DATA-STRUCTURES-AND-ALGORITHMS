@@ -28,15 +28,14 @@ package LINKED_LIST;
         }
         return head;
     }
-    private Node remove(Node head)
+    private Node get(Node head,Node node)
     {
-        Node temp=null;
-        if(head.prev!=null)
-            head.prev=head.next;
-        else head=head.next;
-        if(head.next!=null)
-            head.next.prev=head.prev;
-
+        Node temp=node;
+        if(node.prev!=null)
+            node.prev.next=node.next;
+        else node=node.next;
+        if(node.next!=null)
+            node.next.prev=node.prev;
 
     }
     public static void main(String[] args) {
