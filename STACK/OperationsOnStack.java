@@ -1,2 +1,4 @@
-package STACK;public class OperationsOnStack {
+package STACK;
+
+public class OperationsOnStack {
 }
