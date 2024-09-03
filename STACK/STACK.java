@@ -35,8 +35,9 @@ public class STACK {
     }
     public void print()
     {
-        for(int val:arr)
-            System.out.print(val+" ");
+        for(int i=0; i<=size;++i)
+            System.out.print(arr[i]);
+        
     }
     public static void main(String[] args) {
         STACK stack =new STACK();
