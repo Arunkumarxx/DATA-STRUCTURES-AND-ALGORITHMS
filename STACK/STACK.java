@@ -55,6 +55,8 @@ public class STACK {
         mystack.pop();
         mystack.print();
         Stack<Integer> st =new Stack<>();
+        for(int i=1; i<=4;++i)
+            st.push(i);
         Iterator itr =st.iterator();
         int n=4;
         int i=0;
