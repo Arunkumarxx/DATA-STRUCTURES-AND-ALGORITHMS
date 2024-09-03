@@ -15,24 +15,18 @@ public class LinkedListImplementationOfStack {
     }
     public int  pop()
     {
-        int res;
-        if(head!=null) {
-            head = head.next;
-            res=head.data;
-        }
-        else return -1;
+        if(isEmpty())
+            return -1;
+        int res=head.data;
+        head=head.next;
         return res;
     }
     public   void push(int data)
     {
-        Node newNode = new Node(data);
-        if(head==null)
-            head=newNode;
-        else
-        {
-            newNode.next=head;
-            head=newNode;
-        }
+        Node newNode=new Node(data);
+        newNode.next=head;
+        head=newNode;
+
     }
     public  void print()
     {
@@ -42,6 +36,10 @@ public class LinkedListImplementationOfStack {
             System.out.println("|"+temp.data+"|");
             temp=temp.next;
         }
+    }
+    public boolean isEmpty()
+    {
+        return head==null;
     }
     public static void main(String[] args) {
         LinkedListImplementationOfStack myStack = new LinkedListImplementationOfStack();
