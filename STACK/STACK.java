@@ -1,5 +1,7 @@
 package STACK;
 
+import java.util.Stack;
+
 public class STACK {
     private int [] arr ;
     private  int size;
