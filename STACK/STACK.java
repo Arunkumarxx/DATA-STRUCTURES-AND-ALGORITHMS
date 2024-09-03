@@ -65,6 +65,7 @@ public class STACK {
             if(i==(n/2))
             {
                 System.out.println(itr.next());
+                break;
             }++i;
         }
     }
