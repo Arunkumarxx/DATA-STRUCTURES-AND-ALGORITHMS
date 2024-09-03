@@ -54,6 +54,17 @@ public class STACK {
         mystack.push(3);
         mystack.pop();
         mystack.print();
+        Stack<Integer> st =new Stack<>();
+        Iterator itr =st.iterator();
+        int n=4;
+        int i=0;
+        while(itr.hasNext())
+        {
+            if(i==(n/2))
+            {
+                System.out.println(itr.next());
+            }++i;
+        }
     }
     
 }
