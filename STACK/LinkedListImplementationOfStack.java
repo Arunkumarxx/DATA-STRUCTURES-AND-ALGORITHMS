@@ -15,8 +15,12 @@ public class LinkedListImplementationOfStack {
     }
     public int  pop()
     {
-        int res=head.data;
-        head=head.next;
+        int res;
+        if(head!=null) {
+            head = head.next;
+            res=head.data;
+        }
+        else return -1;
         return res;
     }
     public   void push(int data)
