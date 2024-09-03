@@ -43,7 +43,6 @@ public class STACK {
     {
         for(int i=size-1;i>=0;--i)
             System.out.println("|"+arr[i]+"|");
-        System.out.print("---");
     }
     public static void main(String[] args) {
         STACK mystack =new STACK();
