@@ -70,6 +70,7 @@ public class STACK {
             ++i;
         }
         st.remove(current);
+        System.out.println(st);
     }
     
 }
