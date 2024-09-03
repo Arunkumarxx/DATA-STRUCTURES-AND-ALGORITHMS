@@ -1,6 +1,7 @@
 package STACK;
 
 public class LinkedListImplementationOfStack {
+   private Node head;
     private class Node
     {
         int data;
@@ -13,11 +14,8 @@ public class LinkedListImplementationOfStack {
         }
 
     }
-    public void push()
-    {
-
-    }
-    public   void insertAtBegin(Node head,int data)
+    
+    public   void push(int data)
     {
         Node newNode = new Node(data);
         if(head==null)
