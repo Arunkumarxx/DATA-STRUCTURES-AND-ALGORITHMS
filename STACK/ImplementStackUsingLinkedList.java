@@ -1,6 +1,6 @@
 package STACK;
 
-public class LinkedListImplementationOfStack {
+public class ImplementStackUsingLinkedList {
    private  Node head;
     private class Node
     {
@@ -42,7 +42,7 @@ public class LinkedListImplementationOfStack {
         return head==null;
     }
     public static void main(String[] args) {
-        LinkedListImplementationOfStack myStack = new LinkedListImplementationOfStack();
+        ImplementStackUsingLinkedList myStack = new ImplementStackUsingLinkedList();
         for(int i=1; i<=7;++i)
             myStack.push(i);
         myStack.pop();

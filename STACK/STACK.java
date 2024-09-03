@@ -1,7 +1,5 @@
 package STACK;
 
-import java.util.Iterator;
-import java.util.Stack;
 
 public class STACK {
     private int [] arr ;
@@ -54,7 +52,7 @@ public class STACK {
         mystack.push(3);
         mystack.pop();
         mystack.print();
-      
+
     }
     
 }
