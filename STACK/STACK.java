@@ -46,15 +46,11 @@ public class STACK {
 
     }
     public static void main(String[] args) {
-        STACK stack =new STACK();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.print();
+        STACK mystack =new STACK();
+        mystack.push(1);
+        mystack.push(2);
+        mystack.push(3);
+        mystack.print();
     }
     
 }
