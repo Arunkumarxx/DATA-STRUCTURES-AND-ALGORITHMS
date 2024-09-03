@@ -22,8 +22,8 @@ public class STACK {
     {
         if(isEmpty())
             return -1;
-        int res= arr[size];
-        arr[size]=0;
+        int res= arr[size-1];
+        arr[size-1]=0;
         --size;
         return res;
     }
