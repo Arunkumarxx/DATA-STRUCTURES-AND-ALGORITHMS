@@ -20,11 +20,9 @@ public class STACK {
     }
     public int  pop ()
     {
-        int res=arr[size];
-        arr[size]=0;
-        --size;
-        return res;
-
+        if(isEmpty())
+            return -1;
+        return arr[--size];
     }
     public boolean isEmpty() {
         if (size == 0)
