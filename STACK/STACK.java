@@ -6,20 +6,23 @@ public class STACK {
 
     public STACK()
     {
-        this.size=-1;
+        this.size=0;
         this.arr=new  int [10];
     }
     public void push(int value)
     {
         if(size==arr.length)
             resize();
-            else arr[++size]=value;
+            else {
+            arr[size] = value;
+            ++size;
+        }
     }
     public int  pop ()
     {
-        --size;
-        return arr[size];
-        
+        size+=1;
+        return arr[--size];
+
     }
     public boolean isEmpty() {
         if (size == 0)
