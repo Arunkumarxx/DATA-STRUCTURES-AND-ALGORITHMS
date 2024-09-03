@@ -55,10 +55,10 @@ public class STACK {
         mystack.pop();
         mystack.print();
         Stack<Integer> st =new Stack<>();
-        for(int i=1; i<=4;++i)
+        for(int i=1; i<=5;++i)
             st.push(i);
         Iterator itr =st.iterator();
-        int n=4;
+        int n=st.size();
         int i=1;
         Object current=null;
         while (itr.hasNext()) {
