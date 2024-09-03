@@ -26,11 +26,11 @@ public class DeleteMidOfAStack {
         stack.push(4);
         stack.push(5);
 
-        System.out.println("Stack before deleting middle element: " + stack);
+        System.out.println("Stack before : " + stack);
 
         DeleteMidOfAStack obj = new DeleteMidOfAStack();
         obj.deleteMid(stack, stack.size());
 
-        System.out.println("Stack after deleting middle element: " + stack);
+        System.out.println("Stack after : " + stack);
     }
 }
