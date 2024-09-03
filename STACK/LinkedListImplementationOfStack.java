@@ -43,10 +43,8 @@ public class LinkedListImplementationOfStack {
     }
     public static void main(String[] args) {
         LinkedListImplementationOfStack myStack = new LinkedListImplementationOfStack();
-        myStack.push(1);
-        myStack.push(2);
-        myStack.pop();
-        myStack.pop();
+        for(int i=1; i<=4;++i)
+            myStack.push(i);
         myStack.print();
     }
 }
