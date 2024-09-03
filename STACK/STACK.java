@@ -60,7 +60,7 @@ public class STACK {
         Iterator itr =st.iterator();
         int n=4;
         int i=1;
-        Object current;
+        Object current=null;
         while (itr.hasNext()) {
             current=  itr.next();
             if (i == n / 2) {
