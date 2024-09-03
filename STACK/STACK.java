@@ -19,6 +19,11 @@ public class STACK {
     {
         return arr[--size];
     }
+    public boolean isEmpty() {
+        if (size == 0)
+            return true;
+        return false;
+    }
     public void resize()
     {
         int [] newArr =new int[size*2];
@@ -28,10 +33,17 @@ public class STACK {
         }
         arr=newArr;
     }
-
-
+    public void print()
+    {
+        for(int val:arr)
+            System.out.print(val+" ");
+    }
     public static void main(String[] args) {
-
+        STACK stack =new STACK();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.print();
     }
     
 }
