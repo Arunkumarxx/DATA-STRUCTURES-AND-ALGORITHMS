@@ -62,7 +62,7 @@ public class STACK {
         int i=1;
         while(itr.hasNext())
         {
-            System.out.println(itr);
+            System.out.println(itr.next());
         }
     }
     
