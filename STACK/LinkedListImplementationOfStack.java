@@ -1,7 +1,7 @@
 package STACK;
 
 public class LinkedListImplementationOfStack {
-   private Node head;
+   private  Node head;
     private class Node
     {
         int data;
@@ -30,7 +30,19 @@ public class LinkedListImplementationOfStack {
             head=newNode;
         }
     }
+    public  void print()
+    {
+        Node temp=head;
+        while(temp!=null)
+        {
+            System.out.println("|"+temp.data+"|");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
-
+        LinkedListImplementationOfStack myStack = new LinkedListImplementationOfStack();
+        myStack.push(1);
+        myStack.push(2);
+        myStack.print();
     }
 }
