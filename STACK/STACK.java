@@ -54,23 +54,7 @@ public class STACK {
         mystack.push(3);
         mystack.pop();
         mystack.print();
-        Stack<Integer> st =new Stack<>();
-        for(int i=1; i<=5;++i)
-            st.push(i);
-        Iterator itr =st.iterator();
-        int n=st.size();
-        int i=1;
-        Object current=null;
-        while (itr.hasNext()) {
-            current=  itr.next();
-            if (i == n / 2) {
-                System.out.println(current);  // Print the middle element
-                break;
-            }
-            ++i;
-        }
-        st.remove(current);
-        System.out.println(st);
+      
     }
     
 }
