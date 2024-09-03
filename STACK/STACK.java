@@ -42,7 +42,7 @@ public class STACK {
     public void print()
     {
         for(int i=size-1;i>=0;--i)
-            System.out.print(arr[i]);
+            System.out.println("|"+arr[i]+"|");
 
     }
     public static void main(String[] args) {
