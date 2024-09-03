@@ -69,7 +69,7 @@ public class STACK {
             }
             ++i;
         }
-        st.remove(current)
+        st.remove(current);
     }
     
 }
