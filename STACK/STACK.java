@@ -45,6 +45,7 @@ public class STACK {
         stack.push(2);
         stack.push(3);
         stack.pop();
+        stack.pop();
         stack.print();
     }
     
