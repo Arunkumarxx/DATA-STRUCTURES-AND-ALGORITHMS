@@ -14,7 +14,7 @@ public class LinkedListImplementationOfStack {
         }
 
     }
-    
+
     public   void push(int data)
     {
         Node newNode = new Node(data);
