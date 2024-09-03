@@ -6,7 +6,7 @@ public class STACK {
 
     public STACK()
     {
-        this.size=0;
+        this.size=-1;
         this.arr=new  int [10];
     }
     public void push(int value)
@@ -37,7 +37,7 @@ public class STACK {
     {
         for(int i=0; i<=size;++i)
             System.out.print(arr[i]);
-        
+
     }
     public static void main(String[] args) {
         STACK stack =new STACK();
