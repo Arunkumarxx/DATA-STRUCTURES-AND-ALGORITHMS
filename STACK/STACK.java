@@ -60,10 +60,10 @@ public class STACK {
         Iterator itr =st.iterator();
         int n=4;
         int i=1;
-        while(itr.hasNext())
-        {
-            if(i==n/2) {
-                System.out.println(itr.next());
+        while (itr.hasNext()) {
+            int current = (int) itr.next();  // Call next to advance the iterator
+            if (i == n / 2) {
+                System.out.println(current);  // Print the middle element
                 break;
             }
             ++i;
