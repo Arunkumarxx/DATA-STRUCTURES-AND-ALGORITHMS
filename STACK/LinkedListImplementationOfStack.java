@@ -43,7 +43,7 @@ public class LinkedListImplementationOfStack {
     }
     public static void main(String[] args) {
         LinkedListImplementationOfStack myStack = new LinkedListImplementationOfStack();
-        for(int i=1; i<=4;++i)
+        for(int i=1; i<=40;++i)
             myStack.push(i);
         myStack.print();
     }
