@@ -64,6 +64,7 @@ public class STACK {
         {
             if(i==n/4)
             System.out.println(itr.next());
+            ++i;
         }
     }
     
