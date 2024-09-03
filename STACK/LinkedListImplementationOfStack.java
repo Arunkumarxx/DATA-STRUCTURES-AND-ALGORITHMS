@@ -13,12 +13,21 @@ public class LinkedListImplementationOfStack {
         }
 
     }
-    private  void inserAtBegin(Node head,int data)
+    public void push()
+    {
+
+    }
+    public   void insertAtBegin(Node head,int data)
     {
         Node newNode = new Node(data);
         if(head==null)
         {
-            
+            head=newNode;
+        }
+        else
+        {
+            newNode.next=head;
+            head=newNode;
         }
     }
 
