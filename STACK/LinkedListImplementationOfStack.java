@@ -8,6 +8,6 @@ public class LinkedListImplementationOfStack {
         Node prev;
     }
     public static void main(String[] args) {
-
+        
     }
 }
