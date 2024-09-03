@@ -1,2 +1,4 @@
-package STACK;public class LinkedListImplementationOfStack {
+package STACK;
+
+public class LinkedListImplementationOfStack {
 }
