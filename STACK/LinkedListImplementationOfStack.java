@@ -49,7 +49,6 @@ public class LinkedListImplementationOfStack {
         myStack.push(2);
         myStack.pop();
         myStack.pop();
-        myStack.pop();
         myStack.print();
     }
 }
