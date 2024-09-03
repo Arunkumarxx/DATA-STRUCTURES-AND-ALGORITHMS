@@ -53,6 +53,7 @@ public class STACK {
         stack.pop();
         stack.pop();
         stack.pop();
+        stack.pop();
         stack.print();
     }
     
