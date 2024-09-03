@@ -9,11 +9,24 @@ public class STACK {
         this.size=0;
         this.arr=new  int [10];
     }
-    public int add(int value)
+    public void push(int value)
     {
         if(size==arr.length)
-            
+            resize();
             else arr[++size]=value;
+    }
+    public int  pop ()
+    {
+        return arr[--size];
+    }
+    public void resize()
+    {
+        int [] newArr =new int[size*2];
+        for(int i=0; i<size;++i)
+        {
+            newArr[i]=arr[i];
+        }
+        arr=newArr;
     }
 
 
