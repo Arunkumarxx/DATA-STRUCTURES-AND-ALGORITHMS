@@ -59,7 +59,7 @@ public class STACK {
             st.push(i);
         Iterator itr =st.iterator();
         int n=4;
-        int i=0;
+        int i=1;
         while(itr.hasNext())
         {
             if(i==(n/2))
