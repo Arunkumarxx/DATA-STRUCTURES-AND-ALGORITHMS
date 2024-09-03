@@ -22,12 +22,13 @@ public class STACK {
     {
         if(isEmpty())
             return -1;
-        return arr[--size];
+        int res= arr[size];
+        arr[size]=0;
+        --size;
+        return res;
     }
     public boolean isEmpty() {
-        if (size == 0)
-            return true;
-        return false;
+        return size==0;
     }
     public void resize()
     {
