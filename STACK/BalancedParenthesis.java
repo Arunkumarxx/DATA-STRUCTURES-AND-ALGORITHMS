@@ -8,6 +8,7 @@ public class BalancedParenthesis {
         for(int i=0; i<=256;++i) {
             System.out.print(i+" ");
             System.out.print((char) i);
+            System.out.println();
         }
     }
 
