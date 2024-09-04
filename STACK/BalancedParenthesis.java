@@ -36,12 +36,53 @@ public class BalancedParenthesis {
         }
     }
 
+    private void  isBalanced()
+    {
+
+    }
     public static void main(String[] args) {
         BalancedParenthesis stack =new BalancedParenthesis();
-        stack.push('(');
-        stack.push('(');
-        stack.push(')');
-        stack.push(')');
+        String  str ="(())";
+        for(int i=0; i<str.length();++i)
+        {
+            if(isValidPush(str.charAt(i)))
+                stack.push(str.charAt(i));
+            else if(stack.head==null )
+            {
+                System.out.println("Invalid ");
+                break;
+            }
+            else {
+                char val=stack.pop();
+                if(!isClosed(val))
+                {
+                    System.out.println("Invalid ");
+                    break;
+                }
+            }
+        }
+
         stack.print();
+    }
+    private static boolean isClosed(char c)
+    {
+        if(c==')')
+            return  c-1=='(';
+        if(c=='}')
+            return c-2=='[';
+        if(c=='{')
+            return c-2=='{';
+
+        return false;
+    }
+    private static boolean isValidPush(char c)
+    {
+        switch (c)
+        {
+            case '(':return  true;
+            case '{':return true;
+            case '[':return true;
+            default: return false;
+        }
     }
 }
