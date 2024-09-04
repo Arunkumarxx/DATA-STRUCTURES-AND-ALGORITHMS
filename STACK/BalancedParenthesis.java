@@ -51,7 +51,7 @@ public class BalancedParenthesis {
             }
             else {
                 char val=stack.pop();
-                if(!isClosed(val))
+                if(!isClosed(val,str.charAt(i)))
                 {
                     System.out.println("Invalid ");
                     return;
@@ -65,16 +65,11 @@ public class BalancedParenthesis {
     public static void main(String[] args) {
         isBalanced();
     }
-    private static boolean isClosed(char c)
+    private static boolean isClosed(char open,char close)
     {
-        if(c==')')
-            return  c-1=='(';
-        if(c=='}')
-            return c-2=='[';
-        if(c=='{')
-            return c-2=='{';
-
-        return false;
+        return (open=='(' && close==')')||
+                (open=='{' && close=='}')||
+                (open=='[' && close==']');
     }
     private static boolean isValidPush(char c)
     {
