@@ -73,12 +73,6 @@ public class BalancedParenthesis {
     }
     private static boolean isValidPush(char c)
     {
-        switch (c)
-        {
-            case '(':return  true;
-            case '{':return true;
-            case '[':return true;
-            default: return false;
-        }
+        return  c=='('|| c=='{'|| c=='[';
     }
 }
