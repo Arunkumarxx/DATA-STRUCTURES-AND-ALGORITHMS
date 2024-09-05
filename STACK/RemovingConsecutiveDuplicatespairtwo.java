@@ -1,2 +1,4 @@
-package STACK;public class RemovingConsecutiveDuplicatespairtwo {
+package STACK;
+
+public class RemovingConsecutiveDuplicatespairtwo {
 }
