@@ -13,7 +13,13 @@ public class RemovingConsecutiveDuplicatespairtwo {
             this.next=null;
         }
     }
-    private void 
+    
+    private void push(char data) {
+        StackNode newNode = new StackNode(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
     public static void main(String[] args) {
 
     }
