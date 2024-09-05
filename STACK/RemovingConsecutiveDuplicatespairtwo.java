@@ -31,7 +31,6 @@ public class RemovingConsecutiveDuplicatespairtwo {
         head=head.next;
         return x;
     }
-
     public static void main(String[] args) {
         String str= "aaabbaaccd";
         RemovingConsecutiveDuplicatespairtwo stack =new RemovingConsecutiveDuplicatespairtwo();
