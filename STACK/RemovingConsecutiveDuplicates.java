@@ -38,7 +38,7 @@ public class RemovingConsecutiveDuplicates {
     }
 
     public static void main(String[] args) {
-        String input="aaaaabaabcccc";
+        String input="aaaaaabaabccccccc";
         RemovingConsecutiveDuplicates stack =new RemovingConsecutiveDuplicates();
 
         for(int i=0; i<input.length();++i)
