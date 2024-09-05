@@ -27,10 +27,9 @@ public class RemovingConsecutiveDuplicatespairtwo {
     }
     public static void main(String[] args) {
         String str= "aaabbaaccd";
-        int c=1;
         int i=str.length()-1;
         RemovingConsecutiveDuplicatespairtwo stack =new RemovingConsecutiveDuplicatespairtwo();
-        while(i!=0)
+        while(i!=1)
         {
             if(str.charAt(i)==str.charAt(i-1))
             {
