@@ -25,11 +25,12 @@ public class ReverseStringUsingStack {
         if(head==null)
             return ' ';
         char x=head.data;
+        head=head.next;
         return x;
-
     }
-
     public static void main(String[] args) {
-
+        String input="arun";
+        ReverseStringUsingStack stack =new ReverseStringUsingStack();
+        
     }
 }
