@@ -38,12 +38,12 @@ public class RemovingConsecutiveDuplicatespairtwo {
         {
             stack.push(str.charAt(i));
         }
-        String res= "";
+        StringBuilder res =new StringBuilder();
         while(stack.head!=null)
         {
-            res+=stack.pop();
+            res.append(stack.pop());
         }
-        System.out.println(res);
+        System.out.println(res.toString());
     }
 
 }
