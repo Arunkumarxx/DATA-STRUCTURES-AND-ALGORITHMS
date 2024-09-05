@@ -40,7 +40,7 @@ public class RemovingConsecutiveDuplicatespairtwo {
             stack.push(str.charAt(i));
         }
         String res= "";
-        while(stack.pop()!=' ')
+        while(stack.head!=null)
         {
             res+=stack.pop();
         }
