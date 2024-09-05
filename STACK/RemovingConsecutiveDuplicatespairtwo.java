@@ -33,7 +33,7 @@ public class RemovingConsecutiveDuplicatespairtwo {
     }
 
     public static void main(String[] args) {
-        String str= "aaaa";
+        String str= "aaabbaaccd";
         RemovingConsecutiveDuplicatespairtwo stack =new RemovingConsecutiveDuplicatespairtwo();
         for(int i=str.length()-1;i>=0;--i)
         {
