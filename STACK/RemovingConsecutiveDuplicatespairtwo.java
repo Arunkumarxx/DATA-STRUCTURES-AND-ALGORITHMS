@@ -43,12 +43,15 @@ public class RemovingConsecutiveDuplicatespairtwo {
                 --i;
             }
         }
-        if(str.charAt(0)!=str.charAt(1))
+        if (str.length() > 1 && str.charAt(0) != str.charAt(1)) {
             stack.push(str.charAt(0));
-        String result="";
-        while(stack.head!=null)
-        {
-            result+=stack.pop();
+        } else if (str.length() == 1) {
+            stack.push(str.charAt(0));
+        }
+
+        String result = "";
+        while (stack.head != null) {
+            result += stack.pop();
         }
         System.out.println(result);
     }
