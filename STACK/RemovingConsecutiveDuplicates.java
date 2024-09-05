@@ -30,10 +30,11 @@ public class RemovingConsecutiveDuplicates {
         newNode.next=head;
         head=newNode;
     }
-    private char pop(char data)
+    private char pop()
     {
         char x= head.data;
-
+        head=head.next;
+        return x;
     }
 
     public static void main(String[] args) {
@@ -43,7 +44,12 @@ public class RemovingConsecutiveDuplicates {
         for(int i=0; i<input.length();++i)
             stack.push(input.charAt(i));
         String result="";
-        while(stack.head)
+        while(stack.head!=null)
+        {
+            result+=stack.pop();
+
+        }
+        System.out.println(result);
 
     }
 
