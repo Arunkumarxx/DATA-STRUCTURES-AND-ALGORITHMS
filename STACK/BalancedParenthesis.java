@@ -39,7 +39,7 @@ public class BalancedParenthesis {
     private static void  isBalanced()
     {
         BalancedParenthesis stack =new BalancedParenthesis();
-        String  str ="(())";
+        String  str ="}())";
         for(int i=0; i<str.length();++i)
         {
             if(isValidPush(str.charAt(i)))
