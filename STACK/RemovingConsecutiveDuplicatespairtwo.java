@@ -15,45 +15,36 @@ public class RemovingConsecutiveDuplicatespairtwo {
     }
 
     private void push(char data) {
+
+        if(data==head.data) {
+            head = head.next;
+            return;
+        }
         StackNode newNode = new StackNode(data);
         newNode.next = head;
         head = newNode;
     }
+
     private char pop()
     {
         char x=head.data;
         head=head.next;
         return x;
     }
+
     public static void main(String[] args) {
         String str= "aaaa";
-        int i=str.length()-1;
         RemovingConsecutiveDuplicatespairtwo stack =new RemovingConsecutiveDuplicatespairtwo();
-        while(i>=1)
+        for(int i=str.length()-1;i>=0;--i)
         {
-            if(str.charAt(i)==str.charAt(i-1))
-            {
-                stack.push(str.charAt(i));
-                stack.push(str.charAt(i));
-                while(i>=1 && str.charAt(i)==str.charAt(i-1))
-                    --i;
-            }
-            else {
-                stack.push(str.charAt(i));
-                --i;
-            }
+            stack.push(str.charAt(i));
         }
-        if (str.length() > 1 && str.charAt(0) != str.charAt(1)) {
-            stack.push(str.charAt(0));
-        } else if (str.length() == 1) {
-            stack.push(str.charAt(0));
+        String res= "";
+        while(stack.pop()!=' ')
+        {
+            res+=stack.pop();
         }
-
-        String result = "";
-        while (stack.head != null) {
-            result += stack.pop();
-        }
-        System.out.println(result);
+        System.out.println(res);
     }
 
 }
