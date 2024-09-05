@@ -33,7 +33,7 @@ public class RemovingConsecutiveDuplicates {
     private char pop(char data)
     {
         char x= head.data;
-        
+
     }
 
     public static void main(String[] args) {
@@ -43,6 +43,7 @@ public class RemovingConsecutiveDuplicates {
         for(int i=0; i<input.length();++i)
             stack.push(input.charAt(i));
         String result="";
+        while(stack.head)
 
     }
 
