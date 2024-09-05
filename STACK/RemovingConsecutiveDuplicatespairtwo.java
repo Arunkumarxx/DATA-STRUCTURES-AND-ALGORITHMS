@@ -35,7 +35,7 @@ public class RemovingConsecutiveDuplicatespairtwo {
             {
                 stack.push(str.charAt(i));
                 stack.push(str.charAt(i));
-                while(str.charAt(i)==str.charAt(i-1))
+                while(i>=1 && str.charAt(i)==str.charAt(i-1))
                     --i;
             }
             else {
