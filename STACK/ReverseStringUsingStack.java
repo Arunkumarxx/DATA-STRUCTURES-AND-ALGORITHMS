@@ -16,13 +16,10 @@ public class ReverseStringUsingStack {
     private void  push(int value)
     {
         StackNode newNode=new StackNode(value);
-        if(head==null)
-            head=newNode;
-        else {
-            newNode.next=head;
-            head=newNode;
-        }
+        newNode.next=head;
+        head=newNode;
     }
+    
     public static void main(String[] args) {
 
     }
