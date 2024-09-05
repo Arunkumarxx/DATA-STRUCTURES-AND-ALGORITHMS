@@ -1,6 +1,7 @@
 package STACK;
 
 public class ReverseStringUsingStack {
+    private StackNode head;
     private class StackNode
     {
         int data;
@@ -12,7 +13,16 @@ public class ReverseStringUsingStack {
             this.next=null;
         }
     }
-    private void 
+    private void  push(int value)
+    {
+        StackNode newNode=new StackNode(value);
+        if(head==null)
+            head=newNode;
+        else {
+            newNode.next=head;
+            head=newNode;
+        }
+    }
     public static void main(String[] args) {
 
     }
