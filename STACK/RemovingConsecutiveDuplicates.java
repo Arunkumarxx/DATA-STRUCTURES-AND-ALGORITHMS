@@ -41,7 +41,7 @@ public class RemovingConsecutiveDuplicates {
         String input="aaaaaabaabccccccc";
         RemovingConsecutiveDuplicates stack =new RemovingConsecutiveDuplicates();
 
-        for(int i=0; i<input.length();++i)
+        for(int i=input.length()-1; i>=0;--i)
             stack.push(input.charAt(i));
         String result="";
         while(stack.head!=null)
@@ -50,6 +50,7 @@ public class RemovingConsecutiveDuplicates {
 
         }
         System.out.println(result);
+
 
     }
 
