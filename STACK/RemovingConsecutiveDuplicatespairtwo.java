@@ -26,7 +26,7 @@ public class RemovingConsecutiveDuplicatespairtwo {
         return x;
     }
     public static void main(String[] args) {
-        String str= "baaaaaaa";
+        String str= "aaabbaaccd";
         int c=1;
         int i=str.length()-1;
         RemovingConsecutiveDuplicatespairtwo stack =new RemovingConsecutiveDuplicatespairtwo();
