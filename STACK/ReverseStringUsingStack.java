@@ -29,7 +29,7 @@ public class ReverseStringUsingStack {
         return x;
     }
     public static void main(String[] args) {
-        String input="arun";
+        String input="GeeksforGeeks";
         ReverseStringUsingStack stack =new ReverseStringUsingStack();
         for(int i=0; i<input.length(); ++i)
             stack.push(input.charAt(i));
