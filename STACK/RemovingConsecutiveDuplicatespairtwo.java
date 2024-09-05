@@ -29,7 +29,7 @@ public class RemovingConsecutiveDuplicatespairtwo {
         String str= "aaaa";
         int i=str.length()-1;
         RemovingConsecutiveDuplicatespairtwo stack =new RemovingConsecutiveDuplicatespairtwo();
-        while(i!=1)
+        while(i>=1)
         {
             if(str.charAt(i)==str.charAt(i-1))
             {
