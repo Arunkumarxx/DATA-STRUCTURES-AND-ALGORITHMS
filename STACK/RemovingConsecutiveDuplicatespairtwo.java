@@ -16,7 +16,7 @@ public class RemovingConsecutiveDuplicatespairtwo {
 
     private void push(char data) {
 
-        if(data==head.data) {
+        if(head!=null &&  data==head.data) {
             head = head.next;
             return;
         }
