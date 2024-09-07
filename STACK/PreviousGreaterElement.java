@@ -35,7 +35,13 @@ public class PreviousGreaterElement {
         return head==null;
     }
     public static void main(String[] args) {
-        
+        PreviousGreaterElement stack =new PreviousGreaterElement();
+        int [] arr = {15,10,18,12,4,6,2,8};
+        int n= arr.length;
+        for(int i=0; i<n; ++i)
+        {
+            
+        }
     }
 
 }
