@@ -18,12 +18,30 @@ public class StockSpanProblem {
         }
 
     }
-    private void push(int value)
+    private void push(int value1,int value2)
     {
-        StackNode newNode =new StackNode(value);
+        StackNode newNode =new StackNode(value1,value2);
+        newNode.next=head;
+        head=newNode;
     }
-    public static int[] calculateSpan(int arr[], int n) {
 
+    private int [] peek()
+    {
+        return head.data;
+    }
+    private int [] pop()
+    {
+            int[] res = head.data;
+            head = head.next;
+            return res;
+    }
+    private boolean isEmpty()
+    {
+        return head==null;
+    }
+
+    public static int[] calculateSpan(int arr[], int n) {
+        
     }
     public static void main(String[] args) {
 
