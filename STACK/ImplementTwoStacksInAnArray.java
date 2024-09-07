@@ -39,11 +39,6 @@ public class ImplementTwoStacksInAnArray {
         return -1;
     }
 
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
     void resize() {
         int newSize = stack.length * 2;
         int[] arr = new int[newSize];
