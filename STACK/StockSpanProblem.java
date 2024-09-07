@@ -49,6 +49,7 @@ public class StockSpanProblem {
             {
                 stack.pop();
             }
+            res[i]=arr[i]-stack.top()[1];
 
         }
     }
