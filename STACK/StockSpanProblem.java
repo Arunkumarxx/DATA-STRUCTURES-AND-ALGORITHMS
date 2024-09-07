@@ -7,12 +7,13 @@ public class StockSpanProblem {
 
     private class StackNode
     {
-        int data;
+        int [] data;
         StackNode next;
 
-        StackNode(int data)
+        StackNode(int data1,int data2)
         {
-            this.data=data;
+            this.data[0]=data1;
+            this.data[1]=data2;
             this.next=null;
         }
 
@@ -25,7 +26,7 @@ public class StockSpanProblem {
 
     }
     public static void main(String[] args) {
-        
+
     }
 
 }
