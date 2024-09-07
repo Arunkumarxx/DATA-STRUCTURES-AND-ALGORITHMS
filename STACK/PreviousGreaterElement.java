@@ -38,7 +38,7 @@ public class PreviousGreaterElement {
     }
     public static void main(String[] args) {
         PreviousGreaterElement stack =new PreviousGreaterElement();
-        int [] arr = {15,10,18,12,4,6,2,8};
+        int [] arr = {10, 4, 2, 20, 40, 12, 30};
         int n= arr.length;
         int [] res = new int[n];
         for(int i=0; i<n; ++i)
