@@ -43,7 +43,7 @@ public class PreviousGreaterElement {
         int [] res = new int[n];
         for(int i=0; i<n; ++i)
         {
-            while(stack.isEmpty()==false && stack.top()<=arr[i])
+            while(!stack.isEmpty() && stack.top()<=arr[i])
                 stack.pop();
             res[i]=stack.isEmpty()?-1: stack.top();
             stack.push(arr[i]);
