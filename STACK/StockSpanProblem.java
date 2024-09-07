@@ -1,2 +1,4 @@
-package STACK;public class StockSpanProblem {
+package STACK;
+
+public class StockSpanProblem {
 }
