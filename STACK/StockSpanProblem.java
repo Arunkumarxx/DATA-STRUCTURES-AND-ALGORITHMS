@@ -1,5 +1,6 @@
 package STACK;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class StockSpanProblem {
@@ -55,7 +56,7 @@ public class StockSpanProblem {
     }
     public static void main(String[] args) {
         int [] arr = {100, 80, 60, 70, 60, 75, 85};
-        System.out.println(calculateSpan(arr, arr.length).toString());
+        System.out.println(Arrays.toString(calculateSpan(arr, arr.length)));
     }
 
 }
