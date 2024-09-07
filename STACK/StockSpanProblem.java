@@ -49,12 +49,14 @@ public class StockSpanProblem {
             {
                 stack.pop();
             }
-            res[i]=arr[i]-stack.top()[1];
-
+            res[i]=stack.isEmpty()?i+1:i-stack.top()[1];
+            stack.push(arr[i],i);
         }
+        return res;
     }
     public static void main(String[] args) {
-
+        int [] 
+        System.out.println(calculateSpan().toString());
     }
 
 }
