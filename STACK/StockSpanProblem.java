@@ -15,7 +15,10 @@ public class StockSpanProblem {
         }
 
     }
-    
+    private void push(int value)
+    {
+        StackNode newNode =new StackNode(value);
+    }
     public static int[] calculateSpan(int arr[], int n) {
 
     }
