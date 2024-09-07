@@ -27,7 +27,7 @@ public class StockSpanProblem {
 
     private int [] top()
     {
-        return isEmpty()?null:head.data;
+       return head!=null? head.data:null;
     }
     private int [] pop()
     {
