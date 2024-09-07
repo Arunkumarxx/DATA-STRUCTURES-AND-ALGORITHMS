@@ -49,7 +49,7 @@ public class StockSpanProblem {
             {
                 stack.pop();
             }
-            
+
         }
     }
     public static void main(String[] args) {
