@@ -27,6 +27,7 @@ public class StockSpanProblem {
 
     private int [] top()
     {
+
         return head.data;
     }
     private int [] pop()
@@ -41,7 +42,7 @@ public class StockSpanProblem {
     }
 
     public static int[] calculateSpan(int arr[], int n) {
-        
+
     }
     public static void main(String[] args) {
 
