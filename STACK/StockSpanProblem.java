@@ -43,9 +43,10 @@ public class StockSpanProblem {
 
     public static int[] calculateSpan(int arr[], int n) {
         StockSpanProblem stack =new StockSpanProblem();
+        int [] res =new int[n];
         for(int i=0; i<n; ++i)
         {
-            while((stack.isEmpty()))
+            while((!stack.isEmpty()) && )
         }
     }
     public static void main(String[] args) {
