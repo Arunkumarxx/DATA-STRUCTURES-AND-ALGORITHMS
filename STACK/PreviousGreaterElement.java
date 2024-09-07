@@ -14,9 +14,28 @@ public class PreviousGreaterElement {
             this.next=null;
         }
     }
-    
+    private void push(int value)
+    {
+        StackNode newData =new StackNode(value);
+        newData.next=head;
+        head=newData;
+    }
+    private int pop()
+    {
+        int x=head.data;
+        head=head.next;
+        return x;
+    }
+    private int top()
+    {
+        return head.data;
+    }
+    private boolean isEmpty()
+    {
+        return head==null;
+    }
     public static void main(String[] args) {
-
+        
     }
 
 }
