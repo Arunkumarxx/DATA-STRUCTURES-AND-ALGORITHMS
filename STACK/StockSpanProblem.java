@@ -27,7 +27,6 @@ public class StockSpanProblem {
 
     private int [] top()
     {
-
         return head.data;
     }
     private int [] pop()
@@ -46,7 +45,11 @@ public class StockSpanProblem {
         int [] res =new int[n];
         for(int i=0; i<n; ++i)
         {
-            while((!stack.isEmpty()) && )
+            while((!stack.isEmpty()) && stack.top()[0]<=arr[i])
+            {
+                stack.pop();
+            }
+            
         }
     }
     public static void main(String[] args) {
