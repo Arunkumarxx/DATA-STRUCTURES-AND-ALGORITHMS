@@ -56,7 +56,7 @@ public class StockSpanProblem {
         return res;
     }
     public static void main(String[] args) {
-        int [] arr = {1, 1, 1, 2, 1, 4, 6};
+        int [] arr = {10,4,5,90,120,80};
         System.out.println(Arrays.toString(calculateSpan(arr, arr.length)));
     }
 
