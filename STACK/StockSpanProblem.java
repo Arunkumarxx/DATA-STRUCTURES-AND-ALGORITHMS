@@ -13,6 +13,7 @@ public class StockSpanProblem {
 
         StackNode(int data1,int data2)
         {
+            this.data=new int[2];
             this.data[0]=data1;
             this.data[1]=data2;
             this.next=null;
