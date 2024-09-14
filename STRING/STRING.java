@@ -1,6 +1,6 @@
 package STRING;
 class  STRING {
-    private static boolean [] freq =new boolean [52];
+    private static boolean [] seen =new boolean [52];
     String removeDuplicates(String str) {
         int n=str.length();
         StringBuilder res =new StringBuilder();
@@ -8,19 +8,19 @@ class  STRING {
         {
             char c=str.charAt(i);
             if(c>='a') {
-                if(freq[c-'a']==false)
+                if(seen[c-'a']==false)
                     res.append(c);
-                freq[c-'a']=true;
+                seen[c-'a']=true;
             }
             else if(c<='Z')
             {
-                if(freq[c-'A'+26]==false)
+                if(seen[c-'A'+26]==false)
                     res.append(c);
-                freq[c-'A'+26]=true;
+                seen[c-'A'+26]=true;
             }
 
         }
-        freq=new boolean[52];
+        seen =new boolean[52];
         return res.toString();
     }
     public static void main(String[] args) {
