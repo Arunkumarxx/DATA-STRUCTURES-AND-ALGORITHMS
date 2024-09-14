@@ -27,6 +27,7 @@ public class STACK {
             return -1;
         int res= arr[size-1];
         arr[size-1]=0;
+        
         --size;
         return res;
     }
