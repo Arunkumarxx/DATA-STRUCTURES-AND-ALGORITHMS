@@ -25,5 +25,6 @@ class  STRING {
     public static void main(String[] args) {
         STRING obj =new STRING();
         System.out.println(obj.removeDuplicates("geekforgeeks"));
+        System.out.println(obj.removeDuplicates("geeksforgeeks"));
     }
 }
