@@ -23,6 +23,7 @@ class  STRING {
         return res.toString();
     }
     public static void main(String[] args) {
-
+        STRING obj =new STRING();
+        System.out.println(obj.removeDuplicates("geekforgeeks"));
     }
 }
