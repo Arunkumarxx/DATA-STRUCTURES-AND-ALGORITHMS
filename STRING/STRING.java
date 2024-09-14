@@ -20,6 +20,7 @@ class  STRING {
             }
 
         }
+        freq=new boolean[52];
         return res.toString();
     }
     public static void main(String[] args) {
