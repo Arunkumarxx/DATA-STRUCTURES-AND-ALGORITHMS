@@ -51,5 +51,6 @@ public class STACK {
         mystack.push(3);
         mystack.pop();
         mystack.print();
+        System.out.println();
     }
 }
