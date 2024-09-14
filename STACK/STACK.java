@@ -1,8 +1,5 @@
 package STACK;
-
-
 import java.util.Stack;
-
 public class STACK {
     private int [] arr ;
     private  int size;
@@ -27,7 +24,6 @@ public class STACK {
             return -1;
         int res= arr[size-1];
         arr[size-1]=0;
-        
         --size;
         return res;
     }
@@ -55,7 +51,7 @@ public class STACK {
         mystack.push(3);
         mystack.pop();
         mystack.print();
-
+        System.out.println("Arun");
     }
     
 }
