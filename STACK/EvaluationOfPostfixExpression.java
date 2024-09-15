@@ -4,25 +4,25 @@ public class EvaluationOfPostfixExpression {
     private StackNode head;
     private class StackNode
     {
-        char data;
+        int  data;
         StackNode next;
-        StackNode(char value)
+        StackNode(int value)
         {
             this.data=value;
             this.next=null;
         }
     }
-    private void push(char value)
+    private void push(int value)
     {
         StackNode newNode = new StackNode(value);
         newNode.next=head;
         head=newNode;
     }
-    private char pop()
+    private int pop()
     {
         if(head==null)
             return '\0';
-        char x =head.data;
+        int  x =head.data;
         head=head.next;
         return x;
     }
@@ -30,7 +30,7 @@ public class EvaluationOfPostfixExpression {
     {
         head=null;
     }
-    private char top()
+    private int top()
     {
         return head==null?'\0':head.data;
     }
@@ -44,7 +44,7 @@ public class EvaluationOfPostfixExpression {
             char c=str.charAt(i);
             if(Character.isDigit(c))
             {
-                stack.push(c);
+                stack.push(c-'0');
             }
            else
             {
