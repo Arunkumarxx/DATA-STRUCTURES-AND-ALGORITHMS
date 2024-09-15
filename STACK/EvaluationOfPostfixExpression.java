@@ -37,7 +37,7 @@ public class EvaluationOfPostfixExpression {
     public static void main(String[] args) {
         EvaluationOfPostfixExpression stack =new EvaluationOfPostfixExpression();
 
-        String str ="231*+9-";
+        String str ="123+*8-";
         int n=str.length();
         for(int i=0; i<n;++i)
         {
