@@ -52,17 +52,17 @@ public class EvaluationOfPostfixExpression {
                 int second=stack.pop()-48;
                 if(c=='-')
                 {
-                    stack.push(first-second);
+                    stack.push(second-first);
                 }
                 else if(c=='+')
                 {
-                    stack.push(first+second);
+                    stack.push(second+first);
                 }else if(c=='*')
                 {
-                    stack.push(first*second);
+                    stack.push(second*first);
                 }else if(c=='/')
                 {
-                    stack.push(first/second);
+                    stack.push(second/first);
                 }
             }
         }
