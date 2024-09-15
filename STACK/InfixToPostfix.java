@@ -54,7 +54,7 @@ public class InfixToPostfix {
 
     public static void main(String[] args) {
         InfixToPostfix stack = new InfixToPostfix();
-        String str = "((A+B)-C*(D/E))+F";
+        String str = "h^m^q^(7-4)\n";
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
