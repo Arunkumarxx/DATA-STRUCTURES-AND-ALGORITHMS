@@ -27,6 +27,10 @@ public class InfixToPostfix {
         head=head.next;
         return res;
     }
+    private boolean isEmpty()
+    {
+        return head==null;
+    }
     private void clear()
     {
         head=null;
@@ -46,6 +50,7 @@ public class InfixToPostfix {
         stack.push(2);
         stack.push(3);
         stack.pop();
+
         stack.print();
     }
 
