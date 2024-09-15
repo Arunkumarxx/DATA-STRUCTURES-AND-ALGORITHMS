@@ -18,9 +18,24 @@ public class EvaluationOfPostfixExpression {
         newNode.next=head;
         head=newNode;
     }
-    private 
+    private char pop()
+    {
+        if(head==null)
+            return '\0';
+        char x =head.data;
+        head=head.next;
+        return x;
+    }
+    private void clear()
+    {
+        head=null;
+    }
+    private char top()
+    {
+        return head==null?'\0':head.data;
+    }
     public static void main(String[] args) {
-
+        
     }
 
 }
