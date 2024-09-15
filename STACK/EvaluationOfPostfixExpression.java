@@ -70,6 +70,7 @@ public class EvaluationOfPostfixExpression {
                 }
             }
         }
+        System.out.println(stack.top());
     }
 
 }
