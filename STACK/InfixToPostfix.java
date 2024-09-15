@@ -46,12 +46,12 @@ public class InfixToPostfix {
     }
     public static void main(String[] args) {
         InfixToPostfix stack =new InfixToPostfix();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.pop();
-
-        stack.print();
+        String str ="((A+B)-C*(D/E))+F";
+        int n=str.length();
+        for(int i=0; i<n;++i)
+        {
+            
+        }
     }
 
 }
