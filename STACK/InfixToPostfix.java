@@ -36,7 +36,7 @@ public class InfixToPostfix {
         StackNode temp =head;
         while(temp!=null)
         {
-            System.out.print(temp.value+" ");
+            System.out.println("|"+temp.value+"|");
             temp=temp.next;
         }
     }
