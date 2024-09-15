@@ -54,30 +54,22 @@ public class InfixToPostfix {
 
     public static void main(String[] args) {
         InfixToPostfix stack = new InfixToPostfix();
-        String str = "h^m^q^(7-4)";
+        String str = "((A+B)-C*(D/E))+F";
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
         for (int i = 0; i < n; ++i) {
             char c = str.charAt(i);
-
-            // If the character is an operand (A-Z, a-z, or digit)
-            if (Character.isLetterOrDigit(c)) {
+            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 res.append(c);
-            }
-            // If the character is '(', push to stack
-            else if (c == '(') {
+            } else if (c == '(') {
                 stack.push(c);
-            }
-            // If the character is ')', pop until '(' is found
-            else if (c == ')') {
+            } else if (c == ')') {
                 while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
-                stack.pop();  // Remove '('
-            }
-            // If the character is an operator
-            else if (isOperator(c)) {
+                stack.pop();
+            } else if (isOperator(c)) {
                 while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
                         (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
                     res.append(stack.pop());
@@ -86,7 +78,6 @@ public class InfixToPostfix {
             }
         }
 
-        // Pop all remaining operators from the stack
         while (!stack.isEmpty()) {
             res.append(stack.pop());
         }
