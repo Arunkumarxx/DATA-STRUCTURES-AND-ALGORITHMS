@@ -35,7 +35,22 @@ public class EvaluationOfPostfixExpression {
         return head==null?'\0':head.data;
     }
     public static void main(String[] args) {
-        
+        EvaluationOfPostfixExpression stack =new EvaluationOfPostfixExpression();
+
+        String str ="231*+9-";
+        int n=str.length();
+        for(int i=0; i<n;++i)
+        {
+            char c=str.charAt(i);
+            if(Character.isDigit(c))
+            {
+                
+            }
+           else if(c=='*'|| c=='/'||c=='+'|| c=='-')
+            {
+
+            }
+        }
     }
 
 }
