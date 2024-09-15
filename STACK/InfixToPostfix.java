@@ -50,8 +50,14 @@ public class InfixToPostfix {
         int n=str.length();
         for(int i=0; i<n;++i)
         {
+
+        }
+    }
+    private static int getPrecendence(char c)
+    {
+        switch (c)
+        {
             
         }
     }
-
 }
