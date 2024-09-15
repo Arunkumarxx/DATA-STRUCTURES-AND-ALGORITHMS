@@ -57,8 +57,10 @@ public class InfixToPostfix {
                 stack.push(c);
                 continue;
             }
-            while(!stack.isEmpty() &&stack.top()!='(')
-                res.append(stack.pop());
+            if(c==')')
+            {
+                while(!stack.isEmpty() &&)
+            }
             if((c>='a' && c<='z')|| (c>='A' && c<='Z')) {
                 res.append(c);
                 continue;
