@@ -48,9 +48,9 @@ public class EvaluationOfPostfixExpression {
             }
            else
             {
-                int first=stack.pop();
+                int first=stack.pop()-'';
                 int second=stack.pop();
-                
+
             }
         }
     }
