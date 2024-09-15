@@ -17,13 +17,13 @@ public class InfixToPostfix {
         newNode.next=head;
         head=newNode;
     }
-    private int top()
+    private char top()
     {
         return head.value;
     }
-    private int pop()
+    private char pop()
     {
-        int res=head.value;
+        char res=head.value;
         head=head.next;
         return res;
     }
@@ -68,11 +68,27 @@ public class InfixToPostfix {
                     }
                     res.append(stack.pop());
                 }
+                continue;
             }
             if((c>='a' && c<='z')|| (c>='A' && c<='Z')) {
                 res.append(c);
                 continue;
             }
+            int tp=stack.isEmpty()?-1:getPrecendence(stack.top());
+            if(tp==-1) {
+                stack.push(c);
+                continue;
+            }
+            int  currCharP=getPrecendence(c);
+            if(tp==1 && currCharP==1)
+            {
+                res.append(stack.pop());
+            }
+            else if(tp==1 && currCharP==1)
+            {
+
+            }
+
 
         }
     }
