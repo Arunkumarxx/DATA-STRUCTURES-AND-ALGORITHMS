@@ -50,7 +50,20 @@ public class EvaluationOfPostfixExpression {
             {
                 int first=stack.pop()-48;
                 int second=stack.pop()-48;
-                
+                if(c=='-')
+                {
+                    stack.push();
+                }
+                else if(c=='+')
+                {
+
+                }else if(c=='*')
+                {
+
+                }else if(c=='/')
+                {
+
+                }
             }
         }
     }
