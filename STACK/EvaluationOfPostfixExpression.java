@@ -44,11 +44,13 @@ public class EvaluationOfPostfixExpression {
             char c=str.charAt(i);
             if(Character.isDigit(c))
             {
-                
+                stack.push(c);
             }
-           else if(c=='*'|| c=='/'||c=='+'|| c=='-')
+           else
             {
-
+                int first=stack.pop();
+                int second=stack.pop();
+                
             }
         }
     }
