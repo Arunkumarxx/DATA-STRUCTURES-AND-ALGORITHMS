@@ -2,106 +2,86 @@ package STACK;
 
 public class InfixToPostfix {
     private StackNode head;
+
     private class StackNode {
         char value;
         StackNode next;
-        StackNode(char value)
-        {
-            this.value=value;
-            this.next=null;
+        StackNode(char value) {
+            this.value = value;
+            this.next = null;
         }
     }
-    private void push(char value)
-    {
-        StackNode newNode =new StackNode(value);
-        newNode.next=head;
-        head=newNode;
+
+    private void push(char value) {
+        StackNode newNode = new StackNode(value);
+        newNode.next = head;
+        head = newNode;
     }
-    private char top()
-    {
-        return head.value;
+
+    private char top() {
+        return head != null ? head.value : '\0';
     }
-    private char pop()
-    {
-        char res=head.value;
-        head=head.next;
+
+    private char pop() {
+        if (head == null) return '\0';
+        char res = head.value;
+        head = head.next;
         return res;
     }
-    private boolean isEmpty()
-    {
-        return head==null;
+
+    private boolean isEmpty() {
+        return head == null;
     }
-    private void clear()
-    {
-        head=null;
-    }
-    private void print()
-    {
-        StackNode temp =head;
-        while(temp!=null)
-        {
-            System.out.println("|"+temp.value+"|");
-            temp=temp.next;
+
+    private static int getPrecedence(char c) {
+        switch (c) {
+            case '^': return 3;
+            case '*':
+            case '/': return 2;
+            case '+':
+            case '-': return 1;
+            default: return -1;
         }
     }
+
+    private static boolean isRightAssociative(char c) {
+        return c == '^';
+    }
+
+    private static boolean isOperator(char c) {
+        return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+    }
+
     public static void main(String[] args) {
-        InfixToPostfix stack =new InfixToPostfix();
-        String str ="((A+B)-C*(D/E))+F";
-        int n=str.length();
-        StringBuilder res =new StringBuilder();
-        for(int i=0; i<n;++i)
-        {
-            char c=str.charAt(i);
-            if(c=='(')
-            {
+        InfixToPostfix stack = new InfixToPostfix();
+        String str = "((A+B)-C*(D/E))+F";
+        int n = str.length();
+        StringBuilder res = new StringBuilder();
+
+        for (int i = 0; i < n; ++i) {
+            char c = str.charAt(i);
+            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+                res.append(c);
+            } else if (c == '(') {
                 stack.push(c);
-                continue;
-            }
-            if(c==')')
-            {
-                while(!stack.isEmpty())
-                {
-                    if(stack.top()==')')
-                    {
-                        stack.pop();
-                        break;
-                    }
+            } else if (c == ')') {
+                while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
-                continue;
-            }
-            if((c>='a' && c<='z')|| (c>='A' && c<='Z')) {
-                res.append(c);
-                continue;
-            }
-            int tp=stack.isEmpty()?-1:getPrecendence(stack.top());
-            if(tp==-1) {
+                stack.pop();
+            } else if (isOperator(c)) {
+                while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
+                        (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
+                    res.append(stack.pop());
+                }
                 stack.push(c);
-                continue;
             }
-            int  currCharP=getPrecendence(c);
-            if(tp==1 && currCharP==1)
-            {
-                res.append(stack.pop());
-            }
-            else if(tp==1 && currCharP==1)
-            {
-
-            }
-
-
         }
-    }
-    private static int getPrecendence(char c)
-    {
-        switch (c)
-        {
-            case '^':return 1;
-            case '*':return 2;
-            case '/':return 2;
-            case '+':return 3;
-            case '-':return 3;
 
+        while (!stack.isEmpty()) {
+            res.append(stack.pop());
         }
+
+        System.out.println("Postfix Expression: " + res.toString());
     }
 }
