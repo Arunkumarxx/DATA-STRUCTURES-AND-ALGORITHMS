@@ -48,8 +48,8 @@ public class EvaluationOfPostfixExpression {
             }
            else
             {
-                int first=stack.pop()-48;
-                int second=stack.pop()-48;
+                int first=stack.pop();
+                int second=stack.pop();
                 if(c=='-')
                 {
                     stack.push(second-first);
