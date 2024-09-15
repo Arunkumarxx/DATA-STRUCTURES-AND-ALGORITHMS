@@ -27,8 +27,26 @@ public class InfixToPostfix {
         head=head.next;
         return res;
     }
+    private void clear()
+    {
+        head=null;
+    }
+    private void print()
+    {
+        StackNode temp =head;
+        while(temp!=null)
+        {
+            System.out.print(temp.value+" ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
-
+        InfixToPostfix stack =new InfixToPostfix();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.pop();
+        stack.print();
     }
 
 }
