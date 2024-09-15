@@ -59,7 +59,15 @@ public class InfixToPostfix {
             }
             if(c==')')
             {
-                while(!stack.isEmpty() &&)
+                while(!stack.isEmpty())
+                {
+                    if(stack.top()==')')
+                    {
+                        stack.pop();
+                        break;
+                    }
+                    res.append(stack.pop());
+                }
             }
             if((c>='a' && c<='z')|| (c>='A' && c<='Z')) {
                 res.append(c);
