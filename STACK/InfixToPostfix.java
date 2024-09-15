@@ -57,8 +57,13 @@ public class InfixToPostfix {
                 stack.push(c);
                 continue;
             }
-            if(c>='a' && c<='z')
+            while(!stack.isEmpty() &&stack.top()!='(')
+                res.append(stack.pop());
+            if((c>='a' && c<='z')|| (c>='A' && c<='Z')) {
                 res.append(c);
+                continue;
+            }
+
         }
     }
     private static int getPrecendence(char c)
