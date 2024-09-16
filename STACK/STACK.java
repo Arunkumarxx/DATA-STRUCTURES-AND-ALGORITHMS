@@ -46,13 +46,9 @@ public class STACK {
     }
 
     public static void main(String[] args) {
-        STACK mystack =new STACK();
-        mystack.push(1);
-        mystack.push(2);
-        mystack.push(3);
-        mystack.pop();
-        mystack.print();
-        int [] arr ={};
+        STACK stack =new STACK();
+        int [] arr ={10, 20, 30, 50, 10, 70, 30};
+        
         int n= arr.length;;
         long res[]= new long[n];
         for(int i=n-1; i>=0; --i)
