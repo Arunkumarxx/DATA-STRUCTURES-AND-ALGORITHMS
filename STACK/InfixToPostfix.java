@@ -67,7 +67,7 @@ public class InfixToPostfix {
             else newString.append(rev.charAt(i));
         }
         System.out.println(newString);
-        str=rev.toString();
+        str=newString.toString();
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
