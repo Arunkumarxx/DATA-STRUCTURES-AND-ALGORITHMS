@@ -57,7 +57,6 @@ public class InfixToPrefix {
         String str = "(A - B/C) * (A/K - L)";
         int n = str.length();
 
-        // Step 1: Reverse the infix expression
         StringBuilder rev = new StringBuilder();
         for (int i = n - 1; i >= 0; --i) {
             char c = str.charAt(i);
@@ -70,7 +69,7 @@ public class InfixToPrefix {
         }
         str = rev.toString();
 
-        // Step 2: Convert the modified expression to postfix
+
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < str.length(); ++i) {
             char c = str.charAt(i);
@@ -83,7 +82,7 @@ public class InfixToPrefix {
                 while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
-                stack.pop(); // Pop the '('
+                stack.pop();
             } else if (isOperator(c)) {
                 while (!stack.isEmpty() && getPrecedence(stack.top()) > getPrecedence(c)) {
                     res.append(stack.pop());
@@ -96,7 +95,7 @@ public class InfixToPrefix {
             res.append(stack.pop());
         }
 
-        // Step 3: Reverse the postfix result to get prefix
+
         System.out.println("Prefix Expression: " + res.reverse().toString());
     }
 }
