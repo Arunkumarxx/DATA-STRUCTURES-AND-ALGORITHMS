@@ -54,18 +54,13 @@ public class InfixToPostfix {
 
     public static void main(String[] args) {
         InfixToPostfix stack = new InfixToPostfix();
-        String str = "(A – B/C) * (A/K-L)";
-        StringBuilder rev=new StringBuilder(str);
-        rev.reverse();
-        for(int i=0;i<rev.length();++i)
-        System.out.println(rev);
-        str=rev.toString();
+        String str = "((A+B)-C*(D/E))+F";
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
         for (int i = 0; i < n; ++i) {
             char c = str.charAt(i);
-            if (Character.isLetterOrDigit(c)) {
+            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 res.append(c);
             } else if (c == '(') {
                 stack.push(c);
@@ -87,7 +82,6 @@ public class InfixToPostfix {
             res.append(stack.pop());
         }
 
-        System.out.println("Postfix Expression: " + res.reverse());
-
+        System.out.println("Postfix Expression: " + res.toString());
     }
 }
