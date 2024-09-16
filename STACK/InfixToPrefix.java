@@ -51,11 +51,14 @@ public class InfixToPrefix {
     private static boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
     }
+
     public static void main(String[] args) {
         InfixToPrefix stack = new InfixToPrefix();
-        String str = " (A – B/C) * (A/K-L)";
+        String str = "A * B + C / D";
         int n = str.length();
         StringBuilder rev = new StringBuilder();
+
+        // Reverse the input string and swap parentheses
         for (int i = n - 1; i >= 0; --i) {
             char c = str.charAt(i);
             if (c == '(')
@@ -65,28 +68,24 @@ public class InfixToPrefix {
             else
                 rev.append(c);
         }
+
         str = rev.toString();
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i<n;++i) {
+
+        // Convert the reversed infix to a postfix expression
+        for (int i = 0; i < n; ++i) {
             char c = str.charAt(i);
 
             if (Character.isLetterOrDigit(c)) {
                 res.append(c);
-            }
-
-            else if (c == '(') {
+            } else if (c == '(') {
                 stack.push(c);
-            }
-
-            else if (c == ')') {
+            } else if (c == ')') {
                 while (!stack.isEmpty() && stack.top() != '(') {
-                    res.insert(0, stack.pop());
-
+                    res.append(stack.pop());
                 }
-                stack.pop();
-            }
-
-            else if (isOperator(c)) {
+                stack.pop(); // Pop the '('
+            } else if (isOperator(c)) {
                 while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
                         (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
                     res.append(stack.pop());
@@ -95,12 +94,5 @@ public class InfixToPrefix {
             }
         }
 
-
-        while (!stack.isEmpty()) {
-            res.append(stack.pop());
-        }
-
-        System.out.println("Postfix Expression: " + res.reverse().toString());
-    }
-
-}
+        // Pop the remaining operators from the stack
+        while (!stack.isEmpty())
