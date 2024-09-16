@@ -53,11 +53,11 @@ public class InfixToPrefix {
     }
     public static void main(String[] args) {
         InfixToPrefix stack  =new InfixToPrefix();
-        String str = "h^m^q^(7-4)";
+        String str = "A * B + C / D";
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = n-1; i > 0;--i) {
             char c = str.charAt(i);
 
             if (Character.isLetterOrDigit(c)) {
