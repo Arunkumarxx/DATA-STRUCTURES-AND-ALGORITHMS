@@ -60,11 +60,11 @@ public class InfixToPostfix {
         StringBuilder newString=new StringBuilder();
         for(int i=0; i<str.length();++i)
         {
-            if(str.charAt(i)=='(')
+            if(rev.charAt(i)=='(')
                 newString.append(')');
-            else if(str.charAt(i)==')')
+            else if(rev.charAt(i)==')')
                 newString.append('(');
-            else newString.append(str.charAt(i));
+            else newString.append(rev.charAt(i));
         }
         System.out.println(newString);
         str=rev.toString();
