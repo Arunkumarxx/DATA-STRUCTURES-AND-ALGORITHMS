@@ -54,7 +54,7 @@ public class InfixToPrefix {
 
     public static void main(String[] args) {
         InfixToPrefix stack = new InfixToPrefix();
-        String str = "(A – B/C) * (A/K-L)";
+        String str = "(A - B/C) * (A/K - L)";
         int n = str.length();
 
         // Step 1: Reverse the infix expression
@@ -83,10 +83,9 @@ public class InfixToPrefix {
                 while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
-                stack.pop();
+                stack.pop(); // Pop the '('
             } else if (isOperator(c)) {
-                while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
-                        (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
+                while (!stack.isEmpty() && getPrecedence(stack.top()) > getPrecedence(c)) {
                     res.append(stack.pop());
                 }
                 stack.push(c);
