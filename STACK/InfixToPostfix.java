@@ -54,7 +54,7 @@ public class InfixToPostfix {
 
     public static void main(String[] args) {
         InfixToPostfix stack = new InfixToPostfix();
-        String str = " A * B + C / D";
+        String str = "(A – B/C) * (A/K-L)";
         StringBuilder rev=new StringBuilder(str);
         rev.reverse();
         str=rev.toString();
