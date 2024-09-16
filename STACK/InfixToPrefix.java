@@ -54,7 +54,7 @@ public class InfixToPrefix {
 
     public static void main(String[] args) {
         InfixToPrefix stack = new InfixToPrefix();
-        String str = "A * B + C / D";
+        String str = " (A – B/C) * (A/K-L)";
         int n = str.length();
         StringBuilder rev = new StringBuilder();
 
