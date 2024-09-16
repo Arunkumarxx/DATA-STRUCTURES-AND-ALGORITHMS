@@ -32,6 +32,7 @@ public class InfixToPrefix {
     private boolean isEmpty() {
         return head == null;
     }
+
     private static int getPrecedence(char c) {
         switch (c) {
             case '^': return 3;
@@ -52,22 +53,29 @@ public class InfixToPrefix {
     }
     public static void main(String[] args) {
         InfixToPrefix stack  =new InfixToPrefix();
-        String str ="(A – B/C) * (A/K-L)";
+        String str = "h^m^q^(7-4)";
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
-        for (int i = n-1; i >=0; --i) {
+        for (int i = 0; i < n; ++i) {
             char c = str.charAt(i);
-            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+
+            if (Character.isLetterOrDigit(c)) {
                 res.append(c);
-            } else if (c == '(') {
+            }
+
+            else if (c == '(') {
                 stack.push(c);
-            } else if (c == ')') {
+            }
+
+            else if (c == ')') {
                 while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
                 stack.pop();
-            } else if (isOperator(c)) {
+            }
+
+            else if (isOperator(c)) {
                 while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
                         (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
                     res.append(stack.pop());
@@ -75,6 +83,7 @@ public class InfixToPrefix {
                 stack.push(c);
             }
         }
+
 
         while (!stack.isEmpty()) {
             res.append(stack.pop());
