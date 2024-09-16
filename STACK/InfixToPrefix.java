@@ -59,11 +59,13 @@ public class InfixToPrefix {
         for(int i=n-1; i>=0;--i)
         {
             char c =str.charAt(i);
-            if(c=='(')
+            if (c == '(')
                 rev.append(')');
-                else if(c==')')
-                    rev.append('(');
-              else  rev.append(c);
+            else if (c == ')')
+                rev.append('(');
+            else
+                rev.append(c);
+
         }
         str=rev.toString();
         StringBuilder res =new StringBuilder();
