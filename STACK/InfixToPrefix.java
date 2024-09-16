@@ -52,10 +52,10 @@ public class InfixToPrefix {
         return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
     }
     public static void main(String[] args) {
-        InfixToPrefix stack  =new InfixToPrefix();
+        InfixToPrefix stack = new InfixToPrefix();
         String str = "A * B + C / D";
-        int n=str.length();
-        StringBuilder rev =new StringBuilder();
+        int n = str.length();
+        StringBuilder rev = new StringBuilder();
         for(int i=n-1; i>=0;--i)
         {
             char c =str.charAt(i);
