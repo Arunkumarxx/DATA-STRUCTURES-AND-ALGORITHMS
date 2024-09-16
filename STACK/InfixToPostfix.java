@@ -57,6 +57,7 @@ public class InfixToPostfix {
         String str = "(A – B/C) * (A/K-L)";
         StringBuilder rev=new StringBuilder(str);
         rev.reverse();
+        System.out.println(rev);
         str=rev.toString();
         int n = str.length();
         StringBuilder res = new StringBuilder();
