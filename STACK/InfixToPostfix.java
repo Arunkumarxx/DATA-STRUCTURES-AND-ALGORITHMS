@@ -60,7 +60,7 @@ public class InfixToPostfix {
 
         for (int i = 0; i < n; ++i) {
             char c = str.charAt(i);
-            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+            if (Character.isAlphabetic(c)) {
                 res.append(c);
             } else if (c == '(') {
                 stack.push(c);
