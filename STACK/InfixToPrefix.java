@@ -60,7 +60,7 @@ public class InfixToPrefix {
         {
             char c =str.charAt(i);
             if(c=='(')
-                rev.append('(');
+                rev.append('()');
                 else if(c==')')
                     rev.append('(');
               else  rev.append(str.charAt(i));
