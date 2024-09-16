@@ -85,7 +85,7 @@ public class InfixToPostfix {
             res.append(stack.pop());
         }
 
-        System.out.println("Postfix Expression: " + res.re);
-        
+        System.out.println("Postfix Expression: " + res.reverse());
+
     }
 }
