@@ -62,7 +62,7 @@ public class InfixToPostfix {
         {
             if(str.charAt(i)=='(')
                 newString.append(')');
-            if(str.charAt(i)==')')
+            else if(str.charAt(i)==')')
                 newString.append('(');
             else newString.append(str.charAt(i));
         }
