@@ -65,8 +65,8 @@ public class InfixToPrefix {
             else
                 rev.append(c);
         }
-        str=rev.toString();
-        StringBuilder res =new StringBuilder();
+        str = rev.toString();
+        StringBuilder res = new StringBuilder();
         for (int i = 0; i<n;++i) {
             char c = str.charAt(i);
 
