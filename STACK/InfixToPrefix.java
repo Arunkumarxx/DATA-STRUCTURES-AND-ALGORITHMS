@@ -56,16 +56,14 @@ public class InfixToPrefix {
         String str = "A * B + C / D";
         int n = str.length();
         StringBuilder rev = new StringBuilder();
-        for(int i=n-1; i>=0;--i)
-        {
-            char c =str.charAt(i);
+        for (int i = n - 1; i >= 0; --i) {
+            char c = str.charAt(i);
             if (c == '(')
                 rev.append(')');
             else if (c == ')')
                 rev.append('(');
             else
                 rev.append(c);
-
         }
         str=rev.toString();
         StringBuilder res =new StringBuilder();
