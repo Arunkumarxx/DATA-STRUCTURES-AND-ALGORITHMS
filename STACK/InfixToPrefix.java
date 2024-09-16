@@ -51,7 +51,9 @@ public class InfixToPrefix {
         return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
     }
     public static void main(String[] args) {
-
+        InfixToPrefix stack  =new InfixToPrefix();
+        String str ="(A – B/C) * (A/K-L)";
+        
     }
 
 }
