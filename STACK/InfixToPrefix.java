@@ -54,11 +54,11 @@ public class InfixToPrefix {
 
     public static void main(String[] args) {
         InfixToPrefix stack = new InfixToPrefix();
-        String str = " (A – B/C) * (A/K-L)";
+        String str = "(A – B/C) * (A/K-L)";
         int n = str.length();
-        StringBuilder rev = new StringBuilder();
 
-        // Reverse the input string and swap parentheses
+        // Step 1: Reverse the infix expression
+        StringBuilder rev = new StringBuilder();
         for (int i = n - 1; i >= 0; --i) {
             char c = str.charAt(i);
             if (c == '(')
@@ -68,40 +68,36 @@ public class InfixToPrefix {
             else
                 rev.append(c);
         }
-
         str = rev.toString();
-        StringBuilder res = new StringBuilder();
 
-        // Convert the reversed infix to a postfix expression
-        for (int i = 0; i < n; ++i) {
+        // Step 2: Convert the modified expression to postfix
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < str.length(); ++i) {
             char c = str.charAt(i);
 
             if (Character.isLetterOrDigit(c)) {
-                res.append(c); // Add operands to the result
+                res.append(c);
             } else if (c == '(') {
-                stack.push(c); // Push '(' to the stack
+                stack.push(c);
             } else if (c == ')') {
-                // Pop until '(' is found
                 while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
-                stack.pop(); // Pop the '('
+                stack.pop();
             } else if (isOperator(c)) {
-                // Pop higher or equal precedence operators from the stack
                 while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
                         (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
                     res.append(stack.pop());
                 }
-                stack.push(c); // Push the current operator
+                stack.push(c);
             }
         }
 
-        // Pop the remaining operators from the stack
         while (!stack.isEmpty()) {
             res.append(stack.pop());
         }
 
-        // Reverse the result to get the prefix expression
+        // Step 3: Reverse the postfix result to get prefix
         System.out.println("Prefix Expression: " + res.reverse().toString());
     }
 }
