@@ -80,7 +80,8 @@ public class InfixToPrefix {
 
             else if (c == ')') {
                 while (!stack.isEmpty() && stack.top() != '(') {
-                    res.append(stack.pop());
+                    res.insert(0, stack.pop());
+
                 }
                 stack.pop();
             }
