@@ -63,8 +63,9 @@ public class InfixToPrefix {
                 res.append('(');
                 else if(c==')')
                     res.append('(');
-                res.append(str.charAt(i));
+              else  res.append(str.charAt(i));
         }
+        str=res.toString();
         for (int i = 0; i<n;++i) {
             char c = str.charAt(i);
 
