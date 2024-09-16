@@ -54,7 +54,7 @@ public class InfixToPostfix {
 
     public static void main(String[] args) {
         InfixToPostfix stack = new InfixToPostfix();
-        String str = "((A+B)-C*(D/E))+F";
+        String str = "(A – B/C) * (A/K-L)";
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
