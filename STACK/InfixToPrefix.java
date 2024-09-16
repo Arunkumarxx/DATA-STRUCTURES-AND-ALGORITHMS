@@ -54,13 +54,22 @@ public class InfixToPrefix {
     public static void main(String[] args) {
         InfixToPrefix stack  =new InfixToPrefix();
         String str = "(A – B/C) * (A/K-L)";
-
-
-        for (int i = n-1; i > 0;--i) {
+        int n=str.length();
+        StringBuilder res =new StringBuilder();
+        for(int i=n-1; i>=0;--i)
+        {
+            char c =str.charAt(i);
+            if(c=='(')
+                res.append('(');
+                else if(c==')')
+                    res.append('(');
+                res.append(str.charAt(i));
+        }
+        for (int i = 0; i<n;++i) {
             char c = str.charAt(i);
 
             if (Character.isLetterOrDigit(c)) {
-                res.insert(0,c);
+                res.append(c);
             }
 
             else if (c == '(') {
