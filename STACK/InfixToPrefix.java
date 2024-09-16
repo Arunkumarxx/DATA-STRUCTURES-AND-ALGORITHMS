@@ -32,7 +32,24 @@ public class InfixToPrefix {
     private boolean isEmpty() {
         return head == null;
     }
+    private static int getPrecedence(char c) {
+        switch (c) {
+            case '^': return 3;
+            case '*':
+            case '/': return 2;
+            case '+':
+            case '-': return 1;
+            default: return -1;
+        }
+    }
 
+    private static boolean isRightAssociative(char c) {
+        return c == '^';
+    }
+
+    private static boolean isOperator(char c) {
+        return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+    }
     public static void main(String[] args) {
 
     }
