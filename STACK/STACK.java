@@ -44,6 +44,7 @@ public class STACK {
         for(int i=size-1;i>=0;--i)
             System.out.println("|"+arr[i]+"|");
     }
+
     public static void main(String[] args) {
         STACK mystack =new STACK();
         mystack.push(1);
@@ -51,5 +52,16 @@ public class STACK {
         mystack.push(3);
         mystack.pop();
         mystack.print();
+        int [] arr ={};
+        int n= arr.length;;
+        long res[]= new long[n];
+        for(int i=n-1; i>=0; --i)
+        {
+            while(!stack.isEmpty() && arr[(int)stack.top()]>=arr[i])
+                stack.pop();
+            res[i]=stack.isEmpty()?n:stack.top();
+            stack.push(i);
+        }
+        return res;
     }
 }
