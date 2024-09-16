@@ -54,7 +54,7 @@ public class InfixToPrefix {
 
     public static void main(String[] args) {
         InfixToPrefix stack = new InfixToPrefix();
-        String str = " (A – B/C) * (A/K-L)";
+        String str = "A * B + C / D";
         int n = str.length();
         StringBuilder rev = new StringBuilder();
 
@@ -77,22 +77,31 @@ public class InfixToPrefix {
             char c = str.charAt(i);
 
             if (Character.isLetterOrDigit(c)) {
-                res.append(c);
+                res.append(c); // Add operands to the result
             } else if (c == '(') {
-                stack.push(c);
+                stack.push(c); // Push '(' to the stack
             } else if (c == ')') {
+                // Pop until '(' is found
                 while (!stack.isEmpty() && stack.top() != '(') {
                     res.append(stack.pop());
                 }
                 stack.pop(); // Pop the '('
             } else if (isOperator(c)) {
+                // Pop higher or equal precedence operators from the stack
                 while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
                         (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
                     res.append(stack.pop());
                 }
-                stack.push(c);
+                stack.push(c); // Push the current operator
             }
         }
 
         // Pop the remaining operators from the stack
-        while (!stack.isEmpty())
+        while (!stack.isEmpty()) {
+            res.append(stack.pop());
+        }
+
+        // Reverse the result to get the prefix expression
+        System.out.println("Prefix Expression: " + res.reverse().toString());
+    }
+}
