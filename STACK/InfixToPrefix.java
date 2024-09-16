@@ -63,7 +63,7 @@ public class InfixToPrefix {
                 rev.append(')');
                 else if(c==')')
                     rev.append('(');
-              else  rev.append(str.charAt(i));
+              else  rev.append(c);
         }
         str=rev.toString();
         StringBuilder res =new StringBuilder();
