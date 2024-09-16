@@ -80,7 +80,7 @@ public class InfixToPrefix {
 
             else if (c == ')') {
                 while (!stack.isEmpty() && stack.top() != '(') {
-                    res.insert(0,stack.pop());
+                    res.append(stack.pop());
                 }
                 stack.pop();
             }
@@ -88,7 +88,7 @@ public class InfixToPrefix {
             else if (isOperator(c)) {
                 while (!stack.isEmpty() && getPrecedence(stack.top()) >= getPrecedence(c) &&
                         (!isRightAssociative(c) || getPrecedence(stack.top()) == getPrecedence(c))) {
-                    res.insert(0,stack.pop());
+                    res.append(stack.pop());
                 }
                 stack.push(c);
             }
@@ -96,7 +96,7 @@ public class InfixToPrefix {
 
 
         while (!stack.isEmpty()) {
-            res.insert(0,stack.pop());
+            res.append(stack.pop());
         }
 
         System.out.println("Postfix Expression: " + res.toString());
