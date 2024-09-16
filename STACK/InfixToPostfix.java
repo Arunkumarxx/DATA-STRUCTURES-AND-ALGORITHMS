@@ -58,7 +58,7 @@ public class InfixToPostfix {
         int n = str.length();
         StringBuilder res = new StringBuilder();
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = n-1; i > 0; --i) {
             char c = str.charAt(i);
             if (Character.isAlphabetic(c)) {
                 res.append(c);
