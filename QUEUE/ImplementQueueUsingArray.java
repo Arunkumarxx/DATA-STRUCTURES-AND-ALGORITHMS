@@ -1,2 +1,8 @@
-package QUEUE;public class ImplementQueueUsingArray {
+package QUEUE;
+
+public class ImplementQueueUsingArray {
+    
+    public static void main(String[] args) {
+
+    }
 }
