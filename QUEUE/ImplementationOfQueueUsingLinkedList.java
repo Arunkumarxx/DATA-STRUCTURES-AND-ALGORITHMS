@@ -6,34 +6,34 @@ public class ImplementationOfQueueUsingLinkedList {
         QueueNode next;
 
         QueueNode(int a) {
-            data = a;
-            next = null;
+            data=a;
+            next=null;
         }
     }
 
     QueueNode front, rear;
 
     ImplementationOfQueueUsingLinkedList() {
-        this.front = null;
-        this.rear = null;
+        this.front=null;
+        this.rear=null;
     }
 
     void push(int a) {
-        QueueNode newNode = new QueueNode(a);
-        if (rear == null) {
-            front = rear = newNode;
+        QueueNode newNode=new QueueNode(a);
+        if (rear==null) {
+            front=rear=newNode;
         } else {
-            rear.next = newNode;
-            rear = newNode;
+            rear.next=newNode;
+            rear=newNode;
         }
     }
 
     int pop() {
-        if (front != null) {
-            int x = front.data;
-            front = front.next;
-            if (front == null) {
-                rear = null;
+        if (front!=null) {
+            int x=front.data;
+            front=front.next;
+            if (front==null) {
+                rear=null;
             }
             return x;
         }
@@ -41,11 +41,11 @@ public class ImplementationOfQueueUsingLinkedList {
     }
 
     boolean isEmpty() {
-        return front == null;
+        return front==null;
     }
 
     public static void main(String[] args) {
-        ImplementationOfQueueUsingLinkedList queue = new ImplementationOfQueueUsingLinkedList();
+        ImplementationOfQueueUsingLinkedList queue=new ImplementationOfQueueUsingLinkedList();
 
         queue.push(10);
         queue.push(20);
