@@ -1,6 +1,16 @@
 package QUEUE;
 
 public class ImplementationOfQueueUsingLinkedList {
+    class QueueNode
+    {
+        int data;
+        QueueNode next;
+        QueueNode(int a)
+        {
+            data = a;
+            next = null;
+        }
+    }
     QueueNode front, rear;
     MyQueue()
     {
