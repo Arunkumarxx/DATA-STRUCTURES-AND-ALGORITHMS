@@ -9,11 +9,11 @@ public class ImplementingQueueUsingStack {
 
     private void push(int value)
     {
-
+        stack1.push(value);
     }
     private int pop()
     {
-        
+
     }
 
 
