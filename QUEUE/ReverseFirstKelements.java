@@ -52,22 +52,37 @@ public class ReverseFirstKelements {
         }
     }
     public static void main(String[] args) {
-        ReverseFirstKelements queue =new ReverseFirstKelements();
-        int k=3;
-        for(int i=0; i<=5; ++i)
-            queue.add(i); // add ele to q
+        ReverseFirstKelements queue = new ReverseFirstKelements();
+        int k = 3; // Number of elements to reverse
 
+        // Add elements to the queue
+        for (int i = 1; i <= 5; i++) {
+            queue.add(i);
+        }
+
+        System.out.println("Original Queue:");
+        queue.print(); // Print the original queue
+
+        // Step 1: Reverse the first K elements
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < k && !queue.isEmpty(); i++) {
             stack.push(queue.poll());
         }
-        ReverseFirstKelements result =new ReverseFirstKelements();
-        while(!stack.isEmpty())
+
+        // Step 2: Create a new queue and add the reversed elements
+        ReverseFirstKelements result = new ReverseFirstKelements();
+        while (!stack.isEmpty()) {
             result.add(stack.pop());
-        while(queue.isEmpty())
+        }
+
+        // Step 3: Add the remaining elements from the original queue to the result queue
+        while (!queue.isEmpty()) {
             result.add(queue.poll());
-        queue=result;
-        queue.print();
+        }
+
+        // Print the final queue after reversing the first K elements
+        System.out.println("Queue after reversing first " + k + " elements:");
+        result.print();
     }
 
 }
