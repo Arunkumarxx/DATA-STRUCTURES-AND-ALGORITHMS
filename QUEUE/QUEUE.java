@@ -10,8 +10,9 @@ public class QUEUE {
     {
         if(n==0)
             return;
-        System.out.println(n%2);
+        int temp=n%2;
         n=n/2;
         recursive(n/2);
+        System.out.println(temp);
     }
 }
