@@ -72,7 +72,7 @@ public class ReverseFirstKelements {
         while (!stack.isEmpty()) {
             result.add(stack.pop());
         }
-
+        System.out.println("After reverse:");
         while (!queue.isEmpty()) {
             result.add(queue.poll());
         }
