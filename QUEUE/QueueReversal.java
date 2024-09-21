@@ -38,12 +38,25 @@ public class QueueReversal {
     {
         return rear==null;
     }
+    private  void revereseQueue(QueueReversal queue)
+    {
 
+        if(queue.isEmpty())
+            return ;
+        Integer ele=queue.poll();
+        revereseQueue(queue);
+        queue.add(ele);
+    }
     public static void main(String[] args) {
         QueueReversal queue =new QueueReversal();
         queue.add(1);
         queue.add(10);
         queue.add(20);
-        revereseQueue(q);
+       queue.revereseQueue(queue);
+       while(queue!=null)
+       {
+           System.out.println(queue.front.data+" ");
+           queue.front= queue.front.next;
+       }
     }
 }
