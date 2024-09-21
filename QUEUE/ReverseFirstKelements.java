@@ -66,7 +66,7 @@ public class ReverseFirstKelements {
         for (int i = 0; i < k && !queue.isEmpty(); i++) {
             stack.push(queue.poll());
         }
-        
+
         ReverseFirstKelements result = new ReverseFirstKelements();
         while (!stack.isEmpty()) {
             result.add(stack.pop());
@@ -76,7 +76,7 @@ public class ReverseFirstKelements {
             result.add(queue.poll());
         }
 
-        System.out.println("Queue after reversing first " + k + " elements:");
+
         result.print();
     }
 
