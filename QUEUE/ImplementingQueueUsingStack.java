@@ -1,6 +1,7 @@
 package QUEUE;
 
 
+import java.util.InputMismatchException;
 import java.util.Stack;
 
 public class ImplementingQueueUsingStack {
@@ -27,7 +28,8 @@ public class ImplementingQueueUsingStack {
 
 
     public static void main(String[] args) {
-
+        ImplementingQueueUsingStack Queue =new ImplementingQueueUsingStack();
+        Queue.enqueue();
     }
 
 }
