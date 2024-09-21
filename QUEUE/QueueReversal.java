@@ -32,6 +32,8 @@ public class QueueReversal {
             return -1;
         int x=front.data;
         front= front.next;
+        if(front==null)
+            rear=null;
         return x;
     }
     private boolean isEmpty()
