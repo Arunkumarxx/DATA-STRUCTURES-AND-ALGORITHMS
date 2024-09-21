@@ -41,6 +41,10 @@ public class ReverseFirstKelements {
         return rear==null;
     }
     public static void main(String[] args) {
+        ReverseFirstKelements queue =new ReverseFirstKelements();
+        queue.add(1);
+        queue.add(10);
+        queue.add(20);
         
     }
 
