@@ -59,7 +59,7 @@ public class ReverseFirstKelements {
             result.add(stack.pop());
         while(queue.isEmpty())
             result.add(queue.poll());
-        
+
     }
 
 }
