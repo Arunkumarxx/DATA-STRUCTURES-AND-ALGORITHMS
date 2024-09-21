@@ -7,12 +7,14 @@ public class ImplementingQueueUsingStack {
     Stack<Integer> stack1 =new Stack<>();
     Stack<Integer> stack2= new Stack<>();
 
-    private void push(int value)
+    private void enqueue(int value)
     {
         stack1.push(value);
     }
-    private int pop()
+    private int dequeue()
     {
+        if(stack1.isEmpty() && stack2.isEmpty())
+            return -1;
         if(stack2.isEmpty())
         {
             while(!stack1.isEmpty())
