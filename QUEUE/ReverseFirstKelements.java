@@ -48,7 +48,7 @@ public class ReverseFirstKelements {
             queue.add(1); // add ele to q
 
         Stack<Integer> stack =new Stack<>();
-        
+
     }
 
 }
