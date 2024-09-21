@@ -13,7 +13,7 @@ public class QueueReversal {
             this.next=null;
         }
     }
-    private void push(int value)
+    private void add(int value)
     {
         QueueNode newNode =new QueueNode(value);
         if(rear==null)
@@ -22,12 +22,25 @@ public class QueueReversal {
         }
         else
         {
-            newNode.next
+            rear.next=newNode;
+            rear=newNode;
         }
+    }
+    private int poll()
+    {
+        if(isEmpty())
+            return -1;
+        int x=front.data;
+        front= front.next;
+        return x;
+    }
+    private boolean isEmpty()
+    {
+        return rear==null;
     }
 
     public static void main(String[] args) {
-
+        
     }
 
 }
