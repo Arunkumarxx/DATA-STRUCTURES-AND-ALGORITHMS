@@ -2,7 +2,7 @@ package QUEUE;
 public class QUEUE {
 
     public static void main(String[] args) {
-        int n=1;
+        int n=10;
         QUEUE q =new QUEUE();
         q.recursive(n);
     }
