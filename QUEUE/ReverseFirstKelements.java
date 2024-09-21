@@ -62,6 +62,7 @@ public class ReverseFirstKelements {
 
         System.out.println("Original Queue:");
         queue.print();
+        System.out.println();
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < k && !queue.isEmpty(); i++) {
             stack.push(queue.poll());
