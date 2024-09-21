@@ -2,7 +2,7 @@ package QUEUE;
 public class QUEUE {
     static StringBuilder res =new StringBuilder();
     public static void main(String[] args) {
-        int n=10;
+        int n=5;
         QUEUE q =new QUEUE();
         q.recursive(n);
         System.out.println(res);
