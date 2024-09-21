@@ -52,7 +52,7 @@ import java.util.Stack;
     }
 }
 
-class StackQueue extends QueueUsingLinkedList {
+non-sealed class StackQueue extends QueueUsingLinkedList {
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 
@@ -76,7 +76,6 @@ class StackQueue extends QueueUsingLinkedList {
 
     public static void main(String[] args) {
         StackQueue queue = new StackQueue();
-
         queue.add(10);
         queue.add(20);
         queue.add(30);
@@ -84,7 +83,6 @@ class StackQueue extends QueueUsingLinkedList {
         queue.print();
         System.out.println("Polled: " + queue.poll());
         queue.print();
-
         System.out.println("Queue using Two Stacks:");
         queue.Push(40);
         queue.Push(50);
