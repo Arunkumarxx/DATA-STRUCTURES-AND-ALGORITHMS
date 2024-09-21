@@ -31,8 +31,7 @@ public class ImplementingQueueUsingStack {
         Queue.enqueue(1);
         Queue.enqueue(2);
         Queue.enqueue(3);
-        Queue.dequeue(
-        System.out.println();
+        System.out.println(Queue.dequeue());
 
     }
 
