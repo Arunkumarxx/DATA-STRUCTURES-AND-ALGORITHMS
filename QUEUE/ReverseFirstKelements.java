@@ -42,6 +42,15 @@ public class ReverseFirstKelements {
     {
         return rear==null;
     }
+    private void print()
+    {
+        QueueNode temp = front;
+        while(temp!=null)
+        {
+            System.out.println(temp.data+" ");
+            temp=temp.next;
+        }
+    }
     public static void main(String[] args) {
         ReverseFirstKelements queue =new ReverseFirstKelements();
         int k=3;
@@ -59,7 +68,7 @@ public class ReverseFirstKelements {
             result.add(stack.pop());
         while(queue.isEmpty())
             result.add(queue.poll());
-
+        queue.print();;
     }
 
 }
