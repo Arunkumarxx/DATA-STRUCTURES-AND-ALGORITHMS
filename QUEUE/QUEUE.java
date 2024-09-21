@@ -3,6 +3,8 @@ public class QUEUE {
 
     public static void main(String[] args) {
         int n=5;
+        QUEUE q =new QUEUE();
+        q.recursive(n);
     }
     private void recursive(int n)
     {
