@@ -55,6 +55,10 @@ public class ReverseFirstKelements {
             --p;
         }
         ReverseFirstKelements result =new ReverseFirstKelements();
+        while(!stack.isEmpty())
+            result.add(stack.pop());
+        while(queue.isEmpty())
+            result.add(queue.poll());
         
     }
 
