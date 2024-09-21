@@ -41,7 +41,7 @@ public class ReverseFirstKelements {
         return rear==null;
     }
     public static void main(String[] args) {
-
+        
     }
 
 }
