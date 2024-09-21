@@ -56,7 +56,7 @@ public class ReverseFirstKelements {
         int k=3;
         int p=3;
         for(int i=0; i<=5; ++i)
-            queue.add(1); // add ele to q
+            queue.add(i); // add ele to q
 
         Stack<Integer> stack =new Stack<>();
         while(!queue.isEmpty()&& p>=0) {
