@@ -45,12 +45,16 @@ public class ReverseFirstKelements {
     public static void main(String[] args) {
         ReverseFirstKelements queue =new ReverseFirstKelements();
         int k=3;
+        int p=3;
         for(int i=0; i<=5; ++i)
             queue.add(1); // add ele to q
 
         Stack<Integer> stack =new Stack<>();
-        while(!queue.isEmpty()&& k>=0)
+        while(!queue.isEmpty()&& p>=0) {
             stack.push(queue.poll());
+            --p;
+        }
+        ReverseFirstKelements result =new ReverseFirstKelements();
         
     }
 
