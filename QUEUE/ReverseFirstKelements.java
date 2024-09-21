@@ -42,9 +42,8 @@ public class ReverseFirstKelements {
     }
     public static void main(String[] args) {
         ReverseFirstKelements queue =new ReverseFirstKelements();
-        queue.add(1);
-        queue.add(10);
-        queue.add(20);
+        for(int i=0; i<=5; ++i)
+            queue.add(1);
         
     }
 
