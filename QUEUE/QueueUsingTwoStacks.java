@@ -52,7 +52,7 @@ import java.util.Stack;
     }
 }
 
- public  class StackQueue extends QueueUsingLinkedList {
+class StackQueue extends QueueUsingLinkedList {
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 
