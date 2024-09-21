@@ -1,2 +1,9 @@
-package QUEUE;public class QueueUsingTwoStacks {
+package QUEUE;
+
+public class QueueUsingTwoStacks {
+    
+    public static void main(String[] args) {
+
+    }
+
 }
