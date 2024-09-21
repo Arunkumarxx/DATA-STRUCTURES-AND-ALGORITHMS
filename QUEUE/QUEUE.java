@@ -6,6 +6,7 @@ public class QUEUE {
         QUEUE q =new QUEUE();
         q.recursive(n);
         System.out.println(res);
+        res.setLength(0);
     }
     private void recursive(int n)
     {
