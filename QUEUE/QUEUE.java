@@ -1,18 +1,24 @@
 package QUEUE;
 public class QUEUE {
-
+    StringBuilder res =new StringBuilder();
     public static void main(String[] args) {
         int n=10;
         QUEUE q =new QUEUE();
         q.recursive(n);
+        System.out.println(res);
     }
     private void recursive(int n)
     {
-        if(n==0)
+        if(n==0) {
+            res.append(0);
             return;
-        int temp=n%2;
-        n=n/2;
+        }
+        if(n==1)
+        {
+            res.append(1);
+            return;
+        }
         recursive(n/2);
-        System.out.println(temp);
+        res.append(n%2);
     }
 }
