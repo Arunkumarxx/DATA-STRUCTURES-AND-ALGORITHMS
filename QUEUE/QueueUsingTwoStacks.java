@@ -2,7 +2,7 @@ package QUEUE;
 
 import java.util.Stack;
 
- class QueueUsingLinkedList {
+public class QueueUsingLinkedList {
     protected QueueNode front;
     protected QueueNode rear;
 
@@ -52,7 +52,7 @@ import java.util.Stack;
     }
 }
 
-non-sealed class StackQueue extends QueueUsingLinkedList {
+ class StackQueue extends QueueUsingLinkedList {
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 
