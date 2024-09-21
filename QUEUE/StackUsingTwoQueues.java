@@ -22,7 +22,7 @@ public  class StackUsingTwoQueues {
     }
     private int pop()
     {
-        if()
+
     }
     public static void main(String[] args) {
         StackUsingTwoQueues stack =new StackUsingTwoQueues();
@@ -30,7 +30,7 @@ public  class StackUsingTwoQueues {
         stack.push(2);
         stack.push(2);
         stack.push(2);
-        System.out.println(stack.pop());
+
     }
 
 }
