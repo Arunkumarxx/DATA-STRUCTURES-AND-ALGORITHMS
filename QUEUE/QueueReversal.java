@@ -46,5 +46,4 @@ public class QueueReversal {
         queue.add(20);
         revereseQueue(q);
     }
-
 }
