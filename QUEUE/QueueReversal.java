@@ -55,10 +55,11 @@ public class QueueReversal {
         queue.add(10);
         queue.add(20);
        queue.revereseQueue(queue);
-       while(queue.front!=null)
+       QueueReversal temp =queue;
+       while(temp.front!=null)
        {
-           System.out.println(queue.front.data+" ");
-           queue.front= queue.front.next;
+           System.out.println(temp.front.data+" ");
+           temp.front= temp.front.next;
        }
     }
 }
