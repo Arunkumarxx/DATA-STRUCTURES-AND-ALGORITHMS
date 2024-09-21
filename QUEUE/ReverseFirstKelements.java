@@ -1,5 +1,7 @@
 package QUEUE;
 
+import java.util.Stack;
+
 public class ReverseFirstKelements {
     private QueueNode front;
     private QueueNode rear;
@@ -43,7 +45,9 @@ public class ReverseFirstKelements {
     public static void main(String[] args) {
         ReverseFirstKelements queue =new ReverseFirstKelements();
         for(int i=0; i<=5; ++i)
-            queue.add(1);
+            queue.add(1); // add ele to q
+
+        Stack<Integer> stack =new Stack<>();
         
     }
 
