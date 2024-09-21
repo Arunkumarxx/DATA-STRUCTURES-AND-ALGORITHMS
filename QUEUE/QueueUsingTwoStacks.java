@@ -2,7 +2,7 @@ package QUEUE;
 
 import java.util.Stack;
 
-public class QueueUsingLinkedList {
+ class QueueUsingLinkedList {
     protected QueueNode front;
     protected QueueNode rear;
 
