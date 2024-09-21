@@ -40,6 +40,10 @@ public class QueueReversal {
     }
 
     public static void main(String[] args) {
+        QueueReversal queue =new QueueReversal();
+        queue.add(1);
+        queue.add(10);
+        queue.add(20);
         
     }
 
