@@ -1,6 +1,6 @@
 package QUEUE;
 public class QUEUE {
-    StringBuilder res =new StringBuilder();
+    static StringBuilder res =new StringBuilder();
     public static void main(String[] args) {
         int n=10;
         QUEUE q =new QUEUE();
