@@ -2,7 +2,7 @@ package TREE;
 
 public class TREE <Secure> {
     private Secure data ;
-    TREE(Secure d)
+    TREE(Secure  d )
     {
      this.data=d;
     }
