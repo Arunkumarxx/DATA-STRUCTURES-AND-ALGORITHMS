@@ -29,10 +29,17 @@ public class GasStationOrCircularTour {
     {
         int x=front.data;
         front=front.next;
+        if(front==null)
+            rear=null;
         return x;
     }
-    public static void main(String[] args) {
+    private  boolean isEmpty()
 
+    {
+        return rear==null;
+    }
+    public static void main(String[] args) {
+        int petrol ={}
     }
 
 }
