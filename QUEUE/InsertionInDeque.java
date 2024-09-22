@@ -1,5 +1,7 @@
 package QUEUE;
 
+import java.util.ArrayDeque;
+
 public class InsertionInDeque {
     private class DequeNode{
         int data;
@@ -18,11 +20,11 @@ public class InsertionInDeque {
         DequeNode newNode =new DequeNode(value);
         if(front==null)
         {
-            
+
         }
     }
     public static void main(String[] args) {
-
+        
     }
 
 }
