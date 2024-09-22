@@ -84,9 +84,8 @@ public class InsertionInDeque {
         for(int i=1 ;i<=2; ++i)
         {
             Deque.addFirst(i);
+            Deque.addLast(i*i);
         }
-        Deque.popFirst();
-        Deque.popFirst();
         Deque.printDeque();
 
     }
