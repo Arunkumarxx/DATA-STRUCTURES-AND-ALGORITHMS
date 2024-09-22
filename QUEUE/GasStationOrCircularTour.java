@@ -44,9 +44,9 @@ public class GasStationOrCircularTour {
         GasStationOrCircularTour Queue =new GasStationOrCircularTour();
         int n1=petrol.length;
         int n2=distance.length;
-        for(int i=0; i<n1;++i)
+        for(int i=0; i<n1 ;++i)
         {
-            
+
         }
     }
 
