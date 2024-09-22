@@ -1,6 +1,5 @@
 package QUEUE;
 
-import java.util.ArrayDeque;
 
 public class InsertionInDeque {
     private class DequeNode{
@@ -71,8 +70,22 @@ public class InsertionInDeque {
     {
         return rear==null;
     }
+    private void printDeque() {
+        DequeNode current = front;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
-        ArrayDeque<Integer> q =new ArrayDeque<>();
+        InsertionInDeque Deque =new InsertionInDeque();
+        for(int i=0 ;i<=5; ++i)
+        {
+            Deque.addFirst(1);
+        }
+        Deque.printDeque();
     }
 
 }
