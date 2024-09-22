@@ -27,8 +27,11 @@ public class InsertionInDeque {
             front=newNode;
         }
     }
-    private int pop()
+    private int popFirst()
     {
+        if(front==null)
+            return -1;
+        front=front.next;
         
     }
     private void addLast(int value)
