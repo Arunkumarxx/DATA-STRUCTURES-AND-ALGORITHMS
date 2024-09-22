@@ -83,10 +83,10 @@ public class InsertionInDeque {
         InsertionInDeque Deque =new InsertionInDeque();
         for(int i=1 ;i<=5; ++i)
         {
-            Deque.addFirst(i);
+            Deque.addLast(i);
         }
         for(int i=1;i<=5;++i)
-            Deque.addLast(i);
+            Deque.addFirst(i);
         Deque.printDeque();
 
     }
