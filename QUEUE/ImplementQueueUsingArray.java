@@ -1,5 +1,6 @@
 package QUEUE;
 
+import java.util.ArrayDeque;
 import java.util.Scanner;
 
 public class ImplementQueueUsingArray {
