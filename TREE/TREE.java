@@ -7,7 +7,7 @@ public class TREE <Secure> {
      this.data=d;
     }
     public static void main(String[] args) {
-        TREE tree =new TREE(1);
+        TREE<String> tree =new TREE(1);
         System.out.println(tree.data);
     }
 
