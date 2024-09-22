@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 public class AlgorithmComparison {
     public static void main(String args[]) {
 
-        int size = 1000000;
+        int size = 100;
         int arr[] = new int[size];
         for (int i = 0; i < size; i++) {
             arr[i] = (int) (Math.random() * 1000);
