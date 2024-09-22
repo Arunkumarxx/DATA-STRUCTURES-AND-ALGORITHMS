@@ -9,7 +9,6 @@ public class TREE <Secure> {
     public static void main(String[] args) {
         TREE tree =new TREE(1);
         System.out.println(tree.data);
-
     }
 
 }
