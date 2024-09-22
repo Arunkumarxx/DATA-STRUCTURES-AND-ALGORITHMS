@@ -54,12 +54,9 @@ public class ReverseFirstKelements {
     public static void main(String[] args) {
         ReverseFirstKelements queue = new ReverseFirstKelements();
         int k = 3;
-
-
         for (int i = 1; i <= 5; i++) {
             queue.add(i);
         }
-
         System.out.println("Original Queue:");
         queue.print();
         System.out.println();
