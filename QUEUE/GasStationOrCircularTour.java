@@ -39,7 +39,15 @@ public class GasStationOrCircularTour {
         return rear==null;
     }
     public static void main(String[] args) {
-        int petrol ={}
+        int []petrol ={1,2,3,4,5};
+        int [] distance ={3,4,5,1,2};
+        GasStationOrCircularTour Queue =new GasStationOrCircularTour();
+        int n1=petrol.length;
+        int n2=distance.length;
+        for(int i=0; i<n1;++i)
+        {
+            
+        }
     }
 
 }
