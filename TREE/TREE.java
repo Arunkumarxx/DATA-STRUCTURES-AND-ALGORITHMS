@@ -1,13 +1,11 @@
 package TREE;
 
-import com.sun.security.jgss.GSSUtil;
-
 public class TREE <Secure> {
     private Secure data ;
     TREE(Secure  d ) {
         this.data = d;
     }
-    public void setData(Secure x)
+    public void setData(Secure  x)
     {
         this.data=x;
     }
@@ -17,5 +15,4 @@ public class TREE <Secure> {
         tree.setData(1023);
         System.out.println(tree.data);
     }
-
 }
