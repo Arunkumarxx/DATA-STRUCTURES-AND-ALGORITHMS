@@ -7,140 +7,140 @@ public class DequeDeletion {
         DequeNode prev;
 
         DequeNode(int value) {
-            this.data = value;
-            this.next = null;
-            this.prev = null;
+            this.data=value;
+            this.next=null;
+            this.prev=null;
         }
     }
 
     DequeNode front, rear;
 
     public void addFirst(int value) {
-        DequeNode newNode = new DequeNode(value);
-        if (front == null)
-            front = rear = newNode;
+        DequeNode newNode=new DequeNode(value);
+        if (front==null)
+            front=rear=newNode;
         else {
-            front.prev = newNode;
-            newNode.next = front;
-            front = newNode;
+            front.prev=newNode;
+            newNode.next=front;
+            front=newNode;
         }
     }
 
     public int popLast() {
-        if (rear == null)
+        if (rear==null)
             return -1;
-        int x = rear.data;
-        rear = rear.prev;
-        if (rear == null)
-            front = null;
+        int x=rear.data;
+        rear=rear.prev;
+        if (rear==null)
+            front=null;
         else {
-            rear.next = null;
+            rear.next=null;
         }
         return x;
     }
 
     public int popFirst() {
-        if (front == null)
+        if (front==null)
             return -1;
-        int x = front.data;
-        front = front.next;
-        if (front == null)
-            rear = null;
+        int x=front.data;
+        front=front.next;
+        if (front==null)
+            rear=null;
         else {
-            front.prev = null;
+            front.prev=null;
         }
         return x;
     }
 
     public void addLast(int value) {
-        DequeNode newNode = new DequeNode(value);
-        if (rear == null)
-            front = rear = newNode;
+        DequeNode newNode=new DequeNode(value);
+        if (rear==null)
+            front=rear=newNode;
         else {
-            rear.next = newNode;
-            newNode.prev = rear;
-            rear = newNode;
+            rear.next=newNode;
+            newNode.prev=rear;
+            rear=newNode;
         }
     }
 
     public boolean isEmpty() {
-        return front == null;
+        return front==null;
     }
 
     public void printDeque() {
-        DequeNode current = front;
-        while (current != null) {
-            System.out.print(current.data + " ");
-            current = current.next;
+        DequeNode current=front;
+        while (current!=null) {
+            System.out.print(current.data+" ");
+            current=current.next;
         }
         System.out.println();
     }
 
     public void eraseAt(int x) {
-        if (x < 0 || front == null) return;
+        if (x<0 || front==null) return;
 
-        DequeNode current = front;
-        int index = 0;
+        DequeNode current=front;
+        int index=0;
 
-        while (current != null && index < x) {
-            current = current.next;
+        while (current!=null && index<x) {
+            current=current.next;
             index++;
         }
 
-        if (current == null) return;
+        if (current==null) return;
 
-        if (current == front) {
+        if (current==front) {
             popFirst();
             return;
         }
 
-        if (current == rear) {
+        if (current==rear) {
             popLast();
             return;
         }
 
-        current.prev.next = current.next;
-        current.next.prev = current.prev;
+        current.prev.next=current.next;
+        current.next.prev=current.prev;
     }
 
     public void eraseInRange(int start, int end) {
-        if (start < 0 || end <= start || front == null) return;
+        if (start<0 || end<=start || front==null) return;
 
-        DequeNode current = front;
-        int index = 0;
+        DequeNode current=front;
+        int index=0;
 
-        while (current != null && index < start) {
-            current = current.next;
+        while (current!=null && index<start) {
+            current=current.next;
             index++;
         }
 
-        while (current != null && index < end) {
-            DequeNode next = current.next;
-            if (current.prev != null) {
-                current.prev.next = current.next;
+        while (current!=null && index<end) {
+            DequeNode next=current.next;
+            if (current.prev!=null) {
+                current.prev.next=current.next;
             }
-            if (current.next != null) {
-                current.next.prev = current.prev;
+            if (current.next!=null) {
+                current.next.prev=current.prev;
             }
-            if (current == front) {
-                front = current.next;
+            if (current==front) {
+                front=current.next;
             }
-            if (current == rear) {
-                rear = current.prev;
+            if (current==rear) {
+                rear=current.prev;
             }
-            current = next;
+            current=next;
             index++;
         }
     }
 
     public void eraseAll() {
-        front = rear = null;
+        front=rear=null;
     }
 
     public static void main(String[] args) {
-        DequeDeletion deq = new DequeDeletion();
+        DequeDeletion deq=new DequeDeletion();
 
-        for (int i = 1; i <= 10; i++) {
+        for (int i=1; i<=10; i++) {
             deq.addLast(i);
         }
 
