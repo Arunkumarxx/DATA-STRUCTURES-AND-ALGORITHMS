@@ -81,11 +81,11 @@ public class InsertionInDeque {
 
     public static void main(String[] args) {
         InsertionInDeque Deque =new InsertionInDeque();
-        for(int i=1 ;i<=2; ++i)
+        for(int i=1 ;i<=5; ++i)
         {
             Deque.addFirst(i);
         }
-        for(int i=1;i<=2;++i)
+        for(int i=1;i<=5;++i)
             Deque.addLast(i);
         Deque.printDeque();
 
