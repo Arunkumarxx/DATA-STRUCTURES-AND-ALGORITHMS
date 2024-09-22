@@ -87,7 +87,6 @@ public class InsertionInDeque {
         }
         Deque.popFirst();
         Deque.popFirst();
-        Deque.popFirst();
         Deque.printDeque();
 
     }
