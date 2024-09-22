@@ -1,11 +1,12 @@
 package SORTING_ALGORITHM_COMPARSION;
 
 import java.util.Arrays;
+import java.util.concurrent.*;
 
 public class AlgorithmComparison {
     public static void main(String args[]) {
 
-        int size = Integer.MAX_VALUE/10;
+        int size = Integer.MAX_VALUE / 10;
         int arr[] = new int[size];
         for (int i = 0; i < size; i++) {
             arr[i] = (int) (Math.random() * 1000);
@@ -32,22 +33,30 @@ public class AlgorithmComparison {
     }
 
     private static void compareSortingAlgorithms(int arr[]) {
-        printSortingTimeAndSpace(SortType.BUBBLE, arr);
-        printSortingTimeAndSpace(SortType.BITONIC, arr);
-        printSortingTimeAndSpace(SortType.COMB, arr);
-        printSortingTimeAndSpace(SortType.HEAP, arr);
-        printSortingTimeAndSpace(SortType.INSERTION, arr);
-        printSortingTimeAndSpace(SortType.MERGE, arr);
-        printSortingTimeAndSpace(SortType.QUICK, arr);
-        printSortingTimeAndSpace(SortType.SELECTION, arr);
-        printSortingTimeAndSpace(SortType.CYCLE, arr);
-        printSortingTimeAndSpace(SortType.SHELL, arr);
-        printSortingTimeAndSpace(SortType.INTRO, arr);
-        printSortingTimeAndSpace(SortType.GNOME, arr);
+        // Create a fixed thread pool with a size based on the number of algorithms
+        ExecutorService executorService = Executors.newFixedThreadPool(12);
+
+        for (SortType sortType : SortType.values()) {
+            // Submit each sorting task to the executor
+            executorService.submit(() -> {
+                printSortingTimeAndSpace(sortType, arr);
+            });
+        }
+
+        // Shutdown the executor after tasks are finished
+        executorService.shutdown();
+
+        try {
+            executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            System.err.println("Executor interrupted: " + e.getMessage());
+        }
     }
 
     private static void printSortingTimeAndSpace(SortType sortType, int[] arr) {
 
+        // Copy array for sorting
         int arr2[] = new int[arr.length];
         System.arraycopy(arr, 0, arr2, 0, arr.length);
 
@@ -106,8 +115,6 @@ public class AlgorithmComparison {
         System.out.printf("%-17s %15.3f ms %15.4f MB%n", sortType + "_SORT", durationMs, memoryUsedMB);
     }
 }
-
-
 
 
 
