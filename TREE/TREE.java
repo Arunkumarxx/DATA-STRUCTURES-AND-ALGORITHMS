@@ -45,10 +45,10 @@ public class TREE  {
     }
     public static void main(String[] args) {
         TREE tree =new TREE();
-        tree.insert(10);
-        tree.insert(20);
-        tree.insert(30);
-        tree.insert(40);
+        for(int i=5; i>=0; --i)
+        {
+            tree.insert(i);
+        }
         tree.print();
     }
 }
