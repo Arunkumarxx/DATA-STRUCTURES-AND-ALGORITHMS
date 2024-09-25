@@ -1,6 +1,5 @@
 package TREE;
 
-import java.util.Random;
 
 public class PreOrderTreeTraversal {
     private Tree root;
@@ -47,7 +46,7 @@ public class PreOrderTreeTraversal {
     }
     public static void main(String[] args) {
         PreOrderTreeTraversal tree =new PreOrderTreeTraversal();
-        Random random = new Random();
+
         for(int i=1; i<=10; ++i)
             tree.insert(i);
         tree.print();

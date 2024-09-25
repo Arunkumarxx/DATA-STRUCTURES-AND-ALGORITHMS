@@ -50,7 +50,7 @@ public class InOrderTreeTraversal {
         InOrderTreeTraversal tree =new InOrderTreeTraversal();
         Random random = new Random();
         for(int i=1; i<=10; ++i)
-            tree.insert(i);
+            tree.insert(random.nextInt(0,9));
         tree.print();
     }
 
