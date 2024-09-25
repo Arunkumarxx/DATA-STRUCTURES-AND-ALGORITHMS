@@ -53,11 +53,14 @@ public class HeightOfBinaryTree {
         // Print right child first (in reverse order)
         printTree(node.right, level + 1, height);
 
-        // Print current node with spacing
+        // Print current node with connecting lines
         if (level == 0) {
             System.out.printf("%s%d\n", " ".repeat(height * 4), node.data);
         } else {
-            System.out.printf("%s%d\n", " ".repeat((height - level) * 4), node.data);
+            // Calculate space before the node
+            String space = " ".repeat((height - level) * 4);
+            String connector = " ".repeat((height - level - 1) * 4 - 2) + "|--";
+            System.out.printf("%s%s%d\n", space, connector, node.data);
         }
 
         // Print left child
