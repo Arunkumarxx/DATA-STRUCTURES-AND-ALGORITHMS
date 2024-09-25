@@ -40,6 +40,7 @@ public class TREE  {
         {
             System.out.print(root.data+" ");
             traversal(root.left);
+            traversal(root.right);
         }
     }
     public static void main(String[] args) {
