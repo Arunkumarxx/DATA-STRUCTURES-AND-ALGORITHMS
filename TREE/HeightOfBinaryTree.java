@@ -45,6 +45,16 @@ public class HeightOfBinaryTree {
             InOrderTraversal(node.right);
         }
     }
+    private int  DepthOfTree()
+    {
+       return HeightOfTree(root);
+    }
+    private int HeightOfTree(Tree root)
+    {
+        if(root==null)
+            return 1;
+        return Math.max(HeightOfTree(root.left),HeightOfTree(root.right));
+    }
     public static void main(String[] args) {
         HeightOfBinaryTree tree =new HeightOfBinaryTree();
         tree.insert(3);
@@ -54,6 +64,7 @@ public class HeightOfBinaryTree {
         tree.insert(4);
         tree.insert(6);
         tree.insert(7);
+        System.out.println(tree.DepthOfTree());
         tree.print();
     }
 
