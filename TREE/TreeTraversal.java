@@ -1,5 +1,7 @@
 package TREE;
 
+import java.util.Random;
+
 public class TreeTraversal {
 
     private Tree root;
@@ -46,10 +48,9 @@ public class TreeTraversal {
     }
     public static void main(String[] args) {
         TreeTraversal tree =new TreeTraversal();
-        for(int i=5; i>=0; --i)
-        {
-            tree.insert(i);
-        }
+        Random random = new Random();
+        for(int i=1; i<=10; ++i)
+            tree.insert(random.nextInt(0,9));
         tree.print();
     }
 
