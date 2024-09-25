@@ -17,7 +17,7 @@ public class HeightOfBinaryTree {
     }
     private void insert(int value)
     {
-        root=addNode(value);;
+        root=addNode(root,value);;
     }
     private Tree addNode(Tree root ,int value)
     {
@@ -26,10 +26,21 @@ public class HeightOfBinaryTree {
             root=new Tree(value);
             return root;
         }
+        if(value< root.data)
+            addNode(root.left,value);
+        if(value>root.data)
+            addNode(root.right,value);
+        return root;
+    }
+    void print()
+    {
         
     }
     public static void main(String[] args) {
-
+        HeightOfBinaryTree tree =new HeightOfBinaryTree();
+        tree.insert(10);
+        tree.insert(20);
+        tree.insert(30);
     }
 
 }
