@@ -56,7 +56,6 @@ public class HeightOfBinaryTree {
         tree.insert(5);
         System.out.println(tree.root);
         System.out.println(tree.root.left.data);
-        System.out.println(tree.root.left.left.data);
 //        System.out.println(tree.root.left.data);
         tree.print();
     }
