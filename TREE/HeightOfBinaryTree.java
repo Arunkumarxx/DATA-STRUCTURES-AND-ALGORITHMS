@@ -47,7 +47,7 @@ public class HeightOfBinaryTree {
     }
     public static void main(String[] args) {
         HeightOfBinaryTree tree =new HeightOfBinaryTree();
-        for(int i=0 ;i<=1000;++i)
+        for(int i=0 ;i<=10000;++i)
             tree.insert(i);
         tree.print();
     }
