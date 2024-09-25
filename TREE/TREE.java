@@ -22,7 +22,7 @@ public class TREE  {
         if(root==null)
         {
             root=new Tree(value);
-            return 
+            return root;
         }
     }
     public static void main(String[] args) {
