@@ -40,8 +40,8 @@ public class TREE  {
         {
             System.out.print(root.data+" ");
             traversal(root.left);
+            
         }
-        if(root)
     }
     public static void main(String[] args) {
         TREE tree =new TREE();
