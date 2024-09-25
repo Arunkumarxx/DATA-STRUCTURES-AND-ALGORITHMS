@@ -34,40 +34,45 @@ public class HeightOfBinaryTree {
 
     // Method to print the tree in a structured format
     private void printTree() {
-        printTree(root, 0);
+        int height = getHeight(root);
+        printTree(root, 0, height);
     }
 
-    private void printTree(Tree node, int space) {
-        // Base case
+    private int getHeight(Tree node) {
+        if (node == null) {
+            return 0;
+        }
+        return Math.max(getHeight(node.left), getHeight(node.right)) + 1;
+    }
+
+    private void printTree(Tree node, int level, int height) {
         if (node == null) {
             return;
         }
 
-        // Increase distance between levels
-        space += 10;
+        // Print right child first (in reverse order)
+        printTree(node.right, level + 1, height);
 
-        // Process right child first
-        printTree(node.right, space);
-
-        // Print current node after space count
-        System.out.println();
-        for (int i = 10; i < space; i++) {
-            System.out.print(" ");
+        // Print current node with spacing
+        if (level == 0) {
+            System.out.printf("%s%d\n", " ".repeat(height * 4), node.data);
+        } else {
+            System.out.printf("%s%d\n", " ".repeat((height - level) * 4), node.data);
         }
-        System.out.print(node.data);
 
-        // Process left child
-        printTree(node.left, space);
+        // Print left child
+        printTree(node.left, level + 1, height);
     }
 
     public static void main(String[] args) {
         HeightOfBinaryTree tree = new HeightOfBinaryTree();
-        tree.insert(1);
-        tree.insert(2);
-        tree.insert(-3);
-        tree.insert(3);
         tree.insert(4);
+        tree.insert(2);
         tree.insert(6);
+        tree.insert(1);
+        tree.insert(3);
+        tree.insert(5);
+        tree.insert(7);
         tree.printTree(); // Call the new printTree method
     }
 }
