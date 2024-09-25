@@ -2,20 +2,30 @@ package TREE;
 
 public class TREE  {
     private Tree root;
-    private class Tree
-    {
+    private class Tree {
         int data;
         Tree right;
         Tree left;
-        Tree(int value)
+
+        Tree(int value) {
+            this.data = value;
+            this.right = null;
+            this.left = null;
+        }
+    }
+    private void insert(int value)
+    {
+        root=addNode(root,value);
+    }
+    private Tree addNode(Tree root,int value)
+    {
+        if(root==null)
         {
-            this.data=value;
-            this.right=null;
-            this.left=null;
+            root=new Tree(value);
+            return 
         }
     }
     public static void main(String[] args) {
-        TREE Tree =new TREE();
-        
+
     }
 }
