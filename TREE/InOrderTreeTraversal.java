@@ -2,7 +2,7 @@ package TREE;
 
 import java.util.Random;
 
-public class TreeTraversal {
+public class InOrderTreeTraversal {
 
     private Tree root;
     private class Tree {
@@ -47,7 +47,7 @@ public class TreeTraversal {
         }
     }
     public static void main(String[] args) {
-        TreeTraversal tree =new TreeTraversal();
+        InOrderTreeTraversal tree =new InOrderTreeTraversal();
         Random random = new Random();
         for(int i=1; i<=10; ++i)
             tree.insert(i);
