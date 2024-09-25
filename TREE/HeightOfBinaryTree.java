@@ -54,7 +54,7 @@ public class HeightOfBinaryTree {
         tree.insert(4);
         tree.insert(6);
         tree.insert(7);
-        
+        tree.print();
     }
 
 }
