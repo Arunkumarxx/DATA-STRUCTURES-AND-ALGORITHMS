@@ -1,7 +1,7 @@
 package TREE;
 
 public class TREE  {
-    private Tree Root;
+    private Tree root;
     private class Tree
     {
         int data;
@@ -15,7 +15,7 @@ public class TREE  {
         }
     }
     public static void main(String[] args) {
-        TREE tree =new TREE();
-        
+        TREE Tree =new TREE();
+
     }
 }
