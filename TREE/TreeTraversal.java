@@ -50,7 +50,7 @@ public class TreeTraversal {
         TreeTraversal tree =new TreeTraversal();
         Random random = new Random();
         for(int i=1; i<=10; ++i)
-            tree.insert(random.nextInt(0,9));
+            tree.insert(random.nextInt(0,232));
         tree.print();
     }
 
