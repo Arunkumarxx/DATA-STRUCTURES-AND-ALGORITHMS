@@ -27,9 +27,9 @@ public class HeightOfBinaryTree {
             return root;
         }
         if(value< root.data)
-            addNode(root.left,value);
+            root.left=addNode(root.left,value);
         if(value>root.data)
-            addNode(root.right,value);
+            root.right=addNode(root.right,value);
         return root;
     }
    private void print()
