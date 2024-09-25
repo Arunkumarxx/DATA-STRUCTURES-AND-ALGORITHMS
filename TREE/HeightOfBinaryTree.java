@@ -52,7 +52,7 @@ public class HeightOfBinaryTree {
     private int HeightOfTree(Tree root)
     {
         if(root==null)
-            return 1;
+            return 0;
         return Math.max(HeightOfTree(root.left),HeightOfTree(root.right))+1;
     }
     public static void main(String[] args) {
