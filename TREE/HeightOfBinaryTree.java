@@ -32,15 +32,25 @@ public class HeightOfBinaryTree {
             addNode(root.right,value);
         return root;
     }
-    void print()
+   private void print()
     {
-        
+        InOrderTraversal(root);
+    }
+    private void InOrderTraversal(Tree node)
+    {
+        if(node!=null)
+        {
+            InOrderTraversal(node.left);
+            System.out.print(node.data+" ");
+            InOrderTraversal(node.right);
+        }
     }
     public static void main(String[] args) {
         HeightOfBinaryTree tree =new HeightOfBinaryTree();
         tree.insert(10);
         tree.insert(20);
         tree.insert(30);
+        tree.print();
     }
 
 }
