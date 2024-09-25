@@ -40,7 +40,11 @@ public class TREE  {
         {
             System.out.print(root.data+" ");
             traversal(root.left);
-            
+        }
+        if(root!=null)
+        {
+            System.out.print(root.data+" ");
+            traversal(root.right);
         }
     }
     public static void main(String[] args) {
@@ -49,5 +53,6 @@ public class TREE  {
         tree.insert(20);
         tree.insert(30);
         tree.insert(40);
+        tree.print();
     }
 }
