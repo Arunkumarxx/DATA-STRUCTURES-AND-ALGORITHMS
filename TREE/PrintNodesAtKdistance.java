@@ -40,7 +40,7 @@ public class PrintNodesAtKdistance {
     {
         if(root==null)
             return;
-        if(k<0)
+        if(k==0)
         {
             System.out.print(root.data+" ");
         }
