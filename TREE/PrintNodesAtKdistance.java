@@ -34,7 +34,7 @@ public class PrintNodesAtKdistance {
     }
     private void printDistanceK(int k)
     {
-
+        printDistanceOfK(root,k);
     }
     private void printDistanceOfK(Tree root,int k)
     {
@@ -55,6 +55,7 @@ public class PrintNodesAtKdistance {
         tree.insert(4);
         tree.insert(5);
         tree.insert(8);
+        tree.printDistanceK(4);
     }
 
 }
