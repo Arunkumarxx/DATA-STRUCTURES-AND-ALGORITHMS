@@ -27,9 +27,9 @@ public class PrintNodesAtKdistance {
             return root;
         }
         if(value<root.data)
-            root=addNode(root.left,value);
+            root.left=addNode(root.left,value);
         if(value>root.data)
-            root=addNode(root.right,value);
+            root.right=addNode(root.right,value);
         return root;
     }
     private void printDistanceK(int k)
