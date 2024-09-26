@@ -32,6 +32,10 @@ public class PrintNodesAtKdistance {
             root=addNode(root.right,value);
         return root;
     }
+    private void printDistanceK(int k)
+    {
+        
+    }
     public static void main(String[] args) {
         PrintNodesAtKdistance tree = new PrintNodesAtKdistance();
         tree.insert(1);
