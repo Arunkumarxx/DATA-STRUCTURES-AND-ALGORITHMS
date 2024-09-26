@@ -55,7 +55,7 @@ public class PrintNodesAtKdistance {
         tree.insert(4);
         tree.insert(5);
         tree.insert(8);
-        tree.printDistanceK(4);
+        tree.printDistanceK(2);
     }
 
 }
