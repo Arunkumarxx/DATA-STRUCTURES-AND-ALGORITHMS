@@ -50,7 +50,7 @@ public class PrintNodesAtKdistance {
     }
     public static void main(String[] args) {
         PrintNodesAtKdistance tree = new PrintNodesAtKdistance();
-        tree.insert(4); 
+        tree.insert(4);
         tree.insert(2);
         tree.insert(6);
         tree.insert(1);
