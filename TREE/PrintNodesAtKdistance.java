@@ -19,8 +19,13 @@ public class PrintNodesAtKdistance {
     {
         root=addNode(root);
     }
-    private Tree addNode(Tree root)
+    private Tree addNode(Tree root,int value)
     {
+        if(root==null)
+        {
+            root=new Tree(value);
+            return root;
+        }
         
     }
     public static void main(String[] args) {
