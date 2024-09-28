@@ -59,10 +59,8 @@ public class CountTheNodesAtDistanceKFromLeaf {
         ++i;
         countTheNodeAtDistanceLeaf(root.left,k,i);
         countTheNodeAtDistanceLeaf(root.right,k,i);
-        if(hashSet.contains(root))
-        {
-            
-        }
+        if( i>=k&&!hashSet.contains(root))
+            count++;
     }
 
 
@@ -73,7 +71,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
         BinaryTree.insert(3);
         BinaryTree.insert(4);
         BinaryTree.print();
-        System.out.println(BinaryTree.countNodeLeafK());
+        System.out.println(BinaryTree.countNodeLeafK(2));
     }
 
 }
