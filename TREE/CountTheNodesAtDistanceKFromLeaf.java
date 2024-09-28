@@ -74,6 +74,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
         BinaryTree.insert(3);
         BinaryTree.insert(4);
         BinaryTree.print();
+        System.out.println();
         System.out.println(BinaryTree.countNodeLeafK(2));
     }
 
