@@ -54,12 +54,16 @@ public class LevelOrderTraversal {
         if(root==null)
             return;
         ++level;
-        if(res.get(level)==)
+        if(level> res.size())
         {
             temp.add(root.data);
             res.add(temp);
+            temp.clear();
         }
         else
+            res.get(level).add(root.data);
+        levelOrderTraversal(root.left,level);
+        levelOrderTraversal(root.right,level);
     }
     public static void main(String[] args) {
         LevelOrderTraversal tree =new LevelOrderTraversal();
@@ -67,7 +71,7 @@ public class LevelOrderTraversal {
         for(int i=0 ;i<=10;++i)
             tree.insert(random.nextInt(0,9));
         tree.print();
-
+        System.out.println(tree.res);
     }
 
 }
