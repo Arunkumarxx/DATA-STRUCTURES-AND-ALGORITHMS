@@ -41,8 +41,18 @@ public class CountTheNodesAtDistanceKFromLeaf {
         PostOrderTraversal(root.left);
         System.out.print(root.data+" ");
         PostOrderTraversal(root.right);
-
     }
+
+    private int  countNodeLeafK()
+    {
+        return -1;
+    }
+    private void CountTheNodeAtDistanceLeaf()
+    {
+        
+    }
+
+
     public static void main(String[] args) {
         CountTheNodesAtDistanceKFromLeaf BinaryTree =new CountTheNodesAtDistanceKFromLeaf();
         BinaryTree.insert(1);
@@ -50,6 +60,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
         BinaryTree.insert(3);
         BinaryTree.insert(4);
         BinaryTree.print();
+        System.out.println(BinaryTree.countNodeLeafK());
     }
 
 }
