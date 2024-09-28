@@ -49,7 +49,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
         HashSet<Tree> hashSet=new HashSet<>();
 
     }
-    private void  countTheNodeAtDistanceKfromLeaf()
+    private void  countTheNodeAtDistanceKfromLeaf(Tree root,Tree[] nodeAdd,int len,HashSet<Tree> hashSet)
     {
         
     }
