@@ -3,6 +3,7 @@ package TREE;
 import LINKED_LIST.NthNodeFromEndOfLinkedList;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 public class LevelOrderTraversal {
@@ -71,6 +72,7 @@ public class LevelOrderTraversal {
         for(int i=0 ;i<=10;++i)
             tree.insert(random.nextInt(0,9));
         tree.print();
+        tree.levelOrderTraversal(tree.root,0);
         System.out.println(tree.res);
     }
 
