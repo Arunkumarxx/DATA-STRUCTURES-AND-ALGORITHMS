@@ -54,7 +54,7 @@ public class LevelOrderTraversal {
         if(root==null)
             return;
         ++level;
-        if(res.get(level)==null)
+        if(res.get(level)==)
         {
             temp.add(root.data);
             res.add(temp);
