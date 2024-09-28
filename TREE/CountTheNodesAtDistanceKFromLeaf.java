@@ -8,9 +8,11 @@ public class CountTheNodesAtDistanceKFromLeaf {
         Tree right;
         Tree (int data)
         {
-            
+            left=right=null;
+            this.data=data;
         }
     }
+    private void 
     public static void main(String[] args) {
 
     }
