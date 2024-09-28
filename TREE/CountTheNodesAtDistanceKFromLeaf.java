@@ -53,7 +53,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
     private void  countTheNodeAtDistanceKfromLeaf(Tree root,Tree[] nodeAdd,int len,HashSet<Tree> hashSet,int k)
     {
         if(root==null)
-            return;;
+            return;
         nodeAdd[len]=root;
         ++len;
         if(root.left==null && root.right==null)
