@@ -59,7 +59,7 @@ public class LevelOrderTraversal {
             temp.add(root.data);
             res.add(temp);
         }
-        else 
+        else
     }
     public static void main(String[] args) {
         LevelOrderTraversal tree =new LevelOrderTraversal();
