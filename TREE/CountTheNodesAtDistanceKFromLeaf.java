@@ -35,15 +35,15 @@ public class CountTheNodesAtDistanceKFromLeaf{
     }
 
     private void print(){
-        postOrderTraversal(root);
+        InorderTraversal(root);
     }
 
-    private void postOrderTraversal(Tree root){
+    private void InorderTraversal(Tree root){
         if(root==null)
             return;
-        postOrderTraversal(root.left);
-        postOrderTraversal(root.right);
+        InorderTraversal(root.left);
         System.out.print(root.data+" ");
+        InorderTraversal(root.right);
     }
 
     private void countNodeLeafK(int k){
