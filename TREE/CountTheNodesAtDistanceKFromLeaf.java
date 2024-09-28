@@ -48,6 +48,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
     {
         HashSet<Tree> hashSet=new HashSet<>();
         countTheNodeAtDistanceKfromLeaf(root,new Tree[1000],0,hashSet,k);
+        System.out.println(hashSet.size());
     }
     private void  countTheNodeAtDistanceKfromLeaf(Tree root,Tree[] nodeAdd,int len,HashSet<Tree> hashSet,int k)
     {
@@ -58,17 +59,19 @@ public class CountTheNodesAtDistanceKFromLeaf {
             if(len-k-1>=0 && !hashSet.contains(len-k-1))
                 hashSet.add(nodeAdd[len-k-1]);
         }
+        countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
+        countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
     }
 
     public static void main(String[] args) {
-        CountTheNodesAtDistanceKFromLeaf BinaryTree =new CountTheNodesAtDistanceKFromLeaf();
-        BinaryTree.insert(1);
-        BinaryTree.insert(2);
-        BinaryTree.insert(3);
-        BinaryTree.insert(4);
-        BinaryTree.print();
+        CountTheNodesAtDistanceKFromLeaf binaryTre =new CountTheNodesAtDistanceKFromLeaf();
+        binaryTre.insert(1);
+        binaryTre.insert(2);
+        binaryTre.insert(3);
+        binaryTre.insert(4);
+        binaryTre.print();
         System.out.println();
-        System.out.println(BinaryTree.countNodeLeafK(2));
+
     }
 
 }
