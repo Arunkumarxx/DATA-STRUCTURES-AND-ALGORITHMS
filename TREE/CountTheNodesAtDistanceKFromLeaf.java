@@ -75,7 +75,7 @@ public class CountTheNodesAtDistanceKFromLeaf{
     public static void main(String[] args){
         CountTheNodesAtDistanceKFromLeaf binaryTree=new CountTheNodesAtDistanceKFromLeaf();
         Random random =new Random();
-        for(int i=0 ;i<=5; ++i)
+        for(int i=0 ;i<=50; ++i)
             binaryTree.insert(random.nextInt(0,9));
         binaryTree.print();
         System.out.println();
