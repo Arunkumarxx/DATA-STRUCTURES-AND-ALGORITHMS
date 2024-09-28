@@ -1,82 +1,88 @@
 package TREE;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class CountTheNodesAtDistanceKFromLeaf {
     private Tree root;
-    private class Tree
-    {
+
+    private class Tree {
         int data;
         Tree left;
         Tree right;
-        Tree (int data)
-        {
-            left=right=null;
-            this.data=data;
+
+        Tree(int data) {
+            left = right = null;
+            this.data = data;
         }
     }
-    private void insert(int value)
-    {
-        root =addNode(root,value);
+
+    // Insert nodes into the binary tree
+    private void insert(int value) {
+        root = addNode(root, value);
     }
-    private Tree addNode(Tree root,int value)
-    {
-        if(root==null)
-        {
-            root=new Tree(value);
+
+    private Tree addNode(Tree root, int value) {
+        if (root == null) {
+            root = new Tree(value);
             return root;
         }
-        if(value<root.data)
-            root.left=addNode(root.left,value);
-        if(value>root.data)
-            root.right=addNode(root.right,value);
+        if (value < root.data)
+            root.left = addNode(root.left, value);
+        else if (value > root.data)
+            root.right = addNode(root.right, value);
         return root;
     }
-    private void print()
-    {
-        PostOrderTraversal(root);
+
+    private void print() {
+        postOrderTraversal(root);
     }
-    private void PostOrderTraversal(Tree root)
-    {
-        if(root==null)
+
+    private void postOrderTraversal(Tree root) {
+        if (root == null)
             return;
-        PostOrderTraversal(root.left);
-        System.out.print(root.data+" ");
-        PostOrderTraversal(root.right);
+        postOrderTraversal(root.left);
+        System.out.print(root.data + " ");
+        postOrderTraversal(root.right);
     }
-    private void countNodeLeafK(int k)
-    {
-        HashSet<Tree> hashSet=new HashSet<>();
-        countTheNodeAtDistanceKfromLeaf(root,new Tree[1000],0,hashSet,k);
-        System.out.println(hashSet.size());
+
+    private void countNodeLeafK(int k) {
+        HashSet<Tree> hashSet = new HashSet<>();
+        ArrayList<Tree> path = new ArrayList<>();
+        countTheNodeAtDistanceKfromLeaf(root, path, hashSet, k);
+        System.out.println("Count of nodes at distance " + k + " from leaf: " + hashSet.size());
     }
-    private void  countTheNodeAtDistanceKfromLeaf(Tree root,Tree[] nodeAdd,int len,HashSet<Tree> hashSet,int k)
-    {
-        if(root==null)
+
+    private void countTheNodeAtDistanceKfromLeaf(Tree root, ArrayList<Tree> path, HashSet<Tree> hashSet, int k) {
+        if (root == null)
             return;
-        nodeAdd[len]=root;
-        ++len;
-        if(root.left==null && root.right==null)
-        {
-            if(len-k-1>=0 && !hashSet.contains(nodeAdd[len-k-1])) {
-                Tree ancestor = nodeAdd[len-k-1];
+
+        path.add(root);
+
+        if (root.left == null && root.right == null) {
+            if (path.size() - k - 1 >= 0) {
+                Tree ancestor = path.get(path.size() - k - 1);
                 hashSet.add(ancestor);
             }
         }
-        countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
-        countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
+
+        countTheNodeAtDistanceKfromLeaf(root.left, path, hashSet, k);
+        countTheNodeAtDistanceKfromLeaf(root.right, path, hashSet, k);
+
+        path.remove(path.size() - 1);
     }
 
     public static void main(String[] args) {
-        CountTheNodesAtDistanceKFromLeaf binaryTree =new CountTheNodesAtDistanceKFromLeaf();
+        CountTheNodesAtDistanceKFromLeaf binaryTree = new CountTheNodesAtDistanceKFromLeaf();
+
         binaryTree.insert(1);
         binaryTree.insert(2);
         binaryTree.insert(3);
         binaryTree.insert(4);
+
         binaryTree.print();
         System.out.println();
+
         binaryTree.countNodeLeafK(2);
-
     }
-
 }
