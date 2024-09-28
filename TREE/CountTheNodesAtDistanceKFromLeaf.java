@@ -44,28 +44,12 @@ public class CountTheNodesAtDistanceKFromLeaf {
         System.out.print(root.data+" ");
         PostOrderTraversal(root.right);
     }
-    private int countNodeLeafK(int k) {
-        HashSet<Tree> hashSet = new HashSet<>();
-        countTheNodeAtDistanceLeaf(root, k, 0, new Tree[1000], hashSet);
-        return hashSet.size();
-    }
+    private void countNodeLeafK(int k)
+    {
+        HashSet<Tree> hashSet=new HashSet<>();
 
-    private void countTheNodeAtDistanceLeaf(Tree root, int k, int pathLen, Tree[] path, HashSet<Tree> hashSet) {
-        if (root == null)
-            return;
-        path[pathLen] = root;
-        pathLen++;
-        if (root.left == null && root.right == null) {
-            if (pathLen - k - 1 >= 0) {
-                Tree ancestor = path[pathLen - k - 1];
-                if (!hashSet.contains(ancestor)) {
-                    hashSet.add(ancestor);
-                }
-            }
-        }
-        countTheNodeAtDistanceLeaf(root.left, k, pathLen, path, hashSet);
-        countTheNodeAtDistanceLeaf(root.right, k, pathLen, path, hashSet);
     }
+    private void  countNode
 
     public static void main(String[] args) {
         CountTheNodesAtDistanceKFromLeaf BinaryTree =new CountTheNodesAtDistanceKFromLeaf();
