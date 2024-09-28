@@ -51,7 +51,7 @@ public class LevelOrderTraversal {
         LevelOrderTraversal tree =new LevelOrderTraversal();
         Random random =new Random();
         for(int i=0 ;i<=10;++i)
-            tree.insert(i);
+            tree.insert(random.nextInt(0,9));
         tree.print();
     }
 
