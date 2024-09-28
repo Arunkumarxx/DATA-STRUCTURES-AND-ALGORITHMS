@@ -17,7 +17,6 @@ public class CountTheNodesAtDistanceKFromLeaf {
         }
     }
 
-    // Insert nodes into the binary tree
     private void insert(int value) {
         root = addNode(root, value);
     }
