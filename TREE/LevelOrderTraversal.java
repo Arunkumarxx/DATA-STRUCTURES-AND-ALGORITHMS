@@ -58,9 +58,9 @@ public class LevelOrderTraversal {
             res.add(new ArrayList());
 
         res.get(level).add(root.data);
-        
-        levelOrderTraversal(root.left,level);
-        levelOrderTraversal(root.right,level);
+
+        levelOrderTraversal(root.left,level+1);
+        levelOrderTraversal(root.right,level+1);
     }
     public static void main(String[] args) {
         LevelOrderTraversal tree =new LevelOrderTraversal();
