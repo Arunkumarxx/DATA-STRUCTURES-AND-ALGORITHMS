@@ -1,5 +1,7 @@
 package TREE;
 
+import LINKED_LIST.NthNodeFromEndOfLinkedList;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -45,14 +47,18 @@ public class LevelOrderTraversal {
         System.out.print(root.data+" ");
         InOrderTraversal(root.right);
     }
-    private static ArrayList<ArrayList<Integer>> res= new ArrayList<>();
-
+     ArrayList<ArrayList> res= new ArrayList<>();
+    ArrayList<Integer> temp =new ArrayList<>();
     private void levelOrderTraversal(Tree root,int level)
     {
         if(root==null)
             return;
         ++level;
-        
+        if(res.get(level)==null)
+        {
+            temp.add(root.data);
+
+        }
     }
     public static void main(String[] args) {
         LevelOrderTraversal tree =new LevelOrderTraversal();
