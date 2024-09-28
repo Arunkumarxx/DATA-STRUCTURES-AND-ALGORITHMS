@@ -80,6 +80,6 @@ public class CountTheNodesAtDistanceKFromLeaf{
         binaryTree.print();
         System.out.println();
 
-        binaryTree.countNodeLeafK(random.nextInt(0,20));
+        binaryTree.countNodeLeafK(random.nextInt(0,9));
     }
 }
