@@ -2,6 +2,7 @@ package TREE;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Random;
 
 public class CountTheNodesAtDistanceKFromLeaf{
     private Tree root;
@@ -73,12 +74,9 @@ public class CountTheNodesAtDistanceKFromLeaf{
 
     public static void main(String[] args){
         CountTheNodesAtDistanceKFromLeaf binaryTree=new CountTheNodesAtDistanceKFromLeaf();
-
-        binaryTree.insert(1);
-        binaryTree.insert(2);
-        binaryTree.insert(3);
-        binaryTree.insert(4);
-
+        Random random =new Random();
+        for(int i=0 ;i<=5; ++i)
+            binaryTree.insert(random.nextInt());
         binaryTree.print();
         System.out.println();
 
