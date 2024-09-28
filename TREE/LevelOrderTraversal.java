@@ -37,7 +37,7 @@ public class LevelOrderTraversal {
     }
     private void InOrderTraversal()
     {
-        
+
     }
     private static ArrayList<ArrayList<Integer>> res= new ArrayList<>();
 
