@@ -16,7 +16,7 @@ public class LevelOrderTraversal {
         Tree(int data)
         {
             this.data=data;
-            this.left=right;
+            this.left=right=null;
         }
     }
     private void insert(int value)
