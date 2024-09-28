@@ -57,8 +57,9 @@ public class LevelOrderTraversal {
         if(res.get(level)==null)
         {
             temp.add(root.data);
-
+            res.add(temp);
         }
+        else 
     }
     public static void main(String[] args) {
         LevelOrderTraversal tree =new LevelOrderTraversal();
