@@ -79,7 +79,6 @@ public class CountTheNodesAtDistanceKFromLeaf{
             binaryTree.insert(random.nextInt(0,50));
         binaryTree.print();
         System.out.println();
-
         binaryTree.countNodeLeafK(random.nextInt(0,9));
     }
 }
