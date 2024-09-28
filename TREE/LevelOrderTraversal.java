@@ -51,6 +51,7 @@ public class LevelOrderTraversal {
     {
         if(root==null)
             return;
+        ++level;
         
     }
     public static void main(String[] args) {
