@@ -39,6 +39,8 @@ public class LevelOrderTraversal {
     }
     private void InOrderTraversal(Tree root)
     {
+        if(root==null)
+            return;
         InOrderTraversal(root.left);
         System.out.print(root.data+" ");
         InOrderTraversal(root.right);
