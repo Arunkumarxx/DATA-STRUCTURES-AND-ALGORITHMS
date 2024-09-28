@@ -69,6 +69,7 @@ public class LevelOrderTraversal {
             tree.insert(random.nextInt(0,9));
         tree.print();
         tree.levelOrderTraversal(tree.root,0);
+        System.out.println();
         for(ArrayList<Integer> level:tree.res)
         {
             for(Integer value:level)
