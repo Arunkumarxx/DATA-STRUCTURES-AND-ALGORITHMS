@@ -1,5 +1,7 @@
 package TREE;
 
+import java.util.HashSet;
+
 public class CountTheNodesAtDistanceKFromLeaf {
     private Tree root;
     private class Tree
@@ -43,13 +45,21 @@ public class CountTheNodesAtDistanceKFromLeaf {
         PostOrderTraversal(root.right);
     }
 
-    private int  countNodeLeafK()
+    private int  countNodeLeafK(int k)
     {
+        countTheNodeAtDistanceLeaf(root,k);
         return -1;
     }
-    private void CountTheNodeAtDistanceLeaf()
+    HashSet<Tree> hashSet =new HashSet<>();
+    private void countTheNodeAtDistanceLeaf(Tree root,int k)
     {
+        if(root==null)
+            return;
+        hashSet.add(root);
+        countTheNodeAtDistanceLeaf(root.left,k);
+        countTheNodeAtDistanceLeaf(root.right,k);
         
+
     }
 
 
