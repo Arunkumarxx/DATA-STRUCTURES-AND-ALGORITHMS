@@ -44,22 +44,25 @@ public class CountTheNodesAtDistanceKFromLeaf {
         System.out.print(root.data+" ");
         PostOrderTraversal(root.right);
     }
-
+    static int count=0;
     private int  countNodeLeafK(int k)
     {
-        countTheNodeAtDistanceLeaf(root,k);
+        countTheNodeAtDistanceLeaf(root,k,0);
         return -1;
     }
     HashSet<Tree> hashSet =new HashSet<>();
-    private void countTheNodeAtDistanceLeaf(Tree root,int k)
+    private void countTheNodeAtDistanceLeaf(Tree root,int k,int i)
     {
         if(root==null)
             return;
         hashSet.add(root);
-        countTheNodeAtDistanceLeaf(root.left,k);
-        countTheNodeAtDistanceLeaf(root.right,k);
-        
-
+        ++i;
+        countTheNodeAtDistanceLeaf(root.left,k,i);
+        countTheNodeAtDistanceLeaf(root.right,k,i);
+        if(hashSet.contains(root))
+        {
+            
+        }
     }
 
 
