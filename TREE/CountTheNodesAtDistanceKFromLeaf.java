@@ -52,17 +52,29 @@ public class CountTheNodesAtDistanceKFromLeaf {
         return count;
     }
     HashSet<Tree> hashSet =new HashSet<>();
-    private void countTheNodeAtDistanceLeaf(Tree root,int k,int i)
-    {
-        if(root==null)
-            return;
-        hashSet.add(root);
-        ++i;
-        countTheNodeAtDistanceLeaf(root.left,k,i);
-        countTheNodeAtDistanceLeaf(root.right,k,i);
-        if( i>=k&&!hashSet.contains(root))
-            count++;
+    private void countTheNodeAtDistanceLeaf(Tree root, int k, int pathLen, HashSet<Tree> hashSet) {
+        if (root == null) return;
+
+        // Add the current node to path array
+        path[pathLen] = root;
+        pathLen++;
+
+        // Check if it's a leaf node
+        if (root.left == null && root.right == null) {
+            if (pathLen - k - 1 >= 0) {
+                Tree ancestor = path[pathLen - k - 1]; // Find the ancestor k nodes away
+                // Add to hashSet to ensure unique nodes
+                if (!hashSet.contains(ancestor)) {
+                    hashSet.add(ancestor);
+                }
+            }
+        }
+
+        // Traverse to left and right subtrees
+        countTheNodeAtDistanceLeaf(root.left, k, pathLen, hashSet);
+        countTheNodeAtDistanceLeaf(root.right, k, pathLen, hashSet);
     }
+
 
 
     public static void main(String[] args) {
