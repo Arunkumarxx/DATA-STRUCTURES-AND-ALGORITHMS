@@ -85,6 +85,7 @@ public class LevelOrderTraversal {
         }
         System.out.println("\nIterative Level Order Traversal using Queue: ");
         ArrayList<Integer> queueOutput=tree.levelOrderUsingQueue();
-        for(Integer value:queueOutput) System.out.print(value+" ");
+        for(Integer value:queueOutput)
+            System.out.print(value+" ");
     }
 }
