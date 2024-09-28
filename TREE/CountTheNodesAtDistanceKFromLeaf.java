@@ -58,9 +58,10 @@ public class CountTheNodesAtDistanceKFromLeaf {
         ++len;
         if(root.left==null && root.right==null)
         {
-            if(len-k-1>=0 && !hashSet.contains(nodeAdd[len-k-1]))
-                hashSet.add(nodeAdd[len-k-1]);
-            return;
+            if(len-k-1>=0 && !hashSet.contains(nodeAdd[len-k-1])) {
+                Tree ancestor = nodeAdd[len-k-1];
+                hashSet.add(ancestor);
+            }
         }
         countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
         countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
