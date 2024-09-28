@@ -43,7 +43,12 @@ public class CountTheNodesAtDistanceKFromLeaf {
         System.out.print(root.data+" ");
     }
     public static void main(String[] args) {
-
+        CountTheNodesAtDistanceKFromLeaf BinaryTree =new CountTheNodesAtDistanceKFromLeaf();
+        BinaryTree.insert(1);
+        BinaryTree.insert(2);
+        BinaryTree.insert(3);
+        BinaryTree.insert(4);
+        BinaryTree.print();
     }
 
 }
