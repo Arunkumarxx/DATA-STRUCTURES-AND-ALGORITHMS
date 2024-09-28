@@ -1,6 +1,7 @@
 package TREE;
 
 public class CountTheNodesAtDistanceKFromLeaf {
+    private Tree root;
     private class Tree
     {
         int data;
@@ -12,7 +13,23 @@ public class CountTheNodesAtDistanceKFromLeaf {
             this.data=data;
         }
     }
-    private void
+    private void insert(int value)
+    {
+        root =addNode(root,value);
+    }
+    private Tree addNode(Tree root,int value)
+    {
+        if(root==null)
+        {
+            root=new Tree(value);
+            return root;
+        }
+        if(value<root.data)
+            root.left=addNode(root.left,value);
+        if(value>root.data)
+            root.right=addNode(root.right,value);
+        return root;
+    }
     public static void main(String[] args) {
 
     }
