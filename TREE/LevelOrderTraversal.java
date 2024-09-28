@@ -47,12 +47,19 @@ public class LevelOrderTraversal {
     }
     private static ArrayList<ArrayList<Integer>> res= new ArrayList<>();
 
+    private void levelOrderTraversal(Tree root,int level)
+    {
+        if(root==null)
+            return;
+        
+    }
     public static void main(String[] args) {
         LevelOrderTraversal tree =new LevelOrderTraversal();
         Random random =new Random();
         for(int i=0 ;i<=10;++i)
             tree.insert(random.nextInt(0,9));
         tree.print();
+
     }
 
 }
