@@ -3,6 +3,7 @@ package TREE;
 import java.util.ArrayList;
 
 public class LevelOrderTraversal {
+    private Tree root;
     private class  Tree {
         int data;
         Tree right;
@@ -14,9 +15,9 @@ public class LevelOrderTraversal {
             this.left=right;
         }
     }
-    private void insert()
+    private void insert(int value)
     {
-
+        root=addNode(root,value);
     }
     private Tree addNode(Tree root,int data)
     {
@@ -33,7 +34,7 @@ public class LevelOrderTraversal {
     }
     private void print()
     {
-
+        InOrderTraversal(root);
     }
     private void InOrderTraversal(Tree root)
     {
