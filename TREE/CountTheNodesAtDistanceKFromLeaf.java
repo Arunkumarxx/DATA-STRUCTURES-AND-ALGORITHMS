@@ -12,7 +12,7 @@ public class CountTheNodesAtDistanceKFromLeaf {
             this.data=data;
         }
     }
-    private void 
+    private void
     public static void main(String[] args) {
 
     }
