@@ -35,9 +35,11 @@ public class LevelOrderTraversal {
     {
 
     }
-    private void InOrderTraversal()
+    private void InOrderTraversal(Tree root)
     {
-
+        InOrderTraversal(root.left);
+        System.out.print(root.data+" ");
+        InOrderTraversal(root.right);
     }
     private static ArrayList<ArrayList<Integer>> res= new ArrayList<>();
 
