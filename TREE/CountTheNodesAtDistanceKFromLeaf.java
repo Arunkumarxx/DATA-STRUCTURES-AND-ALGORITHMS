@@ -30,6 +30,14 @@ public class CountTheNodesAtDistanceKFromLeaf {
             root.right=addNode(root.right,value);
         return root;
     }
+    private void print()
+    {
+        PostOrderTraversal(root);
+    }
+    private void PostOrderTraversal(Tree root)
+    {
+        PostOrderTraversal();
+    }
     public static void main(String[] args) {
 
     }
