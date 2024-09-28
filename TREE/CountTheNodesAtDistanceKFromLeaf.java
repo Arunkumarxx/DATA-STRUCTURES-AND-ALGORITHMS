@@ -52,12 +52,14 @@ public class CountTheNodesAtDistanceKFromLeaf {
     }
     private void  countTheNodeAtDistanceKfromLeaf(Tree root,Tree[] nodeAdd,int len,HashSet<Tree> hashSet,int k)
     {
+
         nodeAdd[len]=root;
         ++len;
         if(root.left==null && root.right==null)
         {
             if(len-k-1>=0 && !hashSet.contains(len-k-1))
                 hashSet.add(nodeAdd[len-k-1]);
+            return;
         }
         countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
         countTheNodeAtDistanceKfromLeaf(root,nodeAdd,len,hashSet,k);
