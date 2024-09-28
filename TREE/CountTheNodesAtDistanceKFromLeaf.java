@@ -44,37 +44,28 @@ public class CountTheNodesAtDistanceKFromLeaf {
         System.out.print(root.data+" ");
         PostOrderTraversal(root.right);
     }
-    static int count=0;
     private int countNodeLeafK(int k) {
-        HashSet<Tree> visitedNodes = new HashSet<>();
-        countTheNodeAtDistanceLeaf(root, new Tree[1000], 0, k, visitedNodes);
-        return visitedNodes.size();  // The size of visitedNodes will be the count of unique nodes
+        HashSet<Tree> hashSet = new HashSet<>();
+        countTheNodeAtDistanceLeaf(root, k, 0, new Tree[1000], hashSet);
+        return hashSet.size();
     }
-    HashSet<Tree> hashSet =new HashSet<>();
-    private void countTheNodeAtDistanceLeaf(Tree root, int k, int pathLen, HashSet<Tree> hashSet) {
-        if (root == null) return;
 
-        // Add the current node to path array
+    private void countTheNodeAtDistanceLeaf(Tree root, int k, int pathLen, Tree[] path, HashSet<Tree> hashSet) {
+        if (root == null)
+            return;
         path[pathLen] = root;
         pathLen++;
-
-        // Check if it's a leaf node
         if (root.left == null && root.right == null) {
             if (pathLen - k - 1 >= 0) {
-                Tree ancestor = path[pathLen - k - 1]; // Find the ancestor k nodes away
-                // Add to hashSet to ensure unique nodes
+                Tree ancestor = path[pathLen - k - 1];
                 if (!hashSet.contains(ancestor)) {
                     hashSet.add(ancestor);
                 }
             }
         }
-
-        // Traverse to left and right subtrees
-        countTheNodeAtDistanceLeaf(root.left, k, pathLen, hashSet);
-        countTheNodeAtDistanceLeaf(root.right, k, pathLen, hashSet);
+        countTheNodeAtDistanceLeaf(root.left, k, pathLen, path, hashSet);
+        countTheNodeAtDistanceLeaf(root.right, k, pathLen, path, hashSet);
     }
-
-
 
     public static void main(String[] args) {
         CountTheNodesAtDistanceKFromLeaf BinaryTree =new CountTheNodesAtDistanceKFromLeaf();
