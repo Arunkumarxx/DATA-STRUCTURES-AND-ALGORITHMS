@@ -14,7 +14,31 @@ public class LevelOrderTraversal {
             this.left=right;
         }
     }
-    
+    private void insert()
+    {
+
+    }
+    private Tree addNode(Tree root,int data)
+    {
+        if(root==null)
+        {
+            root=new Tree(data);
+            return  root;
+        }
+        if(data<root.data)
+            root.left=addNode(root.left,data);
+        if(data>root.data)
+            root.right=addNode(root.right,data);
+        return root;
+    }
+    private void print()
+    {
+
+    }
+    private void InOrderTraversal()
+    {
+        
+    }
     private static ArrayList<ArrayList<Integer>> res= new ArrayList<>();
 
     public static void main(String[] args) {
