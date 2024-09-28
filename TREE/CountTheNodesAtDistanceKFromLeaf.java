@@ -64,13 +64,14 @@ public class CountTheNodesAtDistanceKFromLeaf {
     }
 
     public static void main(String[] args) {
-        CountTheNodesAtDistanceKFromLeaf binaryTre =new CountTheNodesAtDistanceKFromLeaf();
-        binaryTre.insert(1);
-        binaryTre.insert(2);
-        binaryTre.insert(3);
-        binaryTre.insert(4);
-        binaryTre.print();
+        CountTheNodesAtDistanceKFromLeaf binaryTree =new CountTheNodesAtDistanceKFromLeaf();
+        binaryTree.insert(1);
+        binaryTree.insert(2);
+        binaryTree.insert(3);
+        binaryTree.insert(4);
+        binaryTree.print();
         System.out.println();
+        binaryTree.countNodeLeafK(2);
 
     }
 
