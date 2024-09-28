@@ -45,11 +45,10 @@ public class CountTheNodesAtDistanceKFromLeaf {
         PostOrderTraversal(root.right);
     }
     static int count=0;
-    private int  countNodeLeafK(int k)
-    {
-        count=0;
-        countTheNodeAtDistanceLeaf(root,k,0);
-        return count;
+    private int countNodeLeafK(int k) {
+        HashSet<Tree> visitedNodes = new HashSet<>();
+        countTheNodeAtDistanceLeaf(root, new Tree[1000], 0, k, visitedNodes);
+        return visitedNodes.size();  // The size of visitedNodes will be the count of unique nodes
     }
     HashSet<Tree> hashSet =new HashSet<>();
     private void countTheNodeAtDistanceLeaf(Tree root, int k, int pathLen, HashSet<Tree> hashSet) {
