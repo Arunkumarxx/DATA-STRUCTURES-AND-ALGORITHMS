@@ -49,7 +49,10 @@ public class CountTheNodesAtDistanceKFromLeaf {
         HashSet<Tree> hashSet=new HashSet<>();
 
     }
-    private void  countNode
+    private void  countTheNodeAtDistanceKfromLeaf()
+    {
+        
+    }
 
     public static void main(String[] args) {
         CountTheNodesAtDistanceKFromLeaf BinaryTree =new CountTheNodesAtDistanceKFromLeaf();
