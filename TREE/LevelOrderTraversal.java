@@ -1,6 +1,7 @@
 package TREE;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class LevelOrderTraversal {
     private Tree root;
@@ -45,7 +46,11 @@ public class LevelOrderTraversal {
     private static ArrayList<ArrayList<Integer>> res= new ArrayList<>();
 
     public static void main(String[] args) {
-
+        LevelOrderTraversal tree =new LevelOrderTraversal();
+        Random random =new Random();
+        for(int i=0 ;i<=10;++i)
+            tree.insert(i);
+        tree.print();
     }
 
 }
