@@ -54,15 +54,11 @@ public class LevelOrderTraversal {
     {
         if(root==null)
             return;
-        ++level;
         if(level>= res.size())
-        {
-            temp.add(root.data);
-            res.add(temp);
-            temp.clear();
-        }
-        else
-            res.get(level).add(root.data);
+            res.add(new ArrayList());
+
+        res.get(level).add(root.data);
+        
         levelOrderTraversal(root.left,level);
         levelOrderTraversal(root.right,level);
     }
