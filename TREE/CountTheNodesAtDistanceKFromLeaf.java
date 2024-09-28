@@ -47,8 +47,9 @@ public class CountTheNodesAtDistanceKFromLeaf {
     static int count=0;
     private int  countNodeLeafK(int k)
     {
+        count=0;
         countTheNodeAtDistanceLeaf(root,k,0);
-        return -1;
+        return count;
     }
     HashSet<Tree> hashSet =new HashSet<>();
     private void countTheNodeAtDistanceLeaf(Tree root,int k,int i)
