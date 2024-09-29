@@ -56,7 +56,7 @@ public class MirrorTree{
             Tree temp = root.left;
             root.left = root.right;
             root.right = temp;
-        }
+        } else return;
         swapNodes(root.left);
         swapNodes(root.right);
 
