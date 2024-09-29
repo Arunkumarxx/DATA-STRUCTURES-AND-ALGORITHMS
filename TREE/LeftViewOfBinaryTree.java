@@ -50,8 +50,26 @@ public class LeftViewOfBinaryTree {
     private void leftView()
     {
         ArrayList<ArrayList<Integer>>  level=new ArrayList<>();
-        Queue<Integer> queue =new LinkedList<>();
-        
+        Queue<Tree> queue =new LinkedList<>();
+        Tree Root=root;
+        queue.add(Root);
+        while(!queue.isEmpty())
+        {
+            int len=queue.size();
+            ArrayList<Integer> temp =new ArrayList<>();
+            for(int i=0;i<len;++i)
+            {
+                Tree curr=queue.poll();
+                if(curr.left!=null)
+                    queue.add(curr.left);
+                if(curr.right!=null)
+                    queue.add(curr.right);
+                if(temp.isEmpty())
+                    temp.add(curr.data);
+            }
+            level.add(temp);
+        }
+        System.out.println(level);
     }
     public static void main(String[] args) {
         LeftViewOfBinaryTree tree =new LeftViewOfBinaryTree();
