@@ -68,8 +68,9 @@ public class ChildrenSumProperty {
     }
     public static void main(String[] args) {
         ChildrenSumProperty tree= new ChildrenSumProperty();
-        for(int i=0; i<=10;++i)
-            tree.insert(i);
+        tree.insert(35);
+        tree.insert(20);
+        tree.insert(15);
         System.out.println(tree.isSumProperty());
     }
 
