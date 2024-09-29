@@ -53,9 +53,9 @@ public class CheckForBalancedBinaryTree {
     {
         if(root==null)
             return 0;
-        int heightl=1+checkBalancedBinaryTree(root.left);
-        int heightr=checkBalancedBinaryTree(root.right);
-
+        int rHeight=1+checkBalancedBinaryTree(root.left);
+        int lHeight=1+checkBalancedBinaryTree(root.right);
+        
     }
     public static void main(String[] args) {
 
