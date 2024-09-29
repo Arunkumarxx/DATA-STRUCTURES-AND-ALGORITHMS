@@ -66,7 +66,7 @@ public class CheckForBalancedBinaryTree {
     }
     public static void main(String[] args) {
         CheckForBalancedBinaryTree tree = new CheckForBalancedBinaryTree();
-        for(int i=0 ;i<=2;++i)
+        for(int i=0 ;i<=3;++i)
             tree.insert(i);
         tree.print();
         System.out.println();
