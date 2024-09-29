@@ -47,10 +47,9 @@ public class CheckForBalancedBinaryTree {
     }
     private boolean isBalancedBinaryTree()
     {
-        checkBalancedBinaryTree(root);
-        return isValid;
+        return checkBalancedBinaryTree(root)!=-1;
     }
-    boolean isValid=true;
+
     private int checkBalancedBinaryTree(Tree root)
     {
         if(root==null)
