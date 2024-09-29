@@ -43,9 +43,28 @@ public class MirrorTree{
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
-    
+    private void mirrorTree()
+    {
+        swapNodes(root);
+    }
+    private void  swapNodes(Tree root)
+    {
+        if(root==null || root.left==null && root.right==null)
+            return;
+        if(!(root.left==null || root.right==null))
+        {
+            int temp=root.left.data;
+            root.left.data=root.right.data;
+            root.right.data=temp;
+        }
+        swapNodes(root.left);
+        swapNodes(root.right);
+    }
     public static void main(String[] args) {
-
+        MirrorTree tree =new MirrorTree();
+        for (int i=0; i<=10;++i)
+            tree.insert(i);
+        tree.mirrorTree();
     }
 
 }
