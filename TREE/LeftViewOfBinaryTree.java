@@ -45,9 +45,9 @@ public class LeftViewOfBinaryTree {
     }
     private void leftView()
     {
-        
+        LeftViewOfBinaryTree();
     }
-    private void LeftViewOfBinaryTree()
+    private void LeftViewOfBinaryTree(Tree root,)
     {
 
     }
