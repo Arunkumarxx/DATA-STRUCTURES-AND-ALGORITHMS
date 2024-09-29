@@ -25,9 +25,9 @@ public class LeftViewOfBinaryTree {
             root=new Tree(data);
             return root;
         }
-        if(data<root.left.data)
+        if(data<root.data)
             root.left=addNode(root.left,data);
-        else if(data>root.right.data)
+        else if(data>root.data)
             root.right=addNode(root.right,data);
         return root;
     }
