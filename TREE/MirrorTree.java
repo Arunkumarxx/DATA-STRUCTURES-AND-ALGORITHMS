@@ -52,10 +52,10 @@ public class MirrorTree{
         if(root==null)
             return;
 
-        swapNodes(root.left);
         Tree temp=root.left;
         root.left=root.right;
         root.right=temp;
+        swapNodes(root.left);
         swapNodes(root.right);
 
 
