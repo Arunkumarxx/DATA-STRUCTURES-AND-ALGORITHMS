@@ -49,16 +49,15 @@ public class MirrorTree{
     }
     private void  swapNodes(Tree root)
     {
-        if(root==null || root.left==null && root.right==null)
+        if(root==null)
             return;
-        if(!(root.left==null || root.right==null))
-        {
-            int temp=root.left.data;
-            root.left.data=root.right.data;
-            root.right.data=temp;
-        }
+
         swapNodes(root.left);
         swapNodes(root.right);
+
+        Tree temp=root.left;
+        root.left=root.right;
+        root.right=temp;
     }
     public static void main(String[] args) {
         MirrorTree tree =new MirrorTree();
