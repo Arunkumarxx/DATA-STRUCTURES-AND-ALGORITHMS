@@ -7,25 +7,25 @@ public class SizeOfBinaryTree {
         int data;
         Tree left, right;
         Tree(int value) {
-            this.data = value;
-            this.left = null;
-            this.right = null;
+            this.data=value;
+            this.left=null;
+            this.right=null;
         }
     }
 
     private void insert(int value) {
-        root = addNode(root, value);
+        root=addNode(root,value);
     }
 
     private Tree addNode(Tree root, int value) {
-        if (root == null) {
-            root = new Tree(value);
+        if (root==null) {
+            root=new Tree(value);
             return root;
         }
-        if (value < root.data)
-            root.left = addNode(root.left, value);
-        else if (value > root.data)
-            root.right = addNode(root.right, value);
+        if (value<root.data)
+            root.left=addNode(root.left,value);
+        else if (value>root.data)
+            root.right=addNode(root.right,value);
         return root;
     }
 
@@ -34,9 +34,9 @@ public class SizeOfBinaryTree {
     }
 
     private void InOrderTraversal(Tree node) {
-        if (node != null) {
+        if (node!=null) {
             InOrderTraversal(node.left);
-            System.out.print(node.data + " ");
+            System.out.print(node.data+" ");
             InOrderTraversal(node.right);
         }
     }
@@ -46,9 +46,9 @@ public class SizeOfBinaryTree {
     }
 
     private static int treeTraversal(Tree root) {
-        if (root == null)
+        if (root==null)
             return 0;
-        return 1 + treeTraversal(root.left) + treeTraversal(root.right);
+        return 1+treeTraversal(root.left)+treeTraversal(root.right);
     }
 
     public static void main(String[] args) {
