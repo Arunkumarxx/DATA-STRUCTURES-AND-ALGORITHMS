@@ -53,11 +53,12 @@ public class MirrorTree{
             return;
 
         swapNodes(root.left);
-        swapNodes(root.right);
-
         Tree temp=root.left;
         root.left=root.right;
         root.right=temp;
+        swapNodes(root.right);
+
+
     }
     public static void main(String[] args) {
         MirrorTree tree =new MirrorTree();
