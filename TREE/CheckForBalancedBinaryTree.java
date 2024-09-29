@@ -67,7 +67,7 @@ public class CheckForBalancedBinaryTree {
         for(int i=0 ;i<=15;++i)
             tree.insert(i);
         tree.print();
-        
+        tree.isBalancedBinaryTree();
     }
 
 }
