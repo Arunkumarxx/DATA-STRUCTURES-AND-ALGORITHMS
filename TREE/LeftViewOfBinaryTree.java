@@ -1,5 +1,9 @@
 package TREE;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class LeftViewOfBinaryTree {
     private Tree root;
     private class Tree
@@ -45,11 +49,9 @@ public class LeftViewOfBinaryTree {
     }
     private void leftView()
     {
-        LeftViewOfBinaryTree();
-    }
-    private void LeftViewOfBinaryTree(Tree root,)
-    {
-
+        ArrayList<ArrayList<Integer>>  level=new ArrayList<>();
+        Queue<Integer> queue =new LinkedList<>();
+        
     }
     public static void main(String[] args) {
         LeftViewOfBinaryTree tree =new LeftViewOfBinaryTree();
