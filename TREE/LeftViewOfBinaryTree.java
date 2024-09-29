@@ -45,9 +45,8 @@ public class LeftViewOfBinaryTree {
     }
     public static void main(String[] args) {
         LeftViewOfBinaryTree tree =new LeftViewOfBinaryTree();
-        tree.insert(1);
-        tree.insert(2);
-        tree.insert(3);
+        for(int i=0;i<=10;++i)
+            tree.insert(i);
         tree.print();
     }
 
