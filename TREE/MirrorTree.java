@@ -59,8 +59,6 @@ public class MirrorTree{
         } else return;
         swapNodes(root.left);
         swapNodes(root.right);
-
-
     }
     public static void main(String[] args) {
         MirrorTree tree =new MirrorTree();

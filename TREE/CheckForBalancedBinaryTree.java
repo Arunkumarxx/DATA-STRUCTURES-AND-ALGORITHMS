@@ -1,2 +1,4 @@
-package TREE;public class CheckForBalancedBinaryTREe {
+package TREE;
+
+public class CheckForBalancedBinaryTree {
 }
