@@ -42,8 +42,35 @@ public class ChildrenSumProperty {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
+    private boolean isSumProperty()
+    {
+        childrenProperty(root);
+        return isSumPropertyValid;
+    }
+    boolean isSumPropertyValid=true;
+    private void childrenProperty(Tree root)
+    {
+        if(root==null)
+            return;
+        if(!isSumPropertyValid)
+            return;
+        if(root.left==null && root.right==null)
+            return;
+        int childSum=0;
+        if(root.left!=null)
+            childSum+=root.left.data;
+        if(root.right!=null)
+            childSum+=root.right.data;
+        if(childSum!=root.data)
+            isSumPropertyValid=false;
+        childrenProperty(root.left);
+        childrenProperty(root.right);
+    }
     public static void main(String[] args) {
-        
+        ChildrenSumProperty tree= new ChildrenSumProperty();
+        for(int i=0; i<=10;++i)
+            tree.insert(i);
+        System.out.println(tree.isSumProperty());
     }
 
 }
