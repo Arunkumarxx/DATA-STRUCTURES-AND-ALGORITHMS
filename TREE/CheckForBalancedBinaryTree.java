@@ -43,8 +43,21 @@ public class CheckForBalancedBinaryTree {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
+    private boolean isBalancedBinaryTree()
+    {
+        checkBalancedBinaryTree(root);
+        return isValid;
+    }
+    boolean isValid=true;
+    private int checkBalancedBinaryTree(Tree root)
+    {
+        if(root==null)
+            return 0;
+        int leftHeight=checkBalancedBinaryTree(root.left);
+        int rightHeight=checkBalancedBinaryTree(root.right);
+    }
     public static void main(String[] args) {
-        
+
     }
 
 }
