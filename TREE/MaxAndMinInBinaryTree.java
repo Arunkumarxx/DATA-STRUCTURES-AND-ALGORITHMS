@@ -1,2 +1,4 @@
-package TREE;public class MaxAndMinInBinaryTree {
+package TREE;
+
+public class MaxAndMinInBinaryTree {
 }
