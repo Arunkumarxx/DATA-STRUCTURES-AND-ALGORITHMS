@@ -57,7 +57,9 @@ public class CheckForBalancedBinaryTree {
             return 0;
         int lHeight=checkBalancedBinaryTree(root.left);
         int rHeight=checkBalancedBinaryTree(root.right);
-        
+        if(lHeight==-1||rHeight==-1|| Math.abs(lHeight-rHeight)>1)
+            return -1;
+        return Math.max(lHeight,rHeight)+1;
     }
     public static void main(String[] args) {
         CheckForBalancedBinaryTree tree = new CheckForBalancedBinaryTree();
