@@ -37,10 +37,14 @@ public class LeftViewOfBinaryTree {
     }
     private void inOrderTraversal(Tree root)
     {
-        
+        if(root==null)
+            return;
+        inOrderTraversal(root.left);
+        System.out.print(root.data+" ");
+        inOrderTraversal(root.right);
     }
     public static void main(String[] args) {
-
+        
     }
 
 }
