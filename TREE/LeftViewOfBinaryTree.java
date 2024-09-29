@@ -73,7 +73,7 @@ public class LeftViewOfBinaryTree {
     }
     public static void main(String[] args) {
         LeftViewOfBinaryTree tree =new LeftViewOfBinaryTree();
-        for(int i=1;i<=8;++i)
+        for(int i=1;i<=20;++i)
             tree.insert(i);
 //        tree.print();
         tree.leftView();
