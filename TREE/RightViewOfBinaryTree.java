@@ -60,7 +60,7 @@ public class RightViewOfBinaryTree {
             for(int i=0;i<len;++i)
             {
                 Tree curr=queue.poll();
-                if(i==0)
+                if(i==len-1)
                     temp.add(curr.data);
                 if(curr.left!=null)
                     queue.add(curr.left);
