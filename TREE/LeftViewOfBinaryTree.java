@@ -43,11 +43,20 @@ public class LeftViewOfBinaryTree {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
+    private void leftView()
+    {
+        
+    }
+    private void LeftViewOfBinaryTree()
+    {
+
+    }
     public static void main(String[] args) {
         LeftViewOfBinaryTree tree =new LeftViewOfBinaryTree();
         for(int i=1;i<=10;++i)
             tree.insert(i);
         tree.print();
+        tree.leftView();
     }
 
 }
