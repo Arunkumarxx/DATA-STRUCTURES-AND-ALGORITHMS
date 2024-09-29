@@ -52,6 +52,8 @@ public class ChildrenSumProperty {
     {
         if(root==null|| !isSumPropertyValid)
             return;
+        if(root.left==null && root.right==null)
+            return;
         int childSum=0;
         if(root.left!=null)
             childSum+=root.left.data;
