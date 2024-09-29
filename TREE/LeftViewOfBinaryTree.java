@@ -60,12 +60,12 @@ public class LeftViewOfBinaryTree {
             for(int i=0;i<len;++i)
             {
                 Tree curr=queue.poll();
+                if(i==0)
+                    temp.add(curr.data);
                 if(curr.left!=null)
                     queue.add(curr.left);
                 if(curr.right!=null)
                     queue.add(curr.right);
-                if(temp.isEmpty())
-                    temp.add(curr.data);
             }
             level.add(temp);
         }
