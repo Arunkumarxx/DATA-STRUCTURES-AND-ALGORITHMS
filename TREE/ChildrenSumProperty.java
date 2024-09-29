@@ -50,9 +50,7 @@ public class ChildrenSumProperty {
     boolean isSumPropertyValid=true;
     private void childrenProperty(Tree root)
     {
-        if(root==null)
-            return;
-        if(!isSumPropertyValid)
+        if(root==null|| !isSumPropertyValid)
             return;
         if(root.left==null && root.right==null)
             return;
@@ -61,8 +59,11 @@ public class ChildrenSumProperty {
             childSum+=root.left.data;
         if(root.right!=null)
             childSum+=root.right.data;
-        if(childSum!=root.data)
-            isSumPropertyValid=false;
+
+        if(childSum!=root.data) {
+            isSumPropertyValid = false;
+            return;
+        }
         childrenProperty(root.left);
         childrenProperty(root.right);
     }
