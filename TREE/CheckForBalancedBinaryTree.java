@@ -51,14 +51,22 @@ public class CheckForBalancedBinaryTree {
     boolean isValid=true;
     private int checkBalancedBinaryTree(Tree root)
     {
-        if(root==null)
+        if(root==null|| !isValid)
             return 0;
-        int rHeight=1+checkBalancedBinaryTree(root.left);
-        int lHeight=1+checkBalancedBinaryTree(root.right);
-        
+        int lHeight=1+checkBalancedBinaryTree(root.left);
+        int rHeight=1+checkBalancedBinaryTree(root.right);
+        int height=Math.max(lHeight,rHeight)-Math.min(lHeight,rHeight);
+        if(height>=1) {
+            isValid = false;
+            return 0;
+        }
+        return Math.max(lHeight,rHeight);
     }
     public static void main(String[] args) {
-
+        CheckForBalancedBinaryTree tree = new CheckForBalancedBinaryTree();
+        for(int i=0 ;i<=15;++i)
+            tree.insert(i);
+        tree.print();
     }
 
 }
