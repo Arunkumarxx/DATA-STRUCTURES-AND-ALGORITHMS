@@ -1,5 +1,7 @@
 package TREE;
 
+import com.sun.jdi.request.StepRequest;
+
 public class ChildrenSumProperty {
     private Tree root;
     private class Tree
@@ -69,9 +71,11 @@ public class ChildrenSumProperty {
     }
     public static void main(String[] args) {
         ChildrenSumProperty tree= new ChildrenSumProperty();
-        tree.insert(35);
-        tree.insert(20);
-        tree.insert(15);
+        tree.insert(10);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(2);
+        tree.insert(2);
         System.out.println(tree.isSumProperty());
     }
 
