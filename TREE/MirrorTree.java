@@ -64,7 +64,9 @@ public class MirrorTree{
         MirrorTree tree =new MirrorTree();
         for (int i=0; i<=10;++i)
             tree.insert(i);
+        tree.print();
         tree.mirrorTree();
+        tree.print();
     }
 
 }
