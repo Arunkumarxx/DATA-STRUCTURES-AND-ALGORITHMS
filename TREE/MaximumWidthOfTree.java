@@ -36,6 +36,27 @@ public class MaximumWidthOfTree {
     {
         inOrderTraversal(root);
     }
+    int getMaxWidth(Node root) {
+        // Your code here
+        Queue<Node> queue = new LinkedList<Node>();
+        queue.add(root);
+        int max=0;
+        while(!queue.isEmpty())
+        {
+            int currLevelSize=queue.size();
+            if(currLevelSize>max) max=currLevelSize;
+            for(int i=0;i<currLevelSize;++i)
+            {
+                Node curr=queue.poll();
+                if(curr.left!=null)
+                    queue.add(curr.left);
+                if(curr.right!=null)
+                    queue.add(curr.right);
+            }
+
+        }
+        return max;
+    }
     private void inOrderTraversal(Tree root)
     {
         if(root==null)
