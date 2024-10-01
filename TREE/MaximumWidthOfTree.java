@@ -1,28 +1,26 @@
 package TREE;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class MaximumWidthOfTree {
 
     private Tree root;
-    private class Tree
-    {
+    private class Tree {
         int data;
         Tree left;
         Tree right;
-        Tree(int data)
-        {
+        Tree(int data) {
             this.data=data;
-            this.left=right=null;
+            this.left=this.right=null;
         }
     }
 
-    private void insert(int value)
-    {
+    private void insert(int value) {
         root=addNode(root,value);
     }
-    private Tree addNode(Tree root,int data)
-    {
-        if(root==null)
-        {
+    private Tree addNode(Tree root,int data) {
+        if(root==null) {
             root=new Tree(data);
             return root;
         }
@@ -32,33 +30,27 @@ public class MaximumWidthOfTree {
             root.right=addNode(root.right,data);
         return root;
     }
-    private void print()
-    {
+    private void print() {
         inOrderTraversal(root);
     }
-    int getMaxWidth(Node root) {
-        // Your code here
-        Queue<Node> queue = new LinkedList<Node>();
+    int getMaxWidth(Tree root) {
+        Queue<Tree> queue=new LinkedList<Tree>();
         queue.add(root);
         int max=0;
-        while(!queue.isEmpty())
-        {
+        while(!queue.isEmpty()) {
             int currLevelSize=queue.size();
             if(currLevelSize>max) max=currLevelSize;
-            for(int i=0;i<currLevelSize;++i)
-            {
-                Node curr=queue.poll();
+            for(int i=0;i<currLevelSize;++i) {
+                Tree curr=queue.poll();
                 if(curr.left!=null)
                     queue.add(curr.left);
                 if(curr.right!=null)
                     queue.add(curr.right);
             }
-
         }
         return max;
     }
-    private void inOrderTraversal(Tree root)
-    {
+    private void inOrderTraversal(Tree root) {
         if(root==null)
             return;
         inOrderTraversal(root.left);
@@ -66,7 +58,14 @@ public class MaximumWidthOfTree {
         inOrderTraversal(root.right);
     }
     public static void main(String[] args) {
+        MaximumWidthOfTree tree=new MaximumWidthOfTree();
+        tree.insert(10);
+        tree.insert(5);
+        tree.insert(15);
+        tree.insert(3);
+        tree.insert(7);
+        tree.print();
 
+        System.out.println("\nMaximum width: "+tree.getMaxWidth(tree.root));
     }
-
 }
