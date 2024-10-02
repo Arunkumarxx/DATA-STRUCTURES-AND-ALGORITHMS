@@ -41,6 +41,21 @@ public class VerticalWidthOfBinaryTree {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
+
+    public int verticalWidth(Node root) {
+        HashSet<Integer> hashset =new HashSet<Integer>();
+        preOrderTraversal(hashset,root,0);
+        return hashset.size();
+    }
+    private void preOrderTraversal(HashSet<Integer> hashset,Node root,int lvl)
+    {
+        if(root==null)
+            return;
+        if(!hashset.contains(lvl))
+            hashset.add(lvl);
+        preOrderTraversal(hashset,root.left,lvl+1);
+        preOrderTraversal(hashset,root.right,lvl-1);
+    }
     public static void main(String[] args) {
 
     }
