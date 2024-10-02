@@ -43,7 +43,28 @@ public class CheckBinaryTreeIsFoldAble {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
-    
+    boolean IsFoldable(Node node)
+    {
+        if(node==null)
+            return true;
+        Queue<Node> queue =new LinkedList<Node>();
+        queue.add(node.left);
+        queue.add(node.right);
+        while(!queue.isEmpty())
+        {
+            Node left=queue.poll();
+            Node right=queue.poll();
+            if(left==null && right==null)
+                continue;
+            if(left==null  || right ==null)
+                return false;
+            queue.add(left.left);
+            queue.add(right.right);
+            queue.add(left.right);
+            queue.add(right.left);
+        }
+        return true;
+    }
     public static void main(String[] args) {
 
     }
