@@ -41,6 +41,36 @@ public class BinaryTreeToDoublyLinkedList {
         System.out.print(root.data+" ");
         inOrderTraversal(root.right);
     }
+
+    Node head=null;
+    Node tail=null;
+
+    Node bToDLL(Node root)
+    {
+        //  Your code here
+        inOrderTraversal(root);
+        return head;
+    }
+    void inOrderTraversal(Node root)
+    {
+        if(root==null)
+            return;
+        inOrderTraversal(root.left);
+        addNode(root.data);
+        inOrderTraversal(root.right);
+    }
+    void addNode(int value)
+    {
+        Node newNode =new Node(value);
+        if(head==null)
+        {
+            head=tail=newNode;
+            return;
+        }
+        tail.right=newNode;
+        newNode.left=tail;
+        tail=newNode;
+    }
     public static void main(String[] args) {
 
     }
