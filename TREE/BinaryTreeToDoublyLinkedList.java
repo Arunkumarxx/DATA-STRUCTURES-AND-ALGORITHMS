@@ -42,37 +42,50 @@ public class BinaryTreeToDoublyLinkedList {
         inOrderTraversal(root.right);
     }
 
-    Node head=null;
-    Node tail=null;
+    Tree head=null;
+    Tree tail=null;
 
-    Node bToDLL(Node root)
-    {
-        //  Your code here
-        inOrderTraversal(root);
+    Tree bToDLL(Tree root) {
+        inOrderTraversalToDLL(root);
         return head;
     }
-    void inOrderTraversal(Node root)
-    {
-        if(root==null)
+
+    void inOrderTraversalToDLL(Tree root) {
+        if (root==null)
             return;
-        inOrderTraversal(root.left);
-        addNode(root.data);
-        inOrderTraversal(root.right);
+        inOrderTraversalToDLL(root.left);
+        addNodeToDLL(root);
+        inOrderTraversalToDLL(root.right);
     }
-    void addNode(int value)
-    {
-        Node newNode =new Node(value);
-        if(head==null)
-        {
-            head=tail=newNode;
+
+    void addNodeToDLL(Tree node) {
+        if (head==null) {
+            head=tail=node;
             return;
         }
-        tail.right=newNode;
-        newNode.left=tail;
-        tail=newNode;
+        tail.right=node;
+        node.left=tail;
+        tail=node;
+        tail.right=null;
     }
+
     public static void main(String[] args) {
+        BinaryTreeToDoublyLinkedList tree=new BinaryTreeToDoublyLinkedList();
+        tree.insert(5);
+        tree.insert(3);
+        tree.insert(7);
+        tree.insert(2);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(8);
 
+        Tree head=tree.bToDLL(tree.root);
+
+        Tree current=head;
+        System.out.println("Doubly Linked List:");
+        while (current!=null) {
+            System.out.print(current.data+" ");
+            current=current.right;
+        }
     }
-
 }
