@@ -1,2 +1,9 @@
-package TREE;public class VerticalWidthOfBinaryTree {
+package TREE;
+
+public class VerticalWidthOfBinaryTree {
+    
+    public static void main(String[] args) {
+
+    }
+
 }
