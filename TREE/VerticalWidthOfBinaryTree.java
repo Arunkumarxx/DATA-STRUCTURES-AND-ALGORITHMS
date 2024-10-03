@@ -69,6 +69,5 @@ public class VerticalWidthOfBinaryTree {
         tree.insert(11);
         tree.insert(17);
         System.out.println("Vertical width of the tree: "+tree.verticalWidth(tree.root));
-        System.out.println();
     }
 }
