@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class ProgramForFactorialOfANumberUsingRecursion {
      static int  factorialNumber(int n) {
          if (n==0)

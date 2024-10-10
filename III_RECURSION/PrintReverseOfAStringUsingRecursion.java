@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 class PrintReverseOfAStringUsingRecursion {
     static void ReverseStringUsingRecursion(String str,int n) {

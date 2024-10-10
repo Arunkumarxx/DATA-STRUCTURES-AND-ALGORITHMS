@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class SubsetSumProblemUsingRecursion{
     static int  subsetOfSumUsingRecursion(int arr[],int sum,int i) {
         if (sum==0)

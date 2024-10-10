@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class CountTotalDigitsInANumber {
     static int  digit(int n,int c){

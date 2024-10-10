@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class LuckyNumbersUsingRecursion {
     static boolean LuckyNumbers(int n,int Count) {
         if (n<Count)

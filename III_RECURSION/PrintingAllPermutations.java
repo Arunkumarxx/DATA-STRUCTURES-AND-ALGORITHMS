@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class PrintingAllPermutations {
     static void PermutationsUsingRecursion(char arr[],int fi) {
         if (fi==arr.length-1) {

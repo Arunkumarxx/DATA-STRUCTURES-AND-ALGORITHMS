@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class PrintNTo1WithoutLoop {
      static void recursion (int n) {
          if (n==0)

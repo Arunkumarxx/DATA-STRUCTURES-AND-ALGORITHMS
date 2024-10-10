@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class TowerOfHanoiUsingRecursionGkg {
     static void TowerOfHanoi(int n,int src,int aux,int des) {
         if (n==1) {

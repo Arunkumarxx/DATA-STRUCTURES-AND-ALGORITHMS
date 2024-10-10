@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class PowerOfNumbersUsingRecursion {
     public static long power(int N, int R) {
         int mod = 1000000007;

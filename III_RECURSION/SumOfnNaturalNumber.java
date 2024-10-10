@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class SumOfnNaturalNumber {
     static int   Recursion(int n) {
         if (n==0) {

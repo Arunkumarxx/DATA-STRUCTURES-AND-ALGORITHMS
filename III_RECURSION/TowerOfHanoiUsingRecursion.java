@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class TowerOfHanoiUsingRecursion {
     static void count(int count){
         count++;

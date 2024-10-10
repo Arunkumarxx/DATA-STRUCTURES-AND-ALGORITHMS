@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class JosephusUsingRecursion {
     static void Josephus (int n,int k) {
         int arr[] =new int[n ];

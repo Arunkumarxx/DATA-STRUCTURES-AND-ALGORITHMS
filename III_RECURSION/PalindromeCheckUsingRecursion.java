@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class PalindromeCheckUsingRecursion {
     static String PalindromeUsingRecursion (String str, int i,String res) {

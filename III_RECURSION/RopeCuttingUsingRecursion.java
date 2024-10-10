@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class RopeCuttingUsingRecursion {
     static  int RopeCutting(int x,int a,int b, int c) {
         if (x==0)

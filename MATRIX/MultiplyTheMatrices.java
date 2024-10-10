@@ -1,7 +1,5 @@
 package MATRIX;
 
-import ARRAYS.Arrays;
-
 public class MultiplyTheMatrices {
     static int [][]print(int [][] One,int [][]Two) {
         int n1=One.length;

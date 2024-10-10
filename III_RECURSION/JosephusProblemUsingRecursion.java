@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class JosephusProblemUsingRecursion {
     static int jose(int n,int k) {

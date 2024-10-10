@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
  class ProgramForLengthOfAStringUsingRecursion {
      static int count=0;

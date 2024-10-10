@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class FactorialUsingRecursion {
     static int Fact(int n) {

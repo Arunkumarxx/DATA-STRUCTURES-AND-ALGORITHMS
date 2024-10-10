@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class Recursion1ToNAndNto1 {
     static void Recursion(int n) {

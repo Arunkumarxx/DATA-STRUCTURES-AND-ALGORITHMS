@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class ProgramToPrintNto1DivideBy2 {
     static int Recursion(int n) {

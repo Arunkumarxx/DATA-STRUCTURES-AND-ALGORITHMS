@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class DecimalToBinaryNumberUsingRecursion {
      static void RecursionDecimal(int n) {
          if (n==0)

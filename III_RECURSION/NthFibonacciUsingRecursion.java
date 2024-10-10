@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 public class NthFibonacciUsingRecursion {
     static int NthFibonacci(int n) {
         if (n==0)

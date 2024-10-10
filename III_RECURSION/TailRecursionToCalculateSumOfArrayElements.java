@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class TailRecursionToCalculateSumOfArrayElements {
      static void TailRecursionToSumOfArray(int arr[],int n,int sum) {
          if (n==0) {

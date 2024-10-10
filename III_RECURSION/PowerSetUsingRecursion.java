@@ -1,11 +1,7 @@
-package RECURSION;
+package III_RECURSION;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-
-import static java.util.Collections.*;
 
 public class PowerSetUsingRecursion {
     static String  call(String str) {

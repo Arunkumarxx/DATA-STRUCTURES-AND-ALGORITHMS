@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class PrintNtoOneUsingRecursion {
     static void Recursion(int n) {

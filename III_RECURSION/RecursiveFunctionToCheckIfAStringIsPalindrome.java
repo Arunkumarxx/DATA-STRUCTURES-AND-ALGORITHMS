@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 class RecursiveFunctionToCheckIfAStringIsPalindrome {
     static boolean CheckPalindromeUsingRecursion(String str,int s,int e) {

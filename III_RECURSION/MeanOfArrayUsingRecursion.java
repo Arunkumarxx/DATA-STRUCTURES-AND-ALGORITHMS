@@ -1,6 +1,4 @@
-package RECURSION;
-
-import java.util.Scanner;
+package III_RECURSION;
 
 class MeanOfArrayUsingRecursion {
     static int sum=0;

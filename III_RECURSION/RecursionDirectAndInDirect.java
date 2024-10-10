@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 public class RecursionDirectAndInDirect {
     static void funOne() {

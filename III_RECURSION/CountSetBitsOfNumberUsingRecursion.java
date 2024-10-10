@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 class CountSetBitsOfNumberUsingRecursion {
     static int count = 0;
     static int DecimalToBinary(int n) {

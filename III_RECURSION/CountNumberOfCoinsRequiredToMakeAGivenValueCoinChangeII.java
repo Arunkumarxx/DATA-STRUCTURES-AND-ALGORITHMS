@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 class CountNumberOfCoinsRequiredToMakeAGivenValueCoinChangeII {
     static int occurence = 0;

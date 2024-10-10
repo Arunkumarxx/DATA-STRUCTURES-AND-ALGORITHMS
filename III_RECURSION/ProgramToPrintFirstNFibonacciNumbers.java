@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class ProgramToPrintFirstNFibonacciNumbers {
      static int fibonacci(int n) {
          if (n==0)

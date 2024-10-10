@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
 
 class PrintFibonacciSeriesInReverseOrderUsingRecursion {
     static int FibonacciSeriesUsingRecursion(int n) {
