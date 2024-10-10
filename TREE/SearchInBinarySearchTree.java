@@ -58,7 +58,7 @@ public class SearchInBinarySearchTree {
         for(int i=0;i<=5;++i)
             tree.insert(i);
         System.out.println(tree.searchRecursive(tree.root, 1));
-        System.out.println(tree.searchIterative(tree.root, 2));
+        System.out.println(tree.searchIterative(tree.root, 22));
     }
 
 }
