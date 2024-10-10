@@ -20,17 +20,7 @@ public class InsertNodeInBinarySearchTree {
     }
     private void insertIteratively(int key)
     {
-        Tree curr=root;
-        while(curr.left!=null|| curr.right!=null)
-        {
-
-            if(key<curr.data)
-                curr=curr.left;
-            else if(key>curr.data)
-                curr=curr.right;
-           else if(curr.data==key)
-                return;
-        }
+        
     }
     private Tree addNodeRecursive(Tree root,int data)
     {
