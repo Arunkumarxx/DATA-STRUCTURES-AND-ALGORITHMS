@@ -1,7 +1,5 @@
 package TREE;
 
-import com.sun.jdi.request.StepRequest;
-
 public class ChildrenSumProperty {
     private Tree root;
     private class Tree

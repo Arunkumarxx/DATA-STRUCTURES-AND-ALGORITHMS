@@ -1,7 +1,5 @@
 package TREE;
 
-import com.sun.security.jgss.GSSUtil;
-
 public class CheckForBalancedBinaryTree {
     private Tree root;
     private class Tree
