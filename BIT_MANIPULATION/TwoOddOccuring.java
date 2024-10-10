@@ -1,4 +1,4 @@
-package BIT_WISE;
+package BIT_MANIPULATION;
 
 import java.util.HashSet;
 

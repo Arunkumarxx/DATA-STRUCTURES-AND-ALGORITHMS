@@ -1,4 +1,4 @@
-package BIT_WISE;
+package BIT_MANIPULATION;
 
 public class NumberIsSparseOrNot {
     static boolean NumberIsSparseOrNot(int n) {
