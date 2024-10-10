@@ -30,22 +30,35 @@ public class SearchInBinarySearchTree {
             root.right=addNode(root.right,data);
         return root;
     }
-    private boolean search(Tree root,int key)
+    private boolean searchRecursive(Tree root,int key)
     {
         if(root==null)
             return false;
         if(key==root.data)
             return true;
         if(key<root.data)
-           return search(root.left,key);
+           return searchRecursive(root.left,key);
         else
-           return search(root.right,key);
+           return searchRecursive(root.right,key);
+    }
+    private boolean searchIterative(Tree root,int key)
+    {
+        while(root!=null)
+        {
+            if(key==root.data)
+                return true;
+            if(key<root.data)
+                searchIterative(root.left,key);
+            else searchIterative(root.right,key);
+        }
+        return false;
     }
     public static void main(String[] args) {
         SearchInBinarySearchTree tree = new SearchInBinarySearchTree();
         for(int i=0;i<=5;++i)
             tree.insert(i);
-        System.out.println(tree.search(tree.root, 1));
+        System.out.println(tree.searchRecursive(tree.root, 1));
+        System.out.println(tree.searchIterative(tree.root, 2));
     }
 
 }
