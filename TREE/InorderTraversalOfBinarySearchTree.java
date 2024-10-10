@@ -30,9 +30,9 @@ public class InorderTraversalOfBinarySearchTree {
                 curr=curr.right;
             else return;
         }
-        if(key<parent.data)
+        if(parent!=null && key<parent.data)
             parent.left=new Tree(key);
-        else if(key>parent.data)
+        else if( parent!=null && key>parent.data)
             parent.right=new Tree(key);
     }
    private ArrayList<Integer> inOrder(Tree root) {
