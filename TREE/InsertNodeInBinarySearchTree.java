@@ -21,8 +21,9 @@ public class InsertNodeInBinarySearchTree {
     private void insertIteratively(int key)
     {
         Tree curr=root;
-        while(curr!=null)
+        while(curr.left!=null|| curr.right!=null)
         {
+
             if(key<curr.data)
                 curr=curr.left;
             else if(key>curr.data)
@@ -30,8 +31,6 @@ public class InsertNodeInBinarySearchTree {
            else if(curr.data==key)
                 return;
         }
-        if(curr==null)
-            curr=new Tree(key);
     }
     private Tree addNodeRecursive(Tree root,int data)
     {
