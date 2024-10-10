@@ -14,18 +14,33 @@ public class InsertNodeInBinarySearchTree {
             this.data=data;
         }
     }
-    private void insert(int val)
+    private void insertRecursively(int val)
     {
-        root=addNode(root,val);
+        root=addNodeRecursive(root,val);
     }
-    private Tree addNode(Tree root,int data)
+    private void insertIteratively(int key)
+    {
+        Tree curr=root;
+        while(curr!=null)
+        {
+            if(key<curr.data)
+                curr=curr.left;
+            else if(key>curr.data)
+                curr=curr.right;
+           else if(curr.data==key)
+                return;
+        }
+        if(curr==null)
+            curr=new Tree(key);
+    }
+    private Tree addNodeRecursive(Tree root,int data)
     {
         if(root==null)
             return new Tree(data);
         if(data<root.data)
-            root.left=addNode(root.left,data);
+            root.left=addNodeRecursive(root.left,data);
         else if(data>root.data)
-            root.right=addNode(root.right,data);
+            root.right=addNodeRecursive(root.right,data);
         return root;
     }
     private void print()
