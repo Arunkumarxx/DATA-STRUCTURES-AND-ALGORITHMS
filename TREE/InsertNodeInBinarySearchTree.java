@@ -36,7 +36,7 @@ public class InsertNodeInBinarySearchTree {
     {
         Stack<Tree> stack =new Stack<>();
         Tree curr=root;
-        while(curr!=null || stack.isEmpty())
+        while(curr!=null || !stack.isEmpty())
         {
             while(curr!=null)
             {
