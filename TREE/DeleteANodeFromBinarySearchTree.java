@@ -37,7 +37,10 @@ public class DeleteANodeFromBinarySearchTree {
             parent.right=new Tree(key);
     }
     public static void main(String[] args) {
-
+        DeleteANodeFromBinarySearchTree tree  =new DeleteANodeFromBinarySearchTree();
+        for(int i=0;i<=5;++i)
+            tree.insert(i);
+        
     }
 
 }
