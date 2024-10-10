@@ -16,7 +16,25 @@ public class InorderTraversalOfBinarySearchTree {
             this.left = null;
         }
     }
-    ArrayList<Integer> inOrder(Tree root) {
+    private void insert(int key)
+    {
+        Tree curr=root;
+        Tree parent=null;
+        while(curr!=null)
+        {
+            parent=curr;
+            if(key<curr.data)
+                curr=curr.left;
+            else if(key>curr.data)
+                curr=curr.right;
+            else return;
+        }
+        if(key<parent.data)
+            parent.left=new Tree(key);
+        else if(key>parent.data)
+            parent.right=new Tree(key);
+    }
+   private ArrayList<Integer> inOrder(Tree root) {
         ArrayList<Integer> res= new ArrayList<Integer>();
         Stack<Tree> stack =new Stack<>();
         while(root!=null || !stack.isEmpty())
@@ -33,7 +51,13 @@ public class InorderTraversalOfBinarySearchTree {
         return res;
     }
     public static void main(String[] args) {
-        
+        InorderTraversalOfBinarySearchTree tree = new InorderTraversalOfBinarySearchTree();
+        tree.insert(1);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(4);
+        tree.insert(5);
+        tree.
     }
 
 }
