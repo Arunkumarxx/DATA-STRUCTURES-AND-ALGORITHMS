@@ -12,7 +12,10 @@ public class InsertNodeInBinarySearchTree {
             this.right=left=null;
         }
     }
-    
+    private void insert()
+    {
+
+    }
     public static void main(String[] args) {
 
     }
