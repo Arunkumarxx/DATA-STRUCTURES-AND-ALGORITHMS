@@ -1,5 +1,7 @@
 package TREE;
 
+import java.util.Stack;
+
 public class InsertNodeInBinarySearchTree {
     private Tree root;
     private class Tree
@@ -28,7 +30,16 @@ public class InsertNodeInBinarySearchTree {
     }
     private void InorderTraversal(Tree root)
     {
-
+        Stack<Tree> stack =new Stack<>();
+        stack.add(root);
+        Tree curr=null;
+        while(curr!=null ||!stack.isEmpty())
+        {
+            while(curr!=null)
+            {
+                
+            }
+        }
     }
 
     public static void main(String[] args) {
