@@ -1,4 +1,4 @@
-package I_TREE;
+package TREE;
 
 public class SizeOfBinaryTree {
     private Tree root;

@@ -1,4 +1,4 @@
-package II_BIT_MANIPULATION;
+package BIT_MANIPULATION;
 
 public class PowerOfTwo {
     static boolean PowerOfTwo(int n) {

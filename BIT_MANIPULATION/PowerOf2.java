@@ -1,4 +1,4 @@
-package II_BIT_MANIPULATION;
+package BIT_MANIPULATION;
 
 public class PowerOf2 {
     static void BruteForceApproach(int n) {

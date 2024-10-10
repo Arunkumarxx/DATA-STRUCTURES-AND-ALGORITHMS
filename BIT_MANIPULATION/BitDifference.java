@@ -1,4 +1,4 @@
-package II_BIT_MANIPULATION;
+package BIT_MANIPULATION;
 
 public class BitDifference {
     static int BitDifferenceOne(int a, int b) {

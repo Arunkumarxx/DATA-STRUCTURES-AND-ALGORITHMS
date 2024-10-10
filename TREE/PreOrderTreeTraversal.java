@@ -1,4 +1,4 @@
-package I_TREE;
+package TREE;
 
 
 import java.util.Random;

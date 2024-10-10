@@ -1,4 +1,4 @@
-package I_TREE;
+package TREE;
 import java.util.LinkedList;
 import java.util.Queue;
 

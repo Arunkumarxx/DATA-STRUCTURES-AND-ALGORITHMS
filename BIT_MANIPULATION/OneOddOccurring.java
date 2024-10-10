@@ -1,4 +1,4 @@
-package II_BIT_MANIPULATION;
+package BIT_MANIPULATION;
 
 public class OneOddOccurring {
     static void OddOccurring(int[] arr) {

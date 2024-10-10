@@ -1,4 +1,4 @@
-package I_TREE;
+package TREE;
 
 public class CheckIsSubtree {
     private Tree root;

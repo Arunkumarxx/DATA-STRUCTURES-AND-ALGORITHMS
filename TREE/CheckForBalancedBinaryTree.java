@@ -1,4 +1,4 @@
-package I_TREE;
+package TREE;
 
 public class CheckForBalancedBinaryTree {
     private Tree root;

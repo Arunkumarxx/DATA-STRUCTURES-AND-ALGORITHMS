@@ -1,4 +1,4 @@
-package II_GRAPH;
+package GRAPH;
 
 public class GRAPH {
 }
