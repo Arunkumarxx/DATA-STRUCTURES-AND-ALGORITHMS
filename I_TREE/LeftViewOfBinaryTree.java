@@ -1,4 +1,4 @@
-package TREE;
+package I_TREE;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

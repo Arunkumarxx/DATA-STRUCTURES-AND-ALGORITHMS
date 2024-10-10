@@ -1,4 +1,4 @@
-package TREE;
+package I_TREE;
 
 public class PostOrderTreeTraversal {
     private Tree root;
