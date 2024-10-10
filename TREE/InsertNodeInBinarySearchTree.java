@@ -20,6 +20,10 @@ public class InsertNodeInBinarySearchTree {
     }
     private void insertIteratively(int key)
     {
+        if(root==null) {
+            root = new Tree(key);
+            return;
+        }
         Tree curr=root;
         Tree parent=null;
         while(curr!=null)
