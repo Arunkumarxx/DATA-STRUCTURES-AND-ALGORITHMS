@@ -77,7 +77,6 @@ public class InsertNodeInBinarySearchTree {
         tree.insertIteratively(3);
         tree.insertIteratively(4);
         tree.insertIteratively(5);
-        tree.insertIteratively(5);
         tree.print();
     }
 
