@@ -1,5 +1,9 @@
 package TREE;
 
+import com.sun.jdi.ThreadGroupReference;
+
+import java.util.Iterator;
+
 public class SearchInBinarySearchTree {
     private Tree root;
     private class Tree
@@ -26,13 +30,23 @@ public class SearchInBinarySearchTree {
             root.right=addNode(root.right,data);
         return root;
     }
-    private boolean search(Tree root)
+    private boolean search(Tree root,int key)
     {
         if(root==null)
             return false;
+        if(key==root.data)
+            return true;
+        if(key<root.data)
+            search(root.left,key);
+        else if(key>root.data)
+            search(root.right,key);
+        return false;
     }
     public static void main(String[] args) {
-
+        SearchInBinarySearchTree tree = new SearchInBinarySearchTree();
+        for(int i=0;i<=5;++i)
+            tree.insert(i);
+        System.out.println(tree.search(tree.root, 2));
     }
 
 }
