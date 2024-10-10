@@ -1,6 +1,7 @@
 package TREE;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Stack;
 
 public class InorderTraversalOfBinarySearchTree {
@@ -57,7 +58,8 @@ public class InorderTraversalOfBinarySearchTree {
         tree.insert(3);
         tree.insert(4);
         tree.insert(5);
-        tree.
+        ArrayList<Integer> res =tree.inOrder(tree.root);
+        System.out.println(res);
     }
 
 }
