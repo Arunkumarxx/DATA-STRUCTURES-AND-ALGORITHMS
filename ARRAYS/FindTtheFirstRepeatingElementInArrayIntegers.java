@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class FindTtheFirstRepeatingElementInArrayIntegers {
     static int repeating(int arr[],int n) {

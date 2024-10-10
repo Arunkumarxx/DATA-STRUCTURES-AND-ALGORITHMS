@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 import java.util.ArrayList;
 public class PrintPatternUsingRecursion {
     static void pattern(int N, ArrayList<Integer> arrayList) {

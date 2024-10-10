@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 // brute force approach
  class GeneratingSubArraysUsingIterative {

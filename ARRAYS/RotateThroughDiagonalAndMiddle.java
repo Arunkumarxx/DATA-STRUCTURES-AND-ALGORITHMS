@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class RotateThroughDiagonalAndMiddle {
      static void RotateThroughDiagonal_Middle(int matrix[][],int n){

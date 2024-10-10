@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class GeneratingSubArraysUsingRecursion {
     static void PrintSubArrayUsingRecursion(int[] arr,int start,int end) {

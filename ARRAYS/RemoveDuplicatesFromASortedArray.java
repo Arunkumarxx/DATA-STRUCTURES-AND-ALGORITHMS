@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class RemoveDuplicatesFromASortedArray {
     static int  leftShit(int arr[] ,int n,int start) {
         for (int i=start ;i<n-1; i++){

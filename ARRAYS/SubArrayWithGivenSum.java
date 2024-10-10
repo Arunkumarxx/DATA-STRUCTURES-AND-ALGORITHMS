@@ -1,6 +1,7 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SubArrayWithGivenSum {
     static ArrayList<Integer> subarraySum(int[] arr, int n, int s)

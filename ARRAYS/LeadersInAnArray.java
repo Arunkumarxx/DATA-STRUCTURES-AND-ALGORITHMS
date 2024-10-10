@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
  public   class LeadersInAnArray {
      static void LeadersInAnArray1(int[] arr,int n) {
 

@@ -1,4 +1,6 @@
-package IV_ARRAYS;
+package ARRAYS;
+
+import com.sun.security.auth.NTSidGroupPrincipal;
 
 public class MinimumConsecutiveFlips {
     static int MinimumConsecutiveFlip(int[] arr, int n) {

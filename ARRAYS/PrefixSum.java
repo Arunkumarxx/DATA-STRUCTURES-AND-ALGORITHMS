@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class PrefixSum {
     static  void prefixSumAdding(int[]arr) {
         for (int i=1; i< arr.length;++i)

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class FrequenciesInASortedArray {
     static  void PrintFrequencies(int arr[],int n) {
         int freq = 1;

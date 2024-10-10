@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class SmallestPositiveMissingNumber {
     static int missing(int[] arr,int n) {

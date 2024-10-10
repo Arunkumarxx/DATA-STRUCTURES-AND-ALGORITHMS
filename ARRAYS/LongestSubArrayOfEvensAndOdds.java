@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class LongestSubArrayOfEvensAndOdds {
     static int LongestSubArrayEvenAndOdd(int [] arr,int n) {
         int sum=1;

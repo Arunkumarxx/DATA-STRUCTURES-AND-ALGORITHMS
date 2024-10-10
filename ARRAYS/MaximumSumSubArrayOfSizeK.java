@@ -1,6 +1,7 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MaximumSumSubArrayOfSizeK {
     static void MaxiMumSumSubArrKNaiveApproach() {

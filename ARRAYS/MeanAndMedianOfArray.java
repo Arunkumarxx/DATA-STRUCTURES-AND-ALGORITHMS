@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 import java.util.Arrays;
 public class MeanAndMedianOfArray {
     public static int median(int A[],int N)

@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class AbsoluteValue {
     static public int absolute(int I) {

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class SegregateEvenAndOddNumbersUsingLomutoPartitionScheme {
 static void SegregateEvenAndOddNumbersUsingLomutoPartitionScheme1(int[] arr,int n){

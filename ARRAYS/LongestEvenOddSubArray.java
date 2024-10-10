@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class LongestEvenOddSubArray {
     static void LongestEvenOddSubarray (int [] arr){
         int n= arr.length;

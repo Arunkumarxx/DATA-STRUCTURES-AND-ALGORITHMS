@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class DeleteElementInArray {
     static int DeleteIndex(int arr[],int key){
         for (int i=0; i< arr.length;i++) {

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class MoveAllZerosToEndOfArray {
      static void MoveAllZerosToEndOfArray1(int[] arr) {

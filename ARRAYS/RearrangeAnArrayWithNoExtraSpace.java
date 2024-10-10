@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class RearrangeAnArrayWithNoExtraSpace {
     public static void main(String[] args) {
         long  arr[]= {4,0,2,1,3};

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class FindTheElementThatAppearsOnceInAnArray {
      static void FindTheElementThatAppearsOnceInArray1(int[] arr,int n) {

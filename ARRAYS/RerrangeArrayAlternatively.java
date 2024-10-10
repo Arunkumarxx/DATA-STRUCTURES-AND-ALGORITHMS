@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class RerrangeArrayAlternatively {
         public static void rearrange(long arr[], int n){

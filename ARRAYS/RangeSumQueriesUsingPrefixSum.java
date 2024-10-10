@@ -1,4 +1,6 @@
-package IV_ARRAYS;
+package ARRAYS;
+
+import org.w3c.dom.ls.LSOutput;
 
 public class RangeSumQueriesUsingPrefixSum {
     public static void main(String[] args) {

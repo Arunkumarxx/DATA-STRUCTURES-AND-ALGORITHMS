@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class PalindromeNumbers {
     static boolean PalindromeNumbers(int n) {

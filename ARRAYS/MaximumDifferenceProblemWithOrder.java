@@ -1,4 +1,7 @@
-package IV_ARRAYS;
+package ARRAYS;
+
+import java.awt.event.ItemEvent;
+import java.util.Arrays;
 
 public class MaximumDifferenceProblemWithOrder {
     public static void main(String[] args) {

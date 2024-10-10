@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
  class MaximumCircularSumSubArray {
      static int MaxiMumCircularSumSubArrays(int[] arr, int n) {
          int max = Integer.MIN_VALUE;

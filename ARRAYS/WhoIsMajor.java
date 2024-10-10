@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class WhoIsMajor {
     static int Major(int[] arr,int x,int y) {

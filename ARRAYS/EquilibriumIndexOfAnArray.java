@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class EquilibriumIndexOfAnArray {
     public static int findEquilibriumPoint(int[] arr,int n) {
         long total=0;

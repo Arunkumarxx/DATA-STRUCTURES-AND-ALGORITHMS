@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class StockBuyAndSellProblem {
     static int  StockBuyAndSellProblem(int [] arr){
         int n= arr.length,profit=0;

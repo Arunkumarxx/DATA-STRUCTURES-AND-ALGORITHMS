@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class SortAnArrayWhichContain1TonValues {
     static void Sort1(int [] arr,int n) {

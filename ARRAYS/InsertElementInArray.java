@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class InsertElementInArray {
     static void   InsertElementArray(int arr[],int n,int key,int pos) {

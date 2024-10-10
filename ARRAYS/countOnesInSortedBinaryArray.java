@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class countOnesInSortedBinaryArray {
     static int counOnesBinarySearch(int[] arr, int len) {

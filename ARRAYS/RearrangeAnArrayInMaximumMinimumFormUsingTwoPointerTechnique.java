@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class RearrangeAnArrayInMaximumMinimumFormUsingTwoPointerTechnique {
     static void RearrangeAnArrayMinMaxUsingTwoPointer1(int[] arr,int n) {

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class whatIsRecursion {
      static void countNumberUsingIterative(int n) {

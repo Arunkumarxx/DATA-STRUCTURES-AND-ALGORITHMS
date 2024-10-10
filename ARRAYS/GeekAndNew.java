@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 import java.util.Scanner;
 

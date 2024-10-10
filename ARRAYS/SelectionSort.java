@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class SelectionSort {
     static  void printArray(int arr[] ) {

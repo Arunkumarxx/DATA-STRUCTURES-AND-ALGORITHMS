@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 //rotation in matrix by row or column transpose of the matrix
 // using extra space first

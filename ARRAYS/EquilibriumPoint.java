@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class EquilibriumPoint {
     public static void main(String[] args) {
         int []arr  ={5,2,2,4,3,4,2};

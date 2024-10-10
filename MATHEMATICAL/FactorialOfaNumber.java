@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class FactorialOfaNumber {
     static int recursion(int n) {

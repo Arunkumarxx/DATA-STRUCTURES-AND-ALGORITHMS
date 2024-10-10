@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class ExactlyThreeDivisors {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class PrimeFactors {
     static void PrimeFactor(int n) {

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class SearchElementUsingFourPointerWithBenchMark {
 

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class FindSubArrayWithGivenSum {
      static void SubArrayWithGivenSum1(int [] arr,int n,int sum) {

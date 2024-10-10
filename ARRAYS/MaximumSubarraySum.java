@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class MaximumSubarraySum {
     static void MaximumSubArray(int [] num) {
         int sum=num[0];

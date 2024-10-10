@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class AllDivisorsOfaNumber {
     static void DivisorOfaNumber(int n) {

@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class SearchElementInArray {
     public static void main(String[] args) {
         int arr[] = {20,5,7,25};

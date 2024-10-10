@@ -1,5 +1,6 @@
-package IV_ARRAYS;
+package ARRAYS;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 class  MaximumOccuredInteger{

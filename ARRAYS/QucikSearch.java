@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class QucikSearch {
     static int QuickSearch(int[] arr, int key, int n) {

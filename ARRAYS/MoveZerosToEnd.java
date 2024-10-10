@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class MoveZerosToEnd {
     public static void main(String[] args) {
         int arr[] ={1,2,0,3,0,0,3,4,5,6};

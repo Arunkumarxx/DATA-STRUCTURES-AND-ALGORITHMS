@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class MaximumIndex {
     static  void MaximumIndex() {
         int a[] = {34, 8, 10, 3, 2, 80, 30, 33, 1};

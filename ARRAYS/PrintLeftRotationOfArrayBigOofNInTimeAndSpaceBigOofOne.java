@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class PrintLeftRotationOfArrayBigOofNInTimeAndSpaceBigOofOne {
      static void PrintLeftRotationOfArrayBigOofNInTimeAndSpaceBigOofOne1(int[] arr,int k , int n) {

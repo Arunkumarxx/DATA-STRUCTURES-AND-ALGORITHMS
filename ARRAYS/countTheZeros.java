@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class countTheZeros {
          static int countZeros(int arr[],int n) {

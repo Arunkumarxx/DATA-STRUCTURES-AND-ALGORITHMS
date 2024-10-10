@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 class ReversalAlgorithmForArrayRotation {
    static void  ReversalAlgorithmForArrayRotation1(int[] arr,int n,int d) {

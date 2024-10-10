@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class MajorityElement {
     static int MajorityElement(int[] a, int n) {
 

@@ -1,4 +1,4 @@
-package I_MATHEMATICAL;
+package MATHEMATICAL;
 
 public class lowestCommonMultiple {
     static void LowestCommonMultiple(int a, int b) {

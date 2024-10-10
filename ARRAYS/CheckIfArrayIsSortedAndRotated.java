@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 public class CheckIfArrayIsSortedAndRotated {
     public static boolean checkRotatedAndSorted(int arr[], int num){
         int count=0;

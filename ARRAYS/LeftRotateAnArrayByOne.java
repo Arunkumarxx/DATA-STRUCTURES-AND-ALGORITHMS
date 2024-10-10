@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class LeftRotateAnArrayByOne {
     public static void main(String[] args) {

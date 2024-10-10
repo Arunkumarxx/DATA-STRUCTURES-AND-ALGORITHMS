@@ -1,4 +1,4 @@
-package IV_ARRAYS;
+package ARRAYS;
 
 public class FractionTrouble {
     private static int gcd(int a, int b)
