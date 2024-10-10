@@ -19,6 +19,11 @@ public class InorderTraversalOfBinarySearchTree {
     }
     private void insert(int key)
     {
+        if(root==null)
+        {
+            root=new Tree(key);
+            return;
+        }
         Tree curr=root;
         Tree parent=null;
         while(curr!=null)
