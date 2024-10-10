@@ -36,11 +36,16 @@ public class DeleteANodeFromBinarySearchTree {
         else if( parent!=null && key>parent.data)
             parent.right=new Tree(key);
     }
+    private void delete(int key)
+    {
+        
+    }
+
     public static void main(String[] args) {
         DeleteANodeFromBinarySearchTree tree  =new DeleteANodeFromBinarySearchTree();
         for(int i=0;i<=5;++i)
             tree.insert(i);
-        
+        tree.delete(2);
     }
 
 }
