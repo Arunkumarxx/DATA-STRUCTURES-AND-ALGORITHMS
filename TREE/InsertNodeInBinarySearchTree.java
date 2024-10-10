@@ -26,8 +26,18 @@ public class InsertNodeInBinarySearchTree {
             root.right=addNode(root.right,data);
         return root;
     }
-    public static void main(String[] args) {
+    private void InorderTraversal(Tree root)
+    {
 
+    }
+
+    public static void main(String[] args) {
+        InsertNodeInBinarySearchTree tree = new InsertNodeInBinarySearchTree();
+        tree.insert(1);
+        tree.insert(2);
+        tree.insert(234);
+        tree.insert(543);
+        tree.print();
     }
 
 }
