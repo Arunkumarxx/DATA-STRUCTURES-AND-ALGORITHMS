@@ -1,4 +1,0 @@
-package TERNARY_SEARCH_TREE;
-
-public class TERNARY_SEARCH_TREE {
-}
