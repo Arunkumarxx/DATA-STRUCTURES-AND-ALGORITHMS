@@ -27,8 +27,13 @@ public class InsertNodeInBinarySearchTree {
             parent=curr;
             if(key<curr.data)
                 curr=curr.left;
-            else 
+            else if(key>curr.data)
+                curr=curr.right;
+            else return;
         }
+        if(key<parent.data)
+            parent.left= new Tree(key);
+        else parent.right= new Tree(key);
     }
     private Tree addNodeRecursive(Tree root,int data)
     {
