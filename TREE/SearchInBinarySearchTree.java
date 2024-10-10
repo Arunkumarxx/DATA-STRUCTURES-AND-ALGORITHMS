@@ -37,9 +37,9 @@ public class SearchInBinarySearchTree {
         if(key==root.data)
             return true;
         if(key<root.data)
-            search(root.left,key);
+           return search(root.left,key);
         else if(key>root.data)
-            search(root.right,key);
+           return search(root.right,key);
         return false;
     }
     public static void main(String[] args) {
