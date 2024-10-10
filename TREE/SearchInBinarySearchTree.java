@@ -46,7 +46,7 @@ public class SearchInBinarySearchTree {
         SearchInBinarySearchTree tree = new SearchInBinarySearchTree();
         for(int i=0;i<=5;++i)
             tree.insert(i);
-        System.out.println(tree.search(tree.root, 2));
+        System.out.println(tree.search(tree.root, 221));
     }
 
 }
