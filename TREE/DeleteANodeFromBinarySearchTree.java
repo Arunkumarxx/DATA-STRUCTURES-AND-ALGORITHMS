@@ -1,2 +1,9 @@
-package TREE;public class DeleteANodeFromBinarySearchTree {
+package TREE;
+
+public class DeleteANodeFromBinarySearchTree {
+    
+    public static void main(String[] args) {
+
+    }
+
 }
