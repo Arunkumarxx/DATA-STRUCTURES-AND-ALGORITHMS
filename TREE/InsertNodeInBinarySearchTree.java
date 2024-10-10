@@ -28,17 +28,24 @@ public class InsertNodeInBinarySearchTree {
             root.right=addNode(root.right,data);
         return root;
     }
+    private void print()
+    {
+        InorderTraversal(root);
+    }
     private void InorderTraversal(Tree root)
     {
         Stack<Tree> stack =new Stack<>();
-        stack.add(root);
-        Tree curr=null;
-        while(curr!=null ||!stack.isEmpty())
+        Tree curr=root;
+        while(curr!=null || stack.isEmpty())
         {
             while(curr!=null)
             {
-                
+                stack.push(curr);
+                curr=curr.left;
             }
+            curr=stack.pop();
+            System.out.print(curr.data+" ");
+            curr=curr.right;
         }
     }
 
