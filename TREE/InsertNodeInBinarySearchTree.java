@@ -66,10 +66,11 @@ public class InsertNodeInBinarySearchTree {
 
     public static void main(String[] args) {
         InsertNodeInBinarySearchTree tree = new InsertNodeInBinarySearchTree();
-        tree.insert(1);
-        tree.insert(2);
-        tree.insert(234);
-        tree.insert(543);
+        tree.insertIteratively(1);
+        tree.insertIteratively(2);
+        tree.insertIteratively(3);
+        tree.insertIteratively(4);
+        tree.insertIteratively(5);
         tree.print();
     }
 
