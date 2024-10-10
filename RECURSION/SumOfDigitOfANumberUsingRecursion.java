@@ -1,4 +1,4 @@
-package RECURSION;
+package III_RECURSION;
  class SumOfDigitOfANumberUsingRecursion {
      static int  SumOfDigitUsingRecursion(int n) {
          if (n==0)
