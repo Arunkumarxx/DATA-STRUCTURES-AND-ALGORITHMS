@@ -50,7 +50,7 @@ public class MinimumElementInRootBinarySearchTree {
         MinimumElementInRootBinarySearchTree tree =new MinimumElementInRootBinarySearchTree();
         Random random =new Random();
         for(int i=0;i<=50;++i)
-            tree.insert(i);
+            tree.insert(random.nextInt(23,234));
         System.out.println(tree.minElement());
     }
 
