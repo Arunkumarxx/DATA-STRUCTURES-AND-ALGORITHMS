@@ -1,4 +1,4 @@
-package BIT_MANIPULATION;
+package II_BIT_MANIPULATION;
 
 public class RightMostDifferentBit {
     static int RightMostDifferentBitOne(int m, int n) {

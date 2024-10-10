@@ -1,4 +1,4 @@
-package BIT_MANIPULATION;
+package II_BIT_MANIPULATION;
 
 public class BinaryToGrayCodeEquivalent {
     static int BinaryToGrayCode(int n) {

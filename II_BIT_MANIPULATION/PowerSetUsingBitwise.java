@@ -1,4 +1,4 @@
-package BIT_MANIPULATION;
+package II_BIT_MANIPULATION;
 
 public class PowerSetUsingBitwise {
     static void PowerSetUsingBitwise(String str) {

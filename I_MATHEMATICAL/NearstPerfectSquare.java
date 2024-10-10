@@ -1,4 +1,4 @@
-package MATHEMATICAL;
+package I_MATHEMATICAL;
 public class NearstPerfectSquare {
 
     public static int fun(int n) {

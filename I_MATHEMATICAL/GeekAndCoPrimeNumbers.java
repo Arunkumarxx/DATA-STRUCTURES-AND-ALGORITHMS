@@ -1,4 +1,4 @@
-package MATHEMATICAL;
+package I_MATHEMATICAL;
 
 public class GeekAndCoPrimeNumbers {
     public static void main(String[] args) {

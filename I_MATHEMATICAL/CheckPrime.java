@@ -1,4 +1,4 @@
-package MATHEMATICAL;
+package I_MATHEMATICAL;
 
 public class CheckPrime {
     public static void CheckPrimeOne(int n) {

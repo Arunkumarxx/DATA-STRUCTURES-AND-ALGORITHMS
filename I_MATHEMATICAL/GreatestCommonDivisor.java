@@ -1,4 +1,4 @@
-package MATHEMATICAL;
+package I_MATHEMATICAL;
 
 public class GreatestCommonDivisor {
     static void GreatestCommonDivisor(int a, int b) {

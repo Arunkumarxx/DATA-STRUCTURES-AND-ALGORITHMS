@@ -1,4 +1,4 @@
-package MATHEMATICAL;
+package I_MATHEMATICAL;
 
 public class TrailingZerosInFactorial {
     static int CheckZerosCount(int fact) {
