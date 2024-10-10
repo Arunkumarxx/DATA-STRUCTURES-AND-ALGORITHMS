@@ -21,9 +21,13 @@ public class InsertNodeInBinarySearchTree {
     private void insertIteratively(int key)
     {
         Tree curr=root;
+        Tree parent=null;
         while(curr!=null)
         {
-            
+            parent=curr;
+            if(key<curr.data)
+                curr=curr.left;
+            else 
         }
     }
     private Tree addNodeRecursive(Tree root,int data)
