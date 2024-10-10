@@ -59,7 +59,7 @@ public class InorderTraversalOfBinarySearchTree {
         tree.insert(4);
         tree.insert(5);
         ArrayList<Integer> res =tree.inOrder(tree.root);
-        System.out.println(res);
+        System.out.println(res); 
     }
 
 }
