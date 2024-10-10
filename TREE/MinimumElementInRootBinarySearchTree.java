@@ -1,5 +1,7 @@
 package TREE;
 
+import java.util.Random;
+
 public class MinimumElementInRootBinarySearchTree {
     private Tree root;
     private class Tree {
@@ -36,8 +38,20 @@ public class MinimumElementInRootBinarySearchTree {
         else if( parent!=null && key>parent.data)
             parent.right=new Tree(key);
     }
+    private int minElement()
+    {
+        Tree temp=root;
+        while (temp.left!=null)
+            temp=temp.left;
+        return temp.data;
+    }
+
     public static void main(String[] args) {
-        
+        MinimumElementInRootBinarySearchTree tree =new MinimumElementInRootBinarySearchTree();
+        Random random =new Random();
+        for(int i=0;i<=50;++i)
+            tree.insert(i);
+        System.out.println(tree.minElement());
     }
 
 }
