@@ -48,8 +48,8 @@ public class SearchInBinarySearchTree {
             if(key==root.data)
                 return true;
             if(key<root.data)
-                searchIterative(root.left,key);
-            else searchIterative(root.right,key);
+                root=root.left;
+            else root=root.right;
         }
         return false;
     }
