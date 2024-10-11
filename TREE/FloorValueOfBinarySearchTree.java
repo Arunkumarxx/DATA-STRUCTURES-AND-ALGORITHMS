@@ -10,7 +10,6 @@ public class FloorValueOfBinarySearchTree {
             this.right=this.left=null;
         }
     }
-
     private void insert(int key) {
         if(root==null) {
             root=new Tree(key);
