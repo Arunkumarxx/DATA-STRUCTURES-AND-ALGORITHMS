@@ -4,26 +4,20 @@ public class DeleteANodeFromBinarySearchTree {
     private Tree root;
     private class Tree {
         int data;
-        Tree right;
-        Tree left;
-
+        Tree right,left;
         Tree(int value) {
-            this.data = value;
-            this.right = null;
-            this.left = null;
+            this.data=value;
+            this.right=this.left=null;
         }
     }
-    private void insert(int key)
-    {
-        if(root==null)
-        {
+    private void insert(int key) {
+        if(root==null) {
             root=new Tree(key);
             return;
         }
         Tree curr=root;
         Tree parent=null;
-        while(curr!=null)
-        {
+        while(curr!=null) {
             parent=curr;
             if(key<curr.data)
                 curr=curr.left;
@@ -31,49 +25,42 @@ public class DeleteANodeFromBinarySearchTree {
                 curr=curr.right;
             else return;
         }
-        if(parent!=null && key<parent.data)
+        if(parent!=null&&key<parent.data)
             parent.left=new Tree(key);
-        else if( parent!=null && key>parent.data)
+        else if(parent!=null&&key>parent.data)
             parent.right=new Tree(key);
     }
-    private void delete(int key)
-    {
-        Node curr=root;
+    private Tree delete(Tree root,int key) {
+        if(root==null) return root;
+        if(key<root.data)
+            root.left=delete(root.left,key);
+        else if(key>root.data)
+            root.right=delete(root.right,key);
+        else {
+            if(root.left==null)
+                return root.right;
+            else if(root.right==null)
+                return root.left;
 
-        while(curr!=null && curr.data!=key)
-        {
-            if(key<curr.data)
-                curr=curr.left;
-            else if(key>curr.data)
-                curr=curr.right;
-        }
-        if(curr!=null)
-        {
-
-            if(curr.left==null && curr.right==null && root.data==key)
-                return null;
-            if(curr.left!=null && curr.right!=null)
-            {
-                Node newHead=curr.left;
-                Node newRoot=newHead;
-                while(newHead.right!=null)
-                    newHead=newHead.right;
-                newHead.right=curr.right;
-                return newRoot;
-            }
-            if(curr.left==null && curr.right!=null)
-                return curr.right;
-            if(curr.left!=null && curr.right==null)
-                return curr.left;
+            root.data=minValue(root.right);
+            root.right=delete(root.right,root.data);
         }
         return root;
     }
 
-    public static void main(String[] args) {
-        DeleteANodeFromBinarySearchTree tree  =new DeleteANodeFromBinarySearchTree();
-        for(int i=0;i<=5;++i)
-            tree.insert(i);
-        tree.delete(2);
+    private int minValue(Tree root) {
+        int minv=root.data;
+        while(root.left!=null) {
+            minv=root.left.data;
+            root=root.left;
+        }
+        return minv;
     }
 
+    public static void main(String[] args) {
+        DeleteANodeFromBinarySearchTree tree=new DeleteANodeFromBinarySearchTree();
+        for(int i=0;i<=5;++i)
+            tree.insert(i);
+        tree.root=tree.delete(tree.root,2);
+    }
 }
