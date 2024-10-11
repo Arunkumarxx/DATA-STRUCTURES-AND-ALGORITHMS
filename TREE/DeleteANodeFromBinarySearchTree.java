@@ -82,6 +82,7 @@ public class DeleteANodeFromBinarySearchTree {
         for(int i=0;i<=5;++i)
             tree.insert(i);
         tree.printInOrder();
+        System.out.println();
         tree.root=tree.delete(tree.root,2);
         tree.printInOrder();
     }
