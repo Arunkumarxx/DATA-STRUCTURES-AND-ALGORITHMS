@@ -1,5 +1,10 @@
 package TREE;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class DeleteANodeFromBinarySearchTree {
     private Tree root;
     private class Tree {
@@ -57,10 +62,26 @@ public class DeleteANodeFromBinarySearchTree {
         return minv;
     }
 
+    private void printInOrder() {
+        if(root==null) return;
+        Stack<Tree> stack=new Stack<Tree>();
+        Tree curr=root;
+        while(curr!=null||!stack.isEmpty()) {
+            while(curr!=null) {
+                stack.push(curr);
+                curr=curr.left;
+            }
+            curr=stack.pop();
+            System.out.print(curr.data+" ");
+            curr=curr.right;
+        }
+    }
+
     public static void main(String[] args) {
         DeleteANodeFromBinarySearchTree tree=new DeleteANodeFromBinarySearchTree();
         for(int i=0;i<=5;++i)
             tree.insert(i);
         tree.root=tree.delete(tree.root,2);
+        tree.printInOrder();
     }
 }
