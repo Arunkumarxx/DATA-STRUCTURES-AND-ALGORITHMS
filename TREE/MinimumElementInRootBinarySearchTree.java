@@ -12,7 +12,7 @@ public class MinimumElementInRootBinarySearchTree {
         Tree(int value) {
             this.data = value;
             this.right = null;
-            this.left = null; 
+            this.left = null;
         }
     }
     private void insert(int key)

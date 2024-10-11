@@ -38,7 +38,35 @@ public class DeleteANodeFromBinarySearchTree {
     }
     private void delete(int key)
     {
+        Node curr=root;
 
+        while(curr!=null && curr.data!=key)
+        {
+            if(key<curr.data)
+                curr=curr.left;
+            else if(key>curr.data)
+                curr=curr.right;
+        }
+        if(curr!=null)
+        {
+
+            if(curr.left==null && curr.right==null && root.data==key)
+                return null;
+            if(curr.left!=null && curr.right!=null)
+            {
+                Node newHead=curr.left;
+                Node newRoot=newHead;
+                while(newHead.right!=null)
+                    newHead=newHead.right;
+                newHead.right=curr.right;
+                return newRoot;
+            }
+            if(curr.left==null && curr.right!=null)
+                return curr.right;
+            if(curr.left!=null && curr.right==null)
+                return curr.left;
+        }
+        return root;
     }
 
     public static void main(String[] args) {
