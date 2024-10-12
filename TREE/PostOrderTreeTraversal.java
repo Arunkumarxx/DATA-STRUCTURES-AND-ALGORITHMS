@@ -45,8 +45,12 @@ public class PostOrderTreeTraversal {
     }
     public static void main(String[] args) {
         PostOrderTreeTraversal tree =new PostOrderTreeTraversal();
-        for(int i=1; i<=6; ++i)
+        for(int i=1; i<=3; ++i)
             tree.insert(i);
+        tree.insert(-2);
+        tree.insert(-3);
+        tree.insert(-7);
+        tree.insert(-5);
         tree.print();
     }
 }
