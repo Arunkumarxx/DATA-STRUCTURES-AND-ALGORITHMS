@@ -38,8 +38,8 @@ public class PostOrderTreeTraversal {
     {
         if(root!=null)
         {
-            traversal(root.left);
             traversal(root.right);
+            traversal(root.left);
             System.out.print(root.data+" ");
         }
     }
