@@ -39,9 +39,8 @@ public class PostOrderTreeTraversal {
         if(root!=null)
         {
             traversal(root.right);
-            System.out.print(root.data+" ");
             traversal(root.left);
-
+            System.out.print(root.data+" ");
         }
     }
     public static void main(String[] args) {
