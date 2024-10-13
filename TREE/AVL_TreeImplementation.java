@@ -43,11 +43,10 @@ public class AVL_TreeImplementation {
         int rightHeight=height(root.right);
 
         root.height=Math.max(leftHeight,rightHeight)+1;
-        int diff=leftHeight-rightHeight;
-        if(diff==-1 || diff==0 || diff==-1)
-        {
 
-        }
+        int balanceFactor=leftHeight-rightHeight;
+
+        
         return root;
     }
     private void inOrderTraversal(Tree root)
