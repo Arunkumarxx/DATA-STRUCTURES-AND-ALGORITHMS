@@ -46,14 +46,7 @@ public class AVL_TreeImplementation {
 
         int balanceFactor=leftHeight-rightHeight;
 
-        if(balanceFactor<0)
-        {
-            
-        }
-        else if(balanceFactor>0)
-        {
-
-        }
+        if(balanceFactor>1 )
 
         return root;
     }
