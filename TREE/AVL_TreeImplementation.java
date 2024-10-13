@@ -61,7 +61,7 @@ public class AVL_TreeImplementation {
         }
         if(balanceFactor<-1 && val<root.right.data)
         {
-            rightRotate();
+           root.right= rightRotate();
             return lefRotate();
         }
         return root;
