@@ -51,7 +51,7 @@ public class AVL_TreeImplementation {
                 curr=curr.left;
             }
             curr = stack.pop();
-            System.out.print(curr.data+" "+curr.height);
+            System.out.println(curr.data+" "+curr.height);
             curr=curr.right;
         }
     }
