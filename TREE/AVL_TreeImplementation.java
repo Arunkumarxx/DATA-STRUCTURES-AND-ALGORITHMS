@@ -84,7 +84,6 @@ public class AVL_TreeImplementation {
             curr=curr.right;
         }
     }
-
     public static void main(String[] args) {
         AVL_TreeImplementation tree=new AVL_TreeImplementation();
         for(int i=0;i<=5;++i)
