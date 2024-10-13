@@ -1,4 +1,7 @@
 package TREE;
+
+import java.util.Stack;
+
 public class AVL_TreeImplementation {
     private Tree root;
     private class Tree
@@ -36,7 +39,15 @@ public class AVL_TreeImplementation {
         root.height=Math.max(height(root.left),height(root.right))+1;
         return root;
     }
-
+    private void inOrderTraversal(Tree root)
+    {
+        Stack<Tree> stack = new Stack<>();
+        Tree curr=root;
+        while(curr!=null ||!stack.isEmpty())
+        {
+            
+        }
+    }
     public static void main(String[] args) {
 
 
