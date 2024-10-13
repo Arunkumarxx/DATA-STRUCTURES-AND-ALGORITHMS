@@ -41,15 +41,7 @@ public class AVL_TreeImplementation {
     }
     private Tree leftRotate(Tree root)
     {
-        Tree leftChild=root.right;
-        Tree rightChild=leftChild.left;
-
-        leftChild.right=root;
-        root.left=rightChild;
-
-        leftChild.height=1+Math.max(height(leftChild.left),height(leftChild.right));
-        rightChild.height=1+Math.max(height(rightChild.left),height(rightChild.right));
-        return leftChild;
+        
     }
     private Tree addNode(Tree root,int val)
     {
