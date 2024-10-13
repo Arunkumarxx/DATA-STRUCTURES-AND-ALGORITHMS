@@ -27,7 +27,10 @@ public class AVL_TreeImplementation {
             return 0;
         return root.height;
     }
-    private void
+    private Tree rightRotate(Tree root)
+    {
+        
+    }
 
     private Tree addNode(Tree root,int val)
     {
