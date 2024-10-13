@@ -32,11 +32,18 @@ public class AVL_TreeImplementation {
     {
         if(root==null)
             return new Tree(val);
+
         if(val<root.data)
             root.left=addNode(root.left,val);
+
         else if(val>root.data)
             root.right=addNode(root.right,val);
-        root.height=Math.max(height(root.left),height(root.right))+1;
+
+        int leftHeight=height(root.left);
+        int rightHeight=height(root.right);
+
+        root.height=Math.max(leftHeight,rightHeight)+1;
+        
         return root;
     }
     private void inOrderTraversal(Tree root)
