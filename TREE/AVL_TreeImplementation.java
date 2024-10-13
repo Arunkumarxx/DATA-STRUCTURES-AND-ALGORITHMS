@@ -31,13 +31,13 @@ public class AVL_TreeImplementation {
     {
         Tree leftChild=root.left;
         Tree rightChild=leftChild.right;
-        
+
         leftChild.right=root;
         root.left=rightChild;
 
         leftChild.height=1+Math.max(height(leftChild.left),height(leftChild.right));
         rightChild.height=1+Math.max(height(rightChild.left),height(rightChild.right));
-        return root;
+        return leftChild;
     }
     private Tree leftRotate(Tree root)
     {
