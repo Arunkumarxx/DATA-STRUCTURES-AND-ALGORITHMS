@@ -27,7 +27,7 @@ public class AVL_TreeImplementation {
             return 0;
         return root.height;
     }
-    private void 
+    private void
 
     private Tree addNode(Tree root,int val)
     {
