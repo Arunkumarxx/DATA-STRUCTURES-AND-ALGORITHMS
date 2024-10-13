@@ -55,7 +55,7 @@ public class AVL_TreeImplementation {
             root.left=leftRotate(root.left);
             return rightRotate(root);
         }
-        
+        if(balanceFactor<)
         return root;
     }
     private void inOrderTraversal(Tree root)
