@@ -21,8 +21,8 @@ public class AVL_TreeImplementation {
     private int  height(Tree root)
     {
         if(root==null)
-            return-1;
-        
+            return 0;
+        return root.height;
     }
 
     private Tree addNode(Tree root,int val)
@@ -33,7 +33,7 @@ public class AVL_TreeImplementation {
             root.left=addNode(root.left,val);
         else if(val>root.data)
             root.right=addNode(root.right,val);
-
+        root.height=Math.max(height(root.left),height(root.right))+1;
         return root;
     }
 
