@@ -45,11 +45,20 @@ public class AVL_TreeImplementation {
         Tree curr=root;
         while(curr!=null ||!stack.isEmpty())
         {
-            
+            while(curr!=null)
+            {
+                stack.push(curr);
+                curr=curr.left;
+            }
+            curr = stack.pop();
+            System.out.print(curr.data+" "+curr.height);
+            curr=curr.right;
         }
     }
     public static void main(String[] args) {
-
-
+        AVL_TreeImplementation tree  =new AVL_TreeImplementation();
+        for(int i=0;i<=5;++i)
+            tree.insert(i);
+        tree.inOrderTraversal(tree.root);
     }
 }
