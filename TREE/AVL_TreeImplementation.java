@@ -1,5 +1,6 @@
 package TREE;
 public class AVL_TreeImplementation {
+    private Tree root;
     private class Tree
     {
         int data;
@@ -15,9 +16,12 @@ public class AVL_TreeImplementation {
     }
     private void insert(int val)
     {
-        
+        root=addNode(val);
     }
-
+    private Tree addNode(int val)
+    {
+        k
+    }
 
     public static void main(String[] args) {
 
