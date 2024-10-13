@@ -38,7 +38,7 @@ public class AVL_TreeImplementation {
     }
     private Tree leftRotate(Tree root)
     {
-        
+
     }
     private Tree addNode(Tree root,int val)
     {
