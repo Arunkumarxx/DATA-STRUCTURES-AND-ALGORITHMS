@@ -46,8 +46,16 @@ public class AVL_TreeImplementation {
 
         int balanceFactor=leftHeight-rightHeight;
 
-        if(balanceFactor<-1 && val)
-
+        if(balanceFactor>1 && val<root.left.data)
+        {
+            return rightRotate(root);
+        }
+        if(balanceFactor>1 && val>root.left.data)
+        {
+            root.left=leftRotate(root.left);
+            return rightRotate(root);
+        }
+        
         return root;
     }
     private void inOrderTraversal(Tree root)
