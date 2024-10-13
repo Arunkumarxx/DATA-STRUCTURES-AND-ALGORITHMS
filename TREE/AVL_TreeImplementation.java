@@ -14,7 +14,7 @@ public class AVL_TreeImplementation {
         {
             this.data=val;
             left=right=null;
-            height=0;
+            height=1;
         }
     }
     private void insert(int val)
