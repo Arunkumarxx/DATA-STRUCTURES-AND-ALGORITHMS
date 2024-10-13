@@ -16,13 +16,25 @@ public class AVL_TreeImplementation {
     }
     private void insert(int val)
     {
-        root=addNode(val);
+        root=addNode(root,val);
     }
+    private int  height(Tree root)
+    {
+        if(root==null)
+            return-1;
+        
+    }
+
     private Tree addNode(Tree root,int val)
     {
         if(root==null)
             return new Tree(val);
-        addNode();
+        if(val<root.data)
+            root.left=addNode(root.left,val);
+        else if(val>root.data)
+            root.right=addNode(root.right,val);
+
+        return root;
     }
 
     public static void main(String[] args) {
