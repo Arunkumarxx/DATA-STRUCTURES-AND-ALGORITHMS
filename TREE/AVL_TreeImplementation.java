@@ -46,7 +46,7 @@ public class AVL_TreeImplementation {
         int diff=leftHeight-rightHeight;
         if(diff==-1 || diff==0 || diff==-1)
         {
-
+            
         }
         return root;
     }
