@@ -18,9 +18,11 @@ public class AVL_TreeImplementation {
     {
         root=addNode(val);
     }
-    private Tree addNode(int val)
+    private Tree addNode(Tree root,int val)
     {
-        k
+        if(root==null)
+            return new Tree(val);
+        addNode();
     }
 
     public static void main(String[] args) {
