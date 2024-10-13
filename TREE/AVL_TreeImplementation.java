@@ -71,6 +71,57 @@ public class AVL_TreeImplementation {
         return root;
     }
 
+    private Tree deleteNode(Tree root,int key) {
+        if(root==null)
+            return root;
+        if(key<root.data)
+            root.left=deleteNode(root.left,key);
+        else if(key>root.data)
+            root.right=deleteNode(root.right,key);
+        else {
+            if((root.left==null)||(root.right==null)) {
+                Tree temp=null;
+                if(temp==root.left)
+                    temp=root.right;
+                else
+                    temp=root.left;
+                if(temp==null) {
+                    temp=root;
+                    root=null;
+                } else
+                    root=temp;
+            } else {
+                Tree temp=minValueNode(root.right);
+                root.data=temp.data;
+                root.right=deleteNode(root.right,temp.data);
+            }
+        }
+        if(root==null)
+            return root;
+        root.height=1+Math.max(height(root.left),height(root.right));
+        int balanceFactor=height(root.left)-height(root.right);
+        if(balanceFactor>1&&height(root.left)-height(root.right)>=0)
+            return rightRotate(root);
+        if(balanceFactor>1&&height(root.left)-height(root.right)<0) {
+            root.left=leftRotate(root.left);
+            return rightRotate(root);
+        }
+        if(balanceFactor<-1&&height(root.right)-height(root.left)<=0)
+            return leftRotate(root);
+        if(balanceFactor<-1&&height(root.right)-height(root.left)>0) {
+            root.right=rightRotate(root.right);
+            return leftRotate(root);
+        }
+        return root;
+    }
+
+    private Tree minValueNode(Tree node) {
+        Tree current=node;
+        while(current.left!=null)
+            current=current.left;
+        return current;
+    }
+
     private void inOrderTraversal(Tree root) {
         Stack<Tree> stack=new Stack<>();
         Tree curr=root;
@@ -84,10 +135,13 @@ public class AVL_TreeImplementation {
             curr=curr.right;
         }
     }
+
     public static void main(String[] args) {
         AVL_TreeImplementation tree=new AVL_TreeImplementation();
         for(int i=0;i<=5;++i)
             tree.insert(i);
+        tree.inOrderTraversal(tree.root);
+        tree.root=tree.deleteNode(tree.root,2);
         tree.inOrderTraversal(tree.root);
     }
 }
