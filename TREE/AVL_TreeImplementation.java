@@ -45,7 +45,9 @@ public class AVL_TreeImplementation {
         Tree leftChild=rightChild.left;
 
         rightChild.left=root;
-        root.left=
+        root.right=leftChild;
+
+        rightChild.height=Math.max();
     }
     private Tree addNode(Tree root,int val)
     {
