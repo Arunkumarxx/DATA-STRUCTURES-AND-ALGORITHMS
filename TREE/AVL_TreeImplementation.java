@@ -49,7 +49,7 @@ public class AVL_TreeImplementation {
 
         rightChild.height=1+Math.max(height(rightChild.left),height(rightChild.right));
         leftChild.height=1+Math.max(height(leftChild.left),height(leftChild.right));
-        return 
+        return rightChild;
     }
     private Tree addNode(Tree root,int val)
     {
@@ -84,8 +84,8 @@ public class AVL_TreeImplementation {
         }
         if(balanceFactor<-1 && val<root.right.data)
         {
-           root.right= rightRotate();
-            return lefRotate();
+           root.right= rightRotate(root.right);
+            return leftRotate(root);
         }
         return root;
     }
