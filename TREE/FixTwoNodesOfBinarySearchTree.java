@@ -84,7 +84,7 @@ public class FixTwoNodesOfBinarySearchTree {
         tree.insert(20);
         tree.insert(8);
         tree.insert(15);
-        
+
         tree.root.left.right.data=20;
         tree.root.right.data=8;
 
