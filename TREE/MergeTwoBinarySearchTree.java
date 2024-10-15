@@ -1,2 +1,9 @@
-package TREE;public class MegerTwoBinarySearchTREe {
+package TREE;
+
+public class MergeTwoBinarySearchTree {
+
+    public static void main(String[] args) {
+
+    }
+
 }
