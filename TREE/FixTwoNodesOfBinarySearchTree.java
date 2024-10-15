@@ -61,6 +61,22 @@ public class FixTwoNodesOfBinarySearchTree {
         inOrderTraversal(root.right);
     }
 
+    private void printInOrder(Tree root) {
+        if(root==null)
+            return;
+        printInOrder(root.left);
+        System.out.print(root.data+" ");
+        printInOrder(root.right);
+    }
+
+    private boolean isBST(Tree root,int min,int max) {
+        if(root==null)
+            return true;
+        if(root.data<=min||root.data>=max)
+            return false;
+        return isBST(root.left,min,root.data)&&isBST(root.right,root.data,max);
+    }
+
     public static void main(String[] args) {
         FixTwoNodesOfBinarySearchTree tree=new FixTwoNodesOfBinarySearchTree();
         tree.insert(10);
@@ -68,8 +84,18 @@ public class FixTwoNodesOfBinarySearchTree {
         tree.insert(20);
         tree.insert(8);
         tree.insert(15);
+        
+        tree.root.left.right.data=20;
+        tree.root.right.data=8;
+
+        System.out.println("Before correction:");
+        tree.printInOrder(tree.root);
 
         tree.root=tree.correctBST(tree.root);
-        System.out.println("Tree corrected.");
+
+        System.out.println("\nAfter correction:");
+        tree.printInOrder(tree.root);
+
+        System.out.println("\nIs the tree a valid BST? "+tree.isBST(tree.root,Integer.MIN_VALUE,Integer.MAX_VALUE));
     }
 }
