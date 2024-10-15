@@ -7,7 +7,7 @@ public class PairSumInBinarySearchTree {
     private Tree root;
     private List<Integer> ele=new ArrayList<Integer>();
 
-    private static class Tree {
+    private static   class Tree {
         int data;
         Tree left,right;
         Tree(int value) {
