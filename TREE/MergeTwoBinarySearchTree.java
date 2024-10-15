@@ -36,37 +36,42 @@ public class MergeTwoBinarySearchTree {
             parent.right=new Tree(key);
     }
 
-    private List<Integer> merge(Tree root1,Tree root2) {
+    public List<Integer> merge(Tree root1,Tree root2) {
         ArrayList<Integer> list1=new ArrayList<Integer>();
         ArrayList<Integer> list2=new ArrayList<Integer>();
         inOrderTraversal(root1,list1);
         inOrderTraversal(root2,list2);
-        return mergeLists(list1,list2);
+        return mergeTwoList(list1,list2);
     }
 
-    private void inOrderTraversal(Tree root,List<Integer> list) {
-        if(root==null) return;
-        inOrderTraversal(root.left,list);
-        list.add(root.data);
-        inOrderTraversal(root.right,list);
-    }
-
-    private List<Integer> mergeLists(List<Integer> list1,List<Integer> list2) {
+    private List<Integer> mergeTwoList(List<Integer> list1,List<Integer> list2) {
         ArrayList<Integer> res=new ArrayList<Integer>();
         int i=0,j=0;
         int n1=list1.size();
         int n2=list2.size();
         while(i<n1&&j<n2) {
-            if(list1.get(i)<=list2.get(j))
+            if(list1.get(i).equals(list2.get(j))) {
                 res.add(list1.get(i++));
-            else
                 res.add(list2.get(j++));
+            } else if(list1.get(i)<list2.get(j)) {
+                res.add(list1.get(i++));
+            } else {
+                res.add(list2.get(j++));
+            }
         }
         while(i<n1)
             res.add(list1.get(i++));
         while(j<n2)
             res.add(list2.get(j++));
         return res;
+    }
+
+    private void inOrderTraversal(Tree root,ArrayList<Integer> list) {
+        if(root==null)
+            return;
+        inOrderTraversal(root.left,list);
+        list.add(root.data);
+        inOrderTraversal(root.right,list);
     }
 
     public static void main(String[] args) {
