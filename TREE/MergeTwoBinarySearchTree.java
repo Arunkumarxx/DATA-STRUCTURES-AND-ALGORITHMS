@@ -77,12 +77,21 @@ public class MergeTwoBinarySearchTree {
     public static void main(String[] args) {
         MergeTwoBinarySearchTree tree=new MergeTwoBinarySearchTree();
         tree.insert(tree.root1=tree.new Tree(3),1);
+        tree.insert(tree.root1,2);
+        tree.insert(tree.root1,3);
+        tree.insert(tree.root1,4);
+        tree.insert(tree.root1,6);
         tree.insert(tree.root1,5);
-        tree.insert(tree.root1,7);
 
         tree.insert(tree.root2=tree.new Tree(2),0);
+        tree.insert(tree.root2,1);
+        tree.insert(tree.root2,2);
+        tree.insert(tree.root2,5);
+        tree.insert(tree.root2,4);
+        tree.insert(tree.root2,3);
+        tree.insert(tree.root2,5);
         tree.insert(tree.root2,6);
-        tree.insert(tree.root2,8);
+        tree.insert(tree.root2,7);
 
         List<Integer> merged=tree.merge(tree.root1,tree.root2);
         System.out.println("Merged list: "+merged);
