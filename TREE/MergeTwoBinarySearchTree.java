@@ -83,7 +83,7 @@ public class MergeTwoBinarySearchTree {
         tree.insert(tree.root1,6);
         tree.insert(tree.root1,5);
 
-        tree.insert(tree.root2=tree.new Tree(2),0);
+        tree.insert(tree.root2=tree.new Tree(2),2);
         tree.insert(tree.root2,1);
         tree.insert(tree.root2,2);
         tree.insert(tree.root2,5);
