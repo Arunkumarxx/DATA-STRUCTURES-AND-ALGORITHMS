@@ -5,6 +5,8 @@ import java.util.List;
 
 public class MergeTwoBinarySearchTree {
     private Tree root1,root2;
+    int index1=0;
+    List<Integer> result=new ArrayList<>();
 
     private class Tree {
         int data;
@@ -37,41 +39,35 @@ public class MergeTwoBinarySearchTree {
     }
 
     public List<Integer> merge(Tree root1,Tree root2) {
-        ArrayList<Integer> list1=new ArrayList<Integer>();
-        ArrayList<Integer> list2=new ArrayList<Integer>();
-        inOrderTraversal(root1,list1);
-        inOrderTraversal(root2,list2);
-        return mergeTwoList(list1,list2);
-    }
-
-    private List<Integer> mergeTwoList(List<Integer> list1,List<Integer> list2) {
-        ArrayList<Integer> res=new ArrayList<Integer>();
-        int i=0,j=0;
-        int n1=list1.size();
-        int n2=list2.size();
-        while(i<n1&&j<n2) {
-            if(list1.get(i).equals(list2.get(j))) {
-                res.add(list1.get(i++));
-                res.add(list2.get(j++));
-            } else if(list1.get(i)<list2.get(j)) {
-                res.add(list1.get(i++));
-            } else {
-                res.add(list2.get(j++));
-            }
+        List<Integer> list1=new ArrayList<>();
+        inOrder(root1,list1);
+        int size1=list1.size();
+        mergeLists(root2,list1,size1);
+        while(index1<size1) {
+            result.add(list1.get(index1));
+            index1++;
         }
-        while(i<n1)
-            res.add(list1.get(i++));
-        while(j<n2)
-            res.add(list2.get(j++));
-        return res;
+        return result;
     }
 
-    private void inOrderTraversal(Tree root,ArrayList<Integer> list) {
+    private void inOrder(Tree root,List<Integer> list1) {
         if(root==null)
             return;
-        inOrderTraversal(root.left,list);
-        list.add(root.data);
-        inOrderTraversal(root.right,list);
+        inOrder(root.left,list1);
+        list1.add(root.data);
+        inOrder(root.right,list1);
+    }
+
+    private void mergeLists(Tree root,List<Integer> list1,int size1) {
+        if(root==null)
+            return;
+        mergeLists(root.left,list1,size1);
+        while(index1<size1&&list1.get(index1)<root.data) {
+            result.add(list1.get(index1));
+            index1++;
+        }
+        result.add(root.data);
+        mergeLists(root.right,list1,size1);
     }
 
     public static void main(String[] args) {
