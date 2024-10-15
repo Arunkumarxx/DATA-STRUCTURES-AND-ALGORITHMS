@@ -63,13 +63,11 @@ public class FindCommonNodesInTwoBinarySearchTree {
         preOrderTraversal(root.left,result);
         preOrderTraversal(root.right,result);
     }
-
     public static void main(String[] args) {
         FindCommonNodesInTwoBinarySearchTree tree=new FindCommonNodesInTwoBinarySearchTree();
         tree.insert(tree.root1=tree.new Tree(5),1);
         tree.insert(tree.root1,10);
         tree.insert(tree.root1,20);
-
         tree.insert(tree.root2=tree.new Tree(10),5);
         tree.insert(tree.root2,15);
         tree.insert(tree.root2,20);
