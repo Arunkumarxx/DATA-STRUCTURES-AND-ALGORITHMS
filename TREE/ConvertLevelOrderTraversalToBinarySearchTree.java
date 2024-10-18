@@ -3,17 +3,25 @@ package TREE;
 import java.util.*;
 
 public class ConvertLevelOrderTraversalToBinarySearchTree {
-    class TreeRange {
+     private class TreeRange {
         Tree node;
-        int min,max;
-        TreeRange(Tree node,int min,int max) {
-            this.node=node;
-            this.min=min;
-            this.max=max;
+        int min, max;
+
+        TreeRange(Tree node, int min, int max) {
+            this.node = node;
+            this.min = min;
+            this.max = max;
         }
     }
-
-    public Tree constructBST(int[] arr) {
+   private class Tree {
+        int data;
+        Tree left,right;
+        Tree(int value) {
+            this.data=value;
+            left=right=null;
+        }
+    }
+    private Tree constructBST(int[] arr) {
         if(arr.length==0) return null;
         Tree root=new Tree(arr[0]);
         Queue<TreeRange> queue=new LinkedList<>();
@@ -34,16 +42,6 @@ public class ConvertLevelOrderTraversalToBinarySearchTree {
         }
         return root;
     }
-
-    class Tree {
-        int data;
-        Tree left,right;
-        Tree(int value) {
-            this.data=value;
-            left=right=null;
-        }
-    }
-
     public static void main(String[] args) {
         ConvertLevelOrderTraversalToBinarySearchTree tree=new ConvertLevelOrderTraversalToBinarySearchTree();
         int[] arr={3,1,4,2};
@@ -55,7 +53,6 @@ public class ConvertLevelOrderTraversalToBinarySearchTree {
         printStructure(root, 0);
     }
 
-    // Helper method to print in-order traversal
     private static void printInOrder(Tree root) {
         if(root!=null) {
             printInOrder(root.left);
