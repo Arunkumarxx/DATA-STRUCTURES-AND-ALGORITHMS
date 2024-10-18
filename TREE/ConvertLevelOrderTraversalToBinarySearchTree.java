@@ -1,44 +1,73 @@
 package TREE;
 
+import java.util.*;
+
 public class ConvertLevelOrderTraversalToBinarySearchTree {
-
-    public static void main(String[] args) {
-
-    }
-
-}
-
-class GFG
-{
-    class NodeRange {
-        Node node;
+    class TreeRange {
+        Tree node;
         int min,max;
-        NodeRange(Node node,int min,int max) {
+        TreeRange(Tree node,int min,int max) {
             this.node=node;
             this.min=min;
             this.max=max;
         }
     }
-    public Node constructBST(int[] arr)
-    {
+
+    public Tree constructBST(int[] arr) {
         if(arr.length==0) return null;
-        Node root=new Node(arr[0]);
-        Queue<NodeRange> queue=new LinkedList<>();
-        queue.add(new NodeRange(root,Integer.MIN_VALUE,Integer.MAX_VALUE));
+        Tree root=new Tree(arr[0]);
+        Queue<TreeRange> queue=new LinkedList<>();
+        queue.add(new TreeRange(root,Integer.MIN_VALUE,Integer.MAX_VALUE));
         int i=1;
         while(!queue.isEmpty()&&i<arr.length) {
-            NodeRange curr=queue.poll();
+            TreeRange curr=queue.poll();
             if(i<arr.length&&arr[i]>curr.min&&arr[i]<curr.node.data) {
-                curr.node.left=new Node(arr[i]);
-                queue.add(new NodeRange(curr.node.left,curr.min,curr.node.data));
+                curr.node.left=new Tree(arr[i]);
+                queue.add(new TreeRange(curr.node.left,curr.min,curr.node.data));
                 i++;
             }
             if(i<arr.length&&arr[i]>curr.node.data&&arr[i]<curr.max) {
-                curr.node.right=new Node(arr[i]);
-                queue.add(new NodeRange(curr.node.right,curr.node.data,curr.max));
+                curr.node.right=new Tree(arr[i]);
+                queue.add(new TreeRange(curr.node.right,curr.node.data,curr.max));
                 i++;
             }
         }
         return root;
+    }
+
+    class Tree {
+        int data;
+        Tree left,right;
+        Tree(int value) {
+            this.data=value;
+            left=right=null;
+        }
+    }
+
+    public static void main(String[] args) {
+        ConvertLevelOrderTraversalToBinarySearchTree tree=new ConvertLevelOrderTraversalToBinarySearchTree();
+        int[] arr={3,1,4,2};
+        Tree root=tree.constructBST(arr);
+        System.out.println("In-order Traversal:");
+        printInOrder(root);
+        System.out.println();
+        System.out.println("Tree Structure:");
+        printStructure(root, 0);
+    }
+
+    // Helper method to print in-order traversal
+    private static void printInOrder(Tree root) {
+        if(root!=null) {
+            printInOrder(root.left);
+            System.out.print(root.data+" ");
+            printInOrder(root.right);
+        }
+    }
+    private static void printStructure(Tree root, int level) {
+        if(root!=null) {
+            printStructure(root.right, level+1);
+            System.out.println("  ".repeat(level) + root.data);
+            printStructure(root.left, level+1);
+        }
     }
 }
