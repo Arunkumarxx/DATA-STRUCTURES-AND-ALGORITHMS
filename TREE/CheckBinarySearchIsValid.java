@@ -36,7 +36,6 @@ public class CheckBinarySearchIsValid {
     boolean isBST(Tree root) {
         return isValidBinarySearchTree(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
     }
-
     private boolean isValidBinarySearchTree(Tree root,int range1,int range2) {
         if(root==null)
             return true;
@@ -44,7 +43,6 @@ public class CheckBinarySearchIsValid {
             return false;
         return isValidBinarySearchTree(root.left,range1,root.data)&&isValidBinarySearchTree(root.right,root.data,range2);
     }
-
     public static void main(String[] args) {
         CheckBinarySearchIsValid tree=new CheckBinarySearchIsValid();
         tree.insert(5);
@@ -53,7 +51,6 @@ public class CheckBinarySearchIsValid {
         tree.insert(1);
         tree.insert(4);
         tree.insert(2);
-      
         System.out.println("Is the tree a BST? "+tree.isBST(tree.root));
     }
 }
