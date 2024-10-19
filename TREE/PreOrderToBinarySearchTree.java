@@ -1,2 +1,9 @@
-package TREE;public class PreOrderToBinarySearchTRee {
+package TREE;
+
+public class PreOrderToBinarySearchTree {
+
+    public static void main(String[] args) {
+        
+    }
+
 }
