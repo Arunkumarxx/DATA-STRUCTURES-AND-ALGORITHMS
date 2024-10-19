@@ -53,10 +53,7 @@ public class CheckBinarySearchIsValid {
         tree.insert(1);
         tree.insert(4);
         tree.insert(2);
-        tree.insert(41);
-        tree.insert(55);
-        tree.insert(17);
-        tree.insert(11);
+      
         System.out.println("Is the tree a BST? "+tree.isBST(tree.root));
     }
 }
