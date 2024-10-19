@@ -1,14 +1,15 @@
 package TREE;
 
-
 public class PreOrderToBinarySearchTree {
-   private class Tree {
+    private class Tree {
         int data;
         Tree left,right;
         Tree(int value) {
             this.data=value;
             left=right=null;
         }
+    }
+
     private int ind=0;
 
     public Tree Bst(int pre[],int size) {
@@ -29,11 +30,10 @@ public class PreOrderToBinarySearchTree {
     public static void main(String[] args) {
         PreOrderToBinarySearchTree tree=new PreOrderToBinarySearchTree();
         int[] preOrder1={10,5,1,7,40,50};
-        Tree root1= (preOrder1,preOrder1.length);
+        Tree root1=tree.Bst(preOrder1,preOrder1.length);
         System.out.println("In-order Traversal of Test Case 1:");
         printInOrder(root1);
         System.out.println();
-
     }
 
     private static void printInOrder(Tree root) {
@@ -43,7 +43,4 @@ public class PreOrderToBinarySearchTree {
             printInOrder(root.right);
         }
     }
-}
-
-
 }
