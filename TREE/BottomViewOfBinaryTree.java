@@ -3,7 +3,7 @@ package TREE;
 import java.util.*;
 
 public class BottomViewOfBinaryTree {
-    class Pair {
+    private class Pair {
         Tree root;
         int x_axis;
         Pair(Tree root,int x_axis) {
@@ -12,7 +12,7 @@ public class BottomViewOfBinaryTree {
         }
     }
 
-    class Tree {
+   private class Tree {
         int data;
         Tree left,right;
         Tree(int value) {
@@ -20,7 +20,7 @@ public class BottomViewOfBinaryTree {
             left=right=null;
         }
     }
-    public ArrayList<Integer> bottomView(Tree root) {
+    private ArrayList<Integer> bottomView(Tree root) {
         Queue<Pair> q=new LinkedList<>();
         HashMap<Integer,Integer> hashMap=new HashMap<>();
         q.add(new Pair(root,0));
