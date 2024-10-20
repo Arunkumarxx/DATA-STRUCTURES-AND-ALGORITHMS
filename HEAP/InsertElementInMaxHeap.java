@@ -14,13 +14,12 @@ public class InsertElementInMaxHeap {
             heap[0]=value;
             return;
         }
-
+        ++lastInsertIndex;
         int i=lastInsertIndex;
-        ++currentSize;
-        heap[i]=value;
-        if(currentSize==size)
+        if(i>=size || currentSize>=size)
             resize();
-
+        heap[i]=value;
+        ++currentSize;
         while(i>0)
         {
             int parent = heap[i/2];
