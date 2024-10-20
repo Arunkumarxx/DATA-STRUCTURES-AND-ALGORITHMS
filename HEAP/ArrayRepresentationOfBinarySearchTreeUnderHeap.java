@@ -50,8 +50,8 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     {
         if(tree[ind]==null)
             return;
-        System.out.println(tree[ind]+" ");
         inOrderTraversal(2*ind+1);
+        System.out.println(tree[ind]+" ");
         inOrderTraversal(2*ind+2);
     }
     public static void main(String[] args) {
