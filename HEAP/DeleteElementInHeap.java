@@ -67,6 +67,8 @@ public class DeleteElementInHeap {
                 return;
 
             swap(i,largest);
+
+            i=largest;
         }
     }
     private void swap(int parent,int largestChild)
