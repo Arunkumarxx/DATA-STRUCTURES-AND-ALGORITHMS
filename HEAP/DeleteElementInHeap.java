@@ -62,7 +62,7 @@ public class DeleteElementInHeap {
                 i=leftChild;
             }
 
-            else if(heap[i]>heap[rightChild]) {
+             if(heap[i]>heap[rightChild]) {
                 swap(heap[i], heap[rightChild]);
                 i=rightChild;
             }
