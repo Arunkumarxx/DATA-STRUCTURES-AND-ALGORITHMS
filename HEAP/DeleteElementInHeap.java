@@ -83,7 +83,7 @@ public class DeleteElementInHeap {
 
     public static void main(String[] args) {
         DeleteElementInHeap heap = new DeleteElementInHeap();
-        for(int i=0;i<=100;++i)
+        for(int i=0;i<=10;++i)
         {
             heap.insert(i);
         }
