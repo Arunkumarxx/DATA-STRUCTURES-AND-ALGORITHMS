@@ -1,90 +1,97 @@
 package HEAP;
 
 public class DeleteElementInHeap {
-    Integer[] heap = new Integer[100];
-    private int currentSize = 0;
-    private int size = heap.length;
+    Integer [] heap  =new Integer[100];
+    private  int currentSize=0;
+    private int size= heap.length;
 
-    private void resize() {
-        Integer[] temp = new Integer[size * 2];
-        System.arraycopy(heap, 0, temp, 0, currentSize);
-        heap = temp;
-        size = heap.length;
+    private void resize()
+    {
+        Integer[] temp=new Integer[size*2];
+        for(int i=0;i<size;++i)
+        {
+            temp[i]=heap[i];
+        }
+        heap=temp;
+        size=heap.length;
     }
 
-    private void insert(int value) {
-        if (currentSize >= size) {
-            resize();
-        }
-        heap[currentSize] = value;
-        ++currentSize;
-
-        // Heapify up
-        int i = currentSize - 1;
-        while (i > 0) {
-            int parent = (i - 1) / 2;
-            if (heap[parent] < heap[i]) {
-                swap(parent, i);
-                i = parent;
-            } else {
-                return;
-            }
-        }
-    }
-
-    private void delete() {
-        if (currentSize == 0) {
+    private void insert(int value)
+    {
+        if(currentSize==0)
+        {
+            heap[0]=value;
+            ++currentSize;
             return;
         }
+        if(currentSize>=size)
+            resize();
+        int i=currentSize;
+        heap[i]=value;
+        ++currentSize;
 
-        // Move the last element to the root
-        heap[0] = heap[currentSize - 1];
-        heap[currentSize - 1] = null;
+        while(i>0)
+        {
+            int parent=(i-1)/2;
+            if(heap[parent]<value)
+            {
+                int temp=heap[parent];
+                heap[parent]=heap[i];
+                heap[i]=temp;
+                i=parent;
+            }
+            else return;
+        }
+    }
+    private void delete()
+    {
+        if(currentSize==0)
+            return;
+        heap[0]=heap[currentSize-1];
+        heap[currentSize-1]=null;
         --currentSize;
+        int i=0;
+        while(i<currentSize)
+        {
+            int leftChild=2*(i+1);
+            int rightChild=2*(i+2);
+            int largest=i;
 
-        // Heapify down
-        int i = 0;
-        while (i < currentSize) {
-            int leftChild = 2 * i + 1;
-            int rightChild = 2 * i + 2;
-            int largest = i;
+            if(leftChild<currentSize && heap[leftChild]>heap[largest])
+                largest=leftChild;
 
-            if (leftChild < currentSize && heap[leftChild] > heap[largest]) {
-                largest = leftChild;
-            }
-            if (rightChild < currentSize && heap[rightChild] > heap[largest]) {
-                largest = rightChild;
-            }
+            if(rightChild<currentSize && heap[rightChild]>heap[largest])
+                largest=rightChild;
 
-            if (largest == i) {
-                break; // No more swaps needed
-            }
+            if(largest==i)
+                return;
 
-            swap(i, largest);
-            i = largest;
+            swap(i,largest);
+            i=largest;
         }
     }
-
-    private void swap(int parent, int child) {
-        int temp = heap[parent];
-        heap[parent] = heap[child];
-        heap[child] = temp;
+    private void swap(int parent,int largestChild)
+    {
+        int temp=heap[parent];
+        heap[parent]=heap[largestChild];
+        heap[largestChild]=temp;
     }
-
-    private void print() {
-        for (int i = 0; i < currentSize; ++i) {
-            System.out.print(heap[i] + " ");
-        }
-        System.out.println(); // To add a new line after printing the heap
+    private void print()
+    {
+        for(int i=0;i<currentSize;++i)
+            System.out.print(heap[i]+" ");
     }
 
     public static void main(String[] args) {
         DeleteElementInHeap heap = new DeleteElementInHeap();
-        for (int i = 0; i <= 10; ++i) {
+        for(int i=0;i<=10;++i)
+        {
             heap.insert(i);
         }
-        heap.print(); // Print the heap before deletion
-        heap.delete(); // Delete the root
-        heap.print(); // Print the heap after deletion
+        heap.print();
+        heap.delete();
+        System.out.println();
+        heap.print();
     }
+
 }
