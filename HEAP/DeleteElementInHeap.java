@@ -53,11 +53,27 @@ public class DeleteElementInHeap {
         int i=0;
         while(i!=currentSize-1)
         {
-            if(heap[i]<heap[2*(i+1)])
-            {
-                
+
+            int leftChild=2*(i+1);
+            int rightChild=2*(i+2);
+
+            if(heap[i]<heap[leftChild]) {
+                swap(heap[i], heap[leftChild]);
+                i=leftChild;
             }
+
+            else if(heap[i]>heap[rightChild]) {
+                swap(heap[i], heap[rightChild]);
+                i=rightChild;
+            }
+            else return;
         }
+    }
+    private void swap(int parent,int child)
+    {
+        int temp=heap[parent];
+        heap[parent]=heap[child];
+        heap[child]=temp;
     }
     private void print()
     {
