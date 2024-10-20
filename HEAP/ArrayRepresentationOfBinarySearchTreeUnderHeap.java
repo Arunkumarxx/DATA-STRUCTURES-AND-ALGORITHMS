@@ -7,7 +7,10 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
 
     private void insert()
     {
-        if(currentSize==)
+        if(currentSize==size)
+        {
+            
+        }
     }
 
 }
