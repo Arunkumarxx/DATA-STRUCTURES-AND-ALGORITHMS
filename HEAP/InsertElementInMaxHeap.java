@@ -21,13 +21,13 @@ public class InsertElementInMaxHeap {
         ++currentSize;
         while(i>0)
         {
-            int parent = heap[i/2];
+            int parent = heap[(i-1)/2];
             int child  = heap[i];
             if(parent<child)
             {
                 heap[i]=parent;
-                heap[i/2]=child;
-                i=i/2;
+                heap[(i-1)/2]=child;
+                i=(i-1)/2;
             }
             else return;
         }
