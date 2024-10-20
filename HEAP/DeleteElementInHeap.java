@@ -47,8 +47,7 @@ public class DeleteElementInHeap {
     {
         if(currentSize==0)
             return;
-        int temp=heap[currentSize-1];
-        heap[0]=temp;
+        heap[0]=heap[currentSize-1];
         heap[currentSize-1]=null;
         --currentSize;
         int i=0;
@@ -69,11 +68,11 @@ public class DeleteElementInHeap {
             else return;
         }
     }
-    private void swap(int parent,int child)
+    private void swap(int parent,int largestChild)
     {
         int temp=heap[parent];
-        heap[parent]=heap[child];
-        heap[child]=temp;
+        heap[parent]=heap[largestChild];
+        heap[largestChild]=temp;
     }
     private void print()
     {
