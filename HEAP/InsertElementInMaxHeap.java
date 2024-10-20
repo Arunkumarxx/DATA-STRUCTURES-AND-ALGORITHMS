@@ -21,15 +21,14 @@ public class InsertElementInMaxHeap {
         ++currentSize;
         while(i>0)
         {
-            int parent = heap[(i-1)/2];
-            int child  = heap[i];
-            if(parent<child)
+            int parent= heap[(i-1)/2];
+            if(heap[parent]<heap[i])
             {
-                heap[i]=parent;
-                heap[(i-1)/2]=child;
-                i=(i-1)/2;
+                int temp=heap[parent];
+                heap[parent]=heap[i];
+                heap[i]=heap[parent];
+                i=
             }
-            else return;
         }
     }
     private void resize()
