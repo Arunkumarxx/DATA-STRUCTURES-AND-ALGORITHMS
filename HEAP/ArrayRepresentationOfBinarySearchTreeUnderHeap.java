@@ -51,7 +51,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     }
     public static void main(String[] args) {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
-        for(int i=0;i<=56;++i)
+        for(int i=0;i<=15;++i)
             tree.insert(i);
         tree.print();
     }
