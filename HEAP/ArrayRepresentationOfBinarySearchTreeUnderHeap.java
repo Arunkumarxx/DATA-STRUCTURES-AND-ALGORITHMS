@@ -31,8 +31,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     }
     private void resize()
     {
-        int newSize= size*3;
-        Integer  [] resizedTree =new Integer[newSize/3];
+        Integer  [] resizedTree =new Integer[size*2];
         System.arraycopy(tree,0,resizedTree,0,size);
         tree=resizedTree;
         size=tree.length;
@@ -52,7 +51,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     }
     public static void main(String[] args) {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
-        for(int i=0;i<=100;++i)
+        for(int i=0;i<=10;++i)
             tree.insert(i);
         tree.print();
     }
