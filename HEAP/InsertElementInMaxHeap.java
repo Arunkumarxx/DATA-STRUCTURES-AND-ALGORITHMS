@@ -13,7 +13,13 @@ public class InsertElementInMaxHeap {
             ++currentSize;
             return;
         }
-
+        int i=0;
+        while(i<size)
+        {
+            if(heap[i]==null)
+            {
+                heap[
+        }
     }
     public static void main(String[] args) {
         InsertElementInMaxHeap heap =new InsertElementInMaxHeap();
