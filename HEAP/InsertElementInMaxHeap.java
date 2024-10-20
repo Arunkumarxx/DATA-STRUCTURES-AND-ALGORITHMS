@@ -8,7 +8,7 @@ public class InsertElementInMaxHeap {
     private int currentSize=0;
     private int lastInsertIndex=0;
     private void insert(int value) {
-        if(heap[0]==null)
+        if(currentSize==0)
         {
             heap[0]=value;
             ++currentSize;
