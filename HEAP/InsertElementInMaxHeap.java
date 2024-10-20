@@ -11,6 +11,8 @@ public class InsertElementInMaxHeap {
         if(heap[0]==null)
         {
             heap[0]=value;
+            ++currentSize;
+            ++lastInsertIndex;
             return;
         }
         ++lastInsertIndex;
