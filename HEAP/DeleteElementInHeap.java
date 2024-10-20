@@ -50,6 +50,7 @@ public class DeleteElementInHeap {
         int temp=heap[currentSize-1];
         heap[0]=temp;
         heap[currentSize-1]=null;
+        --currentSize;
         int i=0;
         while(i!=currentSize-1)
         {
