@@ -40,6 +40,6 @@ public class InsertElementInMaxHeap {
         heap.insert(10);
         heap.insert(20);
         heap.insert(30);
-        
+
     }
 }
