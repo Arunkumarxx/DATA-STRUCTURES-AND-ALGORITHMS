@@ -52,7 +52,7 @@ public class DeleteElementInHeap {
         heap[currentSize-1]=null;
         --currentSize;
         int i=0;
-        while(i!=currentSize)
+        while(i<=currentSize)
         {
 
             int leftChild=2*(i+1);
