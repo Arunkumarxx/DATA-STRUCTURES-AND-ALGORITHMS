@@ -55,6 +55,7 @@ public class DeleteElementInHeap {
         {
             heap.insert(i);
         }
+        heap.print();
     }
 
 }
