@@ -1,6 +1,5 @@
 package HEAP;
 
-import MATRIX.InterchangingTheRowsOfAMatrix;
 
 import java.util.Arrays;
 
@@ -41,6 +40,6 @@ public class InsertElementInMaxHeap {
         heap.insert(10);
         heap.insert(20);
         heap.insert(30);
-
+        
     }
 }
