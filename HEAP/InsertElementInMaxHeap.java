@@ -9,24 +9,7 @@ public class InsertElementInMaxHeap {
     private int currentSize=0;
 
     private void insert(int value) {
-
-        int i = 0;
-        while (i < size) {
-            if(currentSize==size)
-                resize();
-            if (heap[i] == null) {
-                heap[i] = value;
-                ++currentSize;
-                return;
-            }
-            if(value<heap[i])
-                i=2*i+1;
-            else if(value>heap[i])
-                i=2*i+2;
-            else return;
-            if (i >= size)
-                resize();
-        }
+        
     }
     private void resize()
     {
