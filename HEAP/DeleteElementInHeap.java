@@ -50,7 +50,14 @@ public class DeleteElementInHeap {
         int temp=heap[currentSize-1];
         heap[0]=temp;
         heap[currentSize-1]=null;
-        
+        int i=0;
+        while(i!=currentSize-1)
+        {
+            if(heap[i]<heap[2*(i+1)])
+            {
+                
+            }
+        }
     }
     private void print()
     {
