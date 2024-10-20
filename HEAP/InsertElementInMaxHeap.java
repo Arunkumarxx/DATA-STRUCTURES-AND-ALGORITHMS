@@ -20,10 +20,10 @@ public class InsertElementInMaxHeap {
                 ++currentSize;
                 return;
             }
-            if ( value > heap[i] )
-                i = 2 * i + 1;
-            if ( value < heap[i] )
-                i = 2 * i + 2;
+            if(value<heap[i])
+                i=2*i+1;
+            else if(value>heap[i])
+                i=2*i+2;
             else return;
             if (i >= size)
                 resize();
@@ -31,9 +31,9 @@ public class InsertElementInMaxHeap {
     }
     private void resize()
     {
-        Integer  [] resizedTree =new Integer[size*2];
-        System.arraycopy(heap,0,resizedTree,0,size);
-        heap=resizedTree;
+        Integer [] temp =new Integer[size*2];
+        temp=Arrays.copyOf(temp,0);
+        heap=temp;
         size=heap.length;
     }
     public static void main(String[] args) {
