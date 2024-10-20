@@ -32,7 +32,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     }
     public static void main(String[] args) {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
-        for(int i=0;i<=100;++i)
+        for(int i=0;i<=5;++i)
             tree.insert(i);
         System.out.println(tree.heap.length);
     }
