@@ -2,7 +2,7 @@ package HEAP;
 
 
 public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
-    Integer [] tree =new Integer[1000];
+    Integer [] tree =new Integer[100];
     int currentSize=0;
     int size=tree.length;
 
