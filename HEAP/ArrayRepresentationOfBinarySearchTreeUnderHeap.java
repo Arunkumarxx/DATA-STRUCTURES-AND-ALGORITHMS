@@ -9,8 +9,11 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     {
         if(currentSize==size)
         {
-            
         }
+    }
+    private void resize()
+    {
+        
     }
 
 }
