@@ -10,11 +10,7 @@ public class InsertElementInMaxHeap {
     private int currentSize=0;
 
     private void insert(int value) {
-        if (heap[0] == null) {
-            heap[0] = value;
-            ++currentSize;
-            return;
-        }
+
         int i = 0;
         while (i < size) {
             if(currentSize==size)
