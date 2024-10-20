@@ -7,7 +7,13 @@ public class DeleteElementInHeap {
 
     private void resize()
     {
-        
+        Integer[] temp=new Integer[size*2];
+        for(int i=0;i<size;++i)
+        {
+            temp[i]=heap[i];
+        }
+        heap=temp;
+        size=heap.length;
     }
 
     private void insert(int value)
