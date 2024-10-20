@@ -16,7 +16,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
             }
             if(value<heap[i])
             {
-                i=(i)
+                i=(2*(i));
             }
         }
     }
