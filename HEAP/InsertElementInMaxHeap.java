@@ -43,6 +43,8 @@ public class InsertElementInMaxHeap {
         heap.insert(10);
         heap.insert(20);
         heap.insert(30);
-
+        for(Integer value: heap.heap)
+            System.out.print(value+" ");
+        
     }
 }
