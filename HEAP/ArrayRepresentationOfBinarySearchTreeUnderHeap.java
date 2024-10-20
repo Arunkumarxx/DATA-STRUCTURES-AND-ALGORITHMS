@@ -43,7 +43,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
         for(int i=0;i<=10;++i)
             tree.insert(i);
-        
+
     }
 
 }
