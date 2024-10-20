@@ -5,7 +5,7 @@ import MATRIX.InterchangingTheRowsOfAMatrix;
 import java.util.Arrays;
 
 public class InsertElementInMaxHeap {
-    Integer [] heap  = new Integer[100];
+    Integer [] heap  = new Integer[1000];
     private int size=heap.length;
     private int currentSize=0;
 
