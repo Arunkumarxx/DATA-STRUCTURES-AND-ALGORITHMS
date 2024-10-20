@@ -1,6 +1,5 @@
 package HEAP;
 
-
 public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     Integer [] tree =new Integer[100];
     int currentSize=0;
