@@ -6,17 +6,14 @@ public class InsertElementInMaxHeap {
     Integer [] heap  = new Integer[1000];
     private int size=heap.length;
     private int currentSize=0;
-    private int lastInsertIndex=0;
     private void insert(int value) {
         if(currentSize==0)
         {
             heap[0]=value;
             ++currentSize;
-            ++lastInsertIndex;
             return;
         }
-        ++lastInsertIndex;
-        int i=lastInsertIndex;
+        int i=currentSize;
         if(i>=size || currentSize>=size)
             resize();
         heap[i]=value;
