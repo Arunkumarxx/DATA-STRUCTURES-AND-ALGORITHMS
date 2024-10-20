@@ -31,9 +31,9 @@ public class InsertElementInMaxHeap {
     }
     private void resize()
     {
-        Integer [] temp =new Integer[size*2];
-        temp=Arrays.copyOf(temp,0);
-        heap=temp;
+        Integer  [] resizedTree =new Integer[size*2];
+        System.arraycopy(heap,0,resizedTree,0,size);
+        heap=resizedTree;
         size=heap.length;
     }
     public static void main(String[] args) {
