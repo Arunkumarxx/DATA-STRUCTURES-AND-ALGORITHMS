@@ -15,9 +15,10 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
                 return;
             }
             if(value<heap[i])
-            {
-                i=(2*(i));
-            }
+                i = (2 * (i + 1)) - 1;
+            else if(value>heap[i])
+                i = (2 * (i + 1));
+            else return;
         }
     }
     public static void main(String[] args) {
