@@ -1,5 +1,9 @@
 package HEAP;
 
+import MATRIX.InterchangingTheRowsOfAMatrix;
+
+import java.util.Arrays;
+
 public class InsertElementInMaxHeap {
     Integer [] heap  = new Integer[100];
     private int size=heap.length;
@@ -29,7 +33,8 @@ public class InsertElementInMaxHeap {
     }
     private void resize()
     {
-
+        Integer [] temp =new Integer[size*2];
+        Arrays.copyOf(heap,temp);
     }
     public static void main(String[] args) {
         InsertElementInMaxHeap heap =new InsertElementInMaxHeap();
