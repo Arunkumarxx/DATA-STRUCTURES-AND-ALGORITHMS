@@ -41,7 +41,7 @@ public class BuildMaxHeap
     public static void main(String[] args)
     {
         BuildMaxHeap heap  = new BuildMaxHeap();
-        for(int i=0;i<=10034;++i)
+        for(int i=0;i<=299;++i)
         {
             heap.insert(i);
         }

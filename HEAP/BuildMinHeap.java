@@ -37,7 +37,7 @@ public class BuildMinHeap {
     }
     public static void main(String[] args) {
        BuildMinHeap heap  = new BuildMinHeap();
-        for(int i=0;i<=10034;++i)
+        for(int i=0;i<=104;++i)
         {
             heap.insert(i);
         }
