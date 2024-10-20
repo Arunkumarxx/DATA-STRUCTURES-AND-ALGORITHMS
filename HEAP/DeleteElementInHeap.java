@@ -43,6 +43,15 @@ public class DeleteElementInHeap {
             else return;
         }
     }
+    private void delete()
+    {
+        if(currentSize==0)
+            return;
+        int temp=heap[currentSize-1];
+        heap[0]=temp;
+        heap[currentSize-1]=null;
+        
+    }
     private void print()
     {
         for(int i=0;i<currentSize;++i)
