@@ -43,7 +43,6 @@ public class InsertElementInMaxHeap {
     public static void main(String[] args) {
         InsertElementInMaxHeap heap =new InsertElementInMaxHeap();
         heap.insert(10);
-        heap.insert(20);
-        heap.insert(30);
+
     }
 }
