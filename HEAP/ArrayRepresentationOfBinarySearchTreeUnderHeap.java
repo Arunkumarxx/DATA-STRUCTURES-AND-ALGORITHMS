@@ -2,6 +2,8 @@ package HEAP;
 
 import TREE.IterativePreOrderTraversal;
 
+import java.io.FilterOutputStream;
+
 public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     Integer [] tree =new Integer[1000];
     int currentSize=0;
@@ -38,6 +40,19 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
         Integer  [] resizedTree =new Integer[size*2];
         System.arraycopy(tree,0,resizedTree,0,size);
         tree=resizedTree;
+    }
+    private void print()
+    {
+        inOrderTraversal(0);
+    }
+
+    private void inOrderTraversal(int ind)
+    {
+        if(tree[ind]==null)
+            return;
+        System.out.println(tree[ind]+" ");
+        inOrderTraversal(2*ind+1);
+        inOrderTraversal(2*ind+2);
     }
     public static void main(String[] args) {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
