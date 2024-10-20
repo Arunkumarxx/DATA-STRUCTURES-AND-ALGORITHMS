@@ -24,9 +24,9 @@ public class InsertElementInMaxHeap {
                 ++currentSize;
                 return;
             }
-            if (heap[i] < value)
+            if ( value > heap[i] )
                 i = 2 * i + 1;
-            if (heap[i] > value)
+            if ( value < heap[i] )
                 i = 2 * i + 2;
             else return;
             if (i >= size)
