@@ -15,9 +15,13 @@ public class InsertElementInMaxHeap {
             return;
         }
         int i=0;
-        while(i<currentSize && heap[i]!=null)
+        while(i<=currentSize && heap[i]!=null)
             ++i;
-        
+        heap[i]=value;
+        while(i>0)
+        {
+            if(heap[i])
+        }
     }
     private void resize()
     {
