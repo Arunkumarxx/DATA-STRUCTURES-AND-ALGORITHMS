@@ -1,7 +1,5 @@
 package HEAP;
 
-import java.util.Arrays;
-
 public class InsertElementInMaxHeap {
     Integer [] heap  = new Integer[1000];
     private int size=heap.length;
