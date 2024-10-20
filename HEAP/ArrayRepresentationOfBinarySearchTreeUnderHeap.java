@@ -7,7 +7,8 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
         if(heap[0]==null)
             heap[0]=value;
         int size=heap.length;
-        for(int i=0;i<size; ++i)
+        int i=0;
+        while(i<size)
         {
             if(heap[i]==null) {
                 heap[i] = value;
@@ -15,7 +16,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
             }
             if(value<heap[i])
             {
-                
+                i=(i)
             }
         }
     }
