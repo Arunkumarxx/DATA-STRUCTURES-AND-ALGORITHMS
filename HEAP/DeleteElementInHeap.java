@@ -43,8 +43,18 @@ public class DeleteElementInHeap {
             else return;
         }
     }
-    public static void main(String[] args) {
+    private void print()
+    {
+        for(int i=0;i<currentSize;++i)
+            System.out.print(heap[i]+" ");
+    }
 
+    public static void main(String[] args) {
+        DeleteElementInHeap heap = new DeleteElementInHeap();
+        for(int i=0;i<=100;++i)
+        {
+            heap.insert(i);
+        }
     }
 
 }
