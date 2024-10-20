@@ -55,17 +55,9 @@ public class DeleteElementInHeap {
         {
             int leftChild=2*(i+1);
             int rightChild=2*(i+2);
+            int largest=i;
 
-            if(heap[i]<heap[leftChild]) {
-                swap(heap[i], heap[leftChild]);
-                i=leftChild;
-            }
-
-             if(heap[i]>heap[rightChild]) {
-                swap(heap[i], heap[rightChild]);
-                i=rightChild;
-            }
-            else return;
+            if(leftChild<currentSize && )
         }
     }
     private void swap(int parent,int largestChild)
