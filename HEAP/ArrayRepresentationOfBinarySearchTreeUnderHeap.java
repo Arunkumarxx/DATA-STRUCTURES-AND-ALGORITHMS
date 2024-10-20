@@ -6,6 +6,18 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
     {
         if(heap[0]==null)
             heap[0]=value;
+        int size=heap.length;
+        for(int i=0;i<size; ++i)
+        {
+            if(heap[i]==null) {
+                heap[i] = value;
+                return;
+            }
+            if(value<heap[i])
+            {
+                
+            }
+        }
     }
     public static void main(String[] args) {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
