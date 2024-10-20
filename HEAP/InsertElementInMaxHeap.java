@@ -34,13 +34,13 @@ public class InsertElementInMaxHeap {
             else return;
         }
     }
-    private void resize()
-    {
-        Integer [] temp =new Integer[size*2];
-        temp=Arrays.copyOf(temp,0);
-        heap=temp;
-        size=heap.length;
+    private void resize() {
+        Integer[] temp = new Integer[size * 2];
+        System.arraycopy(heap, 0, temp, 0, currentSize); // Copy all elements up to currentSize
+        heap = temp;
+        size = heap.length; 
     }
+
     public static void main(String[] args) {
         InsertElementInMaxHeap heap =new InsertElementInMaxHeap();
         for(int i=0;i<=1000;++i)
