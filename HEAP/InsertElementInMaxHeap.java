@@ -18,6 +18,9 @@ public class InsertElementInMaxHeap {
         while(i<=currentSize && heap[i]!=null)
             ++i;
         heap[i]=value;
+        ++currentSize;
+        if(currentSize==size)
+            resize();
         while(i>0)
         {
             int parent = heap[i/2];
