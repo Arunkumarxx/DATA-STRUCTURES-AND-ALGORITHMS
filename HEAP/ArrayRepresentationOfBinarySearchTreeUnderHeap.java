@@ -34,6 +34,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
         tree.insert(1);
         System.out.println((int)tree.heap[0]);
+        System.out.println(tree.heap.length);
     }
 
 }
