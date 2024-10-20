@@ -48,7 +48,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
 
     private void inOrderTraversal(int ind)
     {
-        if(tree[ind]==null)
+        if(ind>=size || tree[ind]==null)
             return;
         inOrderTraversal(2*ind+1);
         System.out.println(tree[ind]+" ");
