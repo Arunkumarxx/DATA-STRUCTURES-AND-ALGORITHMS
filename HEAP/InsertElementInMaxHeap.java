@@ -21,7 +21,7 @@ public class InsertElementInMaxHeap {
         while(i>0)
         {
             int parent= (i-1)/2;
-            if(heap[parent]<heap[i])
+            if(heap[parent]>heap[i])
             {
                 int temp=heap[parent];
                 heap[parent]=heap[i];
