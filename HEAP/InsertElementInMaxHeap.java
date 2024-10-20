@@ -7,20 +7,20 @@ public class InsertElementInMaxHeap {
     Integer [] heap  = new Integer[1000];
     private int size=heap.length;
     private int currentSize=0;
-
+    private int lastInsertIndex=0;
     private void insert(int value) {
         if(heap[0]==null)
         {
             heap[0]=value;
             return;
         }
-        int i=0;
-        while(i<=currentSize && heap[i]!=null)
-            ++i;
-        heap[i]=value;
+
+        int i=lastInsertIndex;
         ++currentSize;
+        heap[i]=value;
         if(currentSize==size)
             resize();
+
         while(i>0)
         {
             int parent = heap[i/2];
