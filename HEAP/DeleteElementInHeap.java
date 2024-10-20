@@ -53,8 +53,8 @@ public class DeleteElementInHeap {
         int i=0;
         while(i<currentSize)
         {
-            int leftChild=2*(i+1);
-            int rightChild=2*(i+2);
+            int leftChild=2*i+1;
+            int rightChild=2*i+2;
             int largest=i;
 
             if(leftChild<currentSize && heap[leftChild]>heap[largest])
