@@ -58,8 +58,7 @@ public class ArrayRepresentationOfBinarySearchTreeUnderHeap {
         ArrayRepresentationOfBinarySearchTreeUnderHeap tree =new ArrayRepresentationOfBinarySearchTreeUnderHeap();
         for(int i=0;i<=10000;++i)
             tree.insert(i);
-        for(Integer x:tree.tree)
-            System.out.print(x+" ");
+        tree.print();
     }
 
 }
