@@ -89,6 +89,7 @@ public class DeleteElementInHeap {
         }
         heap.print();
         heap.delete();
+        System.out.println();
         heap.print();
     }
 
