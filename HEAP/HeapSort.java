@@ -19,7 +19,7 @@ public class HeapSort {
         ++currentSize;
         if(currentSize>=size)
             resize();
-        while(i>=0)
+        while(i>0)
         {
             int parent=(i-1)/2;
             if(heap[parent]<heap[i])
