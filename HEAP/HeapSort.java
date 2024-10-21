@@ -5,15 +5,14 @@ import java.util.Arrays;
 public class HeapSort {
     private void  buildHeap(int [] arr,int n)
     {
-        for(int i=n/2-1; i>=0; i--)
+        for(int i=n/2;i>=0;--i)
             heapify(arr,n,i);
-
-        for(int i=n-1; i>0; i--)
+        for(int i=n-1;i>=0;--i)
         {
-            int x=arr[0];
+            int temp=arr[0];
             arr[0]=arr[i];
-            arr[i]=x;
-            heapify(arr,i,0);
+            arr[i]=temp;
+            heapify(arr,n,0);
         }
         System.out.println(Arrays.toString(arr));
     }
