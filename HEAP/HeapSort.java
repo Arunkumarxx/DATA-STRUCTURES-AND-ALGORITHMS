@@ -43,7 +43,9 @@ public class HeapSort {
     private void print()
     {
         for(Integer val:heap)
+            if(val!=null)
             System.out.print(val+" ");
+        else return;
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
