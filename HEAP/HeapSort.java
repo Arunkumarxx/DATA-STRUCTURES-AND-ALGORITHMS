@@ -91,7 +91,7 @@ public class HeapSort {
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
-        int [] arr = new int [100];
+        int [] arr = new int [101];
         for (int i=100;i>=0;i--)
         {
             arr[i]=i;
