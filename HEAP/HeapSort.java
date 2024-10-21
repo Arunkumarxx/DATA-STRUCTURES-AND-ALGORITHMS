@@ -24,7 +24,7 @@ public class HeapSort {
         while(i>0)
         {
             int parent=(i-1)/2;
-            if(heap[parent]>heap[i])
+            if(heap[parent]<heap[i])
             {
                 int temp=heap[i];
                 heap[i]=heap[parent];
