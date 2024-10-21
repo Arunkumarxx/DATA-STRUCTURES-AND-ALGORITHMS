@@ -40,9 +40,16 @@ public class HeapSort {
         heap=temp;
         size=heap.length;
     }
-
+    private void print()
+    {
+        for(Integer val:heap)
+            System.out.print(val+" ");
+    }
     public static void main(String[] args) {
-
+        HeapSort heapSort =new HeapSort();
+        heapSort.insert(1);
+        heapSort.insert(3);
+        heapSort.insert(34);
     }
 
 }
