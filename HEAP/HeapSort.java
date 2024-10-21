@@ -50,6 +50,7 @@ public class HeapSort {
         heapSort.insert(1);
         heapSort.insert(3);
         heapSort.insert(34);
+        heapSort.print();
     }
 
 }
