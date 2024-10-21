@@ -49,7 +49,14 @@ public class HeapSort {
 
             if(rightChild<currentSize && heap[rightChild]>heap[largest])
                 largest=rightChild;
+
+            if(i==largest)
+                break;
+            int temp=heap[i];
+            heap[i]=heap[largest];
+            heap[largest]=temp;
         }
+        return ele;
     }
     private void resize()
     {
@@ -72,6 +79,8 @@ public class HeapSort {
     {
         for(int val:arr)
             insert(val);
+        int [] result =new int[arr.length];
+        
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
