@@ -1,9 +1,13 @@
 package HEAP;
 
+import java.util.Arrays;
+
 public class HeapSort {
     private void  buildHeap(int [] arr,int n)
     {
-
+        for(int i=n/2-1;i>=0;i--)
+            heapify(arr,n,i);
+        System.out.println(Arrays.toString(arr));
     }
     private void heapify(int [] arr,int n,int i)
     {
