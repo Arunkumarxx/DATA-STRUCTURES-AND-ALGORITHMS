@@ -24,7 +24,7 @@ public class HeapSort {
         while(i>0)
         {
             int parent=(i-1)/2;
-            if(heap[parent]<heap[i])
+            if(heap[parent]>heap[i])
             {
                 int temp=heap[i];
                 heap[i]=heap[parent];
@@ -46,10 +46,10 @@ public class HeapSort {
             int leftChild=2*i+1;
             int rightChild=2*i+2;
 
-            if(leftChild<currentSize && heap[leftChild]>heap[largest])
+            if(leftChild<currentSize && heap[leftChild]<heap[largest])
                 largest=leftChild;
 
-            if(rightChild<currentSize && heap[rightChild]>heap[largest])
+            if(rightChild<currentSize && heap[rightChild]<heap[largest])
                 largest=rightChild;
 
             if(i==largest)
