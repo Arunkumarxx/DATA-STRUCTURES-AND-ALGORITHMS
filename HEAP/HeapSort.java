@@ -47,12 +47,15 @@ public class HeapSort {
             System.out.print(val+" ");
         else return;
     }
+    private void sort(int [] arr)
+    {
+        for(int val:arr)
+            insert(val);
+    }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
-        heapSort.insert(1);
-        heapSort.insert(3);
-        heapSort.insert(34);
-        heapSort.print();
+        int [] arr ={5,4,3,2,1};
+        heapSort.sort(arr);
     }
 
 }
