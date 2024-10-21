@@ -30,6 +30,11 @@ public class HeapSort {
             else return;
         }
     }
+    private int delete()
+    {
+        int ele=heap[0];
+        
+    }
     private void resize()
     {
         Integer [] temp =new Integer[size*2];
