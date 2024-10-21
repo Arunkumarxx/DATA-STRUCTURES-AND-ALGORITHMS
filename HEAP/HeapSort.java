@@ -57,6 +57,8 @@ public class HeapSort {
             int temp=heap[i];
             heap[i]=heap[largest];
             heap[largest]=temp;
+
+            i=largest;
         }
         return ele;
     }
