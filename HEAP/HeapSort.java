@@ -82,10 +82,10 @@ public class HeapSort {
         for(int val:arr)
             insert(val);
         int [] result =new int[arr.length];
-        int i=0;
+        int i=result.length-1;
         while(currentSize>0)
         {
-            result[i++]=delete();
+            result[i--]=delete();
         }
         return result;
     }
