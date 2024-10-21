@@ -32,8 +32,20 @@ public class HeapSort {
     }
     private int delete()
     {
+        if(currentSize<=0)
+            return -1;
         int ele=heap[0];
-        
+        --currentSize;
+        heap[0]=heap[currentSize];
+        int i=0;
+        while(i<currentSize)
+        {
+            int largest=i;
+            int leftChild=2*i+1;
+            int rightChild=2*i+2;
+
+            if(heap[largest]<)
+        }
     }
     private void resize()
     {
