@@ -79,6 +79,7 @@ public class HeapSort {
     {
         for(int val:arr)
             insert(val);
+        System.out.println(Arrays.toString(heap));
         int [] result =new int[arr.length];
         int i=result.length-1;
         while(currentSize>0)
