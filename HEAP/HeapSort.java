@@ -90,7 +90,7 @@ public class HeapSort {
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
-        int [] arr ={5,4,3,2,1};
+        int [] arr ={1,2,3,4,5};
        arr= heapSort.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
