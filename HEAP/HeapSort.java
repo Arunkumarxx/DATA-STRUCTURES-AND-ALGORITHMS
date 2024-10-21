@@ -79,18 +79,17 @@ public class HeapSort {
     {
         for(int val:arr)
             insert(val);
-        System.out.println(Arrays.toString(heap));
         int [] result =new int[arr.length];
         int i=result.length-1;
         while(currentSize>0)
         {
-            result[i]=delete();
+            result[i--]=delete();
         }
         return result;
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
-        int [] arr ={1,2,3,4,5};
+        int [] arr ={5,4,3,2,1};
        arr= heapSort.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
