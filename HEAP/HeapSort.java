@@ -81,7 +81,7 @@ public class HeapSort {
             insert(val);
         int [] result =new int[arr.length];
         int i=result.length-1;
-        while(currentSize>=0)
+        while(currentSize>0)
         {
             result[i]=delete();
         }
