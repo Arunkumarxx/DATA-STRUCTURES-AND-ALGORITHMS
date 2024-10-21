@@ -27,7 +27,7 @@ public class HeapSort {
             arr[i]=arr[largest];
             arr[largest]=temp;
 
-            i=largest;
+//            i=largest;
         }
     }
     public static void main(String[] args) {
