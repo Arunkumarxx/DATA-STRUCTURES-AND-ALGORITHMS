@@ -44,11 +44,11 @@ public class HeapSort {
             int leftChild=2*i+1;
             int rightChild=2*i+2;
 
-            if(leftChild<currentSize && heap[largest]<heap[leftChild])
-            {
-                
-            }
+            if(leftChild<currentSize && heap[leftChild]>heap[largest])
+                largest=leftChild;
 
+            if(rightChild<currentSize && heap[rightChild]>heap[largest])
+                largest=rightChild;
         }
     }
     private void resize()
