@@ -1,5 +1,7 @@
 package HEAP;
 
+import java.util.Arrays;
+
 public class HeapSort {
     Integer[] heap =new Integer[100];
     private int currentSize=0;
@@ -32,8 +34,6 @@ public class HeapSort {
     }
     private int delete()
     {
-        if(currentSize<=0)
-            return -1;
         int ele=heap[0];
         --currentSize;
         heap[0]=heap[currentSize];
@@ -75,17 +75,23 @@ public class HeapSort {
             System.out.print(val+" ");
         else return;
     }
-    private void sort(int [] arr)
+    private int [] sort(int [] arr)
     {
         for(int val:arr)
             insert(val);
         int [] result =new int[arr.length];
-        
+        int i=result.length-1;
+        while(currentSize>=0)
+        {
+            result[i]=delete();
+        }
+        return result;
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
         int [] arr ={5,4,3,2,1};
-        heapSort.sort(arr);
+       arr= heapSort.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 }
