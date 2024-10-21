@@ -1,7 +1,6 @@
 package HEAP;
 
-public class Sort_K_SortedArray {
-    // Non-static method, so you need to call it on an instance of the class
+public class SortKSortedArray {
     Integer [] heap =new Integer[100];
 
     private int size=0;
