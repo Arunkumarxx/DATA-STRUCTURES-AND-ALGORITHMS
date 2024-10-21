@@ -91,12 +91,12 @@ public class HeapSort {
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
-        int n=2000;
+        int n=573;
         Random random =new Random();
         int [] arr = new int [n];
         for (int i=0;i<n;++i)
         {
-            arr[i]=random.nextInt(0,234);
+            arr[i]=random.nextInt(0,999);
         }
        arr= heapSort.sort(arr);
         System.out.println(Arrays.toString(arr));
