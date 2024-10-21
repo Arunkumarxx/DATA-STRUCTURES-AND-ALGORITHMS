@@ -83,7 +83,7 @@ public class HeapSort {
         int i=result.length-1;
         while(currentSize>0)
         {
-            result[i--]=delete();
+            result[i++]=delete();
         }
         return result;
     }
