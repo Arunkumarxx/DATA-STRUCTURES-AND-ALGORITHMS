@@ -1,6 +1,8 @@
 package HEAP;
 
+import javax.imageio.ImageTranscoder;
 import java.util.Arrays;
+import java.util.Random;
 
 public class HeapSort {
     Integer[] heap =new Integer[100];
@@ -89,9 +91,14 @@ public class HeapSort {
     }
     public static void main(String[] args) {
         HeapSort heapSort =new HeapSort();
-        int [] arr= {1,2,3,4,5};
+        int n=2000;
+        Random random =new Random();
+        int [] arr = new int [n];
+        for (int i=0;i<n;++i)
+        {
+            arr[i]=random.nextInt(0,234);
+        }
        arr= heapSort.sort(arr);
         System.out.println(Arrays.toString(arr));
     }
-
 }
