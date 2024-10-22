@@ -19,8 +19,8 @@ public class BuyMaximumItemsWithGivenSum {
     public static void main(String[] args) {
         BuyMaximumItemsWithGivenSum obj =new BuyMaximumItemsWithGivenSum();
         int [] arr =  {1,12,5,111,200};
-        System.out.println( obj.maxItems(arr,0));
-        
+        System.out.println( obj.maxItems(arr,10));
+
     }
 
 }
