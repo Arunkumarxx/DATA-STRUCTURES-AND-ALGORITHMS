@@ -33,7 +33,7 @@ public class KthLargestElements {
     public static void main(String[] args) {
         KthLargestElements obj=new KthLargestElements();
         int[] arr={3,2,1,5,6,4};
-        int k=2;
+        int k=4;
         int[] result=obj.kLargest(arr,arr.length,k);
         System.out.println("K largest elements: "+Arrays.toString(result));
     }
