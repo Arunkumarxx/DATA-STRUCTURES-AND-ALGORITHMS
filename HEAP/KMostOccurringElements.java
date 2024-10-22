@@ -24,7 +24,6 @@ public class KMostOccurringElements {
         }
         return sum;
     }
-
     public static void main(String[] args) {
         KMostOccurringElements obj=new KMostOccurringElements();
         int[] arr={1,1,1,2,2,3};
