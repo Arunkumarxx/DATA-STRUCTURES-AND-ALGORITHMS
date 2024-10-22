@@ -12,6 +12,7 @@ public class BuyMaximumItemsWithGivenSum {
         while(sum>0 && !queue.isEmpty())
         {
             sum-=queue.poll();
+            if(sum>=0)
             ++totalItems;
         }
         return totalItems;
