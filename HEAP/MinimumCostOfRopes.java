@@ -2,10 +2,8 @@ package HEAP;
 
 import java.util.PriorityQueue;
 
-public class MinimumCostOfRopes
-{
-    public long minCost(long[] arr)
-    {
+public class MinimumCostOfRopes {
+    public long minCost(long[] arr) {
         PriorityQueue<Long> minHeap = new PriorityQueue<>();
         for (Long val : arr) {
             minHeap.add(val);
@@ -20,8 +18,8 @@ public class MinimumCostOfRopes
         }
         return totalCost;
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         MinimumCostOfRopes obj = new MinimumCostOfRopes();
         long[] ropes = {4, 3, 2, 6};
         System.out.println("Minimum cost to connect ropes: " + obj.minCost(ropes));
@@ -29,13 +27,12 @@ public class MinimumCostOfRopes
 }
 
 /*
-
 Minimum Cost of ropes
-Difficulty: EasyAccuracy: 42.73%Submissions: 225K+Points: 2
-Given an array arr containing the lengths of the different ropes, we need to connect these ropes to form one rope. The cost to connect two ropes is equal to sum of their lengths. The task is to connect the ropes with minimum cost.
+
+Given an array arr containing the lengths of the different ropes, we need to connect these ropes to form one rope.
+The cost to connect two ropes is equal to sum of their lengths. The task is to connect the ropes with minimum cost.
 
 Examples:
-
 Input: arr[] = [4, 3, 2, 6]
 Output: 29
 Explanation: We can connect the ropes in following ways.
@@ -43,17 +40,22 @@ Explanation: We can connect the ropes in following ways.
 2) Now connect ropes of lengths 4 and 5. Which makes the array [9, 6]. Cost of this operation 4 + 5 = 9.
 3) Finally connect the two ropes and all ropes have connected. Cost of this operation 9 + 6 =15
 Total cost for connecting all ropes is 5 + 9 + 15 = 29. This is the optimized cost for connecting ropes.
-Other ways of connecting ropes would always have same or more cost. For example, if we connect 4 and 6 first (we get three rope of 3, 2 and 10), then connect 10 and 3 (we gettwo rope of 13 and 2). Finally we connect 13 and 2. Total cost in this way is 10 + 13 + 15 = 38.
+
+Other ways of connecting ropes would always have same or more cost. For example, if we connect 4 and 6 first
+(we get three rope of 3, 2 and 10), then connect 10 and 3 (we get two rope of 13 and 2). Finally we connect 13 and 2.
+Total cost in this way is 10 + 13 + 15 = 38.
+
 Input: arr[] = [4, 2, 7, 6, 9]
 Output: 62
 Explanation: First, connect ropes 4 and 2, which makes the array [6, 7, 6, 9]. Cost of this operation 4 + 2 = 6.
 Next, add ropes 6 and 6, which results in [12, 7, 9]. Cost of this operation 6 + 6 = 12.
-Then, add 7 and 9, which makes the array [12,16]. Cost of this operation 7 + 9 = 16. And
-finally, add these two which gives [28]. Hence, the total cost is 6 + 12 + 16 + 28 = 62.
+Then, add 7 and 9, which makes the array [12,16]. Cost of this operation 7 + 9 = 16. And finally, add these two which gives [28].
+Hence, the total cost is 6 + 12 + 16 + 28 = 62.
+
 Expected Time Complexity: O(n logn)
-Expected Auxilliary Space: O(n)
+Expected Auxiliary Space: O(n)
 
 Constraints:
 1 ≤ arr.size() ≤ 205
-1 ≤ arr[i] ≤ 106
- */
+1 ≤ arr[i] ≤ 10^6
+*/
