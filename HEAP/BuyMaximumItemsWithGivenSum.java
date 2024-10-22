@@ -9,7 +9,7 @@ public class BuyMaximumItemsWithGivenSum {
         for(Integer val:arr)
             queue.add(val);
         int totalItems=0;
-        while(sum!=0 && !queue.isEmpty())
+        while(sum>0 && !queue.isEmpty())
         {
             sum-=queue.poll();
             ++totalItems;
