@@ -49,7 +49,6 @@ public class RearrangeCharacters {
             this.freq=freq;
         }
     }
-
     public static void main(String[] args) {
         String testStr="aabbcc";
         System.out.println("Original string: " + testStr);
