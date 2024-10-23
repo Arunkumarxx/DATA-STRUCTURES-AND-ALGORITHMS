@@ -1,2 +1,9 @@
-package HEAP;public class MergeKsortedArray {
+package HEAP;
+
+public class MergeKSortedArray {
+
+    public static void main(String[] args) {
+        
+    }
+
 }
