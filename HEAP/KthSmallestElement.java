@@ -3,9 +3,10 @@ package HEAP;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class KthSmallestElement {
-
-    public static int kthSmallest(int arr[], int n, int k) {
+public class KthSmallestElement
+{
+    public static int kthSmallest(int arr[], int n, int k)
+    {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
         for (int i = 0; i < k; ++i) {
             maxHeap.add(arr[i]);
@@ -18,7 +19,8 @@ public class KthSmallestElement {
         }
         return maxHeap.poll();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         KthSmallestElement obj = new KthSmallestElement();
         int[] arr = {7, 10, 4, 3, 20, 15};
         int k = 3;
