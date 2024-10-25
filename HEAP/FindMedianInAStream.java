@@ -8,7 +8,7 @@ public class FindMedianInAStream {
     private static PriorityQueue<Integer> large=new PriorityQueue<>();
     private static boolean even=true;
 
-    public static void insertHeap(int num) {
+    private static void insertHeap(int num) {
         if(even) {
             large.offer(num);
             small.offer(large.poll());
@@ -18,7 +18,7 @@ public class FindMedianInAStream {
         }
         even=!even;
     }
-    public static double getMedian() {
+    private static double getMedian() {
         if(even)
             return (small.peek()+large.peek())/2.0;
         else
