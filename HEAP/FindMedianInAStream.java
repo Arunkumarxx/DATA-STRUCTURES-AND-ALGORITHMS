@@ -18,7 +18,6 @@ public class FindMedianInAStream {
         }
         even=!even;
     }
-
     public static double getMedian() {
         if(even)
             return (small.peek()+large.peek())/2.0;
