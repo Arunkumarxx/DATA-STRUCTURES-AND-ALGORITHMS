@@ -37,5 +37,6 @@ public class GraphRepresentationAdjacencyList
         graph1.addAdjacent(1,2);
         graph1.addAdjacent(1,0);
         graph1.addAdjacent(2,0);
+        graph1.printGraph();
     }
 }
