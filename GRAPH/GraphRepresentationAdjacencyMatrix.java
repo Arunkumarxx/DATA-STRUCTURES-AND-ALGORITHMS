@@ -1,6 +1,5 @@
 package GRAPH;
 
-import com.sun.security.jgss.GSSUtil;
 
 public class GraphRepresentationAdjacencyMatrix
 {
