@@ -2,7 +2,9 @@ package GRAPH;
 
 public class GraphRepresentationAdjacencyMatrix
 {
-    private void method()
+    private boolean [][]  Graph;
+
+    private GraphRepresentationAdjacencyMatrix()
     {
         
     }
