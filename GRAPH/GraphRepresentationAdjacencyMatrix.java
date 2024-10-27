@@ -1,6 +1,5 @@
 package GRAPH;
 
-
 public class GraphRepresentationAdjacencyMatrix
 {
     private boolean [][]  Graph;
@@ -18,7 +17,6 @@ public class GraphRepresentationAdjacencyMatrix
     {
         for(boolean[] row:Graph)
         {
-
             for(boolean va:row)
             {
                 if(va)
