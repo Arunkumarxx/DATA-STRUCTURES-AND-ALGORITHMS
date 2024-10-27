@@ -33,10 +33,13 @@ public class GraphRepresentationAdjacencyList
     }
     public static void main(String[] args)
     {
-        GraphRepresentationAdjacencyList graph1=new GraphRepresentationAdjacencyList(5);
-        graph1.addAdjacent(1,2);
-        graph1.addAdjacent(1,0);
-        graph1.addAdjacent(2,0);
-        graph1.printGraph();
+        GraphRepresentationAdjacencyList Graph1=new GraphRepresentationAdjacencyList(5);
+        Graph1.addAdjacent(0,1);
+        Graph1.addAdjacent(0,4);
+        Graph1.addAdjacent(1,4);
+        Graph1.addAdjacent(1,3);
+        Graph1.addAdjacent(1,2);
+        Graph1.addAdjacent(3,4);
+        Graph1.printGraph();
     }
 }
