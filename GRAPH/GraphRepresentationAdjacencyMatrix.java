@@ -12,6 +12,7 @@ public class GraphRepresentationAdjacencyMatrix
     private void addAdjacent(int u,int v)
     {
         Graph[u][v]=true;
+        Graph[v][u]=true;
     }
     private void printGraph()
     {
