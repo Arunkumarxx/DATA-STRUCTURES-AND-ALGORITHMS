@@ -8,13 +8,17 @@ public class GraphRepresentationAdjacencyMatrix
     {
         Graph=new boolean[size][size];
     }
-    private void addAdjacent(GraphRepresentationAdjacencyMatrix Graph ,int u,int v)
+    private void addAdjacent(int u,int v)
     {
-        Graph.Graph[u][v]=true;
+        Graph[u][v]=true;
     }
     public static void main(String[] args)
     {
         GraphRepresentationAdjacencyMatrix Graph1 =new GraphRepresentationAdjacencyMatrix();
-        Graph1.addAdjacent(Graph1,0,1);
+        Graph1.addAdjacent(0,0);
+        Graph1.addAdjacent(0,1);
+        Graph1.addAdjacent(1,2);
+        Graph1.addAdjacent(4,0);
+        Graph1.addAdjacent(4,1);
     }
 }
