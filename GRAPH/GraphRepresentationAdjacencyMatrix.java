@@ -1,11 +1,14 @@
 package GRAPH;
 
-public class GraphRepresentationAdjacencyMatrix {
+public class GraphRepresentationAdjacencyMatrix
+{
     Boolean [][] Graph ;
-    GraphRepresentationAdjacencyMatrix()
+    GraphRepresentationAdjacencyMatrix(int size)
     {
-
+        Graph =new Boolean[size][size];
     }
+
+
     public static void main(String[] args) {
 
     }
