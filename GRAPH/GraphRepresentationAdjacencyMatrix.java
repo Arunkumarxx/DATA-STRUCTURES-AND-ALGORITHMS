@@ -7,14 +7,14 @@ public class GraphRepresentationAdjacencyMatrix
     private GraphRepresentationAdjacencyMatrix(int size)
     {
         Graph=new boolean[size][size];
-
     }
-    private void addAdjacent(int v1,int v2)
+    private void addAdjacent(GraphRepresentationAdjacencyMatrix Graph ,int u,int v)
     {
-        Graph[][]
+        Graph.Graph[u][v]=true;
     }
     public static void main(String[] args)
     {
-
+        GraphRepresentationAdjacencyMatrix Graph1 =new GraphRepresentationAdjacencyMatrix();
+        Graph1.addAdjacent(Graph1,0,1);
     }
 }
