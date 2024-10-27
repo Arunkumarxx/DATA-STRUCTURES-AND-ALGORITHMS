@@ -9,10 +9,10 @@ public class GraphRepresentationAdjacencyMatrix
     {
         Graph=new boolean[size][size];
     }
-    private void addAdjacent(int u,int v)
+    private void addAdjacent(int s,int d)
     {
-        Graph[u][v]=true;
-        Graph[v][u]=true;
+        Graph[s][d]=true;
+        Graph[d][s]=true;
     }
     private void printGraph()
     {
