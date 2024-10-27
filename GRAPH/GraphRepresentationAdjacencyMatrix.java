@@ -22,8 +22,8 @@ public class GraphRepresentationAdjacencyMatrix
             for(boolean va:row)
             {
                 if(va)
-                    System.out.print("1");
-                else System.out.print("0");
+                    System.out.print("1 ");
+                else System.out.print("0 ");
             }
             System.out.println();
         }
