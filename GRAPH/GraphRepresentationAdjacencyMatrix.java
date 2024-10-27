@@ -1,5 +1,7 @@
 package GRAPH;
 
+import com.sun.security.jgss.GSSUtil;
+
 public class GraphRepresentationAdjacencyMatrix
 {
     private boolean [][]  Graph;
@@ -11,6 +13,17 @@ public class GraphRepresentationAdjacencyMatrix
     private void addAdjacent(int u,int v)
     {
         Graph[u][v]=true;
+    }
+    private void printGraph()
+    {
+        for(boolean[] row:Graph)
+        {
+            for(boolean va:row)
+            {
+                System.out.print(va+" ");
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args)
     {
