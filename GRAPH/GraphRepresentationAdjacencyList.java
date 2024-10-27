@@ -33,7 +33,7 @@ public class GraphRepresentationAdjacencyList
     }
     public static void main(String[] args)
     {
-        GraphRepresentationAdjacencyList graph1=new GraphRepresentationAdjacencyList();
+        GraphRepresentationAdjacencyList graph1=new GraphRepresentationAdjacencyList(5);
         graph1.addAdjacent(1,2);
         graph1.addAdjacent(1,0);
         graph1.addAdjacent(2,0);
