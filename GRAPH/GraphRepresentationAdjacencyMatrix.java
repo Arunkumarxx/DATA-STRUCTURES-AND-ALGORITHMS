@@ -36,7 +36,6 @@ public class GraphRepresentationAdjacencyMatrix
         Graph1.addAdjacent(1,3);
         Graph1.addAdjacent(1,2);
         Graph1.addAdjacent(3,4);
-        Graph1.addAdjacent(3,2);
         Graph1.printGraph();
     }
 }
