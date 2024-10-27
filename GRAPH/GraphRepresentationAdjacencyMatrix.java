@@ -14,7 +14,7 @@ public class GraphRepresentationAdjacencyMatrix
     }
     public static void main(String[] args)
     {
-        GraphRepresentationAdjacencyMatrix Graph1 =new GraphRepresentationAdjacencyMatrix();
+        GraphRepresentationAdjacencyMatrix Graph1 =new GraphRepresentationAdjacencyMatrix(5);
         Graph1.addAdjacent(0,0);
         Graph1.addAdjacent(0,1);
         Graph1.addAdjacent(1,2);
