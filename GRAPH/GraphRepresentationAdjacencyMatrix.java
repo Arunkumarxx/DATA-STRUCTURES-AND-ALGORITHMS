@@ -42,5 +42,6 @@ public class GraphRepresentationAdjacencyMatrix
         Graph1.addAdjacent(3,4);
         Graph1.addAdjacent(3,1);
         Graph1.addAdjacent(3,2);
+        Graph1.printGraph();
     }
 }
