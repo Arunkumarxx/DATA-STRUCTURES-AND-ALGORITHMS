@@ -18,9 +18,10 @@ public class GraphRepresentationAdjacencyMatrix
     {
         for(boolean[] row:Graph)
         {
+            
             for(boolean va:row)
             {
-                System.out.print(va+" ");
+                System.out.print(va+"|");
             }
             System.out.println();
         }
