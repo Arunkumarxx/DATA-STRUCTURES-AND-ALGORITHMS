@@ -29,7 +29,16 @@ public class PrintAdjacencyList {
     public static void main(String[] args) {
         PrintAdjacencyList obj = new PrintAdjacencyList();
         int vertices = 5;
-        int[][] edges = {{0, 1}, {0, 4}, {1, 2}, {1, 3}, {1, 4}, {2, 3}, {3, 4}};
+        int[][] edges =
+                {
+                        {0, 1},
+                        {0, 4},
+                        {1, 2},
+                        {1, 3},
+                        {1, 4},
+                        {2, 3},
+                        {3, 4}
+                };
         List<List<Integer>> adjacencyList = obj.printGraph(vertices, edges);
         for (int i = 0; i < adjacencyList.size(); ++i) {
             System.out.print(i + ": ");
