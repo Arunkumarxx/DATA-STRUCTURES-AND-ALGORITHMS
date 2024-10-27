@@ -6,9 +6,17 @@ public class GraphRepresentationAdjacencyList
 {
     private ArrayList<ArrayList<Integer>> AdjacencyList;
 
+    GraphRepresentationAdjacencyList()
+    {
+        AdjacencyList=new ArrayList<>();
+    }
     private void addAdjacent(int s,int d)
     {
-        AdjacencyList.add(s,);
+        if(AdjacencyList.get(s)==null)
+        {
+            AdjacencyList.add(s, new ArrayList<Integer>());
+            AdjacencyList.add(s,d);
+        }
     }
     public static void main(String[] args)
     {
