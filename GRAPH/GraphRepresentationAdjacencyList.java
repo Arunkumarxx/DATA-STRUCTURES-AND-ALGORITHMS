@@ -8,7 +8,7 @@ public class GraphRepresentationAdjacencyList
 
     private void addAdjacent(int s,int d)
     {
-        AdjacencyList.add(s,AdjacencyList.get(s).add(d));
+        AdjacencyList.add();
     }
     public static void main(String[] args)
     {
