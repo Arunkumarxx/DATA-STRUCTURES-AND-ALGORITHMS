@@ -22,9 +22,13 @@ public class GraphRepresentationAdjacencyList
     }
     private void printGraph()
     {
-        for(List source:AdjacencyList)
+        for(List<Integer> source:AdjacencyList)
         {
-            for(Integer desination:)
+            for(Integer destination:source)
+            {
+                System.out.print(destination +" ");
+            }
+            System.out.println();
         }
     }
     public static void main(String[] args)
