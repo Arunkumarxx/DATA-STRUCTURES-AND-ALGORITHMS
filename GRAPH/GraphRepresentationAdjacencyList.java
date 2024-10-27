@@ -1,6 +1,7 @@
 package GRAPH;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class GraphRepresentationAdjacencyList
 {
@@ -19,9 +20,18 @@ public class GraphRepresentationAdjacencyList
         AdjacencyList.get(s).add(d);
         AdjacencyList.get(d).add(s);
     }
+    private void printGraph()
+    {
+        for(List source:AdjacencyList)
+        {
+            for(Integer desination:)
+        }
+    }
     public static void main(String[] args)
     {
         GraphRepresentationAdjacencyList graph1=new GraphRepresentationAdjacencyList();
-        graph1.addAdjacent();
+        graph1.addAdjacent(1,2);
+        graph1.addAdjacent(1,0);
+        graph1.addAdjacent(2,0);
     }
 }
