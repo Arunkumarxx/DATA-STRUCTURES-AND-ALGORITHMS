@@ -28,11 +28,15 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void printGraph()
     {
-        for (int i = 0; i < adjacencyList.size(); i++) {
-            if (!adjacencyList.get(i).isEmpty()) {
-                System.out.print((i < 26 ? (char) (i + 'a') : (char) ('A' + (i - 26))) + " -> ");
-                for (char neighbor : adjacencyList.get(i)) {
-                    System.out.print(neighbor + " ");
+        int size=adjacencyList.size();
+        for(int i=0;i<size;++i)
+        {
+            if(!adjacencyList.get(i).isEmpty())
+            {
+                System.out.print(i < 26 ? (char) (i + 'a') : (char) ('A' + (i - 26)) + " -> ");
+                for (Character val : adjacencyList.get(i))
+                {
+                    System.out.print(val + " ");
                 }
                 System.out.println();
             }
