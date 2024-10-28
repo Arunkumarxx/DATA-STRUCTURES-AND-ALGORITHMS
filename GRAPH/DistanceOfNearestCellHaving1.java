@@ -1,10 +1,12 @@
 package GRAPH;
 
+import java.util.Queue;
+
 public class DistanceOfNearestCellHaving1
 {
     private int [][] nearest(int [][] grid)
     {
-        
+        Queue<>
     }
     public static void main(String[] args)
     {
