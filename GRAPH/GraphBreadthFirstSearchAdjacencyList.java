@@ -66,7 +66,7 @@ public class GraphBreadthFirstSearchAdjacencyList
         while (!queue.isEmpty())
         {
             int curr=queue.poll();
-            System.out.println(curr<26?());
+            System.out.println(curr<26?(char)(curr+'a'):(char) ('A'+(curr-26));
         }
     }
     public static void main(String[] args)
