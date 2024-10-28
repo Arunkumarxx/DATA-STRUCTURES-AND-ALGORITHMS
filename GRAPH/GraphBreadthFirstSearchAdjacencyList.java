@@ -48,13 +48,13 @@ public class GraphBreadthFirstSearchAdjacencyList
         graph.addAdjacency('a', 'e');
         graph.addAdjacency('a', 'b');
         graph.addAdjacency('a', 'g');
-        graph.addAdjacency('a', 'f');
-        graph.addAdjacency('b', 'f');
-        graph.addAdjacency('b', 'g');
         graph.addAdjacency('e', 'd');
-        graph.addAdjacency('f', 'd');
-        graph.addAdjacency('f', 'h');
-        graph.addAdjacency('g', 'h');
+        graph.addAdjacency('e', 'f');
+        graph.addAdjacency('d','c');
+        graph.addAdjacency('f','b');
+        graph.addAdjacency('c','h');
+        graph.addAdjacency('b','c');
+        graph.addAdjacency('b','h');
         graph.printGraph();
     }
 }
