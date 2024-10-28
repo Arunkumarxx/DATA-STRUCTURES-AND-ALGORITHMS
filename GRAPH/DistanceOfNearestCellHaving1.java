@@ -4,6 +4,7 @@ import java.util.Queue;
 
 public class DistanceOfNearestCellHaving1
 {
+    class
     private int [][] nearest(int [][] grid)
     {
         Queue<>
