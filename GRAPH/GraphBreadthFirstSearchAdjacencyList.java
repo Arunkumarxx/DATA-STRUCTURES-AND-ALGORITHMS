@@ -67,7 +67,7 @@ public class GraphBreadthFirstSearchAdjacencyList
         if(startNode==-1)
             return;
         queue.add(startNode);
-
+        visited[startNode]=true;
         while(!queue.isEmpty())
         {
             int curr=queue.poll();
