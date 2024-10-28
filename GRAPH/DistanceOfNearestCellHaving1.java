@@ -69,6 +69,9 @@ public class DistanceOfNearestCellHaving1
                 {0,0,1,1}
         };
          int [][] res = obj.nearest(grid);
-        System.out.println(Arrays.toString(res));
+        for(int  []row :res)
+        {
+            System.out.println(Arrays.toString(row));
+        }
     }
 }
