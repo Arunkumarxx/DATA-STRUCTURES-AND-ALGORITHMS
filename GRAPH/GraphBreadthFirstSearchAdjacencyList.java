@@ -15,9 +15,9 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void addAdjacency(char source,char destination)
     {
-        int sourceInd=charToInd(source);
-        int destinationInd=charToInd(destination);
-        adjacencyList.get(sourceInd).add(destinationInd);
+        int srcIndex = charToInd(source);
+        int destIndex = charToInd(destination);
+        adjacencyList.get(srcIndex).add(destIndex);
     }
     private int charToInd (char c)
     {
