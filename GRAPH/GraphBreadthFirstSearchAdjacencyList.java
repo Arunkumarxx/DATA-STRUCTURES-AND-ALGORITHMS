@@ -66,8 +66,8 @@ public class GraphBreadthFirstSearchAdjacencyList
         while (!queue.isEmpty())
         {
             char curr=queue.poll();
-            System.out.println();
-
+            System.out.println(charToInd(curr));
+            queue.add(chartoInd())
         }
     }
     private char chartoInd(int val)
