@@ -24,24 +24,24 @@ public class DistanceOfNearestCellHaving1 {
             int row = cell[0], col = cell[1], steps = cell[2];
             result[row][col] = steps;
             // check for left
-            if (col > 0 && !visited[row][col - 1]) {
+            if (col>0 && !visited[row][col-1]) {
                 visited[row][col - 1] = true;
-                queue.add(new int[]{row, col - 1, steps + 1});
+                queue.add(new int[]{row,col-1, steps+1});
             }
             // check for right
-            if (col < colsSize - 1 && !visited[row][col + 1]) {
+            if (col < colsSize-1 && !visited[row][col+1]) {
                 visited[row][col + 1] = true;
-                queue.add(new int[]{row, col + 1, steps + 1});
+                queue.add(new int[]{row,col+1,steps+1});
             }
             // check for down
-            if (row < rowSize - 1 && !visited[row + 1][col]) {
+            if (row<rowSize-1 && !visited[row+1][col]) {
                 visited[row + 1][col] = true;
-                queue.add(new int[]{row + 1, col, steps + 1});
+                queue.add(new int[]{row+1,col,steps+1});
             }
             // check for up
-            if (row > 0 && !visited[row - 1][col]) {
+            if (row>0 && !visited[row-1][col]) {
                 visited[row - 1][col] = true;
-                queue.add(new int[]{row - 1, col, steps + 1});
+                queue.add(new int[]{row-1,col,steps+1});
             }
         }
         return result;
