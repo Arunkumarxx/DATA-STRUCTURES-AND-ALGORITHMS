@@ -33,7 +33,7 @@ public class GraphBreadthFirstSearchAdjacencyList
         {
             if(!adjacencyList.get(i).isEmpty())
             {
-                System.out.print(i<26? (char)(i+'a'):(char) ('A'+(i-26))+"");
+                System.out.print(i<26? (char)(i+'a'):(char) ('A'+(i-26))+" -> ");
             }
             for(Character val: adjacencyList.get(i))
             {
