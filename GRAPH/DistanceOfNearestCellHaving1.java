@@ -1,5 +1,6 @@
 package GRAPH;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -52,10 +53,12 @@ public class DistanceOfNearestCellHaving1
             // check for up
             if(row>0 && !visited[row][col])
             {
-                
+                result[row-1][col]=result[row][col]+1;
+                visited[row-1][col]=true;
+                queue.add(new int [] {row-1,col,result[row-1][col]});
             }
-
         }
+        return result;
     }
     public static void main(String[] args)
     {
@@ -65,6 +68,7 @@ public class DistanceOfNearestCellHaving1
                 {1,1,0,0},
                 {0,0,1,1}
         };
-        obj.nearest(grid);
+         int [][] res = obj.nearest(grid);
+        System.out.println(Arrays.toString(res));
     }
 }
