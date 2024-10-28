@@ -17,11 +17,11 @@ public class GraphBreadthFirstSearchAdjacencyList
     {
         int sourceInd=charToInd(source);
         int destinationInd=charToInd(destination);
-        adjacencyList.get(sourceInd).add( destinationInd);
+        adjacencyList.get(sourceInd).add(destinationInd);
     }
     private int charToInd (char c)
     {
-        if(c<='z')
+        if(Character.isLowerCase(c))
             return c-'a';
         else return 26+(c-'A');
     }
