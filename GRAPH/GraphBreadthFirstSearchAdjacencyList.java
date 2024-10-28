@@ -45,10 +45,15 @@ public class GraphBreadthFirstSearchAdjacencyList
     public static void main(String[] args)
     {
         GraphBreadthFirstSearchAdjacencyList Graph1 =new GraphBreadthFirstSearchAdjacencyList(8);
-        Graph1.addAdjacency('a', 'e');
-        Graph1.addAdjacency('b', 'f');
-        Graph1.addAdjacency('A', 'B');
-        Graph1.addAdjacency('a','i');
+        Graph1.addAdjacency('a','e');
+        Graph1.addAdjacency('a','b');
+        Graph1.addAdjacency('a','g');
+        Graph1.addAdjacency('e','f');
+        Graph1.addAdjacency('e','d');
+        Graph1.addAdjacency('b','c');
+        Graph1.addAdjacency('b','f');
+        Graph1.addAdjacency('g','b');
+        Graph1.addAdjacency('b','h');
         Graph1.printGraph();
     }
 }
