@@ -18,6 +18,10 @@ public class DistanceOfNearestCellHaving1
                 }
             }
         }
+        while(!queue.isEmpty())
+        {
+            
+        }
     }
     public static void main(String[] args)
     {
