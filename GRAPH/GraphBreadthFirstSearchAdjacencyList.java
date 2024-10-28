@@ -38,6 +38,7 @@ public class GraphBreadthFirstSearchAdjacencyList
                 {
                     System.out.print(val + " ");
                 }
+                System.out.println();
             }
         }
     }
