@@ -1,13 +1,23 @@
 package GRAPH;
 
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class DistanceOfNearestCellHaving1
 {
-    class
     private int [][] nearest(int [][] grid)
     {
-        Queue<>
+        Queue<int []> queue =new LinkedList<>();
+        for(int row=0;row<grid.length;++row)
+        {
+            for(int cols=0;cols<grid[row].length;++cols)
+            {
+                if(grid[row][cols]==1)
+                {
+                    queue.add(new int[] {row,cols,0});
+                }
+            }
+        }
     }
     public static void main(String[] args)
     {
