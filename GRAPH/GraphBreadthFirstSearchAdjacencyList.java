@@ -47,7 +47,7 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void breadthFirstSearch()
     {
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Character> queue = new LinkedList<>();
         boolean[] visited = new boolean[adjacencyList.size()];
 
         int startNode = -1;
@@ -61,16 +61,13 @@ public class GraphBreadthFirstSearchAdjacencyList
         }
         if (startNode==-1)
             return;
-        queue.add(startNode);
+        queue.add(startNode<26?(char)startNode+'a':(char)startNode+'A'+26);
         visited[startNode]=true;
         while (!queue.isEmpty())
         {
             int curr=queue.poll();
-            System.out.println(curr<26?(char)(curr+'a'):(char) ('A'+(curr-26)));
-            for(int  val:adjacencyList.get(curr))
-            {
-                
-            }
+            System.out.println(charToInd());
+
         }
     }
     public static void main(String[] args)
