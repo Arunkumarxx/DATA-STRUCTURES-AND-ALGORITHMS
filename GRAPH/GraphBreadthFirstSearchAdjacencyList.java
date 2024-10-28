@@ -44,27 +44,17 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     public static void main(String[] args)
     {
-        GraphBreadthFirstSearchAdjacencyList Graph1 =new GraphBreadthFirstSearchAdjacencyList(8);
-        Graph1.addAdjacency('a', 'e');
-        Graph1.addAdjacency('a', 'f');
-        Graph1.addAdjacency('a', 'b');
-        Graph1.addAdjacency('b', 'a');
-        Graph1.addAdjacency('b', 'g');
-        Graph1.addAdjacency('b', 'c');
-        Graph1.addAdjacency('c', 'b');
-        Graph1.addAdjacency('c', 'd');
-        Graph1.addAdjacency('c', 'f');
-        Graph1.addAdjacency('c', 'h');
-        Graph1.addAdjacency('d', 'c');
-        Graph1.addAdjacency('d', 'e');
-        Graph1.addAdjacency('e', 'a');
-        Graph1.addAdjacency('e', 'd');
-        Graph1.addAdjacency('e', 'f');
-        Graph1.addAdjacency('f','a');
-        Graph1.addAdjacency('f', 'e');
-        Graph1.addAdjacency('f', 'c');
-        Graph1.addAdjacency('g', 'b');
-        Graph1.addAdjacency('h', 'c');
+        GraphBreadthFirstSearchAdjacencyList graph =new GraphBreadthFirstSearchAdjacencyList(8);
+        graph.addAdjacency('a', 'e');
+        graph.addAdjacency('a', 'b');
+        graph.addAdjacency('a', 'g');
+        graph.addAdjacency('a', 'f');
+        graph.addAdjacency('b', 'f');
+        graph.addAdjacency('b', 'g');
+        graph.addAdjacency('e', 'd');
+        graph.addAdjacency('f', 'd');
+        graph.addAdjacency('f', 'h');
+        graph.addAdjacency('g', 'h');
 
 
         Graph1.printGraph();
