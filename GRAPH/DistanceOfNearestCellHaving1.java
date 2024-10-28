@@ -1,2 +1,5 @@
-package GRAPH;public class DistanceOfNearestCellHaving1 {
+package GRAPH;
+
+public class DistanceOfNearestCellHaving1
+{
 }
