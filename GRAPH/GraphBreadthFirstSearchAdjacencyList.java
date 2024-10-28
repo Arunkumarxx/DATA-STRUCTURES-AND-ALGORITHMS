@@ -52,7 +52,7 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void breadthFirstSearch()
     {
-        Queue<Character> queue = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList<>();
         boolean[] visited = new boolean[adjacencyList.size()];
 
         int startNode = -1;
@@ -66,7 +66,12 @@ public class GraphBreadthFirstSearchAdjacencyList
         }
         if(startNode==-1)
             return;
-        queue.add()
+        queue.add(startNode);
+
+        while(!queue.isEmpty())
+        {
+            
+        }
     }
 
     public static void main(String[] args)
