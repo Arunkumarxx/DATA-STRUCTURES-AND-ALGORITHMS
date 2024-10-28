@@ -33,12 +33,13 @@ public class GraphBreadthFirstSearchAdjacencyList
         {
             if(!adjacencyList.get(i).isEmpty())
             {
-                System.out.println(i<26? (char)(i+'a'):(char) ('A'+(i-26))+"-> :");
+                System.out.print(i<26? (char)(i+'a'):(char) ('A'+(i-26))+"");
             }
             for(Character val: adjacencyList.get(i))
             {
                 System.out.print(val+" ");
             }
+            System.out.println();
         }
     }
     public static void main(String[] args)
