@@ -47,24 +47,8 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void breadthFirstSearch()
     {
-        Queue<Integer> queue =new LinkedList<>();
-        int i=0;
-        for(;i<adjacencyList.size();++i)
-        {
-            if(adjacencyList.get(i).isEmpty())
-                continue;
-            else break;
-        }
-        queue.add(i);
-        while(!queue.isEmpty())
-        {
-            int ch =queue.poll();
-            System.out.print(ch<26? 'a'+ch:'A'+(ch-26));
-            for(Character val:adjacencyList.get(ch))
-            {
-                queue.add(Character.isLowerCase(val)?'a'-val:'A'-val);
-            }
-        }
+        Queue<Integer> queue = new LinkedList<>();
+        boolean [] visited =new boolean[adjacencyList.size()];
     }
     public static void main(String[] args)
     {
