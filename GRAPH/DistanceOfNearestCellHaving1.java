@@ -27,7 +27,7 @@ public class DistanceOfNearestCellHaving1
         while(!queue.isEmpty())
         {
             int [] cell= queue.poll();
-            int row=cell[0], col= cell[1] ,steps=cell[2];
+            int row=cell[0], col= cell[1] ;
 
             // check for left
             if(col>0 && !visited[row][col-1] )
