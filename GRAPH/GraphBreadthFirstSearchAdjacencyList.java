@@ -18,6 +18,12 @@ public class GraphBreadthFirstSearchAdjacencyList
         adjacencyList.get(source).add(destination);
         adjacencyList.get(destination).add(source);
     }
+    private int charToInd (char c)
+    {
+        if(c<='z')
+            return 'a'-c;
+        else return 26+('A'-c);
+    }
     public static void main(String[] args)
     {
         GraphBreadthFirstSearchAdjacencyList Graph1 =new GraphBreadthFirstSearchAdjacencyList(8);
