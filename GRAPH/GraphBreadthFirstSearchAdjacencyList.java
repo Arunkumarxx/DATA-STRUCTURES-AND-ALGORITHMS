@@ -1,5 +1,6 @@
 package GRAPH;
 
+import javax.security.auth.callback.CallbackHandler;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -61,7 +62,7 @@ public class GraphBreadthFirstSearchAdjacencyList
             System.out.print(ch<26?'a'+ch:'A'+(ch-26));
             for(Character val:adjacencyList.get(ch))
             {
-                queue.add((val<26?ch-'a':ch-'A'))
+                queue.add(Character.isLowerCase(val)?'a'-val:)
             }
         }
     }
