@@ -48,6 +48,7 @@ public class GraphBreadthFirstSearchAdjacencyList
         Graph1.addAdjacency('a', 'e');
         Graph1.addAdjacency('b', 'f');
         Graph1.addAdjacency('A', 'B');
+        Graph1.addAdjacency('a','i');
         Graph1.printGraph();
     }
 }
