@@ -18,16 +18,21 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void addAdjacency(char source,char destination)
     {
-        int srcIndex = charToInd(source);
-        int destIndex = charToInd(destination);
+        int srcIndex = charToIndex(source);
+        int destIndex = charToIndex(destination);
         adjacencyList.get(srcIndex).add(destination);
         adjacencyList.get(destIndex).add(source);
     }
-    private int charToInd (char c)
-    {
-        if(Character.isLowerCase(c))
-            return c-'a';
-        else return 26+(c-'A');
+    private char indexToChar(int val) {
+        return val < 26 ? (char) ('a' + val) : (char) ('A' + (val - 26));
+    }
+
+    private int charToIndex(char c) {
+        if (Character.isLowerCase(c))
+            return c - 'a';
+        else
+            return 26 + (c - 'A');
+        
     }
     private void printGraph()
     {
@@ -70,10 +75,7 @@ public class GraphBreadthFirstSearchAdjacencyList
             queue.add(chartoInd())
         }
     }
-    private char chartoInd(int val)
-    {
-        return val<26? (char) ((char) val + 'a') :(char)(val+'A');
-    }
+
     public static void main(String[] args)
     {
         GraphBreadthFirstSearchAdjacencyList graph =new GraphBreadthFirstSearchAdjacencyList(8);
