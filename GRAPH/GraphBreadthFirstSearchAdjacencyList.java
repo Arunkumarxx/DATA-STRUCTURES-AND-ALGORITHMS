@@ -29,6 +29,8 @@ public class GraphBreadthFirstSearchAdjacencyList
     public static void main(String[] args)
     {
         GraphBreadthFirstSearchAdjacencyList Graph1 =new GraphBreadthFirstSearchAdjacencyList(8);
-        Graph1.addAdjacency('a','e');
+        Graph1.addAdjacency('a', 'e');
+        Graph1.addAdjacency('b', 'f');
+        Graph1.addAdjacency('A', 'B');
     }
 }
