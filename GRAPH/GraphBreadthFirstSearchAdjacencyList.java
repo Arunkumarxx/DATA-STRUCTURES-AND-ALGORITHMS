@@ -29,7 +29,23 @@ public class GraphBreadthFirstSearchAdjacencyList
     private void printGraph()
     {
         int size=adjacencyList.size();
-        
+        for(int i=0;i<size;++i)
+        {
+            if(!adjacencyList.get(i).isEmpty())
+            {
+                if(i<26)
+                {
+                    System.out.print((char) i+'a');
+                }
+                else System.out.println((char)i+'A');
+                System.out.print(" : ");
+            }
+            for(Character val: adjacencyList.get(i))
+            {
+                System.out.print(val+" ");
+            }
+            System.out.println();
+        }
     }
     public static void main(String[] args)
     {
