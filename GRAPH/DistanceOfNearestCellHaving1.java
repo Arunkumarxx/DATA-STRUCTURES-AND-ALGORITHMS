@@ -36,10 +36,13 @@ public class DistanceOfNearestCellHaving1
                 queue.add(new int [] {row,col-1,result[row][col-1]});
             }
             // check for right
-            if(col<)
+            if(col<colsSize-1 && !visited[row][col+1])
             {
-
+                result[row][col+1]=result[row][col]+1;
+                visited[row][col-1]=true;
+                queue.add(new int [] { row,col+1,result[row][col+1]});
             }
+            // check for down
 
         }
     }
