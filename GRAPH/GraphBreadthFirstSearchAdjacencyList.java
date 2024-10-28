@@ -8,6 +8,7 @@ public class GraphBreadthFirstSearchAdjacencyList
     List<List<Character>> adjacencyList ;
     GraphBreadthFirstSearchAdjacencyList(int vertices)
     {
+        vertices=Math.max(52,vertices);
         adjacencyList=new ArrayList<>();
         for(int i=0;i<vertices;++i)
             adjacencyList.add(new ArrayList<>());
