@@ -75,7 +75,7 @@ public class GraphBreadthFirstSearchAdjacencyList
 
             for(Character val:adjacencyList.get(curr))
             {
-                if(!visited[val])
+                if(!visited[charToIndex(val)])
                 {
                     queue.add(charToIndex(val));
                     visited[charToIndex(val)]=true;
