@@ -8,6 +8,7 @@ public class DistanceOfNearestCellHaving1
     private int [][] nearest(int [][] grid)
     {
         Queue<int []> queue =new LinkedList<>();
+        boolean [][] visited = new boolean[grid.length][grid[0].length];
         for(int row=0;row<grid.length;++row)
         {
             for(int cols=0;cols<grid[row].length;++cols)
@@ -15,10 +16,10 @@ public class DistanceOfNearestCellHaving1
                 if(grid[row][cols]==1)
                 {
                     queue.add(new int[] {row,cols,0});
+
                 }
             }
         }
-        boolean [] visited = new boolean[];
         while(!queue.isEmpty())
         {
             int [] cell= queue.poll();
