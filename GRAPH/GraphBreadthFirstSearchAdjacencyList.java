@@ -61,14 +61,18 @@ public class GraphBreadthFirstSearchAdjacencyList
         }
         if (startNode==-1)
             return;
-        queue.add(startNode<26?(char)startNode+'a':(char)startNode+'A'+26);
+        queue.add(startNode<26? (char) ((char) startNode + 'a') :(char)(startNode+'A'));
         visited[startNode]=true;
         while (!queue.isEmpty())
         {
-            int curr=queue.poll();
-            System.out.println(charToInd());
+            char curr=queue.poll();
+            System.out.println();
 
         }
+    }
+    private char chartoInd(int val)
+    {
+        return val<26? (char) ((char) val + 'a') :(char)(val+'A');
     }
     public static void main(String[] args)
     {
