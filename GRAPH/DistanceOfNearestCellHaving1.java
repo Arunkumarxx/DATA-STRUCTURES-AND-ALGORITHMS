@@ -8,6 +8,8 @@ public class DistanceOfNearestCellHaving1
     private int [][] nearest(int [][] grid)
     {
         Queue<int []> queue =new LinkedList<>();
+        int rowSize=grid.length;
+        int colsSize=grid[0].length;
         boolean [][] visited = new boolean[grid.length][grid[0].length];
         int [][] result =new int [grid.length][grid[0].length];
         for(int row=0;row<grid.length;++row)
@@ -27,6 +29,18 @@ public class DistanceOfNearestCellHaving1
             int row=cell[0], col= cell[1] ,steps=cell[2];
 
             // check for left
+            if(col>0 && !visited[row][col-1] )
+            {
+                result[row][col-1]=result[row][col]+1;
+                visited[row][col-1]=true;
+                queue.add(new int [] {row,col-1,result[row][col-1]});
+            }
+            // check for right
+            if(col<)
+            {
+
+            }
+
         }
     }
     public static void main(String[] args)
