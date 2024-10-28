@@ -55,8 +55,6 @@ public class GraphBreadthFirstSearchAdjacencyList
         graph.addAdjacency('f', 'd');
         graph.addAdjacency('f', 'h');
         graph.addAdjacency('g', 'h');
-
-
-        Graph1.printGraph();
+        graph.printGraph();
     }
 }
