@@ -32,7 +32,7 @@ public class GraphBreadthFirstSearchAdjacencyList
             return c - 'a';
         else
             return 26 + (c - 'A');
-        
+
     }
     private void printGraph()
     {
@@ -64,16 +64,9 @@ public class GraphBreadthFirstSearchAdjacencyList
                 break;
             }
         }
-        if (startNode==-1)
+        if(startNode==-1)
             return;
-        queue.add(startNode<26? (char) ((char) startNode + 'a') :(char)(startNode+'A'));
-        visited[startNode]=true;
-        while (!queue.isEmpty())
-        {
-            char curr=queue.poll();
-            System.out.println(charToInd(curr));
-            queue.add(chartoInd())
-        }
+        queue.add()
     }
 
     public static void main(String[] args)
