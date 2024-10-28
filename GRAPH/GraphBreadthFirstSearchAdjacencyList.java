@@ -1,7 +1,9 @@
 package GRAPH;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class GraphBreadthFirstSearchAdjacencyList
 {
@@ -40,6 +42,17 @@ public class GraphBreadthFirstSearchAdjacencyList
                 }
                 System.out.println();
             }
+        }
+    }
+    private void breadthFirstSearch()
+    {
+        Queue<Integer> queue =new LinkedList<>();
+        int i=0;
+        for(;i<adjacencyList.size();++i)
+        {
+            if(adjacencyList.get(i).isEmpty())
+                continue;
+            else break;
         }
     }
     public static void main(String[] args)
