@@ -70,10 +70,19 @@ public class GraphBreadthFirstSearchAdjacencyList
 
         while(!queue.isEmpty())
         {
-            
+            int curr=queue.poll();
+            System.out.print(indexToChar(curr));
+
+            for(Character val:adjacencyList.get(curr))
+            {
+                if(!visited[val])
+                {
+                    queue.add(charToIndex(val));
+                    visited[charToIndex(val)]=true;
+                }
+            }
         }
     }
-
     public static void main(String[] args)
     {
         GraphBreadthFirstSearchAdjacencyList graph =new GraphBreadthFirstSearchAdjacencyList(8);
