@@ -48,12 +48,12 @@ public class GraphBreadthFirstSearchAdjacencyList
         Graph1.addAdjacency('a','e');
         Graph1.addAdjacency('a','b');
         Graph1.addAdjacency('a','g');
-        Graph1.addAdjacency('e','f');
         Graph1.addAdjacency('e','d');
-        Graph1.addAdjacency('b','c');
+        Graph1.addAdjacency('e','f');
         Graph1.addAdjacency('b','f');
-        Graph1.addAdjacency('g','b');
+        Graph1.addAdjacency('b','c');
         Graph1.addAdjacency('b','h');
+        Graph1.addAdjacency('g','b');
         Graph1.addAdjacency('c','d');
         Graph1.addAdjacency('c','h');
         Graph1.printGraph();
