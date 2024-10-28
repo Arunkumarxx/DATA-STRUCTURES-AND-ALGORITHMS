@@ -55,9 +55,14 @@ public class GraphBreadthFirstSearchAdjacencyList
             else break;
         }
         queue.add(i);
-        while(queue.isEmpty())
+        while(!queue.isEmpty())
         {
-            
+            int ch =queue.poll();
+            System.out.print(ch<26?'a'+ch:'A'+(ch-26));
+            for(Character val:adjacencyList.get(ch))
+            {
+                queue.add((val<26?ch-'a':ch-'A'))
+            }
         }
     }
     public static void main(String[] args)
