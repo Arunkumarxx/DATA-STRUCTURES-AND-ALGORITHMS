@@ -29,14 +29,7 @@ public class GraphBreadthFirstSearchAdjacencyList
     private void printGraph()
     {
         int size=adjacencyList.size();
-        for(int i=0;i<size;++i)
-        {
-            List<Character>  vertices=adjacencyList.get(i);
-            for(Character value:vertices)
-            {
-                System.out.print(value+" ");
-            }
-        }
+        
     }
     public static void main(String[] args)
     {
