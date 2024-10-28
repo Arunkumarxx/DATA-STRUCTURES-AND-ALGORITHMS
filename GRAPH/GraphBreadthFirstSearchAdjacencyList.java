@@ -96,7 +96,8 @@ public class GraphBreadthFirstSearchAdjacencyList
         graph.addAdjacency('d','c');
         graph.addAdjacency('f','b');
         graph.addAdjacency('c','h');
-//        graph.printGraph();
+        graph.printGraph();
+        System.out.println();
         graph.breadthFirstSearch();
     }
 }
