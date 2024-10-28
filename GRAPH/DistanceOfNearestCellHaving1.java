@@ -50,7 +50,7 @@ public class DistanceOfNearestCellHaving1
                 queue.add(new int [] {row+1,col,steps+1});
             }
             // check for up
-            if(row>0 && !visited[row][col])
+            if(row>0 && !visited[row-1][col])
             {
                 visited[row-1][col]=true;
                 queue.add(new int [] {row-1,col,steps+1});
