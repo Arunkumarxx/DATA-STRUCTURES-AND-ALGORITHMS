@@ -26,6 +26,10 @@ public class GraphBreadthFirstSearchAdjacencyList
             return c-'a';
         else return 26+(c-'A');
     }
+    private void printGraph()
+    {
+        
+    }
     public static void main(String[] args)
     {
         GraphBreadthFirstSearchAdjacencyList Graph1 =new GraphBreadthFirstSearchAdjacencyList(8);
