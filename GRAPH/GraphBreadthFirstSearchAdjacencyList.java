@@ -71,7 +71,7 @@ public class GraphBreadthFirstSearchAdjacencyList
         while(!queue.isEmpty())
         {
             int curr=queue.poll();
-            System.out.print(indexToChar(curr));
+            System.out.print(indexToChar(curr)+" ");
 
             for(Character val:adjacencyList.get(curr))
             {
