@@ -44,7 +44,6 @@ public class GraphBreadthFirstSearchAdjacencyList
             {
                 System.out.print(val+" ");
             }
-            System.out.println();
         }
     }
     public static void main(String[] args)
