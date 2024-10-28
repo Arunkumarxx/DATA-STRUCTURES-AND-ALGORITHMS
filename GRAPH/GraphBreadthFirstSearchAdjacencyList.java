@@ -54,6 +54,11 @@ public class GraphBreadthFirstSearchAdjacencyList
                 continue;
             else break;
         }
+        queue.add(i);
+        while(queue.isEmpty())
+        {
+            
+        }
     }
     public static void main(String[] args)
     {
