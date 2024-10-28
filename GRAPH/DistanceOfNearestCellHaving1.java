@@ -61,7 +61,11 @@ public class DistanceOfNearestCellHaving1
     public static void main(String[] args)
     {
         DistanceOfNearestCellHaving1 obj =new DistanceOfNearestCellHaving1();
-        int [][] grid = {{1,0,1},{1,1,0},{1,0,0}};
+        int [][] grid = {
+                {0,1,1,0},
+                {1,1,0,0},
+                {0,0,1,1}
+        };
          int [][] res = obj.nearest(grid);
         for(int  []row :res)
         {
