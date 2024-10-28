@@ -24,7 +24,7 @@ public class DistanceOfNearestCellHaving1
         {
             int [] cell= queue.poll();
             int row=cell[0], col= cell[1] ,steps=cell[2];
-
+            
 
             // check for left
             if(col>0)
