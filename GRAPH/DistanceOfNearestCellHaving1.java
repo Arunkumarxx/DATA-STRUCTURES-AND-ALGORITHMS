@@ -21,7 +21,7 @@ public class DistanceOfNearestCellHaving1
                 {
                     queue.add(new int[] {row,cols,0});
                     visited[row][cols]=true;
-                } else result[row][cols]=-1;
+                } 
             }
         }
         while(!queue.isEmpty())
