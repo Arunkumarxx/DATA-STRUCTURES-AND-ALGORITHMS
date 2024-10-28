@@ -62,7 +62,7 @@ public class GraphBreadthFirstSearchAdjacencyList
             System.out.print(ch<26?'a'+ch:'A'+(ch-26));
             for(Character val:adjacencyList.get(ch))
             {
-                queue.add(Character.isLowerCase(val)?'a'-val:)
+                queue.add(Character.isLowerCase(val)?'a'-val:'A'-val);
             }
         }
     }
