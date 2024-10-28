@@ -15,14 +15,16 @@ public class GraphBreadthFirstSearchAdjacencyList
     }
     private void addAdjacency(char source,char destination)
     {
-        adjacencyList.get(source).add(destination);
+        int sourceInd=charToInd(source);
+        int destinationIndex=charToInd(destination);
+        adjacencyList.get(sourceInd).add(destinationIndex);
         adjacencyList.get(destination).add(source);
     }
     private int charToInd (char c)
     {
         if(c<='z')
-            return 'a'-c;
-        else return 26+('A'-c);
+            return c-'a';
+        else return 26+(c-'A');
     }
     public static void main(String[] args)
     {
