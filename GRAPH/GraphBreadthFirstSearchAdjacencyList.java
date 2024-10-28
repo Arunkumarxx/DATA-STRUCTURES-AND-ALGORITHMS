@@ -35,9 +35,9 @@ public class GraphBreadthFirstSearchAdjacencyList
             {
                 if(i<26)
                 {
-                    System.out.print((char) i+'a');
+                    System.out.print((char) (i+'a'));
                 }
-                else System.out.println((char)i+'A');
+                else System.out.println((char)(i+'A'));
                 System.out.print(" : ");
             }
             for(Character val: adjacencyList.get(i))
