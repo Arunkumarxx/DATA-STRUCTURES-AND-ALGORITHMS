@@ -31,9 +31,20 @@ public class DepthFirstSearchInGraph
         {
             if(!Adjacency.get(i).isEmpty())
             {
-                for()
+                System.out.print(intToChar(i));
+                for(Character val:Adjacency.get(i))
+                {
+                    System.out.print(val);
+                }
+                System.out.println();
             }
         }
+    }
+    private char intToChar(int n)
+    {
+        if(n<26)
+            return (char) ('a'+26);
+        return(char) ('A'+(n-26));
     }
     public static void main(String[] args)
     {
@@ -49,6 +60,6 @@ public class DepthFirstSearchInGraph
         Graph.addAdjacency('c','h');
         Graph.addAdjacency('b','g');
         Graph.addAdjacency('b','h');
-
+        Graph.print();
     }
 }
