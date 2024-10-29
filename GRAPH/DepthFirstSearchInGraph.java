@@ -52,9 +52,9 @@ public class DepthFirstSearchInGraph
         boolean [] visited=new boolean[Adjacency.size()];
         DepthFirstSearch(Adjacency,visited);
     }
-    private void DepthFirstSearch(List<List<Character>> adj,boolean [] visited,)
+    private void DepthFirstSearch(List<List<Character>> adj,boolean [] visited,char source)
     {
-
+        
     }
     public static void main(String[] args)
     {
