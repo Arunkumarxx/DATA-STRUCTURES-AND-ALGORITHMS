@@ -91,5 +91,6 @@ public class DepthFirstSearchInGraph
         Graph.addAdjacency('b','g');
         Graph.addAdjacency('b','h');
         Graph.print();
+        Graph.DFS();
     }
 }
