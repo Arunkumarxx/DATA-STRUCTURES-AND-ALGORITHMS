@@ -64,13 +64,14 @@ public class DepthFirstSearchInGraph
     }
     private void DepthFirstSearch(List<List<Character>> adj,boolean [] visited,char source)
     {
+        System.out.print(val+" ");
         visited[charToInd(source)]=true;
         for(Character val :Adjacency.get(charToInd(source)))
         {
             if(!visited[charToInd(val)])
             {
                 DepthFirstSearch(adj, visited, val);
-                System.out.print(val+" ");
+
             }
         }
     }
