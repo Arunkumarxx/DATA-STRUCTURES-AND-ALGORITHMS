@@ -2,7 +2,7 @@ package GRAPH;
 
 public class RottenOranges
 {
-    private int orangesRotting()
+    private int orangesRotting(Array)
     {
 
     }
