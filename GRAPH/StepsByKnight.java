@@ -9,21 +9,28 @@ public class StepsByKnight
     {
         int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
         int[] dy = {1, 2, 2, 1, -1, -2, -2, -1};
+        boolean [][] visited = new boolean[n][n];
         Queue<int []> queue =new LinkedList<>();
         queue.add(new int[]{knightPos[0]-1,knightPos[1]-1,0});
-
+        visited[knightPos[0]-1][knightPos[1]-1]=true;
         while(!queue.isEmpty())
         {
             int [] curr= queue.poll();
             int currX=curr[0];
             int currY=curr[1];
             int currDis=curr[2];
-            
+            for(int i=0;i<8;++i)
+            {
+                if(isValid(currX-dx[i],currY-dy[i],n) && !visited[currX-dx[i]][currY-dy[i]])
+                    
+            }
         }
     }
-    private boolean isValid(int x,int y,)
+    private boolean isValid(int x,int y,int n)
     {
-        if(x>=0 && x<=)
+        if(x>=0 && x<=n-1 && y<=n-1 && y>=0)
+            return true;
+        return false;
     }
     public static void main(String[] args)
     {
