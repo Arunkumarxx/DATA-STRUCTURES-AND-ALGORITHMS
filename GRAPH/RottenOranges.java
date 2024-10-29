@@ -23,8 +23,8 @@ public class RottenOranges
                     queue.add(new int[]{row,col, 0});
                 }
             }
-
         }
+        
     }
     public static void main(String[] args)
     {
