@@ -50,9 +50,9 @@ public class DepthFirstSearchInGraph
     private void DFS()
     {
         boolean [] visited=new boolean[Adjacency.size()];
-        DepthFirstSearch(Adjacency,);
+        DepthFirstSearch(Adjacency,visited);
     }
-    private void DepthFirstSearch(List<List<Character>> adj)
+    private void DepthFirstSearch(List<List<Character>> adj,boolean [] visited,)
     {
 
     }
