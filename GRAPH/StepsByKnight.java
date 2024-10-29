@@ -13,18 +13,24 @@ public class StepsByKnight
         Queue<int []> queue =new LinkedList<>();
         queue.add(new int[]{knightPos[0]-1,knightPos[1]-1,0});
         visited[knightPos[0]-1][knightPos[1]-1]=true;
-        while(!queue.isEmpty())
+        while(!queue.isEmpty() )
         {
             int [] curr= queue.poll();
             int currX=curr[0];
             int currY=curr[1];
             int currDis=curr[2];
+            if(currX==targetPos[0] && currY==targetPos[1])
+                return currDis;
             for(int i=0;i<8;++i)
             {
                 if(isValid(currX-dx[i],currY-dy[i],n) && !visited[currX-dx[i]][currY-dy[i]])
-                    
+                {
+                    queue.add(new int []{currX-dx[i],currY-dy[i],currDis+1});
+                    visited[currX-dx[i]][currY-dy[i]]=true;
+                }
             }
         }
+        return -1;
     }
     private boolean isValid(int x,int y,int n)
     {
