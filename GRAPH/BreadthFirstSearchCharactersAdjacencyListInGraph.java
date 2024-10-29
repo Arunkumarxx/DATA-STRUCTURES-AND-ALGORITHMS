@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class GraphBreadthFirstSearchAdjacencyListCharacters
+public class BreadthFirstSearchCharactersAdjacencyListInGraph
 {
     List<List<Character>> adjacencyList ;
-    GraphBreadthFirstSearchAdjacencyListCharacters(int vertices)
+    BreadthFirstSearchCharactersAdjacencyListInGraph(int vertices)
     {
         vertices=Math.max(52,vertices);
         adjacencyList=new ArrayList<>();
@@ -84,7 +84,7 @@ public class GraphBreadthFirstSearchAdjacencyListCharacters
     }
     public static void main(String[] args)
     {
-        GraphBreadthFirstSearchAdjacencyListCharacters graph =new GraphBreadthFirstSearchAdjacencyListCharacters(8);
+        BreadthFirstSearchCharactersAdjacencyListInGraph graph =new BreadthFirstSearchCharactersAdjacencyListInGraph(8);
         graph.addAdjacency('a', 'e');
         graph.addAdjacency('a', 'b');
         graph.addAdjacency('a', 'g');
