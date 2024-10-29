@@ -27,7 +27,13 @@ public class DepthFirstSearchInGraph
     }
     private void print()
     {
-        
+        for(int i=0;i<Adjacency.size();++i)
+        {
+            if(!Adjacency.get(i).isEmpty())
+            {
+                for()
+            }
+        }
     }
     public static void main(String[] args)
     {
