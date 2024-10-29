@@ -40,7 +40,10 @@ public class StepsByKnight
     }
     public static void main(String[] args)
     {
-        
-    }
+        StepsByKnight stepsByKnight =new StepsByKnight();
+        int [] knightPos =  {4,5};
+        int [] targetPos =  {1,1};
+        System.out.println( stepsByKnight.minStepToReachTarget(knightPos,targetPos,6));
 
+    }
 }
