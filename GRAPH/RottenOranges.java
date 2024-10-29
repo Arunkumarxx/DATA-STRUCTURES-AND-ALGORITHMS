@@ -71,7 +71,7 @@ public class RottenOranges
                         {0,1,2},
                         {2,1,1}
                 };
-        System.out.println( rottenOranges.orangesRotting(matrix))s;
+        System.out.println( rottenOranges.orangesRotting(matrix));
     }
 
 }
