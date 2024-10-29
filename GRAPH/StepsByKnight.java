@@ -6,8 +6,8 @@ import java.util.Queue;
 public class StepsByKnight
 {
 
-    int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
-    int[] dy = {1, 2, 2, 1, -1, -2, -2, -1};
+    private final  int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
+    private final  int[] dy = {1, 2, 2, 1, -1, -2, -2, -1};
 
     private int minStepToReachTarget(int knightPos[], int targetPos[], int n)
     {
