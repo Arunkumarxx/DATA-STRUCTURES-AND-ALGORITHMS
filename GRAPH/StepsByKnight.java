@@ -5,7 +5,6 @@ import java.util.Queue;
 
 public class StepsByKnight
 {
-
     private final  int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
     private final  int[] dy = {1, 2, 2, 1, -1, -2, -2, -1};
 
