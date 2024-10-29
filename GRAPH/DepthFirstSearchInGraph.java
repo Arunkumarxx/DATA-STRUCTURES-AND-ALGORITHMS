@@ -43,7 +43,7 @@ public class DepthFirstSearchInGraph
     private char intToChar(int n)
     {
         if(n<26)
-            return (char) ('a'+26);
+            return (char) ('a'+n);
         return(char) ('A'+(n-26));
     }
     public static void main(String[] args)
