@@ -26,13 +26,37 @@ public class RottenOranges
                 }
             }
         }
-
+        int res =-1;
         while(!queue.isEmpty())
         {
             int [] curr=queue.poll();
             int row=curr[0], col=curr[1],time=curr[2];
 
+            result[row][col]=time;
             // check for left
+            if(col>0 && !visited[row][col-1] && grid[row][col-1]!=0)
+            {
+                visited[row][col-1]=true;
+                queue.add(new int []{row,col-1,time+1});
+            }
+            //check for right
+            if(col<colSize-1 && !visited[row][col+1] && grid[row][col+1]!=0)
+            {
+                visited[row][col+1]=true;
+                queue.add(new int []{row,col+1,time+1});
+            }
+            //check for down
+            if(row<rowSize-1 && !visited[row+1][col] && grid[row+1][col]!=0)
+            {
+                visited[row+1][col]=true;
+                queue.add(new int []{row+1,col,time+1});
+            }
+            //check for up
+            if(row>0 && !visited[row-1][col] && grid[row-1][col]!=0)
+            {
+                visited[row-1][col]=true;
+                queue.add(new int []{row-1,col,time+1});
+            }
         }
     }
     public static void main(String[] args)
