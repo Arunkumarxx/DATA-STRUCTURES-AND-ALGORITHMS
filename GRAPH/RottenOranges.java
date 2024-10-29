@@ -33,7 +33,10 @@ public class RottenOranges
             int row=curr[0], col=curr[1],time=curr[2];
 
             if(time>0)
-                res=Math.min(time,res);
+            {
+                res = time;
+                res = Math.min(time,res);
+            }
             result[row][col]=time;
             // check for left
             if(col>0 && !visited[row][col-1] && grid[row][col-1]!=0)
