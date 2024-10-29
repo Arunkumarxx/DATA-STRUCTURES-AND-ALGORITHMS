@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class StepsByKnight
 {
-    private int minStepToReachTarget(int []knightPos, int []targetPos, int n)
+    private int minStepToReachTarget(int knightPos[], int targetPos[], int n)
     {
         int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
         int[] dy = {1, 2, 2, 1, -1, -2, -2, -1};
@@ -19,7 +19,7 @@ public class StepsByKnight
             int currX=curr[0];
             int currY=curr[1];
             int currDis=curr[2];
-            if(currX==targetPos[0] && currY==targetPos[1])
+            if(currX==(targetPos[0]-1) && currY==(targetPos[1]-1))
                 return currDis;
             for(int i=0;i<8;++i)
             {
@@ -44,6 +44,5 @@ public class StepsByKnight
         int [] knightPos =  {4,5};
         int [] targetPos =  {1,1};
         System.out.println( stepsByKnight.minStepToReachTarget(knightPos,targetPos,6));
-
     }
 }
