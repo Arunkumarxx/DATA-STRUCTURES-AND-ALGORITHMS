@@ -46,6 +46,16 @@ public class DepthFirstSearchInGraph
             return (char) ('a'+n);
         return(char) ('A'+(n-26));
     }
+
+    private void DFS()
+    {
+        boolean [] visited=new boolean[Adjacency.size()];
+        DepthFirstSearch(Adjacency,);
+    }
+    private void DepthFirstSearch(List<List<Character>> adj)
+    {
+
+    }
     public static void main(String[] args)
     {
         DepthFirstSearchInGraph Graph =new DepthFirstSearchInGraph();
