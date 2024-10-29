@@ -19,8 +19,8 @@ public class DepthFirstSearchInGraph
     private int charToInd(char c)
     {
         if(c<='z')
-            return 'a'-c;
-        else return 26+('A'-c);
+            return c-'a';
+        else return 26+(c-'A');
     }
     public static void main(String[] args)
     {
