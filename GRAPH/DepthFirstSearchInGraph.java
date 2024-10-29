@@ -71,7 +71,6 @@ public class DepthFirstSearchInGraph
             if(!visited[charToInd(val)])
             {
                 DepthFirstSearch(adj, visited, val);
-
             }
         }
         System.out.print(source+" ");
