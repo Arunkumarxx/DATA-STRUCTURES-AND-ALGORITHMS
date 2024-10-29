@@ -1,10 +1,21 @@
 package GRAPH;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class RottenOranges
 {
     private int orangesRotting(int [][] grid)
     {
-        
+        int row=grid.length;
+        int col=grid[0].length;
+        int rowSize=grid.length;
+        int colSize=grid[0].length;
+        Queue<int [] > queue =new LinkedList<>();
+        for(int i=row;i<rowSize;++i)
+        {
+            
+        }
     }
     public static void main(String[] args)
     {
