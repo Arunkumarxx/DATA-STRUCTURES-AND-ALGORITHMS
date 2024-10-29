@@ -50,7 +50,17 @@ public class DepthFirstSearchInGraph
     private void DFS()
     {
         boolean [] visited=new boolean[Adjacency.size()];
-        DepthFirstSearch(Adjacency,visited);
+        int startNode=-1;
+        for(int i=0;i<Adjacency.size();++i)
+        {
+            if(!Adjacency.get(i).isEmpty())
+            {
+                startNode=i;
+                break;
+            }
+        }
+
+        DepthFirstSearch(Adjacency,visited,intToChar(startNode));
     }
     private void DepthFirstSearch(List<List<Character>> adj,boolean [] visited,char source)
     {
