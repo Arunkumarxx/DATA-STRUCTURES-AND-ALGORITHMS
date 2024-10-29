@@ -15,7 +15,9 @@ public class DepthFirstSearchInGraph
     private void addAdjacency(char source,char destination)
     {
         int sourceInd =charToInd(source);
-        
+        int destinationInd= charToInd(destination);
+        Adjacency.get(sourceInd).add(destination);
+        Adjacency.get(destinationInd).add(source);
     }
     private int charToInd(char c)
     {
@@ -25,6 +27,18 @@ public class DepthFirstSearchInGraph
     }
     public static void main(String[] args)
     {
-
+        DepthFirstSearchInGraph Graph =new DepthFirstSearchInGraph();
+        Graph.addAdjacency('a','e');
+        Graph.addAdjacency('a','b');
+        Graph.addAdjacency('a','g');
+        Graph.addAdjacency('e','d');
+        Graph.addAdjacency('e','f');
+        Graph.addAdjacency('d','c');
+        Graph.addAdjacency('f','b');
+        Graph.addAdjacency('c','b');
+        Graph.addAdjacency('c','h');
+        Graph.addAdjacency('b','g');
+        Graph.addAdjacency('b','h');
+        
     }
 }
