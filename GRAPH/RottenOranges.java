@@ -60,6 +60,7 @@ public class RottenOranges
                 queue.add(new int []{row-1,col,time+1});
             }
         }
+        return res==-1?0:res;
     }
     public static void main(String[] args)
     {
@@ -70,7 +71,7 @@ public class RottenOranges
                         {0,1,2},
                         {2,1,1}
                 };
-        rottenOranges.orangesRotting(matrix);
+        System.out.println( rottenOranges.orangesRotting(matrix))s;
     }
 
 }
