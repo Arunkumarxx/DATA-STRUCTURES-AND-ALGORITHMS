@@ -25,6 +25,10 @@ public class DepthFirstSearchInGraph
             return c-'a';
         else return 26+(c-'A');
     }
+    private void print()
+    {
+        
+    }
     public static void main(String[] args)
     {
         DepthFirstSearchInGraph Graph =new DepthFirstSearchInGraph();
@@ -39,6 +43,6 @@ public class DepthFirstSearchInGraph
         Graph.addAdjacency('c','h');
         Graph.addAdjacency('b','g');
         Graph.addAdjacency('b','h');
-        
+
     }
 }
