@@ -31,7 +31,7 @@ public class DepthFirstSearchInGraph
         {
             if(!Adjacency.get(i).isEmpty())
             {
-                System.out.print(intToChar(i));
+                System.out.print(intToChar(i)+"->");
                 for(Character val:Adjacency.get(i))
                 {
                     System.out.print(val);
