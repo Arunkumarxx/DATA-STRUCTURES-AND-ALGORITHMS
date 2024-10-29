@@ -12,9 +12,18 @@ public class RottenOranges
         int rowSize=grid.length;
         int colSize=grid[0].length;
         Queue<int [] > queue =new LinkedList<>();
-        for(int i=row;i<rowSize;++i)
+        boolean[][] visited =new boolean[rowSize][colSize];
+        for(int i=0;i<rowSize;++i)
         {
-            
+            for(int j=0;j<colSize;++j)
+            {
+                if(grid[i][j]==2)
+                {
+                    visited[i][j] = true;
+                    queue.add(new int[]{row,col, 0});
+                }
+            }
+
         }
     }
     public static void main(String[] args)
