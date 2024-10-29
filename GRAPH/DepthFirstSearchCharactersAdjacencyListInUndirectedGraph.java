@@ -3,10 +3,10 @@ package GRAPH;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DepthFirstSearchInGraphCharactersAdjacencyList
+public class DepthFirstSearchCharactersAdjacencyListInUndirectedGraph
 {
     List<List<Character>> Adjacency ;
-    DepthFirstSearchInGraphCharactersAdjacencyList()
+    DepthFirstSearchCharactersAdjacencyListInUndirectedGraph()
     {
         Adjacency =new ArrayList<>();
         for(int i=0;i<52;++i)
@@ -77,7 +77,7 @@ public class DepthFirstSearchInGraphCharactersAdjacencyList
     }
     public static void main(String[] args)
     {
-        DepthFirstSearchInGraphCharactersAdjacencyList Graph =new DepthFirstSearchInGraphCharactersAdjacencyList();
+        DepthFirstSearchCharactersAdjacencyListInUndirectedGraph Graph =new DepthFirstSearchCharactersAdjacencyListInUndirectedGraph();
         Graph.addAdjacency('a','e');
         Graph.addAdjacency('a','b');
         Graph.addAdjacency('a','g');

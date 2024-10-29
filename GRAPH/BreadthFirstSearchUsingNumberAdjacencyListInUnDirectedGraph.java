@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BreadthFirstSearchUsingNumberAdjacencyListInGraph
+public class BreadthFirstSearchUsingNumberAdjacencyListInUnDirectedGraph
 {
     private ArrayList<Integer> bfsOfGraph(ArrayList<ArrayList<Integer>> adj) {
         ArrayList<Integer> result=new ArrayList<>();
@@ -38,7 +38,7 @@ public class BreadthFirstSearchUsingNumberAdjacencyListInGraph
         adj.get(2).add(4);
         adj.get(3).add(4);
 
-        BreadthFirstSearchUsingNumberAdjacencyListInGraph obj = new BreadthFirstSearchUsingNumberAdjacencyListInGraph();
+        BreadthFirstSearchUsingNumberAdjacencyListInUnDirectedGraph obj = new BreadthFirstSearchUsingNumberAdjacencyListInUnDirectedGraph();
         ArrayList<Integer> bfsResult = obj.bfsOfGraph(adj);
         System.out.println("BFS traversal of the graph: " + bfsResult);
     }

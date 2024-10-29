@@ -3,7 +3,8 @@ package GRAPH;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintAdjacencyList {
+public class UnDirectedGraphPrintAdjacencyList
+{
     List<List<Integer>> adjacent;
 
     private void createAdjacent(int vertices) {
@@ -27,7 +28,7 @@ public class PrintAdjacencyList {
     }
 
     public static void main(String[] args) {
-        PrintAdjacencyList obj = new PrintAdjacencyList();
+        UnDirectedGraphPrintAdjacencyList obj = new UnDirectedGraphPrintAdjacencyList();
         int vertices = 5;
         int[][] edges =
                 {

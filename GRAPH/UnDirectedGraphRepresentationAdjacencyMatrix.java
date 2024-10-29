@@ -1,10 +1,10 @@
 package GRAPH;
 
-public class GraphRepresentationAdjacencyMatrix
+public class UnDirectedGraphRepresentationAdjacencyMatrix
 {
     private boolean [][]  Graph;
 
-    private GraphRepresentationAdjacencyMatrix(int size)
+    private UnDirectedGraphRepresentationAdjacencyMatrix(int size)
     {
         Graph=new boolean[size][size];
     }
@@ -28,7 +28,7 @@ public class GraphRepresentationAdjacencyMatrix
     }
     public static void main(String[] args)
     {
-        GraphRepresentationAdjacencyMatrix Graph1 =new GraphRepresentationAdjacencyMatrix(5);
+        UnDirectedGraphRepresentationAdjacencyMatrix Graph1 =new UnDirectedGraphRepresentationAdjacencyMatrix(5);
         Graph1.addAdjacent(0,1);
         Graph1.addAdjacent(0,4);
         Graph1.addAdjacent(1,4);

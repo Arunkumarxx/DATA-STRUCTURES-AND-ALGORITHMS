@@ -3,11 +3,11 @@ package GRAPH;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GraphRepresentationAdjacencyList
+public class UnDirectedGraphRepresentationAdjacencyList
 {
     private ArrayList<ArrayList<Integer>> AdjacencyList;
 
-    GraphRepresentationAdjacencyList(int vertices)
+    UnDirectedGraphRepresentationAdjacencyList(int vertices)
     {
         AdjacencyList =new ArrayList<>(vertices);
         for(int i=0;i<vertices;++i)
@@ -33,7 +33,7 @@ public class GraphRepresentationAdjacencyList
     }
     public static void main(String[] args)
     {
-        GraphRepresentationAdjacencyList Graph1=new GraphRepresentationAdjacencyList(5);
+        UnDirectedGraphRepresentationAdjacencyList Graph1=new UnDirectedGraphRepresentationAdjacencyList(5);
         Graph1.addAdjacent(0,1);
         Graph1.addAdjacent(0,4);
         Graph1.addAdjacent(1,4);
