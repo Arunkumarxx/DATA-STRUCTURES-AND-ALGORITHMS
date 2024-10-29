@@ -66,7 +66,7 @@ public class DepthFirstSearchInGraph
     {
 
         visited[charToInd(source)]=true;
-        for(Character val :Adjacency.get(charToInd(source)))
+        for(Character val :adj.get(charToInd(source)))
         {
             if(!visited[charToInd(val)])
             {
