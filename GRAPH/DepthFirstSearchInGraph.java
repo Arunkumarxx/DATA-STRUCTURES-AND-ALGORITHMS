@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DepthFirstSearchInGraph
 {
-    List<List<Integer>> Adjacency ;
+    List<List<Character>> Adjacency ;
     DepthFirstSearchInGraph()
     {
         Adjacency =new ArrayList<>();
@@ -14,7 +14,8 @@ public class DepthFirstSearchInGraph
     }
     private void addAdjacency(char source,char destination)
     {
-        int sourceInd =
+        int sourceInd =charToInd(source);
+        
     }
     private int charToInd(char c)
     {
