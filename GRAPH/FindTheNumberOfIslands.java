@@ -22,7 +22,7 @@ public class FindTheNumberOfIslands
                 {
                     ++res;
                     Queue<int []> queue =new LinkedList<>();
-                    queue.add(new int []{grid[row][col]});
+                    queue.add(new int []{row,col});
                     grid[row][col]='0';
                     while(!queue.isEmpty())
                     {
@@ -35,7 +35,7 @@ public class FindTheNumberOfIslands
                             int newY=currY+dy[i];
                             if(isValid(newX,newY,n,m) && grid[newX][newY]=='1')
                             {
-                                queue.add(new int []{grid[newX][newY]});
+                                queue.add(new int []{newX,newY});
                                 grid[newX][newY]='0';
                             }
                         }
