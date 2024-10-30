@@ -14,7 +14,7 @@ public class FindTheNumberOfIslands
         {
             for(int col=0;col<colsSize;++col)
             {
-                if(grid[row][col]==1)
+                if(grid[row][col]=='1')
                 {
                     queue.add(new int[]{row, col});
                 }
