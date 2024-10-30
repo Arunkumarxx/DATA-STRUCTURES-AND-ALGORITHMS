@@ -21,8 +21,8 @@ public class FindTheNumberOfIslands
             }
         }
         int res=0;
-        int [] dx ={-1,-1,-1,     0,0,0   ,1,1,1 };
-        int [] dy ={-1, 0, 1,    -1,0,1   ,-1,0,1};
+        int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
+        int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
         while(!queue.isEmpty())
         {
             int [] curr =queue.poll();
