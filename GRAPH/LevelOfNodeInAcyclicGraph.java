@@ -5,7 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class LevelOfNodeInAcyclicGraph {
-    int nodeLevel(int v, ArrayList<ArrayList<Integer>> adj, int x) {
+    private int breathFirstSearch(int v, ArrayList<ArrayList<Integer>> adj, int x) {
+
         boolean[] visited=new boolean[v];
         Queue<int[]> queue=new LinkedList<>();
         queue.add(new int[]{0, 0});
@@ -25,6 +26,10 @@ public class LevelOfNodeInAcyclicGraph {
             }
         }
         return -1;
+    }
+    private int DepthFirstSearch()
+    {
+        
     }
     public static void main(String[] args) {
         LevelOfNodeInAcyclicGraph obj=new LevelOfNodeInAcyclicGraph();
