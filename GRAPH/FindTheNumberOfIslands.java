@@ -10,13 +10,11 @@ public class FindTheNumberOfIslands
         int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
         int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
 
-        int rowSize=n;
-        int colsSize=m;
         int res=0;
 
-        for(int row=0;row<rowSize;++row)
+        for(int row=0;row<n;++row)
         {
-            for(int col=0;col<colsSize;++col)
+            for(int col=0;col<m;++col)
             {
                 if(grid[row][col]=='1')
                 {
