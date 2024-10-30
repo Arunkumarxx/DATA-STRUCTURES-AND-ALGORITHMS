@@ -47,7 +47,7 @@ public class FindTheNumberOfIslands
     }
     private boolean isValid(int x,int y,int n,int m)
     {
-        return  x>=0 && x<n && y>=0 && y<=m?true:false;
+        return  x>=0 && x<n && y>=0 && y<m?true:false;
     }
     public static void main(String[] args)
     {
