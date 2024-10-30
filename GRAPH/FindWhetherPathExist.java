@@ -61,7 +61,7 @@ public class FindWhetherPathExist
                         {3,0,0,1,3}
                 };
         FindWhetherPathExist findWhetherPathExist =new FindWhetherPathExist();
-        System.out.println(findWhetherPathExist.is_Possible());
+        System.out.println(findWhetherPathExist.is_Possible(grid));
     }
 
 }
