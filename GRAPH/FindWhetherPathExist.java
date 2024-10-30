@@ -52,7 +52,16 @@ public class FindWhetherPathExist
     }
     public static void main(String[] args)
     {
-        
+        int [][] grid =
+                {
+                        {3,0,3,0,0},
+                        {3,0,0,0,3},
+                        {3,3,3,3,3},
+                        {0,2,3,0,0},
+                        {3,0,0,1,3}
+                };
+        FindWhetherPathExist findWhetherPathExist =new FindWhetherPathExist();
+        System.out.println(findWhetherPathExist.is_Possible());
     }
 
 }
