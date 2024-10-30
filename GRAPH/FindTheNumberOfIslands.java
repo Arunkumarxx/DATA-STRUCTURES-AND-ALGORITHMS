@@ -20,6 +20,7 @@ public class FindTheNumberOfIslands
                 }
             }
         }
+        int res=0;
         int [] dx ={-1,-1,-1,     0,0,0   ,1,1,1 };
         int [] dy ={-1, 0, 1,    -1,0,1   ,-1,0,1};
         while(!queue.isEmpty())
@@ -32,14 +33,17 @@ public class FindTheNumberOfIslands
             {
                 for (int i = 0; i < 8; ++i)
                 {
-                    if (isValid(currX - dx[i], currY - dy[i], n, m))
+                    if (isValid(currX - dx[i], currY - dy[i], n, m) && grid[currX][currY]=='0')
                     {
+                        ++count;
                         queue.add(new int[]{currX - dx[i], currY - dx[i], n, m});
-                        grid[currX][currY] = '0';
                     } else ++count;
                 }
+                grid[currX][currY] = '0';
             }
+            if(count==8)++res;
         }
+        return res;
     }
     private boolean isValid(int x,int y,int n,int m)
     {
