@@ -18,7 +18,11 @@ public class FindTheNumberOfIslands
         {
             for(int col=0;col<colsSize;++col)
             {
-                
+                if(grid[row][col]=='1')
+                {
+                    ++res;
+
+                }
             }
         }
 
