@@ -6,7 +6,6 @@ import java.util.Queue;
 
 public class LevelOfNodeInAcyclicGraph {
     private int BreathFirstSearch(int v, ArrayList<ArrayList<Integer>> adj, int x) {
-
         boolean[] visited=new boolean[v];
         Queue<int[]> queue=new LinkedList<>();
         queue.add(new int[]{0, 0});
