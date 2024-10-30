@@ -28,9 +28,16 @@ public class FindTheNumberOfIslands
             int currX=curr[0];
             int currY=curr[1];
             int count=0;
-            for(int i=0;i<8;++i)
+            if(grid[currX][currY]=='1')
             {
-                if(isValid(currX-dx[i],currY-dy[i],n,m) && )
+                for (int i = 0; i < 8; ++i)
+                {
+                    if (isValid(currX - dx[i], currY - dy[i], n, m))
+                    {
+                        queue.add(new int[]{currX - dx[i], currY - dx[i], n, m});
+                        grid[currX][currY] = '0';
+                    } else ++count;
+                }
             }
         }
     }
