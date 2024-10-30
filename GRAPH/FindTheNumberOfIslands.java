@@ -59,6 +59,6 @@ public class FindTheNumberOfIslands
                 {'1','1','0','1'},
         };
         FindTheNumberOfIslands findTheNumberOfIslands =new FindTheNumberOfIslands();
-        System.out.println(findTheNumberOfIslands.numIsIslands(grid));
+        System.out.println(findTheNumberOfIslands.numIsIslands(grid,grid.length,grid[0].length));
     }
 }
