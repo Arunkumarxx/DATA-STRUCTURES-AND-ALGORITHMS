@@ -23,11 +23,26 @@ public class FindTheNumberOfIslands
                     ++res;
                     Queue<int []> queue =new LinkedList<>();
                     queue.add(new int []{grid[row][col]});
-                    
+                    grid[row][col]='0';
+                    while(!queue.isEmpty())
+                    {
+                        int []curr=queue.poll();
+                        int currX=curr[0];
+                        int currY=curr[1];
+                        for(int i=0;i<8;++i)
+                        {
+                            int newX=currX+dx[i];
+                            int newY=currY+dy[i];
+                            if(isValid(newX,newY,n,m) && grid[newX][newY]=='1')
+                            {
+                                queue.add(new int []{grid[newX][newY]});
+                                grid[newX][newY]='0';
+                            }
+                        }
+                    }
                 }
             }
         }
-
         return res;
     }
     private boolean isValid(int x,int y,int n,int m)
