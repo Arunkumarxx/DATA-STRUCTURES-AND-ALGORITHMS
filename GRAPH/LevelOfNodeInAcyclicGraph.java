@@ -60,7 +60,7 @@ public class LevelOfNodeInAcyclicGraph {
         adj.get(1).add(3);
         adj.get(1).add(4);
         adj.get(2).add(4);
-        System.out.println("Level of node 4: "+obj.BreathFirstSearch(5, adj, 4));
-        System.out.println("Level of node 4: "+obj.DepthFirstSearch(5, adj, 4));
+        System.out.println("Level of node  using Breath First Search 4: "+obj.BreathFirstSearch(5, adj, 4));
+        System.out.println("Level of node  using Depth First Search  4: "+obj.DepthFirstSearch(5, adj, 4));
     }
 }
