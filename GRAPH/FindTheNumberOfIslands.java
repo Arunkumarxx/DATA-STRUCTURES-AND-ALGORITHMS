@@ -13,7 +13,7 @@ public class FindTheNumberOfIslands
         int rowSize=n;
         int colsSize=m;
         int res=0;
-        Queue<int []> queue =new LinkedList<>();
+        
         for(int row=0;row<rowSize;++row)
         {
             for(int col=0;col<colsSize;++col)
