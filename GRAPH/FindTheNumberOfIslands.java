@@ -13,7 +13,7 @@ public class FindTheNumberOfIslands
         int rowSize=n;
         int colsSize=m;
         int res=0;
-        
+
         for(int row=0;row<rowSize;++row)
         {
             for(int col=0;col<colsSize;++col)
@@ -21,7 +21,9 @@ public class FindTheNumberOfIslands
                 if(grid[row][col]=='1')
                 {
                     ++res;
-
+                    Queue<int []> queue =new LinkedList<>();
+                    queue.add(new int []{grid[row][col]});
+                    
                 }
             }
         }
