@@ -31,6 +31,23 @@ public class LevelOfNodeInAcyclicGraph {
     {
         
     }
+    private int  levelOfX(ArrayList<ArrayList<Integer>>adj ,int x,boolean[] visited,int source,int level)
+    {
+        if(source==x)
+            return level;
+
+        visited[source]=true;
+        for(Integer neigh:adj.get(source))
+        {
+            if(!visited[neigh])
+            {
+                int foundLevel=levelOfX(adj,x,visited,neigh,level+1);
+                if(foundLevel!=-1)
+                    return foundLevel;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         LevelOfNodeInAcyclicGraph obj=new LevelOfNodeInAcyclicGraph();
         ArrayList<ArrayList<Integer>> adj=new ArrayList<>();
