@@ -10,7 +10,7 @@ public class FindWhetherPathExist
             two:for(int j=0;j<10;++j)
             {
                 if(j==5)
-                break one;
+                    return;
                 System.out.println(j);
             }
         }
