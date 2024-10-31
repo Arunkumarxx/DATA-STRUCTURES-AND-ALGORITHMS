@@ -8,7 +8,11 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
         List<List<Integer>> adj =new ArrayList<>();
         for(int i=0;i<n;++i)
             adj.add(new ArrayList<>());
-        for(int i=)
+        for(int [] edge:edges)
+        {
+            adj.get(edge[0]).add(edge[1]);
+            adj.get(edge[1]).add(edge[0]);
+        }
         boolean [] visited =new boolean[n];
         Queue<int []> queue =new LinkedList<>();
 
@@ -28,7 +32,14 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
 
             for(int [] edge:edges)
             {
-
+                int newSrc=edge[0];
+                int newDes=edge[1];
+                if(!visited[newSrc])
+                {
+                    visited[newSrc]=true;
+                    queue.add(new int [] {newSrc,newDes+1});
+                    distance[newSrc]=newDes+1;
+                }
             }
         }
         return distance;
