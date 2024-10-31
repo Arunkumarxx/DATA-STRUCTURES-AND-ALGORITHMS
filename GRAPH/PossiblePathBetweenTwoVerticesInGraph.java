@@ -4,24 +4,21 @@ import java.util.*;
 
 public class PossiblePathBetweenTwoVerticesInGraph {
     public int countPaths(int V, ArrayList<ArrayList<Integer>> adj, int source, int destination) {
-        Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[]{source, 0});
-        boolean[] visited = new boolean[V];
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(source);
         int pathCount = 0;
+
         while (!queue.isEmpty()) {
-            int[] current = queue.poll();
-            int node = current[0];
-            int distance = current[1];
-            if (node == destination)
+            int node = queue.poll();
+
+            if (node == destination) {
                 pathCount++;
-            visited[node] = true;
-            for (Integer neighbor : adj.get(node)) {
-                if (!visited[neighbor]) {
-                    queue.add(new int[]{neighbor, distance + 1});
-                }
+                continue;
             }
 
-            visited[node] = false;
+            for (Integer neighbor : adj.get(node)) {
+                queue.add(neighbor);
+            }
         }
 
         return pathCount;
