@@ -15,21 +15,18 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
 
         int [] distance =new int[n];
         Arrays.fill(distance,-1);
-        
+
         distance[source]=0;
 
         while(!queue.isEmpty())
         {
             int [] curr=queue.poll();
-            int  src=curr[0];
+            int sr=curr[0];
             int dis=curr[1];
-            for(int neighbour:edges[src])
+
+            for(int [] edge:edges)
             {
-                if(!visited[neighbour])
-                {
-                    distance[neighbour]=dis;
-                    queue.add(new int []{neighbour,dis+1});
-                }
+                
             }
         }
         return distance;
