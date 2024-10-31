@@ -49,7 +49,6 @@ public class ShortestPathInAnUnweightedGraph
             if(!visited[src])
             {
                 visited[src]=true;
-                if(!adj.get(src).isEmpty())
                 for(Integer newSrc:adj.get(src))
                 {
                     queue.add(newSrc);
