@@ -1,12 +1,14 @@
 package GRAPH;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
 {
     private int[] shortestPath(int[][] edges,int n,int m ,int source) {
+        List<List<Integer>> adj =new ArrayList<>();
+        for(int i=0;i<n;++i)
+            adj.add(new ArrayList<>());
+        for(int i=)
         boolean [] visited =new boolean[n];
         Queue<int []> queue =new LinkedList<>();
 
@@ -26,7 +28,7 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
 
             for(int [] edge:edges)
             {
-                
+
             }
         }
         return distance;
