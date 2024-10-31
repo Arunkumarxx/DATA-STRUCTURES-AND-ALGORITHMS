@@ -9,10 +9,15 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
     private int[] shortestPath(int[][] edges,int n,int m ,int source) {
         boolean [] visited =new boolean[n];
         Queue<int []> queue =new LinkedList<>();
+
         queue.add(new int[]{source,0});
         visited[source]=true;
+
         int [] distance =new int[n];
+        Arrays.fill(distance,-1);
+        
         distance[source]=0;
+
         while(!queue.isEmpty())
         {
             int [] curr=queue.poll();
