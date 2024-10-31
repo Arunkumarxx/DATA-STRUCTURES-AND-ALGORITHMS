@@ -1,6 +1,8 @@
 package GRAPH;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class ShortestPathInAnUnweightedGraph
 {
@@ -18,19 +20,6 @@ public class ShortestPathInAnUnweightedGraph
     }
     private void print()
     {
-//        int startNode=-1;
-//        for(int i=0;i<adj.size();++i)
-//        {
-//            if(!adj.get(i).isEmpty())
-//            {
-//                startNode=i;
-//                break;
-//            }
-//        }
-//        for(int i=startNode;i< adj.size();++i)
-//        {
-//
-//        }
         for(int i=0;i< adj.size();++i)
         {
             if(!adj.get(i).isEmpty())
@@ -43,6 +32,19 @@ public class ShortestPathInAnUnweightedGraph
                 }
                 System.out.println();
             }
+        }
+    }
+    private void ShortestPath(int source,int destination)
+    {
+        int n=adj.size();
+        boolean[] visited =new boolean[n];
+        Queue<Integer> queue =new LinkedList<>();
+        queue.add(source);
+
+        while(!queue.isEmpty())
+        {
+            int curr=queue.poll();
+            
         }
     }
     public static void main(String[] args)
