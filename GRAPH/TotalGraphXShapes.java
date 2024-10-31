@@ -27,10 +27,16 @@ public class TotalGraphXShapes
                     while(!queue.isEmpty())
                     {
                         int [] curr =queue.poll();
+                        int currX=curr[0];
+                        int currY=curr[1];
                     }
                 }
             }
         }
+    }
+    private boolean isValid(int )
+    {
+
     }
     public static void main(String[] args)
     {
