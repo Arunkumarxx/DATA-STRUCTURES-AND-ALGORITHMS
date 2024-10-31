@@ -34,9 +34,9 @@ public class ShortestPathInAnUnweightedGraph
             }
         }
     }
-    private void ShortestPath(int source,int destination)
+    private void ShortestPath(ArrayList<ArrayList<Integer>> adj,int source,int destination)
     {
-
+        boolean[] visited =new boolean[];
     }
     public static void main(String[] args)
     {
