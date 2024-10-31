@@ -50,9 +50,8 @@ public class TotalGraphXShapes
     public static void main(String[] args)
     {
         char [][] grid ={
-                {'X','O','X'},
-                {'O','X','O'},
-                {'X','X','X'}
+                {'X','X'},
+                {'X','X'}
         };
         TotalGraphXShapes totalGraphXShapes =new TotalGraphXShapes();
         System.out.println(totalGraphXShapes.xShape(grid));
