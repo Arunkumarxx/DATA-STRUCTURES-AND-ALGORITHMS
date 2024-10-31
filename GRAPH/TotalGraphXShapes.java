@@ -30,7 +30,7 @@ public class TotalGraphXShapes
                         for(int i=0;i<4;++i)
                         {
                             int newX = curr[0]+ x[i];
-                            int newY = curr[1]+ x[i];
+                            int newY = curr[1]+ y[i];
                             if(isValid(newX,newY,n,m) && grid[newX][newY]=='X')
                             {
                                 queue.add(new int []{newX,newY});
