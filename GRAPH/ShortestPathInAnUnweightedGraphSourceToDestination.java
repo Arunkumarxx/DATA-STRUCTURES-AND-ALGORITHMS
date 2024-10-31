@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ShortestPathInAnUnweightedGraph
+public class ShortestPathInAnUnweightedGraphSourceToDestination
 {
     ArrayList<ArrayList<Integer>> adj;
-    ShortestPathInAnUnweightedGraph(int vertices)
+    ShortestPathInAnUnweightedGraphSourceToDestination(int vertices)
     {
         adj=new ArrayList<>();
         for(int i=0;i<vertices;++i)
@@ -77,7 +77,7 @@ public class ShortestPathInAnUnweightedGraph
     }
     public static void main(String[] args)
     {
-        ShortestPathInAnUnweightedGraph Graph1 =new ShortestPathInAnUnweightedGraph(10);
+        ShortestPathInAnUnweightedGraphSourceToDestination Graph1 =new ShortestPathInAnUnweightedGraphSourceToDestination(10);
         Graph1.addAdjacency(1,2);
         Graph1.addAdjacency(1,0);
         Graph1.addAdjacency(0,3);

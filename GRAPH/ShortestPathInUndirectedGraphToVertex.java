@@ -1,8 +1,11 @@
 package GRAPH;
 
-public class ShortestPathInUndirectedGraph
+public class ShortestPathInUndirectedGraphToVertex
 {
-    
+    private int[] shortestPath(int[][] edges,int n,int m ,int src) {
+        boolean [] visited =new boolean[n];
+        
+    }
     public static void main(String[] args)
     {
         int [][] edges =
@@ -19,5 +22,6 @@ public class ShortestPathInUndirectedGraph
                         {7,8},
                         {6,8},
                 };
+
     }
 }
