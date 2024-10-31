@@ -70,7 +70,7 @@ public class ShortestPathInAnUnweightedGraph
     }
     private void printPath(int []parent,int destination)
     {
-        if(parent[destination]==-1)
+        if(destination==-1)
             return;
         printPath(parent,parent[destination]);
         System.out.println(destination+" ");
