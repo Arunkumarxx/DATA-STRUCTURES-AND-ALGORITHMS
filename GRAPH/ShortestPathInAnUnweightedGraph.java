@@ -47,6 +47,7 @@ public class ShortestPathInAnUnweightedGraph
             System.out.println(src);
             if(!visited[src])
             {
+                visited[src]=true;
                 for(Integer newSrc:adj.get(src))
                 {
                     queue.add(newSrc);
@@ -68,6 +69,7 @@ public class ShortestPathInAnUnweightedGraph
         Graph1.addAdjacency(4,5);
         Graph1.addAdjacency(5,6);
         Graph1.print();
+        Graph1.ShortestPath(0,7);
     }
 
 }
