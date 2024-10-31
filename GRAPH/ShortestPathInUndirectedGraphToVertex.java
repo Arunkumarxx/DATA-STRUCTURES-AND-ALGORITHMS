@@ -1,5 +1,7 @@
 package GRAPH;
 
+import java.security.spec.RSAOtherPrimeInfo;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,6 +13,7 @@ public class ShortestPathInUndirectedGraphToVertex
         queue.add(new int[]{source,0});
         visited[source]=true;
         int [] distance =new int[n];
+        distance[source]=0;
         while(!queue.isEmpty())
         {
             int [] curr=queue.poll();
@@ -20,11 +23,12 @@ public class ShortestPathInUndirectedGraphToVertex
             {
                 if(!visited[neighbour])
                 {
-                    queue.add(new int []{neighbour,dis+1});
                     distance[neighbour]=dis;
+                    queue.add(new int []{neighbour,dis+1});
                 }
             }
         }
+        return distance;
     }
     public static void main(String[] args)
     {
@@ -42,6 +46,7 @@ public class ShortestPathInUndirectedGraphToVertex
                         {7,8},
                         {6,8},
                 };
-
+        ShortestPathInUndirectedGraphToVertex shortestPathInUndirectedGraphToVertex = new ShortestPathInUndirectedGraphToVertex();
+        System.out.println(Arrays.toString(shortestPathInUndirectedGraphToVertex.shortestPath(edges,edges.length,edges[0].length,0)));
     }
 }
