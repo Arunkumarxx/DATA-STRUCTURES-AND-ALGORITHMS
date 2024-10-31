@@ -23,7 +23,7 @@ public class TotalGraphXShapes
                     ++count;
                     Queue<int []> queue =new LinkedList<>();
                     queue.add(new int[]{row,col});
-                    grid[row][col]='O';
+//                    grid[row][col]='O';
                     while(!queue.isEmpty())
                     {
                         int [] curr =queue.poll();
