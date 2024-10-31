@@ -16,6 +16,22 @@ public class ShortestPathInAnUnweightedGraph
         adj.get(source).add(destination);
         adj.get(destination).add(source);
     }
+    private void print()
+    {
+        int startNode=-1;
+        for(int i=0;i<adj.size();++i)
+        {
+            if(!adj.get(i).isEmpty())
+            {
+                startNode=i;
+                break;
+            }
+        }
+        for(int i=startNode;i< adj.size();++i)
+        {
+            
+        }
+    }
     public static void main(String[] args)
     {
         ShortestPathInAnUnweightedGraph Graph1 =new ShortestPathInAnUnweightedGraph(8);
