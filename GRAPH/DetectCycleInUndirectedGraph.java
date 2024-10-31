@@ -28,7 +28,6 @@ public class DetectCycleInUndirectedGraph {
         }
         return false;
     }
-
     public static void main(String[] args) {
         DetectCycleInUndirectedGraph obj = new DetectCycleInUndirectedGraph();
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
