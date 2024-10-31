@@ -41,10 +41,38 @@ public class ShortestPathInAnUnweightedGraph
         int [] parent =new int[n];
         Queue<Integer> queue = new LinkedList<>();
         parent[source]=-1;
+        visited[source]=true;
+        queue.add(source);
+        boolean found=false;
         while(!queue.isEmpty())
         {
-            
+            int src= queue.poll();
+            if(src==destination)
+            {
+                found=true;
+                break;
+            }
+            for(Integer newSrc:adj.get(src))
+            {
+                if(!visited[newSrc])
+                {
+                    queue.add(newSrc);
+                    parent[newSrc]=src;
+                }
+            }
         }
+        if(found)
+        {
+            System.out.println("source "+source+" to destination "+destination+" ");
+            printPath(parent,destination);
+        }
+    }
+    private void printPath(int []parent,int destination)
+    {
+        if(parent[destination]==-1)
+            return;
+        printPath(parent,parent[destination]);
+        System.out.println(destination+" ");
     }
     public static void main(String[] args)
     {
