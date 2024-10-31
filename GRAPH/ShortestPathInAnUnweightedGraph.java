@@ -35,7 +35,7 @@ public class ShortestPathInAnUnweightedGraph
         {
             if(!adj.get(i).isEmpty())
             {
-                System.out.print(i + "->");
+                System.out.print(i + "-> ");
 
                 for (Integer val : adj.get(i))
                 {
