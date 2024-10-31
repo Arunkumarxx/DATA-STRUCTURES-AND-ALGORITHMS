@@ -12,8 +12,8 @@ public class TotalGraphXShapes
         int n=grid.length;
         int m=grid[0].length;
         int count=0;
-        int []  x ={};
-        int []  y ={};
+        int []  x ={-1,1,0,0};
+        int []  y ={0,0,-1,1};
         for(int row=0;row<n;++row)
         {
             for(int col=0;col<m;++col)
@@ -27,12 +27,21 @@ public class TotalGraphXShapes
                     while(!queue.isEmpty())
                     {
                         int [] curr =queue.poll();
-                        int newX=curr[0];
-                        int newY=curr[1];
+                        for(int i=0;i<4;++i)
+                        {
+                            int newX = curr[0]+ x[i];
+                            int newY = curr[1]+ x[i];
+                            if(isValid(newX,newY,n,m) && grid[newX][newY]=='X')
+                            {
+                                queue.add(new int []{newX,newY});
+                                grid[newX][newY]='O';
+                            }
+                        }
                     }
                 }
             }
         }
+        return count;
     }
     private boolean isValid(int x,int y,int n,int m)
     {
