@@ -13,11 +13,9 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
             adj.get(edge[0]).add(edge[1]);
             adj.get(edge[1]).add(edge[0]);
         }
-        boolean [] visited =new boolean[n];
         Queue<int []> queue =new LinkedList<>();
 
         queue.add(new int[]{source,0});
-        visited[source]=true;
 
         int [] distance =new int[n];
         Arrays.fill(distance,-1);
@@ -34,9 +32,8 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
             {
                 int newSrc=edge[0];
                 int newDes=edge[1];
-                if(!visited[newSrc])
+                if(distance[newSrc]==-1)
                 {
-                    visited[newSrc]=true;
                     queue.add(new int [] {newSrc,newDes+1});
                     distance[newSrc]=newDes+1;
                 }
