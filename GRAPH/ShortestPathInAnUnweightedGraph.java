@@ -56,6 +56,7 @@ public class ShortestPathInAnUnweightedGraph
             {
                 if(!visited[newSrc])
                 {
+                    visited[newSrc]=true;
                     queue.add(newSrc);
                     parent[newSrc]=src;
                 }
