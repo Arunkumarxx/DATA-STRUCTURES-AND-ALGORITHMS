@@ -43,7 +43,7 @@ public class ShortestPathInAnUnweightedGraph
 
         while(!queue.isEmpty())
         {
-            int curr=queue.poll();
+            int src=queue.poll();
             
         }
     }
