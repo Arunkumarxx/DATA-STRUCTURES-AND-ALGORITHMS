@@ -31,10 +31,11 @@ public class ShortestPathInAnUnweightedGraph
 //        {
 //
 //        }
-        for(ArrayList<Integer> row:adj)
+        for(int i=0;i< adj.size();++i)
         {
-            if(!row.isEmpty())
-            for(Integer val:row)
+            System.out.print(i);
+            
+            for(Integer val:adj.get(i))
             {
                 System.out.println(val);
             }
