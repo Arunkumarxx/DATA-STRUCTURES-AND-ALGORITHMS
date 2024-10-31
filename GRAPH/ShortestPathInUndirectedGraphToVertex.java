@@ -16,9 +16,9 @@ public class ShortestPathInUndirectedGraphToVertex
             int [] curr=queue.poll();
             int  src=curr[0];
             int dis=curr[1];
-            for(int :edges[src])
+            for(int neighbour:edges[src])
             {
-                int newSrc=
+                if()
             }
         }
     }
