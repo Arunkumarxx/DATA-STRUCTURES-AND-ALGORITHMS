@@ -10,7 +10,7 @@ public class ShortestPathInUndirectedGraphToVertex
         Queue<int []> queue =new LinkedList<>();
         queue.add(new int[]{source,0});
         visited[source]=true;
-
+        int [] distance =new int[n];
         while(!queue.isEmpty())
         {
             int [] curr=queue.poll();
@@ -18,7 +18,11 @@ public class ShortestPathInUndirectedGraphToVertex
             int dis=curr[1];
             for(int neighbour:edges[src])
             {
-                if()
+                if(!visited[neighbour])
+                {
+                    queue.add(new int []{neighbour,dis+1});
+                    distance[neighbour]=dis;
+                }
             }
         }
     }
