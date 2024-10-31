@@ -7,8 +7,7 @@ public class PossiblePathBetweenTwoVerticesInGraph {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{source, 0});
         boolean[] visited = new boolean[V];
-        int pathCount = 0;
-
+        int pathCount = 0; 
         while (!queue.isEmpty()) {
             int[] current = queue.poll();
             int node = current[0];
