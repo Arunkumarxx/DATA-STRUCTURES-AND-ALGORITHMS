@@ -1,8 +1,11 @@
 package GRAPH;
 
+import java.util.ArrayList;
+
 public class ShortestPathInAnUnweightedGraph
 {
-    private void addAdjacency(int source)
+    ArrayList<ArrayList<Integer>> adjacency
+    private void addAdjacency(int source,int destination)
     {
 
     }
