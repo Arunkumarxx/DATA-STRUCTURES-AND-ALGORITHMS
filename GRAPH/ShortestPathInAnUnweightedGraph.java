@@ -44,6 +44,8 @@ public class ShortestPathInAnUnweightedGraph
         {
             int src=queue.poll();
             System.out.println(src);
+            if(src==destination)
+                break;
             if(!visited[src])
             {
                 visited[src]=true;
