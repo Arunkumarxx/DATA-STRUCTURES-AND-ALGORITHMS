@@ -68,12 +68,10 @@ public class ShortestPathInAnUnweightedGraph
             printPath(parent,destination);
         }
     }
-    private void printPath(int []parent,int destination)
-    {
-        if(parent[destination]==-1)
-            return;
-        printPath(parent,parent[destination]);
-        System.out.println(destination+" ");
+    private void printPath(int[] parent, int destination) {
+        if (destination == -1) return;
+        printPath(parent, parent[destination]);
+        System.out.print(destination + " ");
     }
     public static void main(String[] args)
     {
