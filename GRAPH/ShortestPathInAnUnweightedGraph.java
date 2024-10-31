@@ -18,7 +18,7 @@ public class ShortestPathInAnUnweightedGraph
     }
     public static void main(String[] args)
     {
-        ShortestPathInAnUnweightedGraph Graph1 =new ShortestPathInAnUnweightedGraph(8);
+        ShortestPathInAnUnweightedGraph Graph1 =new ShortestPathInAnUnweightedGraph(89);
         Graph1.addAdjacency(1,2);
         Graph1.addAdjacency(1,0);
         Graph1.addAdjacency(0,3);
