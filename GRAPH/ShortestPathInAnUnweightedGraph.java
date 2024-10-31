@@ -18,18 +18,26 @@ public class ShortestPathInAnUnweightedGraph
     }
     private void print()
     {
-        int startNode=-1;
-        for(int i=0;i<adj.size();++i)
+//        int startNode=-1;
+//        for(int i=0;i<adj.size();++i)
+//        {
+//            if(!adj.get(i).isEmpty())
+//            {
+//                startNode=i;
+//                break;
+//            }
+//        }
+//        for(int i=startNode;i< adj.size();++i)
+//        {
+//
+//        }
+        for(ArrayList<Integer> row:adj)
         {
-            if(!adj.get(i).isEmpty())
+            if(!row.isEmpty())
+            for(Integer val:row)
             {
-                startNode=i;
-                break;
+                System.out.println(val);
             }
-        }
-        for(int i=startNode;i< adj.size();++i)
-        {
-            
         }
     }
     public static void main(String[] args)
@@ -45,6 +53,7 @@ public class ShortestPathInAnUnweightedGraph
         Graph1.addAdjacency(4,6);
         Graph1.addAdjacency(4,5);
         Graph1.addAdjacency(5,6);
+        Graph1.print();
     }
 
 }
