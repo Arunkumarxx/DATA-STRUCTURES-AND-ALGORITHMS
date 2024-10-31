@@ -40,7 +40,6 @@ public class ShortestPathInAnUnweightedGraph
         boolean[] visited =new boolean[n];
         Queue<Integer> queue =new LinkedList<>();
         queue.add(source);
-        visited[source]=true;
         while(!queue.isEmpty())
         {
             int src=queue.poll();
