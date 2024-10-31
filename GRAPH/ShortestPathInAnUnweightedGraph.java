@@ -34,11 +34,12 @@ public class ShortestPathInAnUnweightedGraph
         for(int i=0;i< adj.size();++i)
         {
             System.out.print(i);
-            
+
             for(Integer val:adj.get(i))
             {
-                System.out.println(val);
+                System.out.print(val);
             }
+            System.out.println();
         }
     }
     public static void main(String[] args)
