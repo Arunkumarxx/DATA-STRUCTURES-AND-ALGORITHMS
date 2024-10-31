@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ShortestPathInUndirectedGraphToVertex
+public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
 {
     private int[] shortestPath(int[][] edges,int n,int m ,int source) {
         boolean [] visited =new boolean[n];
@@ -45,7 +45,7 @@ public class ShortestPathInUndirectedGraphToVertex
                         {7,8},
                         {6,8},
                 };
-        ShortestPathInUndirectedGraphToVertex shortestPathInUndirectedGraphToVertex = new ShortestPathInUndirectedGraphToVertex();
+        ShortestPathInUndirectedOneWeightedGraphToAllVertex shortestPathInUndirectedGraphToVertex = new ShortestPathInUndirectedOneWeightedGraphToAllVertex();
         System.out.println(Arrays.toString(shortestPathInUndirectedGraphToVertex.shortestPath(edges,edges.length,edges[0].length,0)));
     }
 }
