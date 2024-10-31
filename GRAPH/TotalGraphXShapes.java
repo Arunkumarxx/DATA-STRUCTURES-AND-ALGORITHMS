@@ -30,7 +30,7 @@ public class TotalGraphXShapes
                         for(int i=0;i<4;++i)
                         {
                             int newX = curr[0]+ x[i];
-                            int newY = curr[1]+ y[i];
+                            int newY = curr[1]+ x[i];
                             if(isValid(newX,newY,n,m) && grid[newX][newY]=='X')
                             {
                                 queue.add(new int []{newX,newY});
@@ -50,8 +50,9 @@ public class TotalGraphXShapes
     public static void main(String[] args)
     {
         char [][] grid ={
-                {'X','X'},
-                {'X','X'}
+                {'X','O','X'},
+                {'O','X','O'},
+                {'X','X','X'}
         };
         TotalGraphXShapes totalGraphXShapes =new TotalGraphXShapes();
         System.out.println(totalGraphXShapes.xShape(grid));
