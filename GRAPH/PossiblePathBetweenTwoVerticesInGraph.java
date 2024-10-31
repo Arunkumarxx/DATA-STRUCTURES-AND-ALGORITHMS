@@ -13,13 +13,9 @@ public class PossiblePathBetweenTwoVerticesInGraph {
             int[] current = queue.poll();
             int node = current[0];
             int distance = current[1];
-
-            if (node == destination) {
+            if (node == destination)
                 pathCount++;
-            }
-
             visited[node] = true;
-
             for (Integer neighbor : adj.get(node)) {
                 if (!visited[neighbor]) {
                     queue.add(new int[]{neighbor, distance + 1});
