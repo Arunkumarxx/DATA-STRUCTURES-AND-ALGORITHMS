@@ -13,9 +13,9 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
             adj.get(edge[0]).add(edge[1]);
             adj.get(edge[1]).add(edge[0]);
         }
-        Queue<int []> queue =new LinkedList<>();
+        Queue<Integer> queue =new LinkedList<>();
 
-        queue.add(new int[]{source,0});
+        queue.add(source);
 
         int [] distance =new int[n];
         Arrays.fill(distance,-1);
@@ -24,18 +24,14 @@ public class ShortestPathInUndirectedOneWeightedGraphToAllVertex
 
         while(!queue.isEmpty())
         {
-            int [] curr=queue.poll();
-            int sr=curr[0];
-            int dis=curr[1];
-
-            for(int [] edge:edges)
+            int src=queue.poll();
+            int currDistance=distance[src];
+            for(int  neighbour:adj.get(src))
             {
-                int newSrc=edge[0];
-                int newDes=edge[1];
-                if(distance[newSrc]==-1)
+                if(distance[neighbour]==-1)
                 {
-                    queue.add(new int [] {newSrc,newDes+1});
-                    distance[newSrc]=newDes+1;
+                    distance[neighbour]=currDistance+1;
+                    queue.add(neighbour);
                 }
             }
         }
