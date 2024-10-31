@@ -39,7 +39,7 @@ public class ShortestPathInAnUnweightedGraph
 
                 for (Integer val : adj.get(i))
                 {
-                    System.out.print(val);
+                    System.out.print(val+" ");
                 }
                 System.out.println();
             }
