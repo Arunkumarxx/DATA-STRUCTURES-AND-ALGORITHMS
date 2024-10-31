@@ -1,7 +1,5 @@
 package GRAPH;
 
-import GREEDY.GREEDY;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
