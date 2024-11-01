@@ -21,7 +21,7 @@ public class DetectCycleInADirectedGraph
     }
     private boolean detectCycle(ArrayList<ArrayList<Integer>>adj,boolean[] visited,boolean[] pathVisited,int src)
     {
-
+        
     }
     public static void main(String[] args)
     {
@@ -35,7 +35,7 @@ public class DetectCycleInADirectedGraph
         adj.get(1).add(2);
         adj.get(2).add(3);
         adj.get(3).add(3);
-        System.out.println(detectCycleInADirectedGraph.isCyclic());
+        System.out.println(detectCycleInADirectedGraph.isCyclic(adj.size(),adj));
     }
 
 }
