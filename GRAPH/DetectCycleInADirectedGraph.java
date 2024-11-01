@@ -18,9 +18,9 @@ public class DetectCycleInADirectedGraph
         }
         return false;
     }
-    private boolean detectCycle(ArrayList<>boolean[] visited,boolean[] pathVisited,int src)
+    private boolean detectCycle(ArrayList<ArrayList<Integer>>adj,boolean[] visited,boolean[] pathVisited,int src)
     {
-
+        
     }
     public static void main(String[] args)
     {
