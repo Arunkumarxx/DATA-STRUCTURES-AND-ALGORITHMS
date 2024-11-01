@@ -1,6 +1,7 @@
 package GRAPH;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class DetectCycleInADirectedGraph
 {
@@ -12,7 +13,7 @@ public class DetectCycleInADirectedGraph
         {
             if(!visited[i])
             {
-                if(detectCycle(visited,pathVisited,i))
+                if(detectCycle(adj,visited,pathVisited,i))
                     return true;
             }
         }
@@ -20,12 +21,21 @@ public class DetectCycleInADirectedGraph
     }
     private boolean detectCycle(ArrayList<ArrayList<Integer>>adj,boolean[] visited,boolean[] pathVisited,int src)
     {
-        
+
     }
     public static void main(String[] args)
     {
         DetectCycleInADirectedGraph detectCycleInADirectedGraph =new DetectCycleInADirectedGraph();
-        System.out.println(detectCycleInADirectedGraph.detectCycleInDirectedGraph());
+        ArrayList<ArrayList<Integer>> adj=new ArrayList<>();
+        for(int i=0;i<4;++i)
+        {
+            adj.add(new ArrayList<>());
+        }
+        adj.get(0).add(1);
+        adj.get(1).add(2);
+        adj.get(2).add(3);
+        adj.get(3).add(3);
+        System.out.println(detectCycleInADirectedGraph.isCyclic());
     }
 
 }
