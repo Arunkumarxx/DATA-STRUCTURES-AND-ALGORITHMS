@@ -1,7 +1,6 @@
 package GRAPH;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class DetectCycleInADirectedGraph
 {
@@ -50,5 +49,4 @@ public class DetectCycleInADirectedGraph
         adj.get(3).add(3);
         System.out.println(detectCycleInADirectedGraph.isCyclic(adj.size(),adj));
     }
-
 }
