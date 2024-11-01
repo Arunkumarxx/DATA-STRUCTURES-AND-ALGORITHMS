@@ -25,7 +25,8 @@ public class DetectCycleInADirectedGraph
         pathVisited[src]=true;
         for(int edges:adj.get(src))
             if(!visited[edges])
-                detectCycle(adj,visited,pathVisited,edges);
+               if( detectCycle(adj,visited,pathVisited,edges))
+                   return true;
             else if(pathVisited[edges])
                 return true;
             pathVisited[src]=false;
