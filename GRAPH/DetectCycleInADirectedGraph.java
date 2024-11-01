@@ -27,14 +27,13 @@ public class DetectCycleInADirectedGraph
         {
             if(!visited[edges])
             {
-                visited[edges]=true;
-                pathVisited[edges]=true;
-                detectCycle(adj,visited,pathVisited,edges);
-                pathVisited[edges]=false;
+                if(detectCycle(adj,visited,pathVisited,edges))
+                    return true;
             }
             else if(pathVisited[edges])
                 return true;
         }
+        pathVisited[src]=false;
         return false;
     }
     public static void main(String[] args)
