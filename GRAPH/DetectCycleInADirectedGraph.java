@@ -47,7 +47,7 @@ public class DetectCycleInADirectedGraph
         adj.get(0).add(1);
         adj.get(1).add(2);
         adj.get(2).add(3);
-        adj.get(3).add(3); 
+        adj.get(3).add(3);
         System.out.println(detectCycleInADirectedGraph.isCyclic(adj.size(),adj));
     }
 
