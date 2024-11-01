@@ -13,7 +13,6 @@ public class DetectCycleInADirectedGraph
         {
             if(!visited[i])
             {
-                visited[i]=true;
                 if(detectCycle(adj,visited,pathVisited,i))
                     return true;
             }
@@ -22,6 +21,8 @@ public class DetectCycleInADirectedGraph
     }
     private boolean detectCycle(ArrayList<ArrayList<Integer>>adj,boolean[] visited,boolean[] pathVisited,int src)
     {
+        visited[src]=true;
+        pathVisited[src]=true;
         for(int edges:adj.get(src))
         {
             if(!visited[edges])
