@@ -13,6 +13,7 @@ public class DetectCycleInADirectedGraph
         {
             if(!visited[i])
             {
+                visited[i]=true;
                 if(detectCycle(adj,visited,pathVisited,i))
                     return true;
             }
