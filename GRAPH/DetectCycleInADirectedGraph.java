@@ -33,7 +33,7 @@ public class DetectCycleInADirectedGraph
             else if(pathVisited[edges])
                 return true;
         }
-        return true;
+        return false;
     }
     public static void main(String[] args)
     {
