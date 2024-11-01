@@ -24,12 +24,17 @@ public class DetectCycleInADirectedGraph
         visited[src]=true;
         pathVisited[src]=true;
         for(int edges:adj.get(src))
+        {
             if(!visited[edges])
-               if( detectCycle(adj,visited,pathVisited,edges))
-                   return true;
+            {
+                visited[edges]=true;
+                pathVisited[edges]=true;
+                detectCycle(adj,visited,pathVisited,edges);
+                pathVisited[edges]=false;
+            }
             else if(pathVisited[edges])
                 return true;
-            pathVisited[src]=false;
+        }
         return false;
     }
     public static void main(String[] args)
