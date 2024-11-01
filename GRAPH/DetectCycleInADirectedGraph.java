@@ -12,12 +12,13 @@ public class DetectCycleInADirectedGraph
         {
             if(!visited[i])
             {
-                if(detectCycle())
+                if(detectCycle(visited,pathVisited,i))
                     return true;
             }
         }
+        return false;
     }
-    private boolean detectCycle(boolean[] visited,boolean[] pathVisited,)
+    private boolean detectCycle(ArrayList<>boolean[] visited,boolean[] pathVisited,int src)
     {
 
     }
