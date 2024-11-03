@@ -3,7 +3,7 @@ package GRAPH;
 import java.util.*;
 
 public class UnDirectedGraphCycleDetection {
-    public boolean isCycle(ArrayList<ArrayList<Integer>> adj) {
+    private boolean isCycle(ArrayList<ArrayList<Integer>> adj) {
         int n = adj.size();
         boolean[] visited = new boolean[n];
 
