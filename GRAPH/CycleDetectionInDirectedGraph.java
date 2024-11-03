@@ -1,40 +1,46 @@
 package GRAPH;
 
-public class CycleDetectionInDirectedGraph
-{
+import java.util.ArrayList;
+
+public class CycleDetectionInDirectedGraph {
     public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
-        boolean [] visited =new boolean[v];
-        boolean [] pathVisited = new boolean[v];
-        for(int i=0;i<v;++i)
-        {
-            if(!visited[i])
-            {
-                if(detectCycle(adj,visited,pathVisited,i))
+        boolean[] visited = new boolean[v];
+        boolean[] pathVisited = new boolean[v];
+        for (int i = 0; i < v; ++i) {
+            if (!visited[i]) {
+                if (detectCycle(adj, visited, pathVisited, i))
                     return true;
             }
         }
         return false;
     }
-    private boolean detectCycle(ArrayList<ArrayList<Integer>>adj,boolean[] visited,boolean[] pathVisited,int src)
-    {
-        visited[src]=true;
-        pathVisited[src]=true;
-        for(int edges:adj.get(src))
-        {
-            if(!visited[edges])
-            {
-                if(detectCycle(adj,visited,pathVisited,edges))
+
+    private boolean detectCycle(ArrayList<ArrayList<Integer>> adj, boolean[] visited, boolean[] pathVisited, int src) {
+        visited[src] = true;
+        pathVisited[src] = true;
+        for (int edges : adj.get(src)) {
+            if (!visited[edges]) {
+                if (detectCycle(adj, visited, pathVisited, edges))
                     return true;
-            }
-            else if(pathVisited[edges])
+            } else if (pathVisited[edges])
                 return true;
         }
-        pathVisited[src]=false;
+        pathVisited[src] = false;
         return false;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+        CycleDetectionInDirectedGraph obj = new CycleDetectionInDirectedGraph();
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            adj.add(new ArrayList<>());
+        }
+        adj.get(0).add(1);
+        adj.get(1).add(2);
+        adj.get(2).add(0);
+        adj.get(2).add(3);
+        adj.get(3).add(3);
 
+        System.out.println("Cycle detected: " + obj.isCyclic(4, adj));
     }
 }
