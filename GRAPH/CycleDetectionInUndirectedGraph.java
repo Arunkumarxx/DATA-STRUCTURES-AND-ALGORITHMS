@@ -2,7 +2,8 @@ package GRAPH;
 
 import java.util.*;
 
-public class UnDirectedGraphCycleDetection {
+public class CycleDetectionInUndirectedGraph
+{
     private boolean isCycle(ArrayList<ArrayList<Integer>> adj) {
         int n = adj.size();
         boolean[] visited = new boolean[n];
@@ -31,7 +32,7 @@ public class UnDirectedGraphCycleDetection {
     }
 
     public static void main(String[] args) {
-        UnDirectedGraphCycleDetection obj = new UnDirectedGraphCycleDetection();
+        CycleDetectionInUndirectedGraph obj = new CycleDetectionInUndirectedGraph();
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             adj.add(new ArrayList<>());

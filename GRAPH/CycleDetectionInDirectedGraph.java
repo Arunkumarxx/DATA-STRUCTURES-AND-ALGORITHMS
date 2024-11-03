@@ -1,2 +1,5 @@
-package GRAPH;public class CycleDetectionInDirectedGraph {
+package GRAPH;
+
+public class CycleDetectionInDirectedGraph
+{
 }
