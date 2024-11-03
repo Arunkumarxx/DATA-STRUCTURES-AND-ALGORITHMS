@@ -3,7 +3,7 @@ package GRAPH;
 import java.util.ArrayList;
 
 public class CycleDetectionInDirectedGraph {
-    public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
+    private boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
         boolean[] visited = new boolean[v];
         boolean[] pathVisited = new boolean[v];
         for (int i = 0; i < v; ++i) {
