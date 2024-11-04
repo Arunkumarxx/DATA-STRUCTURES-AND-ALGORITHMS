@@ -1,6 +1,7 @@
 package GRAPH;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class ShortestPathInDirectedAcyclicGraph
 {
@@ -8,9 +9,16 @@ public class ShortestPathInDirectedAcyclicGraph
     {
         int n=adj.size();
         boolean [] visited =new boolean[n];
-        
+        Stack<Integer> stack =new Stack<>();
+        for(int i=0;i<n;++i)
+        {
+            if(!visited[i])
+            {
+                dfs();
+            }
+        }
     }
-    private void dfs()
+    private void dfs(ArrayList<ArrayList<Integer>> adj,)
     {
 
     }
