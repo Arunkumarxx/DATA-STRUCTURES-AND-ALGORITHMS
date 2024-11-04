@@ -9,8 +9,8 @@ public class MinimumCostPath
     {
         int n=grid.length;
         boolean [][] visited =new boolean[n][n];
-        int [] x ={1,0};
-        int [] y ={0,1};
+        int [] x ={0,1};
+        int [] y ={1,0};
         int sum=0;
         for(int row=0;row<n;++row)
         {
@@ -32,8 +32,8 @@ public class MinimumCostPath
                         int minValue=Integer.MAX_VALUE;
                         for(int i=0;i<4;++i)
                         {
-                            int newCurrRow=currRow+x[i];
-                            int newCurrCol=currCol+y[i];
+                            int newCurrRow=currRow+y[i];
+                            int newCurrCol=currCol+x[i];
 
                             if(isValid(newCurrRow,newCurrCol,n) && !visited[newCurrRow][newCurrCol])
                             {
