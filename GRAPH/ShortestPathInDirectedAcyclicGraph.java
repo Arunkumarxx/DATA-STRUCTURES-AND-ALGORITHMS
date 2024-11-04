@@ -1,10 +1,22 @@
 package GRAPH;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class ShortestPathInDirectedAcyclicGraph
 {
+    class Pair
+    {
+        int value;
+        int distance;
+        Pair(int value,int distance)
+        {
+            this.value=value;
+            this.distance=distance;
+        }
+    }
     private void ShortestPathInDirectedAcyclicGraph(ArrayList<ArrayList<Integer>> adj)
     {
         int n=adj.size();
@@ -14,13 +26,25 @@ public class ShortestPathInDirectedAcyclicGraph
         {
             if(!visited[i])
             {
-                dfs();
+                dfs(adj,visited,stack,i);
             }
         }
+        int [] dis =new int[n];
+        dis[stack.peek()]=0;
+        while(!stack.isEmpty())
+        {
+            
+        }
     }
-    private void dfs(ArrayList<ArrayList<Integer>> adj,)
+    private void dfs(ArrayList<ArrayList<Integer>> adj,boolean[] visited,Stack<Integer> stack,int source)
     {
-
+        visited[source]=true;
+        for(int vertices:adj.get(source))
+        {
+            if(!visited[vertices])
+                dfs(adj,visited,stack,vertices);
+        }
+        stack.push(source);
     }
     public static void main(String[] args)
     {
