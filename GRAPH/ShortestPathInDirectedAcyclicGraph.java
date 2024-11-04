@@ -43,8 +43,8 @@ public class ShortestPathInDirectedAcyclicGraph
                 }
                 else
                 {
-                    dis[newCurrValue]=Math.min(dis[newCurrValue],newCurrDistance+distance);
-
+                   int newDis= dis[newCurrValue]=Math.min(dis[newCurrValue],newCurrDistance+distance);
+                    queue.add(new int[]{newCurrValue,newDis});
                 }
             }
         }
