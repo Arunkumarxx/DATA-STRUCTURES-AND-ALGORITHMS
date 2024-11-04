@@ -31,7 +31,7 @@ public class TopologicalSort {
     public static void main(String[] args) {
         TopologicalSort obj = new TopologicalSort();
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 7; i++) {
             adj.add(new ArrayList<Integer>());
         }
         adj.get(6).add(4);
