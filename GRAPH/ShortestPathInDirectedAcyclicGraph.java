@@ -9,8 +9,16 @@ public class ShortestPathInDirectedAcyclicGraph
     {
         int n=adj.size();
         boolean[] visited =new boolean[n];
+        Stack<Integer> stack =new Stack<>();
+        for(int i=0;i<n;++i)
+        {
+            if(!visited[i])
+            {
+                dfs(adj,visited,);
+            }
+        }
     }
-    private void dfs()
+    private void dfs(ArrayList<ArrayList<int []>> adj ,boolean [] visited)
     {
 
     }
