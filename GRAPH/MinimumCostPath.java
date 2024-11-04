@@ -40,6 +40,7 @@ public class MinimumCostPath
                                 visited[newCurrRow][newCurrCol]=true;
                                 if(grid[newCurrRow][newCurrCol]<minValue)
                                 {
+                                    minValue=grid[newCurrRow][newCurrCol];
                                     minValueRowAndCol[0]=newCurrRow;
                                     minValueRowAndCol[1]=newCurrCol;
                                 }
