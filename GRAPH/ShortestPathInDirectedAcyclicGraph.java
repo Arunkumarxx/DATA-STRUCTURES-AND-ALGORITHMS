@@ -5,7 +5,7 @@ import java.util.*;
 
 public class ShortestPathInDirectedAcyclicGraph
 {
-    private void ShortestPathInDirectedAcyclicGraph(ArrayList<ArrayList<int[]>>adj,)
+    private void ShortestPathInDirectedAcyclicGraph(ArrayList<ArrayList<int[]>>adj)
     {
         int n=adj.size();
         boolean[] visited =new boolean[n];
@@ -45,7 +45,7 @@ public class ShortestPathInDirectedAcyclicGraph
         ShortestPathInDirectedAcyclicGraph shortestPathInDirectedAcyclicGraph =new ShortestPathInDirectedAcyclicGraph();
         shortestPathInDirectedAcyclicGraph.ShortestPathInDirectedAcyclicGraph(adj);
 
-        
+
     }
 
 }
