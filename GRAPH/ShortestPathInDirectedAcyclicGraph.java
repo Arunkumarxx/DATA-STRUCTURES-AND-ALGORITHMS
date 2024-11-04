@@ -19,11 +19,12 @@ public class ShortestPathInDirectedAcyclicGraph
         }
         int [] dis =new int[n];
         Arrays.fill(dis,-1);
-
+        fillDistance(dis,stack,adj,stack.pop());
     }
     private void fillDistance(int [] dis,Stack<Integer> stack,ArrayList<ArrayList<int[]>> adj,int source)
     {
-        while(!stack.isEmpty())
+        Queue<int []> queue =new LinkedList<>();
+        while(!queue.isEmpty())
         {
             
         }
