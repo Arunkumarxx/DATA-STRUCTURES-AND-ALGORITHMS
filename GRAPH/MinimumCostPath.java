@@ -73,6 +73,6 @@ public class MinimumCostPath
                 };
         MinimumCostPath minimumCostPath =new MinimumCostPath();
        int res= minimumCostPath.minimumCostPath(grid);
-        System.out.println("Answer :"+res);
+        System.out.println("\nAnswer :"+res);
     }
 }
