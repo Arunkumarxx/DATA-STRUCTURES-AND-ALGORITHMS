@@ -25,6 +25,8 @@ public class MinimumCostPath
                         int [] curr= queue.poll();
                         sum+=grid[curr[0]][curr[1]];
                         System.out.print(grid[curr[0]][curr[1]]+" ");
+                        if(curr[0]==n-1 && curr[1]==n-1)
+                            return sum;
                         int currRow=curr[0];
                         int currCol=curr[1];
                         visited[currRow][currCol]=true;
