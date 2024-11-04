@@ -24,7 +24,7 @@ public class MinimumCostPath
                     {
                         int [] curr= queue.poll();
                         sum+=grid[curr[0]][curr[1]];
-                        System.out.print(sum+" ");
+                        System.out.print(grid[curr[0]][curr[1]]+" ");
                         int currRow=curr[0];
                         int currCol=curr[1];
                         int [] minValueRowAndCol=new int [2];
