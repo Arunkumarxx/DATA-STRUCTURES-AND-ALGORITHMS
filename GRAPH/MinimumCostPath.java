@@ -9,8 +9,8 @@ public class MinimumCostPath
     {
         int n=grid.length;
         boolean [][] visited =new boolean[n][n];
-        int [] y ={-1,1,0,0};
-        int [] x ={0,0,-1,1};
+        int [] y ={1,0};
+        int [] x ={0,1};
         int sum=0;
         for(int row=0;row<n;++row)
         {
