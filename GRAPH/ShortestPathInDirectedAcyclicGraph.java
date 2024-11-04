@@ -21,8 +21,11 @@ public class ShortestPathInDirectedAcyclicGraph
         Arrays.fill(dis,Integer.MIN_VALUE);
         while(!stack.isEmpty())
         {
-            int curr=stack.pop();
-            
+            int unit=stack.pop();
+            if(dis[unit]!=Integer.MIN_VALUE)
+            {
+                
+            }
         }
     }
     private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
