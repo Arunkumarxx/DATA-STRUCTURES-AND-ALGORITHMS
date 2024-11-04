@@ -4,7 +4,16 @@ import java.util.ArrayList;
 
 public class ShortestPathInDirectedAcyclicGraph
 {
-    
+    private void ShortestPathInDirectedAcyclicGraph(ArrayList<ArrayList<Integer>> adj)
+    {
+        int n=adj.size();
+        boolean [] visited =new boolean[n];
+        
+    }
+    private void dfs()
+    {
+
+    }
     public static void main(String[] args)
     {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
