@@ -5,7 +5,10 @@ import java.util.*;
 
 public class ShortestPathInDirectedAcyclicGraph
 {
-    
+    private void ShortestPathInDirectedAcyclicGraph(ArrayList<ArrayList<int[]>>adj,)
+    {
+
+    }
     public static void main(String[] args)
     {
         ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
