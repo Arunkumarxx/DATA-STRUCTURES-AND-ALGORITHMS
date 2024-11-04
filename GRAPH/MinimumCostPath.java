@@ -64,13 +64,13 @@ public class MinimumCostPath
     }
     public static void main(String[] args)
     {
-        int[][] grid =
-                {
-                        {9,4,9,9},
-                        {6,7,6,4},
-                        {8,3,3,7},
-                        {7,4,9,10}
-                };
+        int[][] grid ={{4,4},{3,7}};
+//                {
+//                        {9,4,9,9},
+//                        {6,7,6,4},
+//                        {8,3,3,7},
+//                        {7,4,9,10}
+//                };
         MinimumCostPath minimumCostPath =new MinimumCostPath();
         System.out.println(minimumCostPath.minimumCostPath(grid));
     }
