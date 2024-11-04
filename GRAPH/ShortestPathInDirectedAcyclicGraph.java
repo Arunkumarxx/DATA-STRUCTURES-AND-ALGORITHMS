@@ -31,7 +31,7 @@ public class ShortestPathInDirectedAcyclicGraph
         dis[stack.peek()]=0;
         while(stack.isEmpty())
         {
-            Quie
+            Queue<Pair> queue =new LinkedList<>();
         }
 
     }
