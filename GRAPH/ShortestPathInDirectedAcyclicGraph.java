@@ -14,13 +14,19 @@ public class ShortestPathInDirectedAcyclicGraph
         {
             if(!visited[i])
             {
-                dfs(adj,visited,);
+                dfs(adj,stack,visited,i);
             }
         }
+        System.out.println(stack);
     }
-    private void dfs(ArrayList<ArrayList<int []>> adj ,boolean [] visited)
+    private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
     {
-
+        visited[source]=true;
+        for(int [] pair:adj.get(source))
+        {
+            dfs(adj,stack,visited,pair[0]);
+        }
+        stack.push(source);
     }
     public static void main(String[] args)
     {
@@ -36,6 +42,10 @@ public class ShortestPathInDirectedAcyclicGraph
         adj.get(2).add(new int []{3,3});
         adj.get(0).add(new int []{1,2});
         adj.get(1).add(new int []{3,1});
+        ShortestPathInDirectedAcyclicGraph shortestPathInDirectedAcyclicGraph =new ShortestPathInDirectedAcyclicGraph();
+        shortestPathInDirectedAcyclicGraph.ShortestPathInDirectedAcyclicGraph(adj);
+
+        
     }
 
 }
