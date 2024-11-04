@@ -21,9 +21,12 @@ public class ShortestPathInDirectedAcyclicGraph
         Arrays.fill(dis,-1);
 
     }
-    private void fillDistance(int [] dis,ArrayList<ArrayList<int[]>> adj,)
+    private void fillDistance(int [] dis,Stack<Integer> stack,ArrayList<ArrayList<int[]>> adj,int source)
     {
-
+        while(!stack.isEmpty())
+        {
+            
+        }
     }
     private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
     {
