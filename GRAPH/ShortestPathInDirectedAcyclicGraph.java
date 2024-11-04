@@ -29,7 +29,11 @@ public class ShortestPathInDirectedAcyclicGraph
                 {
                     int currValue=edges[0];
                     int currDis=edges[1];
-                    
+                    if(currDis==Integer.MIN_VALUE)
+                        dis[currValue]=currDis;
+                    else {
+                        
+                    }
                 }
             }
         }
