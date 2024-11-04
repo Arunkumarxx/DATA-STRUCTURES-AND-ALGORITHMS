@@ -17,7 +17,7 @@ public class ShortestPathInDirectedAcyclicGraph
                 dfs(adj,stack,visited,i);
             }
         }
-        while(stack.isEmpty())
+        while(!stack.isEmpty())
             System.out.println(stack.pop());
     }
     private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
