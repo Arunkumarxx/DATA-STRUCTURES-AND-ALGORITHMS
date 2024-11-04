@@ -34,6 +34,7 @@ public class ShortestPathInDirectedAcyclicGraph
                 }
             }
         }
+        System.out.println(Arrays.toString(dis));
     }
     private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
     {
