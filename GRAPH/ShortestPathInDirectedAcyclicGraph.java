@@ -25,7 +25,7 @@ public class ShortestPathInDirectedAcyclicGraph
         {
             fillDistance(dis,adj,stack.pop());
         }
-
+        System.out.println(Arrays.toString(dis));
     }
     private void fillDistance(int [] dis,ArrayList<ArrayList<int[]>> adj,int source)
     {
