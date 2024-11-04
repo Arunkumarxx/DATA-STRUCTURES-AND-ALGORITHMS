@@ -30,7 +30,7 @@ public class MinimumCostPath
                         visited[currRow][currCol]=true;
                         int [] minValueRowAndCol=new int [2];
                         int minValue=Integer.MAX_VALUE;
-                        for(int i=0;i<4;++i)
+                        for(int i=0;i<2;++i)
                         {
                             int newCurrRow=currRow+y[i];
                             int newCurrCol=currCol+x[i];
