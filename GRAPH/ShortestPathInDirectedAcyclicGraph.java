@@ -29,10 +29,8 @@ public class ShortestPathInDirectedAcyclicGraph
                 {
                     int vertex=edges[0];
                     int currDis=edges[1];
-                    if(dis[unit]+dis[vertex]>currDis)
-                    {
-                        
-                    }
+                    if(dis[vertex]>currDis+dis[unit])
+                        dis[vertex]=currDis+dis[unit];
                 }
             }
         }
