@@ -19,14 +19,34 @@ public class ShortestPathInDirectedAcyclicGraph
         }
         int [] dis =new int[n];
         Arrays.fill(dis,-1);
-        fillDistance(dis,stack,adj,stack.pop());
+        dis[stack.peek()]=0;
+        fillDistance(dis,adj,stack.pop());
     }
-    private void fillDistance(int [] dis,Stack<Integer> stack,ArrayList<ArrayList<int[]>> adj,int source)
+    private void fillDistance(int [] dis,ArrayList<ArrayList<int[]>> adj,int source)
     {
         Queue<int []> queue =new LinkedList<>();
+        queue.add(new int []{source,dis[source]});
         while(!queue.isEmpty())
         {
-            
+            int [] pair=queue.poll();
+            int currValue=pair[0];
+            int distance=pair[1];
+            for(int []vertexPair:adj.get(currValue))
+            {
+                int[] newPair=vertexPair;
+                int newCurrValue=newPair[0];
+                int newCurrDistance=newPair[0];
+                if(dis[newCurrValue]==-1)
+                {
+                    dis[newCurrValue] = newCurrDistance;
+                    queue.add(new int [] {newCurrValue,distance+newCurrDistance});
+                }
+                else
+                {
+                    dis[newCurrValue]=Math.min(dis[newCurrValue],newCurrDistance+distance);
+
+                }
+            }
         }
     }
     private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
