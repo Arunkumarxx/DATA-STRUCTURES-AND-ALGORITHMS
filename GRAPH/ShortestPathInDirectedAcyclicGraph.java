@@ -7,6 +7,11 @@ public class ShortestPathInDirectedAcyclicGraph
 {
     private void ShortestPathInDirectedAcyclicGraph(ArrayList<ArrayList<int[]>>adj,)
     {
+        int n=adj.size();
+        boolean[] visited =new boolean[n];
+    }
+    private void dfs()
+    {
 
     }
     public static void main(String[] args)
