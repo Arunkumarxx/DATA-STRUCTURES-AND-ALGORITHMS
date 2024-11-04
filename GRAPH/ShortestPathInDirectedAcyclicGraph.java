@@ -29,12 +29,20 @@ public class ShortestPathInDirectedAcyclicGraph
         int [] dis =new int[n];
         Arrays.fill(dis,-1);
         dis[stack.peek()]=0;
+        Queue<Pair> queue =new LinkedList<>();
+        queue.add(new Pair(stack.peek(),0));
         while(stack.isEmpty())
         {
-            Queue<Pair> queue =new LinkedList<>();
             while(!queue.isEmpty())
             {
-                
+                Pair pair =queue.poll();
+                for(int vertices:adj.get(pair.value))
+                {
+                    if(dis[vertices]==-1)
+                    {
+                        dis[vertices]=;
+                    }
+                }
             }
         }
 
