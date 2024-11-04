@@ -21,6 +21,11 @@ public class ShortestPathInDirectedAcyclicGraph
         Arrays.fill(dis,-1);
         dis[stack.peek()]=0;
         fillDistance(dis,adj,stack.pop());
+        while(!stack.isEmpty())
+        {
+            fillDistance(dis,adj,stack.pop());
+        }
+
     }
     private void fillDistance(int [] dis,ArrayList<ArrayList<int[]>> adj,int source)
     {
