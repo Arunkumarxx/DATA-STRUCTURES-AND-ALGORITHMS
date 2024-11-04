@@ -19,7 +19,7 @@ public class ShortestPathInDirectedAcyclicGraph
         }
         int [] dis =new int[n];
         Arrays.fill(dis,Integer.MAX_VALUE);
-        dis[stack.peek()]=0;
+        dis[0]=0;
         while(!stack.isEmpty())
         {
             int unit=stack.pop();
