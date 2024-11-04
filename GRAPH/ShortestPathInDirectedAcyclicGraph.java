@@ -27,9 +27,12 @@ public class ShortestPathInDirectedAcyclicGraph
             {
                 for(int[] edges:adj.get(unit))
                 {
-                    int currValue=edges[0];
+                    int vertex=edges[0];
                     int currDis=edges[1];
-                    if(dis[unit]+currDis>)
+                    if(dis[unit]+dis[vertex]>currDis)
+                    {
+                        
+                    }
                 }
             }
         }
