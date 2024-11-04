@@ -20,6 +20,7 @@ public class MinimumCostPath
                 {
                     Queue<int[]> queue =new LinkedList<>();
                     queue.add(new int []{row,col});
+                    visited[row][col]=true;
                     while(!queue.isEmpty())
                     {
                         int [] curr= queue.poll();
@@ -27,7 +28,6 @@ public class MinimumCostPath
                         System.out.print(grid[curr[0]][curr[1]]+" ");
                         int currRow=curr[0];
                         int currCol=curr[1];
-                        visited[currRow][currCol]=true;
                         int [] minValueRowAndCol=new int [2];
                         int minValue=Integer.MAX_VALUE;
                         for(int i=0;i<4;++i)
@@ -37,6 +37,7 @@ public class MinimumCostPath
 
                             if(isValid(newCurrRow,newCurrCol,n) && !visited[newCurrRow][newCurrCol])
                             {
+                                visited[newCurrRow][newCurrCol]=true;
                                 if(grid[newCurrRow][newCurrCol]<minValue)
                                 {
                                     minValueRowAndCol[0]=newCurrRow;
