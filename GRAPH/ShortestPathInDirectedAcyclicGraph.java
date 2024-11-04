@@ -18,7 +18,7 @@ public class ShortestPathInDirectedAcyclicGraph
             }
         }
         int [] dis =new int[n];
-        Arrays.fill(dis,-1);
+        Arrays.fill(dis,Integer.MIN_VALUE);
         
     }
     private void dfs(ArrayList<ArrayList<int []>> adj ,Stack<Integer> stack,boolean [] visited,int source)
