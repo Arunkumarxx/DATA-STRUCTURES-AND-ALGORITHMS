@@ -1,9 +1,6 @@
 package GRAPH;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class ShortestPathInDirectedAcyclicGraph
 {
@@ -30,11 +27,9 @@ public class ShortestPathInDirectedAcyclicGraph
             }
         }
         int [] dis =new int[n];
+        Arrays.fill(dis,-1);
         dis[stack.peek()]=0;
-        while(!stack.isEmpty())
-        {
-            
-        }
+
     }
     private void dfs(ArrayList<ArrayList<Integer>> adj,boolean[] visited,Stack<Integer> stack,int source)
     {
