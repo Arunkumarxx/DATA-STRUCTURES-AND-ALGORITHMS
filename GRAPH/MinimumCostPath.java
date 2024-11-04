@@ -49,7 +49,6 @@ public class MinimumCostPath
                         if(minValue!=Integer.MAX_VALUE)
                         {
                             queue.add(new int[]{minValueRowAndCol[0], minValueRowAndCol[1]});
-                            visited[minValueRowAndCol[0]][minValueRowAndCol[1]] = true;
                         }
                     }
                 }
