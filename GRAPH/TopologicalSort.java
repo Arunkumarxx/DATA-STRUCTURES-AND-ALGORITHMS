@@ -27,10 +27,32 @@ public class TopologicalSort {
         }
         return result;
     }
-    private void topologicalSortDepthFirstSearch()
+    private void topologicalSortDepthFirstSearch(ArrayList<ArrayList<Integer>> adj)
     {
-        
+        int n=adj.size();
+        boolean [] visited = new boolean[n];
+        Stack<Integer> result =new Stack<>();
+        for(int i=0;i<n;++i)
+        {
+            if(!visited[i])
+            {
+                depthFirstSearch(adj,result,visited,i);
+            }
+        }
+        while(!result.isEmpty())
+        {
+            System.out.println(result.peek());
+            result.pop();
+        }
     }
+    private void depthFirstSearch(ArrayList<ArrayList<Integer>> adj,Stack<Integer> result,boolean [] visited,int source)
+    {
+        visited[source]=true;
+        for(int edges:adj.get(source))
+            depthFirstSearch(adj,result,visited,edges);
+        result.push(source);
+    }
+
     public static void main(String[] args) {
         TopologicalSort obj = new TopologicalSort();
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -46,7 +68,8 @@ public class TopologicalSort {
         adj.get(0).add(1);
         adj.get(1).add(3);
 
-        ArrayList<Integer> result = obj.topologicalSort(adj);
+        ArrayList<Integer> result = obj.topologicalSortBreathFirstSearch(adj);
+        obj.topologicalSortDepthFirstSearch(adj);
         System.out.println("Topological Sort: " + result);
     }
 }
