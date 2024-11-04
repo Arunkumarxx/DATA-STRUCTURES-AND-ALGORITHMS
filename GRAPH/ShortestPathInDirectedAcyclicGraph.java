@@ -18,12 +18,12 @@ public class ShortestPathInDirectedAcyclicGraph
             }
         }
         int [] dis =new int[n];
-        Arrays.fill(dis,Integer.MIN_VALUE);
+        Arrays.fill(dis,Integer.MAX_VALUE);
         dis[stack.peek()]=0;
         while(!stack.isEmpty())
         {
             int unit=stack.pop();
-            if(dis[unit]!=Integer.MIN_VALUE)
+            if(dis[unit]!=Integer.MAX_VALUE)
             {
                 for(int[] edges:adj.get(unit))
                 {
