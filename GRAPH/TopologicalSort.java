@@ -50,7 +50,10 @@ public class TopologicalSort {
     {
         visited[source]=true;
         for(int edges:adj.get(source))
-            depthFirstSearch(adj,result,visited,edges);
+        {
+            if(!visited[edges])
+            depthFirstSearch(adj, result, visited, edges);
+        }
         result.push(source);
     }
 
