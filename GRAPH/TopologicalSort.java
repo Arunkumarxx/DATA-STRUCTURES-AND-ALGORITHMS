@@ -41,7 +41,7 @@ public class TopologicalSort {
         }
         while(!result.isEmpty())
         {
-            System.out.println(result.peek());
+            System.out.print(result.peek()+" ");
             result.pop();
         }
     }
