@@ -12,8 +12,8 @@ public class ShortestPathInDirectedAcyclicGraph
         for (int i = 0; i < 7; i++) {
             adj.add(new ArrayList<>());
         }
-        adj.get(6).add(new int{1,0});
-        adj.get(6).add(5);
+        adj.get(6).add(new int[] {1,0});
+        adj.get(6).add(new int [] {});
         adj.get(5).add(4);
         adj.get(4).add(0);
         adj.get(4).add(2);
