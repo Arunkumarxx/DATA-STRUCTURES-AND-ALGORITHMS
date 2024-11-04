@@ -32,7 +32,10 @@ public class ShortestPathInDirectedAcyclicGraph
         while(stack.isEmpty())
         {
             Queue<Pair> queue =new LinkedList<>();
-            
+            while(!queue.isEmpty())
+            {
+                
+            }
         }
 
     }
