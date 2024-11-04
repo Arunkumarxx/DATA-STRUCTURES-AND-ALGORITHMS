@@ -24,6 +24,7 @@ public class ShortestPathInDirectedAcyclicGraph
         visited[source]=true;
         for(int [] pair:adj.get(source))
         {
+            if(!visited[pair[0]])
             dfs(adj,stack,visited,pair[0]);
         }
         stack.push(source);
