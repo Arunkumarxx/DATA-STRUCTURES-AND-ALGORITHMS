@@ -3,7 +3,7 @@ package GRAPH;
 import java.util.*;
 
 public class TopologicalSort {
-    private ArrayList<Integer> topologicalSort(ArrayList<ArrayList<Integer>> adj) {
+    private ArrayList<Integer> topologicalSortBreathFirstSearch(ArrayList<ArrayList<Integer>> adj) {
         int n = adj.size();
         int[] degree = new int[adj.size()];
         for (int i = 0; i < n; ++i)
@@ -27,7 +27,10 @@ public class TopologicalSort {
         }
         return result;
     }
-
+    private void topologicalSortDepthFirstSearch()
+    {
+        
+    }
     public static void main(String[] args) {
         TopologicalSort obj = new TopologicalSort();
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
