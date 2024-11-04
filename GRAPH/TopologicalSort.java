@@ -44,6 +44,7 @@ public class TopologicalSort {
             System.out.print(result.peek()+" ");
             result.pop();
         }
+        System.out.println();
     }
     private void depthFirstSearch(ArrayList<ArrayList<Integer>> adj,Stack<Integer> result,boolean [] visited,int source)
     {
