@@ -23,12 +23,12 @@ public class UnitAreaOfLargestRegionOfOnes
                     int currMaxArea=0;
                     Queue<int[]> queue =new LinkedList<>();
                     queue.add(new int[]{row,col});
+                    visited[row][col]=true;
                     while(!queue.isEmpty())
                     {
                         int [] curr=queue.poll();
                         int currR=curr[0];
                         int currC=curr[1];
-                        visited[currR][currC]=true;
                         ++currMaxArea;
                         for(int i=0;i<8;++i)
                         {
@@ -37,6 +37,7 @@ public class UnitAreaOfLargestRegionOfOnes
                             if(isValid(newCurrR,newCurrC,n,m) && !visited[newCurrR][newCurrC] && grid[newCurrR][newCurrC]==1)
                             {
                                 queue.add(new int []{newCurrR,newCurrC});
+                                visited[newCurrR][newCurrC]=true;
                             }
                         }
                     }
