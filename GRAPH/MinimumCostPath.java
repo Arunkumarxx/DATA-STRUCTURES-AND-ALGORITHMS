@@ -7,60 +7,21 @@ public class MinimumCostPath
 {
     public int minimumCostPath(int[][] grid)
     {
-        int n=grid.length;
-        boolean [][] visited =new boolean[n][n];
-        int [] x ={0,1};
-        int [] y ={1,0};
-        int sum=0;
-        for(int row=0;row<n;++row)
-        {
-            for(int col=0;col<n;++col)
-            {
-                if(!visited[row][col])
-                {
-                    Queue<int[]> queue =new LinkedList<>();
-                    queue.add(new int []{row,col});
-                    while(!queue.isEmpty())
-                    {
-                        int [] curr= queue.poll();
-                        sum+=grid[curr[0]][curr[1]];
-                        System.out.print(grid[curr[0]][curr[1]]+" ");
-                        if(curr[0]==n-1 && curr[1]==n-1)
-                            return sum;
-                        int currRow=curr[0];
-                        int currCol=curr[1];
-                        visited[currRow][currCol]=true;
-                        int [] minValueRowAndCol=new int [2];
-                        int minValue=Integer.MAX_VALUE;
-                        for(int i=0;i<2;++i)
-                        {
-                            int newCurrRow=currRow+y[i];
-                            int newCurrCol=currCol+x[i];
+        System.gc();
+        int n = grid.length;
+        int m = grid[0].length;
+        int[][] dp = new int[n][m];
+        dp[0][0]=grid[0][0];
+        for (int j=1; j <m; j++)
+            dp[0][j]=dp[0][j - 1]+grid[0][j];
 
-                            if(isValid(newCurrRow,newCurrCol,n) && !visited[newCurrRow][newCurrCol])
-                            {
-                                visited[newCurrRow][newCurrCol]=true;
-                                if(grid[newCurrRow][newCurrCol]<minValue)
-                                {
-                                    minValue=grid[newCurrRow][newCurrCol];
-                                    minValueRowAndCol[0]=newCurrRow;
-                                    minValueRowAndCol[1]=newCurrCol;
-                                }
-                            }
-                        }
-                        if(minValue!=Integer.MAX_VALUE)
-                        {
-                            queue.add(new int[]{minValueRowAndCol[0], minValueRowAndCol[1]});
-                        }
-                    }
-                }
-            }
-        }
-        return sum;
-    }
-    private boolean isValid(int x,int y,int n)
-    {
-        return x>=0 && x<n && y>=0 && y<n? true : false;
+        for (int i=1; i < n; i++)
+            dp[i][0]=dp[i - 1][0]+grid[i][0];
+
+        for (int i=1; i<n; i++)
+            for (int j=1; j<m; j++)
+                dp[i][j] = grid[i][j] + Math.min(dp[i-1][j], dp[i][j-1]);
+        return dp[n - 1][m - 1];
     }
     public static void main(String[] args)
     {
