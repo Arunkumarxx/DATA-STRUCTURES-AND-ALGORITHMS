@@ -34,7 +34,7 @@ public class UnitAreaOfLargestRegionOfOnes
                         {
                             int newCurrR=currR+x[i];
                             int newCurrC=currC+y[i];
-                            if(isValid(newCurrR,newCurrC,n,m) && !visited[newCurrR][newCurrC] && grid[newCurrC][newCurrR]==1)
+                            if(isValid(newCurrR,newCurrC,n,m) && !visited[newCurrR][newCurrC] && grid[newCurrR][newCurrC]==1)
                             {
                                 queue.add(new int []{newCurrR,newCurrC});
                             }
