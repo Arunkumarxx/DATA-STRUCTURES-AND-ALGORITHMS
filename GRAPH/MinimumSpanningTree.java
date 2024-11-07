@@ -12,7 +12,7 @@ public class MinimumSpanningTree {
             int[] edge=minHeap.poll();
             int weight=edge[0];
             int node=edge[1];
-            
+
             if (visited[node])
                 continue;
 
