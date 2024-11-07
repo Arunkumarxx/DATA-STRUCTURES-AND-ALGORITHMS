@@ -29,23 +29,23 @@ public class MinimumSpanningTree {
         return sum;
     }
     public static void main(String[] args) {
-        MinimumSpanningTree obj = new MinimumSpanningTree();
+        MinimumSpanningTree obj =new MinimumSpanningTree();
         List<List<int[]>> adj = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i=0; i<5;++i ) {
             adj.add(new ArrayList<>());
         }
-        adj.get(0).add(new int[]{1, 2});
-        adj.get(0).add(new int[]{3, 6});
-        adj.get(1).add(new int[]{0, 2});
-        adj.get(1).add(new int[]{2, 3});
-        adj.get(1).add(new int[]{3, 8});
-        adj.get(1).add(new int[]{4, 5});
-        adj.get(2).add(new int[]{1, 3});
-        adj.get(2).add(new int[]{4, 7});
-        adj.get(3).add(new int[]{0, 6});
-        adj.get(3).add(new int[]{1, 8});
-        adj.get(4).add(new int[]{1, 5});
-        adj.get(4).add(new int[]{2, 7});
+        adj.get(0).add(new int[]{1,2});
+        adj.get(0).add(new int[]{3,6});
+        adj.get(1).add(new int[]{0,2});
+        adj.get(1).add(new int[]{2,3});
+        adj.get(1).add(new int[]{3,8});
+        adj.get(1).add(new int[]{4,5});
+        adj.get(2).add(new int[]{1,3});
+        adj.get(2).add(new int[]{4,7});
+        adj.get(3).add(new int[]{0,6});
+        adj.get(3).add(new int[]{1,8});
+        adj.get(4).add(new int[]{1,5});
+        adj.get(4).add(new int[]{2,7});
 
         System.out.println("Minimum Spanning Tree Cost: " + obj.spanningTree(5, 7, adj));
     }
