@@ -13,8 +13,8 @@ public class MinimumSpanningTree {
             int weight=edge[0];
             int node=edge[1];
 
-//            if (visited[node])
-//                continue;
+            if (visited[node])
+                continue;
 
             visited[node] =true;
             sum += weight;
