@@ -39,10 +39,8 @@ public class BellmanFordAlgorithmForShortestPath
     {
         int [][] edges =
                 {
-                        {0,1,5},
-                        {1,0,3},
-                        {1,2,-1},
-                        {2,0,1},
+                        {0,1,-1},
+                        {1,0,-1};
                 };
         BellmanFordAlgorithmForShortestPath bellmanFordAlgorithmForShortestPath = new BellmanFordAlgorithmForShortestPath();
         System.out.println(Arrays.toString(bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,2)));
