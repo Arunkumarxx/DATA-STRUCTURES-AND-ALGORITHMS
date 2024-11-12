@@ -24,6 +24,7 @@ public class BellmanFordAlgorithmForShortestPath
             {
                 System.out.println(Arrays.toString(edg));
             }
+            System.out.println();
         }
         return new int[] {-1};
     }
