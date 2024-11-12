@@ -17,7 +17,7 @@ public class BellmanFordAlgorithmForShortestPath
         {
             for(int col=0;col<edges[row].length;++col)
             {
-                int [] curr=new int[]{edges[row][col]};
+                int[] curr = new int[]{edges[row][0], edges[row][1], edges[row][2]};
                 adj.get(curr[0]).add(new int []{curr[1],curr[2]});
             }
         }
