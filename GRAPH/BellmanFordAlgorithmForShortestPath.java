@@ -26,7 +26,7 @@ public class BellmanFordAlgorithmForShortestPath
             }
             System.out.println();
         }
-        int [] dis =new int[v+1];
+        int [] dis =new int[v];
         Arrays.fill(dis,Integer.MAX_VALUE);
         Queue<Integer> queue =new LinkedList<>();
         dis[src]=0;
