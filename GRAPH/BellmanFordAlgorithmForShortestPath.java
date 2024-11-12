@@ -15,11 +15,8 @@ public class BellmanFordAlgorithmForShortestPath
         {
             int [] curr = queue.poll();
             int currSrc=curr[0];
-            int currVal=curr[1];
-            for(int neighbor:edges[currSrc])
-            {
-                queue.add(new int[]{edges[neighbor][0],edges[neighbor][1]})
-            }
+            int currDis=curr[1];
+            
         }
     }
     public static void main(String[] args)
