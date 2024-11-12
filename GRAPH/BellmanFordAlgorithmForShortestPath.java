@@ -2,6 +2,7 @@ package GRAPH;
 
 import java.lang.foreign.PaddingLayout;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -20,6 +21,14 @@ public class BellmanFordAlgorithmForShortestPath
                 adj.get(curr[0]).add(new int []{curr[1],curr[2]});
             }
         }
+        for(int i=0;i<v;++i)
+        {
+            for(int [] edg:adj.get(i))
+            {
+                System.out.println(Arrays.toString(edg));
+            }
+        }
+        return new int[] {-1};
     }
     public static void main(String[] args)
     {
@@ -30,5 +39,8 @@ public class BellmanFordAlgorithmForShortestPath
                         {1,2,-1},
                         {2,0,1},
                 };
+        BellmanFordAlgorithmForShortestPath bellmanFordAlgorithmForShortestPath = new BellmanFordAlgorithmForShortestPath();
+        bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,0);
+         
     }
 }
