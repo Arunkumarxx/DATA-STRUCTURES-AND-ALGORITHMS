@@ -10,40 +10,31 @@ public class BellmanFordAlgorithmForShortestPath
 {
     private int [] bellsManFord(int v,int [][] edges,int src)
     {
-        ArrayList<ArrayList<int []>> adj =new ArrayList<>();
-        for(int i=0;i<=v;++i)
-            adj.add(new ArrayList<>());
-        for (int row = 0; row < v; ++row) {
-            int[] curr = new int[]{edges[row][0], edges[row][1], edges[row][2]};
-            adj.get(curr[0]).add(new int[]{curr[1], curr[2]});
-        }
-        for(int i=0;i<v;++i)
-        {
-            System.out.print(i+" ");
-            for(int [] edg:adj.get(i))
-            {
-                System.out.print(Arrays.toString(edg)+" ");
-            }
-            System.out.println();
-        }
-        int [] dis =new int[v];
-        Arrays.fill(dis,Integer.MAX_VALUE);
-        Queue<Integer> queue =new LinkedList<>();
+        int [] dis =new int [v];
+        Arrays.fill(dis,100000000 );
         dis[src]=0;
-        queue.add(src);
-        while(!queue.isEmpty())
-        {
 
-            int currSrc= queue.poll();
-            for(int [] neighbor:adj.get(currSrc))
+        for(int i=0;i<v-1;++i)
+        {
+            for(int [] edge:edges)
             {
-                int newSrc=neighbor[0];
-                int newDis=neighbor[1];
-                if(dis[newSrc]==Integer.MAX_VALUE || dis[currSrc]+newDis<dis[newSrc])
-                {
-                    dis[newSrc]=dis[currSrc]+newDis;
-                    queue.add(newSrc);
-                }
+                int unit=edge[0];
+                int vertex=edge[1];
+                int weight=edge[2];
+
+                if(dis[unit]!=100000000  && dis[unit]+weight<dis[vertex])
+                    dis[vertex]=dis[unit]+weight;
+            }
+        }
+        for(int i=0;i<v-1;++i)
+        {
+            for(int [] edge:edges)
+            {
+                int unit=edge[0];
+                int vertex=edge[1];
+                int weight=edge[2];
+                if(dis[unit]!=100000000  && dis[unit]+weight<dis[vertex])
+                    return new int []{-1};
             }
         }
         return dis;
