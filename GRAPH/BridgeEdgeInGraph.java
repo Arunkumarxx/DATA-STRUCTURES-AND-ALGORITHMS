@@ -11,12 +11,10 @@ public class BridgeEdgeInGraph {
             }
         }
     }
-
     static int isBridge(int V, ArrayList<ArrayList<Integer>> adj, int c, int d) {
         if(c>=V && d>=V && c<0 && d<0) {
             return 0;
         }
-
         boolean[] visited=new boolean[V];
         int count=0;
 
@@ -26,13 +24,10 @@ public class BridgeEdgeInGraph {
                 DFS(i, adj, visited);
             }
         }
-
         adj.get(c).remove(Integer.valueOf(d));
         adj.get(d).remove(Integer.valueOf(c));
-
         Arrays.fill(visited,false);
         int count2=0;
-
         for(int i=0;i<V;i++) {
             if(!visited[i]) {
                 DFS(i, adj, visited);
@@ -43,7 +38,6 @@ public class BridgeEdgeInGraph {
         }
         return 0;
     }
-
     public static void main(String[] args) {
         BridgeEdgeInGraph obj=new BridgeEdgeInGraph();
         int V=5;
