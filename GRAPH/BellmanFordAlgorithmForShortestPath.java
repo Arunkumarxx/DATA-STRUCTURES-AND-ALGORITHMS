@@ -19,6 +19,7 @@ public class BellmanFordAlgorithmForShortestPath
         }
         for(int i=0;i<v;++i)
         {
+            System.out.println(i+" ");
             for(int [] edg:adj.get(i))
             {
                 System.out.println(Arrays.toString(edg));
