@@ -28,14 +28,22 @@ public class BellmanFordAlgorithmForShortestPath
         }
         int [] dis =new int[v];
         Arrays.fill(dis,Integer.MAX_VALUE);
-        Queue<int[]> queue =new LinkedList<>();
+        Queue<Integer> queue =new LinkedList<>();
         dis[src]=0;
-        queue.add(new int [] {src,0});
+        queue.add(src);
         while(!queue.isEmpty())
         {
-            int [] curr=queue.poll();
-            int currSrc=curr[0];
-            int curr
+
+            int currSrc= queue.poll();
+            for(int [] neighbor:adj.get(currSrc))
+            {
+                int newSrc=neighbor[0];
+                int newDis=neighbor[1];
+                if(dis[newSrc]==Integer.MAX_VALUE || dis[dis[currSrc]]+newDis<dis[newSrc])
+                {
+
+                }
+            }
         }
     }
     public static void main(String[] args)
