@@ -8,7 +8,9 @@ public class BellmanFordAlgorithmForShortestPath
     private int [] bellsManFord(int v,int [][] edges,int src)
     {
         Queue<int []> queue =new LinkedList<>();
+        int n=v;
         queue.add(new int[]{0,0});
+        int [] dis =new int[n];
         while(!queue.isEmpty())
         {
             int [] curr = queue.poll();
