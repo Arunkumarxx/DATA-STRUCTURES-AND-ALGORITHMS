@@ -43,6 +43,6 @@ public class BellmanFordAlgorithmForShortestPath
                         {1,0,-1}
                 };
         BellmanFordAlgorithmForShortestPath bellmanFordAlgorithmForShortestPath = new BellmanFordAlgorithmForShortestPath();
-        System.out.println(Arrays.toString(bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,2)));
+        System.out.println(Arrays.toString(bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,0)));
     }
 }
