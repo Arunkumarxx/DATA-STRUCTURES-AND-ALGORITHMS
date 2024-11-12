@@ -1,5 +1,6 @@
 package GRAPH;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BellmanFordAlgorithmForShortestPath
@@ -22,6 +23,7 @@ public class BellmanFordAlgorithmForShortestPath
                     dis[vertex]=dis[unit]+weight;
             }
         }
+        System.out.println(Arrays.toString(dis));
         for(int i=0;i<v-1;++i)
         {
             for(int [] edge:edges)
