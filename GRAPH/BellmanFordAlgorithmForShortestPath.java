@@ -39,9 +39,9 @@ public class BellmanFordAlgorithmForShortestPath
             {
                 int newSrc=neighbor[0];
                 int newDis=neighbor[1];
-                if(dis[newSrc]==Integer.MAX_VALUE || dis[dis[currSrc]]+newDis<dis[newSrc])
+                if(dis[newSrc]==Integer.MAX_VALUE || dis[currSrc]+newDis<dis[newSrc])
                 {
-                    dis[newSrc]=dis[dis[currSrc]]+newDis;
+                    dis[newSrc]=dis[currSrc]+newDis;
                     queue.add(newSrc);
                 }
             }
