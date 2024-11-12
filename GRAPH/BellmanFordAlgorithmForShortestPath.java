@@ -19,7 +19,6 @@ public class BellmanFordAlgorithmForShortestPath
                 adj.get(curr[0]).add(new int[]{curr[1], curr[2]});
             }
         }
-
         for(int i=0;i<v;++i)
         {
             for(int [] edg:adj.get(i))
