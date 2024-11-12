@@ -41,10 +41,12 @@ public class BellmanFordAlgorithmForShortestPath
                 int newDis=neighbor[1];
                 if(dis[newSrc]==Integer.MAX_VALUE || dis[dis[currSrc]]+newDis<dis[newSrc])
                 {
-
+                    dis[newSrc]=dis[dis[currSrc]]+newDis;
+                    queue.add(newSrc);
                 }
             }
         }
+        return dis;
     }
     public static void main(String[] args)
     {
@@ -56,7 +58,6 @@ public class BellmanFordAlgorithmForShortestPath
                         {2,0,1},
                 };
         BellmanFordAlgorithmForShortestPath bellmanFordAlgorithmForShortestPath = new BellmanFordAlgorithmForShortestPath();
-        bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,0);
-
+        System.out.println(Arrays.toString(bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,0)));
     }
 }
