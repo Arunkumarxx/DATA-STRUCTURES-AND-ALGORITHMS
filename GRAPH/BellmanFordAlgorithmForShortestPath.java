@@ -11,7 +11,7 @@ public class BellmanFordAlgorithmForShortestPath
     private int [] bellsManFord(int v,int [][] edges,int src)
     {
         ArrayList<ArrayList<int []>> adj =new ArrayList<>();
-        for(int i=0;i<v;++i)
+        for(int i=0;i<=v;++i)
             adj.add(new ArrayList<>());
         for(int row=0;row<v;++row)
         {
