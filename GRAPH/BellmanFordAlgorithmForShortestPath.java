@@ -41,6 +41,6 @@ public class BellmanFordAlgorithmForShortestPath
                 };
         BellmanFordAlgorithmForShortestPath bellmanFordAlgorithmForShortestPath = new BellmanFordAlgorithmForShortestPath();
         bellmanFordAlgorithmForShortestPath.bellsManFord(edges.length,edges,0);
-         
+
     }
 }
