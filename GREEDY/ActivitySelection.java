@@ -27,7 +27,8 @@ public class ActivitySelection
     public static void main(String[] args)
     {
         ActivitySelection obj =new ActivitySelection();
-         int [][] PairArray ={
+         int [][] PairArray =
+                 {
                  {1,3},
                  {2,4},
                  {3,8},
