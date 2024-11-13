@@ -1,13 +1,11 @@
 package GREEDY;
 
 import java.util.Arrays;
-import java.util.Collections;
-
 public class ActivitySelection
 {
     private int getMaximumNumberOfActivity(int [] [] PairArray)
     {
-        Arrays.sort(PairArray, (a, b) -> Integer.compare(a[0], b[0]));
+        Arrays.sort(PairArray, (a, b) -> Integer.compare(a[1], b[1]));
         return -1;
     }
     public static void main(String[] args)
