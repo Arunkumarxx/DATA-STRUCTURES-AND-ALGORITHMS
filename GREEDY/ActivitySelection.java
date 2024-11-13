@@ -31,7 +31,7 @@ public class ActivitySelection
                  {1,3},
                  {2,4},
                  {3,8},
-                 {}
+                 {10,11}
          };
          obj.getMaximumNumberOfActivity(PairArray);
     }
