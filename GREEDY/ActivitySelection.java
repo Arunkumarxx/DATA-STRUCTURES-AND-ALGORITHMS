@@ -15,7 +15,8 @@ public class ActivitySelection
          int [][] arr ={
                  {3,8},
                  {2,4},
-                 { }
+                 {1,4},
+                 
          };
     }
 }
