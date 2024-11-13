@@ -1,7 +1,6 @@
 package GREEDY;
 
 import java.util.*;
-
 public class ActivitySelection {
     public int activitySelection(List<Integer> start, List<Integer> end) {
         int n1=start.size();
