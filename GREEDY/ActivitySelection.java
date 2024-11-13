@@ -21,7 +21,7 @@ public class ActivitySelection
                 prev=pair[1];
             }
         }
-        System.out.println(result);
+        result.forEach(a-> System.out.println(Arrays.toString(a)));
         return -1;
     }
     public static void main(String[] args)
