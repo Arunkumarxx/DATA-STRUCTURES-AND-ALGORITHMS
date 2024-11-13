@@ -5,7 +5,8 @@ public class ActivitySelection
 
     public static void main(String[] args)
     {
-         Pair [] arr ={new Pair()};
+        ActivitySelection obj =new ActivitySelection();
+         Pair [] arr ={obj.new Pair(3,8),obj.new Pair()};
     }
     class Pair
     {
