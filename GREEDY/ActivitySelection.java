@@ -1,17 +1,21 @@
 package GREEDY;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 public class ActivitySelection
 {
     private int getMaximumNumberOfActivity(int [] [] PairArray)
     {
         Arrays.sort(PairArray, (a, b) -> Integer.compare(a[1], b[1]));
-        int currStart=0;
-        int currEnd=0;
+        int prev=0;
         int n=PairArray.length;
-        for(int i=0;i<n;++i)
+        ArrayList<int []> result =new ArrayList<>();
+        result.add(PairArray[0]);
+        prev=PairArray[0];
+        for(int i=1;i<n;++i)
         {
-            
+            int [] pair =PairArray[i];
+            if(pair[0]>)
         }
         return -1;
     }
