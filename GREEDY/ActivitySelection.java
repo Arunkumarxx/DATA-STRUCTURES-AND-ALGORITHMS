@@ -30,6 +30,7 @@ public class ActivitySelection
          int [][] PairArray ={
                  {1,3},
                  {2,4},
+                 {3,8},
                  {}
          };
          obj.getMaximumNumberOfActivity(PairArray);
