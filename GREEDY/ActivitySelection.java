@@ -28,10 +28,8 @@ public class ActivitySelection
     {
         ActivitySelection obj =new ActivitySelection();
          int [][] PairArray ={
-                 {3,8},
-                 {2,4},
                  {1,3},
-                 {10,11}
+                 {}
          };
          obj.getMaximumNumberOfActivity(PairArray);
     }
