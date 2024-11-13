@@ -14,8 +14,8 @@ public class ActivitySelection
         ActivitySelection obj =new ActivitySelection();
          int [][] arr ={
                  {3,8},
-                 {,4},
-                 {}
+                 {2,4},
+                 { }
          };
     }
 }
