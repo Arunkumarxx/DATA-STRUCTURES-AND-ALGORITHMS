@@ -11,7 +11,7 @@ public class ActivitySelection
         int n=PairArray.length;
         ArrayList<int []> result =new ArrayList<>();
         result.add(PairArray[0]);
-        prev=PairArray[0];
+        prev=PairArray[0][1];
         for(int i=1;i<n;++i)
         {
             int [] pair =PairArray[i];
