@@ -7,7 +7,7 @@ public class ActivitySelection
     private int getMaximumNumberOfActivity(int [] [] PairArray)
     {
         Arrays.sort(PairArray,(a,b)->Integer.compare(a[1],b[1]));
-        int prev=0;
+        int prev;
         int n=PairArray.length;
         ArrayList<int []> result =new ArrayList<>();
         result.add(PairArray[0]);
