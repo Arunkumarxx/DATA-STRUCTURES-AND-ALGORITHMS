@@ -18,5 +18,6 @@ public class ActivitySelection
                  {1,3},
                  {10,11}
          };
+         obj.getMaximumNumberOfActivity(PairArray);
     }
 }
