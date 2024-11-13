@@ -15,7 +15,7 @@ public class ActivitySelection
         for(int i=1;i<n;++i)
         {
             int [] pair =PairArray[i];
-            if(pair[0]>prev)
+            if(pair[1]>prev)
             {
                 result.add(pair);
                 prev=pair[1];
