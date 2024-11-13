@@ -1,39 +1,32 @@
 package GREEDY;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 public class ActivitySelection
 {
-    private int getMaximumNumberOfActivity(int [] [] PairArray)
-    {
-        Arrays.sort(PairArray,(a,b)->Integer.compare(a[1],b[1]));
-        int prev;
-        int n=PairArray.length;
-        ArrayList<int []> result =new ArrayList<>();
-        result.add(PairArray[0]);
-        prev=PairArray[0][1];
-        for(int i=1;i<n;++i)
+    public int activitySelection(List<Integer> start, List<Integer> end) {
+        int n1=start.size();
+        int [][]PairArray =new int [n1][2];
+        for(int i=0;i<n1;++i)
         {
-            int [] pair =PairArray[i];
-            if(pair[0]>=prev)
-            {
-                result.add(pair);
-                prev=pair[1];
+            PairArray[i][0]=start.get(i);
+            PairArray[i][1]=end.get(i);
+        }
+        Arrays.sort(PairArray, Comparator.comparingInt(o -> o[1]));        int n=PairArray.length;
+        int c=1;
+        int prev = PairArray[0][1];
+        for (int i = 1; i < n; ++i) {
+
+            if (PairArray[i][0] > prev) {
+                c++;
+                prev = PairArray[i][1];
             }
         }
-        result.forEach(a-> System.out.println(Arrays.toString(a)));
-        return  result.size();
+        return  c;
     }
     public static void main(String[] args)
     {
         ActivitySelection obj =new ActivitySelection();
-         int [][] PairArray =
-                 {
-                 {1,3},
-                 {2,4},
-                 {3,8},
-                 {10,11}
-         };
-         obj.getMaximumNumberOfActivity(PairArray);
+
+         obj.getMaximumNumberOfActivity();
     }
 }
