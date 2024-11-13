@@ -10,7 +10,7 @@ public class ActivitySelection
                  obj.new Pair(3,8),
                  obj.new Pair(2, 4),
                  obj.new Pair(2, 4),
-                 obj.new Pair(8, 11)
+                 obj.new Pair(10,11)
          };
     }
     class Pair
