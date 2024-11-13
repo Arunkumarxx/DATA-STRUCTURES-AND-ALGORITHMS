@@ -4,7 +4,7 @@ public class ActivitySelection
 {
     private int getMaximumNumberOfActivity()
     {
-        
+
         return -1;
     }
     public static void main(String[] args)
