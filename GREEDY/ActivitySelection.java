@@ -6,16 +6,7 @@ public class ActivitySelection
 {
     private int getMaximumNumberOfActivity(int [] [] PairArray)
     {
-        Arrays.sort(PairArray, (a, b) ->
-        {
-            if (a[0] != b[0])
-            {
-                return a[0] - b[0];
-            } else
-            {
-                return a[1] - b[1];
-            }
-        });
+        Arrays.sort(PairArray,(a,b)->Integer.compare(a[1],b[1]));
         int prev=0;
         int n=PairArray.length;
         ArrayList<int []> result =new ArrayList<>();
