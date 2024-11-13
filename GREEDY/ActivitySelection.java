@@ -4,19 +4,19 @@ import java.util.Collections;
 
 public class ActivitySelection
 {
-    private int getMaximumNumberOfActivity(Pair [] pairArr)
+    private int getMaximumNumberOfActivity(int [] [] PairArray)
     {
-        Collections.sort(pairArr,(a,b)->Integer.compare(a[0].start,b[0]));
+        
         return -1;
     }
     public static void main(String[] args)
     {
         ActivitySelection obj =new ActivitySelection();
-         int [][] arr ={
+         int [][] PairArray ={
                  {3,8},
                  {2,4},
                  {1,4},
-                 
+                 {10,11}
          };
     }
 }
