@@ -8,8 +8,9 @@ public class ActivitySelection
         ActivitySelection obj =new ActivitySelection();
          Pair [] arr ={
                  obj.new Pair(3,8),
-                 obj.new Pair(2, 4);
-                 obj.new Pair(2, 4);
+                 obj.new Pair(2, 4),
+                 obj.new Pair(2, 4),
+                 obj.new Pair(8, 11)
          };
     }
     class Pair
