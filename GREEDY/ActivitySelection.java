@@ -5,9 +5,10 @@ public class ActivitySelection {
     public int activitySelection(List<Integer> start, List<Integer> end) {
         int n1=start.size();
         int[][] PairArray=new int[n1][2];
-        for(int i=0;i<n1;++i) {
-            PairArray[i][0]=start.get(i);
-            PairArray[i][1]=end.get(i);
+        for(int i=0;i<n1;++i)
+        {
+            PairArray[i][0] = start.get(i);
+            PairArray[i][1] = end.get(i);
         }
         Arrays.sort(PairArray, Comparator.comparingInt(o->o[1]));
         int n=PairArray.length;
@@ -21,7 +22,6 @@ public class ActivitySelection {
         }
         return c;
     }
-
     public static void main(String[] args) {
         ActivitySelection obj=new ActivitySelection();
         List<Integer> start=Arrays.asList(1, 3, 2, 5);
