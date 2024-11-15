@@ -4,14 +4,32 @@ public class LargestNumberWithGivenSum
 {
     private String largestNumber(int n, int sum)
     {
-        
-        return "";
+        StringBuilder result =new StringBuilder();
+        while(sum>0 && n>0)
+        {
+            if(sum>=9)
+            {
+                result.append(9);
+                sum-=9;
+                --n;
+            }
+            else
+            {
+                result.append(sum);
+                while(n>0)
+                {
+                    result.append(0);
+                    --n;
+                }
+            }
+        }
+        return result.toString();
     }
     public static void main(String[] args)
     {
         LargestNumberWithGivenSum largestNumberWithGivenSum =new LargestNumberWithGivenSum();
         int n=5;
         int sum=12;
-        largestNumberWithGivenSum.largestNumber(n,sum);
+        System.out.println( largestNumberWithGivenSum.largestNumber(n,sum));
     }
 }
