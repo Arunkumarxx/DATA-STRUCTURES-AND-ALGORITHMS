@@ -5,7 +5,7 @@ public class LargestNumberWithGivenSum
     private String largestNumber(int n, int sum)
     {
         StringBuilder result =new StringBuilder();
-        while(sum>0 && n>1)
+        while(sum>0 && n>0)
         {
             if(sum>=9)
             {
@@ -16,7 +16,7 @@ public class LargestNumberWithGivenSum
             else
             {
                 result.append(sum);
-                while(n>0)
+                while(n>1)
                 {
                     result.append(0);
                     --n;
