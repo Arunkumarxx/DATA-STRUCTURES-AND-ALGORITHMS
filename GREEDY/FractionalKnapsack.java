@@ -1,2 +1,11 @@
-package GREEDY;public class FractionalKnapsack {
+package GREEDY;
+
+public class FractionalKnapsack
+{
+    
+    public static void main(String[] args)
+    {
+
+    }
+
 }
