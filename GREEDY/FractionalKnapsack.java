@@ -1,7 +1,11 @@
 package GREEDY;
 
+import java.util.*;
+
 public class FractionalKnapsack
-{double fractionalKnapsack(List<Integer> val, List<Integer> wt, int capacity) {
+{
+
+    private double fractionalKnapsack(List<Integer> val, List<Integer> wt, int capacity) {
     int n=val.size();
     Pair[] pair =new Pair[n];
 
