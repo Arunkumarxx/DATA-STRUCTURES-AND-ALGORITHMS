@@ -4,37 +4,46 @@ import java.util.*;
 
 public class FractionalKnapsack
 {
-
-    private double fractionalKnapsack(List<Integer> val, List<Integer> wt, int capacity) {
-    int n=val.size();
-    Pair[] pair =new Pair[n];
-
-    for(int i=0;i<n;++i)
-        pair[i]=new Pair(val.get(i),wt.get(i));
-
-    Arrays.sort(pair,(a,b)-> Double.compare((double)b.value/b.weight,(double)a.value/a.weight));
-    double result=0;
-    int ind=0;
-    while(capacity>0 && ind<n)
+    private class Pair
     {
-        if (capacity>=pair[ind].weight)
+        int value;
+        int weight;
+        Pair(int value,int weight)
         {
-            capacity -= pair[ind].weight;
-            result += pair[ind].value;
+            this.value=value;
+            this.weight=weight;
         }
-        else if(ind<n)
-        {
-            double newValue = ((double) pair[ind].value / pair[ind].weight) * capacity;
-            result+=newValue;
-            break;
-        }
-        ++ind;
     }
-    return result;
-}
+
+    private double fractionalKnapsack(List<Integer> val, List<Integer> wt, int capacity)
+    {
+        int n = val.size();
+        Pair[] pair = new Pair[n];
+
+        for (int i = 0; i < n; ++i)
+            pair[i] = new Pair(val.get(i), wt.get(i));
+
+        Arrays.sort(pair, (a, b) -> Double.compare((double) b.value / b.weight, (double) a.value / a.weight));
+        double result = 0;
+        int ind = 0;
+        while (capacity > 0 && ind < n)
+        {
+            if (capacity>=pair[ind].weight)
+            {
+                capacity -= pair[ind].weight;
+                result += pair[ind].value;
+            } else if (ind < n)
+            {
+                double newValue = ((double) pair[ind].value / pair[ind].weight) * capacity;
+                result += newValue;
+                break;
+            }
+            ++ind;
+        }
+        return result;
+    }
     public static void main(String[] args)
     {
 
     }
-
 }
