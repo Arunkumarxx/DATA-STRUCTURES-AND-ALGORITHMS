@@ -1,2 +1,5 @@
-package GREEDY;public class JobSequencing {
+package GREEDY;
+
+public class JobSequencing
+{
 }
