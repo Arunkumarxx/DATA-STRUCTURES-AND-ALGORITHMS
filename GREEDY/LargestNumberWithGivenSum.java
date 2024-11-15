@@ -16,7 +16,7 @@ public class LargestNumberWithGivenSum
             else
             {
                 result.append(sum);
-                while(n>1)
+                while(n>0)
                 {
                     result.append(0);
                     --n;
