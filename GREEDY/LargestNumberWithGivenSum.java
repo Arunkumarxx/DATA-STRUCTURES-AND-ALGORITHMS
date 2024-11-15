@@ -10,8 +10,19 @@ public class LargestNumberWithGivenSum
 
         for(int i=0;i<n;++i)
         {
-            if(sum>)
+            if(sum>=9)
+            {
+                result.append(9);
+                sum-=9;
+            }
+            else if(sum>0)
+            {
+                result.append(sum);
+                sum-=sum;
+            }
+            else  result.append(0);
         }
+        return result.toString();
     }
     public static void main(String[] args)
     {
