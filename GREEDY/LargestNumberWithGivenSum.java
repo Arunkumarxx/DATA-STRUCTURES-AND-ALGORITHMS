@@ -11,14 +11,14 @@ public class LargestNumberWithGivenSum
             if(sum>=9)
             {
                 result.append(9);
-                targetSum+=9;
+                targetSum-=9;
                 sum-=9;
                 --n;
             }
             else
             {
                 result.append(sum);
-                targetSum+=sum;
+                targetSum-=sum;
                 while(n>0)
                 {
                     result.append(0);
