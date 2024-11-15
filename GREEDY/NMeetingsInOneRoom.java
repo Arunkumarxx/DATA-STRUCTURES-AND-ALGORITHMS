@@ -2,20 +2,21 @@ package GREEDY;
 
 import java.util.*;
 
-class meetings
-{
-    int start;
-    int end;
-    meetings(int start, int end)
-    {
-        this.start=start;
-        this.end=end;
-    }
-}
 
 public class NMeetingsInOneRoom
 {
-    public int maxMeetings(int start[], int end[])
+    private class meetings
+    {
+        int start;
+        int end;
+        meetings(int start, int end)
+        {
+            this.start=start;
+            this.end=end;
+        }
+    }
+
+    private int maxMeetings(int start[], int end[])
     {
         int n=start.length;
         meetings[] m=new meetings[n];
