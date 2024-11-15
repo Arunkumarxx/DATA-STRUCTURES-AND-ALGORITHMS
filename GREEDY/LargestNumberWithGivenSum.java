@@ -19,6 +19,7 @@ public class LargestNumberWithGivenSum
             {
                 result.append(sum);
                 targetSum-=sum;
+                --n;
                 while(n>0)
                 {
                     result.append(0);
