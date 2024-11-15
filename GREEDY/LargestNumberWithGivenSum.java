@@ -33,8 +33,8 @@ public class LargestNumberWithGivenSum
     public static void main(String[] args)
     {
         LargestNumberWithGivenSum largestNumberWithGivenSum =new LargestNumberWithGivenSum();
-        int n=3;
-        int sum=29;
+        int n=5;
+        int sum=12;
         System.out.println( largestNumberWithGivenSum.largestNumber(n,sum));
     }
 }
