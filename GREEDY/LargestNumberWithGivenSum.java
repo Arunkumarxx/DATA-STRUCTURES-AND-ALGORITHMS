@@ -15,12 +15,10 @@ public class LargestNumberWithGivenSum
                 result.append(9);
                 sum-=9;
             }
-            else if(sum>0)
-            {
+            else {
                 result.append(sum);
-                sum-=sum;
+                sum=0;
             }
-            else  result.append(0);
         }
         return result.toString();
     }
