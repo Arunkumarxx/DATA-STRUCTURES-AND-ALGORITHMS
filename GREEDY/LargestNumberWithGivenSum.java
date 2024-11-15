@@ -5,7 +5,7 @@ public class LargestNumberWithGivenSum
     private String largestNumber(int n, int sum)
     {
         StringBuilder result =new StringBuilder();
-        int targetSum=0;
+        int targetSum=sum;
         while(sum>0 && n>0)
         {
             if(sum>=9)
@@ -28,7 +28,7 @@ public class LargestNumberWithGivenSum
         }
         System.out.println(targetSum);
         System.out.println(sum);
-        if(targetSum!=sum)
+        if(targetSum!=0)
             return "-1";
         return result.toString();
     }
