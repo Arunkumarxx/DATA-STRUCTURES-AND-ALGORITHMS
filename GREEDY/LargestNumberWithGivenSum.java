@@ -37,6 +37,7 @@ public class LargestNumberWithGivenSum
         LargestNumberWithGivenSum largestNumberWithGivenSum =new LargestNumberWithGivenSum();
         int n=5;
         int sum=12;
+        System.out.println(sum*n);
         System.out.println( largestNumberWithGivenSum.largestNumber(n,sum));
     }
 }
