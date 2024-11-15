@@ -8,9 +8,9 @@ public class LargestNumberWithGivenSum
             return "-1";
         StringBuilder result =new StringBuilder();
 
-        while()
+        for(int i=0;i<n;++i)
         {
-
+            if(sum>)
         }
     }
     public static void main(String[] args)
