@@ -26,6 +26,7 @@ public class LargestNumberWithGivenSum
                 }
             }
         }
+        System.out.println(targetSum);
         if(targetSum!=sum)
             return "-1";
         return result.toString();
