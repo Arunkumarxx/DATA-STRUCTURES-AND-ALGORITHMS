@@ -40,6 +40,10 @@ class HuffManEncodingAlgorithm
 {
     int [] freq =new int[52];
 
+    protected void print()
+    {
+
+    }
     protected Pair enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
