@@ -13,7 +13,7 @@ public class HuffManAlgorithm
         String string  ="ABRACADABRA";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
-        encodingAlgorithm.enCodingString(string,n);
+        System.out.println(encodingAlgorithm.enCodingString(string,n));
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
 
     }
