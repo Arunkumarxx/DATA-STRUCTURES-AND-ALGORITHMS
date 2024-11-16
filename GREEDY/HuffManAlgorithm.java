@@ -59,9 +59,11 @@ class HuffManEncodingAlgorithm
                 minheap.add(new Pair(intToChar(i),freq[i]));
             }
         }
-        while(minheap.size()>)
+        while(minheap.size()>2)
         {
-
+            Pair pair1 =minheap.poll();
+            Pair pair2 =minheap.poll();
+            int sum=pair1.freq+pair2.freq;
         }
         return "";
 
