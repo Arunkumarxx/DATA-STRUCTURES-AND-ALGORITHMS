@@ -40,11 +40,16 @@ class HuffManEncodingAlgorithm
 {
     int [] freq =new int[52];
 
-    protected void print()
+    protected void print(Pair root,StringBuilder code)
     {
-
+        if(root==null)
+            return;
+        if(Character.isLetter(root.value))
+            System.out.println(root.value+" "+code);
+        print(root.left,code.append(0));
+        print(root.right,code.append(1));
     }
-    protected Pair enCodingString(String string,int n)
+    protected void  enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
         {
@@ -76,7 +81,7 @@ class HuffManEncodingAlgorithm
             Pair newPair= new Pair('*',freqSum, pair1,pair2);
             minheap.add(newPair);
         }
-        return minheap.poll();
+        print(minheap.poll(),new StringBuilder());
     }
     protected char intToChar(int i)
     {
