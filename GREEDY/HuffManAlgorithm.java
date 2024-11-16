@@ -113,5 +113,25 @@ class HuffManEncodingAlgorithm
 
 class HuffManDecodingAlgorithm
 {
-
+    public String decodeHuffmanData(MinHeapNode root, String binStr) {
+        int n=binStr.length();
+        StringBuilder result =new StringBuilder();
+        MinHeapNode temp=root;
+        for(int i=0;i<n;++i)
+        {
+            if(Character.isLetter(temp.data))
+            {
+                result.append(temp.data);
+                temp=root;
+            }
+            if(binStr.charAt(i)=='0')
+            {
+                temp=temp.left;
+            }
+            else temp=temp.right;
+        }
+        if(Character.isLetter(temp.data))
+            result.append(temp.data);
+        return result.toString();
+    }
 }
