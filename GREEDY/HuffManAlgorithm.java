@@ -31,7 +31,7 @@ class HuffManEncodingAlgorithm
              }
             else
             {
-                
+                ++freq[ind-'a'];
             }
         }
     }
