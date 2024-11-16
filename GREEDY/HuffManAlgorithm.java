@@ -23,12 +23,15 @@ class HuffManEncodingAlgorithm
     int [] freq =new int[52];
     class Pair
     {
-        Character character;
+        char value;
+        Pair left;
+        Pair right;
         int freq;
-        Pair(Character character,int freq)
+        Pair(char value,int freq )
         {
-            this.character=character;
+            this.value=value;
             this.freq=freq;
+            left=right=null;
         }
     }
     protected String enCodingString(String string,int n)
@@ -54,11 +57,7 @@ class HuffManEncodingAlgorithm
                 minheap.add(new Pair(intToChar(i),freq[i]));
             }
         }
-
-        while(minheap.size()>1)
-        {
-
-        }
+        
         return "";
 
     }
