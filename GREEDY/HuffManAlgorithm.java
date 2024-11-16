@@ -51,8 +51,13 @@ class HuffManEncodingAlgorithm
         {
             if(freq[i]!=0)
             {
-                minheap.add(new Pair(intToChar()));
+                minheap.add(new Pair(intToChar(i),freq[i]));
             }
+        }
+        
+        while(minheap.size()>1)
+        {
+
         }
         return "";
 
