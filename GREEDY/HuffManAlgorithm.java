@@ -41,11 +41,14 @@ class HuffManEncodingAlgorithm
         for(int i=0;i<n;++i)
         {
             int  ind=string.charAt(i);
-            if (ind >= 'A' && ind <= 'Z') {
-                int pos = ind - 'A';
-                ++freq[pos];
-            } else {
+            if (ind >= 'A' && ind <= 'Z')
+            {
                 int pos = (ind - 'a') + 26;
+                ++freq[pos];
+            }
+            else
+            {
+                int pos = ind - 'A';
                 ++freq[pos];
             }
 
