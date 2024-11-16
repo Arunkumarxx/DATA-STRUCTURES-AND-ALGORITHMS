@@ -68,8 +68,8 @@ class HuffManEncodingAlgorithm
             Pair newPair= new Pair('*',freqSum, pair1,pair2);
             minheap.add(newPair);
         }
+        System.out.println(minheap.peek().freq);
         return "";
-
     }
     protected char intToChar(int i)
     {
