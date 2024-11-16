@@ -83,8 +83,15 @@ class HuffManEncodingAlgorithm
         StringBuilder stringBuilder =new StringBuilder();
         for(int i=0;i<n;++i)
         {
-            int ind=intToChar(string.charAt(i));
-            System.out.println(stringBuilder.append());
+            if(Character.isLowerCase(string.charAt(i)))
+            {
+                String value=table['a'-i];
+                System.out.println(stringBuilder.append(value));
+            }
+            else
+            {
+                
+            }
         }
     }
     protected char intToChar(int i)
