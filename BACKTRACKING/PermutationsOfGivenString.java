@@ -10,7 +10,7 @@ public class PermutationsOfGivenString
     {
         if(str1.length()==0)
         {
-            System.out.println(str1);
+            System.out.println(str2);
             return;
         }
         for(int i=0;i<str1.length();++i)
