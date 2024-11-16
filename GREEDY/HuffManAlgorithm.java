@@ -59,13 +59,13 @@ class HuffManEncodingAlgorithm
     {
         for (int i = 0; i < n; ++i) {
             char c = string.charAt(i);
-
             if (Character.isLowerCase(c)) {
                 freq[c - 'a']++;
             } else {
                 freq[c - 'A' + 26]++;
             }
         }
+
 
         PriorityQueue<Pair> minheap =new PriorityQueue<>(Comparator.comparing((a)->a.freq));
         for(int i=0;i<52;++i)
