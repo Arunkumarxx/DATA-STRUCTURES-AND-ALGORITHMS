@@ -20,14 +20,13 @@ class Pair
 }
 public class HuffManAlgorithm
 {
-
     public static void main(String[] args)
     {
         String string  ="ABRACADABRA";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
         String  [] table=new String[52];
-         encodingAlgorithm.enCodingString(string,n,table);
+        System.out.println(encodingAlgorithm.enCodingString(string,n,table));
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
     }
 }
