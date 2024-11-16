@@ -85,12 +85,12 @@ class HuffManEncodingAlgorithm
         {
             if(Character.isLowerCase(string.charAt(i)))
             {
-                String value=table['a'+i];
+                String value=table['a'-i];
                 stringBuilder.append(value);
             }
             else
             {
-                String value=table['A'+(i-26)];
+                String value=table['A'-(i+26)];
                 stringBuilder.append(value);
             }
         }
