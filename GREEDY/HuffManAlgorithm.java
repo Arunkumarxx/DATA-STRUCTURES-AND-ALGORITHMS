@@ -57,7 +57,7 @@ class HuffManEncodingAlgorithm
 
         while(minheap.size()>1)
         {
-            
+
         }
         return "";
 
