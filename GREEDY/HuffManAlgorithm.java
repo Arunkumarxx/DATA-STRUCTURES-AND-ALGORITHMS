@@ -24,7 +24,15 @@ class HuffManEncodingAlgorithm
         for(int i=0;i<n;++i)
         {
             int  ind=string.charAt(i);
-            if(ind<=65)
+            if(ind>=65 && ind<=90)
+            {
+                int pos=(ind-'A')+26;
+                ++freq[pos];
+             }
+            else
+            {
+                
+            }
         }
     }
 }
