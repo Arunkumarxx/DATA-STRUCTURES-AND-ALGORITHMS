@@ -22,7 +22,7 @@ public class HuffManAlgorithm
 {
     public static void main(String[] args)
     {
-        String string  ="ABRACADABRA";
+        String string  ="AAAAAABCCCCCCDDEEEEE";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
         String  [] table=new String[52];
