@@ -2,6 +2,7 @@ package GREEDY;
 
 import java.lang.reflect.Parameter;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
@@ -50,7 +51,7 @@ class HuffManEncodingAlgorithm
                 ++freq[ind-'a'];
             }
         }
-        PriorityQueue<Pair> minheap =new PriorityQueue<>();
+        PriorityQueue<Pair> minheap =new PriorityQueue<>(Comparator.comparing((a)->a.freq));
         for(int i=0;i<52;++i)
         {
             if(freq[i]!=0)
@@ -58,7 +59,6 @@ class HuffManEncodingAlgorithm
                 minheap.add(new Pair(intToChar(i),freq[i]));
             }
         }
-
         return "";
 
     }
