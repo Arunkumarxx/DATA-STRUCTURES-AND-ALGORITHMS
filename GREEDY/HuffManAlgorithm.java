@@ -81,20 +81,22 @@ class HuffManEncodingAlgorithm
         }
         print(minheap.poll(),"",table);
         StringBuilder stringBuilder =new StringBuilder();
-        for(int i=0;i<n;++i)
-        {
-
-            if(Character.isLowerCase(string.charAt(i)))
+        for (int i = 0; i < n; ++i) {
+            char currentChar = string.charAt(i);
+            if (Character.isLowerCase(currentChar))
             {
-                String value=table['a'-string.charAt(i)];
+                int index = currentChar - 'a';
+                String value = table[index];
                 stringBuilder.append(value);
             }
             else
             {
-                String value=table['A'-(string.charAt(i)+26)];
+                int index = currentChar - 'A' + 26;
+                String value = table[index];
                 stringBuilder.append(value);
             }
         }
+
         return stringBuilder.toString();
     }
     protected char intToChar(int i)
