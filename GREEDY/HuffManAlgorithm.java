@@ -47,6 +47,11 @@ class HuffManEncodingAlgorithm
                 int ind=root.value-'a';
                 table[ind]=code;
             }
+            else
+            {
+                int ind=root.value-'A'+26;
+                table[ind]=code;
+            }
         }
         print(root.left,code+'0',table);
         print(root.right,code +'1',table);
