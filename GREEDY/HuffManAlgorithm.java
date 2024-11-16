@@ -1,5 +1,6 @@
 package GREEDY;
 
+import java.lang.reflect.Parameter;
 import java.util.HashMap;
 
 public class HuffManAlgorithm
@@ -19,6 +20,16 @@ public class HuffManAlgorithm
 class HuffManEncodingAlgorithm
 {
     int [] freq =new int[52];
+    class Pair
+    {
+        Character character;
+        int freq;
+        Pair(Character character,int freq)
+        {
+            this.character=character;
+            this.freq=freq;
+        }
+    }
     protected String enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
