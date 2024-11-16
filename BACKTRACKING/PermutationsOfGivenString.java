@@ -15,8 +15,11 @@ public class PermutationsOfGivenString
         }
         for(int i=0;i<str1.length();++i)
         {
-            String newStr2=str1.substring(i);
-            String newStr1=str1.substring(0,i)+str1.substring(i+1,str1.length());
+            char curr=str1.charAt(i);
+
+            String  newStr2 = str2+curr;
+
+            String newStr1 = str1.substring(0,i)+str1.substring(i+1);
             recursion(newStr1,newStr2);
         }
     }
