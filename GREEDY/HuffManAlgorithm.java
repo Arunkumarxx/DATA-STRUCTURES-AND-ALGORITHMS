@@ -5,6 +5,21 @@ import java.util.Comparator;
 
 import java.util.PriorityQueue;
 
+class Pair
+{
+    char value;
+    Pair left, right;
+    int freq;
+    Pair(char value,int freq,Pair left,Pair right)
+    {
+        this.value=value;
+        this.freq=freq;
+        this.left=left;
+        this.right=right;
+    }
+}
+
+
 public class HuffManAlgorithm
 {
 
@@ -13,7 +28,9 @@ public class HuffManAlgorithm
         String string  ="ABRACADABRA";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
-        System.out.println(encodingAlgorithm.enCodingString(string,n).freq);
+
+        Pair pair = encodingAlgorithm.enCodingString(string,n);
+        
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
 
     }
@@ -23,20 +40,7 @@ public class HuffManAlgorithm
 class HuffManEncodingAlgorithm
 {
     int [] freq =new int[52];
-    class Pair
-    {
-        char value;
-        Pair left;
-        Pair right;
-        int freq;
-        Pair(char value,int freq,Pair left,Pair right)
-        {
-            this.value=value;
-            this.freq=freq;
-            this.left=left;
-            this.right=right;
-        }
-    }
+
     protected Pair enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
