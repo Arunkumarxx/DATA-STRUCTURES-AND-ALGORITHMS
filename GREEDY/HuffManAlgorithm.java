@@ -24,10 +24,10 @@ public class HuffManAlgorithm {
         String[] table = new String[52];
         System.out.println("Encoded String: " + encodingAlgorithm.enCodingString(string, n, table));
 
-//        // Now decode the string using Huffman Decoding Algorithm
-//        HuffManDecodingAlgorithm decodingAlgorithm = new HuffManDecodingAlgorithm();
-//        String decodedString = decodingAlgorithm.deCodingString(encodingAlgorithm.enCodingString(string, n, table), table);
-//        System.out.println("Decoded String: " + decodedString);
+        // Now decode the string using Huffman Decoding Algorithm
+        HuffManDecodingAlgorithm decodingAlgorithm = new HuffManDecodingAlgorithm();
+        String decodedString = decodingAlgorithm.deCodingString(encodingAlgorithm.enCodingString(string, n, table), table);
+        System.out.println("Decoded String: " + decodedString);
     }
 }
 
