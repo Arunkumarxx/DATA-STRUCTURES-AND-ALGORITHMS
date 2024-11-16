@@ -12,7 +12,7 @@ public class HuffManAlgorithm
 
 class HuffManEncodingAlgorithm
 {
-    public static void main(Integer args)
+    public static void main(Integer[] args)
     {
 
     }
