@@ -20,5 +20,5 @@ class HuffManEncodingAlgorithm
 
 class HuffManDecodingAlgorithm
 {
-    
+
 }
