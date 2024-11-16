@@ -42,7 +42,11 @@ class HuffManEncodingAlgorithm
             return;
         if(Character.isLetter(root.value))
         {
-            table[intToChar(root.value)]=code;
+            if(Character.isLowerCase(root.value))
+            {
+                int ind=root.value-'a';
+                table[ind]=code;
+            }
         }
         print(root.left,code+'0',table);
         print(root.right,code +'1',table);
