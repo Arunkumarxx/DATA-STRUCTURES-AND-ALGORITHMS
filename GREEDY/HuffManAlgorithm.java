@@ -45,7 +45,13 @@ class HuffManEncodingAlgorithm
                 ++freq[ind-'a'];
             }
         }
+        Pair[] pairs =new Pair[];
+        for(int i=0;i<52;++i)
+        {
+
+        }
         return "";
+
     }
 }
 
