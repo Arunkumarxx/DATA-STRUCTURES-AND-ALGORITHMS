@@ -49,9 +49,9 @@ class HuffManEncodingAlgorithm
             System.out.println(root.value + " " + code.toString());
 
         }
-        print(root.left,code.append(0));
-        print(root.right,code.append(1));
-    }
+        print(root.left,new StringBuilder(code).append(0));
+        print(root.right,new StringBuilder(code).append(1));
+
     protected void  enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
