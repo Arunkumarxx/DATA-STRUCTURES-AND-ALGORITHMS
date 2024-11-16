@@ -8,7 +8,7 @@ public class HuffManAlgorithm
         String string  ="AAAAAABCCCCCCDDEEEEE";
 
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
-        
+        encodingAlgorithm.enCodingString();
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
 
     }
@@ -16,7 +16,10 @@ public class HuffManAlgorithm
 
 class HuffManEncodingAlgorithm
 {
-
+    protected String enCodingString(String string)
+    {
+        return "";
+    }
 }
 
 class HuffManDecodingAlgorithm
