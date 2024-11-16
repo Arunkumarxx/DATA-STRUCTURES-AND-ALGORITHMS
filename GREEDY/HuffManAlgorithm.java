@@ -13,7 +13,7 @@ public class HuffManAlgorithm
         String string  ="ABRACADABRA";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
-        System.out.println(encodingAlgorithm.enCodingString(string,n));
+        System.out.println(encodingAlgorithm.enCodingString(string,n).freq);
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
 
     }
@@ -69,7 +69,6 @@ class HuffManEncodingAlgorithm
             Pair newPair= new Pair('*',freqSum, pair1,pair2);
             minheap.add(newPair);
         }
-        System.out.println(minheap.peek().freq);
         return minheap.poll();
     }
     protected char intToChar(int i)
