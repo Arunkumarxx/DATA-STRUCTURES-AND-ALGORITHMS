@@ -29,7 +29,7 @@ public class HuffManAlgorithm
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
 
-        Pair pair = encodingAlgorithm.enCodingString(string,n);
+         encodingAlgorithm.enCodingString(string,n);
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
 
     }
