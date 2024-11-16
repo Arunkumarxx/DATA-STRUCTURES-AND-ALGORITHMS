@@ -146,7 +146,7 @@ class HuffManDecodingAlgorithm
     }
 }
 
-public class HuffManAlgorithm
+public class HuffManLossLessDataCompressionAlgorithm
 {
     public static void main(String[] args)
     {
