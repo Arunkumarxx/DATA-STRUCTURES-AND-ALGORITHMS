@@ -57,20 +57,16 @@ class HuffManEncodingAlgorithm
     }
     protected String  enCodingString(String string,int n,String [] table)
     {
-        for(int i=0;i<n;++i)
-        {
-            int  ind=string.charAt(i);
-            if (ind >= 'a' && ind <= 'z')
-            {
-                int pos = ind - 'a';
-                ++freq[pos];
-            }
-            else
-            {
-                int pos = (ind - 'A') + 26;
-                ++freq[pos];
+        for (int i = 0; i < n; ++i) {
+            char c = string.charAt(i);
+
+            if (Character.isLowerCase(c)) {
+                freq[c - 'a']++;
+            } else {
+                freq[c - 'A' + 26]++;
             }
         }
+
         PriorityQueue<Pair> minheap =new PriorityQueue<>(Comparator.comparing((a)->a.freq));
         for(int i=0;i<52;++i)
         {
