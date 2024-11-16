@@ -19,6 +19,7 @@ public class HuffManAlgorithm
     }
 }
 
+
 class HuffManEncodingAlgorithm
 {
     int [] freq =new int[52];
@@ -36,7 +37,7 @@ class HuffManEncodingAlgorithm
             this.right=right;
         }
     }
-    protected String enCodingString(String string,int n)
+    protected Pair enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
         {
@@ -69,7 +70,7 @@ class HuffManEncodingAlgorithm
             minheap.add(newPair);
         }
         System.out.println(minheap.peek().freq);
-        return "";
+        return minheap.poll();
     }
     protected char intToChar(int i)
     {
