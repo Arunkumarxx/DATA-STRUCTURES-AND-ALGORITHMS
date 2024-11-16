@@ -45,7 +45,10 @@ class HuffManEncodingAlgorithm
         if(root==null)
             return;
         if(Character.isLetter(root.value))
-            System.out.println(root.value+" "+code);
+        {
+            System.out.println(root.value + " " + code);
+
+        }
         print(root.left,code.append(0));
         print(root.right,code.append(1));
     }
