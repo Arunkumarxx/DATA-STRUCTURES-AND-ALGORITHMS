@@ -34,6 +34,10 @@ class HuffManEncodingAlgorithm
                 ++freq[ind-'a'];
             }
         }
+        for(int f:freq)
+        {
+            System.out.println(f);
+        }
         return "";
     }
 }
