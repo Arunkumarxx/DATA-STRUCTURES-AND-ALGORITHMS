@@ -7,7 +7,7 @@ public class HuffManAlgorithm
 
     public static void main(String[] args)
     {
-        String string  ="AAAAAABCCCCCCDDEEEEEZ";
+        String string  ="AAAAAABCCCCCCDDEEEEE";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
         encodingAlgorithm.enCodingString(string,n);
@@ -33,12 +33,6 @@ class HuffManEncodingAlgorithm
             {
                 ++freq[ind-'a'];
             }
-        }
-        int count=0;
-        for(int f:freq)
-        {
-            System.out.print(count++ +" "+f);
-            System.out.println();
         }
         return "";
     }
