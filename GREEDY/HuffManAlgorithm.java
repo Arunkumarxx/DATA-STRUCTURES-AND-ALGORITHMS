@@ -31,7 +31,7 @@ public class HuffManAlgorithm
 
         Pair pair = encodingAlgorithm.enCodingString(string,n);
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
-        
+
     }
 }
 
