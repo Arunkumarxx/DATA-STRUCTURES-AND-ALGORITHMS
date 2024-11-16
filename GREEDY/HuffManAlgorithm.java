@@ -54,10 +54,10 @@ class HuffManEncodingAlgorithm
                 minheap.add(new Pair(intToChar(i),freq[i]));
             }
         }
-        
+
         while(minheap.size()>1)
         {
-
+            
         }
         return "";
 
