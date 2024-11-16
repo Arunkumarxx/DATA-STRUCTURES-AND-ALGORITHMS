@@ -113,25 +113,31 @@ class HuffManEncodingAlgorithm
 
 class HuffManDecodingAlgorithm
 {
-    public String decodeHuffmanData(MinHeapNode root, String binStr) {
-        int n=binStr.length();
-        StringBuilder result =new StringBuilder();
-        MinHeapNode temp=root;
-        for(int i=0;i<n;++i)
-        {
-            if(Character.isLetter(temp.data))
-            {
-                result.append(temp.data);
-                temp=root;
+    public String decodeHuffmanData(Pair root, String binStr) {
+        int n = binStr.length();
+        StringBuilder result = new StringBuilder();
+        Pair temp = root;
+
+        for (int i = 0; i < n; ++i) {
+            // Traverse left for '0' and right for '1'
+            if (binStr.charAt(i) == '0') {
+                temp = temp.left;
+            } else {
+                temp = temp.right;
             }
-            if(binStr.charAt(i)=='0')
-            {
-                temp=temp.left;
+
+            // If we reach a leaf node, append the character to the result
+            if (Character.isLetter(temp.value)) {
+                result.append(temp.value);
+                temp = root; // Reset to the root for the next character
             }
-            else temp=temp.right;
         }
-        if(Character.isLetter(temp.data))
-            result.append(temp.data);
+
+        // Check if we ended at a leaf node after the loop
+        if (Character.isLetter(temp.value)) {
+            result.append(temp.value);
+        }
+
         return result.toString();
     }
 }
