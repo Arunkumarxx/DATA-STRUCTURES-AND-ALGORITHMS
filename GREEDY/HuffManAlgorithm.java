@@ -59,7 +59,7 @@ class HuffManEncodingAlgorithm
                 minheap.add(new Pair(intToChar(i),freq[i]));
             }
         }
-        
+
         return "";
 
     }
