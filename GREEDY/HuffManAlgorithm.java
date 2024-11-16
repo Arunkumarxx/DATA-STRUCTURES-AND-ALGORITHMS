@@ -29,11 +29,12 @@ class HuffManEncodingAlgorithm
         Pair left;
         Pair right;
         int freq;
-        Pair(char value,int freq )
+        Pair(char value,int freq,Pair left,Pair right)
         {
             this.value=value;
             this.freq=freq;
-            left=right=null;
+            this.left=left;
+            this.right=right;
         }
     }
     protected String enCodingString(String string,int n)
@@ -63,7 +64,7 @@ class HuffManEncodingAlgorithm
         {
             Pair pair1 =minheap.poll();
             Pair pair2 =minheap.poll();
-            int sum=pair1.freq+pair2.freq;
+            Pair newPair= new Pair('*',);
         }
         return "";
 
