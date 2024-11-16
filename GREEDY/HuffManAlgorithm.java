@@ -18,8 +18,6 @@ class Pair
         this.right=right;
     }
 }
-
-
 public class HuffManAlgorithm
 {
 
@@ -28,30 +26,28 @@ public class HuffManAlgorithm
         String string  ="ABRACADABRA";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
-
-         encodingAlgorithm.enCodingString(string,n);
+        String  [] table=new String[52];
+         encodingAlgorithm.enCodingString(string,n,table);
         HuffManDecodingAlgorithm decodingAlgorithm =new HuffManDecodingAlgorithm();
-
     }
 }
 
 
 class HuffManEncodingAlgorithm
 {
-    int [] freq =new int[52];
-    protected void print(Pair root,String  code)
+    int  [] freq =new int [52];
+    protected void print(Pair root,String  code,String [] table)
     {
         if(root==null)
             return;
         if(Character.isLetter(root.value))
         {
-            System.out.println(root.value + " : " + code.toString());
-
+            table[intToChar(root.value)]=code;
         }
-        print(root.left,code+'0');
-        print(root.right,code +'1');
+        print(root.left,code+'0',table);
+        print(root.right,code +'1',table);
     }
-    protected String  enCodingString(String string,int n)
+    protected String  enCodingString(String string,int n,String [] table)
     {
         for(int i=0;i<n;++i)
         {
@@ -83,8 +79,13 @@ class HuffManEncodingAlgorithm
             Pair newPair= new Pair('*',freqSum, pair1,pair2);
             minheap.add(newPair);
         }
-        print(minheap.poll(),"");
-
+        print(minheap.poll(),"",table);
+        StringBuilder stringBuilder =new StringBuilder();
+        for(int i=0;i<n;++i)
+        {
+            int ind=intToChar(string.charAt(i));
+            System.out.println(stringBuilder.append());
+        }
     }
     protected char intToChar(int i)
     {
