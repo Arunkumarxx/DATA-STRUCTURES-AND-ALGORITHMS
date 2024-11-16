@@ -7,7 +7,7 @@ public class HuffManAlgorithm
 
     public static void main(String[] args)
     {
-        String string  ="AAAAAABCCCCCCDDEEEEE";
+        String string  ="AAAAAABCCCCCCDDEEEEEZ";
         int n=string.length();
         HuffManEncodingAlgorithm encodingAlgorithm =new HuffManEncodingAlgorithm();
         encodingAlgorithm.enCodingString(string,n);
