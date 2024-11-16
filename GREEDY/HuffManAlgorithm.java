@@ -57,14 +57,16 @@ class HuffManEncodingAlgorithm
         {
             if(freq[i]!=0)
             {
-                minheap.add(new Pair(intToChar(i),freq[i]));
+                minheap.add(new Pair(intToChar(i),freq[i],null,null));
             }
         }
         while(minheap.size()>2)
         {
             Pair pair1 =minheap.poll();
             Pair pair2 =minheap.poll();
-            Pair newPair= new Pair('*',);
+            int freqSum=pair1.freq+pair2.freq;
+            Pair newPair= new Pair('*',freqSum, pair1,pair2);
+            minheap.add(newPair);
         }
         return "";
 
