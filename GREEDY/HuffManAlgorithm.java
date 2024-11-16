@@ -51,7 +51,7 @@ class HuffManEncodingAlgorithm
         {
             if(freq[i]!=0)
             {
-                minheap.add(new Pair())
+                minheap.add(new Pair(intToChar(i),freq[[i]]))
             }
         }
         return "";
@@ -61,7 +61,7 @@ class HuffManEncodingAlgorithm
     {
         if(i<=25)
             return ((char)('a'+i));
-        else return 'A'
+        else return (char)('A'+(i-26));
     }
 }
 
