@@ -18,7 +18,7 @@ class HuffManEncodingAlgorithm
 {
     protected String enCodingString(String string)
     {
-        return "";
+        
     }
 }
 
