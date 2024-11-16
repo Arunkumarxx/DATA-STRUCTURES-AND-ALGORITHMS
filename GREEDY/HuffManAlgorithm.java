@@ -84,7 +84,7 @@ class HuffManEncodingAlgorithm
             Pair newPair= new Pair('*',freqSum, pair1,pair2);
             minheap.add(newPair);
         }
-        print(minheap.poll(),new StringBuilder());
+        print(minheap.poll(),"");
     }
     protected char intToChar(int i)
     {
