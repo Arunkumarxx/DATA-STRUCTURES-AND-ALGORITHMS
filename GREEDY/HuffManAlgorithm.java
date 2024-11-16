@@ -60,7 +60,7 @@ class HuffManEncodingAlgorithm
                 minheap.add(new Pair(intToChar(i),freq[i],null,null));
             }
         }
-        while(minheap.size()>2)
+        while(minheap.size()>1)
         {
             Pair pair1 =minheap.poll();
             Pair pair2 =minheap.poll();
