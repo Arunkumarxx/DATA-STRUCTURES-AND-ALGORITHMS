@@ -1,6 +1,6 @@
 package BACKTRACKING;
 
-public class PermutationsOfGivenString
+public class PermutationsOfGivenStringUsingBackTracking
 {
     private void permutations(String string)
     {
@@ -13,6 +13,7 @@ public class PermutationsOfGivenString
             System.out.println(str2);
             return;
         }
+        // backTracking
         for(int i=0;i<str1.length();++i)
         {
             char curr=str1.charAt(i);
@@ -26,7 +27,7 @@ public class PermutationsOfGivenString
     public static void main(String[] args)
     {
         String str ="ABC";
-        PermutationsOfGivenString permutations =new PermutationsOfGivenString();
+        PermutationsOfGivenStringUsingBackTracking permutations =new PermutationsOfGivenStringUsingBackTracking();
         permutations.recursion(str,"");
     }
 
