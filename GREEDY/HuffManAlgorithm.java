@@ -39,7 +39,6 @@ public class HuffManAlgorithm
 class HuffManEncodingAlgorithm
 {
     int [] freq =new int[52];
-
     protected void print(Pair root,String  code)
     {
         if(root==null)
@@ -52,7 +51,7 @@ class HuffManEncodingAlgorithm
         print(root.left,code+'0');
         print(root.right,code +'1');
     }
-    protected void  enCodingString(String string,int n)
+    protected String  enCodingString(String string,int n)
     {
         for(int i=0;i<n;++i)
         {
@@ -85,6 +84,7 @@ class HuffManEncodingAlgorithm
             minheap.add(newPair);
         }
         print(minheap.poll(),"");
+
     }
     protected char intToChar(int i)
     {
