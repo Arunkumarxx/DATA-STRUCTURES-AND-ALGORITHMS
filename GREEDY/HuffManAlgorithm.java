@@ -41,17 +41,16 @@ class HuffManEncodingAlgorithm
         for(int i=0;i<n;++i)
         {
             int  ind=string.charAt(i);
-            if (ind >= 'A' && ind <= 'Z')
+            if (ind >= 'a' && ind <= 'z')
             {
-                int pos = (ind - 'a') + 26;
+                int pos = ind - 'a';
                 ++freq[pos];
             }
             else
             {
-                int pos = ind - 'A';
+                int pos = (ind - 'A') + 26;
                 ++freq[pos];
             }
-
         }
         PriorityQueue<Pair> minheap =new PriorityQueue<>(Comparator.comparing((a)->a.freq));
         for(int i=0;i<52;++i)
