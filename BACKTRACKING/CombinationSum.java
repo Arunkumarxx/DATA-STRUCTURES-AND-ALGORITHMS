@@ -4,12 +4,11 @@ import java.util.ArrayList;
 
 public class CombinationSum
 {
-    ArrayList<int []> result =new ArrayList<>();
+    ArrayList<ArrayList<Integer>> result =new ArrayList<>();
     private void combinationSum(int [] arr,ArrayList<Integer> list,int target,int sum,int ind)
     {
         if(sum==target)
-            System.out.println(list);
-
+            result.add(list);
         if(sum>target)
             return;
 
