@@ -40,10 +40,16 @@ public class CombinationSum
     {
         CombinationSum sum=new CombinationSum();
         ArrayList<Integer> arr=new ArrayList<>();
-        arr.add(2);
-        arr.add(3);
         arr.add(6);
+        arr.add(5);
         arr.add(7);
+        arr.add(1);
+        arr.add(8);
+        arr.add(2);
+        arr.add(9);
+        arr.add(7);
+        arr.add(7);
+        arr.add(9);
         int target=7;
         System.out.println(sum.combinationSum(arr, target));
     }
