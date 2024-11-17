@@ -12,8 +12,8 @@ public class CombinationSum
         if(sum==target)
             System.out.println(list);
 
-//        if(sum>target)
-//            return;
+        if(sum>target)
+            return;
 
         for(int i =0; i<arr.length;++i)
         {
