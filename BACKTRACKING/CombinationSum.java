@@ -27,7 +27,7 @@ public class CombinationSum
         for(int i=0;i<arr.length;++i)
         {
             newArray[newArray.length-1]=arr[i];
-            combinationSum(arr,target);
+            combinationSum(newArray,target);
         }
     }
     public static void main(String[] args)
