@@ -33,8 +33,10 @@ public class CombinationSum
         Collections.sort(A);
         ArrayList<Integer> list=new ArrayList<>();
         cbmSum(A, list, B, 0, 0);
-        list.forEach((a)-> System.out.println(a));
-        return new ArrayList<>();
+        for (ArrayList<Integer> arrayList : result)
+        {
+            System.out.println(arrayList);
+        }
     }
 
     public static void main(String[] args)
