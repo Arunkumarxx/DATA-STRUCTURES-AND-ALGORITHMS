@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CombinationSum
 {
     ArrayList<int []> result =new ArrayList<>();
-    private void combinationSum(int [] arr,ArrayList<Integer> list,int target,int sum)
+    private void combinationSum(int [] arr,ArrayList<Integer> list,int target,int sum,int ind)
     {
         if(sum==target)
             System.out.println(list);
@@ -13,10 +13,10 @@ public class CombinationSum
         if(sum>target)
             return;
 
-        for(int i =0; i<arr.length;++i)
+        for(int i =ind; i<arr.length;++i)
         {
             list.add(arr[i]);
-            combinationSum(arr,list,target,sum+arr[i]);
+            combinationSum(arr,list,target,sum+arr[i],i+1);
             list.remove(list.size()-1);
         }
     }
@@ -26,7 +26,7 @@ public class CombinationSum
         int target=7;
         CombinationSum sum =new CombinationSum();
         ArrayList<Integer> arrayList =new ArrayList<>();
-        sum.combinationSum(arr,arrayList,target,0);
+        sum.combinationSum(arr,arrayList,target,0,0);
         System.out.println(sum.result);
     }
 }
