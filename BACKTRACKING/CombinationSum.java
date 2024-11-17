@@ -9,6 +9,16 @@ public class CombinationSum
     ArrayList<int []> result =new ArrayList<>();
     private void combinationSum(ArrayList<Integer> list,int target)
     {
+        int sum=0;
+        for(int i=0;i<list.size();++i)
+        {
+            sum+=list.get(i);
+            if(sum==target)
+            {
+                System.out.println(list);
+                break;
+            }
+        }
         for(int i=0;i<list.size();++i)
         {
             list.add(list.get(i));
