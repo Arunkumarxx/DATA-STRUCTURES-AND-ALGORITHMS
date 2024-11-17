@@ -8,7 +8,7 @@ public class CombinationSum
     private void combinationSum(int [] arr,ArrayList<Integer> list,int target,int sum,int ind)
     {
         if(sum==target)
-            result.add(new ArrayList<>()list);
+            result.add(new ArrayList<>(list));
 
         if(sum>target)
             return;
