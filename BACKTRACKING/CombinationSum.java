@@ -9,10 +9,18 @@ public class CombinationSum
     ArrayList<int []> result =new ArrayList<>();
     private void combinationSum(int [] arr,ArrayList<Integer> list,int target)
     {
-        
+
+        int sum=0;
         for(int i=0;i<list.size();++i)
         {
-
+            sum+=list.get(i);
+            if(sum==target)
+            {
+                System.out.println(list);
+                return;
+            }
+            if(sum>target)
+                return;
         }
         for(int i =0; i<arr.length;++i)
         {
