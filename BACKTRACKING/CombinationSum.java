@@ -16,8 +16,10 @@ public class CombinationSum
             if(sum==target)
             {
                 System.out.println(list);
-                break;
+                return;
             }
+            if(sum>target)
+                return;
         }
         for(int i=0;i<list.size();++i)
         {
