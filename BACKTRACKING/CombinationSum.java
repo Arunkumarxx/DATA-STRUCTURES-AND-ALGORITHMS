@@ -16,7 +16,7 @@ public class CombinationSum
         for(int i =ind; i<arr.length;++i)
         {
             list.add(arr[i]);
-            combinationSum(arr,list,target,sum+arr[i],i+1);
+            combinationSum(arr,list,target,sum+arr[i],i);
             list.remove(list.size()-1);
         }
     }
