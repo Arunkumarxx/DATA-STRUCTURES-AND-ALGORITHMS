@@ -52,6 +52,6 @@ public class CombinationSum
         arr.add(7);
         arr.add(9);
         int target=6;
-        System.out.println(sum.combinationSum(arr, target));
+        sum.combinationSum(arr, target);
     }
 }
