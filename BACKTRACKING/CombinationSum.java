@@ -34,6 +34,7 @@ public class CombinationSum
         ArrayList<Integer> list=new ArrayList<>();
         cbmSum(A, list, B, 0, 0);
         list.forEach((a)-> System.out.println(a));
+        return new ArrayList<>();
     }
 
     public static void main(String[] args)
