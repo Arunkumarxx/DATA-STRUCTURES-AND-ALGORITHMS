@@ -50,7 +50,7 @@ public class CombinationSum
         arr.add(7);
         arr.add(7);
         arr.add(9);
-        int target=7;
+        int target=6;
         System.out.println(sum.combinationSum(arr, target));
     }
 }
