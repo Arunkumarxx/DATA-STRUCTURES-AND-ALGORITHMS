@@ -9,6 +9,7 @@ public class CombinationSum
     {
         if(sum==target)
             result.add(list);
+
         if(sum>target)
             return;
 
