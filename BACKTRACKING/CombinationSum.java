@@ -11,7 +11,9 @@ public class CombinationSum
     {
         for(int i=0;i<list.size();++i)
         {
-            
+            list.add(list.get(i));
+            combinationSum(list,target);
+            list.remove(list.size()-1);
         }
     }
     public static void main(String[] args)
