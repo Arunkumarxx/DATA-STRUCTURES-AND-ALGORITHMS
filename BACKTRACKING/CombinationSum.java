@@ -1,10 +1,30 @@
 package BACKTRACKING;
 
+import GREEDY.NMeetingsInOneRoom;
+
+import java.util.ArrayList;
+
 public class CombinationSum
 {
-    private void CombinationSum(int [] arr,int target)
+    ArrayList<int []> result =new ArrayList<>();
+    private void combinationSum(int [] arr,int target)
     {
-        
+        int sum=0;
+        for(int val:arr)
+        {
+            sum+=val;
+            if(sum==target)
+            {
+                result.add(arr);
+                return;
+            }
+            if(sum>target)
+                return;
+        }
+        for(int i=0;i<arr.length;++i)
+        {
+            
+        }
     }
     public static void main(String[] args)
     {
