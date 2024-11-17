@@ -3,6 +3,7 @@ package BACKTRACKING;
 import GREEDY.NMeetingsInOneRoom;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CombinationSum
 {
@@ -21,9 +22,14 @@ public class CombinationSum
             if(sum>target)
                 return;
         }
+        int [] newArray = new int [arr.length+1];
+        int ind=0;
+        for(int val:arr)
+            newArray[ind++]=val;
+
         for(int i=0;i<arr.length;++i)
         {
-            
+            newArray[]
         }
     }
     public static void main(String[] args)
