@@ -27,17 +27,15 @@ public class CombinationSum
         }
     }
 
-    public ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B)
+    public void combinationSum(ArrayList<Integer> A, int B)
     {
         result.clear();
         Collections.sort(A);
         ArrayList<Integer> list=new ArrayList<>();
         cbmSum(A, list, B, 0, 0);
         for (ArrayList<Integer> arrayList : result)
-        {
             System.out.println(arrayList);
         }
-    }
 
     public static void main(String[] args)
     {
