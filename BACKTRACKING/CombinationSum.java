@@ -9,7 +9,10 @@ public class CombinationSum
     ArrayList<int []> result =new ArrayList<>();
     private void combinationSum(ArrayList<Integer> list,int target)
     {
-        
+        for(int i=0;i<list.size();++i)
+        {
+            
+        }
     }
     public static void main(String[] args)
     {
