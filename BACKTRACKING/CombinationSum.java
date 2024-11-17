@@ -10,6 +10,10 @@ public class CombinationSum
     private void combinationSum(int [] arr,ArrayList<Integer> list,int target)
     {
         
+        for(int i=0;i<list.size();++i)
+        {
+
+        }
         for(int i =0; i<arr.length;++i)
         {
             list.add(arr[i]);
