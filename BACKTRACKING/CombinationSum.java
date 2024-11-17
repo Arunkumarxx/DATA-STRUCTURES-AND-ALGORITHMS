@@ -4,8 +4,16 @@ import java.util.ArrayList;
 
 public class CombinationSum
 {
-    ArrayList<ArrayList<Integer>> result =new ArrayList<>();
-    private void cbmSum(int [] arr, ArrayList<Integer> list, int target, int sum, int ind)
+    static ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B)
+    {
+        result.clear();
+        Collections.sort(A);
+        ArrayList<Integer> list =new ArrayList<Integer>();
+        cbmSum(A,list,B,0,0);
+        return result;
+    }
+    private static ArrayList<ArrayList<Integer>> result =new ArrayList<>();
+    private static void cbmSum(ArrayList<Integer>arr, ArrayList<Integer> list, int target, int sum, int ind)
     {
         if(sum==target)
             result.add(new ArrayList<>(list));
@@ -13,10 +21,13 @@ public class CombinationSum
         if(sum>target)
             return;
 
-        for(int i =ind; i<arr.length;++i)
+        for(int i =ind; i<arr.size();++i)
         {
-            list.add(arr[i]);
-            cbmSum(arr,list,target,sum+arr[i],i);
+            if (i > ind && arr.get(i) == arr.get(i - 1))
+                continue;
+
+            list.add(arr.get(i));
+            cbmSum(arr,list,target,sum+arr.get(i),i);
             list.remove(list.size()-1);
         }
     }
