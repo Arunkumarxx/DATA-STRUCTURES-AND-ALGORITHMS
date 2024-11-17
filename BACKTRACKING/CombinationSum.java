@@ -17,6 +17,7 @@ public class CombinationSum
             if(sum==target)
             {
                 result.add(arr);
+                System.out.println(Arrays.toString(arr) );
                 return;
             }
             if(sum>target)
