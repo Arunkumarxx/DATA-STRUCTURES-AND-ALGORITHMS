@@ -39,5 +39,6 @@ public class CombinationSum
         int target=7;
         CombinationSum sum =new CombinationSum();
         sum.combinationSum(arr,target);
+        System.out.println(sum.result);
     }
 }
