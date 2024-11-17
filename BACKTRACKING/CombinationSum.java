@@ -7,30 +7,9 @@ import java.util.List;
 public class CombinationSum
 {
     ArrayList<int []> result =new ArrayList<>();
-    private void combinationSum(int [] arr,int target)
+    private void combinationSum(ArrayList<Integer> list,int target)
     {
-        int sum=0;
-        for(int val:arr)
-        {
-            sum+=val;
-            if(sum==target)
-            {
-                result.add(arr);
-                return;
-            }
-            if(sum>target)
-                return;
-        }
-        int [] newArray = new int [arr.length+1];
-        int ind=0;
-        for(int val:arr)
-            newArray[ind++]=val;
-
-        for(int i=0;i<arr.length;++i)
-        {
-            newArray[newArray.length-1]=arr[i];
-            combinationSum(newArray,target);
-        }
+        
     }
     public static void main(String[] args)
     {
@@ -40,7 +19,7 @@ public class CombinationSum
         ArrayList<Integer> arrayList =new ArrayList<>();
         for(int val:arr)
             arrayList.add(val);
-        sum.combinationSum(arr,target);
+        sum.combinationSum(arrayList,target);
         System.out.println(sum.result);
     }
 }
