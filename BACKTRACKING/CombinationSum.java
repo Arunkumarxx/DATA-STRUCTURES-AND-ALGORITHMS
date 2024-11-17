@@ -29,7 +29,8 @@ public class CombinationSum
 
         for(int i=0;i<arr.length;++i)
         {
-            newArray[]
+            newArray[newArray.length-1]=arr[i];
+            combinationSum(arr,target);
         }
     }
     public static void main(String[] args)
@@ -37,7 +38,6 @@ public class CombinationSum
         int [] arr = {2,3,6,7};
         int target=7;
         CombinationSum sum =new CombinationSum();
-        sum.CombinationSum(arr,target);
+        sum.combinationSum(arr,target);
     }
-
 }
