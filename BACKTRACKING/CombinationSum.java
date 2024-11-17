@@ -35,8 +35,6 @@ public class CombinationSum
         int target=7;
         CombinationSum sum =new CombinationSum();
         ArrayList<Integer> arrayList =new ArrayList<>();
-        for(int val:arr)
-            arrayList.add(val);
         sum.combinationSum(arr,arrayList,target);
         System.out.println(sum.result);
     }
