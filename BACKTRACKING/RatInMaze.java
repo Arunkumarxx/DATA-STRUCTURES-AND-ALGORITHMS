@@ -4,56 +4,56 @@ import java.util.*;
 
 public class RatInMaze
 {
-    int n;
-    int m;
-
-    ArrayList<String> result=new ArrayList<String>();
-    boolean[][] visited;
-
-    int[] x={-1, 0, 1, 0};
-    int[] y={0, -1, 0, 1};
-
-    char[] directions={'U', 'L', 'D', 'R'};
-
-    StringBuilder string=new StringBuilder();
-
-    public ArrayList<String> findPath(int[][] mat)
+    public int[][] ShortestDistance(int[][] matrix)
     {
-        this.n=mat.length;
-        this.m=mat[0].length;
-        this.visited=new boolean[n][m];
-        if(mat[0][0]==1&&mat[n-1][m-1]==1)
-            dfs(mat, 0, 0);
-        return result;
+        int n=matrix.length;
+        int[][] sol=new int[n][n];
+
+        helper(0, 0, matrix, sol);
+
+        if(sol[n-1][n-1]==0)
+        {
+            int[][] ans=new int[1][1];
+            ans[0][0]=-1;
+            return ans;
+        }
+
+        return sol;
     }
 
-    public void dfs(int[][] mat, int row, int col)
+    boolean isSafe(int x, int y, int[][] matrix)
     {
-        if(row==n-1&&col==m-1)
-        {
-            result.add(string.toString());
-            return;
-        }
-        visited[row][col]=true;
-
-        for(int i=0;i<4;++i)
-        {
-            int newRow=row+x[i];
-            int newCol=col+y[i];
-            if(isValid(newRow, newCol, mat))
-            {
-                string.append(directions[i]);
-                dfs(mat, newRow, newCol);
-                string.deleteCharAt(string.length()-1);
-            }
-        }
-        visited[row][col]=false;
+        int n=matrix.length;
+        return (x>=0&&x<n&&y>=0&&y<n&&matrix[x][y]!=0);
     }
 
-    public boolean isValid(int x, int y, int[][] mat)
+    boolean helper(int x, int y, int[][] matrix, int[][] sol)
     {
-        if(x>=0&&y>=0&&x<n&&y<m&&!visited[x][y]&&mat[x][y]==1)
+        int n=matrix.length;
+
+        if(x==n-1&&y==n-1)
+        {
+            sol[x][y]=1;
             return true;
+        }
+
+        if(isSafe(x, y, matrix))
+        {
+            sol[x][y]=1;
+
+            for(int step=1;step<=matrix[x][y]&&step<n;++step)
+            {
+                if(helper(x, y+step, matrix, sol))
+                    return true;
+
+                if(helper(x+step, y, matrix, sol))
+                    return true;
+            }
+
+            sol[x][y]=0;
+            return false;
+        }
+
         return false;
     }
 
