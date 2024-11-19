@@ -17,7 +17,6 @@ public class RatInMaze
         }
         return sol;
     }
-
     boolean isSafe(int row, int col, int[][] matrix)
     {
         int n=matrix.length;
