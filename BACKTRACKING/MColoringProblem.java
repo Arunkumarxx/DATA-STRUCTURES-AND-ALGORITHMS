@@ -2,7 +2,7 @@ package BACKTRACKING;
 
 import java.util.*;
 
-public class M_Coloring
+public class MColoringProblem
 {
     int[] color;
     ArrayList<ArrayList<Integer>> list;
@@ -55,7 +55,7 @@ public class M_Coloring
 
     public static void main(String[] args)
     {
-        M_Coloring obj = new M_Coloring();
+        MColoringProblem obj = new MColoringProblem();
         int v = 4;
         List<int[]> edges = Arrays.asList(
                 new int[]{0, 1},
