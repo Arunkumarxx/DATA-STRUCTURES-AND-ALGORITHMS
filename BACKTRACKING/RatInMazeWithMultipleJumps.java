@@ -1,5 +1,7 @@
 package BACKTRACKING;
-import java.util.*;
+
+import java.util.Arrays;
+
 public class RatInMazeWithMultipleJumps
 {
     public int[][] ShortestDistance(int[][] matrix)
@@ -77,6 +79,7 @@ public class RatInMazeWithMultipleJumps
                 {0, 1, 0, 1},
                 {0, 0, 0, 1}
         };
+
         int[][] result2=obj.ShortestDistance(maze2);
         for(int[] row:result2)
         {
