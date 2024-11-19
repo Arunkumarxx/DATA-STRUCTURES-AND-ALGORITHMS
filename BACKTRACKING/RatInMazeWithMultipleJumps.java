@@ -8,12 +8,10 @@ public class RatInMazeWithMultipleJumps
     {
         int n=matrix.length;
         int[][] sol=new int[n][n];
-
         if(!helper(0, 0, matrix, sol)||sol[n-1][n-1]==0)
         {
             return new int[][]{{-1}};
         }
-
         return sol;
     }
 
@@ -26,17 +24,14 @@ public class RatInMazeWithMultipleJumps
     boolean helper(int row, int col, int[][] matrix, int[][] sol)
     {
         int n=matrix.length;
-
         if(row==n-1&&col==n-1)
         {
             sol[row][col]=1;
             return true;
         }
-
         if(isSafe(row, col, matrix))
         {
             sol[row][col]=1;
-
             for(int step=1;step<=matrix[row][col]&&step<n;++step)
             {
                 if(helper(row, col+step, matrix, sol))
@@ -45,10 +40,8 @@ public class RatInMazeWithMultipleJumps
                 if(helper(row+step, col, matrix, sol))
                     return true;
             }
-
             sol[row][col]=0;
         }
-
         return false;
     }
 
@@ -56,26 +49,25 @@ public class RatInMazeWithMultipleJumps
     {
         RatInMazeWithMultipleJumps obj=new RatInMazeWithMultipleJumps();
 
-        int[][] maze1={
+        int[][] maze1=
+                {
                 {2, 1, 0, 0},
                 {3, 0, 0, 1},
                 {0, 1, 0, 1},
                 {0, 0, 0, 1}
         };
-
         int[][] result1=obj.ShortestDistance(maze1);
         for(int[] row:result1)
         {
             System.out.println(Arrays.toString(row));
         }
-
-        int[][] maze2={
+        int[][] maze2=
+                {
                 {2, 1, 0, 0},
                 {2, 0, 0, 1},
                 {0, 1, 0, 1},
                 {0, 0, 0, 1}
         };
-
         int[][] result2=obj.ShortestDistance(maze2);
         for(int[] row:result2)
         {
