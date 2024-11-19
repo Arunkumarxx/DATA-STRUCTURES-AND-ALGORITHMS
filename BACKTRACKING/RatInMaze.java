@@ -57,11 +57,8 @@ public class RatInMaze
                 {0, 0, 0, 1}
         };
         int[][] result=obj.ShortestDistance(matrix);
-
         for(int[] row:result)
             System.out.println(Arrays.toString(row));
-
-
         int[][] matrix2={
                 {2, 1, 0, 0},
                 {2, 0, 0, 1},
@@ -71,6 +68,5 @@ public class RatInMaze
         int[][] result2=obj.ShortestDistance(matrix2);
         for(int[] row:result2)
             System.out.println(Arrays.toString(row));
-
     }
 }
