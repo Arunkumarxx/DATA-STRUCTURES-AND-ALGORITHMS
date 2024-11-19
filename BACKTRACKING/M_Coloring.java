@@ -66,8 +66,8 @@ public class M_Coloring
         int m = 3;
 
         if (obj.graphColoring(v, edges, m))
-         System.out.println("The graph can be colored with " + m + " colors.");
+         System.out.println("The graph can be colored with " + m + " colors ");
         else
-            System.out.println("The graph cannot be colored with " + m + " colors.");
+            System.out.println("The graph cannot be colored with " + m + " colors ");
     }
 }
