@@ -4,7 +4,6 @@ import java.util.*;
 
 public class RatInMaze
 {
-
         int n;
         int m;
 
