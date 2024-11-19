@@ -9,13 +9,9 @@ public class RatInMazeWithMultipleJumps
         int n=matrix.length;
         int[][] sol=new int[n][n];
 
-        helper(0, 0, matrix, sol);
-
-        if(sol[n-1][n-1]==0)
+        if(!helper(0, 0, matrix, sol)||sol[n-1][n-1]==0)
         {
-            int[][] ans=new int[1][1];
-            ans[0][0]=-1;
-            return ans;
+            return new int[][]{{-1}};
         }
 
         return sol;
@@ -51,11 +47,11 @@ public class RatInMazeWithMultipleJumps
             }
 
             sol[row][col]=0;
-            return false;
         }
 
         return false;
     }
+
     public static void main(String[] args)
     {
         RatInMazeWithMultipleJumps obj=new RatInMazeWithMultipleJumps();
