@@ -33,7 +33,7 @@ public class PermutationsOfGivenStringUsingBackTracking
 
     public static void main(String[] args)
     {
-        String str="ABC";
+        String str="1034";
         PermutationsOfGivenStringUsingBackTracking permutations=new PermutationsOfGivenStringUsingBackTracking();
         System.out.println("Permutations of given string: " + permutations.findPermutation(str));
     }
