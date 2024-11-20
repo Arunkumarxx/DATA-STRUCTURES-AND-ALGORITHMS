@@ -7,7 +7,7 @@ public class LargestNumberInKSwaps
     {
         char c1='a';
         char c2='s';
-        System.out.println(c1>c2);
+        System.out.println(c1<c2);
     }
 
 }
