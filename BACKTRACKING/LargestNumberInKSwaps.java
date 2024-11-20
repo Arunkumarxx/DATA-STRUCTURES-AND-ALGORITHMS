@@ -1,5 +1,10 @@
 package BACKTRACKING;
 
+class Res {
+    static String max = "";
+}
+
+
 public class LargestNumberInKSwaps
 {
 
