@@ -27,7 +27,6 @@ public class UniqueSubsets
         UniqueSubsets uniqueSubsets =new UniqueSubsets();
         int [] arr ={1,2,3};
         System.out.println(uniqueSubsets.uniqueSubsets(arr,arr.length));
-        System.out.println(uniqueSubsets.list);
     }
 
 }
