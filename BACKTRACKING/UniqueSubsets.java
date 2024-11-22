@@ -16,8 +16,13 @@ public class UniqueSubsets
         list.add(new ArrayList<>(arrayList));
         for(int i=ind;i<n;++i)
         {
+            if(!arrayList.isEmpty() && arrayList.get(arrayList.size()-1)==arr[ind])
+                continue;
+            
             arrayList.add(arr[i]);
+
             generateUniqueSubSets(arr,arrayList,n,ind+1);
+
             arrayList.remove(arrayList.size()-1);
         }
     }
