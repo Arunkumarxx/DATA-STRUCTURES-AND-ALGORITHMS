@@ -13,16 +13,7 @@ public class UniqueSubsets
     }
     private void generateUniqueSubSets(int [] arr,int n,int ind)
     {
-        if(ind==n-1)
-            return;
-
-        ArrayList<Integer> innerList =new ArrayList<>();
-
-        for(int i=0;i<=ind;++i)
-            innerList.add(arr[i]);
-
-        list.add(innerList);
-        generateUniqueSubSets(arr,n,ind+1);
+        
     }
 
     public static void main(String[] args)
