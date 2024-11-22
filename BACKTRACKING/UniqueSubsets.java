@@ -13,7 +13,7 @@ public class UniqueSubsets
     }
     private void generateUniqueSubSets(int [] arr,ArrayList<Integer> arrayList,int n,int ind)
     {
-        list.add(arrayList);
+        list.add(new ArrayList<>(arrayList));
         for(int i=ind;i<n;++i)
         {
             
