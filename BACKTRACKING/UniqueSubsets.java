@@ -4,19 +4,21 @@ import java.util.ArrayList;
 
 public class UniqueSubsets
 {
-    private  ArrayList<ArrayList<Integer>> list;
-    private ArrayList<ArrayList<Integer>> uniqueSubsets(int [] arr,int n)
+    private static ArrayList<ArrayList<Integer>> list =new ArrayList<>();
+    public static ArrayList <ArrayList <Integer>> AllSubsets(int arr[], int n)
     {
-        list=new ArrayList<>();
+
+        list.clear();
+        Arrays.sort(arr);
         generateUniqueSubSets(arr,new ArrayList<>(),n,0);
         return list;
     }
-    private void generateUniqueSubSets(int [] arr,ArrayList<Integer> arrayList,int n,int ind)
+    private static void generateUniqueSubSets(int [] arr,ArrayList<Integer> arrayList,int n,int ind)
     {
         list.add(new ArrayList<>(arrayList));
         for(int i=ind;i<n;++i)
         {
-            if(i>ind && arr[i]==arr[i-1])
+            if(i>ind  && arr[i-1]==arr[i])
                 continue;
 
             arrayList.add(arr[i]);
@@ -26,7 +28,6 @@ public class UniqueSubsets
             arrayList.remove(arrayList.size()-1);
         }
     }
-
     public static void main(String[] args)
     {
         UniqueSubsets uniqueSubsets =new UniqueSubsets();
