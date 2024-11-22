@@ -7,11 +7,16 @@ public class UniqueSubsets
     private  ArrayList<ArrayList<Integer>> list;
     private ArrayList<ArrayList<Integer>> uniqueSubsets(int [] arr,int n)
     {
-        
+        generateUniqueSubSets(arr,n,0);
+        return list;
     }
-    private void generateUniqueSubSets()
+    private void generateUniqueSubSets(int [] arr,int n,int ind)
     {
-
+        ArrayList<Integer> innerList =new ArrayList<>();
+        for(int i=0;i<ind;++i)
+        {
+            innerList.add(arr[i]);
+        }
     }
 
     public static void main(String[] args)
