@@ -16,12 +16,12 @@ public class UniqueSubsets
         list.add(new ArrayList<>(arrayList));
         for(int i=ind;i<n;++i)
         {
-            if(!arrayList.isEmpty() && arrayList.get(arrayList.size()-1)==arr[ind])
+            if(i>ind && arr[i]==arr[i-1])
                 continue;
 
             arrayList.add(arr[i]);
 
-            generateUniqueSubSets(arr,arrayList,n,ind+1);
+            generateUniqueSubSets(arr,arrayList,n,i+1);
 
             arrayList.remove(arrayList.size()-1);
         }
