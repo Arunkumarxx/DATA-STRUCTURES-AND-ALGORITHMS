@@ -4,11 +4,16 @@ import java.util.ArrayList;
 
 public class UniqueSubsets
 {
+    private  ArrayList<ArrayList<Integer>> list;
     private ArrayList<ArrayList<Integer>> uniqueSubsets(int [] arr,int n)
     {
         
-        return new ArrayList<>();
     }
+    private void generateUniqueSubSets()
+    {
+
+    }
+
     public static void main(String[] args)
     {
         UniqueSubsets uniqueSubsets =new UniqueSubsets();
