@@ -24,14 +24,6 @@ public class UniqueSubsets
         list.add(innerList);
 
         generateUniqueSubSets(arr,n,ind+1);
-
-        innerList.clear();
-
-        for(int i=0;i<ind;++i)
-            innerList.add(arr[i]);
-
-        for(int i=ind+1;i<n;++i)
-            innerList.add(arr[i]);
     }
 
     public static void main(String[] args)
