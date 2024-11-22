@@ -7,6 +7,7 @@ public class UniqueSubsets
     private  ArrayList<ArrayList<Integer>> list;
     private ArrayList<ArrayList<Integer>> uniqueSubsets(int [] arr,int n)
     {
+        list=new ArrayList<>();
         generateUniqueSubSets(arr,n,0);
         return list;
     }
