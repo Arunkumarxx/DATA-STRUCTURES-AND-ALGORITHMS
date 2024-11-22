@@ -22,7 +22,6 @@ public class UniqueSubsets
             innerList.add(arr[i]);
 
         list.add(innerList);
-
         generateUniqueSubSets(arr,n,ind+1);
     }
 
