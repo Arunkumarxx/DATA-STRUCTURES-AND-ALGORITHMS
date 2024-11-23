@@ -70,34 +70,23 @@ public class NQueensProblem {
 
         for (List<String> solution : solutions) {
             System.out.println("Solution " + count + ":");
-            printChessBoardWithBorders(solution);
+            printChessBoard(solution);
             System.out.println();
             count++;
         }
     }
 
-    // Print chessboard with box-like borders
-    static void printChessBoardWithBorders(List<String> solution) {
-        int n = solution.size();
-        System.out.println("╔" + "═".repeat(n * 4 - 1) + "╗"); // top border
-
-        for (int i = 0; i < n; i++) {
-            System.out.print("║");
-            for (int j = 0; j < n; j++) {
-                // Printing the queen or empty space inside the border
-                if (solution.get(i).charAt(j) == 'Q') {
-                    System.out.print(" ♛  ");
-                } else {
-                    if ((i + j) % 2 == 0) {
-                        System.out.print("⬜  "); // White square
-                    } else {
-                        System.out.print("⬛  "); // Black square
-                    }
-                }
-            }
-            System.out.println("║");
+    static void printChessBoard(List<String> solution) {
+        for (int i = 0; i < solution.size(); i++) {
+            for (int j = 0; j < solution.get(i).length(); j++)
+                if (solution.get(i).charAt(j) == 'Q')
+                    System.out.print("♛ ");
+                 else
+                    if ((i + j) % 2 == 0)
+                        System.out.print("⬜ ");
+                     else
+                        System.out.print("⬛ ");
+            System.out.println();
         }
-
-        System.out.println("╚" + "═".repeat(n * 4 - 1) + "╝"); // bottom border
     }
 }
