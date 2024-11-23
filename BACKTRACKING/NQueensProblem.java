@@ -28,7 +28,7 @@ public class NQueensProblem
                 if(!chessBoardTrack[i][j])
                 {
                     ++totalQueens;
-                    chessBoard[i][j]='u{1F478}';
+                    chessBoard[i][j]='U+1F478';
                     fillQueensTrack(i,j,n);
                 }
                 else chessBoard[i][j]='.';
