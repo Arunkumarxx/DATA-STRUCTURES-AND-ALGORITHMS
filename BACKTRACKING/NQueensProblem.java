@@ -85,7 +85,7 @@ public class NQueensProblem {
                     if ((i + j) % 2 == 0)
                         System.out.print("⬜ ");
                      else
-                        System.out.print("⬛ "); 
+                        System.out.print("⬛ ");
             System.out.println();
         }
     }
