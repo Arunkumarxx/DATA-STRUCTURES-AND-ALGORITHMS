@@ -77,4 +77,65 @@ public class NQueensProblem
         }
 
     }
+
+
+    class Solution
+    {
+        List<List<String>> result=new ArrayList<>();
+        boolean[] cols;
+        boolean[] diag1;
+        boolean[] diag2;
+
+        public List<List<String>> solveNQueens(int n)
+        {
+            cols=new boolean[n];
+            diag1=new boolean[2*n-1];
+            diag2=new boolean[2*n-1];
+
+            char[][] board=new char[n][n];
+            for(char[] row:board)
+            {
+                Arrays.fill(row, '.');
+            }
+
+            placeQueens(0, n, board);
+            return result;
+        }
+
+        private void placeQueens(int row, int n, char[][] board)
+        {
+            if(row==n)
+            {
+                addToList(board);
+                return;
+            }
+
+            for(int col=0;col<n;col++)
+            {
+                if(cols[col]||diag1[row-col+n-1]||diag2[row+col])
+                {
+                    continue;
+                }
+
+                board[row][col]='Q';
+                cols[col]=diag1[row-col+n-1]=diag2[row+col]=true;
+
+                placeQueens(row+1, n, board);
+
+                board[row][col]='.';
+                cols[col]=diag1[row-col+n-1]=diag2[row+col]=false;
+            }
+        }
+
+        private void addToList(char[][] board)
+        {
+            List<String> solution=new ArrayList<>();
+            for(char[] row:board)
+            {
+                solution.add(new String(row));
+            }
+            result.add(solution);
+        }
+    }
+
 }
