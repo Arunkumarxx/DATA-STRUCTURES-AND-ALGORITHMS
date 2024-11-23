@@ -50,7 +50,7 @@ public class NQueensProblem
             if (validate(board, row, col)) {
                 board[row][col] = 'Q';
                 dfs(col + 1, board, res);
-                board[row][col] = '.';
+                board[row][col] = 'X';
             }
         }
     }
