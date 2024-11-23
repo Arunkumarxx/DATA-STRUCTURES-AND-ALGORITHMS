@@ -1,5 +1,6 @@
 package BACKTRACKING;
 
+import java.util.*;
 public class NQueensProblem
 {
     List<List<String>> result =new ArrayList<>();
@@ -110,7 +111,7 @@ public class NQueensProblem
     {
         int n=1;
         NQueensProblem queensProblem =new NQueensProblem();
-        queensProblem.solveNQueens(n);
+        System.out.println(queensProblem.solveNQueens(n));
 
     }
 }
