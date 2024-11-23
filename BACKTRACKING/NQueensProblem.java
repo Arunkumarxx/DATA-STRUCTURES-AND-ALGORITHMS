@@ -38,6 +38,15 @@ public class NQueensProblem
         {
             for(int i=0;i<n;++i)
             {
+                for(int j=0;j<n;++j)
+                {
+                    if(i==row && j==col)
+                        return;
+                    else chessBoard[i][j]='.';
+                }
+            }
+            for(int i=0;i<n;++i)
+            {
                 System.out.println();
                 for(int j=0;j<n;++j)
                 {
