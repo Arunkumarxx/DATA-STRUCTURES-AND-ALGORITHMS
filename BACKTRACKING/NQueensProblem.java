@@ -25,8 +25,6 @@ public class NQueensProblem
         {
             for(int j=(i==row?col:0);j<n;++j)
             {
-                if(totalQueens==n)
-                    return;
                 if(!chessBoardTrack[i][j])
                 {
                     ++totalQueens;
