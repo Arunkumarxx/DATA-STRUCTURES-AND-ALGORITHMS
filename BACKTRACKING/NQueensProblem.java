@@ -1,2 +1,11 @@
-package BACKTRACKING;public class NqueensProblem {
+package BACKTRACKING;
+
+public class NQueensProblem
+{
+    
+    public static void main(String[] args)
+    {
+
+    }
+
 }
