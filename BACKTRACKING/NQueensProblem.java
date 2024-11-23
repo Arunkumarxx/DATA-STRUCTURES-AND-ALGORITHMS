@@ -109,7 +109,7 @@ public class NQueensProblem
     }
     public static void main(String[] args)
     {
-        int n=1;
+        int n=4;
         NQueensProblem queensProblem =new NQueensProblem();
         System.out.println(queensProblem.solveNQueens(n));
 
