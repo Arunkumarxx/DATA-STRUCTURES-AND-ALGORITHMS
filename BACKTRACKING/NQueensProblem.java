@@ -36,7 +36,6 @@ public class NQueensProblem
         }
         if(totalQueens==n)
         {
-
             for(int i=0;i<n;++i)
             {
                 for(int j=0;j<n;++j)
@@ -107,7 +106,6 @@ public class NQueensProblem
         int n=1;
         NQueensProblem queensProblem =new NQueensProblem();
         queensProblem.nQueensProblem(n);
-
+        
     }
-
 }
