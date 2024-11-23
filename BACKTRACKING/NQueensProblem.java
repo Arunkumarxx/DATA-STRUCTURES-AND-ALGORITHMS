@@ -112,9 +112,6 @@ public class NQueensProblem
         int n=4;
         NQueensProblem queensProblem =new NQueensProblem();
         List<List<String>> result =queensProblem.solveNQueens(n);
-        for(List<String> strings:result)
-        {
-            System.out.println(strings);
-        }
+        
     }
 }
