@@ -1,11 +1,9 @@
 package BACKTRACKING;
 
-public class ChessBlackAndWhiteBlackKnightProblem
+public class NKnights
 {
-
     public static void main(String[] args)
     {
-
+        
     }
-
 }
