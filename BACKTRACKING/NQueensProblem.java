@@ -48,7 +48,6 @@ public class NQueensProblem
                     System.out.print(" "+chessBoard[i][j]+" ");
                 }
             }
-            System.out.println();
         }
     }
     private void fillQueensTrack(int row,int col,int n)
