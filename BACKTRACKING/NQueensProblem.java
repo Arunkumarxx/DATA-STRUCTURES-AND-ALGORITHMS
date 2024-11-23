@@ -72,9 +72,8 @@ public class NQueensProblem
         {
             for(int j=0;j<n;++j)
             {
-                System.out.print(queen.get(i).get(j));
+                
             }
-            System.out.println();
         }
 
     }
