@@ -106,7 +106,7 @@ public class NQueensProblem
     }
     public static void main(String[] args)
     {
-        int n=4;
+        int n=1;
         NQueensProblem queensProblem =new NQueensProblem();
         queensProblem.nQueensProblem(n);
 
