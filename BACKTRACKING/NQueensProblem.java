@@ -8,6 +8,7 @@ public class NQueensProblem
     private void nQueensProblem(int n)
     {
         chessBoardTrack= new boolean[n][n];
+        chessBoard =new char[n][n];
         
     }
     public static void main(String[] args)
