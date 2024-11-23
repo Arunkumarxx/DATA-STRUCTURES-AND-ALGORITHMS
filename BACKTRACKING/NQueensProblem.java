@@ -43,6 +43,7 @@ public class NQueensProblem
             chessBoardTrack[row][j]=true;
 
         // diagonal top left to right bottom
+        
     }
     public static void main(String[] args)
     {
