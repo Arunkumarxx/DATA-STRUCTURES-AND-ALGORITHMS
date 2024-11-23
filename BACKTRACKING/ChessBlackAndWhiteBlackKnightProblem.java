@@ -1,6 +1,6 @@
 package BACKTRACKING;
 
-public class BlackAndWhite
+public class ChessBlackAndWhiteBlackKnightProblem
 {
 
     public static void main(String[] args)
