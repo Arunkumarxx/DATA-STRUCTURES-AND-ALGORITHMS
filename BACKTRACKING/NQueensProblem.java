@@ -12,6 +12,7 @@ public class NQueensProblem
         {
             for(int j=0;j<n;++j)
             {
+                checkAllPossibleWays(i,j,n);
             }
         }
     }
@@ -24,10 +25,25 @@ public class NQueensProblem
         {
             for(int j=(i==row?col:0);j<n;++j)
             {
+                if(totalQueens==n)
+                    return;
                 if(!chessBoardTrack[i][j])
                 {
+                    ++totalQueens;
                     chessBoard[i][j]='Q';
                     fillQueensTrack(i,j,n);
+                }
+                else chessBoard[i][j]='.';
+            }
+        }
+        if(totalQueens==n)
+        {
+            for(int i=0;i<n;++i)
+            {
+                System.out.println();
+                for(int j=0;j<n;++j)
+                {
+                    System.out.print(chessBoard[i][j]+" ");
                 }
             }
         }
@@ -88,6 +104,8 @@ public class NQueensProblem
     public static void main(String[] args)
     {
         int n=4;
+        NQueensProblem queensProblem =new NQueensProblem();
+        queensProblem.nQueensProblem(n);
 
     }
 
