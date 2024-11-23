@@ -22,11 +22,27 @@ public class NQueensProblem
         chessBoard =new char[n][n];
         for(int i=row;i<n;++i)
         {
-            for(int j=0;j<n;++j)
+            for(int j=(i==row?col:0);j<n;++j)
             {
-
+                if(!chessBoardTrack[i][j])
+                {
+                    chessBoard[i][j]='Q';
+                    fillQueensTrack(i,j,n);
+                }
             }
         }
+    }
+    private void fillQueensTrack(int row,int col,int n)
+    {
+        // top to bottom
+        for(int i=0;i<n;++i)
+            chessBoardTrack[i][col]=true;
+
+        // left to right
+        for(int j=0;j<n;++j)
+            chessBoardTrack[row][j]=true;
+
+        // diagonal top left to right bottom
     }
     public static void main(String[] args)
     {
