@@ -2,68 +2,75 @@ package BACKTRACKING;
 
 public class NQueensProblem
 {
-
+    List<List<String>> result =new ArrayList<>();
     boolean [][] chessBoardTrack ;
-    char [][] chessBoard;
-
-    private void nQueensProblem(int n)
+    boolean [][] chessBoard;
+    public List<List<String>> solveNQueens(int n)
     {
+        chessBoardTrack= new boolean [n][n];
+        chessBoard= new boolean [n][n];
         for(int i=0;i<n;++i)
         {
+            fillTracks(i,0,n,true);
+            chessBoard[i][0]=true;
+            NQueens(1,n);
+            fillTracks(i,0,n,false);
+            chessBoard[i][0]=false;
+        }
+        return result;
+    }
+    public void NQueens(int col,int n)
+    {
+        if(col==n)
+        {
+            addToList(n);
+            return;
+        }
+        for(int i=0;i<n;++i)
+        {
+            if(!chessBoardTrack[i][col])
+            {
+
+                fillTracks(i,col,n,true);
+                chessBoard[i][col]=true;
+
+                NQueens(col+1,n);
+
+                fillTracks(i,col,n,false);
+                chessBoard[i][col]=false;
+            }
+        }
+    }
+    public void addToList(int n)
+    {
+        List<String> list =new ArrayList();
+
+        for(int i=0;i<n;++i)
+        {
+            StringBuilder str =new StringBuilder();
             for(int j=0;j<n;++j)
             {
-                checkAllPossibleWays(i,j,n);
+                if(chessBoard[i][j])
+                    str.append('Q');
+                else str.append('.');
             }
+            list.add(str.toString());
         }
+        result.add(list);
     }
-    private void checkAllPossibleWays(int row,int col,int n)
+    public void fillTracks(int row,int col,int n,boolean value)
     {
-        int totalQueens=0;
-        chessBoardTrack= new boolean[n][n];
-        chessBoard =new char[n][n];
-        for(int i=row;i<n;++i)
-        {
-            for(int j=(i==row?col:0);j<n;++j)
-            {
-                if(!chessBoardTrack[i][j])
-                {
-                    ++totalQueens;
-                    chessBoard[i][j]='♕';
-                    fillQueensTrack(i,j,n);
-                }
-                else chessBoard[i][j]='.';
-            }
-        }
-        if(totalQueens==n)
-        {
-            for(int i=0;i<n;++i)
-            {
-                for(int j=0;j<n;++j)
-                {
-                    if(chessBoard[i][j]=='\u0000')
-                        System.out.print(" "+'.'+" ");
-                    else
-                    System.out.print(" "+chessBoard[i][j]+" ");
-                }
-            }
-        }
-    }
-    private void fillQueensTrack(int row,int col,int n)
-    {
-
         for(int i=0;i<n;++i)
-            chessBoardTrack[i][col]=true;
+            chessBoardTrack[i][col]=value;
 
         for(int j=0;j<n;++j)
-            chessBoardTrack[row][j]=true;
-
-        // all possible ways of diagonal for queen
+            chessBoardTrack[row][j]=value;
 
         int i=row-1;
         int j=col-1;
         while (isValid(i, j, n))
         {
-            chessBoardTrack[i][j] = true;
+            chessBoardTrack[i][j] = value;
             i -= 1;
             j -= 1;
         }
@@ -72,7 +79,7 @@ public class NQueensProblem
         j=col+1;
         while(isValid(i,j,n))
         {
-            chessBoardTrack[i][j]=true;
+            chessBoardTrack[i][j]=value;
             i-=1;
             j+=1;
         }
@@ -81,7 +88,7 @@ public class NQueensProblem
         j=col-1;
         while(isValid(i,j,n))
         {
-            chessBoardTrack[i][j]=true;
+            chessBoardTrack[i][j]=value;
             i+=1;
             j-=1;
         }
@@ -90,11 +97,10 @@ public class NQueensProblem
         j=col+1;
         while(isValid(i,j,n))
         {
-            chessBoardTrack[i][j]=true;
+            chessBoardTrack[i][j]=value;
             i+=1;
             j+=1;
         }
-
     }
     private boolean isValid(int x,int y,int n)
     {
@@ -104,7 +110,7 @@ public class NQueensProblem
     {
         int n=1;
         NQueensProblem queensProblem =new NQueensProblem();
-        queensProblem.nQueensProblem(n);
+        queensProblem.solveNQueens(n);
 
     }
 }
