@@ -36,20 +36,15 @@ public class NQueensProblem
         }
         if(totalQueens==n)
         {
-            for(int i=0;i<n;++i)
-            {
-                for(int j=0;j<n;++j)
-                {
-                    if(i==row && j==col)
-                        break;
-                    else chessBoard[i][j]='.';
-                }
-            }
+
             for(int i=0;i<n;++i)
             {
                 System.out.println();
                 for(int j=0;j<n;++j)
                 {
+                    if(chessBoard[i][j]==' ')
+                        System.out.print('.');
+                    else
                     System.out.print(chessBoard[i][j]+" ");
                 }
             }
