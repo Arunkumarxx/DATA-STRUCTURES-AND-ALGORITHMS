@@ -78,18 +78,14 @@ public class NQueensProblem {
 
     static void printChessBoard(List<String> solution) {
         for (int i = 0; i < solution.size(); i++) {
-            for (int j = 0; j < solution.get(i).length(); j++) {
-                if (solution.get(i).charAt(j) == 'Q') {
-                    System.out.print("♛ "); // Queen symbol
-                } else {
-                    // Alternate colors for the chessboard
-                    if ((i + j) % 2 == 0) {
-                        System.out.print("⬜ "); // White square
-                    } else {
-                        System.out.print("⬛ "); // Black square
-                    }
-                }
-            }
+            for (int j = 0; j < solution.get(i).length(); j++)
+                if (solution.get(i).charAt(j) == 'Q')
+                    System.out.print("♛ ");
+                 else
+                    if ((i + j) % 2 == 0)
+                        System.out.print("⬜ ");
+                     else
+                        System.out.print("⬛ "); 
             System.out.println();
         }
     }
