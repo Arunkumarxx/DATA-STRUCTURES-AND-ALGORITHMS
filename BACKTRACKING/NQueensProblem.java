@@ -111,7 +111,14 @@ public class NQueensProblem
     {
         int n=4;
         NQueensProblem queensProblem =new NQueensProblem();
-        System.out.println(queensProblem.solveNQueens(n));
-
+        List<List<String>> result =queensProblem.solveNQueens(n);
+        for(List<String> strings:result)
+        {
+            for(String val:strings)
+            {
+                System.out.print(val+" ");
+            }
+            System.out.println();
+        }
     }
 }
