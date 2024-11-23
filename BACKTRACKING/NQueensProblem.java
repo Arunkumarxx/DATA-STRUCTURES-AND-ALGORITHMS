@@ -2,7 +2,7 @@ package BACKTRACKING;
 
 import java.util.*;
 
-public class NQueens
+class NQueens
 {
     // Solution 1: Using Depth-First Search (DFS) and Validation
     public static List<List<String>> solveNQueensDFS(int n)
