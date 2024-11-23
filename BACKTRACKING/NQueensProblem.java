@@ -41,7 +41,7 @@ public class NQueensProblem
                 for(int j=0;j<n;++j)
                 {
                     if(i==row && j==col)
-                        return;
+                        break;
                     else chessBoard[i][j]='.';
                 }
             }
