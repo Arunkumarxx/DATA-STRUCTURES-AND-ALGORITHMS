@@ -39,7 +39,6 @@ public class NQueensProblem
 
             for(int i=0;i<n;++i)
             {
-                System.out.println();
                 for(int j=0;j<n;++j)
                 {
                     if(chessBoard[i][j]=='\u0000')
