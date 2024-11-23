@@ -42,7 +42,7 @@ public class NQueensProblem
                 System.out.println();
                 for(int j=0;j<n;++j)
                 {
-                    if(chessBoard[i][j]==' ')
+                    if(chessBoard[i][j]=='\u0000')
                         System.out.print('.');
                     else
                     System.out.print(chessBoard[i][j]+" ");
