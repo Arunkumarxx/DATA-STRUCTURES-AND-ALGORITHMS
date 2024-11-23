@@ -4,7 +4,6 @@ import java.util.*;
 
 class NQueens
 {
-    // Solution 1: Using Depth-First Search (DFS) and Validation
     public static List<List<String>> solveNQueensDFS(int n)
     {
         char[][] board = new char[n][n];
@@ -76,7 +75,6 @@ class NQueens
         return res;
     }
 
-    // Solution 2: Using Boolean Arrays for Columns and Diagonals
     public List<List<String>> solveNQueensBoolean(int n)
     {
         List<List<String>> result = new ArrayList<>();
