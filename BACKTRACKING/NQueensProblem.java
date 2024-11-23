@@ -42,8 +42,48 @@ public class NQueensProblem
         for(int j=0;j<n;++j)
             chessBoardTrack[row][j]=true;
 
-        // diagonal top left to right bottom
-        
+        // all possible ways of diagonal for queen
+        {
+            int i=row-1;
+            int j=col-1;
+            while (isValid(i, j, n))
+            {
+                chessBoardTrack[i][j] = true;
+                i -= 1;
+                j -= 1;
+            }
+
+            i=row-1;
+            j=col+1;
+            while(isValid(i,j,n))
+            {
+                chessBoardTrack[i][j]=true;
+                i-=1;
+                j+=1;
+            }
+
+            i=row+1;
+            j=col-1;
+            while(isValid(i,j,n))
+            {
+                chessBoardTrack[i][j]=true;
+                i+=1;
+                j-=1;
+            }
+
+            i=row+1;
+            j=col+1;
+            while(isValid(i,j,n))
+            {
+                chessBoardTrack[i][j]=true;
+                i+=1;
+                j+=1;
+            }
+        }
+    }
+    private boolean isValid(int x,int y,int n)
+    {
+        return x>=0 && y>=0 && x<n && y<n?true:false;
     }
     public static void main(String[] args)
     {
