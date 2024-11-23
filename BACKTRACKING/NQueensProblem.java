@@ -45,6 +45,7 @@ public class NQueensProblem
                 }
             }
         }
+        System.out.println();
     }
     private void fillQueensTrack(int row,int col,int n)
     {
