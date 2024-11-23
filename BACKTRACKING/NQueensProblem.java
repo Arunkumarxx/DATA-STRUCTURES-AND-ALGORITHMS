@@ -82,10 +82,11 @@ public class NQueensProblem {
                 if (solution.get(i).charAt(j) == 'Q')
                     System.out.print("♛ ");
                  else
-                    if ((i + j) % 2 == 0)
-                        System.out.print("⬜");
-                     else
-                        System.out.print("⬛");
+                if ((i + j) % 2 == 0) {
+                    System.out.print("\u001B[47m    \u001B[0m"); // White square (background color)
+                } else {
+                    System.out.print("\u001B[40m    \u001B[0m"); // Black square (background color)
+                }
             System.out.println();
         }
     }
