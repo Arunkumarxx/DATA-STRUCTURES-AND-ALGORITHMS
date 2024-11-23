@@ -114,11 +114,7 @@ public class NQueensProblem
         List<List<String>> result =queensProblem.solveNQueens(n);
         for(List<String> strings:result)
         {
-            for(String val:strings)
-            {
-                System.out.print(val+" ");
-            }
-            System.out.println();
+            System.out.println(strings);
         }
     }
 }
