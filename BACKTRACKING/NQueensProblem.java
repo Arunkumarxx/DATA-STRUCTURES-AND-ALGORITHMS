@@ -1,14 +1,14 @@
 package BACKTRACKING;
 
 import java.util.*;
-public class NQueensProblem
-{
-    public static List < List < String >> solveNQueens(int n) {
+
+public class NQueensProblem {
+    public static List<List<String>> solveNQueens(int n) {
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 board[i][j] = '.';
-        List < List < String >> res = new ArrayList < List < String >> ();
+        List<List<String>> res = new ArrayList<>();
         dfs(0, board, res);
         return res;
     }
@@ -39,9 +39,8 @@ public class NQueensProblem
         return true;
     }
 
-    static void dfs(int col, char[][] board, List < List < String >> res) {
-        if (col == board.length)
-        {
+    static void dfs(int col, char[][] board, List<List<String>> res) {
+        if (col == board.length) {
             res.add(construct(board));
             return;
         }
@@ -55,26 +54,43 @@ public class NQueensProblem
         }
     }
 
-
-
-    static List < String > construct(char[][] board) {
-        List < String > res = new LinkedList < String > ();
+    static List<String> construct(char[][] board) {
+        List<String> res = new LinkedList<>();
         for (int i = 0; i < board.length; i++) {
             String s = new String(board[i]);
             res.add(s);
         }
         return res;
     }
-    public static void main(String args[]) {
-        int n = 4;
-        List < List < String >> queen = solveNQueens(n);
-        for(int i=0;i<n;++i)
-        {
-            for(int j=0;j<n;++j)
-            {
-                
-            }
-        }
 
+    public static void main(String args[]) {
+        int n = 4; // Change this value for different board sizes
+        List<List<String>> solutions = solveNQueens(n);
+        int count = 1;
+
+        for (List<String> solution : solutions) {
+            System.out.println("Solution " + count + ":");
+            printChessBoard(solution);
+            System.out.println();
+            count++;
+        }
+    }
+
+    static void printChessBoard(List<String> solution) {
+        for (int i = 0; i < solution.size(); i++) {
+            for (int j = 0; j < solution.get(i).length(); j++) {
+                if (solution.get(i).charAt(j) == 'Q') {
+                    System.out.print("♛ "); // Queen symbol
+                } else {
+                    // Alternate colors for the chessboard
+                    if ((i + j) % 2 == 0) {
+                        System.out.print("⬜ "); // White square
+                    } else {
+                        System.out.print("⬛ "); // Black square
+                    }
+                }
+            }
+            System.out.println();
+        }
     }
 }
