@@ -7,7 +7,7 @@ public class NQueensProblem
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
-                board[i][j] = 'X';
+                board[i][j] = '.';
         List < List < String >> res = new ArrayList < List < String >> ();
         dfs(0, board, res);
         return res;
@@ -50,7 +50,7 @@ public class NQueensProblem
             if (validate(board, row, col)) {
                 board[row][col] = 'Q';
                 dfs(col + 1, board, res);
-                board[row][col] = 'X';
+                board[row][col] = '.';
             }
         }
     }
