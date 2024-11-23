@@ -66,17 +66,15 @@ public class NQueensProblem
         return res;
     }
     public static void main(String args[]) {
-        int N = 4;
-        List < List < String >> queen = solveNQueens(N);
-        int i = 1;
-        for (List < String > it: queen)
+        int n = 4;
+        List < List < String >> queen = solveNQueens(n);
+        for(int i=0;i<n;++i)
         {
-            System.out.println("Arrangement " + i);
-            for (String s: it) {
-                System.out.println(s);
+            for(int j=0;j<n;++j)
+            {
+                System.out.print(queen.get(i).get(j));
             }
             System.out.println();
-            i += 1;
         }
 
     }
