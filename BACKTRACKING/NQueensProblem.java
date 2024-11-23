@@ -142,7 +142,7 @@ class NQueens
 
     public static void printSolution(List<List<String>> solution)
     {
-        int i = 1; 
+        int i = 1;
         for (List<String> it : solution)
         {
             System.out.println("Arrangement " + i);
