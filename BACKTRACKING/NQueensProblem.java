@@ -9,7 +9,14 @@ public class NQueensProblem
     {
         chessBoardTrack= new boolean[n][n];
         chessBoard =new char[n][n];
-        
+
+        for(int i=0;i<n;++i)
+        {
+            for(int j=0;j<n;++j)
+            {
+                
+            }
+        }
     }
     public static void main(String[] args)
     {
