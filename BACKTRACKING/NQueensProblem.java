@@ -15,10 +15,18 @@ public class NQueensProblem
             }
         }
     }
-    private void checkAllPossibleWays(int row,int col)
+    private void checkAllPossibleWays(int row,int col,int n)
     {
         int totalQueens=0;
-        
+        chessBoardTrack= new boolean[n][n];
+        chessBoard =new char[n][n];
+        for(int i=row;i<n;++i)
+        {
+            for(int j=0;j<n;++j)
+            {
+
+            }
+        }
     }
     public static void main(String[] args)
     {
