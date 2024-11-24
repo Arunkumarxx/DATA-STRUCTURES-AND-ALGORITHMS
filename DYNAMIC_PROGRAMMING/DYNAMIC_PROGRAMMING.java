@@ -10,11 +10,11 @@ public class DYNAMIC_PROGRAMMING {
 
         while(j <n)
         {
-            System.out.print(i+" "+j+" ");
-            int newJ=i+j;
+            System.out.println(i+" "+j);
+            System.out.println(" "+(i+j));
+            int temp=i;
             i=j;
-            j=newJ;
-            System.out.print(j+" ");
+            j=temp+j;
         }
     }
 
