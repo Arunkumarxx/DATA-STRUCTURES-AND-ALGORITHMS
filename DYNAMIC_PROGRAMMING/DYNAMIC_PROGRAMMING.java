@@ -10,10 +10,10 @@ public class DYNAMIC_PROGRAMMING {
         System.out.print("Fibonacci series: "+i+" "+j);
         while(i+j<n)
         {
-            int temp=i+j;
-            System.out.print(" "+temp);
+            int sum=i+j;
+            System.out.print(" "+sum);
             i=j;
-            j=temp;
+            j=sum;
         }
     }
 
