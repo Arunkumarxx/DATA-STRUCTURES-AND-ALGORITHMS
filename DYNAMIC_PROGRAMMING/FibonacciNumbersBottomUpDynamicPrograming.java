@@ -1,8 +1,8 @@
 package DYNAMIC_PROGRAMMING;
 
-public class FibonacciNumbersBottomUp
+public class FibonacciNumbersBottomUpDynamicPrograming
 {
-
+    
     public static void main(String[] args)
     {
 
