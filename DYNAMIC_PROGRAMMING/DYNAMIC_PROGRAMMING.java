@@ -11,7 +11,7 @@ public class DYNAMIC_PROGRAMMING {
         while(j <n)
         {
             System.out.println(i+" "+j);
-            System.out.println(" "+(i+j));
+            System.out.print(" "+(i+j));
             int temp=i;
             i=j;
             j=temp+j;
