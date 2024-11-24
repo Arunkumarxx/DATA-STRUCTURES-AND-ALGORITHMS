@@ -7,14 +7,13 @@ public class DYNAMIC_PROGRAMMING {
         int i=0;
         int j=1;
         int n=34;
-
-        while(j <n)
+        System.out.print("Fibonacci series: "+i+" "+j);
+        while(i+j<n)
         {
-            System.out.println(i+" "+j);
-            System.out.print(" "+(i+j));
-            int temp=i;
+            int temp=i+j;
+            System.out.print(" "+temp);
             i=j;
-            j=temp+j;
+            j=temp;
         }
     }
 
