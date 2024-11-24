@@ -8,7 +8,7 @@ public class DYNAMIC_PROGRAMMING {
         int j=1;
         int n=34;
         System.out.print("Fibonacci series: "+i+" "+j);
-        while(i+j<n)
+        while(i+j<=n)
         {
             int sum=i+j;
             System.out.print(" "+sum);
