@@ -9,7 +9,7 @@ public class FibonacciNumbersBottomUpDynamicPrograming
     public long findNthFibonacci(int number)
     {
         arr=new long [number+1];
-        Arrays.fill(arr,-1);
+        Arrays.fill(arr,0);
         return  recursion(number);
     }
 
