@@ -4,7 +4,6 @@ import javax.sound.sampled.EnumControl;
 import java.util.*;
 public class FibonacciNumbersBottomUpDynamicPrograming
 {
-
     long [] arr;
     public long findNthFibonacci(int number)
     {
@@ -29,6 +28,6 @@ public class FibonacciNumbersBottomUpDynamicPrograming
     public static void main(String[] args)
     {
         FibonacciNumbersBottomUpDynamicPrograming obj =new FibonacciNumbersBottomUpDynamicPrograming();
-        System.out.println(obj.findNthFibonacci(10));
+        System.out.println(obj.findNthFibonacci(15));
     }
 }
