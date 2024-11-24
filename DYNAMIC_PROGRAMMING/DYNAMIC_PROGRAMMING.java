@@ -14,8 +14,8 @@ public class DYNAMIC_PROGRAMMING {
             int newJ=i+j;
             i=j;
             j=newJ;
-            System.out.print(j);
-        } 
+            System.out.print(+" "+j);
+        }
     }
 
 }
