@@ -8,7 +8,7 @@ public class DYNAMIC_PROGRAMMING {
         int j=1;
         int n=34;
 
-        while(i<n)
+        while(j<n)
         {
             System.out.print(i+" "+j+" ");
             int newJ=i+j;
