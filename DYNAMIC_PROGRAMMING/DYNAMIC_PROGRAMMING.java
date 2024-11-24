@@ -4,7 +4,18 @@ public class DYNAMIC_PROGRAMMING {
 
     public static void main(String[] args)
     {
-        
+        int i=0;
+        int j=1;
+        int n=34;
+
+        while(i<n)
+        {
+            System.out.print(i+" "+j+" ");
+            int newJ=i+j;
+            i=j;
+            j=newJ;
+            System.out.print(j);
+        } 
     }
 
 }
