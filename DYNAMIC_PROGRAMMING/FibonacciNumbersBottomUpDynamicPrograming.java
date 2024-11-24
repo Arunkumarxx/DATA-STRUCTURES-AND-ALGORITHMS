@@ -30,6 +30,6 @@ public class FibonacciNumbersBottomUpDynamicPrograming
     public static void main(String[] args)
     {
         FibonacciNumbersBottomUpDynamicPrograming obj =new FibonacciNumbersBottomUpDynamicPrograming();
-        System.out.println(obj.findNthFibonacci(20));
+        System.out.println(obj.findNthFibonacci(50));
     }
 }
