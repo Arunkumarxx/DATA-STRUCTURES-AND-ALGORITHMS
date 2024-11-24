@@ -15,7 +15,7 @@ public class FibonacciNumbersBottomUpDynamicPrograming
 
     public long recursion(long n)
     {
-        if(arr[(int)n]==-1L)
+        if(arr[(int)n]==0L)
         {
             long res;
             if(n==0L || n==1L)
