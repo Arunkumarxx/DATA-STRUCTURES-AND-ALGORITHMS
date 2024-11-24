@@ -8,13 +8,13 @@ public class DYNAMIC_PROGRAMMING {
         int j=1;
         int n=34;
 
-        while(j<n)
+        while(j <n)
         {
             System.out.print(i+" "+j+" ");
             int newJ=i+j;
             i=j;
             j=newJ;
-            System.out.print(" "+j);
+            System.out.print(j);
         }
     }
 
