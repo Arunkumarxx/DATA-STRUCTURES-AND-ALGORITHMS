@@ -1,2 +1,5 @@
-package DYNAMIC_PROGRAMMING;public class WaysToWriteNAsSum {
+package DYNAMIC_PROGRAMMING;
+
+public class WaysToWriteNAsSum
+{
 }
