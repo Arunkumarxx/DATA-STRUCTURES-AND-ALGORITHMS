@@ -3,7 +3,7 @@ package DYNAMIC_PROGRAMMING;
 
 public class WaysToWriteNAsSum
 {
-    int countWays(int n)
+    private int countWays(int n)
     {
         int table[]=new int[n+1];
         int mod=1000000007;
