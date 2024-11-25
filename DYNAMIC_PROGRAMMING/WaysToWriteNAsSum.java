@@ -5,7 +5,6 @@ import java.util.Arrays;
 
 public class WaysToWriteNAsSum
 {
-
     public static void main(String[] args)
     {
         int n=5;
