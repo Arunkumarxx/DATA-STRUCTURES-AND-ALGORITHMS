@@ -1,7 +1,5 @@
 package DYNAMIC_PROGRAMMING;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class WaysToWriteNAsSum
 {
