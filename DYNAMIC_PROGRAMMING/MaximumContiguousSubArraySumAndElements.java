@@ -6,7 +6,7 @@ public class MaximumContiguousSubArraySumAndElements
     {
         int maxSum=Integer.MIN_VALUE;
         int currSum=0;
-        StringBuilder str = new StringBuilder();
+        StringBuilder str=new StringBuilder();
         for(int i=0;i<n;++i)
         {
             if(currSum<0)
@@ -26,6 +26,9 @@ public class MaximumContiguousSubArraySumAndElements
 
     public static void main(String[] args)
     {
-
+        MaximumContiguousSubArraySumAndElements obj=new MaximumContiguousSubArraySumAndElements();
+        int arr[]={-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int n=arr.length;
+        System.out.println("Maximum contiguous subarray sum: "+obj.maximumSum(arr, n));
     }
 }
