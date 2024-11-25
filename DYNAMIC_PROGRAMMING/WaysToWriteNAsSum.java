@@ -5,7 +5,7 @@ public class WaysToWriteNAsSum
 
     public static void main(String[] args)
     {
-        
+
     }
 
 }
