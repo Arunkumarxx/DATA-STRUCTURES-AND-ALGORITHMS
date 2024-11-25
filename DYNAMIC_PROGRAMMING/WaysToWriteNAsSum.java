@@ -1,5 +1,6 @@
 package DYNAMIC_PROGRAMMING;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class WaysToWriteNAsSum
@@ -16,9 +17,13 @@ public class WaysToWriteNAsSum
         table[0] = 1;
 
         for (int i = 1; i < n; i++)
+        {
             for (int j = i; j <= n; j++)
+            {
                 table[j] += table[j - i];
-
+            }
+            System.out.println(Arrays.toString(table));
+        }
         System.out.println(table[n]);
     }
 
