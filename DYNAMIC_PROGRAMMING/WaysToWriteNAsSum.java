@@ -19,8 +19,7 @@ public class WaysToWriteNAsSum
 
         for(int i=1;i<n;i++)
             for(int j=i;j<=n;j++)
-                table[j]=(table[j]%mod+table[j-i]%mod)%mod; 
-
+                table[j]=(table[j]%mod+table[j-i]%mod)%mod;
         return table[n]%mod;
     }
 
