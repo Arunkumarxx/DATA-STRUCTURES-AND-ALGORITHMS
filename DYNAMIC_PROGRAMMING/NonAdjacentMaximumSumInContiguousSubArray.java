@@ -4,20 +4,13 @@ public class NonAdjacentMaximumSumInContiguousSubArray
 {
     public long maximumSum(int arr[], int sizeOfArray)
     {
-
         arr[1] = Math.max(arr[0],arr[1]);
-        for(int i = 2;i<sizeOfArray;i++)
-
+        for(int i = 2;i<sizeOfArray;++i)
             arr[i] = Math.max(arr[i],Math.max(arr[i-1],arr[i]+arr[i-2]));
-
-
         long max = arr[0];
-
-        for(int i =0;i<sizeOfArray;i++)
+        for(int i =0;i<sizeOfArray;++i)
             max = Math.max(max,arr[i]);
-
         return max;
-
     }
     public static void main(String[] args)
     {
