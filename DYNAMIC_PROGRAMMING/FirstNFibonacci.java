@@ -14,6 +14,8 @@ public class FirstNFibonacci
 
         long [] result =new long[n];
 
+        // Note: The first two number of the series are 1 and 1.
+
         result[0]=1;
         result[1]=1;
 
@@ -25,7 +27,6 @@ public class FirstNFibonacci
     public static void main(String[] args)
     {
         FirstNFibonacci obj =new FirstNFibonacci();
-        // 
         System.out.println(Arrays.toString(obj.printFibb(15)));
     }
 }
