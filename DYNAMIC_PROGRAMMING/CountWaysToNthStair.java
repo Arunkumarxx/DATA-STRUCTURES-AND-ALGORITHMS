@@ -2,7 +2,7 @@ package DYNAMIC_PROGRAMMING;
 
 public class CountWaysToNthStair
 {
-    
+
     private Long countWays(int n) {
         return (long)(n/2) +1L;
     }
