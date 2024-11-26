@@ -8,6 +8,6 @@ public class CountWaysToNthStair
     public static void main(String[] args)
     {
         CountWaysToNthStair obj =new CountWaysToNthStair();
-        System.out.println(obj.countWays(5));
+        System.out.println(obj.countWays(1-));
     }
 }
