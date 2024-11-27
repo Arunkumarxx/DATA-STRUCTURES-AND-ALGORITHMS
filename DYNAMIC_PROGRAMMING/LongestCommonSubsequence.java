@@ -18,9 +18,10 @@ public class LongestCommonSubsequence
                 int x=i;
                 int y=j;
                 int count=0;
+                while(x<)
                 while (x<n2 && y<n1 && s2.charAt(x)!=s1.charAt(y))
                  ++y;
-                
+
             }
         }
     }
