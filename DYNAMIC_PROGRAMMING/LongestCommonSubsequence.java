@@ -30,13 +30,7 @@ public class LongestCommonSubsequence
                             ++x;
                             ++y;
                         }
-                    }
-                    else
-                    {
-                        if(x<n2)
-                        {
-
-                        }
+                        else ++y;
                     }
                 }
                 max=Math.max(count,max);
