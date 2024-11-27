@@ -15,7 +15,7 @@ public class LongestCommonSubsequence
             int count=0;
             for(int j=0;j<n1;++j)
             {
-                if(s1.charAt(j)==s2.charAt(i))
+                if(s1.charAt(i)==s2.charAt(j))
                     ++count;
             }
             if(count>max)
