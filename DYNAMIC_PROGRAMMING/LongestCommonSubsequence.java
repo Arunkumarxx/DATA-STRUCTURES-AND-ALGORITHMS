@@ -15,15 +15,10 @@ public class LongestCommonSubsequence
                 int count=0;
                 int x=i;
                 int y=j;
-                while(x<n1 && y<n2 )
-                {
-                    if(s1.charAt(x)==s2.charAt(y))
-                    {
-                        ++x;
-                        ++y;
-                        ++count;
-                    }
-                    
+                while (x < n1 && y < n2 && s1.charAt(x) == s2.charAt(y)) {
+                    count++;
+                    x++;
+                    y++;
                 }
                 max=Math.max(count,max);
             }
