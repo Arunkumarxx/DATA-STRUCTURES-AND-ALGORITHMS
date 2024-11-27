@@ -23,10 +23,7 @@ public class LongestCommonSubsequence
                         ++y;
                         ++count;
                     }
-                    else
-                    {
-                        
-                    }
+                    
                 }
                 max=Math.max(count,max);
             }
