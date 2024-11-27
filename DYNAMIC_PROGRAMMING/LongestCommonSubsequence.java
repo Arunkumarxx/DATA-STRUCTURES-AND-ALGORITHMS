@@ -13,10 +13,14 @@ public class LongestCommonSubsequence
 
         for(int i=0;i<n2;++i)
         {
-            int ind=0;
-            while(ind<n1)
+            for(int j=0;j<n1;++j)
             {
-                if(s1.charAt(ind)==s2.c)
+                int x=i;
+                int y=j;
+                int count=0;
+                while (x<n2 && y<n1 && s2.charAt(x)!=s1.charAt(y))
+                 ++y;
+                
             }
         }
     }
