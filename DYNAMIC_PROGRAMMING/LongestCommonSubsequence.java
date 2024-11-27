@@ -26,6 +26,7 @@ public class LongestCommonSubsequence
             if(count>max)
                 max=count;
         }
+        return max;
     }
     public static void main(String[] args)
     {
