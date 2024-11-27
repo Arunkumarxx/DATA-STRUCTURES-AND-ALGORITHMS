@@ -36,6 +36,7 @@ public class LongestCommonSubsequence
                 max=Math.max(count,max);
             }
         }
+        return max;
     }
     public static void main(String[] args)
     {
