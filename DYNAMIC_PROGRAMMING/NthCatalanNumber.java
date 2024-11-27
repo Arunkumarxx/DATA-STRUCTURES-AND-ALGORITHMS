@@ -1,2 +1,6 @@
-package DYNAMIC_PROGRAMMING;public class NthCatalanNumber {
+package DYNAMIC_PROGRAMMING;
+
+public class NthCatalanNumber
+{
+    
 }
