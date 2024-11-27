@@ -28,7 +28,7 @@ public class LongestCommonSubsequence
                         {
                             ++count;
                             ++x;
-                            ++y;
+                            
                         }
                         else ++y;
                     }
