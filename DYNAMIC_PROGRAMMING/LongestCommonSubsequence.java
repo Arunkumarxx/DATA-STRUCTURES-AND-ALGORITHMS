@@ -15,7 +15,13 @@ public class LongestCommonSubsequence
                 int count=0;
                 int x=i;
                 int y=j;
-                while(x<n1 && y<n2 && )
+                while(x<n1 && y<n2 )
+                {
+                    if(s1.charAt(x)==s2.charAt(y))
+                    {
+                        
+                    }
+                }
             }
         }
         return max;
