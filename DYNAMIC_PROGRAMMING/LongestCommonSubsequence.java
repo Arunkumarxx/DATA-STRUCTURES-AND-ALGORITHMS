@@ -1,4 +1,4 @@
-public class LongestCommonSubstring {
+ class LongestCommonSubstring {
     public static int longestCommonSubstring(String s1, String s2) {
         int n1 = s1.length();
         int n2 = s2.length();
