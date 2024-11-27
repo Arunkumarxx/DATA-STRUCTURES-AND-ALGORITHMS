@@ -21,7 +21,7 @@ public class LongestCommonSubsequence
                     ++indOne;
                     ++indTwo;
                 }
-                else ++indTwo;
+                else ++indOne;
             }
             if(count>max)
                 max=count;
