@@ -7,13 +7,24 @@ public class LongestCommonSubsequence
     {
         int n1=s1.length();
         int n2=s2.length();
-
+        int max=0;
         for(int i=0;i<n2;++i)
         {
-            int indOne=0;
+            int indOne=i;
             int indTwo=0;
             int count=0;
-
+            while (indOne<n2 && indTwo<n1)
+            {
+                if(s2.charAt(indOne)==s1.charAt(indTwo))
+                {
+                    ++count;
+                    ++indOne;
+                    ++indTwo;
+                }
+                else ++indTwo;
+            }
+            if(count>max)
+                max=count;
         }
     }
     public static void main(String[] args)
