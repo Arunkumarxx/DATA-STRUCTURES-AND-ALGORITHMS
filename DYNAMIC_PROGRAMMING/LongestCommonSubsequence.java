@@ -10,7 +10,7 @@ public class LongestCommonSubsequence
 
         int n1=s1.length();
         int n2=s2.length();
-
+        int max=0;
         for(int i=0;i<n2;++i)
         {
             for(int j=0;j<n1;++j)
@@ -18,10 +18,28 @@ public class LongestCommonSubsequence
                 int x=i;
                 int y=j;
                 int count=0;
-                while(x<)
-                while (x<n2 && y<n1 && s2.charAt(x)!=s1.charAt(y))
-                 ++y;
+                while(x<n2 && y<n1)
+                {
+                    while (x < n2 && y < n1 && s2.charAt(x) != s1.charAt(y))
+                        ++y;
+                    if(x<n2 && y<n1 )
+                    {
+                        if(s2.charAt(x)==s1.charAt(y))
+                        {
+                            ++count;
+                            ++x;
+                            ++y;
+                        }
+                    }
+                    else
+                    {
+                        if(x<n2)
+                        {
 
+                        }
+                    }
+                }
+                max=Math.max(count,max);
             }
         }
     }
