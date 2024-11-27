@@ -11,9 +11,13 @@ public class LongestCommonSubsequence
         int n1=s1.length();
         int n2=s2.length();
 
-        for(int i=0;i<n1;++i)
+        for(int i=0;i<n2;++i)
         {
-            
+            int ind=0;
+            while(ind<n1)
+            {
+                if(s1.charAt(ind)==s2.c)
+            }
         }
     }
     public static void main(String[] args)
