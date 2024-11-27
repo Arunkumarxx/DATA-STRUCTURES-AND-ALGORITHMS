@@ -31,7 +31,7 @@ public class LongestCommonSubsequence
     public static void main(String[] args)
     {
         LongestCommonSubsequence obj=new LongestCommonSubsequence();
-        System.out.println(obj.getLCS("ABCDFH","AEDFHR"));
+        System.out.println(obj.getLCS("ABCDGH","AEDFHR"));
     }
 
 }
