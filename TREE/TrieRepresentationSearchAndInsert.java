@@ -44,7 +44,6 @@ public class TrieRepresentationSearchAndInsert
                 {
                      ind=curr-97;
                     root.trieNodes[ind].val=curr;
-                    root
                     if(i==n-1)
                         root.trieNodes[ind].isEnd=true;
                 }
@@ -56,8 +55,7 @@ public class TrieRepresentationSearchAndInsert
                          root.trieNodes[ind].isEnd=true;
                 }
             }
-
-
+            
             System.out.println();
         }
     }
