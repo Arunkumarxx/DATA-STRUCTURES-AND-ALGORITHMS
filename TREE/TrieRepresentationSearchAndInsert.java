@@ -55,8 +55,6 @@ public class TrieRepresentationSearchAndInsert
                          root.trieNodes[ind].isEnd=true;
                 }
             }
-            
-            System.out.println();
         }
     }
     public static void main(String[] args)
