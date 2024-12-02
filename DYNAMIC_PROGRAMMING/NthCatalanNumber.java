@@ -10,7 +10,7 @@ public class NthCatalanNumber
         long dp[]=new long[n+1],mod=(long)(1e9)+7;
         dp[0]=dp[1]=1;
 
-        for(int i=2;i<=n;i++)ru
+        for(int i=2;i<=n;i++)
         {
             dp[i]=0;
             for(int j=0;j<i;j++)
