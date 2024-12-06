@@ -92,5 +92,6 @@ public class DeleteWordInTrie
         System.out.println(Trie.search("tree"));
         Trie.delete("tree");
         System.out.println(Trie.search("tree"));
+        System.out.println(Trie.search("treen"));
     }
 }
