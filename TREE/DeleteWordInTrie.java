@@ -28,14 +28,27 @@ public class DeleteWordInTrie
          temp.isEnd=true;
 
     }
-    private void search(String word)
+    private boolean search(String key)
     {
-        
+        if(root==null)
+            return false;
+
+        TrieNode temp=root;
+        int n=key.length();
+        for(int i=0;i<n;++i)
+        {
+            char curr = key.charAt(i);
+            int ind = Character.isLowerCase(curr) ? curr - 97 : curr - 39;
+            if(temp.children[ind]==null)
+                return false;
+            temp=temp.children[ind];
+        }
+        return temp.isEnd;
     }
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
-
+        
     }
 
 }
