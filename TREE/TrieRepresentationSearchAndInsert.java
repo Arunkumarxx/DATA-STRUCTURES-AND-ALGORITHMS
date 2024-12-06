@@ -10,7 +10,6 @@ public class TrieRepresentationSearchAndInsert
         TrieNode()
         {
             this.children =new TrieNode[alphabetSize];
-            this.isEndOfWord =isEnd;
         }
     }
     TrieNode root;
