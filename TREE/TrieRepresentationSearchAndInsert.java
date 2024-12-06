@@ -13,17 +13,17 @@ public class TrieRepresentationSearchAndInsert
         }
     }
     TrieNode root;
-    private void Insert(String words)
+    private void Insert(String key)
     {
         if(root==null)
         {
             root = new TrieNode();
         }
-        int n=words.length();
+        int n=key.length();
         TrieNode temp =root;
         for(int i=0;i<n;++i)
         {
-            char curr=words.charAt(i);
+            char curr=key.charAt(i);
             int ind = Character.isLowerCase(curr) ? curr-97 : curr-39;
 
             if(temp.children[ind]==null)
@@ -40,16 +40,16 @@ public class TrieRepresentationSearchAndInsert
             }
         }
     }
-    private boolean search(String word)
+    private boolean search(String key)
     {
         if(root==null)
             return false;
         TrieNode temp =root;
-        int n=word.length();
+        int n=key.length();
         int lastInd=0;
         for(int i=0;i<n;++i)
         {
-            char curr=word.charAt(i);
+            char curr=key.charAt(i);
             int ind=Character.isLowerCase(curr) ? curr-97 : curr-39;
             if(!(temp.children[ind]==null))
             {
