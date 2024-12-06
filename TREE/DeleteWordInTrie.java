@@ -59,11 +59,23 @@ public class DeleteWordInTrie
         int curr=word.charAt(index);
         int ind=Character.isLowerCase(curr)?curr-97:curr-39;
 
-        TrieNode currNode=root.children[ind];
         delete(root.children[ind],word,ind+1);
-        
-    }
 
+        if(isValidToDel(root.children[ind]))
+        {
+            
+        }
+
+    }
+    private boolean isValidToDel(TrieNode root)
+    {
+        for(int i=0;i<alphabetSize;++i)
+        {
+            if(root.children[i]!=null)
+                return false;
+        }
+        return true;
+    }
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
