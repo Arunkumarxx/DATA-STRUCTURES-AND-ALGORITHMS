@@ -46,34 +46,7 @@ public class DeleteWordInTrie
     }
     private void delete(String word)
     {
-        if(root==null)
-            return;
-        int n=word.length();
-        Stack<TrieNode> stack =new Stack<>();
-        TrieNode temp=root;
-        for(int i=0;i<n;++i)
-        {
-            char curr=word.charAt(i);
-            int ind=Character.isLowerCase(curr)?curr-97:curr-39;
-            if(temp.children[ind]==null)
-             return;
-            else
-            {
-                stack.push(temp.children[ind]);
-                temp=temp.children[ind];
-            }
-        }
-        if(temp.isEnd)
-        {
-            for(int i=0;i<52;++i)
-            {
-                if(temp.children[i]!=null)
-                {
-                    temp.isEnd=false;
-                    return;
-                }
-            }
-        }
+        
     }
 
     public static void main(String[] args)
