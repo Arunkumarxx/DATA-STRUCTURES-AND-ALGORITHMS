@@ -6,15 +6,14 @@ public class DeleteWordInTrie
     private class TrieNode
     {
         TrieNode[] children = new TrieNode[alphabetSize];
-        boolean isEnd
+        boolean isEnd=false;
     }
     private TrieNode root;
     private void insert(String word)
     {
         if(root==null)
-        {
             root = new TrieNode();
-        }
+        
     }
     private void search(String word)
     {
