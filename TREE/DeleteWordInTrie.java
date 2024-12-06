@@ -46,6 +46,13 @@ public class DeleteWordInTrie
     }
     private void delete(String word)
     {
+        if(root!=null)
+        delete(root,word);
+    }
+    private boolean delete(TrieNode root,String word)
+    {
+        if(root==null)
+            return false;
         
     }
 
