@@ -2,13 +2,14 @@ package TREE;
 
 public class TrieRepresentationSearchAndInsert
 {
+    private final int alphabetSize=52;
     private class TrieNode
     {
         TrieNode [] trieNodes;
         boolean isEnd;
         TrieNode(boolean isEnd)
         {
-            this.trieNodes=new TrieNode[52];
+            this.trieNodes=new TrieNode[alphabetSize];
             this.isEnd=isEnd;
         }
     }
