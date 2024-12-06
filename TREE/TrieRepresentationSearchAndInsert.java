@@ -73,7 +73,7 @@ public class TrieRepresentationSearchAndInsert
             Trie.Insert(val);
 
         System.out.println(Trie.search("arunkumar"));
-        System.out.println(Trie.search("arun"));
+        System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("ar"));
     }
 }
