@@ -74,10 +74,10 @@ public class TrieRepresentationSearchAndInsert
         long beforeMemory = runtime.totalMemory() - runtime.freeMemory();
         for(String val:words)
             Trie.Insert(val);
+        long afterMemory = runtime.totalMemory()- runtime.totalMemory();
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("ar"));
-        long afterMemory = runtime.totalMemory()- runtime.totalMemory();
         System.out.println(beforeMemory);
         System.out.println(afterMemory);
     }
