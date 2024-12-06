@@ -69,7 +69,7 @@ public class DeleteWordInTrie
         root.children[ind] = delete(root.children[index], key, index + 1);
 
 
-        if (isEmpty(root) && root.isEnd == false) {
+        if (isEmpty(root) && !root.isEnd) {
             root = null;
         }
 
