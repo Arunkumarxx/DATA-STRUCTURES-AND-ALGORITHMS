@@ -42,7 +42,7 @@ public class TrieRepresentationSearchAndInsert
     }
     public static void main(String[] args)
     {
-        String [] words ={"arunkumar",""};
+        String [] words ={"arunkumar", "arunprasanth"};
         TrieRepresentationSearchAndInsert Trie =new TrieRepresentationSearchAndInsert();
         Trie.searchAndInsert(words[0]);
         System.out.println();
