@@ -34,10 +34,8 @@ public class TrieRepresentationSearchAndInsert
             }
             else
                 temp = temp.children[ind];
-            if (i == n - 1)
-                temp.isEndOfWord = true;
-
         }
+        temp.isEndOfWord = true;
     }
     private boolean search(String key)
     {
@@ -57,7 +55,7 @@ public class TrieRepresentationSearchAndInsert
     }
     public static void main(String[] args)
     {
-        String [] words ={"arunkumar", "arunprasanth"};
+        String [] words ={"arunkumar", "arunPrasanth"};
         TrieRepresentationSearchAndInsert Trie =new TrieRepresentationSearchAndInsert();
 
         for(String val:words)
