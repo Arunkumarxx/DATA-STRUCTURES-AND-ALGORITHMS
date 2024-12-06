@@ -48,10 +48,10 @@ public class TrieRepresentationSearchAndInsert
             char curr=word.charAt(i);
             int ind=Character.isLowerCase(curr) ? curr-97 : curr-39;
             if(!(temp.trieNodes[ind]==null))
-            {
-                
-            }
+                temp=temp.trieNodes[ind];
+            else return false;
         }
+        return true;
     }
     public static void main(String[] args)
     {
@@ -60,5 +60,6 @@ public class TrieRepresentationSearchAndInsert
         Trie.Insert(words[0]);
         System.out.println();
         Trie.Insert(words[1]);
+        Trie.search("arunkumar");
     }
 }
