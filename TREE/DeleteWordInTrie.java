@@ -55,7 +55,9 @@ public class DeleteWordInTrie
     {
         if(root==null)
             return ;
-
+        if(index==word.length())
+            if(!root.isEnd)
+                return;
         int curr=word.charAt(index);
         int ind=Character.isLowerCase(curr)?curr-97:curr-39;
 
@@ -63,7 +65,7 @@ public class DeleteWordInTrie
 
         if(isValidToDel(root.children[ind]))
         {
-            
+
         }
 
     }
