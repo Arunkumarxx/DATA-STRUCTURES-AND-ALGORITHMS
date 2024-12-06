@@ -13,7 +13,17 @@ public class DeleteWordInTrie
     {
         if(root==null)
             root = new TrieNode();
-        
+        int n=word.length();
+        TrieNode temp =root;
+         for(int i=0;i<n;++i)
+         {
+             char curr=word.charAt(i);
+             int ind=curr-97;
+             if(temp.children[ind]==null)
+             {
+                 
+             }
+         }
     }
     private void search(String word)
     {
