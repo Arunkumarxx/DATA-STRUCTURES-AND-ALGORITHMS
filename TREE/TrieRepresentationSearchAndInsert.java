@@ -62,7 +62,6 @@ public class TrieRepresentationSearchAndInsert
 
         for(String val:words)
             Trie.Insert(val);
-
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("ar"));
