@@ -22,10 +22,7 @@ public class TrieRepresentationSearchAndInsert
         for(int i=0;i<n;++i)
         {
             char curr=words.charAt(i);
-            int ind;
-            if(Character.isLowerCase(curr))
-                ind=curr-97;
-            else ind=curr-39;
+            int ind = Character.isLowerCase(curr) ? curr-97 : curr-39;
 
             if(temp.trieNodes[ind]==null)
             {
@@ -44,7 +41,12 @@ public class TrieRepresentationSearchAndInsert
     {
         if(root==null)
             return false;
-        
+        int n=word.length();
+        for(int i=0;i<n;++i)
+        {
+            char curr=word.charAt(i);
+            int ind=
+        }
     }
     public static void main(String[] args)
     {
