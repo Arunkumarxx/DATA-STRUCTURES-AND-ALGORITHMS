@@ -48,7 +48,9 @@ public class DeleteWordInTrie
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
-        
+        Trie.insert("arun");
+        Trie.insert("arunkumar");
+        Trie.insert("arunkumarT");
     }
 
 }
