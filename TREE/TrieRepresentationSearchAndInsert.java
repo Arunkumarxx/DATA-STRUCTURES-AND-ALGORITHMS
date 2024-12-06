@@ -29,9 +29,14 @@ public class TrieRepresentationSearchAndInsert
             if(temp.trieNodes[ind]==null)
             {
                 temp.trieNodes[ind]=new TrieNode(curr,i==n-1?true:false);
+                System.out.println("Added value :"+curr);
                 temp=temp.trieNodes[ind];
             }
-            temp=temp.trieNodes[ind];
+            else
+            {
+                System.out.println("Value found: "+temp.val);
+                temp = temp.trieNodes[ind];
+            }
         }
     }
 
