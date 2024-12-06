@@ -51,29 +51,27 @@ public class DeleteWordInTrie
             delete(root,word,0);
 
     }
-    private TrieNode  delete(TrieNode root,String key,int index)
+    private boolean  delete(TrieNode node,String word,int index)
     {
-        if (root == null)
-            return null;
-        if (index == key.length()) {
-            if (root.isEnd)
-                root.isEnd = false;
+        if (node == null)
+            return false;
 
-            if (isEmpty(root))
-                root = null;
-            return root;
+        if (index == word.length()) {
+            if (!node.isEnd)
+                return false;
+            node.isEnd = false;
+            return isEmpty(node);
         }
-
-
-        int ind = key.charAt(index) - 'a';
-        root.children[ind] = delete(root.children[index], key, index + 1);
-
-
-        if (isEmpty(root) && !root.isEnd) {
-            root = null;
+        char currChar = word.charAt(index);
+        int childIndex = Character.isLowerCase(currChar) ? currChar - 97 : currChar - 39;
+        boolean canDeleteChild = delete(node.children[childIndex], word, index + 1);
+        
+        if (canDeleteChild)
+        {
+            node.children[childIndex] = null;
+            return !node.isEnd && isEmpty(node);
         }
-
-        return root;
+        return false;
     }
     private boolean isEmpty(TrieNode root)
     {
