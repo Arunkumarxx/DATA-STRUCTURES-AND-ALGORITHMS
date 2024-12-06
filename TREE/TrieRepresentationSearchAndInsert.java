@@ -4,13 +4,11 @@ public class TrieRepresentationSearchAndInsert
 {
     private class TrieNode
     {
-        char val;
         TrieNode [] trieNodes;
         boolean isEnd;
 
-        TrieNode(char val,boolean isEnd)
+        TrieNode(boolean isEnd)
         {
-            this.val=val;
             this.trieNodes=new TrieNode[26];
             this.isEnd=isEnd;
         }
@@ -19,7 +17,7 @@ public class TrieRepresentationSearchAndInsert
     private void searchAndInsert(String words)
     {
         if(root==null)
-            root=new TrieNode(' ',false);
+            root=new TrieNode(false);
         int n=words.length();
         TrieNode temp =root;
         for(int i=0;i<n;++i)
@@ -28,7 +26,7 @@ public class TrieRepresentationSearchAndInsert
             int ind=(curr-97);
             if(temp.trieNodes[ind]==null)
             {
-                temp.trieNodes[ind]=new TrieNode(curr,i==n-1?true:false);
+                temp.trieNodes[ind]=new TrieNode(i==n-1?true:false);
                 System.out.println("Added value :"+curr);
                 temp=temp.trieNodes[ind];
             }
@@ -39,8 +37,6 @@ public class TrieRepresentationSearchAndInsert
             }
         }
     }
-
-
     public static void main(String[] args)
     {
         String [] words ={"arun","aruk"};
