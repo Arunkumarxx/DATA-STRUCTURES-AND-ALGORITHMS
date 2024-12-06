@@ -5,19 +5,21 @@ public class TrieRepresentationSearchAndInsert
     private final int alphabetSize=52;
     private class TrieNode
     {
-        TrieNode [] trieNodes;
-        boolean isEnd;
-        TrieNode(boolean isEnd)
+        TrieNode [] children;
+        boolean isEndOfWord;
+        TrieNode()
         {
-            this.trieNodes=new TrieNode[alphabetSize];
-            this.isEnd=isEnd;
+            this.children =new TrieNode[alphabetSize];
+            this.isEndOfWord =isEnd;
         }
     }
     TrieNode root;
     private void Insert(String words)
     {
         if(root==null)
-            root=new TrieNode(false);
+        {
+            root = new TrieNode();
+        }
         int n=words.length();
         TrieNode temp =root;
         for(int i=0;i<n;++i)
@@ -25,16 +27,17 @@ public class TrieRepresentationSearchAndInsert
             char curr=words.charAt(i);
             int ind = Character.isLowerCase(curr) ? curr-97 : curr-39;
 
-            if(temp.trieNodes[ind]==null)
+            if(temp.children[ind]==null)
             {
-                temp.trieNodes[ind]=new TrieNode(i==n-1?true:false);
+                temp.children[ind]=new TrieNode();
+                temp.children[ind].isEndOfWord=(i==n-1)?true:false;
                 System.out.println("Value Added :"+curr);
-                temp=temp.trieNodes[ind];
+                temp=temp.children[ind];
             }
             else
             {
                 System.out.println("Value found :"+curr);
-                temp = temp.trieNodes[ind];
+                temp = temp.children[ind];
             }
         }
     }
@@ -49,18 +52,18 @@ public class TrieRepresentationSearchAndInsert
         {
             char curr=word.charAt(i);
             int ind=Character.isLowerCase(curr) ? curr-97 : curr-39;
-            if(!(temp.trieNodes[ind]==null))
+            if(!(temp.children[ind]==null))
             {
                 if(i==n-1)
                 {
                     lastInd=ind;
                     continue;
                 }
-                temp = temp.trieNodes[ind];
+                temp = temp.children[ind];
             }
             else return false;
         }
-        if(temp.trieNodes[lastInd]!=null && temp.trieNodes[lastInd].isEnd==true)
+        if(temp.children[lastInd]!=null && temp.children[lastInd].isEndOfWord ==true)
             return true;
         else return false;
     }
