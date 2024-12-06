@@ -21,7 +21,8 @@ public class SearchQueryForStrings
         TrieNode temp=root;
         for(int i=0;i<n;++i)
         {
-            int ind=key.charAt(i)-97;
+            char curr=key.charAt(i);
+            int ind = Character.isLowerCase(curr) ? curr-97 : curr-39;
             if(temp.children[ind]==null)
                 temp.children[ind]=new TrieNode();
             temp=temp.children[ind];
@@ -38,7 +39,8 @@ public class SearchQueryForStrings
         int n=key.length();
         for(int i=0;i<n;++i)
         {
-            int ind=key.charAt(i)-97;
+            char curr = key.charAt(i);
+            int ind = Character.isLowerCase(curr) ? curr - 97 : curr - 39;
             if(temp.children[ind]==null)
                 return false;
             temp=temp.children[ind];
