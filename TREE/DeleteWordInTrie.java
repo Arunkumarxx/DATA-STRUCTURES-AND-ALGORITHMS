@@ -56,7 +56,8 @@ public class DeleteWordInTrie
         if (node == null)
             return false;
 
-        if (index == word.length()) {
+        if (index == word.length())
+        {
             if (!node.isEnd)
                 return false;
             node.isEnd = false;
@@ -65,7 +66,7 @@ public class DeleteWordInTrie
         char currChar = word.charAt(index);
         int childIndex = Character.isLowerCase(currChar) ? currChar - 97 : currChar - 39;
         boolean canDeleteChild = delete(node.children[childIndex], word, index + 1);
-        
+
         if (canDeleteChild)
         {
             node.children[childIndex] = null;
@@ -85,11 +86,11 @@ public class DeleteWordInTrie
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
-        Trie.insert("arun");
-        Trie.insert("arunkumar");
-        Trie.insert("arunkumarT");
+        Trie.insert("tree");
+        Trie.insert("treen");
+        Trie.insert("treent");
         System.out.println(Trie.search("arun"));
-        Trie.delete("arun");
+        Trie.delete("tree");
         System.out.println(Trie.search("arun"));
     }
 }
