@@ -26,6 +26,7 @@ public class TrieRepresentationSearchAndInsert
             if(Character.isLowerCase(curr))
                 ind=curr-97;
             else ind=curr-39;
+
             if(temp.trieNodes[ind]==null)
             {
                 temp.trieNodes[ind]=new TrieNode(i==n-1?true:false);
