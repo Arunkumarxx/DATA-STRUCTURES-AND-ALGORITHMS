@@ -23,7 +23,10 @@ public class DeleteWordInTrie
              {
                  temp.children[ind]=new TrieNode();
              }
+             else temp=temp.children[ind];
          }
+         temp.isEnd=true;
+
     }
     private void search(String word)
     {
