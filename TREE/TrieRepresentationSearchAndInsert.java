@@ -40,9 +40,10 @@ public class TrieRepresentationSearchAndInsert
             }
         }
     }
-    private void search(String word)
+    private boolean search(String word)
     {
-        
+        if(root==null)
+            return false;
     }
     public static void main(String[] args)
     {
