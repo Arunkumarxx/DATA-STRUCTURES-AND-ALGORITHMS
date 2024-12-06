@@ -6,10 +6,9 @@ public class TrieRepresentationSearchAndInsert
     {
         TrieNode [] trieNodes;
         boolean isEnd;
-
         TrieNode(boolean isEnd)
         {
-            this.trieNodes=new TrieNode[26];
+            this.trieNodes=new TrieNode[52];
             this.isEnd=isEnd;
         }
     }
@@ -23,7 +22,10 @@ public class TrieRepresentationSearchAndInsert
         for(int i=0;i<n;++i)
         {
             char curr=words.charAt(i);
-            int ind=(curr-97);
+            int ind;
+            if(Character.isLowerCase(curr))
+                ind=curr-97;
+            else ind=curr-
             if(temp.trieNodes[ind]==null)
             {
                 temp.trieNodes[ind]=new TrieNode(i==n-1?true:false);
