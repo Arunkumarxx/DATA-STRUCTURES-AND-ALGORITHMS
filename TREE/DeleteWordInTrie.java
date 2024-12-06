@@ -2,7 +2,7 @@ package TREE;
 
 public class DeleteWordInTrie
 {
-    private final int alphabetSize=26;
+    private final int alphabetSize=52;
     private class TrieNode
     {
         TrieNode[] children = new TrieNode[alphabetSize];
