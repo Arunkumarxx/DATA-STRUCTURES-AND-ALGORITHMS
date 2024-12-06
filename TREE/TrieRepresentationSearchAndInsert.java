@@ -52,8 +52,10 @@ public class TrieRepresentationSearchAndInsert
             if (temp.children[ind] == null)
                 return false;
             temp = temp.children[ind];
+            if(i==n-1 && temp.isEndOfWord==true)
+                return true;
         }
-        return temp.isEndOfWord;
+        return false;
     }
     public static void main(String[] args)
     {
