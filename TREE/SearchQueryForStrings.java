@@ -49,8 +49,8 @@ public class SearchQueryForStrings
     public static void main(String[] args)
     {
         SearchQueryForStrings obj=new SearchQueryForStrings();
-        String[] words={"the","a","there","answer","any","by","bye","their"};
-        String[] queries={"the","an","any"};
+        String[] words={"the","a","there","answer","any","anY","by","bye","their"};
+        String[] queries={"the","an","any","anY"};
         for(String word:words)
             obj.insert(word);
         for(String query:queries)
