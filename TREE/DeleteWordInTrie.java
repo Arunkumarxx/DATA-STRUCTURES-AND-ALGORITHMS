@@ -52,7 +52,12 @@ public class DeleteWordInTrie
         {
             char curr=word.charAt(i);
             int ind=Character.isLowerCase(curr)?curr-97:curr-39;
-            if()
+            if(temp.children[ind]==null)
+                return;
+            else
+            {
+                
+            }
         }
     }
 
