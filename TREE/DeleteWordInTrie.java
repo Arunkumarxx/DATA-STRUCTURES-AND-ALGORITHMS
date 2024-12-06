@@ -47,13 +47,15 @@ public class DeleteWordInTrie
         if(root==null)
             return;
         int n=word.length();
-
+        TrieNode temp=root;
         for(int i=0;i<n;++i)
         {
-
+            char curr=word.charAt(i);
+            int ind=Character.isLowerCase(curr)?curr-97:curr-39;
+            if()
         }
     }
-    
+
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
