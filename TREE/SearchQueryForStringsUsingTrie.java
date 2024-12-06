@@ -1,6 +1,6 @@
 package TREE;
 
-public class SearchQueryForStrings
+public class SearchQueryForStringsUsingTrie
 {
     private final int alphabetSize=52;
     private class TrieNode
@@ -50,7 +50,7 @@ public class SearchQueryForStrings
 
     public static void main(String[] args)
     {
-        SearchQueryForStrings obj=new SearchQueryForStrings();
+        SearchQueryForStringsUsingTrie obj=new SearchQueryForStringsUsingTrie();
         String[] words={"the","a","there","answer","any","anY","by","bye","their"};
         String[] queries={"the","an","any","anY"};
         for(String word:words)
