@@ -29,15 +29,14 @@ public class TrieRepresentationSearchAndInsert
             if(temp.children[ind]==null)
             {
                 temp.children[ind]=new TrieNode();
-                temp.children[ind].isEndOfWord=(i==n-1)?true:false;
-                System.out.println("Value Added :"+curr);
+
                 temp=temp.children[ind];
             }
             else
-            {
-                System.out.println("Value found :"+curr);
                 temp = temp.children[ind];
-            }
+            if (i == n - 1)
+                temp.isEndOfWord = true;
+
         }
     }
     private boolean search(String key)
