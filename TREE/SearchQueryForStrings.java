@@ -54,6 +54,6 @@ public class SearchQueryForStrings
         for(String word:words)
             obj.insert(word);
         for(String query:queries)
-            System.out.println("Is \""+query+"\" present? "+obj.search(query));
+            System.out.println("Is ""+query+"\" present? "+obj.search(query));
     }
 }
