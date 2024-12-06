@@ -6,10 +6,15 @@ public class DeleteWordInTrie
     private class TrieNode
     {
         TrieNode[] children = new TrieNode[alphabetSize];
+        boolean isEnd
     }
+    private TrieNode root;
     private void insert(String word)
     {
-
+        if(root==null)
+        {
+            root = new TrieNode();
+        }
     }
     private void search(String word)
     {
@@ -18,7 +23,7 @@ public class DeleteWordInTrie
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
-        
+
     }
 
 }
