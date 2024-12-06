@@ -34,7 +34,7 @@ public class TrieRepresentationSearchAndInsert
             }
             else
             {
-                System.out.println("Value found: "+temp.val);
+                System.out.println("Value found :"+curr);
                 temp = temp.trieNodes[ind];
             }
         }
