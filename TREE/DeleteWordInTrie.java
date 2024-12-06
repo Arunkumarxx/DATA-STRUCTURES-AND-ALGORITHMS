@@ -21,7 +21,7 @@ public class DeleteWordInTrie
              int ind=curr-97;
              if(temp.children[ind]==null)
              {
-                 
+                 temp.children[ind]=new TrieNode();
              }
          }
     }
