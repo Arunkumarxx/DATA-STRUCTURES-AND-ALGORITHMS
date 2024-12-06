@@ -40,7 +40,7 @@ public class TrieRepresentationSearchAndInsert
             }
         }
     }
-    private void print()
+    private void search(String word)
     {
         
     }
