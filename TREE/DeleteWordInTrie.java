@@ -1,5 +1,7 @@
 package TREE;
 
+import java.util.Stack;
+
 public class DeleteWordInTrie
 {
     private final int alphabetSize=52;
@@ -47,6 +49,7 @@ public class DeleteWordInTrie
         if(root==null)
             return;
         int n=word.length();
+        Stack<TrieNode> stack =new Stack<>();
         TrieNode temp=root;
         for(int i=0;i<n;++i)
         {
@@ -54,11 +57,22 @@ public class DeleteWordInTrie
             int ind=Character.isLowerCase(curr)?curr-97:curr-39;
             if(temp.children[ind]==null)
              return;
-            else temp=temp.children[ind];
+            else
+            {
+                stack.push(temp.children[ind]);
+                temp=temp.children[ind];
+            }
         }
         if(temp.isEnd)
         {
-            
+            for(int i=0;i<52;++i)
+            {
+                if(temp.children[i]!=null)
+                {
+                    temp.isEnd=false;
+                    return;
+                }
+            }
         }
     }
 
