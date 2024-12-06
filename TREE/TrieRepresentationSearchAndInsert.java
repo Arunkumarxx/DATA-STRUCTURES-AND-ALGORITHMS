@@ -40,7 +40,10 @@ public class TrieRepresentationSearchAndInsert
             }
         }
     }
-    private void print
+    private void print()
+    {
+        
+    }
     public static void main(String[] args)
     {
         String [] words ={"arunkumar", "arunprasanth"};
