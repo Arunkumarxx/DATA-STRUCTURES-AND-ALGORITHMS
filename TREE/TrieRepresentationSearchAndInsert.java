@@ -28,9 +28,10 @@ public class TrieRepresentationSearchAndInsert
             int ind=(curr-97);
             if(temp.trieNodes[ind]==null)
             {
-                
+                temp.trieNodes[ind]=new TrieNode(curr,i==n-1?true:false);
+                temp=temp.trieNodes[ind];
             }
-
+            temp=temp.trieNodes[ind];
         }
     }
 
