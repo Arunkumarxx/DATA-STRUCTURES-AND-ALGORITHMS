@@ -42,13 +42,24 @@ public class DeleteWordInTrie
         }
         return temp.isEnd;
     }
+    private void delete(String word)
+    {
+        if(root==null)
+            return;
+        int n=word.length();
+
+        for(int i=0;i<n;++i)
+        {
+
+        }
+    }
+    
     public static void main(String[] args)
     {
         DeleteWordInTrie Trie =new DeleteWordInTrie();
         Trie.insert("arun");
         Trie.insert("arunkumar");
         Trie.insert("arunkumarT");
-        System.out.println(Trie.search("arun"));
-    }
 
+    }
 }
