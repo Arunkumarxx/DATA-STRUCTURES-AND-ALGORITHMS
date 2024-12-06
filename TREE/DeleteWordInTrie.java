@@ -71,7 +71,7 @@ public class DeleteWordInTrie
 
         root.children[ind]= delete(root.children[ind],word,ind+1);
 
-        if(isEmpty(root.children[ind]) && !root.isEnd)
+        if(isEmpty(root) && !root.isEnd)
         {
 
         }
