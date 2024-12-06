@@ -30,7 +30,7 @@ public class DeleteWordInTrie
     }
     private void search(String word)
     {
-
+        
     }
     public static void main(String[] args)
     {
