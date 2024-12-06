@@ -56,20 +56,24 @@ public class DeleteWordInTrie
         if(root==null)
             return ;
         if(index==word.length())
-            if(!root.isEnd)
-                return;
+        {
+            if(root.isEnd)
+            root.isEnd=false;
+
+            if(isEmpty(root))
+            {
+                
+            }
+        }
         int curr=word.charAt(index);
         int ind=Character.isLowerCase(curr)?curr-97:curr-39;
 
         delete(root.children[ind],word,ind+1);
 
-        if(isValidToDel(root.children[ind]))
-        {
 
-        }
 
     }
-    private boolean isValidToDel(TrieNode root)
+    private boolean isEmpty(TrieNode root)
     {
         for(int i=0;i<alphabetSize;++i)
         {
