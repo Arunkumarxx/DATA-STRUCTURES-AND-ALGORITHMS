@@ -42,29 +42,19 @@ public class TrieRepresentationSearchAndInsert
     }
     private boolean search(String key)
     {
-        if(root==null)
+        if (root == null)
             return false;
-        TrieNode temp =root;
-        int n=key.length();
-        int lastInd=0;
-        for(int i=0;i<n;++i)
+        TrieNode temp = root;
+        int n = key.length();
+        for (int i =0; i<n; ++i)
         {
-            char curr=key.charAt(i);
-            int ind=Character.isLowerCase(curr) ? curr-97 : curr-39;
-            if(!(temp.children[ind]==null))
-            {
-                if(i==n-1)
-                {
-                    lastInd=ind;
-                    continue;
-                }
-                temp = temp.children[ind];
-            }
-            else return false;
+            char curr = key.charAt(i);
+            int ind = Character.isLowerCase(curr) ? curr - 97 : curr - 39;
+            if (temp.children[ind] == null)
+                return false;
+            temp = temp.children[ind];
         }
-        if(temp.children[lastInd]!=null && temp.children[lastInd].isEndOfWord ==true)
-            return true;
-        else return false;
+        return temp.isEndOfWord;
     }
     public static void main(String[] args)
     {
