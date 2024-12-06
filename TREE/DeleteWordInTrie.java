@@ -73,10 +73,9 @@ public class DeleteWordInTrie
 
         if(isEmpty(root) && !root.isEnd)
         {
-
+            root=null;
+            return 
         }
-
-
     }
     private boolean isEmpty(TrieNode root)
     {
