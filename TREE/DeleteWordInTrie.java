@@ -89,8 +89,8 @@ public class DeleteWordInTrie
         Trie.insert("tree");
         Trie.insert("treen");
         Trie.insert("treent");
-        System.out.println(Trie.search("arun"));
+        System.out.println(Trie.search("tree"));
         Trie.delete("tree");
-        System.out.println(Trie.search("arun"));
+        System.out.println(Trie.search("tree"));
     }
 }
