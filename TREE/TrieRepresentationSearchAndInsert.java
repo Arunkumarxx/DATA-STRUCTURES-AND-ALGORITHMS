@@ -13,7 +13,7 @@ public class TrieRepresentationSearchAndInsert
         }
     }
     TrieNode root;
-    private void searchAndInsert(String words)
+    private void Insert(String words)
     {
         if(root==null)
             root=new TrieNode(false);
@@ -44,8 +44,8 @@ public class TrieRepresentationSearchAndInsert
     {
         String [] words ={"arunkumar", "arunprasanth"};
         TrieRepresentationSearchAndInsert Trie =new TrieRepresentationSearchAndInsert();
-        Trie.searchAndInsert(words[0]);
+        Trie.Insert(words[0]);
         System.out.println();
-        Trie.searchAndInsert(words[1]);
+        Trie.Insert(words[1]);
     }
 }
