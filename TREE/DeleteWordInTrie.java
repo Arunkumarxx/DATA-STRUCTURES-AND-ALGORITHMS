@@ -12,21 +12,18 @@ public class DeleteWordInTrie
     private void insert(String word)
     {
         if(root==null)
-            root = new TrieNode();
+            root=new TrieNode();
         int n=word.length();
-        TrieNode temp =root;
-         for(int i=0;i<n;++i)
-         {
-             char curr = word.charAt(i);
-             int ind = Character.isLowerCase(curr) ? curr - 97 : curr - 39;
-             if(temp.children[ind]==null)
-             {
-                 temp.children[ind]=new TrieNode();
-             }
-             else temp=temp.children[ind];
-         }
-         temp.isEnd=true;
-
+        TrieNode temp=root;
+        for(int i=0;i<n;++i)
+        {
+            char curr=word.charAt(i);
+            int ind = Character.isLowerCase(curr) ? curr-97 : curr-39;
+            if(temp.children[ind]==null)
+                temp.children[ind]=new TrieNode();
+            temp=temp.children[ind];
+        }
+        temp.isEnd=true;
     }
     private boolean search(String key)
     {
