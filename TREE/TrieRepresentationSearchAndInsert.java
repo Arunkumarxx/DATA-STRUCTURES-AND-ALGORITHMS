@@ -44,15 +44,25 @@ public class TrieRepresentationSearchAndInsert
             return false;
         TrieNode temp =root;
         int n=word.length();
+        int lastInd=0;
         for(int i=0;i<n;++i)
         {
             char curr=word.charAt(i);
             int ind=Character.isLowerCase(curr) ? curr-97 : curr-39;
             if(!(temp.trieNodes[ind]==null))
-                temp=temp.trieNodes[ind];
+            {
+                if(i==n-1)
+                {
+                    lastInd=ind;
+                    continue;
+                }
+                temp = temp.trieNodes[ind];
+            }
             else return false;
         }
-        return true;
+        if(temp.trieNodes[lastInd]!=null && temp.trieNodes[lastInd].isEnd==true)
+            return true;
+        else return false;
     }
     public static void main(String[] args)
     {
