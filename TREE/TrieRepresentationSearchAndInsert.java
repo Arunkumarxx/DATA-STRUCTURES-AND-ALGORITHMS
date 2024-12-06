@@ -62,6 +62,6 @@ public class TrieRepresentationSearchAndInsert
             Trie.Insert(val);
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("arunkumar"));
-        System.out.println(Trie.search("arunkumarprasanth"));
+        System.out.println(Trie.search("arunprasanth"));
     }
 }
