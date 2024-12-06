@@ -66,19 +66,14 @@ public class TrieRepresentationSearchAndInsert
     }
     public static void main(String[] args)
     {
-
         String [] words ={"arunkumar", "arunprasanth"};
         TrieRepresentationSearchAndInsert Trie =new TrieRepresentationSearchAndInsert();
-        Runtime runtime = Runtime.getRuntime();
-        runtime.gc();
-        long beforeMemory = runtime.totalMemory() - runtime.freeMemory();
+
         for(String val:words)
             Trie.Insert(val);
-        long afterMemory = runtime.totalMemory()- runtime.totalMemory();
+
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("arunkumar"));
         System.out.println(Trie.search("ar"));
-        System.out.println(beforeMemory);
-        System.out.println(afterMemory);
-    }
+    } 
 }
