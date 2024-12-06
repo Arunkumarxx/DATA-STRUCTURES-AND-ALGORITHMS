@@ -51,10 +51,10 @@ public class DeleteWordInTrie
             delete(root,word,0);
 
     }
-    private void  delete(TrieNode root,String word,int index)
+    private boolean  delete(TrieNode root,String word,int index)
     {
         if(root==null)
-            return ;
+            return false;
         if(index==word.length())
         {
             if(root.isEnd)
@@ -62,7 +62,8 @@ public class DeleteWordInTrie
 
             if(isEmpty(root))
             {
-                
+                root=null;
+                return true;
             }
         }
         int curr=word.charAt(index);
