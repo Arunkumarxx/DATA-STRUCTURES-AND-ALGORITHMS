@@ -51,6 +51,7 @@ public class DeleteWordInTrie
         Trie.insert("arun");
         Trie.insert("arunkumar");
         Trie.insert("arunkumarT");
+        System.out.println(Trie.search("arun"));
     }
 
 }
