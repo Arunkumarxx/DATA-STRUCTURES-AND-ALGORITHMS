@@ -20,7 +20,7 @@ public class MostFrequentWord
         else hashMap.put(arr[ind],1);
         mostFreqWord(arr,n,ind+1);
         int newFreq=hashMap.get(arr[ind]);
-        System.out.println(arr[ind]+" "+ newFreq);
+        System.out.println(arr[ind]+" "+newFreq);
         if(newFreq>freq)
         {
             result.setLength(0);
@@ -31,8 +31,7 @@ public class MostFrequentWord
     public static void main(String[] args)
     {
         MostFrequentWord obj =new MostFrequentWord();
-        String [] arr ={"xejdcj","xejdcj","lvjpb","tmyuiu","lvjpb","tmyuiu","ovoba","lvjpb","lvjpb","fqhyu","fqhyu","tmyuiu","xejdcj","tmyuiu","fqhyu","ovoba","xejdcj"};
-        String [] arr2 ={"hello","world"};
-        obj.mostFrequentWord(arr2,arr2.length);
+        String [] arr ={"xejdcj","xejdcj"," lvjpb","tmyuiu","lvjpb","tmyuiu","ovoba"," lvjpb","lvjpb","fqhyu"," fqhyu","tmyuiu","xejdcj","tmyuiu"," fqhyu","ovoba","xejdcj"};
+        System.out.println(obj.mostFrequentWord(arr,arr.length));
     }
 }
