@@ -20,7 +20,7 @@ public class MostFrequentWord
         else hashMap.put(arr[ind],1);
         mostFreqWord(arr,n,ind+1);
         int newFreq=hashMap.get(arr[ind]);
-        System.out.println(arr[ind]+newFreq);
+        System.out.println(arr[ind]+" "+ newFreq);
         if(newFreq>freq)
         {
             result.setLength(0);
