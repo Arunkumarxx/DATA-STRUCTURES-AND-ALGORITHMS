@@ -2,32 +2,35 @@ package STRING;
 import java.util.*;
 public class MostFrequentWord
 {
-    HashMap<String,Integer> hashMap =new HashMap<>();
-    StringBuilder result=new StringBuilder();
-    int freq=0;
+
     public String mostFrequentWord(String arr[],int n)
     {
-        mostFreqWord(arr,n,0);
-        return result.toString();
-    }
-    public void mostFreqWord(String [] arr,int n,int ind)
-    {
-        if(ind==n)
-            return;
+        HashMap<String, Integer> frequencyMap = new HashMap<>();
+        HashMap<String, Integer> firstOccurrenceMap = new HashMap<>();
 
-        if(hashMap.containsKey(arr[ind]))
-            hashMap.put(arr[ind],hashMap.get(arr[ind])+1);
-        else hashMap.put(arr[ind],1);
-        mostFreqWord(arr,n,ind+1);
-        int newFreq=hashMap.get(arr[ind]);
-        System.out.println(arr[ind]+" "+newFreq);
-        if(newFreq>freq)
-        {
-            result.setLength(0);
-            result.append(arr[ind]);
-            freq=newFreq;
+        String result = "";
+        int maxFrequency = 0;
+
+        for (int i = 0; i < n; i++) {
+            String word = arr[i];
+
+            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
+
+            firstOccurrenceMap.putIfAbsent(word, i);
+
+            int currentFreq = frequencyMap.get(word);
+
+            if (currentFreq > maxFrequency ||
+                    (currentFreq == maxFrequency && firstOccurrenceMap.get(word) >
+                            firstOccurrenceMap.get(result))) {
+                result = word;
+                maxFrequency = currentFreq;
+            }
         }
+
+        return result;
     }
+
     public static void main(String[] args)
     {
         MostFrequentWord obj =new MostFrequentWord();
