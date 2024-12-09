@@ -18,6 +18,7 @@ public class DeleteWordInTrie
         int n=word.length();
         TrieNode temp=root;
         for(int i=0;i<n;++i)
+
         {
             char curr=word.charAt(i);
             int ind = Character.isLowerCase(curr) ? curr-97 : curr-39;
