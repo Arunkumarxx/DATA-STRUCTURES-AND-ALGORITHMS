@@ -29,6 +29,8 @@ public class MostFrequentWord
     }
     public static void main(String[] args)
     {
-        
+        MostFrequentWord obj =new MostFrequentWord();
+        String [] arr ={"xejdcj ","xejdcj"," lvjpb ","tmyuiu ","lvjpb ","tmyuiu ","ovoba"," lvjpb ","lvjpb ","fqhyu"," fqhyu ","tmyuiu"," xejdcj"," tmyuiu"," fqhyu"," ovoba"," xejdcj"};
+        obj.mostFrequentWord(arr,arr.length);
     }
 }
