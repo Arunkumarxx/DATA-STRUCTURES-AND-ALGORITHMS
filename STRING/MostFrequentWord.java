@@ -2,41 +2,37 @@ package STRING;
 import java.util.*;
 public class MostFrequentWord
 {
-
+    HashMap<String,Integer> hashMap =new HashMap<>();
+    StringBuilder result=new StringBuilder();
+    int freq=0;
     public String mostFrequentWord(String arr[],int n)
     {
-        HashMap<String, Integer> hashMap = new HashMap<>();
-        HashMap<String, Integer> lastIndexMap = new HashMap<>();
-        String result = "";
-        int freq = 0;
-
-        for (int i = 0; i < n; i++) {
-            String word = arr[i];
-            hashMap.put(word, hashMap.getOrDefault(word, 0) + 1);
-            lastIndexMap.put(word, i);
-
-            int currentFreq = hashMap.get(word);
-
-            if (currentFreq > freq ||
-                    (currentFreq == freq && lastIndexMap.get(word) > lastIndexMap.get(result))) {
-                result = word;
-                freq = currentFreq;
-            }
-        }
-
-        return result;
+        mostFreqWord(arr,n,0);
+        return result.toString();
     }
+    public void mostFreqWord(String [] arr,int n,int ind)
+    {
+        if(ind==n)
+            return;
 
-
+        if(hashMap.containsKey(arr[ind]))
+            hashMap.put(arr[ind],hashMap.get(arr[ind])+1);
+        else hashMap.put(arr[ind],1);
+        mostFreqWord(arr,n,ind+1);
+        int newFreq=hashMap.get(arr[ind]);
+        System.out.println(arr[ind]+" "+ newFreq);
+        if(newFreq>freq)
+        {
+            result.setLength(0);
+            result.append(arr[ind]);
+            freq=newFreq;
+        }
+    }
     public static void main(String[] args)
     {
         MostFrequentWord obj =new MostFrequentWord();
-        String[] arr = {"xejdcj", "xejdcj", "lvjpb", "tmyuiu", "lvjpb", "tmyuiu",
-                "ovoba", "lvjpb", "lvjpb", "fqhyu", "fqhyu", "tmyuiu",
-                "xejdcj", "tmyuiu", "fqhyu", "ovoba", "xejdcj"};
+        String [] arr ={"xejdcj","xejdcj","lvjpb","tmyuiu","lvjpb","tmyuiu","ovoba","lvjpb","lvjpb","fqhyu","fqhyu","tmyuiu","xejdcj","tmyuiu","fqhyu","ovoba","xejdcj"};
         String [] arr2 ={"hello","world"};
-        System.out.println(obj.mostFrequentWord(arr2,arr2.length));
-        System.out.println(obj.mostFrequentWord(arr,arr.length));
-
+        obj.mostFrequentWord(arr2,arr2.length);
     }
 }
