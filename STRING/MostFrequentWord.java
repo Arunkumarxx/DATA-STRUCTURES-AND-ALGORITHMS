@@ -12,7 +12,7 @@ public class MostFrequentWord
     }
     public void mostFreqWord(String [] arr,int n,int ind)
     {
-        if(ind>=n)
+        if(ind==n)
             return;
 
         if(hashMap.containsKey(arr[ind]))
