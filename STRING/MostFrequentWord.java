@@ -5,30 +5,27 @@ public class MostFrequentWord
 
     public String mostFrequentWord(String arr[],int n)
     {
-        HashMap<String, Integer> frequencyMap = new HashMap<>();
-        HashMap<String, Integer> firstOccurrenceMap = new HashMap<>();
-
-        String result = "";
-        int maxFrequency = 0;
-
-        for (int i = 0; i < n; i++) {
-            String word = arr[i];
-
-            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
-
-            firstOccurrenceMap.putIfAbsent(word, i);
-
-            int currentFreq = frequencyMap.get(word);
-
-            if (currentFreq > maxFrequency ||
-                    (currentFreq == maxFrequency && firstOccurrenceMap.get(word) >
-                            firstOccurrenceMap.get(result))) {
-                result = word;
-                maxFrequency = currentFreq;
+        HashMap<String, Integer> frequencyMap=new HashMap<>();
+        HashMap<String, Integer> firstOccurrenceIndexMap=new HashMap<>();
+        String result="";
+        int maxFrequency=0;
+        for(int i=0;i<n;i++)
+        {
+            String word=arr[i];
+            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0)+1);
+            firstOccurrenceIndexMap.putIfAbsent(word, i);
+            int currentFreq=frequencyMap.get(word);
+            if(currentFreq>maxFrequency||
+                    (currentFreq==maxFrequency&&
+                            firstOccurrenceIndexMap.get(word)>
+                                    firstOccurrenceIndexMap.get(result)))
+            {
+                result=word;
+                maxFrequency=currentFreq;
             }
         }
-
         return result;
+
     }
 
     public static void main(String[] args)
