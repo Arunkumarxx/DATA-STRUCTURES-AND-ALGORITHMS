@@ -2,7 +2,6 @@ package STRING;
 import java.util.*;
 public class MostFrequentWord
 {
-
     public String mostFrequentWord(String arr[],int n)
     {
         HashMap<String, Integer> frequencyMap=new HashMap<>();
